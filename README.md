@@ -47,6 +47,8 @@ The homepage title is **NC LATIN CLUB** in both languages. “Join us” opens t
 
 ## Requested next stages
 
+See [the proposed roadmap](docs/ROADMAP.md) for priorities, milestone acceptance criteria, dependencies, and remaining decisions. It reflects the founder’s latest preferences and distinguishes implemented behavior from planned capabilities.
+
 These are future requirements, not implemented capabilities:
 
 - A fully interactive cultural map/globe restricted to the Americas from South America through the United States, including Central America and the Caribbean. Country selection should open an accessible country popup, with touch and keyboard alternatives. The current four-country illustration is only a prototype.
