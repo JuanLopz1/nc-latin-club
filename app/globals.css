@@ -25,6 +25,25 @@ body {
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+button, summary {
+  font: inherit;
+}
+
+::selection {
+  background: #e5c4a4;
+  color: #173d32;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 a:focus-visible,
 main:focus-visible {
   outline: 2px solid var(--foreground);
