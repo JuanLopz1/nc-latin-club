@@ -1,6 +1,6 @@
 # NC Latin Club
 
-Public website for **NC Latin Club**, an independent cultural community in Niagara, Ontario. The current release is a first homepage prototype with an original illustrated landscape, an editorial scroll through Our Familia, cultural exploration, Latin Niagara, and a welcome section.
+Public website for **NC Latin Club**, an independent cultural community in Niagara, Ontario. The current release is a first homepage prototype with an original illustrated landscape, an editorial scroll through Our Familia, Events, cultural exploration, Latin Niagara, and a welcome section.
 
 The English/Spanish switch, mobile menu, country selection with accessible popups, and Niagara disclosures work locally. The map is an illustrated cultural introduction, not a precise geographic or member-location map. Country articles, verified listings, confirmed events, invitation links, member photography, and a CMS remain future work. The artwork depicts an imaginary landscape; it does not represent a verified real location.
 
@@ -40,6 +40,8 @@ public/images/ Static images used by the site
 `app/page.tsx` renders `app/components/club-home.tsx`. Edit homepage translations in `home-copy.ts` and visual styles in `club-home.module.css`. The language switch changes the page content and document language; localized URLs and translated metadata have not yet been implemented. The development server reloads as you save.
 
 Motion respects `prefers-reduced-motion`. No database, new runtime dependencies, or application secrets are required for this prototype. Build-time Google Font downloads require access to `fonts.googleapis.com` and `fonts.gstatic.com`.
+
+The bilingual Events section follows Our Familia and has a direct menu link. Its current state says “Coming soon” because no confirmed events have been provided. To publish confirmed event cards, add entries to `app/components/club-events.ts` with a unique ID, English/Spanish title, description and venue, an ISO 8601 start timestamp including its UTC offset, and an optional verified HTTPS registration URL. Dates display in Niagara’s `America/Toronto` time zone. An event without a registration URL has no registration button. The interactive calendar and admin event editing remain future work.
 
 The homepage title is **NC LATIN CLUB** in both languages. “Join us” opens the visitor's email application with the club contact and requested introduction filled in; the website does not send email. Public contact and social destinations are centralized in `app/components/club-links.ts`. The Instagram destination is awaiting the official profile URL. The sponsor text identifies NCSAC, as requested by club leadership.
 

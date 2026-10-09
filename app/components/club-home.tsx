@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { copy, countries, type Language } from "./home-copy";
 import { clubLinks, joinEmailHref } from "./club-links";
+import EventsSection from "./events-section";
 import s from "./club-home.module.css";
 
 function Flower({ className = "" }: { className?: string }) {
@@ -76,7 +77,7 @@ export default function ClubHome() {
     return () => window.removeEventListener("keydown", close);
   }, [menuOpen]);
 
-  const navIds = ["familia", "roots", "niagara", "join"];
+  const navIds = ["familia", "events", "roots", "niagara", "join"];
   const toggleLanguage = () => setLanguage(language === "en" ? "es" : "en");
   const openCountry = (id: string) => {
     setCountryId(id);
@@ -91,7 +92,7 @@ export default function ClubHome() {
     <header className={s.header}>
       <Link href="/" className={s.brand} aria-label="NC Latin Club — Home"><Flower /><span>NC LATIN<span className={s.brandSmall}>CLUB</span></span></Link>
       <nav id="main-navigation" aria-label={language === "en" ? "Main navigation" : "Navegación principal"} className={`${s.nav} ${menuOpen ? s.navOpen : ""}`}>
-        {navIds.map((id, index) => <a href={`#${id}`} key={id} onClick={() => setMenuOpen(false)} className={index === 3 ? s.navJoin : undefined}>{t.nav[index]}{index === 3 && <Arrow />}</a>)}
+        {navIds.map((id, index) => <a href={`#${id}`} key={id} onClick={() => setMenuOpen(false)} className={id === "join" ? s.navJoin : undefined}>{t.nav[index]}{id === "join" && <Arrow />}</a>)}
       </nav>
       <div className={s.headerTools}>
         <button className={s.languageButton} onClick={toggleLanguage} aria-label={`${t.language}: ${language === "en" ? "Español" : "English"}`}><span className={language === "en" ? s.activeLanguage : ""}>EN</span><span aria-hidden="true">/</span><span className={language === "es" ? s.activeLanguage : ""}>ES</span></button>
@@ -122,6 +123,8 @@ export default function ClubHome() {
         <div className={s.familiaCopy}><p className={s.eyebrow}>{t.familiaLabel}</p><h2 id="familia-title">{t.familiaTitle[0]}<br /><em>{t.familiaTitle[1]}</em></h2><p className={s.lead}>{t.familiaBody}</p><p className={s.bodyCopy}>{t.familiaSecond}</p><div className={s.values}>{t.values.map((value, index) => <span key={value}><span aria-hidden="true">{["✧", "♫", "♡"][index]}</span>{value}</span>)}</div></div>
         <div className={s.familiaArt}><Botanical className={s.familiaBotanical} /><span className={s.familiaArtLabel}>BIENVENIDOS</span><Flower className={s.familiaFlower} /><p>{t.familiaQuote[0]}<br /><em>{t.familiaQuote[1]}</em></p><span className={s.familiaArtFoot}>{t.familiaNote}</span><svg className={s.familiaArch} viewBox="0 0 440 500" fill="none" aria-hidden="true"><path d="M30 500V224C30-30 410-30 410 224v276M48 500V224c0-228 344-228 344 0v276" stroke="currentColor" /></svg></div>
       </section>
+
+      <EventsSection language={language} />
 
       <section id="roots" className={s.roots} aria-labelledby="roots-title">
         <div className={s.rootsInner}>
