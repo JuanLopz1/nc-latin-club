@@ -1,5 +1,5 @@
 import type { Language } from '../home-copy';
-import type { AgendaCategory, AgendaEntry, AgendaState, CalendarDate, CalendarMonth } from './event-types';
+import type { AgendaCategory, AgendaEntry, AgendaState, CalendarDate, CalendarMonth, EventEntry } from './event-types';
 export const NIAGARA_ZONE = 'America/Toronto';
 const localDate = new Intl.DateTimeFormat('en-CA', { timeZone: NIAGARA_ZONE, year: 'numeric', month: '2-digit', day: '2-digit' });
 export function validDate(value: string): boolean {
@@ -24,17 +24,23 @@ export function monthCells(month: CalendarMonth): CalendarDate[] {
 }
 export function entriesOnDate(entries: readonly AgendaEntry[], date: CalendarDate): AgendaEntry[] {
   return entries.filter(entry => {
-    if (entry.kind === 'cultural-date') return entry.date === date;
+    if (entry.kind === 'cultural-date') return date >= entry.date && date <= (entry.endDate ?? entry.date);
+    if (entry.dateSpan) return date >= entry.dateSpan.start && date <= entry.dateSpan.end;
     const start = niagaraDate(entry.startsAt);
     const end = entry.endsAt ? niagaraDate(new Date(Date.parse(entry.endsAt) - 1)) : start;
     return date >= start && date <= end;
   });
 }
 export function isPast(entry: AgendaEntry, now: Date): boolean {
-  return entry.kind === 'cultural-date' ? entry.date < niagaraDate(now) : Date.parse(entry.endsAt ?? entry.startsAt) <= now.getTime();
+  if (entry.kind === 'cultural-date') return (entry.endDate ?? entry.date) < niagaraDate(now);
+  if (entry.dateSpan) {
+    const last = entry.sessions?.reduce((latest, session) => Math.max(latest, Date.parse(session.endsAt ?? session.startsAt)), 0);
+    return last ? last <= now.getTime() : entry.dateSpan.end < niagaraDate(now);
+  }
+  return Date.parse(entry.endsAt ?? entry.startsAt) <= now.getTime();
 }
 export function listEntries(entries: readonly AgendaEntry[], category: AgendaCategory, period: 'upcoming' | 'past', now: Date): AgendaEntry[] {
-  const time = (entry: AgendaEntry) => entry.kind === 'cultural-date' ? Date.parse(entry.date) : Date.parse(entry.startsAt);
+  const time = (entry: AgendaEntry) => Date.parse(entry.kind === 'cultural-date' ? entry.date : entry.dateSpan ? entry.dateSpan.start : entry.startsAt);
   return entries.filter(entry => entry.category === category && isPast(entry, now) === (period === 'past'))
     .sort((a, b) => (time(a) - time(b)) * (period === 'past' ? -1 : 1));
 }
@@ -49,5 +55,13 @@ export function formatEventTime(value: string, language: Language, options: Intl
   return new Intl.DateTimeFormat(language === 'en' ? 'en-CA' : 'es', { ...options, timeZone: NIAGARA_ZONE }).format(new Date(value));
 }
 export function entryDate(entry: AgendaEntry): CalendarDate {
-  return entry.kind === 'cultural-date' ? entry.date : niagaraDate(entry.startsAt);
+  return entry.kind === 'cultural-date' ? entry.date : entry.dateSpan ? entry.dateSpan.start : niagaraDate(entry.startsAt);
 }
+
+export function formatEntryWhen(entry: AgendaEntry, language: Language): string {
+  if (entry.kind === 'event' && entry.startsAt) return formatEventTime(entry.startsAt, language);
+  if (entry.kind === 'event' && entry.dateSpan && entry.sessions?.length === 1 && entry.dateSpan.start === entry.dateSpan.end) return formatEventTime(entry.sessions[0].startsAt, language);
+  const start = entryDate(entry), end = entry.kind === 'cultural-date' ? entry.endDate : entry.dateSpan?.end;
+  return formatCalendarDate(start, language) + (end && end !== start ? ` – ${formatCalendarDate(end, language)}` : '');
+}
+export function eventDateTime(entry: EventEntry): string { return entry.startsAt ?? entry.dateSpan.start; }

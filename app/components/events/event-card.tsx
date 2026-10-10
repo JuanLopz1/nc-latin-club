@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Language } from '../home-copy';
 import type { AgendaEntry } from './event-types';
-import { entryDate, formatCalendarDate, formatEventTime } from './agenda-dates';
+import { entryDate, eventDateTime, formatCalendarDate, formatEntryWhen } from './agenda-dates';
 import { eventsCopy } from './events-copy';
 import s from './event-card.module.css';
 export default function EventCard({ entry, language }: { entry: AgendaEntry; language: Language }) {
@@ -21,7 +21,7 @@ export default function EventCard({ entry, language }: { entry: AgendaEntry; lan
       <h3 id={`card-${entry.slug}`}><Link href={`/events/${entry.slug}`}>{entry.title[language]}</Link></h3>
       <p className={s.description}>{entry.description[language]}</p>
       <div className={s.meta}>
-        <p><time dateTime={entry.kind === 'event' ? entry.startsAt : entry.date}>{entry.kind === 'event' ? formatEventTime(entry.startsAt, language) : formatCalendarDate(entry.date, language)}</time></p>
+        <p><time dateTime={entry.kind === 'event' ? eventDateTime(entry) : entry.date}>{formatEntryWhen(entry, language)}</time></p>
         <p>{entry.kind === 'event' ? [entry.venue[language], entry.city?.[language]].filter(Boolean).join(' · ') : `${entry.scope[language]} · ${t.fullDay}`}</p>
         {entry.kind === 'event' && <p>{t.organizer}: {entry.organizer[language]}</p>}
       </div>

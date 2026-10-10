@@ -27,13 +27,13 @@
 ## Task 1 — Public data and search contract
 Files: app/components/niagara/place-types.ts, places.json, place-data.ts, place-utils.ts; tests/niagara.test.cjs; docs/NIAGARA_RESEARCH.md.
 Interfaces: places: readonly Place[]; filterPlaces(places,{query,city,category,mode}); directionsUrl(place): string|null; markerGroups(places).
-- [ ] Write failing tests for founder inclusions, order-only/no-location navigation, accent search, overlapping pins and unit destinations; run node --test tests/niagara.test.cjs (Expected: missing exports fail).
-- [ ] Project supplied data into public fields, research all ten individually and record blocked candidates without discarding them. Implement utilities (Expected: tests pass).
+- [x] Write failing tests for founder inclusions, order-only/no-location navigation, accent search, overlapping pins and unit destinations; run node --test tests/niagara.test.cjs (Expected: missing exports fail).
+- [x] Project supplied data into public fields, research all ten individually and record blocked candidates without discarding them. Implement utilities (Expected: tests pass).
 
 ## Task 2 — Route, map and hub
 Files: app/niagara/page.tsx; niagara-directory.tsx, niagara-map.tsx, niagara.module.css, niagara-teaser.tsx; club-home.tsx; site-shell.tsx; package.json/lock.
 Interfaces: directory receives places; map receives filtered places, selectedId, onSelect, reset counter, language. One selection; no invented coordinates or wheel capture.
-- [ ] Write SSR behavior tests for cards, missing destination and three featured hub links; run (Expected: absent components fail).
-- [ ] Install pinned Leaflet and types; implement bilingual night layout, filters, inline details, grouped pins, graceful tile failure and hub links.
-- [ ] Run all tests, lint, build, browser widths/selection/filter/Escape/reset/tile failure; diff check (Expected: green and no overflow).
-- [ ] Commit and push Niagara milestone; compare remote SHA (Expected: same SHA).
+- [x] Write SSR behavior tests for cards, missing destination and three featured hub links; run (Expected: absent components fail).
+- [x] Install pinned Leaflet and types; implement bilingual night layout, filters, inline details, grouped pins, graceful tile failure and hub links.
+- [x] Run all tests, lint, build, browser widths/selection/filter/Escape/reset/tile failure; diff check (Expected: green and no overflow).
+- [x] Commit and push Niagara milestone; compare remote SHA (Expected: same SHA).

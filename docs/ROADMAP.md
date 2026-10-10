@@ -228,3 +228,11 @@ El asistente está autorizado a investigar contenido público. [Events Research]
 ## 9. Regla de entrega
 
 Cada hito completado incluye una revisión apropiada al cambio, commit y push a `origin/work`, y comprobación de que el commit local coincide con el remoto. Para producto: lint, build y comprobaciones del flujo modificado; para documentos: revisar contenido y `git diff --check`. Los informes indican qué funciona y qué sigue pendiente. La integración en `main` se decide aparte.
+
+## Entrega del alcance actualizado — 10 octubre 2026
+
+- `/niagara` implementado con 21 fichas, 16 destinos, filtros, pins agrupados y bloque destacado CoCo/La Paisana/Origen desde el hub.
+- Eventos aportados: 11 externos, archivo real y 13 sesiones LATAFF.
+- Calendario cultural: 225 ocurrencias de 2026/2027, rangos y temporadas inclusivos.
+- Pendientes concretos: canales/destinos de seleccionados todavía no documentados, candidatos con señales de cierre, permisos de imágenes y verificación de proveedor de mapas desde una red habilitada.
+- Próximos productos separados: globo de países, staff/fototeca/news/minijuegos, portal admin autenticado y cargas de imágenes.

@@ -1,7 +1,7 @@
 'use client';
 import Link from "next/link";
 import { eventsCopy } from "./events/events-copy";
-import { listEntries } from "./events/agenda-dates";
+import { listEntries, eventDateTime, formatEntryWhen } from "./events/agenda-dates";
 import { useAgendaClock } from "./events/agenda-clock";
 import type { EventEntry } from "./events/event-types";
 import { copy, type Language } from "./home-copy";
@@ -17,9 +17,7 @@ export default function EventsSection({ language }: { language: Language }) {
   const t = copy[language].events;
   const statusCopy = eventsCopy[language], now = useAgendaClock();
   const upcoming = now ? listEntries(clubEvents, 'at-nc', 'upcoming', now).filter((entry): entry is EventEntry => entry.kind === 'event') : [];
-  const dateFormat = new Intl.DateTimeFormat(language === "en" ? "en-CA" : "es", {
-    dateStyle: "long", timeStyle: "short", timeZone: "America/Toronto",
-  });
+
 
   return (
     <section id="events" className={s.events} aria-labelledby="events-title">
@@ -56,8 +54,8 @@ export default function EventsSection({ language }: { language: Language }) {
               <h3 id={`event-${event.id}-title`}><Link href={`/events/${event.slug}`}>{event.title[language]}</Link></h3>
               <p className={s.body}>{event.description[language]}</p>
               <dl className={s.details}>
-                <div><dt>{t.date}</dt><dd><time dateTime={event.startsAt}>{dateFormat.format(new Date(event.startsAt))}</time></dd></div>
-                {event.endsAt && <div><dt>{t.until}</dt><dd><time dateTime={event.endsAt}>{dateFormat.format(new Date(event.endsAt))}</time></dd></div>}
+                <div><dt>{t.date}</dt><dd><time dateTime={eventDateTime(event)}>{formatEntryWhen(event, language)}</time></dd></div>
+                {event.endsAt && <div><dt>{t.until}</dt><dd><time dateTime={event.endsAt}>{formatEntryWhen({ ...event, startsAt: event.endsAt, dateSpan: undefined }, language)}</time></dd></div>}
                 <div><dt>{t.venue}</dt><dd>{event.venue[language]}</dd></div>
                 {event.organizer && <div><dt>{t.organizer}</dt><dd>{event.organizer[language]}</dd></div>}
                 {event.admission && <div><dt>{t.admission}</dt><dd>{event.admission[language]}</dd></div>}

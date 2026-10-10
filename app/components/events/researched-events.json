@@ -1,0 +1,715 @@
+[
+  {
+    "id": "muertos-niagara",
+    "slug": "muertos-niagara-2026",
+    "kind": "event",
+    "category": "out-of-nc",
+    "status": "scheduled",
+    "source": {
+      "url": "https://www.eventbrite.com/e/dia-de-los-muertos-en-niagara-tickets-1998501802690",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.facebook.com/latinniagaraentertaiment/posts/-d%C3%ADa-de-muertos-in-niagarad%C3%ADa-de-muertos-is-a-mexican-tradition-rooted-in-memory/1033909629708571/",
+        "label": {
+          "en": "Reference: Día de Muertos anuncio actual del organizador",
+          "es": "Referencia: Día de Muertos anuncio actual del organizador"
+        }
+      },
+      {
+        "url": "https://niagarafalls.ca/recreation-culture-and-community/culture/cultural-development-fund/",
+        "label": {
+          "en": "Reference: Día de Muertos registro municipal con sede anterior",
+          "es": "Referencia: Día de Muertos registro municipal con sede anterior"
+        }
+      }
+    ],
+    "title": {
+      "en": "Día de Muertos en Niagara",
+      "es": "Día de Muertos en Niagara"
+    },
+    "description": {
+      "en": "A community celebration of Mexican heritage with altars, music and art. This local festival takes place before the traditional November 1 and 2 observance.",
+      "es": "Segunda edición con altares, cultura mexicana, música, arte y actividades de comunidad. La fecha local del festival es distinta de la conmemoración tradicional del 1 y 2 de noviembre."
+    },
+    "dateSpan": {
+      "start": "2026-10-24",
+      "end": "2026-10-24"
+    },
+    "venue": {
+      "en": "The Exchange",
+      "es": "The Exchange"
+    },
+    "city": {
+      "en": "Niagara Falls",
+      "es": "Niagara Falls"
+    },
+    "address": "5943 Sylvia Place, Niagara Falls, ON L2G 1S9",
+    "organizer": {
+      "en": "Latin Niagara Entertainment / Cultural Niagara Corporation",
+      "es": "Latin Niagara Entertainment / Cultural Niagara Corporation"
+    },
+    "admission": {
+      "en": "General admission free; food and purchases extra.",
+      "es": "Entrada general gratuita; consumos aparte."
+    },
+    "registrationUrl": "https://www.eventbrite.com/e/dia-de-los-muertos-en-niagara-tickets-1998501802690",
+    "note": {
+      "en": "The organizer poster and description list 11:00–22:00 at The Exchange. The Eventbrite header lists 10:00. Confirm before visiting; the municipal record retains the previous Club Italia venue.",
+      "es": "El afiche y la descripción del organizador indican 11:00–22:00 en The Exchange. La cabecera de Eventbrite indica 10:00. Confirma antes de ir; el registro municipal conserva la sede anterior de Club Italia."
+    },
+    "sessions": [
+      {
+        "startsAt": "2026-10-24T11:00:00-04:00",
+        "endsAt": "2026-10-24T22:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "id": "sunset",
+    "slug": "sunset-2026",
+    "kind": "event",
+    "category": "out-of-nc",
+    "status": "scheduled",
+    "source": {
+      "url": "https://sunsetlatinfest.com/",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "title": {
+      "en": "Sunset Latin Fest",
+      "es": "Sunset Latin Fest"
+    },
+    "description": {
+      "en": "A beach festival bringing Latin music, dance, food vendors and family activities to St. Catharines.",
+      "es": "Festival de playa con música latina, baile, gastronomía, vendedores y actividades familiares. La edición 2026 fue la cuarta."
+    },
+    "dateSpan": {
+      "start": "2026-07-25",
+      "end": "2026-07-26"
+    },
+    "venue": {
+      "en": "Sunset Beach",
+      "es": "Sunset Beach"
+    },
+    "city": {
+      "en": "St. Catharines",
+      "es": "St. Catharines"
+    },
+    "address": "111 Arthur Street, St. Catharines, ON",
+    "organizer": {
+      "en": "Sunset Latin Fest / Latinos in Niagara",
+      "es": "Sunset Latin Fest / Latinos in Niagara"
+    },
+    "admission": {
+      "en": "General admission free; food and purchases extra.",
+      "es": "Entrada general gratuita; consumos aparte."
+    },
+    "registrationUrl": "https://sunsetlatinfest.com/",
+    "sessions": [
+      {
+        "startsAt": "2026-07-25T11:00:00-04:00",
+        "endsAt": "2026-07-25T22:00:00-04:00"
+      },
+      {
+        "startsAt": "2026-07-26T11:00:00-04:00",
+        "endsAt": "2026-07-26T22:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "id": "welland",
+    "slug": "welland-2026",
+    "kind": "event",
+    "category": "out-of-nc",
+    "status": "scheduled",
+    "source": {
+      "url": "https://gncc.ca/calendar/welland-salsa-cumbia-festival-2026/2026-08-29/",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "title": {
+      "en": "Welland Salsa and Cumbia Festival",
+      "es": "Welland Salsa and Cumbia Festival"
+    },
+    "description": {
+      "en": "A free festival with salsa, cumbia, music, workshops, food, artisans and family activities in Merritt Park.",
+      "es": "Tercera edición con salsa, cumbia, música, talleres, gastronomía, artesanos y actividades familiares. El afiche incluye Welland Water Parade."
+    },
+    "dateSpan": {
+      "start": "2026-08-29",
+      "end": "2026-08-30"
+    },
+    "venue": {
+      "en": "Merritt Park Amphitheatre",
+      "es": "Merritt Park Amphitheatre"
+    },
+    "city": {
+      "en": "Welland",
+      "es": "Welland"
+    },
+    "address": "151 King Street, Welland, ON",
+    "organizer": {
+      "en": "Cultural Niagara Corporation / Latin Niagara Entertainment",
+      "es": "Cultural Niagara Corporation / Latin Niagara Entertainment"
+    },
+    "admission": {
+      "en": "General admission free; food and purchases extra.",
+      "es": "Entrada general gratuita; consumos aparte."
+    },
+    "registrationUrl": "https://gncc.ca/calendar/welland-salsa-cumbia-festival-2026/2026-08-29/",
+    "note": {
+      "en": "2026 dates follow the supplied poster and structured calendar. One paragraph in the GNCC listing retains a 2025 date; hours follow the listing body and agenda data.",
+      "es": "Las fechas de 2026 corresponden al afiche y calendario estructurado aportados. Un párrafo de GNCC conserva una fecha de 2025; los horarios corresponden al cuerpo de la publicación y la agenda."
+    },
+    "sessions": [
+      {
+        "startsAt": "2026-08-29T11:00:00-04:00",
+        "endsAt": "2026-08-29T23:00:00-04:00"
+      },
+      {
+        "startsAt": "2026-08-30T11:00:00-04:00",
+        "endsAt": "2026-08-30T23:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "id": "salsa-niagara",
+    "slug": "salsa-niagara-2026",
+    "kind": "event",
+    "category": "out-of-nc",
+    "status": "scheduled",
+    "source": {
+      "url": "https://salsaintoronto.com/festivals/salsa-at-niagara-falls/",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.niagarafallstourism.com/salsa-at-niagara-falls-festival/",
+        "label": {
+          "en": "Reference: Salsa Niagara turismo oficial",
+          "es": "Referencia: Salsa Niagara turismo oficial"
+        }
+      }
+    ],
+    "title": {
+      "en": "Salsa at Niagara Falls",
+      "es": "Salsa at Niagara Falls"
+    },
+    "description": {
+      "en": "An inaugural Latin music and dance festival beside the Falls. The organizer marks the 2026 edition as concluded.",
+      "es": "Primera edición con presentaciones, baile, comida y mercados junto a las cataratas. El organizador marca 2026 como concluida."
+    },
+    "dateSpan": {
+      "start": "2026-09-12",
+      "end": "2026-09-13"
+    },
+    "venue": {
+      "en": "Clifton Hill y Niagara River Parkway",
+      "es": "Clifton Hill y Niagara River Parkway"
+    },
+    "city": {
+      "en": "Niagara Falls",
+      "es": "Niagara Falls"
+    },
+    "address": "Clifton Hill and Niagara River Parkway, Niagara Falls, ON",
+    "organizer": {
+      "en": "Canadian Salsa Festivals Project / Salsa in Toronto",
+      "es": "Canadian Salsa Festivals Project / Salsa in Toronto"
+    },
+    "admission": {
+      "en": "Check prices for each screening or ticket.",
+      "es": "Consultar precio de cada función o entrada."
+    },
+    "registrationUrl": "https://salsaintoronto.com/festivals/salsa-at-niagara-falls/",
+    "note": {
+      "en": "No single admission price is confirmed for every activity. Check each concert or event with the organizer.",
+      "es": "No hay un precio único confirmado para todas las actividades. Consulta cada concierto o evento con el organizador."
+    },
+    "sessions": [
+      {
+        "startsAt": "2026-09-12T12:00:00-04:00",
+        "endsAt": "2026-09-12T22:00:00-04:00"
+      },
+      {
+        "startsAt": "2026-09-13T12:00:00-04:00",
+        "endsAt": "2026-09-13T22:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "id": "burlington",
+    "slug": "burlington-2026",
+    "kind": "event",
+    "category": "out-of-nc",
+    "status": "scheduled",
+    "source": {
+      "url": "https://burlingtonlatinfest.com/",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://tourismburlington.ca/summer/",
+        "label": {
+          "en": "Reference: Burlington fechas 2026 turismo oficial",
+          "es": "Referencia: Burlington fechas 2026 turismo oficial"
+        }
+      }
+    ],
+    "title": {
+      "en": "Burlington Latin Festival",
+      "es": "Burlington Latin Festival"
+    },
+    "description": {
+      "en": "A two-day celebration of Latin music, dance, food, arts and family activities at Central Park.",
+      "es": "Festival de dos días con música latina, baile, gastronomía, artesanías y actividades de familias en Central Park."
+    },
+    "dateSpan": {
+      "start": "2026-08-22",
+      "end": "2026-08-23"
+    },
+    "venue": {
+      "en": "Central Park",
+      "es": "Central Park"
+    },
+    "city": {
+      "en": "Burlington",
+      "es": "Burlington"
+    },
+    "address": "2299 New Street, Burlington, ON L7R 1J5",
+    "organizer": {
+      "en": "Burlington Latin Festival / Latin Legacy",
+      "es": "Burlington Latin Festival / Latin Legacy"
+    },
+    "admission": {
+      "en": "General admission free; food and purchases extra.",
+      "es": "Entrada general gratuita; consumos aparte."
+    },
+    "registrationUrl": "https://burlingtonlatinfest.com/",
+    "note": {
+      "en": "Dates follow the official tourism listing and 2026 graphic. A secondary listing gives hours, but no primary daily schedule was supplied.",
+      "es": "Fechas según turismo oficial y gráfico de 2026. Una agenda secundaria indica horas, pero no se aportó un programa horario primario."
+    }
+  },
+  {
+    "id": "salsa-toronto",
+    "slug": "salsa-toronto-2026",
+    "kind": "event",
+    "category": "out-of-nc",
+    "status": "scheduled",
+    "source": {
+      "url": "https://salsaintoronto.com/festivals/salsa-on-st-clair/",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "title": {
+      "en": "TD Salsa on St Clair",
+      "es": "TD Salsa on St Clair"
+    },
+    "description": {
+      "en": "An established Latin street festival featuring music, dance, food and cultural performances.",
+      "es": "Festival callejero consolidado de música latina, baile, gastronomía y exhibiciones culturales."
+    },
+    "dateSpan": {
+      "start": "2026-07-11",
+      "end": "2026-07-12"
+    },
+    "venue": {
+      "en": "St Clair Avenue West",
+      "es": "St Clair Avenue West"
+    },
+    "city": {
+      "en": "Toronto",
+      "es": "Toronto"
+    },
+    "address": "St Clair Avenue West and Winona Drive, Toronto, ON",
+    "organizer": {
+      "en": "Canadian Salsa Festivals Project / Salsa in Toronto",
+      "es": "Canadian Salsa Festivals Project / Salsa in Toronto"
+    },
+    "admission": {
+      "en": "General admission free; food and purchases extra.",
+      "es": "Entrada general gratuita; consumos aparte."
+    },
+    "registrationUrl": "https://salsaintoronto.com/festivals/salsa-on-st-clair/",
+    "note": {
+      "en": "Hours follow the organizer page supplied in the research. Some local listings retain different hours. The organizer reports that the 2026 edition has concluded.",
+      "es": "Horarios según la página del organizador aportada en la investigación. Algunas agendas locales conservan otros horarios. El organizador informa que concluyó la edición 2026."
+    },
+    "sessions": [
+      {
+        "startsAt": "2026-07-11T11:00:00-04:00",
+        "endsAt": "2026-07-11T21:30:00-04:00"
+      },
+      {
+        "startsAt": "2026-07-12T11:00:00-04:00",
+        "endsAt": "2026-07-12T20:30:00-04:00"
+      }
+    ]
+  },
+  {
+    "id": "panam",
+    "slug": "panam-2026",
+    "kind": "event",
+    "category": "out-of-nc",
+    "status": "scheduled",
+    "source": {
+      "url": "https://panamfest.com/festival",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "title": {
+      "en": "PanamFest Pan American Food and Music Festival",
+      "es": "PanamFest Pan American Food and Music Festival"
+    },
+    "description": {
+      "en": "A Pan-American festival of food, music, folklore and culture. The Dominican Republic was the 2026 country of honour.",
+      "es": "Festival panamericano de música, cocina, folclor y cultura. República Dominicana fue el país invitado de honor en 2026."
+    },
+    "dateSpan": {
+      "start": "2026-07-24",
+      "end": "2026-07-26"
+    },
+    "venue": {
+      "en": "Nathan Phillips Square",
+      "es": "Nathan Phillips Square"
+    },
+    "city": {
+      "en": "Toronto",
+      "es": "Toronto"
+    },
+    "address": "100 Queen Street West, Toronto, ON",
+    "organizer": {
+      "en": "ArtsXplosion",
+      "es": "ArtsXplosion"
+    },
+    "admission": {
+      "en": "General admission free; food and purchases extra.",
+      "es": "Entrada general gratuita; consumos aparte."
+    },
+    "registrationUrl": "https://panamfest.com/festival",
+    "note": {
+      "en": "General festival admission is free; the July 21 VIP reception was a separate paid event. Daily festival hours were not supplied.",
+      "es": "La entrada general al festival es gratuita; la recepción VIP del 21 de julio fue un evento separado de pago. No se aportaron horarios diarios."
+    }
+  },
+  {
+    "id": "brazilfest",
+    "slug": "brazilfest-2026",
+    "kind": "event",
+    "category": "out-of-nc",
+    "status": "scheduled",
+    "source": {
+      "url": "https://brazilfest.ca/the-festival/",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.todocanada.ca/city/toronto/event/toronto-international-brazilfest/",
+        "label": {
+          "en": "Reference: BrazilFest edición 2026 fechas publicadas",
+          "es": "Referencia: BrazilFest edición 2026 fechas publicadas"
+        }
+      }
+    ],
+    "title": {
+      "en": "Toronto International BrazilFest",
+      "es": "Toronto International BrazilFest"
+    },
+    "description": {
+      "en": "An established Brazilian festival showcasing music, dance and food in Toronto.",
+      "es": "Festival brasileño consolidado con música, baile y gastronomía. Amplía la representación de Brasil en el calendario del club."
+    },
+    "dateSpan": {
+      "start": "2026-07-18",
+      "end": "2026-07-19"
+    },
+    "venue": {
+      "en": "Earlscourt Park",
+      "es": "Earlscourt Park"
+    },
+    "city": {
+      "en": "Toronto",
+      "es": "Toronto"
+    },
+    "address": "Earlscourt Park, Caledonia Road and St Clair Avenue West, Toronto, ON",
+    "organizer": {
+      "en": "Toronto International BrazilFest",
+      "es": "Toronto International BrazilFest"
+    },
+    "admission": {
+      "en": "General admission free; food and purchases extra.",
+      "es": "Entrada general gratuita; consumos aparte."
+    },
+    "registrationUrl": "https://brazilfest.ca/the-festival/",
+    "note": {
+      "en": "July 18–19 dates come from a secondary listing. The official source confirms the third weekend of July, venue and free admission; its general text differs on the festival length. These archive dates remain provisional.",
+      "es": "Las fechas 18–19 de julio proceden de una agenda secundaria. La fuente oficial confirma el tercer fin de semana, la sede y la gratuidad; su texto general difiere sobre la duración. Estas fechas de archivo son provisionales."
+    }
+  },
+  {
+    "id": "latin-parade",
+    "slug": "latin-parade-2026",
+    "kind": "event",
+    "category": "out-of-nc",
+    "status": "scheduled",
+    "source": {
+      "url": "https://hispanicheritage.ca/come-one-come-all-to-the-latin-parade-hispanic-fiesta-on-saturday-september-26-in-toronto/",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "title": {
+      "en": "Latin Parade and Hispanic Fiesta",
+      "es": "Latin Parade and Hispanic Fiesta"
+    },
+    "description": {
+      "en": "A Latin American community parade followed by a cultural fair, music, food and family activities.",
+      "es": "Desfile de comunidades latinoamericanas seguido de una feria cultural, música, comida y actividades familiares."
+    },
+    "dateSpan": {
+      "start": "2026-09-26",
+      "end": "2026-09-26"
+    },
+    "venue": {
+      "en": "Desfile y Sankofa Square",
+      "es": "Desfile y Sankofa Square"
+    },
+    "city": {
+      "en": "Toronto",
+      "es": "Toronto"
+    },
+    "address": "Salida St George Street and Bloor Street; feria Sankofa Square, Toronto, ON",
+    "organizer": {
+      "en": "Hispanic Canadian Heritage Council",
+      "es": "Hispanic Canadian Heritage Council"
+    },
+    "admission": {
+      "en": "General admission free; food and purchases extra.",
+      "es": "Entrada general gratuita; consumos aparte."
+    },
+    "registrationUrl": "https://hispanicheritage.ca/come-one-come-all-to-the-latin-parade-hispanic-fiesta-on-saturday-september-26-in-toronto/",
+    "note": {
+      "en": "The parade starts at 10:00 and the announced day ends at 20:00. The route runs from St. George and Bloor to Sankofa Square; not every location hosts the fair for the entire interval.",
+      "es": "El desfile parte a las 10:00 y la jornada anunciada termina a las 20:00. La ruta va de St. George y Bloor a Sankofa Square; la feria no ocupa cada punto durante todo el intervalo."
+    },
+    "sessions": [
+      {
+        "startsAt": "2026-09-26T10:00:00-04:00",
+        "endsAt": "2026-09-26T20:00:00-04:00"
+      }
+    ]
+  },
+  {
+    "id": "lataff",
+    "slug": "lataff-2026",
+    "kind": "event",
+    "category": "out-of-nc",
+    "status": "scheduled",
+    "source": {
+      "url": "https://www.lataff.ca/2026-program/",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "title": {
+      "en": "Toronto Latin American Film Festival LATAFF",
+      "es": "Toronto Latin American Film Festival LATAFF"
+    },
+    "description": {
+      "en": "The 11th edition of LATAFF presents Latin American and Latin Canadian cinema. Published screenings run on October 17, 18, 24 and 25, with a lineup presentation on October 15.",
+      "es": "Undécima edición de cine latinoamericano y latino canadiense. La presentación de la selección es el 15 de octubre; las funciones publicadas son los días 17, 18, 24 y 25."
+    },
+    "dateSpan": {
+      "start": "2026-10-15",
+      "end": "2026-10-25"
+    },
+    "venue": {
+      "en": "Innis Town Hall para funciones anunciadas",
+      "es": "Innis Town Hall para funciones anunciadas"
+    },
+    "city": {
+      "en": "Toronto",
+      "es": "Toronto"
+    },
+    "address": "2 Sussex Avenue, Toronto, ON M5S 1J5",
+    "organizer": {
+      "en": "Hispanic Canadian Heritage Council",
+      "es": "Hispanic Canadian Heritage Council"
+    },
+    "admission": {
+      "en": "Check prices for each screening or ticket.",
+      "es": "Consultar precio de cada función o entrada."
+    },
+    "registrationUrl": "https://www.lataff.ca/2026-program/",
+    "note": {
+      "en": "October 15–25 is the festival period, not daily screenings. Only the sessions listed below have published times. October 15 has no detailed venue or time in the supplied program. Some ticket sales are announced as coming soon; check each function for prices and classification.",
+      "es": "Del 15 al 25 de octubre es el periodo del festival, no funciones diarias. Solo las sesiones siguientes tienen horarios publicados. La actividad del 15 no tiene sede ni hora detalladas en el programa aportado. Algunas ventas se anuncian como coming soon; consulta precios y clasificación de cada función."
+    },
+    "sessions": [
+      {
+        "startsAt": "2026-10-17T15:00:00-04:00",
+        "title": {
+          "en": "1982",
+          "es": "1982"
+        },
+        "registrationUrl": "https://lataff20261982.eventbrite.ca"
+      },
+      {
+        "startsAt": "2026-10-17T17:00:00-04:00",
+        "title": {
+          "en": "Gardens of the Woods",
+          "es": "Gardens of the Woods"
+        },
+        "registrationUrl": "https://www.lataff.ca/2026-program/"
+      },
+      {
+        "startsAt": "2026-10-17T19:00:00-04:00",
+        "title": {
+          "en": "Opening Reception",
+          "es": "Opening Reception"
+        }
+      },
+      {
+        "startsAt": "2026-10-17T20:00:00-04:00",
+        "title": {
+          "en": "Mountains of Fire",
+          "es": "Mountains of Fire"
+        },
+        "registrationUrl": "https://lataff2026mountain.eventbrite.ca"
+      },
+      {
+        "startsAt": "2026-10-18T15:00:00-04:00",
+        "title": {
+          "en": "Safari",
+          "es": "Safari"
+        }
+      },
+      {
+        "startsAt": "2026-10-18T17:00:00-04:00",
+        "title": {
+          "en": "UnControl",
+          "es": "UnControl"
+        },
+        "registrationUrl": "https://lataff2026uncontrol.eventbrite.ca"
+      },
+      {
+        "startsAt": "2026-10-18T19:00:00-04:00",
+        "title": {
+          "en": "Cubao Is Theirs",
+          "es": "Cubao Is Theirs"
+        },
+        "registrationUrl": "https://lataff2026cubaoistheirs.eventbrite.ca"
+      },
+      {
+        "startsAt": "2026-10-24T15:00:00-04:00",
+        "title": {
+          "en": "Latin American Shorts",
+          "es": "Latin American Shorts"
+        }
+      },
+      {
+        "startsAt": "2026-10-24T17:00:00-04:00",
+        "title": {
+          "en": "Let the Dance Begin",
+          "es": "Let the Dance Begin"
+        },
+        "registrationUrl": "https://lataff2026empiezabaile.eventbrite.ca"
+      },
+      {
+        "startsAt": "2026-10-24T19:00:00-04:00",
+        "title": {
+          "en": "Risa and the Wind Phone",
+          "es": "Risa and the Wind Phone"
+        },
+        "registrationUrl": "https://lataff2026risa.eventbrite.ca"
+      },
+      {
+        "startsAt": "2026-10-25T15:00:00-04:00",
+        "title": {
+          "en": "Matias and When I Grow Young",
+          "es": "Matias and When I Grow Young"
+        },
+        "registrationUrl": "https://lataff2026matias.eventbrite.ca"
+      },
+      {
+        "startsAt": "2026-10-25T17:00:00-04:00",
+        "title": {
+          "en": "Identity and City Shorts",
+          "es": "Identity and City Shorts"
+        }
+      },
+      {
+        "startsAt": "2026-10-25T19:00:00-04:00",
+        "title": {
+          "en": "Identity and Family Shorts",
+          "es": "Identity and Family Shorts"
+        }
+      }
+    ]
+  },
+  {
+    "id": "alucine",
+    "slug": "alucine-2026",
+    "kind": "event",
+    "category": "out-of-nc",
+    "status": "scheduled",
+    "source": {
+      "url": "https://alucinefestival.ca/aluCine2026Programming",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://ti.to/alucine-festival/26th-edition-of-alucine-latin-film-media-arts-festival",
+        "label": {
+          "en": "Reference: aluCine entradas y sede publicadas por el organizador",
+          "es": "Referencia: aluCine entradas y sede publicadas por el organizador"
+        }
+      }
+    ],
+    "title": {
+      "en": "aluCine Latin Film and Media Arts Festival",
+      "es": "aluCine Latin Film and Media Arts Festival"
+    },
+    "description": {
+      "en": "The 26th edition of aluCine showcased Latin American film and media arts from September 30 to October 2.",
+      "es": "Vigésima sexta edición dedicada al cine y las artes mediáticas latinoamericanas. La programación de cine 2026 fue del 30 de septiembre al 2 de octubre."
+    },
+    "dateSpan": {
+      "start": "2026-09-30",
+      "end": "2026-10-02"
+    },
+    "venue": {
+      "en": "Spadina Theatre",
+      "es": "Spadina Theatre"
+    },
+    "city": {
+      "en": "Toronto",
+      "es": "Toronto"
+    },
+    "address": "24 Spadina Road, Toronto, ON M5R 2S7",
+    "organizer": {
+      "en": "Southern Currents Film and Video Collective",
+      "es": "Southern Currents Film and Video Collective"
+    },
+    "admission": {
+      "en": "Check prices for each screening or ticket.",
+      "es": "Consultar precio de cada función o entrada."
+    },
+    "registrationUrl": "https://alucinefestival.ca/aluCine2026Programming",
+    "note": {
+      "en": "Regular screenings are announced for ages 18+ with English subtitles. LAMAS on October 14–17 is a related symposium, not an extension of these screenings. Ticket prices are not consolidated. The supplied archived poster shows 2025 dates and is not used for this edition.",
+      "es": "Las funciones regulares se anuncian para mayores de 18 años, con subtítulos en inglés. LAMAS del 14 al 17 de octubre es un simposio relacionado, no una extensión de estas funciones. Precios no consolidados. El afiche de archivo aportado muestra fechas de 2025 y no se usa en esta edición."
+    }
+  }
+]

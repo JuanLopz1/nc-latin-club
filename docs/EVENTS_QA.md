@@ -46,3 +46,7 @@ Límites de la revisión: no se verificó precisión actual de fuentes bloqueada
 5. La exactitud actual de las fuentes externas sigue sin consulta en vivo. Se conservan datos capturados por el fundador y procedencia visible; precios, disponibilidad o cancelaciones posteriores podrían haber cambiado.
 6. La interacción se sustenta en Chromium, emulación táctil, teclado y atributos accesibles. Sin dispositivos físicos ni lectores de pantalla reales, pueden quedar problemas específicos de esos entornos.
 7. La entrega verifica SHA remoto y producción local. El estado Ready de Vercel no se consultó; podría quedar un fallo específico del hosting.
+
+## Paquete aportado: eventos y calendario, 10 octubre 2026
+
+30/30 pruebas completas, ESLint y build Next aprobados (244 páginas generadas). Chromium sobre build actual: dos festivales externos próximos, nueve archivados, Muertos+LATAFF el 24 octubre, octubre cultural y Día de Muertos en noviembre, 13 sesiones y enlaces LATAFF, hora desconocida Burlington, fin inclusivo Posadas, rutas nuevas HTTP200. Calendario cultural y detalle largo caben a 320/375/760/1100/1440. Flujo previo Latin Fiesta, navegación EN/ES, regresar, animación/reduced-motion y HTTP404 sigue pasando sin excepciones. No se probaron dispositivos físicos ni lectores de pantalla. Ningún medio marcado permission_required fue publicado.

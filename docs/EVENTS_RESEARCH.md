@@ -29,3 +29,15 @@ Los enlaces candidatos no son entradas verificadas del calendario. El bloqueo de
 ## Reintento al terminar la implementación
 
 El 10 de octubre de 2026 se reintentaron NC Engage y las cuatro fuentes institucionales/regionales de la tabla. Las cinco conexiones volvieron a fallar con `CONNECT tunnel failed, response 403` y HTTP final `000`. No se obtuvo contenido nuevo ni se confirmó una edición regional o fecha cultural. La agenda se entrega con Latin Fiesta aportada por el fundador y categorías vacías útiles; no hay fixtures públicos.
+
+## Actualización tras el paquete del fundador
+
+La instrucción de continuar incluye cargar eventos y calendario. Se publican ahora las 11 entradas de `eventos.json` y las 225 ocurrencias de `calendario_cultural.json`, además de Latin Fiesta. Out of NC incluye Niagara y los festivales seleccionados en Burlington/Toronto; cada ciudad y organizador permanecen explícitos. El bloqueo anterior no invalida la investigación documentada aportada, pero no se afirma una nueva consulta en vivo.
+
+La proyección pública conserva títulos, detalles EN/ES, direcciones de eventos, fuente original y referencias complementarias, revisión 2026-10-10 y enlaces de entradas. Las descripciones EN de cultura son traducciones editoriales de las definiciones ES. Las fechas de país no son feriados laborales de Ontario. Se conservan los años concretos, sin inferir ediciones futuras.
+
+Horarios diarios son sesiones separadas, sin inventar apertura nocturna continua. Los festivales sin horas usan `dateSpan` y “Horario no publicado”. LATAFF conserva 13 sesiones, sus enlaces y final no publicado, distinguiendo el periodo general de funciones diarias. Los rangos culturales incluyen su último día, incluso al cruzar un año.
+
+Día de Muertos: The Exchange, 24 octubre 11:00–22:00; se muestra discrepancia Eventbrite 10:00 vs organizador 11:00 y antigua sede municipal. Brazilfest se archiva con fechas provisionales de agenda secundaria y la diferencia de duración en el texto oficial; no se presenta como nueva edición confirmada. Otros avisos documentados se incluyen en detalles.
+
+Los 13 medios del paquete siguen `permission_required`; no se publicaron. La galería existente admite una o más imágenes autorizadas cuando se aporten; no se sustituyen por fotografías inventadas. Los 327 feriados siguen como referencia editorial.

@@ -1,0 +1,6359 @@
+[
+  {
+    "id": "national-cu-0101-2026",
+    "slug": "national-cu-0101-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Cuban Revolution Anniversary",
+      "es": "Aniversario de la Revolución Cubana"
+    },
+    "description": {
+      "en": "An official historical commemoration; it does not express a political position of the club.",
+      "es": "Conmemoración oficial con contexto histórico; no representa una postura política del club."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/cuba/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-01-01",
+    "scope": {
+      "en": "Cuba",
+      "es": "Cuba"
+    }
+  },
+  {
+    "id": "new-year-2026",
+    "slug": "new-year-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "New Year",
+      "es": "Año Nuevo"
+    },
+    "description": {
+      "en": "Traditions vary by country and family, with no single practice shared by everyone.",
+      "es": "Las tradiciones varían por país y familia; no generalizar una práctica a toda la región."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/argentina/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-01-01",
+    "scope": {
+      "en": "Argentina, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Guatemala, Haiti, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Uruguay, Venezuela, Puerto Rico",
+      "es": "Argentina, Bolivia, Brasil, Chile, Colombia, Costa Rica, Cuba, República Dominicana, Ecuador, El Salvador, Guatemala, Haití, Honduras, México, Nicaragua, Panamá, Paraguay, Perú, Uruguay, Venezuela, Puerto Rico"
+    }
+  },
+  {
+    "id": "national-ht-0101-2026",
+    "slug": "national-ht-0101-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Haiti Independence Day",
+      "es": "Independencia de Haití"
+    },
+    "description": {
+      "en": "Haiti’s independence in 1804 is a central date in Haitian history.",
+      "es": "Independencia de 1804; fecha central de la historia haitiana."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/haiti/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.un.org/en/rememberslavery/observance/2014",
+        "label": {
+          "en": "Reference: Haití independencia Naciones Unidas",
+          "es": "Referencia: Haití independencia Naciones Unidas"
+        }
+      }
+    ],
+    "date": "2026-01-01",
+    "scope": {
+      "en": "Haiti",
+      "es": "Haití"
+    }
+  },
+  {
+    "id": "reyes-2026",
+    "slug": "reyes-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Three Kings Day",
+      "es": "Día de Reyes"
+    },
+    "description": {
+      "en": "A tradition in several communities; Uruguay also uses the name Children’s Day.",
+      "es": "Tradición presente en diversas comunidades; Uruguay también usa Día de los Niños."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/mexico/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/puerto-rico/2027",
+        "label": {
+          "en": "Reference: Puerto Rico calendario 2027",
+          "es": "Referencia: Puerto Rico calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/uruguay/2027",
+        "label": {
+          "en": "Reference: Uruguay calendario 2027",
+          "es": "Referencia: Uruguay calendario 2027"
+        }
+      }
+    ],
+    "date": "2026-01-06",
+    "scope": {
+      "en": "Mexico, Puerto Rico, Cuba, Argentina, Uruguay, Bolivia",
+      "es": "México, Puerto Rico, Cuba, Argentina, Uruguay, Bolivia"
+    }
+  },
+  {
+    "id": "national-bo-0122-2026",
+    "slug": "national-bo-0122-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Plurinational State Day",
+      "es": "Día del Estado Plurinacional"
+    },
+    "description": {
+      "en": "A Bolivian commemoration distinct from Independence Day on August 6.",
+      "es": "Conmemoración boliviana distinta de la independencia del 6 de agosto."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/bolivia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-01-22",
+    "scope": {
+      "en": "Bolivia",
+      "es": "Bolivia"
+    }
+  },
+  {
+    "id": "alasita-2026",
+    "slug": "alasita-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Start of Alasita",
+      "es": "Inicio de Alasita"
+    },
+    "description": {
+      "en": "The La Paz tradition begins January 24 and continues for several weeks.",
+      "es": "La tradición de La Paz comienza el 24 de enero y continúa varias semanas."
+    },
+    "source": {
+      "url": "https://ich.unesco.org/en/RL/ritual-journeys-in-la-paz-during-alasita-01182",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-01-24",
+    "scope": {
+      "en": "Bolivia",
+      "es": "Bolivia"
+    }
+  },
+  {
+    "id": "candelaria-2026",
+    "slug": "candelaria-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Candlemas",
+      "es": "Día de la Candelaria"
+    },
+    "description": {
+      "en": "A Mexican celebration with religious and food traditions.",
+      "es": "Celebración mexicana de tradición religiosa y gastronómica."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/mexico/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-02-02",
+    "scope": {
+      "en": "Mexico",
+      "es": "México"
+    }
+  },
+  {
+    "id": "national-cl-0212-2026",
+    "slug": "national-cl-0212-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Chile Independence Declaration",
+      "es": "Declaración de Independencia de Chile"
+    },
+    "description": {
+      "en": "The historical declaration of 1818; Chile’s main national celebrations are in September.",
+      "es": "Fecha histórica de 1818; las Fiestas Patrias principales son en septiembre."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/chile/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.chile.gob.cl/chile/sobre-chile/asi-es-chile/sintesis-historica/sintesis-historica",
+        "label": {
+          "en": "Reference: Historia de Chile Gobierno de Chile",
+          "es": "Referencia: Historia de Chile Gobierno de Chile"
+        }
+      }
+    ],
+    "date": "2026-02-12",
+    "scope": {
+      "en": "Chile",
+      "es": "Chile"
+    }
+  },
+  {
+    "id": "valentines-2026",
+    "slug": "valentines-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Love and Friendship or Valentines Day",
+      "es": "Amor y Amistad o San Valentín"
+    },
+    "description": {
+      "en": "Examples of communities observing February 14; Colombia and Brazil have different celebrations.",
+      "es": "Ejemplos de países que observan esta fecha; Colombia y Brasil tienen celebraciones distintas."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/mexico/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/nicaragua/2027",
+        "label": {
+          "en": "Reference: Nicaragua calendario 2027",
+          "es": "Referencia: Nicaragua calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/haiti/2027",
+        "label": {
+          "en": "Reference: Haití calendario 2027",
+          "es": "Referencia: Haití calendario 2027"
+        }
+      }
+    ],
+    "date": "2026-02-14",
+    "scope": {
+      "en": "Mexico, Nicaragua, Haiti",
+      "es": "México, Nicaragua, Haití"
+    }
+  },
+  {
+    "id": "mother-language-2026",
+    "slug": "mother-language-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "International Mother Language Day",
+      "es": "Día Internacional de la Lengua Materna"
+    },
+    "description": {
+      "en": "Recognising Spanish, Portuguese, French, creoles and Indigenous languages.",
+      "es": "Visibilizar español, portugués, francés, criollos y lenguas indígenas."
+    },
+    "source": {
+      "url": "https://www.un.org/dgacm/en/content/multilingualism-observances",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-02-21",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    }
+  },
+  {
+    "id": "national-do-0227-2026",
+    "slug": "national-do-0227-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Dominican Independence Day",
+      "es": "Independencia dominicana"
+    },
+    "description": {
+      "en": "Commemorates Dominican independence in 1844.",
+      "es": "Independencia de 1844."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/dominican-republic/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-02-27",
+    "scope": {
+      "en": "Dominican Republic",
+      "es": "República Dominicana"
+    }
+  },
+  {
+    "id": "women-2026",
+    "slug": "women-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "International Womens Day",
+      "es": "Día Internacional de la Mujer"
+    },
+    "description": {
+      "en": "Recognising the contributions of Latin American women.",
+      "es": "Dar espacio a las contribuciones de las mujeres latinoamericanas."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/colombia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-03-08",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    }
+  },
+  {
+    "id": "family-bo-0319-2026",
+    "slug": "family-bo-0319-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Bolivia Fathers Day",
+      "es": "Día del Padre en Bolivia"
+    },
+    "description": {
+      "en": "A country-specific family celebration; dates differ across Latin America.",
+      "es": "Fecha de país; no aplicar universalmente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/bolivia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-03-19",
+    "scope": {
+      "en": "Bolivia",
+      "es": "Bolivia"
+    }
+  },
+  {
+    "id": "family-hn-0319-2026",
+    "slug": "family-hn-0319-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Honduras Fathers Day",
+      "es": "Día del Padre en Honduras"
+    },
+    "description": {
+      "en": "A country-specific family celebration; dates differ across Latin America.",
+      "es": "Fecha de país; no aplicar universalmente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/honduras/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-03-19",
+    "scope": {
+      "en": "Honduras",
+      "es": "Honduras"
+    }
+  },
+  {
+    "id": "extended-pr-0322-2026",
+    "slug": "extended-pr-0322-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Puerto Rico Emancipation Day",
+      "es": "Abolición de la esclavitud en Puerto Rico"
+    },
+    "description": {
+      "en": "A Puerto Rican commemoration. Puerto Rico is a US territory, with no independence day as a sovereign state.",
+      "es": "Territorio de Estados Unidos; no tiene día de independencia como estado soberano."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/puerto-rico/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-03-22",
+    "scope": {
+      "en": "Puerto Rico",
+      "es": "Puerto Rico"
+    }
+  },
+  {
+    "id": "national-cr-0411-2026",
+    "slug": "national-cr-0411-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Juan Santamaria and Battle of Rivas",
+      "es": "Juan Santamaría y Batalla de Rivas"
+    },
+    "description": {
+      "en": "A Costa Rican commemoration.",
+      "es": "Conmemoración costarricense."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/costa-rica/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-04-11",
+    "scope": {
+      "en": "Costa Rica",
+      "es": "Costa Rica"
+    }
+  },
+  {
+    "id": "americas-2026",
+    "slug": "americas-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Pan American Day",
+      "es": "Día de las Américas"
+    },
+    "description": {
+      "en": "A continental date, rather than a local Ontario festival.",
+      "es": "Fecha continental, no un festival local de Ontario."
+    },
+    "source": {
+      "url": "https://www.oas.org/en/media_center/press_release.asp?sCodigo=E-058%2F04",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-04-14",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    }
+  },
+  {
+    "id": "national-ve-0419-2026",
+    "slug": "national-ve-0419-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Beginning of Venezuelan Independence Process",
+      "es": "Inicio del proceso independentista venezolano"
+    },
+    "description": {
+      "en": "Commemorates the events of 1810, distinct from the July 5 declaration.",
+      "es": "Conmemoración de 1810; distinta de la declaración del 5 de julio."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/venezuela/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-04-19",
+    "scope": {
+      "en": "Venezuela",
+      "es": "Venezuela"
+    }
+  },
+  {
+    "id": "spanish-2026",
+    "slug": "spanish-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Spanish Language Day",
+      "es": "Día del Idioma Español"
+    },
+    "description": {
+      "en": "A date to celebrate the Spanish language and community voices.",
+      "es": "Propuesta editorial para el diccionario y las voces de la comunidad."
+    },
+    "source": {
+      "url": "https://languages.un.org/en/resources-and-solutions/activities-events-resources/celebrate-multilingualism",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-04-23",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    }
+  },
+  {
+    "id": "labour-2026",
+    "slug": "labour-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Labour Day",
+      "es": "Día del Trabajo"
+    },
+    "description": {
+      "en": "Widely observed in Latin America. Canadian Labour Day takes place in September.",
+      "es": "Conmemoración ampliamente observada; el Labour Day canadiense ocurre en septiembre."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/argentina/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/brazil/2027",
+        "label": {
+          "en": "Reference: Brasil calendario 2027",
+          "es": "Referencia: Brasil calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/colombia/2027",
+        "label": {
+          "en": "Reference: Colombia calendario 2027",
+          "es": "Referencia: Colombia calendario 2027"
+        }
+      }
+    ],
+    "date": "2026-05-01",
+    "scope": {
+      "en": "Argentina, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Guatemala, Haiti, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Uruguay, Venezuela",
+      "es": "Argentina, Bolivia, Brasil, Chile, Colombia, Costa Rica, Cuba, República Dominicana, Ecuador, El Salvador, Guatemala, Haití, Honduras, México, Nicaragua, Panamá, Paraguay, Perú, Uruguay, Venezuela"
+    }
+  },
+  {
+    "id": "cinco-mayo-2026",
+    "slug": "cinco-mayo-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Battle of Puebla Anniversary",
+      "es": "Conmemoración de la Batalla de Puebla"
+    },
+    "description": {
+      "en": "The Battle of Puebla anniversary, rather than Mexico’s independence or a holiday for all of Latin America.",
+      "es": "No es la independencia de México ni una fiesta nacional de toda Latinoamérica."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/mexico/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-05-05",
+    "scope": {
+      "en": "Mexico",
+      "es": "México"
+    }
+  },
+  {
+    "id": "family-sv-0510-2026",
+    "slug": "family-sv-0510-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "El Salvador Mothers Day",
+      "es": "Día de las Madres en El Salvador"
+    },
+    "description": {
+      "en": "A country-specific family celebration; dates differ across Latin America.",
+      "es": "Fecha de país; no aplicar universalmente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/el-salvador/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-05-10",
+    "scope": {
+      "en": "El Salvador",
+      "es": "El Salvador"
+    }
+  },
+  {
+    "id": "family-gt-0510-2026",
+    "slug": "family-gt-0510-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Guatemala Mothers Day",
+      "es": "Día de las Madres en Guatemala"
+    },
+    "description": {
+      "en": "A country-specific family celebration; dates differ across Latin America.",
+      "es": "Fecha de país; no aplicar universalmente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/guatemala/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-05-10",
+    "scope": {
+      "en": "Guatemala",
+      "es": "Guatemala"
+    }
+  },
+  {
+    "id": "family-mx-0510-2026",
+    "slug": "family-mx-0510-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Mexico Mothers Day",
+      "es": "Día de las Madres en México"
+    },
+    "description": {
+      "en": "A country-specific family celebration; dates differ across Latin America.",
+      "es": "Fecha de país; no aplicar universalmente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/mexico/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-05-10",
+    "scope": {
+      "en": "Mexico",
+      "es": "México"
+    }
+  },
+  {
+    "id": "mothers-second-may-2026",
+    "slug": "mothers-second-may-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Mothers Day in Several Countries",
+      "es": "Día de las Madres en varios países"
+    },
+    "description": {
+      "en": "Examples include Brazil, Colombia, Cuba, Honduras and Peru. Mother’s Day differs among countries.",
+      "es": "Ejemplos verificados: Brasil, Colombia, Cuba, Honduras y Perú. No es una fecha única para todos los países."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/brazil/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/colombia/2027",
+        "label": {
+          "en": "Reference: Colombia calendario 2027",
+          "es": "Referencia: Colombia calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/cuba/2027",
+        "label": {
+          "en": "Reference: Cuba calendario 2027",
+          "es": "Referencia: Cuba calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/honduras/2027",
+        "label": {
+          "en": "Reference: Honduras calendario 2027",
+          "es": "Referencia: Honduras calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/peru/2027",
+        "label": {
+          "en": "Reference: Perú calendario 2027",
+          "es": "Referencia: Perú calendario 2027"
+        }
+      }
+    ],
+    "date": "2026-05-10",
+    "scope": {
+      "en": "Brazil, Colombia, Cuba, Honduras, Peru",
+      "es": "Brasil, Colombia, Cuba, Honduras, Perú"
+    }
+  },
+  {
+    "id": "national-py-0514-2026",
+    "slug": "national-py-0514-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Paraguay National Celebrations",
+      "es": "Fiestas Patrias de Paraguay"
+    },
+    "description": {
+      "en": "National commemorations on May 14 and 15; May 15 also marks Mother’s Day.",
+      "es": "Conmemoraciones del 14 y 15 de mayo; el 15 también se celebra a las madres."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/paraguay/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://visitparaguay.travel/planea-tu-viaje",
+        "label": {
+          "en": "Reference: Fiestas Patrias de Paraguay turismo oficial",
+          "es": "Referencia: Fiestas Patrias de Paraguay turismo oficial"
+        }
+      }
+    ],
+    "date": "2026-05-14",
+    "scope": {
+      "en": "Paraguay",
+      "es": "Paraguay"
+    },
+    "endDate": "2026-05-15"
+  },
+  {
+    "id": "national-ht-0518-2026",
+    "slug": "national-ht-0518-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Haiti Flag Day",
+      "es": "Día de la Bandera de Haití"
+    },
+    "description": {
+      "en": "A date of Haitian national identity.",
+      "es": "Fecha de identidad nacional haitiana."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/haiti/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-05-18",
+    "scope": {
+      "en": "Haiti",
+      "es": "Haití"
+    }
+  },
+  {
+    "id": "national-cu-0520-2026",
+    "slug": "national-cu-0520-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Establishment of the Republic of Cuba",
+      "es": "Establecimiento de la República de Cuba"
+    },
+    "description": {
+      "en": "A historical anniversary of 1902, with different political interpretations.",
+      "es": "Fecha histórica de 1902; no usar como único día nacional ni presentarla como consenso político."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/cuba/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.presidencia.gob.cu/es/cuba/",
+        "label": {
+          "en": "Reference: Historia de Cuba Presidencia de Cuba",
+          "es": "Referencia: Historia de Cuba Presidencia de Cuba"
+        }
+      }
+    ],
+    "date": "2026-05-20",
+    "scope": {
+      "en": "Cuba",
+      "es": "Cuba"
+    }
+  },
+  {
+    "id": "cultural-diversity-2026",
+    "slug": "cultural-diversity-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "World Day for Cultural Diversity",
+      "es": "Día de la Diversidad Cultural"
+    },
+    "description": {
+      "en": "Recognising cultural diversity, dialogue and inclusion.",
+      "es": "Reconocer diversidad cultural, diálogo e inclusión."
+    },
+    "source": {
+      "url": "https://www.un.org/en/observances/cultural-diversity-day",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-05-21",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    }
+  },
+  {
+    "id": "national-ec-0524-2026",
+    "slug": "national-ec-0524-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Battle of Pichincha",
+      "es": "Batalla de Pichincha"
+    },
+    "description": {
+      "en": "A historical commemoration of 1822. The cultural anniversary may differ from an observed day off.",
+      "es": "Conmemoración histórica de 1822; no confundir fecha cultural con traslado del descanso."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/ecuador/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-05-24",
+    "scope": {
+      "en": "Ecuador",
+      "es": "Ecuador"
+    }
+  },
+  {
+    "id": "national-ar-0525-2026",
+    "slug": "national-ar-0525-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "May Revolution Day",
+      "es": "Revolución de Mayo"
+    },
+    "description": {
+      "en": "Commemorates the revolution of 1810; Argentina’s independence is celebrated July 9.",
+      "es": "Conmemoración de 1810; independencia el 9 de julio."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/argentina/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-05-25",
+    "scope": {
+      "en": "Argentina",
+      "es": "Argentina"
+    }
+  },
+  {
+    "id": "extended-gy-0526-2026",
+    "slug": "extended-gy-0526-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Guyana Independence Day",
+      "es": "Independencia de Guyana"
+    },
+    "description": {
+      "en": "A neighbouring South American community with English as its official language.",
+      "es": "Comunidad vecina sudamericana; lengua oficial inglesa."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/guyana/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-05-26",
+    "scope": {
+      "en": "Guyana (neighbouring community)",
+      "es": "Guyana (comunidad vecina)"
+    }
+  },
+  {
+    "id": "family-bo-0527-2026",
+    "slug": "family-bo-0527-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Bolivia Mothers Day",
+      "es": "Día de las Madres en Bolivia"
+    },
+    "description": {
+      "en": "A country-specific family celebration; dates differ across Latin America.",
+      "es": "Fecha de país; no aplicar universalmente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/bolivia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-05-27",
+    "scope": {
+      "en": "Bolivia",
+      "es": "Bolivia"
+    }
+  },
+  {
+    "id": "family-ni-0530-2026",
+    "slug": "family-ni-0530-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Nicaragua Mothers Day",
+      "es": "Día de las Madres en Nicaragua"
+    },
+    "description": {
+      "en": "A country-specific family celebration; dates differ across Latin America.",
+      "es": "Fecha de país; no aplicar universalmente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/nicaragua/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-05-30",
+    "scope": {
+      "en": "Nicaragua",
+      "es": "Nicaragua"
+    }
+  },
+  {
+    "id": "mothers-last-may-2026",
+    "slug": "mothers-last-may-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Haiti and Dominican Mothers Day",
+      "es": "Día de las Madres en Haití y República Dominicana"
+    },
+    "description": {
+      "en": "Celebrated on the last Sunday of May.",
+      "es": "Último domingo de mayo."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/haiti/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/dominican-republic/2027",
+        "label": {
+          "en": "Reference: República Dominicana calendario 2027",
+          "es": "Referencia: República Dominicana calendario 2027"
+        }
+      }
+    ],
+    "date": "2026-05-31",
+    "scope": {
+      "en": "Haiti, Dominican Republic",
+      "es": "Haití, República Dominicana"
+    }
+  },
+  {
+    "id": "juninas-2026",
+    "slug": "juninas-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Festas Juninas",
+      "es": "Festas Juninas"
+    },
+    "description": {
+      "en": "June is a cultural season; each Brazilian festival publishes its own program.",
+      "es": "Mes de junio como temporada cultural; cada festival publica su propia programación."
+    },
+    "source": {
+      "url": "https://visitbrasil.com/en/festivity/june-parties",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-06-01",
+    "scope": {
+      "en": "Brazil",
+      "es": "Brasil"
+    },
+    "endDate": "2026-06-30"
+  },
+  {
+    "id": "national-br-0612-2026",
+    "slug": "national-br-0612-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Brazilian Valentines Day",
+      "es": "Dia dos Namorados"
+    },
+    "description": {
+      "en": "A Brazilian celebration distinct from February 14.",
+      "es": "Celebración brasileña distinta del 14 de febrero."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/brazil/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-06-12",
+    "scope": {
+      "en": "Brazil",
+      "es": "Brasil"
+    }
+  },
+  {
+    "id": "national-py-0612-2026",
+    "slug": "national-py-0612-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Chaco Peace Day",
+      "es": "Paz del Chaco"
+    },
+    "description": {
+      "en": "A Paraguayan commemoration of the armistice.",
+      "es": "Conmemoración paraguaya del armisticio."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/paraguay/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-06-12",
+    "scope": {
+      "en": "Paraguay",
+      "es": "Paraguay"
+    }
+  },
+  {
+    "id": "family-sv-0617-2026",
+    "slug": "family-sv-0617-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "El Salvador Fathers Day",
+      "es": "Día del Padre en El Salvador"
+    },
+    "description": {
+      "en": "A country-specific family celebration; dates differ across Latin America.",
+      "es": "Fecha de país; no aplicar universalmente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/el-salvador/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-06-17",
+    "scope": {
+      "en": "El Salvador",
+      "es": "El Salvador"
+    }
+  },
+  {
+    "id": "family-gt-0617-2026",
+    "slug": "family-gt-0617-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Guatemala Fathers Day",
+      "es": "Día del Padre en Guatemala"
+    },
+    "description": {
+      "en": "A country-specific family celebration; dates differ across Latin America.",
+      "es": "Fecha de país; no aplicar universalmente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/guatemala/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-06-17",
+    "scope": {
+      "en": "Guatemala",
+      "es": "Guatemala"
+    }
+  },
+  {
+    "id": "national-ar-0620-2026",
+    "slug": "national-ar-0620-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Argentina Flag Day",
+      "es": "Día de la Bandera de Argentina"
+    },
+    "description": {
+      "en": "A national commemoration in Argentina.",
+      "es": "Conmemoración nacional."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/argentina/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-06-20",
+    "scope": {
+      "en": "Argentina",
+      "es": "Argentina"
+    }
+  },
+  {
+    "id": "fathers-third-june-2026",
+    "slug": "fathers-third-june-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Fathers Day in Several Countries",
+      "es": "Día del Padre en varios países"
+    },
+    "description": {
+      "en": "Examples of countries observing this date; other countries celebrate on different dates.",
+      "es": "Ejemplos verificados; otros países tienen fechas distintas."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/colombia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/mexico/2027",
+        "label": {
+          "en": "Reference: México calendario 2027",
+          "es": "Referencia: México calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/peru/2027",
+        "label": {
+          "en": "Reference: Perú calendario 2027",
+          "es": "Referencia: Perú calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/costa-rica/2027",
+        "label": {
+          "en": "Reference: Costa Rica calendario 2027",
+          "es": "Referencia: Costa Rica calendario 2027"
+        }
+      }
+    ],
+    "date": "2026-06-21",
+    "scope": {
+      "en": "Colombia, Mexico, Peru, Costa Rica",
+      "es": "Colombia, México, Perú, Costa Rica"
+    }
+  },
+  {
+    "id": "inti-raymi-2026",
+    "slug": "inti-raymi-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Cusco Inti Raymi",
+      "es": "Inti Raymi de Cusco"
+    },
+    "description": {
+      "en": "The Festival of the Sun in Cusco, Peru; a cultural reference rather than a local club event.",
+      "es": "Fiesta del Sol en Cusco; no implica una celebración local de NC Latin Club."
+    },
+    "source": {
+      "url": "https://www.emufec.gob.pe/inti-raymi",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-06-24",
+    "scope": {
+      "en": "Peru",
+      "es": "Perú"
+    }
+  },
+  {
+    "id": "san-juan-2026",
+    "slug": "san-juan-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Saint John and Sao Joao",
+      "es": "San Juan y São João"
+    },
+    "description": {
+      "en": "Regional traditions differ; Brazilian Festas Juninas span the month of June.",
+      "es": "Celebración con prácticas regionales diferentes; las Festas Juninas brasileñas abarcan junio."
+    },
+    "source": {
+      "url": "https://visitbrasil.com/en/festivity/june-parties",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://visitparaguay.travel/city/yatytay",
+        "label": {
+          "en": "Reference: San Juan Paraguay turismo oficial",
+          "es": "Referencia: San Juan Paraguay turismo oficial"
+        }
+      },
+      {
+        "url": "https://www.gob.pe/institucion/munielagustino/noticias/1410694-el-24-de-junio-se-celebra-la-tradicional-fiesta-de-san-juan",
+        "label": {
+          "en": "Reference: Fiesta de San Juan Perú",
+          "es": "Referencia: Fiesta de San Juan Perú"
+        }
+      }
+    ],
+    "date": "2026-06-24",
+    "scope": {
+      "en": "Brazil, Paraguay, Peru",
+      "es": "Brasil, Paraguay, Perú"
+    }
+  },
+  {
+    "id": "national-ve-0705-2026",
+    "slug": "national-ve-0705-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Venezuela Independence Day",
+      "es": "Independencia de Venezuela"
+    },
+    "description": {
+      "en": "Commemorates the independence declaration of 1811.",
+      "es": "Declaración de independencia de 1811."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/venezuela/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-07-05",
+    "scope": {
+      "en": "Venezuela",
+      "es": "Venezuela"
+    }
+  },
+  {
+    "id": "national-ar-0709-2026",
+    "slug": "national-ar-0709-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Argentina Independence Day",
+      "es": "Independencia de Argentina"
+    },
+    "description": {
+      "en": "Commemorates the independence declaration of 1816.",
+      "es": "Declaración de independencia de 1816."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/argentina/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-07-09",
+    "scope": {
+      "en": "Argentina",
+      "es": "Argentina"
+    }
+  },
+  {
+    "id": "national-uy-0718-2026",
+    "slug": "national-uy-0718-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Uruguay Constitution Day",
+      "es": "Jura de la Constitución de Uruguay"
+    },
+    "description": {
+      "en": "A constitutional commemoration; Uruguay’s independence is celebrated August 25.",
+      "es": "Conmemoración constitucional; independencia el 25 de agosto."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/uruguay/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-07-18",
+    "scope": {
+      "en": "Uruguay",
+      "es": "Uruguay"
+    }
+  },
+  {
+    "id": "national-co-0720-2026",
+    "slug": "national-co-0720-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Colombia Independence Day",
+      "es": "Independencia de Colombia"
+    },
+    "description": {
+      "en": "Colombia’s national commemoration on July 20.",
+      "es": "Conmemoración nacional del 20 de julio."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/colombia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-07-20",
+    "scope": {
+      "en": "Colombia",
+      "es": "Colombia"
+    }
+  },
+  {
+    "id": "extended-pr-0725-2026",
+    "slug": "extended-pr-0725-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Puerto Rico Constitution Day",
+      "es": "Constitución de Puerto Rico"
+    },
+    "description": {
+      "en": "A constitutional commemoration of 1952.",
+      "es": "Conmemoración constitucional de 1952."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/puerto-rico/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-07-25",
+    "scope": {
+      "en": "Puerto Rico",
+      "es": "Puerto Rico"
+    }
+  },
+  {
+    "id": "afro-women-2026",
+    "slug": "afro-women-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Day for Women and Girls of African Descent",
+      "es": "Día de las Mujeres y Niñas Afrodescendientes"
+    },
+    "description": {
+      "en": "Recognising Afro-Latin American and Afro-Caribbean women’s voices.",
+      "es": "Visibilizar las voces afrolatinoamericanas y afrocaribeñas."
+    },
+    "source": {
+      "url": "https://www.un.org/en/observances/women-girls-african-descent",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-07-25",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    }
+  },
+  {
+    "id": "national-cu-0726-2026",
+    "slug": "national-cu-0726-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "National Rebellion Day",
+      "es": "Día de la Rebeldía Nacional"
+    },
+    "description": {
+      "en": "An official Cuban anniversary with historical context.",
+      "es": "Fecha oficial cubana con contexto histórico."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/cuba/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-07-26",
+    "scope": {
+      "en": "Cuba",
+      "es": "Cuba"
+    }
+  },
+  {
+    "id": "national-pe-0728-2026",
+    "slug": "national-pe-0728-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Peru National Celebrations",
+      "es": "Fiestas Patrias del Perú"
+    },
+    "description": {
+      "en": "July 28 marks independence; July 29 is also part of Peru’s national celebrations.",
+      "es": "28 de julio independencia; 29 jornada de Fiestas Patrias."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/peru/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-07-28",
+    "scope": {
+      "en": "Peru",
+      "es": "Perú"
+    },
+    "endDate": "2026-07-29"
+  },
+  {
+    "id": "pachamama-2026",
+    "slug": "pachamama-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Pachamama Day",
+      "es": "Día de la Pachamama"
+    },
+    "description": {
+      "en": "An Andean tradition of gratitude to Mother Earth, with distinct traditions among Indigenous peoples.",
+      "es": "Tradición andina de gratitud a la Madre Tierra; no representa a todos los pueblos indígenas."
+    },
+    "source": {
+      "url": "https://www.argentina.gob.ar/noticias/dia-de-la-pachamama-o-dia-de-la-madre-tierra",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-08-01",
+    "scope": {
+      "en": "Argentina, Bolivia, Peru",
+      "es": "Argentina, Bolivia, Perú"
+    }
+  },
+  {
+    "id": "national-sv-0806-2026",
+    "slug": "national-sv-0806-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "San Salvador Celebrations",
+      "es": "Fiestas de San Salvador"
+    },
+    "description": {
+      "en": "The main date of El Salvador’s August celebrations.",
+      "es": "Fecha principal de las fiestas agostinas salvadoreñas."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/el-salvador/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-08-06",
+    "scope": {
+      "en": "El Salvador",
+      "es": "El Salvador"
+    }
+  },
+  {
+    "id": "national-bo-0806-2026",
+    "slug": "national-bo-0806-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Bolivia Independence Day",
+      "es": "Independencia de Bolivia"
+    },
+    "description": {
+      "en": "Commemorates Bolivia’s declaration of independence in 1825.",
+      "es": "Declaración de independencia de 1825."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/bolivia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-08-06",
+    "scope": {
+      "en": "Bolivia",
+      "es": "Bolivia"
+    }
+  },
+  {
+    "id": "national-co-0807-2026",
+    "slug": "national-co-0807-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Battle of Boyaca",
+      "es": "Batalla de Boyacá"
+    },
+    "description": {
+      "en": "A historical commemoration of the battle in 1819.",
+      "es": "Conmemoración histórica de 1819."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/colombia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-08-07",
+    "scope": {
+      "en": "Colombia",
+      "es": "Colombia"
+    }
+  },
+  {
+    "id": "fathers-brazil-2026",
+    "slug": "fathers-brazil-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Brazil Fathers Day",
+      "es": "Día de los Padres en Brasil"
+    },
+    "description": {
+      "en": "Celebrated on the second Sunday of August.",
+      "es": "Segundo domingo de agosto."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/brazil/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-08-09",
+    "scope": {
+      "en": "Brazil",
+      "es": "Brasil"
+    }
+  },
+  {
+    "id": "indigenous-2026",
+    "slug": "indigenous-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "International Day of the Worlds Indigenous Peoples",
+      "es": "Día de los Pueblos Indígenas"
+    },
+    "description": {
+      "en": "Recognising Indigenous communities and their distinct voices and identities.",
+      "es": "Contenido desarrollado con voces de las comunidades y nombres específicos de pueblos."
+    },
+    "source": {
+      "url": "https://www.un.org/en/events/indigenousday/",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-08-09",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    }
+  },
+  {
+    "id": "national-ec-0810-2026",
+    "slug": "national-ec-0810-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Ecuador First Cry of Independence",
+      "es": "Primer Grito de Independencia de Ecuador"
+    },
+    "description": {
+      "en": "Commemorates the events of 1809.",
+      "es": "Conmemoración de 1809."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/ecuador/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-08-10",
+    "scope": {
+      "en": "Ecuador",
+      "es": "Ecuador"
+    }
+  },
+  {
+    "id": "family-cr-0815-2026",
+    "slug": "family-cr-0815-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Costa Rica Mothers Day",
+      "es": "Día de las Madres en Costa Rica"
+    },
+    "description": {
+      "en": "A country-specific family celebration; dates differ across Latin America.",
+      "es": "Fecha de país; no aplicar universalmente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/costa-rica/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-08-15",
+    "scope": {
+      "en": "Costa Rica",
+      "es": "Costa Rica"
+    }
+  },
+  {
+    "id": "national-do-0816-2026",
+    "slug": "national-do-0816-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Dominican Restoration Day",
+      "es": "Restauración dominicana"
+    },
+    "description": {
+      "en": "A Dominican anniversary distinct from Independence Day on February 27.",
+      "es": "Fecha distinta de la independencia del 27 de febrero."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/dominican-republic/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-08-16",
+    "scope": {
+      "en": "Dominican Republic",
+      "es": "República Dominicana"
+    }
+  },
+  {
+    "id": "national-uy-0825-2026",
+    "slug": "national-uy-0825-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Uruguay Independence Declaration",
+      "es": "Declaratoria de Independencia de Uruguay"
+    },
+    "description": {
+      "en": "Commemorates the declaration of 1825.",
+      "es": "Conmemoración de 1825."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/uruguay/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-08-25",
+    "scope": {
+      "en": "Uruguay",
+      "es": "Uruguay"
+    }
+  },
+  {
+    "id": "african-descent-2026",
+    "slug": "african-descent-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "International Day for People of African Descent",
+      "es": "Día de las Personas Afrodescendientes"
+    },
+    "description": {
+      "en": "Recognising history, culture and the contributions of people of African descent.",
+      "es": "Reconocer historia, cultura y aportes afrodescendientes."
+    },
+    "source": {
+      "url": "https://www.unfpa.org/events/international-day-people-african-descent",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-08-31",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    }
+  },
+  {
+    "id": "national-br-0907-2026",
+    "slug": "national-br-0907-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Brazil Independence Day",
+      "es": "Independencia de Brasil"
+    },
+    "description": {
+      "en": "Brazil’s independence from Portugal in 1822.",
+      "es": "Independencia de Portugal en 1822."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/brazil/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-09-07",
+    "scope": {
+      "en": "Brazil",
+      "es": "Brasil"
+    }
+  },
+  {
+    "id": "national-ni-0914-2026",
+    "slug": "national-ni-0914-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Battle of San Jacinto",
+      "es": "Batalla de San Jacinto"
+    },
+    "description": {
+      "en": "A Nicaraguan commemoration distinct from Independence Day the following day.",
+      "es": "Conmemoración nicaragüense distinta de la independencia del día siguiente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/nicaragua/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-09-14",
+    "scope": {
+      "en": "Nicaragua",
+      "es": "Nicaragua"
+    }
+  },
+  {
+    "id": "national-cr-0915-2026",
+    "slug": "national-cr-0915-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Costa Rica Independence Day",
+      "es": "Independencia de Costa Rica"
+    },
+    "description": {
+      "en": "Commemorates Central American independence in 1821.",
+      "es": "Conmemoración de la independencia centroamericana de 1821."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/costa-rica/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-09-15",
+    "scope": {
+      "en": "Costa Rica",
+      "es": "Costa Rica"
+    }
+  },
+  {
+    "id": "national-sv-0915-2026",
+    "slug": "national-sv-0915-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "El Salvador Independence Day",
+      "es": "Independencia de El Salvador"
+    },
+    "description": {
+      "en": "Commemorates Central American independence in 1821.",
+      "es": "Conmemoración de la independencia centroamericana de 1821."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/el-salvador/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-09-15",
+    "scope": {
+      "en": "El Salvador",
+      "es": "El Salvador"
+    }
+  },
+  {
+    "id": "national-gt-0915-2026",
+    "slug": "national-gt-0915-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Guatemala Independence Day",
+      "es": "Independencia de Guatemala"
+    },
+    "description": {
+      "en": "Commemorates Central American independence in 1821.",
+      "es": "Conmemoración de la independencia centroamericana de 1821."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/guatemala/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-09-15",
+    "scope": {
+      "en": "Guatemala",
+      "es": "Guatemala"
+    }
+  },
+  {
+    "id": "national-hn-0915-2026",
+    "slug": "national-hn-0915-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Honduras Independence Day",
+      "es": "Independencia de Honduras"
+    },
+    "description": {
+      "en": "Commemorates Central American independence in 1821.",
+      "es": "Conmemoración de la independencia centroamericana de 1821."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/honduras/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-09-15",
+    "scope": {
+      "en": "Honduras",
+      "es": "Honduras"
+    }
+  },
+  {
+    "id": "national-ni-0915-2026",
+    "slug": "national-ni-0915-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Nicaragua Independence Day",
+      "es": "Independencia de Nicaragua"
+    },
+    "description": {
+      "en": "Commemorates Central American independence in 1821.",
+      "es": "Conmemoración de la independencia centroamericana de 1821."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/nicaragua/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-09-15",
+    "scope": {
+      "en": "Nicaragua",
+      "es": "Nicaragua"
+    }
+  },
+  {
+    "id": "national-mx-0916-2026",
+    "slug": "national-mx-0916-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Mexico Independence Day",
+      "es": "Independencia de México"
+    },
+    "description": {
+      "en": "The Grito is often celebrated the night of September 15; the anniversary is September 16.",
+      "es": "El Grito suele celebrarse la noche del 15; la fecha conmemorativa es el 16."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/mexico/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-09-16",
+    "scope": {
+      "en": "Mexico",
+      "es": "México"
+    }
+  },
+  {
+    "id": "national-cl-0918-2026",
+    "slug": "national-cl-0918-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Chile National Celebrations",
+      "es": "Fiestas Patrias de Chile"
+    },
+    "description": {
+      "en": "September 18 marks the First Government Junta; September 19 honours the Army. These differ from the declaration of 1818.",
+      "es": "18 Primera Junta de Gobierno; 19 Día de las Glorias del Ejército. No es el día de la declaración de 1818."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/chile/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.chile.gob.cl/chile/sobre-chile/asi-es-chile/sintesis-historica/sintesis-historica",
+        "label": {
+          "en": "Reference: Historia de Chile Gobierno de Chile",
+          "es": "Referencia: Historia de Chile Gobierno de Chile"
+        }
+      }
+    ],
+    "date": "2026-09-18",
+    "scope": {
+      "en": "Chile",
+      "es": "Chile"
+    },
+    "endDate": "2026-09-19"
+  },
+  {
+    "id": "amor-amistad-2026",
+    "slug": "amor-amistad-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Colombia Love and Friendship Day",
+      "es": "Amor y Amistad en Colombia"
+    },
+    "description": {
+      "en": "The third Saturday of September in Colombia, distinct from February 14.",
+      "es": "Tercer sábado de septiembre; distinto del 14 de febrero."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/colombia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-09-19",
+    "scope": {
+      "en": "Colombia",
+      "es": "Colombia"
+    }
+  },
+  {
+    "id": "extended-bz-0921-2026",
+    "slug": "extended-bz-0921-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Belize Independence Day",
+      "es": "Independencia de Belice"
+    },
+    "description": {
+      "en": "Belize is a neighbouring Central American country with English as its official language; included as a complementary reference.",
+      "es": "País vecino centroamericano de lengua oficial inglesa; etiqueta complementaria."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/belize/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-09-21",
+    "scope": {
+      "en": "Belize (neighbouring community)",
+      "es": "Belice (comunidad vecina)"
+    }
+  },
+  {
+    "id": "extended-pr-0923-2026",
+    "slug": "extended-pr-0923-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Grito de Lares",
+      "es": "Grito de Lares"
+    },
+    "description": {
+      "en": "A Puerto Rican historical commemoration of 1868.",
+      "es": "Conmemoración histórica puertorriqueña de 1868."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/puerto-rico/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://lares.pr.gov/grito-de-lares/",
+        "label": {
+          "en": "Reference: Grito de Lares Municipio de Lares",
+          "es": "Referencia: Grito de Lares Municipio de Lares"
+        }
+      }
+    ],
+    "date": "2026-09-23",
+    "scope": {
+      "en": "Puerto Rico",
+      "es": "Puerto Rico"
+    }
+  },
+  {
+    "id": "latin-heritage-2026",
+    "slug": "latin-heritage-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Latin American Heritage Month in Canada",
+      "es": "Mes del Patrimonio Latinoamericano en Canadá"
+    },
+    "description": {
+      "en": "The full month of October in Canada, distinct from the September–October observance in the United States.",
+      "es": "Todo octubre. No sustituir por el intervalo estadounidense de septiembre a octubre."
+    },
+    "source": {
+      "url": "https://www.canada.ca/en/canadian-heritage/news/2026/10/statement-by-minister-miller-for-latin-american-heritage-month.html",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-10-01",
+    "scope": {
+      "en": "Canada",
+      "es": "Canada"
+    },
+    "endDate": "2026-10-31"
+  },
+  {
+    "id": "national-hn-1003-2026",
+    "slug": "national-hn-1003-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Francisco Morazan Commemoration",
+      "es": "Conmemoración de Francisco Morazán"
+    },
+    "description": {
+      "en": "A historical date in Honduras; the Semana Morazánica break may move.",
+      "es": "Fecha histórica de Honduras; el descanso de Semana Morazánica puede trasladarse."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/honduras/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-10-03",
+    "scope": {
+      "en": "Honduras",
+      "es": "Honduras"
+    }
+  },
+  {
+    "id": "national-ec-1009-2026",
+    "slug": "national-ec-1009-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Guayaquil Independence Day",
+      "es": "Independencia de Guayaquil"
+    },
+    "description": {
+      "en": "A regional and national Ecuadorian commemoration.",
+      "es": "Conmemoración regional y nacional ecuatoriana."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/ecuador/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-10-09",
+    "scope": {
+      "en": "Ecuador",
+      "es": "Ecuador"
+    }
+  },
+  {
+    "id": "national-cu-1010-2026",
+    "slug": "national-cu-1010-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Beginning of Cuban Independence War",
+      "es": "Inicio de la Guerra de Independencia de Cuba"
+    },
+    "description": {
+      "en": "Commemorates the beginning of the war in 1868.",
+      "es": "Conmemoración de 1868."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/cuba/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.presidencia.gob.cu/es/cuba/",
+        "label": {
+          "en": "Reference: Historia de Cuba Presidencia de Cuba",
+          "es": "Referencia: Historia de Cuba Presidencia de Cuba"
+        }
+      }
+    ],
+    "date": "2026-10-10",
+    "scope": {
+      "en": "Cuba",
+      "es": "Cuba"
+    }
+  },
+  {
+    "id": "oct12-2026",
+    "slug": "oct12-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "October 12 Diverse Names and Memories",
+      "es": "12 de octubre con memorias y nombres diversos"
+    },
+    "description": {
+      "en": "Names and memories differ by country, including cultural diversity and Indigenous resistance, with different perspectives on colonial history.",
+      "es": "Usar títulos por país: diversidad cultural o resistencia indígena, entre otros. Evitar un único relato celebratorio de la colonización."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/argentina/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/venezuela/2027",
+        "label": {
+          "en": "Reference: Venezuela calendario 2027",
+          "es": "Referencia: Venezuela calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/nicaragua/2027",
+        "label": {
+          "en": "Reference: Nicaragua calendario 2027",
+          "es": "Referencia: Nicaragua calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/chile/2027",
+        "label": {
+          "en": "Reference: Chile calendario 2027",
+          "es": "Referencia: Chile calendario 2027"
+        }
+      }
+    ],
+    "date": "2026-10-12",
+    "scope": {
+      "en": "Argentina, Chile, Colombia, Costa Rica, Ecuador, Guatemala, Honduras, Mexico, Nicaragua, Uruguay, Venezuela",
+      "es": "Argentina, Chile, Colombia, Costa Rica, Ecuador, Guatemala, Honduras, México, Nicaragua, Uruguay, Venezuela"
+    }
+  },
+  {
+    "id": "mothers-argentina-2026",
+    "slug": "mothers-argentina-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Argentina Mothers Day",
+      "es": "Día de la Madre en Argentina"
+    },
+    "description": {
+      "en": "Celebrated on the third Sunday of October.",
+      "es": "Se celebra el tercer domingo de octubre."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/argentina/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-10-18",
+    "scope": {
+      "en": "Argentina",
+      "es": "Argentina"
+    }
+  },
+  {
+    "id": "national-gt-1020-2026",
+    "slug": "national-gt-1020-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Guatemala Revolution of 1944",
+      "es": "Revolución de Guatemala de 1944"
+    },
+    "description": {
+      "en": "A national historical commemoration in Guatemala.",
+      "es": "Conmemoración histórica nacional."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/guatemala/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-10-20",
+    "scope": {
+      "en": "Guatemala",
+      "es": "Guatemala"
+    }
+  },
+  {
+    "id": "criolla-2026",
+    "slug": "criolla-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Creole Song Day",
+      "es": "Día de la Canción Criolla"
+    },
+    "description": {
+      "en": "Creole and Afro-Peruvian music; a commemoration distinct from Halloween.",
+      "es": "Música criolla y afroperuana; fecha distinta de Halloween."
+    },
+    "source": {
+      "url": "https://www.gob.pe/institucion/muniislaymollendo/noticias/1278129-31-de-octubre-dia-de-la-cancion-criolla",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-10-31",
+    "scope": {
+      "en": "Peru",
+      "es": "Perú"
+    }
+  },
+  {
+    "id": "muertos-2026",
+    "slug": "muertos-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Day of the Dead",
+      "es": "Día de Muertos"
+    },
+    "description": {
+      "en": "A Mexican commemoration on November 1 and 2, distinct from the local Niagara festival in October.",
+      "es": "Conmemoración mexicana del 1 y 2 de noviembre; no confundir con un evento local fechado en octubre."
+    },
+    "source": {
+      "url": "https://www.casadedanza.ca/dia-de-muertos-26",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/mexico/2027",
+        "label": {
+          "en": "Reference: México calendario 2027",
+          "es": "Referencia: México calendario 2027"
+        }
+      }
+    ],
+    "date": "2026-11-01",
+    "scope": {
+      "en": "Mexico",
+      "es": "México"
+    },
+    "endDate": "2026-11-02"
+  },
+  {
+    "id": "all-saints-2026",
+    "slug": "all-saints-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "All Saints Day",
+      "es": "Todos los Santos"
+    },
+    "description": {
+      "en": "Diverse religious and family traditions, distinct from Mexican Day of the Dead.",
+      "es": "Tradiciones religiosas y familiares diversas; no son idénticas a Día de Muertos mexicano."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/guatemala/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/ecuador/2027",
+        "label": {
+          "en": "Reference: Ecuador calendario 2027",
+          "es": "Referencia: Ecuador calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/peru/2027",
+        "label": {
+          "en": "Reference: Perú calendario 2027",
+          "es": "Referencia: Perú calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/bolivia/2027",
+        "label": {
+          "en": "Reference: Bolivia calendario 2027",
+          "es": "Referencia: Bolivia calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/colombia/2027",
+        "label": {
+          "en": "Reference: Colombia calendario 2027",
+          "es": "Referencia: Colombia calendario 2027"
+        }
+      }
+    ],
+    "date": "2026-11-01",
+    "scope": {
+      "en": "Guatemala, Ecuador, Peru, Bolivia, Colombia",
+      "es": "Guatemala, Ecuador, Perú, Bolivia, Colombia"
+    }
+  },
+  {
+    "id": "difuntos-2026",
+    "slug": "difuntos-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "All Souls Day",
+      "es": "Día de los Difuntos"
+    },
+    "description": {
+      "en": "Family remembrance and local traditions; Ecuador has its own All Souls holiday.",
+      "es": "Memoria familiar, visitas y tradiciones locales; Ecuador tiene un feriado propio de Difuntos."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/ecuador/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/bolivia/2027",
+        "label": {
+          "en": "Reference: Bolivia calendario 2027",
+          "es": "Referencia: Bolivia calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/peru/2027",
+        "label": {
+          "en": "Reference: Perú calendario 2027",
+          "es": "Referencia: Perú calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/guatemala/2027",
+        "label": {
+          "en": "Reference: Guatemala calendario 2027",
+          "es": "Referencia: Guatemala calendario 2027"
+        }
+      }
+    ],
+    "date": "2026-11-02",
+    "scope": {
+      "en": "Ecuador, Bolivia, Peru, Guatemala",
+      "es": "Ecuador, Bolivia, Perú, Guatemala"
+    }
+  },
+  {
+    "id": "national-ec-1103-2026",
+    "slug": "national-ec-1103-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Cuenca Independence Day",
+      "es": "Independencia de Cuenca"
+    },
+    "description": {
+      "en": "A historical anniversary; the observed day off may move.",
+      "es": "Fecha histórica; el día de descanso puede trasladarse."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/ecuador/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-11-03",
+    "scope": {
+      "en": "Ecuador",
+      "es": "Ecuador"
+    }
+  },
+  {
+    "id": "national-pa-1103-2026",
+    "slug": "national-pa-1103-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Panama Separation from Colombia",
+      "es": "Separación de Panamá de Colombia"
+    },
+    "description": {
+      "en": "Marks separation in 1903; independence from Spain is celebrated November 28.",
+      "es": "Hecho de 1903; independencia de España el 28 de noviembre."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/panama/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-11-03",
+    "scope": {
+      "en": "Panama",
+      "es": "Panamá"
+    }
+  },
+  {
+    "id": "national-co-1111-2026",
+    "slug": "national-co-1111-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Cartagena Independence Day",
+      "es": "Independencia de Cartagena"
+    },
+    "description": {
+      "en": "The historical anniversary differs from the observed holiday Monday.",
+      "es": "Fecha histórica; no sustituir por el lunes festivo."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/colombia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-11-11",
+    "scope": {
+      "en": "Colombia",
+      "es": "Colombia"
+    }
+  },
+  {
+    "id": "national-br-1115-2026",
+    "slug": "national-br-1115-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Brazil Republic Proclamation",
+      "es": "Proclamación de la República de Brasil"
+    },
+    "description": {
+      "en": "Commemorates the proclamation of 1889.",
+      "es": "Conmemoración de 1889."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/brazil/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-11-15",
+    "scope": {
+      "en": "Brazil",
+      "es": "Brasil"
+    }
+  },
+  {
+    "id": "national-ht-1118-2026",
+    "slug": "national-ht-1118-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Battle of Vertieres",
+      "es": "Batalla de Vertières"
+    },
+    "description": {
+      "en": "A Haitian commemoration connected with the independence process.",
+      "es": "Conmemoración haitiana vinculada al proceso independentista."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/haiti/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-11-18",
+    "scope": {
+      "en": "Haiti",
+      "es": "Haití"
+    }
+  },
+  {
+    "id": "garifuna-2026",
+    "slug": "garifuna-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Garifuna Settlement Day",
+      "es": "Garifuna Settlement Day"
+    },
+    "description": {
+      "en": "Recognising Garifuna culture and its Central American and Caribbean connections.",
+      "es": "Destacar la cultura garífuna y sus vínculos centroamericanos y caribeños."
+    },
+    "source": {
+      "url": "https://www.travelbelize.org/blog/guide-to-celebrate-garifuna-settlement-day-in-belize/",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-11-19",
+    "scope": {
+      "en": "Belize (neighbouring community)",
+      "es": "Belice (comunidad vecina)"
+    }
+  },
+  {
+    "id": "black-awareness-2026",
+    "slug": "black-awareness-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Black Awareness Day",
+      "es": "Día de la Conciencia Negra"
+    },
+    "description": {
+      "en": "A Brazilian date of Afro-descendant remembrance, also known as Zumbi Day.",
+      "es": "Fecha brasileña de memoria afrodescendiente; también se denomina Día de Zumbi."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/brazil/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-11-20",
+    "scope": {
+      "en": "Brazil",
+      "es": "Brasil"
+    }
+  },
+  {
+    "id": "violence-women-2026",
+    "slug": "violence-women-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Elimination of Violence against Women",
+      "es": "Eliminación de la Violencia contra la Mujer"
+    },
+    "description": {
+      "en": "A date for awareness and remembrance.",
+      "es": "Fecha de sensibilización y memoria; no tratarla como fiesta."
+    },
+    "source": {
+      "url": "https://www.un.org/en/observances/ending-violence-against-women-day/background",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-11-25",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    }
+  },
+  {
+    "id": "extended-sr-1125-2026",
+    "slug": "extended-sr-1125-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Suriname Independence Day",
+      "es": "Independencia de Surinam"
+    },
+    "description": {
+      "en": "A neighbouring South American community with Dutch as its official language.",
+      "es": "Comunidad vecina sudamericana; lengua oficial neerlandesa."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/suriname/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-11-25",
+    "scope": {
+      "en": "Suriname (neighbouring community)",
+      "es": "Surinam (comunidad vecina)"
+    }
+  },
+  {
+    "id": "merengue-2026",
+    "slug": "merengue-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "National Merengue Day",
+      "es": "Día Nacional del Merengue"
+    },
+    "description": {
+      "en": "Recognising Dominican music and dance.",
+      "es": "Reconocimiento de la música y el baile dominicanos."
+    },
+    "source": {
+      "url": "https://f5vip11.unesco.org/en/RL/music-and-dance-of-the-merengue-in-the-dominican-republic-01162",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-11-26",
+    "scope": {
+      "en": "Dominican Republic",
+      "es": "República Dominicana"
+    }
+  },
+  {
+    "id": "national-pa-1128-2026",
+    "slug": "national-pa-1128-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Panama Independence from Spain",
+      "es": "Independencia de Panamá de España"
+    },
+    "description": {
+      "en": "Commemorates independence from Spain in 1821, distinct from separation from Colombia.",
+      "es": "Conmemoración de 1821, diferente de la separación de Colombia."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/panama/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-11-28",
+    "scope": {
+      "en": "Panama",
+      "es": "Panamá"
+    }
+  },
+  {
+    "id": "candombe-2026",
+    "slug": "candombe-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "National Candombe Day",
+      "es": "Día Nacional del Candombe"
+    },
+    "description": {
+      "en": "Recognising Afro-Uruguayan culture and racial equity.",
+      "es": "Incluye cultura afrouruguaya y equidad racial."
+    },
+    "source": {
+      "url": "https://www.gub.uy/ministerio-turismo/comunicacion/noticias/uruguay-celebra-dia-nacional-del-candombe-cultura-afrouruguaya-equidad-racial",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-12-03",
+    "scope": {
+      "en": "Uruguay",
+      "es": "Uruguay"
+    }
+  },
+  {
+    "id": "griteria-2026",
+    "slug": "griteria-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "La Griteria",
+      "es": "La Gritería"
+    },
+    "description": {
+      "en": "A Nicaraguan tradition on the eve of the Immaculate Conception.",
+      "es": "Tradición nicaragüense en la víspera de la Inmaculada Concepción."
+    },
+    "source": {
+      "url": "https://www.intur.gob.ni/2017/12/07/leon-genesis-la-griteria-nicaraguense/",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-12-07",
+    "scope": {
+      "en": "Nicaragua",
+      "es": "Nicaragua"
+    }
+  },
+  {
+    "id": "velitas-2026",
+    "slug": "velitas-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Night of Little Candles",
+      "es": "Noche de Velitas"
+    },
+    "description": {
+      "en": "A Colombian tradition on the eve of the Immaculate Conception.",
+      "es": "Tradición colombiana en la víspera de la Inmaculada Concepción."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/colombia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-12-07",
+    "scope": {
+      "en": "Colombia",
+      "es": "Colombia"
+    }
+  },
+  {
+    "id": "family-pa-1208-2026",
+    "slug": "family-pa-1208-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Panama Mothers Day",
+      "es": "Día de las Madres en Panamá"
+    },
+    "description": {
+      "en": "A country-specific family celebration; dates differ across Latin America.",
+      "es": "Fecha de país; no aplicar universalmente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/panama/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-12-08",
+    "scope": {
+      "en": "Panama",
+      "es": "Panamá"
+    }
+  },
+  {
+    "id": "inmaculada-2026",
+    "slug": "inmaculada-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Immaculate Conception",
+      "es": "Inmaculada Concepción"
+    },
+    "description": {
+      "en": "Religious celebrations and holidays differ by country; Panama also celebrates Mother’s Day.",
+      "es": "Celebración religiosa con usos y feriados diferentes; en Panamá coincide con el Día de las Madres."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/colombia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/mexico/2027",
+        "label": {
+          "en": "Reference: México calendario 2027",
+          "es": "Referencia: México calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/nicaragua/2027",
+        "label": {
+          "en": "Reference: Nicaragua calendario 2027",
+          "es": "Referencia: Nicaragua calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/panama/2027",
+        "label": {
+          "en": "Reference: Panamá calendario 2027",
+          "es": "Referencia: Panamá calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/peru/2027",
+        "label": {
+          "en": "Reference: Perú calendario 2027",
+          "es": "Referencia: Perú calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/argentina/2027",
+        "label": {
+          "en": "Reference: Argentina calendario 2027",
+          "es": "Referencia: Argentina calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/costa-rica/2027",
+        "label": {
+          "en": "Reference: Costa Rica calendario 2027",
+          "es": "Referencia: Costa Rica calendario 2027"
+        }
+      }
+    ],
+    "date": "2026-12-08",
+    "scope": {
+      "en": "Colombia, Mexico, Nicaragua, Panama, Peru, Argentina, Costa Rica",
+      "es": "Colombia, México, Nicaragua, Panamá, Perú, Argentina, Costa Rica"
+    }
+  },
+  {
+    "id": "tango-2026",
+    "slug": "tango-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Argentina National Tango Day",
+      "es": "Día Nacional del Tango en Argentina"
+    },
+    "description": {
+      "en": "An Argentine anniversary for tango, a tradition also shared with Uruguay.",
+      "es": "Fecha argentina; el tango es una tradición compartida con Uruguay."
+    },
+    "source": {
+      "url": "https://www.argentina.gob.ar/node/486595",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-12-11",
+    "scope": {
+      "en": "Argentina",
+      "es": "Argentina"
+    }
+  },
+  {
+    "id": "posadas-2026",
+    "slug": "posadas-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Mexican Posadas",
+      "es": "Posadas mexicanas"
+    },
+    "description": {
+      "en": "Nine nights, from December 16 through December 24.",
+      "es": "Nueve noches del 16 al 24 de diciembre."
+    },
+    "source": {
+      "url": "https://embamex.sre.gob.mx/italia/index.php/es/menu-cultura/aspectos-culturales-de-mexico",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-12-16",
+    "scope": {
+      "en": "Mexico",
+      "es": "México"
+    },
+    "endDate": "2026-12-24"
+  },
+  {
+    "id": "migrants-2026",
+    "slug": "migrants-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "International Migrants Day",
+      "es": "Día Internacional del Migrante"
+    },
+    "description": {
+      "en": "A space for migration stories from students and the wider community.",
+      "es": "Espacio para historias de migración de estudiantes y comunidad."
+    },
+    "source": {
+      "url": "https://www.un.org/en/observances/migrants-day/background",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-12-18",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    }
+  },
+  {
+    "id": "nochebuena-2026",
+    "slug": "nochebuena-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Christmas Eve",
+      "es": "Nochebuena"
+    },
+    "description": {
+      "en": "Christian and family traditions with voluntary participation and local variations.",
+      "es": "Tradición cristiana y familiar; participación voluntaria y variantes locales."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/colombia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/mexico/2027",
+        "label": {
+          "en": "Reference: México calendario 2027",
+          "es": "Referencia: México calendario 2027"
+        }
+      }
+    ],
+    "date": "2026-12-24",
+    "scope": {
+      "en": "Argentina, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Guatemala, Haiti, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Uruguay, Venezuela, Puerto Rico",
+      "es": "Argentina, Bolivia, Brasil, Chile, Colombia, Costa Rica, Cuba, República Dominicana, Ecuador, El Salvador, Guatemala, Haití, Honduras, México, Nicaragua, Panamá, Paraguay, Perú, Uruguay, Venezuela, Puerto Rico"
+    }
+  },
+  {
+    "id": "navidad-2026",
+    "slug": "navidad-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Christmas",
+      "es": "Navidad"
+    },
+    "description": {
+      "en": "A widely observed Christian celebration; members have diverse beliefs.",
+      "es": "Celebración cristiana observada ampliamente; no asumir la religión de cada miembro."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/colombia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/mexico/2027",
+        "label": {
+          "en": "Reference: México calendario 2027",
+          "es": "Referencia: México calendario 2027"
+        }
+      }
+    ],
+    "date": "2026-12-25",
+    "scope": {
+      "en": "Argentina, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Guatemala, Haiti, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Uruguay, Venezuela, Puerto Rico",
+      "es": "Argentina, Bolivia, Brasil, Chile, Colombia, Costa Rica, Cuba, República Dominicana, Ecuador, El Salvador, Guatemala, Haití, Honduras, México, Nicaragua, Panamá, Paraguay, Perú, Uruguay, Venezuela, Puerto Rico"
+    }
+  },
+  {
+    "id": "negros-blancos-2026",
+    "slug": "negros-blancos-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Black and White Carnival",
+      "es": "Carnaval de Negros y Blancos"
+    },
+    "description": {
+      "en": "UNESCO describes the traditional season from December 28 to January 6. Individual programs may focus on January.",
+      "es": "Temporada tradicional descrita por UNESCO del 28 de diciembre al 6 de enero; programas de cada edición pueden concentrar actos en enero."
+    },
+    "source": {
+      "url": "https://www.unesco.org/archives/multimedia/document-301",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-12-28",
+    "scope": {
+      "en": "Colombia",
+      "es": "Colombia"
+    },
+    "endDate": "2027-01-06"
+  },
+  {
+    "id": "inocentes-2026",
+    "slug": "inocentes-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Holy Innocents Day",
+      "es": "Día de los Santos Inocentes"
+    },
+    "description": {
+      "en": "A traditional Mexican date associated with jokes and playful customs.",
+      "es": "Fecha tradicional mexicana; evitar bromas engañosas sobre eventos reales."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/mexico/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2026-12-28",
+    "scope": {
+      "en": "Mexico",
+      "es": "México"
+    }
+  },
+  {
+    "id": "year-end-2026",
+    "slug": "year-end-2026",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "New Years Eve",
+      "es": "Fin de Año"
+    },
+    "description": {
+      "en": "Regional and family traditions for welcoming the new year.",
+      "es": "Contenido sobre tradiciones regionales y familiares."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/colombia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/mexico/2027",
+        "label": {
+          "en": "Reference: México calendario 2027",
+          "es": "Referencia: México calendario 2027"
+        }
+      }
+    ],
+    "date": "2026-12-31",
+    "scope": {
+      "en": "Argentina, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Guatemala, Haiti, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Uruguay, Venezuela, Puerto Rico",
+      "es": "Argentina, Bolivia, Brasil, Chile, Colombia, Costa Rica, Cuba, República Dominicana, Ecuador, El Salvador, Guatemala, Haití, Honduras, México, Nicaragua, Panamá, Paraguay, Perú, Uruguay, Venezuela, Puerto Rico"
+    }
+  },
+  {
+    "id": "national-cu-0101-2027",
+    "slug": "national-cu-0101-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Cuban Revolution Anniversary",
+      "es": "Aniversario de la Revolución Cubana"
+    },
+    "description": {
+      "en": "An official historical commemoration; it does not express a political position of the club.",
+      "es": "Conmemoración oficial con contexto histórico; no representa una postura política del club."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/cuba/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-01-01",
+    "scope": {
+      "en": "Cuba",
+      "es": "Cuba"
+    }
+  },
+  {
+    "id": "new-year-2027",
+    "slug": "new-year-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "New Year",
+      "es": "Año Nuevo"
+    },
+    "description": {
+      "en": "Traditions vary by country and family, with no single practice shared by everyone.",
+      "es": "Las tradiciones varían por país y familia; no generalizar una práctica a toda la región."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/argentina/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-01-01",
+    "scope": {
+      "en": "Argentina, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Guatemala, Haiti, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Uruguay, Venezuela, Puerto Rico",
+      "es": "Argentina, Bolivia, Brasil, Chile, Colombia, Costa Rica, Cuba, República Dominicana, Ecuador, El Salvador, Guatemala, Haití, Honduras, México, Nicaragua, Panamá, Paraguay, Perú, Uruguay, Venezuela, Puerto Rico"
+    }
+  },
+  {
+    "id": "national-ht-0101-2027",
+    "slug": "national-ht-0101-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Haiti Independence Day",
+      "es": "Independencia de Haití"
+    },
+    "description": {
+      "en": "Haiti’s independence in 1804 is a central date in Haitian history.",
+      "es": "Independencia de 1804; fecha central de la historia haitiana."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/haiti/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.un.org/en/rememberslavery/observance/2014",
+        "label": {
+          "en": "Reference: Haití independencia Naciones Unidas",
+          "es": "Referencia: Haití independencia Naciones Unidas"
+        }
+      }
+    ],
+    "date": "2027-01-01",
+    "scope": {
+      "en": "Haiti",
+      "es": "Haití"
+    }
+  },
+  {
+    "id": "reyes-2027",
+    "slug": "reyes-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Three Kings Day",
+      "es": "Día de Reyes"
+    },
+    "description": {
+      "en": "A tradition in several communities; Uruguay also uses the name Children’s Day.",
+      "es": "Tradición presente en diversas comunidades; Uruguay también usa Día de los Niños."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/mexico/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/puerto-rico/2027",
+        "label": {
+          "en": "Reference: Puerto Rico calendario 2027",
+          "es": "Referencia: Puerto Rico calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/uruguay/2027",
+        "label": {
+          "en": "Reference: Uruguay calendario 2027",
+          "es": "Referencia: Uruguay calendario 2027"
+        }
+      }
+    ],
+    "date": "2027-01-06",
+    "scope": {
+      "en": "Mexico, Puerto Rico, Cuba, Argentina, Uruguay, Bolivia",
+      "es": "México, Puerto Rico, Cuba, Argentina, Uruguay, Bolivia"
+    }
+  },
+  {
+    "id": "national-bo-0122-2027",
+    "slug": "national-bo-0122-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Plurinational State Day",
+      "es": "Día del Estado Plurinacional"
+    },
+    "description": {
+      "en": "A Bolivian commemoration distinct from Independence Day on August 6.",
+      "es": "Conmemoración boliviana distinta de la independencia del 6 de agosto."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/bolivia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-01-22",
+    "scope": {
+      "en": "Bolivia",
+      "es": "Bolivia"
+    }
+  },
+  {
+    "id": "alasita-2027",
+    "slug": "alasita-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Start of Alasita",
+      "es": "Inicio de Alasita"
+    },
+    "description": {
+      "en": "The La Paz tradition begins January 24 and continues for several weeks.",
+      "es": "La tradición de La Paz comienza el 24 de enero y continúa varias semanas."
+    },
+    "source": {
+      "url": "https://ich.unesco.org/en/RL/ritual-journeys-in-la-paz-during-alasita-01182",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-01-24",
+    "scope": {
+      "en": "Bolivia",
+      "es": "Bolivia"
+    }
+  },
+  {
+    "id": "candelaria-2027",
+    "slug": "candelaria-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Candlemas",
+      "es": "Día de la Candelaria"
+    },
+    "description": {
+      "en": "A Mexican celebration with religious and food traditions.",
+      "es": "Celebración mexicana de tradición religiosa y gastronómica."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/mexico/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-02-02",
+    "scope": {
+      "en": "Mexico",
+      "es": "México"
+    }
+  },
+  {
+    "id": "barranquilla-2027-2027",
+    "slug": "barranquilla-2027-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Barranquilla Carnival 2027",
+      "es": "Carnaval de Barranquilla 2027"
+    },
+    "description": {
+      "en": "Dates supplied from the organizer. A cultural reference in Colombia, rather than an Ontario event.",
+      "es": "Fechas del organizador. Es una referencia cultural en Colombia, no un evento en Ontario."
+    },
+    "source": {
+      "url": "https://carnavaldebarranquilla.org/con-53-aspirantes-cerro-convocatoria-del-reinado-popular-2027/",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-02-06",
+    "scope": {
+      "en": "Colombia",
+      "es": "Colombia"
+    },
+    "endDate": "2027-02-09"
+  },
+  {
+    "id": "carnival-2027-2027",
+    "slug": "carnival-2027-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Carnival Monday and Tuesday",
+      "es": "Lunes y martes de Carnaval"
+    },
+    "description": {
+      "en": "The central carnival dates; parades and festivals have their own schedules.",
+      "es": "Núcleo del calendario; desfiles y festivales tienen sus propios intervalos."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/argentina/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/bolivia/2027",
+        "label": {
+          "en": "Reference: Bolivia calendario 2027",
+          "es": "Referencia: Bolivia calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/brazil/2027",
+        "label": {
+          "en": "Reference: Brasil calendario 2027",
+          "es": "Referencia: Brasil calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/ecuador/2027",
+        "label": {
+          "en": "Reference: Ecuador calendario 2027",
+          "es": "Referencia: Ecuador calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/panama/2027",
+        "label": {
+          "en": "Reference: Panamá calendario 2027",
+          "es": "Referencia: Panamá calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/uruguay/2027",
+        "label": {
+          "en": "Reference: Uruguay calendario 2027",
+          "es": "Referencia: Uruguay calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/venezuela/2027",
+        "label": {
+          "en": "Reference: Venezuela calendario 2027",
+          "es": "Referencia: Venezuela calendario 2027"
+        }
+      }
+    ],
+    "date": "2027-02-08",
+    "scope": {
+      "en": "Argentina, Bolivia, Brazil, Ecuador, Panama, Uruguay, Venezuela",
+      "es": "Argentina, Bolivia, Brasil, Ecuador, Panamá, Uruguay, Venezuela"
+    },
+    "endDate": "2027-02-09"
+  },
+  {
+    "id": "national-cl-0212-2027",
+    "slug": "national-cl-0212-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Chile Independence Declaration",
+      "es": "Declaración de Independencia de Chile"
+    },
+    "description": {
+      "en": "The historical declaration of 1818; Chile’s main national celebrations are in September.",
+      "es": "Fecha histórica de 1818; las Fiestas Patrias principales son en septiembre."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/chile/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.chile.gob.cl/chile/sobre-chile/asi-es-chile/sintesis-historica/sintesis-historica",
+        "label": {
+          "en": "Reference: Historia de Chile Gobierno de Chile",
+          "es": "Referencia: Historia de Chile Gobierno de Chile"
+        }
+      }
+    ],
+    "date": "2027-02-12",
+    "scope": {
+      "en": "Chile",
+      "es": "Chile"
+    }
+  },
+  {
+    "id": "valentines-2027",
+    "slug": "valentines-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Love and Friendship or Valentines Day",
+      "es": "Amor y Amistad o San Valentín"
+    },
+    "description": {
+      "en": "Examples of communities observing February 14; Colombia and Brazil have different celebrations.",
+      "es": "Ejemplos de países que observan esta fecha; Colombia y Brasil tienen celebraciones distintas."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/mexico/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/nicaragua/2027",
+        "label": {
+          "en": "Reference: Nicaragua calendario 2027",
+          "es": "Referencia: Nicaragua calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/haiti/2027",
+        "label": {
+          "en": "Reference: Haití calendario 2027",
+          "es": "Referencia: Haití calendario 2027"
+        }
+      }
+    ],
+    "date": "2027-02-14",
+    "scope": {
+      "en": "Mexico, Nicaragua, Haiti",
+      "es": "México, Nicaragua, Haití"
+    }
+  },
+  {
+    "id": "mother-language-2027",
+    "slug": "mother-language-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "International Mother Language Day",
+      "es": "Día Internacional de la Lengua Materna"
+    },
+    "description": {
+      "en": "Recognising Spanish, Portuguese, French, creoles and Indigenous languages.",
+      "es": "Visibilizar español, portugués, francés, criollos y lenguas indígenas."
+    },
+    "source": {
+      "url": "https://www.un.org/dgacm/en/content/multilingualism-observances",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-02-21",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    }
+  },
+  {
+    "id": "national-do-0227-2027",
+    "slug": "national-do-0227-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Dominican Independence Day",
+      "es": "Independencia dominicana"
+    },
+    "description": {
+      "en": "Commemorates Dominican independence in 1844.",
+      "es": "Independencia de 1844."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/dominican-republic/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-02-27",
+    "scope": {
+      "en": "Dominican Republic",
+      "es": "República Dominicana"
+    }
+  },
+  {
+    "id": "women-2027",
+    "slug": "women-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "International Womens Day",
+      "es": "Día Internacional de la Mujer"
+    },
+    "description": {
+      "en": "Recognising the contributions of Latin American women.",
+      "es": "Dar espacio a las contribuciones de las mujeres latinoamericanas."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/colombia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-03-08",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    }
+  },
+  {
+    "id": "family-bo-0319-2027",
+    "slug": "family-bo-0319-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Bolivia Fathers Day",
+      "es": "Día del Padre en Bolivia"
+    },
+    "description": {
+      "en": "A country-specific family celebration; dates differ across Latin America.",
+      "es": "Fecha de país; no aplicar universalmente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/bolivia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-03-19",
+    "scope": {
+      "en": "Bolivia",
+      "es": "Bolivia"
+    }
+  },
+  {
+    "id": "family-hn-0319-2027",
+    "slug": "family-hn-0319-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Honduras Fathers Day",
+      "es": "Día del Padre en Honduras"
+    },
+    "description": {
+      "en": "A country-specific family celebration; dates differ across Latin America.",
+      "es": "Fecha de país; no aplicar universalmente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/honduras/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-03-19",
+    "scope": {
+      "en": "Honduras",
+      "es": "Honduras"
+    }
+  },
+  {
+    "id": "holy-week-2027-2027",
+    "slug": "holy-week-2027-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Holy Week",
+      "es": "Semana Santa"
+    },
+    "description": {
+      "en": "From Palm Sunday to Easter Sunday; practices and observed days off differ by country.",
+      "es": "Del Domingo de Ramos al Domingo de Pascua; prácticas y descansos varían por país."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/argentina/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/mexico/2027",
+        "label": {
+          "en": "Reference: México calendario 2027",
+          "es": "Referencia: México calendario 2027"
+        }
+      }
+    ],
+    "date": "2027-03-21",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    },
+    "endDate": "2027-03-28"
+  },
+  {
+    "id": "extended-pr-0322-2027",
+    "slug": "extended-pr-0322-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Puerto Rico Emancipation Day",
+      "es": "Abolición de la esclavitud en Puerto Rico"
+    },
+    "description": {
+      "en": "A Puerto Rican commemoration. Puerto Rico is a US territory, with no independence day as a sovereign state.",
+      "es": "Territorio de Estados Unidos; no tiene día de independencia como estado soberano."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/puerto-rico/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-03-22",
+    "scope": {
+      "en": "Puerto Rico",
+      "es": "Puerto Rico"
+    }
+  },
+  {
+    "id": "good-friday-2027-2027",
+    "slug": "good-friday-2027-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Good Friday",
+      "es": "Viernes Santo"
+    },
+    "description": {
+      "en": "A liturgical date; employment holiday rules differ by country.",
+      "es": "Fecha litúrgica; no extrapolar reglas laborales de otro país."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/argentina/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/mexico/2027",
+        "label": {
+          "en": "Reference: México calendario 2027",
+          "es": "Referencia: México calendario 2027"
+        }
+      }
+    ],
+    "date": "2027-03-26",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    }
+  },
+  {
+    "id": "easter-2027-2027",
+    "slug": "easter-2027-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Easter Sunday",
+      "es": "Domingo de Pascua"
+    },
+    "description": {
+      "en": "A date in the Western Christian calendar.",
+      "es": "Fecha del calendario cristiano occidental."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/argentina/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/mexico/2027",
+        "label": {
+          "en": "Reference: México calendario 2027",
+          "es": "Referencia: México calendario 2027"
+        }
+      }
+    ],
+    "date": "2027-03-28",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    }
+  },
+  {
+    "id": "national-cr-0411-2027",
+    "slug": "national-cr-0411-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Juan Santamaria and Battle of Rivas",
+      "es": "Juan Santamaría y Batalla de Rivas"
+    },
+    "description": {
+      "en": "A Costa Rican commemoration.",
+      "es": "Conmemoración costarricense."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/costa-rica/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-04-11",
+    "scope": {
+      "en": "Costa Rica",
+      "es": "Costa Rica"
+    }
+  },
+  {
+    "id": "americas-2027",
+    "slug": "americas-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Pan American Day",
+      "es": "Día de las Américas"
+    },
+    "description": {
+      "en": "A continental date, rather than a local Ontario festival.",
+      "es": "Fecha continental, no un festival local de Ontario."
+    },
+    "source": {
+      "url": "https://www.oas.org/en/media_center/press_release.asp?sCodigo=E-058%2F04",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-04-14",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    }
+  },
+  {
+    "id": "national-ve-0419-2027",
+    "slug": "national-ve-0419-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Beginning of Venezuelan Independence Process",
+      "es": "Inicio del proceso independentista venezolano"
+    },
+    "description": {
+      "en": "Commemorates the events of 1810, distinct from the July 5 declaration.",
+      "es": "Conmemoración de 1810; distinta de la declaración del 5 de julio."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/venezuela/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-04-19",
+    "scope": {
+      "en": "Venezuela",
+      "es": "Venezuela"
+    }
+  },
+  {
+    "id": "spanish-2027",
+    "slug": "spanish-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Spanish Language Day",
+      "es": "Día del Idioma Español"
+    },
+    "description": {
+      "en": "A date to celebrate the Spanish language and community voices.",
+      "es": "Propuesta editorial para el diccionario y las voces de la comunidad."
+    },
+    "source": {
+      "url": "https://languages.un.org/en/resources-and-solutions/activities-events-resources/celebrate-multilingualism",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-04-23",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    }
+  },
+  {
+    "id": "labour-2027",
+    "slug": "labour-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Labour Day",
+      "es": "Día del Trabajo"
+    },
+    "description": {
+      "en": "Widely observed in Latin America. Canadian Labour Day takes place in September.",
+      "es": "Conmemoración ampliamente observada; el Labour Day canadiense ocurre en septiembre."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/argentina/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/brazil/2027",
+        "label": {
+          "en": "Reference: Brasil calendario 2027",
+          "es": "Referencia: Brasil calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/colombia/2027",
+        "label": {
+          "en": "Reference: Colombia calendario 2027",
+          "es": "Referencia: Colombia calendario 2027"
+        }
+      }
+    ],
+    "date": "2027-05-01",
+    "scope": {
+      "en": "Argentina, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Guatemala, Haiti, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Uruguay, Venezuela",
+      "es": "Argentina, Bolivia, Brasil, Chile, Colombia, Costa Rica, Cuba, República Dominicana, Ecuador, El Salvador, Guatemala, Haití, Honduras, México, Nicaragua, Panamá, Paraguay, Perú, Uruguay, Venezuela"
+    }
+  },
+  {
+    "id": "cinco-mayo-2027",
+    "slug": "cinco-mayo-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Battle of Puebla Anniversary",
+      "es": "Conmemoración de la Batalla de Puebla"
+    },
+    "description": {
+      "en": "The Battle of Puebla anniversary, rather than Mexico’s independence or a holiday for all of Latin America.",
+      "es": "No es la independencia de México ni una fiesta nacional de toda Latinoamérica."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/mexico/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-05-05",
+    "scope": {
+      "en": "Mexico",
+      "es": "México"
+    }
+  },
+  {
+    "id": "mothers-second-may-2027",
+    "slug": "mothers-second-may-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Mothers Day in Several Countries",
+      "es": "Día de las Madres en varios países"
+    },
+    "description": {
+      "en": "Examples include Brazil, Colombia, Cuba, Honduras and Peru. Mother’s Day differs among countries.",
+      "es": "Ejemplos verificados: Brasil, Colombia, Cuba, Honduras y Perú. No es una fecha única para todos los países."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/brazil/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/colombia/2027",
+        "label": {
+          "en": "Reference: Colombia calendario 2027",
+          "es": "Referencia: Colombia calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/cuba/2027",
+        "label": {
+          "en": "Reference: Cuba calendario 2027",
+          "es": "Referencia: Cuba calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/honduras/2027",
+        "label": {
+          "en": "Reference: Honduras calendario 2027",
+          "es": "Referencia: Honduras calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/peru/2027",
+        "label": {
+          "en": "Reference: Perú calendario 2027",
+          "es": "Referencia: Perú calendario 2027"
+        }
+      }
+    ],
+    "date": "2027-05-09",
+    "scope": {
+      "en": "Brazil, Colombia, Cuba, Honduras, Peru",
+      "es": "Brasil, Colombia, Cuba, Honduras, Perú"
+    }
+  },
+  {
+    "id": "family-sv-0510-2027",
+    "slug": "family-sv-0510-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "El Salvador Mothers Day",
+      "es": "Día de las Madres en El Salvador"
+    },
+    "description": {
+      "en": "A country-specific family celebration; dates differ across Latin America.",
+      "es": "Fecha de país; no aplicar universalmente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/el-salvador/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-05-10",
+    "scope": {
+      "en": "El Salvador",
+      "es": "El Salvador"
+    }
+  },
+  {
+    "id": "family-gt-0510-2027",
+    "slug": "family-gt-0510-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Guatemala Mothers Day",
+      "es": "Día de las Madres en Guatemala"
+    },
+    "description": {
+      "en": "A country-specific family celebration; dates differ across Latin America.",
+      "es": "Fecha de país; no aplicar universalmente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/guatemala/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-05-10",
+    "scope": {
+      "en": "Guatemala",
+      "es": "Guatemala"
+    }
+  },
+  {
+    "id": "family-mx-0510-2027",
+    "slug": "family-mx-0510-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Mexico Mothers Day",
+      "es": "Día de las Madres en México"
+    },
+    "description": {
+      "en": "A country-specific family celebration; dates differ across Latin America.",
+      "es": "Fecha de país; no aplicar universalmente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/mexico/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-05-10",
+    "scope": {
+      "en": "Mexico",
+      "es": "México"
+    }
+  },
+  {
+    "id": "national-py-0514-2027",
+    "slug": "national-py-0514-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Paraguay National Celebrations",
+      "es": "Fiestas Patrias de Paraguay"
+    },
+    "description": {
+      "en": "National commemorations on May 14 and 15; May 15 also marks Mother’s Day.",
+      "es": "Conmemoraciones del 14 y 15 de mayo; el 15 también se celebra a las madres."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/paraguay/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://visitparaguay.travel/planea-tu-viaje",
+        "label": {
+          "en": "Reference: Fiestas Patrias de Paraguay turismo oficial",
+          "es": "Referencia: Fiestas Patrias de Paraguay turismo oficial"
+        }
+      }
+    ],
+    "date": "2027-05-14",
+    "scope": {
+      "en": "Paraguay",
+      "es": "Paraguay"
+    },
+    "endDate": "2027-05-15"
+  },
+  {
+    "id": "national-ht-0518-2027",
+    "slug": "national-ht-0518-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Haiti Flag Day",
+      "es": "Día de la Bandera de Haití"
+    },
+    "description": {
+      "en": "A date of Haitian national identity.",
+      "es": "Fecha de identidad nacional haitiana."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/haiti/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-05-18",
+    "scope": {
+      "en": "Haiti",
+      "es": "Haití"
+    }
+  },
+  {
+    "id": "national-cu-0520-2027",
+    "slug": "national-cu-0520-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Establishment of the Republic of Cuba",
+      "es": "Establecimiento de la República de Cuba"
+    },
+    "description": {
+      "en": "A historical anniversary of 1902, with different political interpretations.",
+      "es": "Fecha histórica de 1902; no usar como único día nacional ni presentarla como consenso político."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/cuba/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.presidencia.gob.cu/es/cuba/",
+        "label": {
+          "en": "Reference: Historia de Cuba Presidencia de Cuba",
+          "es": "Referencia: Historia de Cuba Presidencia de Cuba"
+        }
+      }
+    ],
+    "date": "2027-05-20",
+    "scope": {
+      "en": "Cuba",
+      "es": "Cuba"
+    }
+  },
+  {
+    "id": "cultural-diversity-2027",
+    "slug": "cultural-diversity-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "World Day for Cultural Diversity",
+      "es": "Día de la Diversidad Cultural"
+    },
+    "description": {
+      "en": "Recognising cultural diversity, dialogue and inclusion.",
+      "es": "Reconocer diversidad cultural, diálogo e inclusión."
+    },
+    "source": {
+      "url": "https://www.un.org/en/observances/cultural-diversity-day",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-05-21",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    }
+  },
+  {
+    "id": "national-ec-0524-2027",
+    "slug": "national-ec-0524-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Battle of Pichincha",
+      "es": "Batalla de Pichincha"
+    },
+    "description": {
+      "en": "A historical commemoration of 1822. The cultural anniversary may differ from an observed day off.",
+      "es": "Conmemoración histórica de 1822; no confundir fecha cultural con traslado del descanso."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/ecuador/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-05-24",
+    "scope": {
+      "en": "Ecuador",
+      "es": "Ecuador"
+    }
+  },
+  {
+    "id": "national-ar-0525-2027",
+    "slug": "national-ar-0525-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "May Revolution Day",
+      "es": "Revolución de Mayo"
+    },
+    "description": {
+      "en": "Commemorates the revolution of 1810; Argentina’s independence is celebrated July 9.",
+      "es": "Conmemoración de 1810; independencia el 9 de julio."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/argentina/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-05-25",
+    "scope": {
+      "en": "Argentina",
+      "es": "Argentina"
+    }
+  },
+  {
+    "id": "extended-gy-0526-2027",
+    "slug": "extended-gy-0526-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Guyana Independence Day",
+      "es": "Independencia de Guyana"
+    },
+    "description": {
+      "en": "A neighbouring South American community with English as its official language.",
+      "es": "Comunidad vecina sudamericana; lengua oficial inglesa."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/guyana/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-05-26",
+    "scope": {
+      "en": "Guyana (neighbouring community)",
+      "es": "Guyana (comunidad vecina)"
+    }
+  },
+  {
+    "id": "family-bo-0527-2027",
+    "slug": "family-bo-0527-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Bolivia Mothers Day",
+      "es": "Día de las Madres en Bolivia"
+    },
+    "description": {
+      "en": "A country-specific family celebration; dates differ across Latin America.",
+      "es": "Fecha de país; no aplicar universalmente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/bolivia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-05-27",
+    "scope": {
+      "en": "Bolivia",
+      "es": "Bolivia"
+    }
+  },
+  {
+    "id": "mothers-last-may-2027",
+    "slug": "mothers-last-may-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Haiti and Dominican Mothers Day",
+      "es": "Día de las Madres en Haití y República Dominicana"
+    },
+    "description": {
+      "en": "Celebrated on the last Sunday of May.",
+      "es": "Último domingo de mayo."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/haiti/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/dominican-republic/2027",
+        "label": {
+          "en": "Reference: República Dominicana calendario 2027",
+          "es": "Referencia: República Dominicana calendario 2027"
+        }
+      }
+    ],
+    "date": "2027-05-30",
+    "scope": {
+      "en": "Haiti, Dominican Republic",
+      "es": "Haití, República Dominicana"
+    }
+  },
+  {
+    "id": "family-ni-0530-2027",
+    "slug": "family-ni-0530-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Nicaragua Mothers Day",
+      "es": "Día de las Madres en Nicaragua"
+    },
+    "description": {
+      "en": "A country-specific family celebration; dates differ across Latin America.",
+      "es": "Fecha de país; no aplicar universalmente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/nicaragua/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-05-30",
+    "scope": {
+      "en": "Nicaragua",
+      "es": "Nicaragua"
+    }
+  },
+  {
+    "id": "juninas-2027",
+    "slug": "juninas-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Festas Juninas",
+      "es": "Festas Juninas"
+    },
+    "description": {
+      "en": "June is a cultural season; each Brazilian festival publishes its own program.",
+      "es": "Mes de junio como temporada cultural; cada festival publica su propia programación."
+    },
+    "source": {
+      "url": "https://visitbrasil.com/en/festivity/june-parties",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-06-01",
+    "scope": {
+      "en": "Brazil",
+      "es": "Brasil"
+    },
+    "endDate": "2027-06-30"
+  },
+  {
+    "id": "national-br-0612-2027",
+    "slug": "national-br-0612-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Brazilian Valentines Day",
+      "es": "Dia dos Namorados"
+    },
+    "description": {
+      "en": "A Brazilian celebration distinct from February 14.",
+      "es": "Celebración brasileña distinta del 14 de febrero."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/brazil/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-06-12",
+    "scope": {
+      "en": "Brazil",
+      "es": "Brasil"
+    }
+  },
+  {
+    "id": "national-py-0612-2027",
+    "slug": "national-py-0612-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Chaco Peace Day",
+      "es": "Paz del Chaco"
+    },
+    "description": {
+      "en": "A Paraguayan commemoration of the armistice.",
+      "es": "Conmemoración paraguaya del armisticio."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/paraguay/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-06-12",
+    "scope": {
+      "en": "Paraguay",
+      "es": "Paraguay"
+    }
+  },
+  {
+    "id": "family-sv-0617-2027",
+    "slug": "family-sv-0617-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "El Salvador Fathers Day",
+      "es": "Día del Padre en El Salvador"
+    },
+    "description": {
+      "en": "A country-specific family celebration; dates differ across Latin America.",
+      "es": "Fecha de país; no aplicar universalmente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/el-salvador/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-06-17",
+    "scope": {
+      "en": "El Salvador",
+      "es": "El Salvador"
+    }
+  },
+  {
+    "id": "family-gt-0617-2027",
+    "slug": "family-gt-0617-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Guatemala Fathers Day",
+      "es": "Día del Padre en Guatemala"
+    },
+    "description": {
+      "en": "A country-specific family celebration; dates differ across Latin America.",
+      "es": "Fecha de país; no aplicar universalmente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/guatemala/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-06-17",
+    "scope": {
+      "en": "Guatemala",
+      "es": "Guatemala"
+    }
+  },
+  {
+    "id": "national-ar-0620-2027",
+    "slug": "national-ar-0620-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Argentina Flag Day",
+      "es": "Día de la Bandera de Argentina"
+    },
+    "description": {
+      "en": "A national commemoration in Argentina.",
+      "es": "Conmemoración nacional."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/argentina/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-06-20",
+    "scope": {
+      "en": "Argentina",
+      "es": "Argentina"
+    }
+  },
+  {
+    "id": "fathers-third-june-2027",
+    "slug": "fathers-third-june-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Fathers Day in Several Countries",
+      "es": "Día del Padre en varios países"
+    },
+    "description": {
+      "en": "Examples of countries observing this date; other countries celebrate on different dates.",
+      "es": "Ejemplos verificados; otros países tienen fechas distintas."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/colombia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/mexico/2027",
+        "label": {
+          "en": "Reference: México calendario 2027",
+          "es": "Referencia: México calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/peru/2027",
+        "label": {
+          "en": "Reference: Perú calendario 2027",
+          "es": "Referencia: Perú calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/costa-rica/2027",
+        "label": {
+          "en": "Reference: Costa Rica calendario 2027",
+          "es": "Referencia: Costa Rica calendario 2027"
+        }
+      }
+    ],
+    "date": "2027-06-20",
+    "scope": {
+      "en": "Colombia, Mexico, Peru, Costa Rica",
+      "es": "Colombia, México, Perú, Costa Rica"
+    }
+  },
+  {
+    "id": "inti-raymi-2027",
+    "slug": "inti-raymi-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Cusco Inti Raymi",
+      "es": "Inti Raymi de Cusco"
+    },
+    "description": {
+      "en": "The Festival of the Sun in Cusco, Peru; a cultural reference rather than a local club event.",
+      "es": "Fiesta del Sol en Cusco; no implica una celebración local de NC Latin Club."
+    },
+    "source": {
+      "url": "https://www.emufec.gob.pe/inti-raymi",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-06-24",
+    "scope": {
+      "en": "Peru",
+      "es": "Perú"
+    }
+  },
+  {
+    "id": "san-juan-2027",
+    "slug": "san-juan-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Saint John and Sao Joao",
+      "es": "San Juan y São João"
+    },
+    "description": {
+      "en": "Regional traditions differ; Brazilian Festas Juninas span the month of June.",
+      "es": "Celebración con prácticas regionales diferentes; las Festas Juninas brasileñas abarcan junio."
+    },
+    "source": {
+      "url": "https://visitbrasil.com/en/festivity/june-parties",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://visitparaguay.travel/city/yatytay",
+        "label": {
+          "en": "Reference: San Juan Paraguay turismo oficial",
+          "es": "Referencia: San Juan Paraguay turismo oficial"
+        }
+      },
+      {
+        "url": "https://www.gob.pe/institucion/munielagustino/noticias/1410694-el-24-de-junio-se-celebra-la-tradicional-fiesta-de-san-juan",
+        "label": {
+          "en": "Reference: Fiesta de San Juan Perú",
+          "es": "Referencia: Fiesta de San Juan Perú"
+        }
+      }
+    ],
+    "date": "2027-06-24",
+    "scope": {
+      "en": "Brazil, Paraguay, Peru",
+      "es": "Brasil, Paraguay, Perú"
+    }
+  },
+  {
+    "id": "national-ve-0705-2027",
+    "slug": "national-ve-0705-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Venezuela Independence Day",
+      "es": "Independencia de Venezuela"
+    },
+    "description": {
+      "en": "Commemorates the independence declaration of 1811.",
+      "es": "Declaración de independencia de 1811."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/venezuela/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-07-05",
+    "scope": {
+      "en": "Venezuela",
+      "es": "Venezuela"
+    }
+  },
+  {
+    "id": "national-ar-0709-2027",
+    "slug": "national-ar-0709-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Argentina Independence Day",
+      "es": "Independencia de Argentina"
+    },
+    "description": {
+      "en": "Commemorates the independence declaration of 1816.",
+      "es": "Declaración de independencia de 1816."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/argentina/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-07-09",
+    "scope": {
+      "en": "Argentina",
+      "es": "Argentina"
+    }
+  },
+  {
+    "id": "national-uy-0718-2027",
+    "slug": "national-uy-0718-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Uruguay Constitution Day",
+      "es": "Jura de la Constitución de Uruguay"
+    },
+    "description": {
+      "en": "A constitutional commemoration; Uruguay’s independence is celebrated August 25.",
+      "es": "Conmemoración constitucional; independencia el 25 de agosto."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/uruguay/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-07-18",
+    "scope": {
+      "en": "Uruguay",
+      "es": "Uruguay"
+    }
+  },
+  {
+    "id": "national-co-0720-2027",
+    "slug": "national-co-0720-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Colombia Independence Day",
+      "es": "Independencia de Colombia"
+    },
+    "description": {
+      "en": "Colombia’s national commemoration on July 20.",
+      "es": "Conmemoración nacional del 20 de julio."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/colombia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-07-20",
+    "scope": {
+      "en": "Colombia",
+      "es": "Colombia"
+    }
+  },
+  {
+    "id": "extended-pr-0725-2027",
+    "slug": "extended-pr-0725-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Puerto Rico Constitution Day",
+      "es": "Constitución de Puerto Rico"
+    },
+    "description": {
+      "en": "A constitutional commemoration of 1952.",
+      "es": "Conmemoración constitucional de 1952."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/puerto-rico/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-07-25",
+    "scope": {
+      "en": "Puerto Rico",
+      "es": "Puerto Rico"
+    }
+  },
+  {
+    "id": "afro-women-2027",
+    "slug": "afro-women-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Day for Women and Girls of African Descent",
+      "es": "Día de las Mujeres y Niñas Afrodescendientes"
+    },
+    "description": {
+      "en": "Recognising Afro-Latin American and Afro-Caribbean women’s voices.",
+      "es": "Visibilizar las voces afrolatinoamericanas y afrocaribeñas."
+    },
+    "source": {
+      "url": "https://www.un.org/en/observances/women-girls-african-descent",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-07-25",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    }
+  },
+  {
+    "id": "national-cu-0726-2027",
+    "slug": "national-cu-0726-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "National Rebellion Day",
+      "es": "Día de la Rebeldía Nacional"
+    },
+    "description": {
+      "en": "An official Cuban anniversary with historical context.",
+      "es": "Fecha oficial cubana con contexto histórico."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/cuba/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-07-26",
+    "scope": {
+      "en": "Cuba",
+      "es": "Cuba"
+    }
+  },
+  {
+    "id": "national-pe-0728-2027",
+    "slug": "national-pe-0728-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Peru National Celebrations",
+      "es": "Fiestas Patrias del Perú"
+    },
+    "description": {
+      "en": "July 28 marks independence; July 29 is also part of Peru’s national celebrations.",
+      "es": "28 de julio independencia; 29 jornada de Fiestas Patrias."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/peru/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-07-28",
+    "scope": {
+      "en": "Peru",
+      "es": "Perú"
+    },
+    "endDate": "2027-07-29"
+  },
+  {
+    "id": "pachamama-2027",
+    "slug": "pachamama-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Pachamama Day",
+      "es": "Día de la Pachamama"
+    },
+    "description": {
+      "en": "An Andean tradition of gratitude to Mother Earth, with distinct traditions among Indigenous peoples.",
+      "es": "Tradición andina de gratitud a la Madre Tierra; no representa a todos los pueblos indígenas."
+    },
+    "source": {
+      "url": "https://www.argentina.gob.ar/noticias/dia-de-la-pachamama-o-dia-de-la-madre-tierra",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-08-01",
+    "scope": {
+      "en": "Argentina, Bolivia, Peru",
+      "es": "Argentina, Bolivia, Perú"
+    }
+  },
+  {
+    "id": "national-sv-0806-2027",
+    "slug": "national-sv-0806-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "San Salvador Celebrations",
+      "es": "Fiestas de San Salvador"
+    },
+    "description": {
+      "en": "The main date of El Salvador’s August celebrations.",
+      "es": "Fecha principal de las fiestas agostinas salvadoreñas."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/el-salvador/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-08-06",
+    "scope": {
+      "en": "El Salvador",
+      "es": "El Salvador"
+    }
+  },
+  {
+    "id": "national-bo-0806-2027",
+    "slug": "national-bo-0806-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Bolivia Independence Day",
+      "es": "Independencia de Bolivia"
+    },
+    "description": {
+      "en": "Commemorates Bolivia’s declaration of independence in 1825.",
+      "es": "Declaración de independencia de 1825."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/bolivia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-08-06",
+    "scope": {
+      "en": "Bolivia",
+      "es": "Bolivia"
+    }
+  },
+  {
+    "id": "national-co-0807-2027",
+    "slug": "national-co-0807-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Battle of Boyaca",
+      "es": "Batalla de Boyacá"
+    },
+    "description": {
+      "en": "A historical commemoration of the battle in 1819.",
+      "es": "Conmemoración histórica de 1819."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/colombia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-08-07",
+    "scope": {
+      "en": "Colombia",
+      "es": "Colombia"
+    }
+  },
+  {
+    "id": "fathers-brazil-2027",
+    "slug": "fathers-brazil-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Brazil Fathers Day",
+      "es": "Día de los Padres en Brasil"
+    },
+    "description": {
+      "en": "Celebrated on the second Sunday of August.",
+      "es": "Segundo domingo de agosto."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/brazil/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-08-08",
+    "scope": {
+      "en": "Brazil",
+      "es": "Brasil"
+    }
+  },
+  {
+    "id": "indigenous-2027",
+    "slug": "indigenous-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "International Day of the Worlds Indigenous Peoples",
+      "es": "Día de los Pueblos Indígenas"
+    },
+    "description": {
+      "en": "Recognising Indigenous communities and their distinct voices and identities.",
+      "es": "Contenido desarrollado con voces de las comunidades y nombres específicos de pueblos."
+    },
+    "source": {
+      "url": "https://www.un.org/en/events/indigenousday/",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-08-09",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    }
+  },
+  {
+    "id": "national-ec-0810-2027",
+    "slug": "national-ec-0810-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Ecuador First Cry of Independence",
+      "es": "Primer Grito de Independencia de Ecuador"
+    },
+    "description": {
+      "en": "Commemorates the events of 1809.",
+      "es": "Conmemoración de 1809."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/ecuador/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-08-10",
+    "scope": {
+      "en": "Ecuador",
+      "es": "Ecuador"
+    }
+  },
+  {
+    "id": "family-cr-0815-2027",
+    "slug": "family-cr-0815-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Costa Rica Mothers Day",
+      "es": "Día de las Madres en Costa Rica"
+    },
+    "description": {
+      "en": "A country-specific family celebration; dates differ across Latin America.",
+      "es": "Fecha de país; no aplicar universalmente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/costa-rica/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-08-15",
+    "scope": {
+      "en": "Costa Rica",
+      "es": "Costa Rica"
+    }
+  },
+  {
+    "id": "national-do-0816-2027",
+    "slug": "national-do-0816-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Dominican Restoration Day",
+      "es": "Restauración dominicana"
+    },
+    "description": {
+      "en": "A Dominican anniversary distinct from Independence Day on February 27.",
+      "es": "Fecha distinta de la independencia del 27 de febrero."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/dominican-republic/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-08-16",
+    "scope": {
+      "en": "Dominican Republic",
+      "es": "República Dominicana"
+    }
+  },
+  {
+    "id": "national-uy-0825-2027",
+    "slug": "national-uy-0825-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Uruguay Independence Declaration",
+      "es": "Declaratoria de Independencia de Uruguay"
+    },
+    "description": {
+      "en": "Commemorates the declaration of 1825.",
+      "es": "Conmemoración de 1825."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/uruguay/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-08-25",
+    "scope": {
+      "en": "Uruguay",
+      "es": "Uruguay"
+    }
+  },
+  {
+    "id": "african-descent-2027",
+    "slug": "african-descent-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "International Day for People of African Descent",
+      "es": "Día de las Personas Afrodescendientes"
+    },
+    "description": {
+      "en": "Recognising history, culture and the contributions of people of African descent.",
+      "es": "Reconocer historia, cultura y aportes afrodescendientes."
+    },
+    "source": {
+      "url": "https://www.unfpa.org/events/international-day-people-african-descent",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-08-31",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    }
+  },
+  {
+    "id": "national-br-0907-2027",
+    "slug": "national-br-0907-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Brazil Independence Day",
+      "es": "Independencia de Brasil"
+    },
+    "description": {
+      "en": "Brazil’s independence from Portugal in 1822.",
+      "es": "Independencia de Portugal en 1822."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/brazil/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-09-07",
+    "scope": {
+      "en": "Brazil",
+      "es": "Brasil"
+    }
+  },
+  {
+    "id": "national-ni-0914-2027",
+    "slug": "national-ni-0914-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Battle of San Jacinto",
+      "es": "Batalla de San Jacinto"
+    },
+    "description": {
+      "en": "A Nicaraguan commemoration distinct from Independence Day the following day.",
+      "es": "Conmemoración nicaragüense distinta de la independencia del día siguiente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/nicaragua/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-09-14",
+    "scope": {
+      "en": "Nicaragua",
+      "es": "Nicaragua"
+    }
+  },
+  {
+    "id": "national-cr-0915-2027",
+    "slug": "national-cr-0915-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Costa Rica Independence Day",
+      "es": "Independencia de Costa Rica"
+    },
+    "description": {
+      "en": "Commemorates Central American independence in 1821.",
+      "es": "Conmemoración de la independencia centroamericana de 1821."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/costa-rica/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-09-15",
+    "scope": {
+      "en": "Costa Rica",
+      "es": "Costa Rica"
+    }
+  },
+  {
+    "id": "national-sv-0915-2027",
+    "slug": "national-sv-0915-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "El Salvador Independence Day",
+      "es": "Independencia de El Salvador"
+    },
+    "description": {
+      "en": "Commemorates Central American independence in 1821.",
+      "es": "Conmemoración de la independencia centroamericana de 1821."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/el-salvador/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-09-15",
+    "scope": {
+      "en": "El Salvador",
+      "es": "El Salvador"
+    }
+  },
+  {
+    "id": "national-gt-0915-2027",
+    "slug": "national-gt-0915-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Guatemala Independence Day",
+      "es": "Independencia de Guatemala"
+    },
+    "description": {
+      "en": "Commemorates Central American independence in 1821.",
+      "es": "Conmemoración de la independencia centroamericana de 1821."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/guatemala/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-09-15",
+    "scope": {
+      "en": "Guatemala",
+      "es": "Guatemala"
+    }
+  },
+  {
+    "id": "national-hn-0915-2027",
+    "slug": "national-hn-0915-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Honduras Independence Day",
+      "es": "Independencia de Honduras"
+    },
+    "description": {
+      "en": "Commemorates Central American independence in 1821.",
+      "es": "Conmemoración de la independencia centroamericana de 1821."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/honduras/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-09-15",
+    "scope": {
+      "en": "Honduras",
+      "es": "Honduras"
+    }
+  },
+  {
+    "id": "national-ni-0915-2027",
+    "slug": "national-ni-0915-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Nicaragua Independence Day",
+      "es": "Independencia de Nicaragua"
+    },
+    "description": {
+      "en": "Commemorates Central American independence in 1821.",
+      "es": "Conmemoración de la independencia centroamericana de 1821."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/nicaragua/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-09-15",
+    "scope": {
+      "en": "Nicaragua",
+      "es": "Nicaragua"
+    }
+  },
+  {
+    "id": "national-mx-0916-2027",
+    "slug": "national-mx-0916-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Mexico Independence Day",
+      "es": "Independencia de México"
+    },
+    "description": {
+      "en": "The Grito is often celebrated the night of September 15; the anniversary is September 16.",
+      "es": "El Grito suele celebrarse la noche del 15; la fecha conmemorativa es el 16."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/mexico/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-09-16",
+    "scope": {
+      "en": "Mexico",
+      "es": "México"
+    }
+  },
+  {
+    "id": "amor-amistad-2027",
+    "slug": "amor-amistad-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Colombia Love and Friendship Day",
+      "es": "Amor y Amistad en Colombia"
+    },
+    "description": {
+      "en": "The third Saturday of September in Colombia, distinct from February 14.",
+      "es": "Tercer sábado de septiembre; distinto del 14 de febrero."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/colombia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-09-18",
+    "scope": {
+      "en": "Colombia",
+      "es": "Colombia"
+    }
+  },
+  {
+    "id": "national-cl-0918-2027",
+    "slug": "national-cl-0918-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Chile National Celebrations",
+      "es": "Fiestas Patrias de Chile"
+    },
+    "description": {
+      "en": "September 18 marks the First Government Junta; September 19 honours the Army. These differ from the declaration of 1818.",
+      "es": "18 Primera Junta de Gobierno; 19 Día de las Glorias del Ejército. No es el día de la declaración de 1818."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/chile/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.chile.gob.cl/chile/sobre-chile/asi-es-chile/sintesis-historica/sintesis-historica",
+        "label": {
+          "en": "Reference: Historia de Chile Gobierno de Chile",
+          "es": "Referencia: Historia de Chile Gobierno de Chile"
+        }
+      }
+    ],
+    "date": "2027-09-18",
+    "scope": {
+      "en": "Chile",
+      "es": "Chile"
+    },
+    "endDate": "2027-09-19"
+  },
+  {
+    "id": "extended-bz-0921-2027",
+    "slug": "extended-bz-0921-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Belize Independence Day",
+      "es": "Independencia de Belice"
+    },
+    "description": {
+      "en": "Belize is a neighbouring Central American country with English as its official language; included as a complementary reference.",
+      "es": "País vecino centroamericano de lengua oficial inglesa; etiqueta complementaria."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/belize/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-09-21",
+    "scope": {
+      "en": "Belize (neighbouring community)",
+      "es": "Belice (comunidad vecina)"
+    }
+  },
+  {
+    "id": "extended-pr-0923-2027",
+    "slug": "extended-pr-0923-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Grito de Lares",
+      "es": "Grito de Lares"
+    },
+    "description": {
+      "en": "A Puerto Rican historical commemoration of 1868.",
+      "es": "Conmemoración histórica puertorriqueña de 1868."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/puerto-rico/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://lares.pr.gov/grito-de-lares/",
+        "label": {
+          "en": "Reference: Grito de Lares Municipio de Lares",
+          "es": "Referencia: Grito de Lares Municipio de Lares"
+        }
+      }
+    ],
+    "date": "2027-09-23",
+    "scope": {
+      "en": "Puerto Rico",
+      "es": "Puerto Rico"
+    }
+  },
+  {
+    "id": "latin-heritage-2027",
+    "slug": "latin-heritage-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Latin American Heritage Month in Canada",
+      "es": "Mes del Patrimonio Latinoamericano en Canadá"
+    },
+    "description": {
+      "en": "The full month of October in Canada, distinct from the September–October observance in the United States.",
+      "es": "Todo octubre. No sustituir por el intervalo estadounidense de septiembre a octubre."
+    },
+    "source": {
+      "url": "https://www.canada.ca/en/canadian-heritage/news/2026/10/statement-by-minister-miller-for-latin-american-heritage-month.html",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-10-01",
+    "scope": {
+      "en": "Canada",
+      "es": "Canada"
+    },
+    "endDate": "2027-10-31"
+  },
+  {
+    "id": "national-hn-1003-2027",
+    "slug": "national-hn-1003-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Francisco Morazan Commemoration",
+      "es": "Conmemoración de Francisco Morazán"
+    },
+    "description": {
+      "en": "A historical date in Honduras; the Semana Morazánica break may move.",
+      "es": "Fecha histórica de Honduras; el descanso de Semana Morazánica puede trasladarse."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/honduras/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-10-03",
+    "scope": {
+      "en": "Honduras",
+      "es": "Honduras"
+    }
+  },
+  {
+    "id": "national-ec-1009-2027",
+    "slug": "national-ec-1009-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Guayaquil Independence Day",
+      "es": "Independencia de Guayaquil"
+    },
+    "description": {
+      "en": "A regional and national Ecuadorian commemoration.",
+      "es": "Conmemoración regional y nacional ecuatoriana."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/ecuador/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-10-09",
+    "scope": {
+      "en": "Ecuador",
+      "es": "Ecuador"
+    }
+  },
+  {
+    "id": "national-cu-1010-2027",
+    "slug": "national-cu-1010-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Beginning of Cuban Independence War",
+      "es": "Inicio de la Guerra de Independencia de Cuba"
+    },
+    "description": {
+      "en": "Commemorates the beginning of the war in 1868.",
+      "es": "Conmemoración de 1868."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/cuba/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.presidencia.gob.cu/es/cuba/",
+        "label": {
+          "en": "Reference: Historia de Cuba Presidencia de Cuba",
+          "es": "Referencia: Historia de Cuba Presidencia de Cuba"
+        }
+      }
+    ],
+    "date": "2027-10-10",
+    "scope": {
+      "en": "Cuba",
+      "es": "Cuba"
+    }
+  },
+  {
+    "id": "oct12-2027",
+    "slug": "oct12-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "October 12 Diverse Names and Memories",
+      "es": "12 de octubre con memorias y nombres diversos"
+    },
+    "description": {
+      "en": "Names and memories differ by country, including cultural diversity and Indigenous resistance, with different perspectives on colonial history.",
+      "es": "Usar títulos por país: diversidad cultural o resistencia indígena, entre otros. Evitar un único relato celebratorio de la colonización."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/argentina/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/venezuela/2027",
+        "label": {
+          "en": "Reference: Venezuela calendario 2027",
+          "es": "Referencia: Venezuela calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/nicaragua/2027",
+        "label": {
+          "en": "Reference: Nicaragua calendario 2027",
+          "es": "Referencia: Nicaragua calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/chile/2027",
+        "label": {
+          "en": "Reference: Chile calendario 2027",
+          "es": "Referencia: Chile calendario 2027"
+        }
+      }
+    ],
+    "date": "2027-10-12",
+    "scope": {
+      "en": "Argentina, Chile, Colombia, Costa Rica, Ecuador, Guatemala, Honduras, Mexico, Nicaragua, Uruguay, Venezuela",
+      "es": "Argentina, Chile, Colombia, Costa Rica, Ecuador, Guatemala, Honduras, México, Nicaragua, Uruguay, Venezuela"
+    }
+  },
+  {
+    "id": "mothers-argentina-2027",
+    "slug": "mothers-argentina-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Argentina Mothers Day",
+      "es": "Día de la Madre en Argentina"
+    },
+    "description": {
+      "en": "Celebrated on the third Sunday of October.",
+      "es": "Se celebra el tercer domingo de octubre."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/argentina/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-10-17",
+    "scope": {
+      "en": "Argentina",
+      "es": "Argentina"
+    }
+  },
+  {
+    "id": "national-gt-1020-2027",
+    "slug": "national-gt-1020-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Guatemala Revolution of 1944",
+      "es": "Revolución de Guatemala de 1944"
+    },
+    "description": {
+      "en": "A national historical commemoration in Guatemala.",
+      "es": "Conmemoración histórica nacional."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/guatemala/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-10-20",
+    "scope": {
+      "en": "Guatemala",
+      "es": "Guatemala"
+    }
+  },
+  {
+    "id": "criolla-2027",
+    "slug": "criolla-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Creole Song Day",
+      "es": "Día de la Canción Criolla"
+    },
+    "description": {
+      "en": "Creole and Afro-Peruvian music; a commemoration distinct from Halloween.",
+      "es": "Música criolla y afroperuana; fecha distinta de Halloween."
+    },
+    "source": {
+      "url": "https://www.gob.pe/institucion/muniislaymollendo/noticias/1278129-31-de-octubre-dia-de-la-cancion-criolla",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-10-31",
+    "scope": {
+      "en": "Peru",
+      "es": "Perú"
+    }
+  },
+  {
+    "id": "muertos-2027",
+    "slug": "muertos-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Day of the Dead",
+      "es": "Día de Muertos"
+    },
+    "description": {
+      "en": "A Mexican commemoration on November 1 and 2, distinct from the local Niagara festival in October.",
+      "es": "Conmemoración mexicana del 1 y 2 de noviembre; no confundir con un evento local fechado en octubre."
+    },
+    "source": {
+      "url": "https://www.casadedanza.ca/dia-de-muertos-26",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/mexico/2027",
+        "label": {
+          "en": "Reference: México calendario 2027",
+          "es": "Referencia: México calendario 2027"
+        }
+      }
+    ],
+    "date": "2027-11-01",
+    "scope": {
+      "en": "Mexico",
+      "es": "México"
+    },
+    "endDate": "2027-11-02"
+  },
+  {
+    "id": "all-saints-2027",
+    "slug": "all-saints-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "All Saints Day",
+      "es": "Todos los Santos"
+    },
+    "description": {
+      "en": "Diverse religious and family traditions, distinct from Mexican Day of the Dead.",
+      "es": "Tradiciones religiosas y familiares diversas; no son idénticas a Día de Muertos mexicano."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/guatemala/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/ecuador/2027",
+        "label": {
+          "en": "Reference: Ecuador calendario 2027",
+          "es": "Referencia: Ecuador calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/peru/2027",
+        "label": {
+          "en": "Reference: Perú calendario 2027",
+          "es": "Referencia: Perú calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/bolivia/2027",
+        "label": {
+          "en": "Reference: Bolivia calendario 2027",
+          "es": "Referencia: Bolivia calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/colombia/2027",
+        "label": {
+          "en": "Reference: Colombia calendario 2027",
+          "es": "Referencia: Colombia calendario 2027"
+        }
+      }
+    ],
+    "date": "2027-11-01",
+    "scope": {
+      "en": "Guatemala, Ecuador, Peru, Bolivia, Colombia",
+      "es": "Guatemala, Ecuador, Perú, Bolivia, Colombia"
+    }
+  },
+  {
+    "id": "difuntos-2027",
+    "slug": "difuntos-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "All Souls Day",
+      "es": "Día de los Difuntos"
+    },
+    "description": {
+      "en": "Family remembrance and local traditions; Ecuador has its own All Souls holiday.",
+      "es": "Memoria familiar, visitas y tradiciones locales; Ecuador tiene un feriado propio de Difuntos."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/ecuador/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/bolivia/2027",
+        "label": {
+          "en": "Reference: Bolivia calendario 2027",
+          "es": "Referencia: Bolivia calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/peru/2027",
+        "label": {
+          "en": "Reference: Perú calendario 2027",
+          "es": "Referencia: Perú calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/guatemala/2027",
+        "label": {
+          "en": "Reference: Guatemala calendario 2027",
+          "es": "Referencia: Guatemala calendario 2027"
+        }
+      }
+    ],
+    "date": "2027-11-02",
+    "scope": {
+      "en": "Ecuador, Bolivia, Peru, Guatemala",
+      "es": "Ecuador, Bolivia, Perú, Guatemala"
+    }
+  },
+  {
+    "id": "national-ec-1103-2027",
+    "slug": "national-ec-1103-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Cuenca Independence Day",
+      "es": "Independencia de Cuenca"
+    },
+    "description": {
+      "en": "A historical anniversary; the observed day off may move.",
+      "es": "Fecha histórica; el día de descanso puede trasladarse."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/ecuador/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-11-03",
+    "scope": {
+      "en": "Ecuador",
+      "es": "Ecuador"
+    }
+  },
+  {
+    "id": "national-pa-1103-2027",
+    "slug": "national-pa-1103-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Panama Separation from Colombia",
+      "es": "Separación de Panamá de Colombia"
+    },
+    "description": {
+      "en": "Marks separation in 1903; independence from Spain is celebrated November 28.",
+      "es": "Hecho de 1903; independencia de España el 28 de noviembre."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/panama/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-11-03",
+    "scope": {
+      "en": "Panama",
+      "es": "Panamá"
+    }
+  },
+  {
+    "id": "national-co-1111-2027",
+    "slug": "national-co-1111-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Cartagena Independence Day",
+      "es": "Independencia de Cartagena"
+    },
+    "description": {
+      "en": "The historical anniversary differs from the observed holiday Monday.",
+      "es": "Fecha histórica; no sustituir por el lunes festivo."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/colombia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-11-11",
+    "scope": {
+      "en": "Colombia",
+      "es": "Colombia"
+    }
+  },
+  {
+    "id": "national-br-1115-2027",
+    "slug": "national-br-1115-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Brazil Republic Proclamation",
+      "es": "Proclamación de la República de Brasil"
+    },
+    "description": {
+      "en": "Commemorates the proclamation of 1889.",
+      "es": "Conmemoración de 1889."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/brazil/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-11-15",
+    "scope": {
+      "en": "Brazil",
+      "es": "Brasil"
+    }
+  },
+  {
+    "id": "national-ht-1118-2027",
+    "slug": "national-ht-1118-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Battle of Vertieres",
+      "es": "Batalla de Vertières"
+    },
+    "description": {
+      "en": "A Haitian commemoration connected with the independence process.",
+      "es": "Conmemoración haitiana vinculada al proceso independentista."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/haiti/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-11-18",
+    "scope": {
+      "en": "Haiti",
+      "es": "Haití"
+    }
+  },
+  {
+    "id": "garifuna-2027",
+    "slug": "garifuna-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Garifuna Settlement Day",
+      "es": "Garifuna Settlement Day"
+    },
+    "description": {
+      "en": "Recognising Garifuna culture and its Central American and Caribbean connections.",
+      "es": "Destacar la cultura garífuna y sus vínculos centroamericanos y caribeños."
+    },
+    "source": {
+      "url": "https://www.travelbelize.org/blog/guide-to-celebrate-garifuna-settlement-day-in-belize/",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-11-19",
+    "scope": {
+      "en": "Belize (neighbouring community)",
+      "es": "Belice (comunidad vecina)"
+    }
+  },
+  {
+    "id": "black-awareness-2027",
+    "slug": "black-awareness-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Black Awareness Day",
+      "es": "Día de la Conciencia Negra"
+    },
+    "description": {
+      "en": "A Brazilian date of Afro-descendant remembrance, also known as Zumbi Day.",
+      "es": "Fecha brasileña de memoria afrodescendiente; también se denomina Día de Zumbi."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/brazil/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-11-20",
+    "scope": {
+      "en": "Brazil",
+      "es": "Brasil"
+    }
+  },
+  {
+    "id": "violence-women-2027",
+    "slug": "violence-women-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Elimination of Violence against Women",
+      "es": "Eliminación de la Violencia contra la Mujer"
+    },
+    "description": {
+      "en": "A date for awareness and remembrance.",
+      "es": "Fecha de sensibilización y memoria; no tratarla como fiesta."
+    },
+    "source": {
+      "url": "https://www.un.org/en/observances/ending-violence-against-women-day/background",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-11-25",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    }
+  },
+  {
+    "id": "extended-sr-1125-2027",
+    "slug": "extended-sr-1125-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Suriname Independence Day",
+      "es": "Independencia de Surinam"
+    },
+    "description": {
+      "en": "A neighbouring South American community with Dutch as its official language.",
+      "es": "Comunidad vecina sudamericana; lengua oficial neerlandesa."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/suriname/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-11-25",
+    "scope": {
+      "en": "Suriname (neighbouring community)",
+      "es": "Surinam (comunidad vecina)"
+    }
+  },
+  {
+    "id": "merengue-2027",
+    "slug": "merengue-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "National Merengue Day",
+      "es": "Día Nacional del Merengue"
+    },
+    "description": {
+      "en": "Recognising Dominican music and dance.",
+      "es": "Reconocimiento de la música y el baile dominicanos."
+    },
+    "source": {
+      "url": "https://f5vip11.unesco.org/en/RL/music-and-dance-of-the-merengue-in-the-dominican-republic-01162",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-11-26",
+    "scope": {
+      "en": "Dominican Republic",
+      "es": "República Dominicana"
+    }
+  },
+  {
+    "id": "national-pa-1128-2027",
+    "slug": "national-pa-1128-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Panama Independence from Spain",
+      "es": "Independencia de Panamá de España"
+    },
+    "description": {
+      "en": "Commemorates independence from Spain in 1821, distinct from separation from Colombia.",
+      "es": "Conmemoración de 1821, diferente de la separación de Colombia."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/panama/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-11-28",
+    "scope": {
+      "en": "Panama",
+      "es": "Panamá"
+    }
+  },
+  {
+    "id": "candombe-2027",
+    "slug": "candombe-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "National Candombe Day",
+      "es": "Día Nacional del Candombe"
+    },
+    "description": {
+      "en": "Recognising Afro-Uruguayan culture and racial equity.",
+      "es": "Incluye cultura afrouruguaya y equidad racial."
+    },
+    "source": {
+      "url": "https://www.gub.uy/ministerio-turismo/comunicacion/noticias/uruguay-celebra-dia-nacional-del-candombe-cultura-afrouruguaya-equidad-racial",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-12-03",
+    "scope": {
+      "en": "Uruguay",
+      "es": "Uruguay"
+    }
+  },
+  {
+    "id": "griteria-2027",
+    "slug": "griteria-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "La Griteria",
+      "es": "La Gritería"
+    },
+    "description": {
+      "en": "A Nicaraguan tradition on the eve of the Immaculate Conception.",
+      "es": "Tradición nicaragüense en la víspera de la Inmaculada Concepción."
+    },
+    "source": {
+      "url": "https://www.intur.gob.ni/2017/12/07/leon-genesis-la-griteria-nicaraguense/",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-12-07",
+    "scope": {
+      "en": "Nicaragua",
+      "es": "Nicaragua"
+    }
+  },
+  {
+    "id": "velitas-2027",
+    "slug": "velitas-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Night of Little Candles",
+      "es": "Noche de Velitas"
+    },
+    "description": {
+      "en": "A Colombian tradition on the eve of the Immaculate Conception.",
+      "es": "Tradición colombiana en la víspera de la Inmaculada Concepción."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/colombia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-12-07",
+    "scope": {
+      "en": "Colombia",
+      "es": "Colombia"
+    }
+  },
+  {
+    "id": "family-pa-1208-2027",
+    "slug": "family-pa-1208-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Panama Mothers Day",
+      "es": "Día de las Madres en Panamá"
+    },
+    "description": {
+      "en": "A country-specific family celebration; dates differ across Latin America.",
+      "es": "Fecha de país; no aplicar universalmente."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/panama/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-12-08",
+    "scope": {
+      "en": "Panama",
+      "es": "Panamá"
+    }
+  },
+  {
+    "id": "inmaculada-2027",
+    "slug": "inmaculada-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Immaculate Conception",
+      "es": "Inmaculada Concepción"
+    },
+    "description": {
+      "en": "Religious celebrations and holidays differ by country; Panama also celebrates Mother’s Day.",
+      "es": "Celebración religiosa con usos y feriados diferentes; en Panamá coincide con el Día de las Madres."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/colombia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/mexico/2027",
+        "label": {
+          "en": "Reference: México calendario 2027",
+          "es": "Referencia: México calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/nicaragua/2027",
+        "label": {
+          "en": "Reference: Nicaragua calendario 2027",
+          "es": "Referencia: Nicaragua calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/panama/2027",
+        "label": {
+          "en": "Reference: Panamá calendario 2027",
+          "es": "Referencia: Panamá calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/peru/2027",
+        "label": {
+          "en": "Reference: Perú calendario 2027",
+          "es": "Referencia: Perú calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/argentina/2027",
+        "label": {
+          "en": "Reference: Argentina calendario 2027",
+          "es": "Referencia: Argentina calendario 2027"
+        }
+      },
+      {
+        "url": "https://www.timeanddate.com/holidays/costa-rica/2027",
+        "label": {
+          "en": "Reference: Costa Rica calendario 2027",
+          "es": "Referencia: Costa Rica calendario 2027"
+        }
+      }
+    ],
+    "date": "2027-12-08",
+    "scope": {
+      "en": "Colombia, Mexico, Nicaragua, Panama, Peru, Argentina, Costa Rica",
+      "es": "Colombia, México, Nicaragua, Panamá, Perú, Argentina, Costa Rica"
+    }
+  },
+  {
+    "id": "tango-2027",
+    "slug": "tango-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Argentina National Tango Day",
+      "es": "Día Nacional del Tango en Argentina"
+    },
+    "description": {
+      "en": "An Argentine anniversary for tango, a tradition also shared with Uruguay.",
+      "es": "Fecha argentina; el tango es una tradición compartida con Uruguay."
+    },
+    "source": {
+      "url": "https://www.argentina.gob.ar/node/486595",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-12-11",
+    "scope": {
+      "en": "Argentina",
+      "es": "Argentina"
+    }
+  },
+  {
+    "id": "posadas-2027",
+    "slug": "posadas-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Mexican Posadas",
+      "es": "Posadas mexicanas"
+    },
+    "description": {
+      "en": "Nine nights, from December 16 through December 24.",
+      "es": "Nueve noches del 16 al 24 de diciembre."
+    },
+    "source": {
+      "url": "https://embamex.sre.gob.mx/italia/index.php/es/menu-cultura/aspectos-culturales-de-mexico",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-12-16",
+    "scope": {
+      "en": "Mexico",
+      "es": "México"
+    },
+    "endDate": "2027-12-24"
+  },
+  {
+    "id": "migrants-2027",
+    "slug": "migrants-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "International Migrants Day",
+      "es": "Día Internacional del Migrante"
+    },
+    "description": {
+      "en": "A space for migration stories from students and the wider community.",
+      "es": "Espacio para historias de migración de estudiantes y comunidad."
+    },
+    "source": {
+      "url": "https://www.un.org/en/observances/migrants-day/background",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-12-18",
+    "scope": {
+      "en": "International / regional cultural reference",
+      "es": "Referencia cultural internacional / regional"
+    }
+  },
+  {
+    "id": "nochebuena-2027",
+    "slug": "nochebuena-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Christmas Eve",
+      "es": "Nochebuena"
+    },
+    "description": {
+      "en": "Christian and family traditions with voluntary participation and local variations.",
+      "es": "Tradición cristiana y familiar; participación voluntaria y variantes locales."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/colombia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/mexico/2027",
+        "label": {
+          "en": "Reference: México calendario 2027",
+          "es": "Referencia: México calendario 2027"
+        }
+      }
+    ],
+    "date": "2027-12-24",
+    "scope": {
+      "en": "Argentina, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Guatemala, Haiti, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Uruguay, Venezuela, Puerto Rico",
+      "es": "Argentina, Bolivia, Brasil, Chile, Colombia, Costa Rica, Cuba, República Dominicana, Ecuador, El Salvador, Guatemala, Haití, Honduras, México, Nicaragua, Panamá, Paraguay, Perú, Uruguay, Venezuela, Puerto Rico"
+    }
+  },
+  {
+    "id": "navidad-2027",
+    "slug": "navidad-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Christmas",
+      "es": "Navidad"
+    },
+    "description": {
+      "en": "A widely observed Christian celebration; members have diverse beliefs.",
+      "es": "Celebración cristiana observada ampliamente; no asumir la religión de cada miembro."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/colombia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/mexico/2027",
+        "label": {
+          "en": "Reference: México calendario 2027",
+          "es": "Referencia: México calendario 2027"
+        }
+      }
+    ],
+    "date": "2027-12-25",
+    "scope": {
+      "en": "Argentina, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Guatemala, Haiti, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Uruguay, Venezuela, Puerto Rico",
+      "es": "Argentina, Bolivia, Brasil, Chile, Colombia, Costa Rica, Cuba, República Dominicana, Ecuador, El Salvador, Guatemala, Haití, Honduras, México, Nicaragua, Panamá, Paraguay, Perú, Uruguay, Venezuela, Puerto Rico"
+    }
+  },
+  {
+    "id": "negros-blancos-2027",
+    "slug": "negros-blancos-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Black and White Carnival",
+      "es": "Carnaval de Negros y Blancos"
+    },
+    "description": {
+      "en": "UNESCO describes the traditional season from December 28 to January 6. Individual programs may focus on January.",
+      "es": "Temporada tradicional descrita por UNESCO del 28 de diciembre al 6 de enero; programas de cada edición pueden concentrar actos en enero."
+    },
+    "source": {
+      "url": "https://www.unesco.org/archives/multimedia/document-301",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-12-28",
+    "scope": {
+      "en": "Colombia",
+      "es": "Colombia"
+    },
+    "endDate": "2028-01-06"
+  },
+  {
+    "id": "inocentes-2027",
+    "slug": "inocentes-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "Holy Innocents Day",
+      "es": "Día de los Santos Inocentes"
+    },
+    "description": {
+      "en": "A traditional Mexican date associated with jokes and playful customs.",
+      "es": "Fecha tradicional mexicana; evitar bromas engañosas sobre eventos reales."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/mexico/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [],
+    "date": "2027-12-28",
+    "scope": {
+      "en": "Mexico",
+      "es": "México"
+    }
+  },
+  {
+    "id": "year-end-2027",
+    "slug": "year-end-2027",
+    "kind": "cultural-date",
+    "category": "latin-dates",
+    "title": {
+      "en": "New Years Eve",
+      "es": "Fin de Año"
+    },
+    "description": {
+      "en": "Regional and family traditions for welcoming the new year.",
+      "es": "Contenido sobre tradiciones regionales y familiares."
+    },
+    "source": {
+      "url": "https://www.timeanddate.com/holidays/colombia/2027",
+      "reviewedOn": "2026-10-10",
+      "provenance": "user-capture"
+    },
+    "links": [
+      {
+        "url": "https://www.timeanddate.com/holidays/mexico/2027",
+        "label": {
+          "en": "Reference: México calendario 2027",
+          "es": "Referencia: México calendario 2027"
+        }
+      }
+    ],
+    "date": "2027-12-31",
+    "scope": {
+      "en": "Argentina, Bolivia, Brazil, Chile, Colombia, Costa Rica, Cuba, Dominican Republic, Ecuador, El Salvador, Guatemala, Haiti, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Uruguay, Venezuela, Puerto Rico",
+      "es": "Argentina, Bolivia, Brasil, Chile, Colombia, Costa Rica, Cuba, República Dominicana, Ecuador, El Salvador, Guatemala, Haití, Honduras, México, Nicaragua, Panamá, Paraguay, Perú, Uruguay, Venezuela, Puerto Rico"
+    }
+  }
+]

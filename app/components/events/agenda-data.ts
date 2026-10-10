@@ -1,3 +1,5 @@
+import researchedEvents from "./researched-events.json";
+import culturalEntries from "./cultural-entries.json";
 import type { AgendaEntry } from "./event-types";
 import { validateAgenda } from "./agenda-validation";
 
@@ -25,6 +27,8 @@ export const agendaEntries: readonly AgendaEntry[] = [
     },
     registrationUrl: "https://www.ncengage.ca/intl/rsvp_boot?id=382827",
   },
+  ...(researchedEvents as AgendaEntry[]),
+  ...(culturalEntries as AgendaEntry[]),
 ];
 
 validateAgenda(agendaEntries);

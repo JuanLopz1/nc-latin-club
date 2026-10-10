@@ -27,15 +27,15 @@
 ## Task 1 — Scheduling contract
 Files: event-types.ts, agenda-dates.ts, agenda-validation.ts, event-card.tsx, event-detail.tsx; tests/uploaded-agenda.test.cjs.
 Interfaces: optional date-only event span with hours unknown; daily sessions for timed festivals; cultural endDate inclusive; extra links/address/editorial note. Existing timestamp Latin Fiesta preserved.
-- [ ] Write failing range/date-only/session tests including inclusive last day and overnight gaps; run (Expected: current date-only/range unsupported).
-- [ ] Extend helpers, validation and rendering with clear unknown-hours copy and daily schedule (Expected: tests pass, existing 15 pass).
+- [x] Write failing range/date-only/session tests including inclusive last day and overnight gaps; run (Expected: current date-only/range unsupported).
+- [x] Extend helpers, validation and rendering with clear unknown-hours copy and daily schedule (Expected: tests pass, existing 15 pass).
 
 ## Task 2 — Import and delivery
 Files: researched-events.json, cultural-entries.json, agenda-data.ts, events-copy.ts; docs/EVENTS_RESEARCH.md, README.md, QA docs.
-- [ ] Test all eleven supplied regional festivals, actual LATAFF sessions and all 225 cultural occurrences; preserve source URLs, unknown hours, Muertos discrepancy and no unauthorized images (Expected: absent content fails).
-- [ ] Normalize supplied data with bilingual details, country-specific scopes and review date; load collections.
-- [ ] Run all tests, lint, build, real HTTP details/archive/calendar and mobile browser checks (Expected: green, real dates display).
-- [ ] Commit/push milestone and verify SHA.
+- [x] Test all eleven supplied regional festivals, actual LATAFF sessions and all 225 cultural occurrences; preserve source URLs, unknown hours, Muertos discrepancy and no unauthorized images (Expected: absent content fails).
+- [x] Normalize supplied data with bilingual details, country-specific scopes and review date; load collections.
+- [x] Run all tests, lint, build, real HTTP details/archive/calendar and mobile browser checks (Expected: green, real dates display).
+- [x] Commit/push milestone and verify SHA.
 
 ## Final review
 - [ ] One fresh whole-delivery code review as required by executing-plans; fix important findings with red/green tests and full verification.
