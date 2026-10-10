@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 import { copy, countries } from "./home-copy";
 import { clubLinks, joinEmailHref } from "./club-links";
+import NiagaraTeaser from "./niagara/niagara-teaser";
 import EventsSection from "./events-section";
 import { useSiteLanguage } from "./site-context";
 import s from "./club-home.module.css";
@@ -33,23 +34,6 @@ function RootsMap() {
       <path d="M58 160C-15 250 58 385 185 383M308 100c58 17 80 50 71 94" strokeDasharray="4 8" opacity=".5" />
     </g>
     <g fill="#ffe06a"><path d="m325 97 3 9 9 3-9 3-3 9-3-9-9-3 9-3ZM58 301l3 8 8 3-8 3-3 8-3-8-8-3 8-3Z" /><circle cx="340" cy="151" r="3" /><circle cx="92" cy="342" r="3" /></g>
-  </svg>;
-}
-
-function NiagaraArt() {
-  return <svg viewBox="0 0 600 470" fill="none" aria-hidden="true" className={s.niagaraDrawing}>
-    <defs><linearGradient id="niagara-sky" x1="300" y1="0" x2="300" y2="470" gradientUnits="userSpaceOnUse"><stop stopColor="#14213d" /><stop offset="1" stopColor="#283352" /></linearGradient><linearGradient id="niagara-water" x1="300" y1="220" x2="300" y2="460" gradientUnits="userSpaceOnUse"><stop stopColor="#4e7a9b" /><stop offset="1" stopColor="#a4deec" /></linearGradient></defs>
-    <path fill="url(#niagara-sky)" d="M0 0h600v470H0z" /><circle cx="430" cy="109" r="50" fill="#c9f5f0" />
-    <path d="M0 200 92 167l95 30 105-61 114 53 104-29 90 23v287H0Z" fill="#35405e" />
-    <path d="M0 238c120-57 199-43 294-14 123 36 210-10 306-33v279H0Z" fill="#19263b" />
-    <path d="M72 254c106-35 183-20 251-3 60 15 110 12 188-7l-9 155H82Z" fill="url(#niagara-water)" />
-    <path d="M73 255c49 9 95-3 136-3 89 0 172 43 301-8" stroke="#c9f5f0" strokeWidth="13" />
-    {Array.from({ length: 20 }, (_, i) => <path key={i} d={`M${85 + i * 21} ${256 + Math.sin(i / 3) * 14}q-8 53 3 116`} stroke="#a4deec" strokeWidth={i % 3 === 0 ? 5 : 2} opacity=".65" />)}
-    <ellipse cx="300" cy="386" rx="233" ry="35" fill="#83b9cf" opacity=".85" />
-    <path d="M0 386c81-51 124 34 190 24 79-12 111-26 177-7 68 19 151-38 233-15v82H0Z" fill="#121d31" />
-    <path d="M15 469c23-106 53-174 83-214M66 360c-35-3-52-19-50-44 32-1 48 17 50 44Zm15-41c4-32 21-50 46-47 2 31-14 47-46 47ZM477 470c-14-72 7-109 38-162m-22 86c-37-2-55-23-52-47 36 0 51 16 52 47Zm14-51c5-27 19-46 49-44-1 32-15 49-49 44Z" fill="#34415e" stroke="#4e7a9b" strokeWidth="2" />
-    <g fill="#ff977d"><circle cx="103" cy="402" r="10" /><circle cx="129" cy="427" r="7" /><circle cx="516" cy="420" r="11" /></g>
-    <path d="m303 94 7-4 7 4m30-19 6-3 6 3" stroke="#76dbe3" strokeWidth="2" strokeLinecap="round" />
   </svg>;
 }
 
@@ -115,7 +99,7 @@ export default function ClubHome() {
         <p className={s.dialogNote}>{t.countryFoot}</p>
       </dialog>
 
-      <section id="niagara" className={`${s.section} ${s.niagara}`} aria-labelledby="niagara-title"><div className={s.niagaraArt}><NiagaraArt /><div className={s.niagaraBadge}><span>NIAGARA</span><span>43° N · 79° W</span></div><p>{t.niagaraCaption}</p></div><div className={s.niagaraCopy}><p className={s.eyebrow}>{t.niagaraLabel}</p><h2 id="niagara-title">{t.niagaraTitle[0]}<br /><em>{t.niagaraTitle[1]}</em></h2><p className={s.bodyCopy}>{t.niagaraBody}</p><div className={s.directory}>{t.niagaraCategories.map((category, index) => <details key={category}><summary><span className={s.directoryNumber}>0{index + 1}</span>{category}<span className={s.detailsPlus} aria-hidden="true">+</span></summary><p>{t.niagaraDetails[index]}</p></details>)}</div><p className={s.directoryNote}>{t.niagaraNote}</p></div></section>
+      <NiagaraTeaser language={language} />
 
       <section id="join" className={s.join} aria-labelledby="join-title"><Pulse className={s.joinPulseLeft} /><Pulse className={s.joinPulseRight} /><Signal className={s.joinSignal} /><p className={s.eyebrow}>{t.joinLabel}</p><h2 id="join-title">{t.joinTitle[0]}<br /><em>{t.joinTitle[1]}</em></h2><p className={s.joinBody}>{t.joinBody}</p><div className={s.joinActions}><a href={joinEmailHref} className={s.button} title={t.emailHint}>{t.joinAction}<Arrow /></a>{instagramAction}</div><p className={s.joinNote}>{t.joinNote}</p></section>
     </main>

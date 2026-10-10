@@ -1,0 +1,882 @@
+[
+  {
+    "id": "origen-bistro-bakery",
+    "name": "Origen Bistro Bakery",
+    "city": "St. Catharines",
+    "categories": [
+      "restaurant",
+      "cafe_bakery"
+    ],
+    "mode": "storefront",
+    "description": {
+      "en": "Latin bistro and bakery with a family story rooted in Colombian flavours.",
+      "es": "Bistro y panadería de cocina latina con una historia familiar vinculada a sabores colombianos."
+    },
+    "offerings": [],
+    "channels": [
+      {
+        "label": "Web",
+        "url": "https://origenbistrobakery.com/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://origenbistrobakery.com/",
+        "title": "Origen sitio oficial"
+      },
+      {
+        "url": "https://mydowntown.ca/discover/origen-bistro-bakery/",
+        "title": "Origen dirección asociación comercial local"
+      },
+      {
+        "url": "https://www.niagaracollege.ca/insidenc/2025/02/11/st-catharines-standard-culinary-alumna-opens-new-latin-american-bistro/",
+        "title": "Origen historia familiar y cocina colombiana Niagara College"
+      },
+      {
+        "url": "https://www.niagararegion.ca/health/inspect/inspection.aspx?id=5DD7302C-17B3-4715-9FAD-F3B18C5EE267",
+        "title": "Origen registro de dirección pública Niagara Region"
+      }
+    ],
+    "reviewedOn": "2026-10-10",
+    "address": "21 Ontario St, St. Catharines, ON L2R 5J3, Canada",
+    "coordinates": {
+      "lat": 43.1551942,
+      "lng": -79.2460753,
+      "accuracy": "poi"
+    }
+  },
+  {
+    "id": "la-paisana-tienda",
+    "name": "La Paisana Latin Groceries",
+    "city": "Niagara Falls",
+    "categories": [
+      "grocery_store"
+    ],
+    "mode": "storefront",
+    "description": {
+      "en": "A Latin grocery store for discovering ingredients and flavours from the region.",
+      "es": "Tienda dedicada a productos latinos para descubrir ingredientes y sabores de la región."
+    },
+    "offerings": [],
+    "channels": [
+      {
+        "label": "Web",
+        "url": "https://lapaisana.shopsettings.com/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://lapaisana.shopsettings.com/",
+        "title": "La Paisana tienda oficial"
+      },
+      {
+        "url": "https://www.niagararegion.ca/health/inspect/inspection.aspx?id=895564AC-3D45-43E8-897B-F5A75C45F463",
+        "title": "La Paisana tienda registro de dirección Niagara Region"
+      }
+    ],
+    "reviewedOn": "2026-10-10",
+    "address": "Unit 9, 2895 St Paul Ave, Niagara Falls, ON L2J 2L3, Canada",
+    "coordinates": {
+      "lat": 43.1306766,
+      "lng": -79.1001795,
+      "accuracy": "address_point"
+    }
+  },
+  {
+    "id": "la-paisana-restaurante",
+    "name": "La Paisana Restaurante",
+    "city": "Niagara Falls",
+    "categories": [
+      "restaurant"
+    ],
+    "mode": "storefront",
+    "description": {
+      "en": "La Paisana restaurant in the same plaza as the Latin grocery store, listed separately.",
+      "es": "Restaurante de La Paisana en la misma plaza que su tienda latina, con ficha independiente."
+    },
+    "offerings": [],
+    "channels": [
+      {
+        "label": "Web",
+        "url": "https://www.facebook.com/lapaisananf/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.facebook.com/lapaisananf/",
+        "title": "La Paisana restaurante perfil del negocio"
+      },
+      {
+        "url": "https://www.niagararegion.ca/health/inspect/inspection.aspx?id=A1144CCD-7C0F-4ED1-A075-C884837E246B",
+        "title": "La Paisana restaurante registro de dirección Niagara Region"
+      }
+    ],
+    "reviewedOn": "2026-10-10",
+    "address": "Unit 4, 2895 St Paul Ave, Niagara Falls, ON L2J 2L3, Canada",
+    "coordinates": {
+      "lat": 43.1306766,
+      "lng": -79.1001795,
+      "accuracy": "address_point"
+    }
+  },
+  {
+    "id": "mexican-taco-zone",
+    "name": "Mexican Taco Zone",
+    "city": "Welland",
+    "categories": [
+      "food_truck"
+    ],
+    "mode": "mobile",
+    "description": {
+      "en": "A Mexican street-food truck with tacos, birria and other dishes on its official menu.",
+      "es": "Food truck de comida callejera mexicana, con tacos, birria y otros platos de su carta oficial."
+    },
+    "offerings": [],
+    "channels": [
+      {
+        "label": "Web",
+        "url": "https://www.mexicantacozone.com/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.mexicantacozone.com/",
+        "title": "Mexican Taco Zone sitio oficial"
+      },
+      {
+        "url": "https://www.niagararegion.ca/health/inspect/inspection.aspx?id=7728BDE7-A8B4-43B1-B959-88E8A24C400B",
+        "title": "Mexican Taco Zone registro de dirección Niagara Region"
+      }
+    ],
+    "reviewedOn": "2026-10-10",
+    "address": "2 Riverside Dr, Welland, ON L3C 5C7, Canada",
+    "coordinates": {
+      "lat": 42.9905003,
+      "lng": -79.2592696,
+      "accuracy": "poi"
+    }
+  },
+  {
+    "id": "mojito-house",
+    "name": "Mojito House",
+    "city": "Niagara Falls",
+    "categories": [
+      "nightlife_bar"
+    ],
+    "mode": "storefront",
+    "description": {
+      "en": "A bar and dance venue with Latin music, DJs and cocktails.",
+      "es": "Bar y espacio de baile con música latina, DJ y cócteles."
+    },
+    "offerings": [],
+    "channels": [
+      {
+        "label": "Web",
+        "url": "https://www.mojitohouse.com/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.mojitohouse.com/contact",
+        "title": "Mojito House contacto oficial"
+      },
+      {
+        "url": "https://www.mojitohouse.com/entertainment",
+        "title": "Mojito House programación latina oficial"
+      },
+      {
+        "url": "https://www.niagararegion.ca/health/inspect/results.aspx?service=Restaurant",
+        "title": "Restaurantes de Niagara: actividad y direcciones de La Revolución y Havana en 2026"
+      }
+    ],
+    "reviewedOn": "2026-10-10",
+    "address": "4030 Montrose Rd, Niagara Falls, ON L2H 3E1, Canada",
+    "coordinates": {
+      "lat": 43.1141405,
+      "lng": -79.1228095,
+      "accuracy": "poi"
+    }
+  },
+  {
+    "id": "coco-bar-mexican-grill",
+    "name": "CoCo Bar & Mexican Grill",
+    "city": "St. Catharines",
+    "categories": [
+      "restaurant",
+      "nightlife_bar"
+    ],
+    "mode": "storefront",
+    "description": {
+      "en": "A restaurant and bar declaring Mexican roots and Latin music activities.",
+      "es": "Restaurante y bar que declara raíces mexicanas y actividades de música latina."
+    },
+    "offerings": [],
+    "channels": [
+      {
+        "label": "Web",
+        "url": "https://cocobar.ca/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://cocobar.ca/about-us",
+        "title": "CoCo Bar historia declarada de fundadores mexicanos canadienses"
+      },
+      {
+        "url": "https://cocobar.ca/contact-us",
+        "title": "CoCo Bar contacto y dirección oficial"
+      },
+      {
+        "url": "https://www.niagararegion.ca/health/inspect/inspection.aspx?id=555413B9-7AD6-468B-B679-0CB4C420F84D",
+        "title": "CoCo Bar dirección alternativa registro Niagara Region"
+      }
+    ],
+    "reviewedOn": "2026-10-10",
+    "address": "155 St Paul Crescent, St. Catharines, ON, Canada",
+    "coordinates": {
+      "lat": 43.1485146,
+      "lng": -79.2499116,
+      "accuracy": "address_point"
+    }
+  },
+  {
+    "id": "chile-agave",
+    "name": "Chile & Agave Mexican Grill",
+    "city": "St. Catharines",
+    "categories": [
+      "restaurant"
+    ],
+    "mode": "storefront",
+    "description": {
+      "en": "Mexican restaurant offering tacos, dining and catering.",
+      "es": "Cocina mexicana con tacos, menú de restaurante y catering."
+    },
+    "offerings": [
+      "Tacos",
+      "Catering"
+    ],
+    "channels": [
+      {
+        "label": "Web",
+        "url": "https://www.chileandagave.ca/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.chileandagave.ca/",
+        "title": "Chile & Agave web y contacto"
+      },
+      {
+        "url": "https://www.notllocal.com/lets-eat/mexican-cuisine-coming-soon-to-virgil-9738663",
+        "title": "Historia de Chile & Agave, Twisted Bar y Nacho Business, 1 noviembre 2024"
+      },
+      {
+        "url": "https://www.niagararegion.ca/health/inspect/inspection.aspx?id=396F7290-A16F-4BE7-9275-6348E5B7A536",
+        "title": "Chile & Agave registro regional 14 abril 2026"
+      }
+    ],
+    "reviewedOn": "2026-10-10",
+    "address": "51 Hartzel Rd, St. Catharines, ON, Canada",
+    "coordinates": {
+      "lat": 43.155076,
+      "lng": -79.2146034,
+      "accuracy": "address_point"
+    }
+  },
+  {
+    "id": "la-revolucion",
+    "name": "La Revolución Taqueria Mexicana",
+    "city": "Niagara Falls",
+    "categories": [
+      "restaurant"
+    ],
+    "mode": "storefront",
+    "description": {
+      "en": "A taqueria with recipes and a story rooted in Mexico City.",
+      "es": "Taquería con recetas e historia vinculadas a Ciudad de México."
+    },
+    "offerings": [
+      "Tacos"
+    ],
+    "channels": [
+      {
+        "label": "Web",
+        "url": "https://www.larevolucion.ca/"
+      },
+      {
+        "label": "Facebook",
+        "url": "https://www.facebook.com/p/La-Revoluci%C3%B3n-Taqueria-Mexicana-61551940752453/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.larevolucion.ca/",
+        "title": "La Revolución web oficial y origen de recetas"
+      },
+      {
+        "url": "https://www.facebook.com/p/La-Revoluci%C3%B3n-Taqueria-Mexicana-61551940752453/",
+        "title": "La Revolución Facebook del negocio"
+      },
+      {
+        "url": "https://www.niagararegion.ca/health/inspect/results.aspx?service=Restaurant",
+        "title": "Restaurantes de Niagara: actividad y direcciones de La Revolución y Havana en 2026"
+      }
+    ],
+    "reviewedOn": "2026-10-10",
+    "address": "3747 Portage Rd, Niagara Falls, ON L2J 2L1, Canada",
+    "coordinates": {
+      "lat": 43.1188189,
+      "lng": -79.099785,
+      "accuracy": "poi"
+    }
+  },
+  {
+    "id": "havana",
+    "name": "HAVANA Restaurant & Cocktail Lounge",
+    "city": "Niagara Falls",
+    "categories": [
+      "restaurant",
+      "nightlife_bar"
+    ],
+    "mode": "storefront",
+    "description": {
+      "en": "Cuban cuisine and cocktails in downtown Niagara Falls.",
+      "es": "Cocina cubana y coctelería en el centro de Niagara Falls."
+    },
+    "offerings": [
+      "Cocina cubana",
+      "Coctelería",
+      "Tres leches en menú enlazado; disponibilidad por confirmar"
+    ],
+    "channels": [
+      {
+        "label": "Web",
+        "url": "https://havananiagara.ca/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://havananiagara.ca/contact/",
+        "title": "Havana contacto oficial"
+      },
+      {
+        "url": "https://havananiagara.ca/our-chef/",
+        "title": "Havana historia del chef y trayectoria en Cuba"
+      },
+      {
+        "url": "https://havananiagara.ca/wp-content/uploads/2024/02/HAVANA-Dinner-Menu.pdf",
+        "title": "Havana menú oficial disponible: documento fechado 2024"
+      },
+      {
+        "url": "https://www.niagararegion.ca/health/inspect/results.aspx?service=Restaurant",
+        "title": "Restaurantes de Niagara: actividad y direcciones de La Revolución y Havana en 2026"
+      }
+    ],
+    "reviewedOn": "2026-10-10",
+    "address": "4555 Queen St, Niagara Falls, ON L2E 2L4, Canada",
+    "coordinates": {
+      "lat": 43.106788,
+      "lng": -79.0684258,
+      "accuracy": "address_point"
+    }
+  },
+  {
+    "id": "pattys-delights",
+    "name": "Patty’s Delights Peruvian Culinary",
+    "city": "Niagara Falls",
+    "categories": [
+      "restaurant",
+      "desserts_custom"
+    ],
+    "mode": "storefront",
+    "description": {
+      "en": "Peruvian food, Colombian empanadas, tres leches cake and alfajores on the consulted menu.",
+      "es": "Comida peruana, empanadas colombianas y postres como tres leches y alfajores en el menú consultado."
+    },
+    "offerings": [
+      "Ceviche",
+      "Lomo saltado",
+      "Empanadas colombianas",
+      "Tres leches",
+      "Alfajores"
+    ],
+    "channels": [
+      {
+        "label": "Web",
+        "url": "https://www.pattysdelightson.com/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.pattysdelightson.com/",
+        "title": "Patty’s Delights web y sede actual"
+      },
+      {
+        "url": "https://www.pattysdelightson.com/pattys-delights-peruvian-culinary/menu/5237-Victoria-Ave/",
+        "title": "Patty’s Delights menú en su sistema de pedidos"
+      },
+      {
+        "url": "https://www.niagararegion.ca/health/inspect/inspection.aspx?id=84E8405C-7182-4838-81CB-E5B82B76CAA2",
+        "title": "Patty’s Delights registro de sede 28 abril 2026"
+      }
+    ],
+    "reviewedOn": "2026-10-10",
+    "address": "5237 Victoria Ave, Niagara Falls, ON L2E 4E6, Canada",
+    "coordinates": {
+      "lat": 43.0984589,
+      "lng": -79.073147,
+      "accuracy": "address_point"
+    }
+  },
+  {
+    "id": "el-bodegon",
+    "name": "El Bodegón Niagara",
+    "city": "St. Catharines",
+    "categories": [
+      "grocery_store"
+    ],
+    "mode": "storefront",
+    "description": {
+      "en": "A family store specializing in Latin American groceries.",
+      "es": "Tienda familiar especializada en ingredientes y productos latinoamericanos."
+    },
+    "offerings": [
+      "Ingredientes y productos latinos"
+    ],
+    "channels": [
+      {
+        "label": "Web",
+        "url": "https://elbodegoniagara.com/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://elbodegoniagara.com/about/",
+        "title": "El Bodegón historia y oferta latina familiar"
+      },
+      {
+        "url": "https://elbodegoniagara.com/contacto/",
+        "title": "El Bodegón contacto oficial"
+      },
+      {
+        "url": "https://www.niagararegion.ca/health/inspect/inspection.aspx?id=4BDBC87E-CFE9-4D14-95C1-1D195C6C3C5E",
+        "title": "El Bodegón registro 29 abril 2026"
+      }
+    ],
+    "reviewedOn": "2026-10-10",
+    "address": "Unit 2, 300 Bunting Rd, St. Catharines, ON L2M 3Y3, Canada",
+    "coordinates": {
+      "lat": 43.1790076,
+      "lng": -79.21011,
+      "accuracy": "address_point"
+    }
+  },
+  {
+    "id": "los-amigos",
+    "name": "Los Amigos Latin Grocery",
+    "city": "St. Catharines",
+    "categories": [
+      "grocery_store"
+    ],
+    "mode": "storefront",
+    "description": {
+      "en": "Latin grocery store with restock posts reproduced in 2026.",
+      "es": "Tienda de productos latinos con publicaciones de reposición de mercancía reproducidas en 2026."
+    },
+    "offerings": [
+      "Productos latinos"
+    ],
+    "channels": [
+      {
+        "label": "Web",
+        "url": "https://www.facebook.com/losamigosgrocery/"
+      },
+      {
+        "label": "Facebook",
+        "url": "https://www.facebook.com/losamigosgrocery/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.facebook.com/losamigosgrocery/",
+        "title": "Los Amigos perfil oficial de tienda"
+      },
+      {
+        "url": "https://www.findglocal.com/CA/Saint-Catharines/134185123355697/Los-Amigos",
+        "title": "Los Amigos publicaciones reproducidas hasta julio 2026"
+      },
+      {
+        "url": "https://www.niagararegion.ca/health/inspect/results.aspx",
+        "title": "Registro regional: Los Amigos 10 febrero 2026"
+      }
+    ],
+    "reviewedOn": "2026-10-10",
+    "address": "Unit A, 363 Vine St, St. Catharines, ON, Canada",
+    "coordinates": {
+      "lat": 43.1852819,
+      "lng": -79.2309753,
+      "accuracy": "address_point"
+    }
+  },
+  {
+    "id": "ruta-latina",
+    "name": "Ruta Latina",
+    "city": "Beamsville (Lincoln)",
+    "categories": [
+      "grocery_store",
+      "restaurant"
+    ],
+    "mode": "storefront",
+    "description": {
+      "en": "Latin grocery store with Mexican products and takeaway food.",
+      "es": "Tienda latina con productos mexicanos y oferta de comida para llevar."
+    },
+    "offerings": [
+      "Productos mexicanos",
+      "Quesabirrias según publicación comercial"
+    ],
+    "channels": [
+      {
+        "label": "Web",
+        "url": "https://www.facebook.com/rutalatinatarasco/"
+      },
+      {
+        "label": "Facebook",
+        "url": "https://www.facebook.com/rutalatinatarasco/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.facebook.com/rutalatinatarasco/",
+        "title": "Ruta Latina perfil del negocio y posts indexados de septiembre 2026"
+      },
+      {
+        "url": "https://www.niagararegion.ca/health/inspect/inspection.aspx?id=5FE52212-B4E8-4DA1-B929-5EE29F3F8DEB",
+        "title": "Ruta Latina tienda en Beamsville 15 mayo 2026"
+      },
+      {
+        "url": "https://www.findglocal.com/CA/Beamsville/103571534633522/Ruta-Latina",
+        "title": "Ruta Latina post de retorno 17 septiembre 2026 y contacto reproducidos"
+      }
+    ],
+    "reviewedOn": "2026-10-10",
+    "address": "5002 King St, Beamsville, Lincoln, ON, Canada",
+    "coordinates": {
+      "lat": 43.1654628,
+      "lng": -79.4765933,
+      "accuracy": "address_point"
+    }
+  },
+  {
+    "id": "mi-casa-905",
+    "name": "Mi Casa 905",
+    "city": "Fort Erie",
+    "categories": [
+      "grocery_store",
+      "restaurant"
+    ],
+    "mode": "storefront",
+    "description": {
+      "en": "An international market with Latin American food in Fort Erie.",
+      "es": "Mercado internacional y comida latinoamericana para la comunidad de Fort Erie."
+    },
+    "offerings": [
+      "Mercado internacional",
+      "Comida latinoamericana"
+    ],
+    "channels": [
+      {
+        "label": "Web",
+        "url": "https://www.facebook.com/p/Micasa905-61560884324407/"
+      },
+      {
+        "label": "Facebook",
+        "url": "https://www.facebook.com/p/Micasa905-61560884324407/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.facebook.com/p/Micasa905-61560884324407/",
+        "title": "Mi Casa 905 perfil comercial"
+      },
+      {
+        "url": "https://www.forterie.ca/media/m2jppshb/2025-2026-fort-erie-visitor-guide-final-single-pages-reduced.pdf",
+        "title": "Mi Casa 905 guía municipal Fort Erie 2025/2026, página 46"
+      },
+      {
+        "url": "https://www.niagararegion.ca/health/inspect/results.aspx?city=Welland",
+        "title": "Mi Casa 905 registro regional 31 marzo 2026, unidad 4"
+      },
+      {
+        "url": "https://forterieradio.ca/international-food-market-on-garrison-road-has-a-little-bit-of-everything/",
+        "title": "Mi Casa 905 entrevista sobre fundadora ecuatoriana, 29 agosto 2024"
+      },
+      {
+        "url": "https://brocku.ca/brock-news/2026/04/students-use-spanish-skills-to-tell-stories-of-community-impact/",
+        "title": "Brock: negocios locales participantes el 31 marzo 2026, artículo 10 abril 2026"
+      }
+    ],
+    "reviewedOn": "2026-10-10",
+    "address": "Unit 4, 516 Garrison Rd, Fort Erie, ON, Canada",
+    "coordinates": {
+      "lat": 42.905554,
+      "lng": -78.9345843,
+      "accuracy": "address_point"
+    }
+  },
+  {
+    "id": "happy-snack",
+    "name": "Happy Snack",
+    "city": "St. Catharines",
+    "categories": [
+      "cafe_bakery",
+      "desserts_custom"
+    ],
+    "mode": "storefront",
+    "description": {
+      "en": "A family bakery founded by a Brazilian entrepreneur, offering breads, snacks and baked sweets.",
+      "es": "Panadería familiar de una emprendedora brasileña, con panes, bocados y repostería."
+    },
+    "offerings": [
+      "Panadería",
+      "Repostería",
+      "Pedidos con anticipación"
+    ],
+    "channels": [
+      {
+        "label": "Web",
+        "url": "https://happysnack.ca/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://happysnack.ca/our-story/",
+        "title": "Happy Snack historia de familia y fundadora brasileña"
+      },
+      {
+        "url": "https://happysnack.ca/our-store/",
+        "title": "Happy Snack dirección, pedidos y contacto"
+      },
+      {
+        "url": "https://www.niagararegion.ca/health/inspect/results.aspx?service=Take+Out",
+        "title": "Happy Snack registro regional 1 junio 2026, local 11A"
+      },
+      {
+        "url": "https://www.niagaracollege.ca/insidenc/2025/02/21/st-catharines-standard-alumna-brings-brazilian-bakery-vision-to-life/",
+        "title": "Niagara College: egresada Linda Batista y raíces brasileñas, 21 febrero 2025"
+      }
+    ],
+    "reviewedOn": "2026-10-10",
+    "address": "Unit 11A, 277 Welland Ave, St. Catharines, ON L2R 2P7, Canada",
+    "coordinates": {
+      "lat": 43.16904,
+      "lng": -79.2314913,
+      "accuracy": "address_point"
+    }
+  },
+  {
+    "id": "paz-bakery",
+    "name": "Paz Bakery",
+    "city": "Niagara Falls",
+    "categories": [
+      "cafe_bakery",
+      "food_by_order"
+    ],
+    "mode": "order_only",
+    "description": {
+      "en": "A Brazilian-inspired cheese snack business with an online store and stockists.",
+      "es": "Emprendimiento de bocados de queso inspirados en pão de queijo, con tienda online y distribuidores."
+    },
+    "offerings": [
+      "Cheese Dots inspirados en pão de queijo"
+    ],
+    "channels": [
+      {
+        "label": "Web",
+        "url": "https://www.pazbakery.ca/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.pazbakery.ca/whoweare",
+        "title": "Paz Bakery: cofundadora de São Paulo y cofundador canadiense"
+      },
+      {
+        "url": "https://www.pazbakery.ca/contact",
+        "title": "Paz Bakery: confirma que no tiene tienda física"
+      },
+      {
+        "url": "https://www.pazbakery.ca/shop",
+        "title": "Paz Bakery tienda en línea"
+      },
+      {
+        "url": "https://www.pazbakery.ca/events",
+        "title": "Paz Bakery agenda propia de noviembre 2026"
+      }
+    ],
+    "reviewedOn": "2026-10-10"
+  },
+  {
+    "id": "la-casita-guanaca",
+    "name": "La Casita Guanaca",
+    "city": "St. Catharines",
+    "categories": [
+      "food_by_order",
+      "market_vendor"
+    ],
+    "mode": "order_only",
+    "description": {
+      "en": "A Salvadoran food business offering pupusas and announcing Niagara market appearances.",
+      "es": "Emprendimiento de comida salvadoreña con pupusas y presencia anunciada en mercados de Niagara."
+    },
+    "offerings": [
+      "Pupusas",
+      "Comida salvadoreña"
+    ],
+    "channels": [
+      {
+        "label": "Web",
+        "url": "https://www.facebook.com/p/La-Casita-Guanaca-61587809473971/"
+      },
+      {
+        "label": "Facebook",
+        "url": "https://www.facebook.com/p/La-Casita-Guanaca-61587809473971/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.facebook.com/p/La-Casita-Guanaca-61587809473971/",
+        "title": "La Casita Guanaca perfil comercial salvadoreño"
+      },
+      {
+        "url": "https://niagararegion.ca/health/inspect/inspection.aspx?id=F8ED8B1E-B489-4996-A722-4DE50FAD447D",
+        "title": "La Casita Guanaca cocina de producción, 27 mayo 2026"
+      }
+    ],
+    "reviewedOn": "2026-10-10"
+  },
+  {
+    "id": "twisted-bar",
+    "name": "Twisted Bar NOTL",
+    "city": "Virgil (Niagara-on-the-Lake)",
+    "categories": [
+      "restaurant",
+      "nightlife_bar"
+    ],
+    "mode": "storefront",
+    "description": {
+      "en": "A Mexican restaurant in Virgil operated by the team behind Chile & Agave.",
+      "es": "Restaurante de cocina mexicana en Virgil, de los operadores de Chile & Agave."
+    },
+    "offerings": [
+      "Cocina mexicana",
+      "Tortillas de la casa según ficha comercial"
+    ],
+    "channels": [
+      {
+        "label": "Web",
+        "url": "https://twistedbarnotl.com/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://twistedbarnotl.com/",
+        "title": "Twisted Bar NOTL web oficial"
+      },
+      {
+        "url": "https://twisted-bar.square.site/",
+        "title": "Twisted Bar sistema comercial oficial Square"
+      },
+      {
+        "url": "https://www.niagararegion.ca/health/inspect/inspection.aspx?id=41D28E37-293F-458D-9C81-CBE7EBCD3B42",
+        "title": "Twisted Bar sede e inspección 18 agosto 2026"
+      },
+      {
+        "url": "https://www.opentable.ca/r/twisted-bar-notl-niagara-on-the-lake",
+        "title": "Twisted Bar perfil comercial OpenTable: contacto y dirección"
+      },
+      {
+        "url": "https://www.notllocal.com/lets-eat/mexican-cuisine-coming-soon-to-virgil-9738663",
+        "title": "Historia de Chile & Agave, Twisted Bar y Nacho Business, 1 noviembre 2024"
+      }
+    ],
+    "reviewedOn": "2026-10-10",
+    "address": "1502 Niagara Stone Rd, Virgil, Niagara-on-the-Lake, ON, Canada",
+    "coordinates": {
+      "lat": 43.2219059,
+      "lng": -79.1225145,
+      "accuracy": "address_point"
+    }
+  },
+  {
+    "id": "el-camino-kitchen",
+    "name": "El Camino Kitchen / by McNips",
+    "city": "Welland",
+    "categories": [
+      "food_truck"
+    ],
+    "mode": "mobile",
+    "description": {
+      "en": "A food option selected by the club founder near Niagara College in Welland.",
+      "es": "Alternativa de comida seleccionada por el fundador, cerca de Niagara College en Welland."
+    },
+    "offerings": [],
+    "channels": [],
+    "sources": [
+      {
+        "url": "https://niagararegion.ca/health/inspect/inspection.aspx?id=580A59BD-4FCD-402C-9A2D-5FC99EDE4D6E",
+        "title": "El Camino Kitchen: registro regional de vehículo"
+      }
+    ],
+    "reviewedOn": "2026-10-10"
+  },
+  {
+    "id": "taco-n-tequila",
+    "name": "Taco N Tequila",
+    "city": "Niagara Falls",
+    "categories": [
+      "restaurant"
+    ],
+    "mode": "storefront",
+    "description": {
+      "en": "Mexican food in Niagara Falls, selected by the club founder.",
+      "es": "Comida mexicana en Niagara Falls, seleccionada por el fundador."
+    },
+    "offerings": [],
+    "channels": [
+      {
+        "label": "Web",
+        "url": "https://www.tacontequila.com/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.tacontequila.com/our-story",
+        "title": "Taco N Tequila historia oficial"
+      }
+    ],
+    "reviewedOn": "2026-10-10"
+  },
+  {
+    "id": "sombra",
+    "name": "Sombra Mexican Kitchen",
+    "city": "Niagara-on-the-Lake",
+    "categories": [
+      "restaurant"
+    ],
+    "mode": "storefront",
+    "description": {
+      "en": "Mexican food in Niagara-on-the-Lake, selected by the club founder.",
+      "es": "Comida mexicana en Niagara-on-the-Lake, seleccionada por el fundador."
+    },
+    "offerings": [],
+    "channels": [],
+    "sources": [
+      {
+        "url": "https://www.niagaraonthelake.com/listing/sombra-mexican-kitchen/2119/",
+        "title": "Sombra: directorio oficial de turismo NOTL"
+      }
+    ],
+    "reviewedOn": "2026-10-10"
+  }
+]
