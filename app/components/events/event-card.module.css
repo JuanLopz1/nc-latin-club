@@ -19,3 +19,7 @@
 .imageError { position: absolute; left: 12px; bottom: 12px; font-size: 11px; background: #0c101be6; padding: 8px; }
 @media (max-width: 760px) { .card { grid-template-columns: 1fr; } .poster, .dateArt { min-height: 220px; } .dateArt strong { font-size: 96px; } .content { padding: 26px; } }
 @media (prefers-reduced-motion: reduce) { .card { transition: none; } .card:hover { transform: none; } }
+
+.action svg { width: 21px; height: 21px; flex-shrink: 0; }
+.action + .action { margin-left: 24px; }
+@media (max-width: 760px) { .action + .action { margin-left: 0; display: flex; justify-content: space-between; } }

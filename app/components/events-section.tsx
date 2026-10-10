@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { eventsCopy } from "./events/events-copy";
 import { copy, type Language } from "./home-copy";
 import { clubEvents } from "./club-events";
 import { joinEmailHref } from "./club-links";
@@ -44,7 +46,7 @@ export default function EventsSection({ language }: { language: Language }) {
           {clubEvents.map(event => (
             <article className={s.card} key={event.id} aria-labelledby={`event-${event.id}-title`}>
               <p className={s.eyebrow}>{t.campus}</p>
-              <h3 id={`event-${event.id}-title`}>{event.title[language]}</h3>
+              <h3 id={`event-${event.id}-title`}><Link href={`/events/${event.slug}`}>{event.title[language]}</Link></h3>
               <p className={s.body}>{event.description[language]}</p>
               <dl className={s.details}>
                 <div><dt>{t.date}</dt><dd><time dateTime={event.startsAt}>{dateFormat.format(new Date(event.startsAt))}</time></dd></div>
@@ -58,6 +60,7 @@ export default function EventsSection({ language }: { language: Language }) {
           ))}
         </div>
       )}
+      <Link href="/events" className={s.agendaLink}>{eventsCopy[language].viewAgenda}<ActionArrow /></Link>
     </section>
   );
 }

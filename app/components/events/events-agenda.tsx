@@ -26,7 +26,7 @@ export default function EventsAgenda({ entries }: { entries: readonly AgendaEntr
         {state.view === 'calendar' && <h2>{t.on} {formatCalendarDate(state.selectedDate, language, { dateStyle: 'full' })}</h2>}
         <p className={s.resultStatus} role="status">{shown.length} {shown.length === 1 ? t.activity : t.activities}{state.view === 'calendar' ? ` · ${formatCalendarDate(state.selectedDate, language)}` : ''}</p>
         {shown.length ? <div className={s.cards}>{shown.map(entry => <EventCard key={entry.slug} entry={entry} language={language} />)}</div> : <div className={s.empty}>
-          <span className={s.emptySignal} aria-hidden="true">✧</span><div><h2>{state.view === 'calendar' ? t.noDay : state.period === 'past' ? t.noPast : t.emptyTitles[state.category]}</h2><p>{t.emptyBodies[state.category]}</p><a href={joinEmailHref}>{t.suggest}<span aria-hidden="true">↗</span></a></div>
+          <span className={s.emptySignal} aria-hidden="true">✧</span><div><h2>{state.view === 'calendar' ? t.noDay : state.period === 'past' ? t.noPast : t.emptyTitles[state.category]}</h2><p>{t.emptyBodies[state.category]}</p><a href={joinEmailHref}>{t.suggest}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M5 19 19 5M9 5h10v10" /></svg></a></div>
         </div>}
       </div>
       <p className={s.zone}>{t.zone}</p>

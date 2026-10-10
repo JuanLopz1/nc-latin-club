@@ -71,3 +71,10 @@ test('public collection preserves supplied Latin Fiesta and references only exis
   validateAgenda(agendaEntries);
   for(const entry of agendaEntries) for(const image of entry.images??[]) assert.ok(fs.existsSync(path.resolve('public',image.src.slice(1))));
 });
+test('unknown event is rejected before streaming with a real 404',()=>{
+ const {proxy}=load('../proxy.ts');
+ assert.equal(typeof proxy,'function');
+ const {NextRequest}=require('next/server');
+ assert.equal(proxy(new NextRequest('https://club.example/events/unknown')).status,404);
+ assert.equal(proxy(new NextRequest('https://club.example/events/latin-fiesta-2026')).status,200);
+});
