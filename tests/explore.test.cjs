@@ -23,3 +23,25 @@ test('simplified world polygons do not paint the complement of a small island',a
  const {geoArea}=await import('d3-geo');const world=JSON.parse(require('node:fs').readFileSync(require('node:path').join(__dirname,'../public/data/roots-world.geojson'),'utf8'));
  for(const feature of world.features){const polygons=feature.geometry.type==='Polygon'?[feature.geometry.coordinates]:feature.geometry.coordinates;for(const coordinates of polygons)assert.ok(geoArea({type:'Polygon',coordinates})<2*Math.PI,'inverted geometry: '+feature.properties.name);}
 });
+test('final directory exposes all 54 distinct countries and small territories',()=>{
+ assert.equal(data.countries.length,54);assert.equal(new Set(data.countries.map(c=>c.slug)).size,54);
+ for(const slug of ['bonaire','saba','san-eustaquio','guayana-francesa','guadalupe','martinica','san-martin-frances','sint-maarten'])assert.equal(utils.filterCountries(data.countries,slug.replaceAll('-',' '),utils.regions).some(c=>c.slug===slug),true,slug);
+});
+test('published cultural pages contain reviewed bilingual content and no draft sections',()=>{
+ const pages=load('../app/components/explore/culture-data.ts').culturePages;assert.ok(Array.isArray(pages));assert.equal(pages.length,4);
+ for(const page of pages){assert.ok(data.countries.some(c=>c.slug===page.slug));assert.equal(page.review.basis,'founder-supplied-UNESCO-excerpt');assert.ok(page.sources.every(s=>s.excerptOriginal&&s.url.startsWith('https://ich.unesco.org/')));
+ for(const value of [page.title,page.introduction,...page.sections.flatMap(s=>[s.title,s.text])]){assert.ok(value.en&&value.es);assert.doesNotMatch(value.en+' '+value.es,/needs_research|ui_placeholder|investigar|comprobación pendiente/i);}assert.ok(page.sections.length>0);}
+ assert.deepEqual(pages.map(p=>p.slug).sort(),['brasil','colombia','jamaica','mexico']);
+});
+test('all 54 destinations have independent selectable world geometry, including shared ISO territories',()=>{
+ const fs=require('node:fs'),path=require('node:path'),world=JSON.parse(fs.readFileSync(path.join(__dirname,'../public/data/roots-world.geojson'),'utf8'));
+ for(const c of data.countries){const geometry=world.features.filter(f=>f.properties.slug?f.properties.slug===c.slug:f.properties.iso2===c.iso2);assert.equal(geometry.length,1,c.slug);assert.ok(geometry[0].properties.americas);}
+ const islands=world.features.filter(f=>f.properties.iso2==='BQ');assert.equal(islands.length,3);assert.equal(new Set(islands.map(f=>JSON.stringify(f.geometry))).size,3);
+});
+test('overlapping island markers offer explicit choices without silently choosing a neighbor',()=>{
+ assert.equal(typeof utils.nearbyCountries,'function');
+ const saba=data.countries.find(c=>c.slug==='saba');const near=utils.nearbyCountries(data.countries,saba);
+ assert.ok(near.some(c=>c.slug==='saba'));assert.ok(near.some(c=>c.slug==='san-eustaquio'));assert.ok(!near.some(c=>c.slug==='bonaire'));
+ assert.equal(utils.nearbyCountries(data.prototypeCountries,data.countries.find(c=>c.slug==='jamaica')).length,1);
+ assert.equal(utils.nearbyCountries([],saba).length,0);
+});

@@ -1,5 +1,61 @@
 [
   {
+    "slug": "argentina",
+    "iso2": "AR",
+    "name": {
+      "en": "Argentina",
+      "es": "Argentina"
+    },
+    "aliases": [
+      "argentina",
+      "Argentina"
+    ],
+    "region": "sudamerica",
+    "center": {
+      "lat": -33.501159,
+      "lng": -64.173331
+    },
+    "intro": {
+      "en": "Discover Argentina, in South America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Argentina, en Sudamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "bolivia",
+    "iso2": "BO",
+    "name": {
+      "en": "Bolivia",
+      "es": "Bolivia"
+    },
+    "aliases": [
+      "bolivia",
+      "Bolivia"
+    ],
+    "region": "sudamerica",
+    "center": {
+      "lat": -16.666015,
+      "lng": -64.593433
+    },
+    "intro": {
+      "en": "Discover Bolivia, in South America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Bolivia, en Sudamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
     "slug": "brasil",
     "iso2": "BR",
     "name": {
@@ -7,9 +63,9 @@
       "es": "Brasil"
     },
     "aliases": [
-      "Brazil",
       "Brasil",
-      "Seja bem-vindo!"
+      "brasil",
+      "Brazil"
     ],
     "region": "sudamerica",
     "center": {
@@ -17,8 +73,36 @@
       "lng": -49.55945
     },
     "intro": {
-      "en": "Explore Brazil, in South America. Choose a place on the globe and begin discovering the Americas.",
-      "es": "Explora Brasil, en Sudamérica. Elige un lugar en el globo y comienza a descubrir las Américas."
+      "en": "Discover Brazil, in South America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Brasil, en Sudamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "chile",
+    "iso2": "CL",
+    "name": {
+      "en": "Chile",
+      "es": "Chile"
+    },
+    "aliases": [
+      "chile",
+      "Chile"
+    ],
+    "region": "sudamerica",
+    "center": {
+      "lat": -38.151771,
+      "lng": -72.318871
+    },
+    "intro": {
+      "en": "Discover Chile, in South America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Chile, en Sudamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
     },
     "sources": [
       {
@@ -37,8 +121,7 @@
     },
     "aliases": [
       "Colombia",
-      "Colombia",
-      "¡Qué más, parce!"
+      "colombia"
     ],
     "region": "sudamerica",
     "center": {
@@ -46,8 +129,470 @@
       "lng": -73.174347
     },
     "intro": {
-      "en": "Explore Colombia, in South America. Choose a place on the globe and begin discovering the Americas.",
-      "es": "Explora Colombia, en Sudamérica. Elige un lugar en el globo y comienza a descubrir las Américas."
+      "en": "Discover Colombia, in South America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Colombia, en Sudamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "ecuador",
+    "iso2": "EC",
+    "name": {
+      "en": "Ecuador",
+      "es": "Ecuador"
+    },
+    "aliases": [
+      "ecuador",
+      "Ecuador"
+    ],
+    "region": "sudamerica",
+    "center": {
+      "lat": -1.259076,
+      "lng": -78.188375
+    },
+    "intro": {
+      "en": "Discover Ecuador, in South America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Ecuador, en Sudamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "guyana",
+    "iso2": "GY",
+    "name": {
+      "en": "Guyana",
+      "es": "Guyana"
+    },
+    "aliases": [
+      "guyana",
+      "Guyana"
+    ],
+    "region": "sudamerica",
+    "center": {
+      "lat": 5.124317,
+      "lng": -58.942643
+    },
+    "intro": {
+      "en": "Discover Guyana, in South America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Guyana, en Sudamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "paraguay",
+    "iso2": "PY",
+    "name": {
+      "en": "Paraguay",
+      "es": "Paraguay"
+    },
+    "aliases": [
+      "Paraguay",
+      "paraguay"
+    ],
+    "region": "sudamerica",
+    "center": {
+      "lat": -21.674509,
+      "lng": -60.146394
+    },
+    "intro": {
+      "en": "Discover Paraguay, in South America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Paraguay, en Sudamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "peru",
+    "iso2": "PE",
+    "name": {
+      "en": "Peru",
+      "es": "Perú"
+    },
+    "aliases": [
+      "Perú",
+      "Peru",
+      "peru"
+    ],
+    "region": "sudamerica",
+    "center": {
+      "lat": -12.976679,
+      "lng": -72.90016
+    },
+    "intro": {
+      "en": "Discover Peru, in South America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Perú, en Sudamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "surinam",
+    "iso2": "SR",
+    "name": {
+      "en": "Suriname",
+      "es": "Surinam"
+    },
+    "aliases": [
+      "Surinam",
+      "Suriname",
+      "surinam"
+    ],
+    "region": "sudamerica",
+    "center": {
+      "lat": 4.143987,
+      "lng": -55.91094
+    },
+    "intro": {
+      "en": "Discover Suriname, in South America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Surinam, en Sudamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "uruguay",
+    "iso2": "UY",
+    "name": {
+      "en": "Uruguay",
+      "es": "Uruguay"
+    },
+    "aliases": [
+      "uruguay",
+      "Uruguay"
+    ],
+    "region": "sudamerica",
+    "center": {
+      "lat": -32.961127,
+      "lng": -55.966942
+    },
+    "intro": {
+      "en": "Discover Uruguay, in South America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Uruguay, en Sudamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "venezuela",
+    "iso2": "VE",
+    "name": {
+      "en": "Venezuela",
+      "es": "Venezuela"
+    },
+    "aliases": [
+      "Venezuela",
+      "venezuela"
+    ],
+    "region": "sudamerica",
+    "center": {
+      "lat": 7.182476,
+      "lng": -64.599381
+    },
+    "intro": {
+      "en": "Discover Venezuela, in South America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Venezuela, en Sudamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "guayana-francesa",
+    "iso2": "GF",
+    "name": {
+      "en": "French Guiana",
+      "es": "Guayana Francesa"
+    },
+    "aliases": [
+      "guayana francesa",
+      "French Guiana",
+      "Guayana Francesa"
+    ],
+    "region": "sudamerica",
+    "center": {
+      "lat": 3.999223,
+      "lng": -53.068349
+    },
+    "intro": {
+      "en": "Discover French Guiana, in South America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Guayana Francesa, en Sudamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_admin_0_map_units.geojson"
+      }
+    ],
+    "culturalStatus": "pending",
+    "politicalStatus": {
+      "en": "An overseas department and region of France.",
+      "es": "Departamento y región de ultramar de Francia."
+    }
+  },
+  {
+    "slug": "islas-malvinas-falkland",
+    "iso2": "FK",
+    "name": {
+      "en": "Falkland Islands / Islas Malvinas",
+      "es": "Islas Malvinas / Falkland Islands"
+    },
+    "aliases": [
+      "Islas Malvinas / Falkland Islands",
+      "Falkland Islands / Islas Malvinas",
+      "islas malvinas falkland"
+    ],
+    "region": "sudamerica",
+    "center": {
+      "lat": -51.608913,
+      "lng": -58.738602
+    },
+    "intro": {
+      "en": "Discover Falkland Islands / Islas Malvinas, in South America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Islas Malvinas / Falkland Islands, en Sudamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending",
+    "politicalStatus": {
+      "en": "Administered by the United Kingdom; Argentina also claims sovereignty. Both names are included here.",
+      "es": "Administradas por el Reino Unido; Argentina también reclama su soberanía. Aquí se incluyen ambos nombres."
+    }
+  },
+  {
+    "slug": "belice",
+    "iso2": "BZ",
+    "name": {
+      "en": "Belize",
+      "es": "Belice"
+    },
+    "aliases": [
+      "Belice",
+      "Belize",
+      "belice"
+    ],
+    "region": "centroamerica",
+    "center": {
+      "lat": 17.202068,
+      "lng": -88.712962
+    },
+    "intro": {
+      "en": "Discover Belize, in Central America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Belice, en Centroamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "costa-rica",
+    "iso2": "CR",
+    "name": {
+      "en": "Costa Rica",
+      "es": "Costa Rica"
+    },
+    "aliases": [
+      "costa rica",
+      "Costa Rica"
+    ],
+    "region": "centroamerica",
+    "center": {
+      "lat": 10.0651,
+      "lng": -84.077922
+    },
+    "intro": {
+      "en": "Discover Costa Rica, in Central America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Costa Rica, en Centroamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "el-salvador",
+    "iso2": "SV",
+    "name": {
+      "en": "El Salvador",
+      "es": "El Salvador"
+    },
+    "aliases": [
+      "el salvador",
+      "El Salvador"
+    ],
+    "region": "centroamerica",
+    "center": {
+      "lat": 13.685371,
+      "lng": -88.890124
+    },
+    "intro": {
+      "en": "Discover El Salvador, in Central America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre El Salvador, en Centroamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "guatemala",
+    "iso2": "GT",
+    "name": {
+      "en": "Guatemala",
+      "es": "Guatemala"
+    },
+    "aliases": [
+      "guatemala",
+      "Guatemala"
+    ],
+    "region": "centroamerica",
+    "center": {
+      "lat": 14.982133,
+      "lng": -90.497134
+    },
+    "intro": {
+      "en": "Discover Guatemala, in Central America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Guatemala, en Centroamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "honduras",
+    "iso2": "HN",
+    "name": {
+      "en": "Honduras",
+      "es": "Honduras"
+    },
+    "aliases": [
+      "Honduras",
+      "honduras"
+    ],
+    "region": "centroamerica",
+    "center": {
+      "lat": 14.794801,
+      "lng": -86.887604
+    },
+    "intro": {
+      "en": "Discover Honduras, in Central America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Honduras, en Centroamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "nicaragua",
+    "iso2": "NI",
+    "name": {
+      "en": "Nicaragua",
+      "es": "Nicaragua"
+    },
+    "aliases": [
+      "nicaragua",
+      "Nicaragua"
+    ],
+    "region": "centroamerica",
+    "center": {
+      "lat": 12.670697,
+      "lng": -85.069347
+    },
+    "intro": {
+      "en": "Discover Nicaragua, in Central America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Nicaragua, en Centroamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "panama",
+    "iso2": "PA",
+    "name": {
+      "en": "Panama",
+      "es": "Panamá"
+    },
+    "aliases": [
+      "Panama",
+      "Panamá",
+      "panama"
+    ],
+    "region": "centroamerica",
+    "center": {
+      "lat": 8.72198,
+      "lng": -80.352106
+    },
+    "intro": {
+      "en": "Discover Panama, in Central America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Panamá, en Centroamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
     },
     "sources": [
       {
@@ -65,9 +610,9 @@
       "es": "México"
     },
     "aliases": [
-      "Mexico",
       "México",
-      "¡Qué onda!"
+      "mexico",
+      "Mexico"
     ],
     "region": "norteamerica",
     "center": {
@@ -75,8 +620,237 @@
       "lng": -102.289448
     },
     "intro": {
-      "en": "Explore Mexico, in North America. Choose a place on the globe and begin discovering the Americas.",
-      "es": "Explora México, en Norteamérica. Elige un lugar en el globo y comienza a descubrir las Américas."
+      "en": "Discover Mexico, in North America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre México, en Norteamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "estados-unidos",
+    "iso2": "US",
+    "name": {
+      "en": "United States",
+      "es": "Estados Unidos"
+    },
+    "aliases": [
+      "estados unidos",
+      "United States",
+      "Estados Unidos"
+    ],
+    "region": "norteamerica",
+    "center": {
+      "lat": 39.538479,
+      "lng": -97.482602
+    },
+    "intro": {
+      "en": "Discover United States, in North America. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Estados Unidos, en Norteamérica. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "antigua-y-barbuda",
+    "iso2": "AG",
+    "name": {
+      "en": "Antigua and Barbuda",
+      "es": "Antigua y Barbuda"
+    },
+    "aliases": [
+      "antigua y barbuda",
+      "Antigua y Barbuda",
+      "Antigua and Barbuda"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 17.352249,
+      "lng": -61.790612
+    },
+    "intro": {
+      "en": "Discover Antigua and Barbuda, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Antigua y Barbuda, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "bahamas",
+    "iso2": "BS",
+    "name": {
+      "en": "The Bahamas",
+      "es": "Bahamas"
+    },
+    "aliases": [
+      "Bahamas",
+      "bahamas",
+      "The Bahamas"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 26.401789,
+      "lng": -77.146688
+    },
+    "intro": {
+      "en": "Discover The Bahamas, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Bahamas, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "barbados",
+    "iso2": "BB",
+    "name": {
+      "en": "Barbados",
+      "es": "Barbados"
+    },
+    "aliases": [
+      "Barbados",
+      "barbados"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 13.163709,
+      "lng": -59.568966
+    },
+    "intro": {
+      "en": "Discover Barbados, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Barbados, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "cuba",
+    "iso2": "CU",
+    "name": {
+      "en": "Cuba",
+      "es": "Cuba"
+    },
+    "aliases": [
+      "Cuba",
+      "cuba"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 21.334024,
+      "lng": -77.975855
+    },
+    "intro": {
+      "en": "Discover Cuba, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Cuba, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "dominica",
+    "iso2": "DM",
+    "name": {
+      "en": "Dominica",
+      "es": "Dominica"
+    },
+    "aliases": [
+      "dominica",
+      "Dominica"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 15.458829,
+      "lng": -61.344958
+    },
+    "intro": {
+      "en": "Discover Dominica, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Dominica, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "republica-dominicana",
+    "iso2": "DO",
+    "name": {
+      "en": "Dominican Republic",
+      "es": "República Dominicana"
+    },
+    "aliases": [
+      "republica dominicana",
+      "Dominican Republic",
+      "República Dominicana"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 19.104137,
+      "lng": -70.653998
+    },
+    "intro": {
+      "en": "Discover Dominican Republic, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre República Dominicana, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "granada",
+    "iso2": "GD",
+    "name": {
+      "en": "Grenada",
+      "es": "Granada"
+    },
+    "aliases": [
+      "granada",
+      "Grenada",
+      "Granada"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 12.113156,
+      "lng": -61.680461
+    },
+    "intro": {
+      "en": "Discover Grenada, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Granada, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
     },
     "sources": [
       {
@@ -95,8 +869,8 @@
     },
     "aliases": [
       "Haiti",
-      "Haití",
-      "Sak pase!"
+      "haiti",
+      "Haití"
     ],
     "region": "caribe",
     "center": {
@@ -104,8 +878,8 @@
       "lng": -72.224051
     },
     "intro": {
-      "en": "Explore Haiti, in the Caribbean. Choose a place on the globe and begin discovering the Americas.",
-      "es": "Explora Haití, en el Caribe. Elige un lugar en el globo y comienza a descubrir las Américas."
+      "en": "Discover Haiti, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Haití, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
     },
     "sources": [
       {
@@ -123,9 +897,8 @@
       "es": "Jamaica"
     },
     "aliases": [
-      "Jamaica",
-      "Jamaica",
-      "Wah gwaan!"
+      "jamaica",
+      "Jamaica"
     ],
     "region": "caribe",
     "center": {
@@ -133,8 +906,8 @@
       "lng": -77.318767
     },
     "intro": {
-      "en": "Explore Jamaica, in the Caribbean. Choose a place on the globe and begin discovering the Americas.",
-      "es": "Explora Jamaica, en el Caribe. Elige un lugar en el globo y comienza a descubrir las Américas."
+      "en": "Discover Jamaica, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Jamaica, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
     },
     "sources": [
       {
@@ -143,6 +916,285 @@
       }
     ],
     "culturalStatus": "pending"
+  },
+  {
+    "slug": "san-cristobal-y-nieves",
+    "iso2": "KN",
+    "name": {
+      "en": "Saint Kitts and Nevis",
+      "es": "San Cristóbal y Nieves"
+    },
+    "aliases": [
+      "san cristobal y nieves",
+      "Saint Kitts and Nevis",
+      "San Cristóbal y Nieves"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 17.336558,
+      "lng": -62.757975
+    },
+    "intro": {
+      "en": "Discover Saint Kitts and Nevis, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre San Cristóbal y Nieves, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "santa-lucia",
+    "iso2": "LC",
+    "name": {
+      "en": "Saint Lucia",
+      "es": "Santa Lucía"
+    },
+    "aliases": [
+      "Santa Lucía",
+      "Saint Lucia",
+      "santa lucia"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 13.892371,
+      "lng": -60.980094
+    },
+    "intro": {
+      "en": "Discover Saint Lucia, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Santa Lucía, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "san-vicente-y-las-granadinas",
+    "iso2": "VC",
+    "name": {
+      "en": "Saint Vincent and the Grenadines",
+      "es": "San Vicente y las Granadinas"
+    },
+    "aliases": [
+      "San Vicente y las Granadinas",
+      "Saint Vincent and the Grenadines",
+      "san vicente y las granadinas"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 13.0879,
+      "lng": -61.3359
+    },
+    "intro": {
+      "en": "Discover Saint Vincent and the Grenadines, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre San Vicente y las Granadinas, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "trinidad-y-tobago",
+    "iso2": "TT",
+    "name": {
+      "en": "Trinidad and Tobago",
+      "es": "Trinidad y Tobago"
+    },
+    "aliases": [
+      "Trinidad y Tobago",
+      "trinidad y tobago",
+      "Trinidad and Tobago"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 10.9989,
+      "lng": -60.9184
+    },
+    "intro": {
+      "en": "Discover Trinidad and Tobago, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Trinidad y Tobago, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "anguila",
+    "iso2": "AI",
+    "name": {
+      "en": "Anguilla",
+      "es": "Anguila"
+    },
+    "aliases": [
+      "anguila",
+      "Anguila",
+      "Anguilla"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 18.242979,
+      "lng": -63.026361
+    },
+    "intro": {
+      "en": "Discover Anguilla, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Anguila, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending",
+    "politicalStatus": {
+      "en": "A British Overseas Territory.",
+      "es": "Territorio británico de ultramar."
+    }
+  },
+  {
+    "slug": "aruba",
+    "iso2": "AW",
+    "name": {
+      "en": "Aruba",
+      "es": "Aruba"
+    },
+    "aliases": [
+      "Aruba",
+      "aruba"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 12.5174,
+      "lng": -69.972795
+    },
+    "intro": {
+      "en": "Discover Aruba, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Aruba, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending",
+    "politicalStatus": {
+      "en": "A constituent country of the Kingdom of the Netherlands.",
+      "es": "País constituyente del Reino de los Países Bajos."
+    }
+  },
+  {
+    "slug": "bonaire",
+    "iso2": "BQ",
+    "name": {
+      "en": "Bonaire",
+      "es": "Bonaire"
+    },
+    "aliases": [
+      "bonaire",
+      "Bonaire"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 12.166123500000001,
+      "lng": -68.30369999999999
+    },
+    "intro": {
+      "en": "Discover Bonaire, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Bonaire, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_admin_0_map_units.geojson"
+      }
+    ],
+    "culturalStatus": "pending",
+    "politicalStatus": {
+      "en": "A special municipality of the Netherlands in the Caribbean.",
+      "es": "Municipio especial de los Países Bajos en el Caribe."
+    }
+  },
+  {
+    "slug": "islas-virgenes-britanicas",
+    "iso2": "VG",
+    "name": {
+      "en": "British Virgin Islands",
+      "es": "Islas Vírgenes Británicas"
+    },
+    "aliases": [
+      "Islas Vírgenes Británicas",
+      "British Virgin Islands",
+      "islas virgenes britanicas"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 18.426606,
+      "lng": -64.63661
+    },
+    "intro": {
+      "en": "Discover British Virgin Islands, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Islas Vírgenes Británicas, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending",
+    "politicalStatus": {
+      "en": "A British Overseas Territory.",
+      "es": "Territorio británico de ultramar."
+    }
+  },
+  {
+    "slug": "islas-caiman",
+    "iso2": "KY",
+    "name": {
+      "en": "Cayman Islands",
+      "es": "Islas Caimán"
+    },
+    "aliases": [
+      "Islas Caimán",
+      "islas caiman",
+      "Cayman Islands"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 19.319862,
+      "lng": -81.24055
+    },
+    "intro": {
+      "en": "Discover Cayman Islands, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Islas Caimán, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending",
+    "politicalStatus": {
+      "en": "A British Overseas Territory.",
+      "es": "Territorio británico de ultramar."
+    }
   },
   {
     "slug": "curazao",
@@ -154,7 +1206,7 @@
     "aliases": [
       "Curaçao",
       "Curazao",
-      "Bon bini na Kòrsou!"
+      "curazao"
     ],
     "region": "caribe",
     "center": {
@@ -162,8 +1214,8 @@
       "lng": -68.920578
     },
     "intro": {
-      "en": "Explore Curaçao, in the Caribbean. Choose a place on the globe and begin discovering the Americas.",
-      "es": "Explora Curazao, en el Caribe. Elige un lugar en el globo y comienza a descubrir las Américas."
+      "en": "Discover Curaçao, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Curazao, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
     },
     "sources": [
       {
@@ -171,6 +1223,403 @@
         "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
       }
     ],
-    "culturalStatus": "pending"
+    "culturalStatus": "pending",
+    "politicalStatus": {
+      "en": "A constituent country of the Kingdom of the Netherlands.",
+      "es": "País constituyente del Reino de los Países Bajos."
+    }
+  },
+  {
+    "slug": "guadalupe",
+    "iso2": "GP",
+    "name": {
+      "en": "Guadeloupe",
+      "es": "Guadalupe"
+    },
+    "aliases": [
+      "Guadeloupe",
+      "Guadalupe",
+      "guadalupe"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 16.299332,
+      "lng": -61.433565
+    },
+    "intro": {
+      "en": "Discover Guadeloupe, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Guadalupe, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_admin_0_map_units.geojson"
+      }
+    ],
+    "culturalStatus": "pending",
+    "politicalStatus": {
+      "en": "An overseas department and region of France.",
+      "es": "Departamento y región de ultramar de Francia."
+    }
+  },
+  {
+    "slug": "martinica",
+    "iso2": "MQ",
+    "name": {
+      "en": "Martinique",
+      "es": "Martinica"
+    },
+    "aliases": [
+      "Martinique",
+      "martinica",
+      "Martinica"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 14.711979,
+      "lng": -61.055657
+    },
+    "intro": {
+      "en": "Discover Martinique, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Martinica, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_admin_0_map_units.geojson"
+      }
+    ],
+    "culturalStatus": "pending",
+    "politicalStatus": {
+      "en": "An overseas department and region of France.",
+      "es": "Departamento y región de ultramar de Francia."
+    }
+  },
+  {
+    "slug": "montserrat",
+    "iso2": "MS",
+    "name": {
+      "en": "Montserrat",
+      "es": "Montserrat"
+    },
+    "aliases": [
+      "Montserrat",
+      "montserrat"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 16.73717,
+      "lng": -62.188252
+    },
+    "intro": {
+      "en": "Discover Montserrat, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Montserrat, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending",
+    "politicalStatus": {
+      "en": "A British Overseas Territory.",
+      "es": "Territorio británico de ultramar."
+    }
+  },
+  {
+    "slug": "puerto-rico",
+    "iso2": "PR",
+    "name": {
+      "en": "Puerto Rico",
+      "es": "Puerto Rico"
+    },
+    "aliases": [
+      "Puerto Rico",
+      "puerto rico"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 18.234668,
+      "lng": -66.481065
+    },
+    "intro": {
+      "en": "Discover Puerto Rico, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Puerto Rico, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending",
+    "politicalStatus": {
+      "en": "A U.S. territory.",
+      "es": "Territorio de Estados Unidos."
+    }
+  },
+  {
+    "slug": "saba",
+    "iso2": "BQ",
+    "name": {
+      "en": "Saba",
+      "es": "Saba"
+    },
+    "aliases": [
+      "Saba",
+      "saba"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 17.6308045,
+      "lng": -63.237517999999994
+    },
+    "intro": {
+      "en": "Discover Saba, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Saba, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_admin_0_map_units.geojson"
+      }
+    ],
+    "culturalStatus": "pending",
+    "politicalStatus": {
+      "en": "A special municipality of the Netherlands in the Caribbean.",
+      "es": "Municipio especial de los Países Bajos en el Caribe."
+    }
+  },
+  {
+    "slug": "san-bartolome",
+    "iso2": "BL",
+    "name": {
+      "en": "Saint Barthélemy",
+      "es": "San Bartolomé"
+    },
+    "aliases": [
+      "Saint Barthélemy",
+      "san bartolome",
+      "San Bartolomé"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 17.901987,
+      "lng": -62.833193
+    },
+    "intro": {
+      "en": "Discover Saint Barthélemy, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre San Bartolomé, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending",
+    "politicalStatus": {
+      "en": "An overseas collectivity of France.",
+      "es": "Colectividad de ultramar de Francia."
+    }
+  },
+  {
+    "slug": "san-martin-frances",
+    "iso2": "MF",
+    "name": {
+      "en": "Saint Martin (French part)",
+      "es": "San Martín (parte francesa)"
+    },
+    "aliases": [
+      "Saint Martin (French part)",
+      "San Martín (parte francesa)",
+      "san martin frances"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 18.081302,
+      "lng": -63.049399
+    },
+    "intro": {
+      "en": "Discover Saint Martin (French part), in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre San Martín (parte francesa), en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending",
+    "politicalStatus": {
+      "en": "An overseas collectivity of France.",
+      "es": "Colectividad de ultramar de Francia."
+    }
+  },
+  {
+    "slug": "san-eustaquio",
+    "iso2": "BQ",
+    "name": {
+      "en": "Sint Eustatius",
+      "es": "San Eustaquio"
+    },
+    "aliases": [
+      "san eustaquio",
+      "San Eustaquio",
+      "Sint Eustatius"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 17.495096,
+      "lng": -62.971103
+    },
+    "intro": {
+      "en": "Discover Sint Eustatius, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre San Eustaquio, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_admin_0_map_units.geojson"
+      }
+    ],
+    "culturalStatus": "pending",
+    "politicalStatus": {
+      "en": "A special municipality of the Netherlands in the Caribbean.",
+      "es": "Municipio especial de los Países Bajos en el Caribe."
+    }
+  },
+  {
+    "slug": "sint-maarten",
+    "iso2": "SX",
+    "name": {
+      "en": "Sint Maarten",
+      "es": "Sint Maarten (parte neerlandesa)"
+    },
+    "aliases": [
+      "sint maarten",
+      "Sint Maarten (parte neerlandesa)",
+      "Sint Maarten"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 18.04088,
+      "lng": -63.070133
+    },
+    "intro": {
+      "en": "Discover Sint Maarten, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Sint Maarten (parte neerlandesa), en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending",
+    "politicalStatus": {
+      "en": "A constituent country of the Kingdom of the Netherlands.",
+      "es": "País constituyente del Reino de los Países Bajos."
+    }
+  },
+  {
+    "slug": "turcas-y-caicos",
+    "iso2": "TC",
+    "name": {
+      "en": "Turks and Caicos Islands",
+      "es": "Islas Turcas y Caicos"
+    },
+    "aliases": [
+      "turcas y caicos",
+      "Islas Turcas y Caicos",
+      "Turks and Caicos Islands"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 21.81663,
+      "lng": -71.752704
+    },
+    "intro": {
+      "en": "Discover Turks and Caicos Islands, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Islas Turcas y Caicos, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending",
+    "politicalStatus": {
+      "en": "A British Overseas Territory.",
+      "es": "Territorio británico de ultramar."
+    }
+  },
+  {
+    "slug": "islas-virgenes-eeuu",
+    "iso2": "VI",
+    "name": {
+      "en": "U.S. Virgin Islands",
+      "es": "Islas Vírgenes de Estados Unidos"
+    },
+    "aliases": [
+      "Islas Vírgenes de Estados Unidos",
+      "U.S. Virgin Islands",
+      "islas virgenes eeuu"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 17.746706,
+      "lng": -64.779172
+    },
+    "intro": {
+      "en": "Discover U.S. Virgin Islands, in the Caribbean. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Islas Vírgenes de Estados Unidos, en el Caribe. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending",
+    "politicalStatus": {
+      "en": "A U.S. territory.",
+      "es": "Territorio de Estados Unidos."
+    }
+  },
+  {
+    "slug": "bermudas",
+    "iso2": "BM",
+    "name": {
+      "en": "Bermuda",
+      "es": "Bermudas"
+    },
+    "aliases": [
+      "Bermuda",
+      "Bermudas",
+      "bermudas"
+    ],
+    "region": "caribe_ampliado",
+    "center": {
+      "lat": 32.296592,
+      "lng": -64.763573
+    },
+    "intro": {
+      "en": "Discover Bermuda, in the North Atlantic. A starting point for exploring the many places that connect our familia.",
+      "es": "Descubre Bermudas, en el Atlántico Norte. Un punto de partida para explorar los muchos lugares que conectan a nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending",
+    "politicalStatus": {
+      "en": "A British Overseas Territory.",
+      "es": "Territorio británico de ultramar."
+    }
   }
 ]

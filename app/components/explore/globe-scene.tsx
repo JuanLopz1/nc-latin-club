@@ -4,10 +4,10 @@ import type { GlobeInstance } from 'globe.gl';
 import type { Feature, FeatureCollection, Polygon, MultiPolygon } from 'geojson';
 import type { Language } from '../home-copy';
 import type { Camera, Country, GlobeHandle } from './explore-types';
-import { clampAltitude, initialCamera } from './explore-utils';
+import { clampAltitude, initialCamera, nearbyCountries } from './explore-utils';
 import s from './explore.module.css';
 type WorldFeature = Feature<Polygon | MultiPolygon, { iso2: string; name: string; americas: boolean; slug?: string }>;
-type Props = { ref: Ref<GlobeHandle>; countries: readonly Country[]; selectedSlug: string | null; camera: Camera; rotating: boolean; language: Language; onSelect(slug: string): void; onCamera(camera: Camera): void; onReady(ready: boolean): void; onInteraction(): void; onError(): void };
+type Props = { ref: Ref<GlobeHandle>; countries: readonly Country[]; selectedSlug: string | null; camera: Camera; rotating: boolean; language: Language; onSelect(slug: string, nearby?: string[]): void; onCamera(camera: Camera): void; onReady(ready: boolean): void; onInteraction(): void; onError(): void };
 export default function GlobeScene({ ref: handleRef, ...props }: Props) {
   const container = useRef<HTMLDivElement>(null), globe = useRef<GlobeInstance | null>(null), live = useRef(props);
   const lastSelection = useRef(props.selectedSlug);
@@ -25,7 +25,7 @@ export default function GlobeScene({ ref: handleRef, ...props }: Props) {
     const fail = () => { live.current.onReady(false); live.current.onError(); };
     const saveCamera = () => { if (globe.current) live.current.onCamera(globe.current.pointOfView()); };
     const interaction = () => live.current.onInteraction();
-    const preference = () => { if (globe.current) globe.current.controls().autoRotate = live.current.rotating && !media.matches; };
+    const preference = () => { const controls = globe.current?.controls(); if (controls) { controls.autoRotate = live.current.rotating && !media.matches; controls.enableDamping = !media.matches; controls.update(); } };
     const visibility = () => { if (!globe.current) return; if (document.hidden) { saveCamera(); globe.current.pauseAnimation(); } else globe.current.resumeAnimation(); };
     const contextLost = (event: Event) => { event.preventDefault(); fail(); };
     Promise.all([import('globe.gl'), import('three'), fetch('/data/roots-world.geojson').then(r => { if (!r.ok) throw Error('World geometry unavailable'); return r.json() as Promise<FeatureCollection>; })]).then(([{ default: Globe }, { MeshPhongMaterial }, world]) => {
@@ -43,8 +43,8 @@ export default function GlobeScene({ ref: handleRef, ...props }: Props) {
         .polygonLabel(o => tooltip(match(o))).polygonsTransitionDuration(0)
         .onPolygonClick(o => { const c = match(o); if (c) { interaction(); live.current.onSelect(c.slug); } })
         .pointsData([...live.current.countries]).pointLat(o => (o as Country).center.lat).pointLng(o => (o as Country).center.lng).pointAltitude(.015).pointRadius(.38)
-        .pointColor(o => (o as Country).slug === live.current.selectedSlug ? '#ffe06a' : '#76dbe3').pointLabel(o => tooltip(o as Country))
-        .onPointClick(o => { interaction(); live.current.onSelect((o as Country).slug); })
+        .pointColor(o => (o as Country).slug === live.current.selectedSlug ? '#ffe06a' : '#76dbe3').pointLabel(o => { const label = document.createElement('span'); label.textContent = nearbyCountries(live.current.countries, o as Country).map(c => c.name[live.current.language]).join(' / '); return label; })
+        .onPointClick(o => { interaction(); live.current.onSelect((o as Country).slug, nearbyCountries(live.current.countries, o as Country).map(c => c.slug)); })
         .onPolygonHover(o => { const c = o ? match(o) : undefined; g.polygonStrokeColor(f => match(f)?.slug === c?.slug && c ? '#ffe06a' : match(f)?.slug === live.current.selectedSlug ? '#ffe06a' : match(f) ? '#76b3bd' : '#3a4b5a'); });
       g.renderer().setPixelRatio(Math.min(devicePixelRatio, 1.5));
       const controls = g.controls(); controls.enablePan = false; controls.minDistance = 165; controls.maxDistance = 400; controls.autoRotate = live.current.rotating && !media.matches; controls.autoRotateSpeed = .22; controls.enableDamping = !media.matches; controls.dampingFactor = .12;
@@ -59,13 +59,13 @@ export default function GlobeScene({ ref: handleRef, ...props }: Props) {
       g.renderer().domElement.addEventListener('webglcontextlost', contextLost);
       resize = new ResizeObserver(() => { if (!disposed) g.width(element.clientWidth).height(element.clientHeight); }); resize.observe(element);
       media.addEventListener('change', preference); document.addEventListener('visibilitychange', visibility);
-      element.dataset.ready = 'true'; live.current.onReady(true);
+      element.dataset.camera = JSON.stringify(g.pointOfView()); element.dataset.ready = 'true'; live.current.onReady(true);
     }).catch(() => { if (!disposed) fail(); });
     return () => {
       disposed = true; resize?.disconnect(); media.removeEventListener('change', preference); document.removeEventListener('visibilitychange', visibility);
       const g = globe.current;
       if (g) { saveCamera(); g.controls().removeEventListener('start', interaction); g.controls().removeEventListener('end', saveCamera); g.renderer().domElement.removeEventListener('webglcontextlost', contextLost); g._destructor(); g.renderer().dispose(); g.renderer().forceContextLoss(); }
-      globe.current = null; element.replaceChildren(); delete element.dataset.ready; live.current.onReady(false);
+      globe.current = null; element.replaceChildren(); delete element.dataset.ready; delete element.dataset.camera; live.current.onReady(false);
     };
   }, []);
   useEffect(() => {
