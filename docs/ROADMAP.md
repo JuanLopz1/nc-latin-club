@@ -112,13 +112,13 @@ Para la entrega de Events, el fundador aprobó conservar el selector EN/ES del p
 **Entregable:** sustituir la ilustración de cuatro países por una experiencia regional completa en `/explore`, con una entrada ligera desde el inicio.
 
 - [ ] Probar primero interacción y rendimiento del globo 3D antes de elegir la librería.
-- [ ] Mostrar únicamente la región acordada: Sudamérica, Centroamérica, Caribe, México y Estados Unidos. Resolver la lista de países y territorios y su encuadre antes de preparar geometrías.
+- [ ] Mostrar el planeta completo, con las Américas destacadas y el resto tenue: aclaración directa del fundador tras revisar el nuevo ZIP. Los 54 países/territorios aportados son los destinos culturales. Resolver geometrías y puntos de territorios pequeños antes de escalar.
 - [ ] Arrastrar o rotar, hacer zoom, seleccionar un país y restablecer la vista.
 - [ ] Abrir un popup con información de ese país y acceso a su página cultural.
 - [ ] Incorporar geometrías reales con licencia compatible y datos culturales revisados.
 - [ ] Ofrecer selector/lista accesible y vista alternativa cuando 3D no esté disponible. Cargar la experiencia pesada cuando se necesite.
 
-**Terminado cuando:** cada país del conjunto acordado se puede seleccionar por toque y teclado, los popups corresponden a la selección, no aparece geografía ajena a la región, y el inicio sigue cargando con rapidez. El mapa representa culturas y países; no ubicaciones de miembros.
+**Terminado cuando:** cada país del conjunto acordado se puede seleccionar por toque y teclado, los popups corresponden a la selección, las Américas tienen protagonismo sin ocultar el contexto del mundo, y el inicio sigue cargando con rapidez. El mapa representa culturas y países; no ubicaciones de miembros.
 
 ### Hito 5 — Portal de administración
 
@@ -248,3 +248,7 @@ Solicitud del fundador del 10 octubre: permitir que el equipo añada, edite, eli
 - Admitir una o más imágenes aprobadas por negocio, con límites de carga, permisos de uso, texto alternativo y retirada desde el portal.
 
 Criterio de entrega futura: un admin crea, corrige, etiqueta y retira una ficha; el público encuentra etiquetas publicadas y no accede a borradores ni acciones editoriales. Depende de elegir y conectar el proveedor de autenticación, datos y almacenamiento del portal.
+
+## Revisión del paquete de Explore Our Roots
+
+El fundador aportó `NC_LATIN_CLUB_CODEX_EXPLORE_OUR_ROOTS_FINAL.zip` como referencia adaptable. [La revisión y propuesta](EXPLORE_ROOTS_REVIEW.md) documenta 54 fichas/portadas, borradores culturales y EN pendiente, ausencia de geometrías/coordenadas, diferencias con la paleta actual y opciones de motor 3D. Se confirmó directamente **todo el planeta visible, con Américas destacadas y el resto tenue**. Primera entrega propuesta: escena y selección con seis destinos, manteniendo los 54 como alcance final. Esta revisión no implementa el globo ni instala dependencias.
