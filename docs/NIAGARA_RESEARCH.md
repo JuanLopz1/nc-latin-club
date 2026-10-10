@@ -26,3 +26,7 @@ No se publicaron JSON editoriales brutos, contactos privados, imágenes de event
 ## Validación de la primera entrega
 
 22/22 pruebas de la suite, ESLint y build Next aprobados. Chromium: 21 fichas, 16 destinos en 15 puntos (La Paisana compartido), selección pin/ficha, CoCo y unidad 4, Escape, cambio ES sin perder selección, búsqueda sin tildes, vacío y anchos 320–1440 sin desbordamiento. `/niagara` HTTP 200 y cuatro enlaces desde el hub. Teselas externas bloqueadas en este entorno: mensaje de fallo probado, pins/directorio/Maps disponibles; disponibilidad real de OSM no verificada aquí. Captura `/workspace/artifacts/nc-niagara-mobile.png`.
+
+Revisión final: detalle ahora contiguo a cada tarjeta, selección anunciada, botones conectados, foco de tarjeta conservado y siguiente Tab entra al panel. Selección desde pin revela/enfoca título; Escape devuelve tarjeta. Regresión Chromium falló antes y pasó después. Arrastre y zoom, reset dentro de redondeo de un píxel, idioma sin recentrado, movimiento reducido y pinch táctil emulado comprobados. No equivale a prueba en dispositivo físico.
+
+Menor pendiente: cuatro fichas repiten su mismo canal comercial en Web y Facebook; deduplicar por URL en una entrega futura.

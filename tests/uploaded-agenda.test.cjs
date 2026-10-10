@@ -46,3 +46,11 @@ test('past festivals archive at runtime; unknown hours stay date-only and cultur
  const heritage=agendaEntries.find(e=>e.slug==='latin-heritage-2026');assert.equal(d.entriesOnDate([heritage],'2026-10-31').length,1);assert.match(heritage.scope.en,/Canada/);
  assert.ok(d.entriesOnDate(agendaEntries.filter(e=>e.category==='latin-dates'),'2027-01-06').some(e=>e.id==='negros-blancos-2026'));
 });
+test('festival with unknown final session end stays upcoming through its inclusive last Niagara day',()=>{
+ const lataff=agendaEntries.find(e=>e.id==='lataff');
+ assert.equal(d.isPast(lataff,new Date('2026-10-25T23:00:00Z')),false);
+ assert.equal(d.isPast(lataff,new Date('2026-10-26T03:59:59Z')),false);
+ assert.equal(d.isPast(lataff,new Date('2026-10-26T04:00:00Z')),true);
+ const known={...festival,sessions:[{startsAt:'2026-07-25T11:00:00-04:00'},{startsAt:'2026-07-26T11:00:00-04:00',endsAt:'2026-07-26T22:00:00-04:00'}]};
+ assert.equal(d.isPast(known,new Date('2026-07-27T01:59:59Z')),false);assert.equal(d.isPast(known,new Date('2026-07-27T02:00:00Z')),true);
+});

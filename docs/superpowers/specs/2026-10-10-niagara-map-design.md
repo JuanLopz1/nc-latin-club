@@ -48,7 +48,7 @@ Si un filtro excluye el lugar seleccionado, se limpia la selección. Cerrar deta
 
 ## Detalles y acciones
 
-Panel integrado con nombre, categorías, ciudad, modalidad, tradición/descripcion documentada y dirección pública completa si existe. Cierre nombrado y Escape; sin trampa de foco. Las acciones son:
+Panel integrado junto a la tarjeta seleccionada con nombre, categorías, ciudad, modalidad, tradición/descripcion documentada y dirección pública completa si existe. Cierre nombrado y Escape; sin trampa de foco. Las acciones son:
 
 - Ver en mapa selecciona el pin dentro del sitio.
 - Llévame ahí / Take me there abre Google Maps Directions con `api=1` y destino compuesto de nombre + dirección completa + unidad. No incluir origen ni Place ID no verificado.
@@ -69,7 +69,7 @@ Si faltan teselas o falla el módulo, mostrar mensaje traducido y mantener direc
 
 ## Accesibilidad y movimiento
 
-Pins y botones con nombres EN/ES, controles táctiles cómodos y foco visible. Lista equivalente accesible por teclado; contador y selección anunciados brevemente. La apertura de un panel no roba foco; al cerrar con su botón se mantiene una ubicación de foco útil.
+Pins y botones con nombres EN/ES, controles táctiles cómodos y foco visible. Lista equivalente accesible por teclado; contador y selección anunciados brevemente. Abrir desde una tarjeta conserva el foco del botón, revela el panel contiguo y conecta ambos con aria-controls. Seleccionar desde un pin revela el detalle y lleva el foco a su título para acceder a sus acciones. Cerrar o Escape devuelve el foco a la tarjeta.
 
 Movimientos de cámara y panel son breves y respetan `prefers-reduced-motion`; no animación continua. No capturar gestos de página fuera del mapa. El teclado permite acceder a una ficha sin operar una superficie cartográfica.
 

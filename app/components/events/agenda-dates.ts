@@ -1,5 +1,5 @@
 import type { Language } from '../home-copy';
-import type { AgendaCategory, AgendaEntry, AgendaState, CalendarDate, CalendarMonth, EventEntry } from './event-types';
+import type { AgendaCategory, AgendaEntry, AgendaState, CalendarDate, CalendarMonth, EventEntry, EventSession } from './event-types';
 export const NIAGARA_ZONE = 'America/Toronto';
 const localDate = new Intl.DateTimeFormat('en-CA', { timeZone: NIAGARA_ZONE, year: 'numeric', month: '2-digit', day: '2-digit' });
 export function validDate(value: string): boolean {
@@ -34,8 +34,10 @@ export function entriesOnDate(entries: readonly AgendaEntry[], date: CalendarDat
 export function isPast(entry: AgendaEntry, now: Date): boolean {
   if (entry.kind === 'cultural-date') return (entry.endDate ?? entry.date) < niagaraDate(now);
   if (entry.dateSpan) {
-    const last = entry.sessions?.reduce((latest, session) => Math.max(latest, Date.parse(session.endsAt ?? session.startsAt)), 0);
-    return last ? last <= now.getTime() : entry.dateSpan.end < niagaraDate(now);
+    const last = entry.sessions?.reduce<EventSession | undefined>((latest, session) => !latest || Date.parse(session.startsAt) > Date.parse(latest.startsAt) ? session : latest, undefined);
+    if (!last?.endsAt) return entry.dateSpan.end < niagaraDate(now);
+    const finalEnd = Math.max(...(entry.sessions ?? []).flatMap(session => session.endsAt ? [Date.parse(session.endsAt)] : []));
+    return finalEnd <= now.getTime();
   }
   return Date.parse(entry.endsAt ?? entry.startsAt) <= now.getTime();
 }

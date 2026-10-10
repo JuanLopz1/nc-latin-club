@@ -38,5 +38,5 @@ Files: researched-events.json, cultural-entries.json, agenda-data.ts, events-cop
 - [x] Commit/push milestone and verify SHA.
 
 ## Final review
-- [ ] One fresh whole-delivery code review as required by executing-plans; fix important findings with red/green tests and full verification.
-- [ ] Save tested environment startup instructions, delivery evidence and push final documentation.
+- [x] One fresh whole-delivery code review as required by executing-plans; fix important findings with red/green tests and full verification.
+- [x] Save tested environment startup instructions, delivery evidence and push final documentation.
