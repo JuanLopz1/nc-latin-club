@@ -1,0 +1,12 @@
+import type { Language } from '../home-copy';
+export type LocalizedText = Record<Language, string>;
+export type CalendarDate = string;
+export type CalendarMonth = string;
+export type AgendaCategory = 'at-nc' | 'out-of-nc' | 'latin-dates';
+export type EntryImage = { src: string; width: number; height: number; alt: LocalizedText; caption?: LocalizedText };
+export type EditorialSource = { url: string; reviewedOn: CalendarDate; provenance: 'user-capture' | 'official-page' };
+type EntryBase = { id: string; slug: string; title: LocalizedText; description: LocalizedText; source: EditorialSource; images?: readonly EntryImage[] };
+export type EventEntry = EntryBase & { kind: 'event'; category: 'at-nc' | 'out-of-nc'; startsAt: string; endsAt?: string; venue: LocalizedText; city?: LocalizedText; organizer: LocalizedText; admission?: LocalizedText; registrationUrl?: string; status: 'scheduled' | 'cancelled' | 'rescheduled'; statusNote?: LocalizedText };
+export type CulturalEntry = EntryBase & { kind: 'cultural-date'; category: 'latin-dates'; date: CalendarDate; scope: LocalizedText };
+export type AgendaEntry = EventEntry | CulturalEntry;
+export type AgendaState = { category: AgendaCategory; view: 'list' | 'calendar'; period: 'upcoming' | 'past'; month: CalendarMonth; selectedDate: CalendarDate };
