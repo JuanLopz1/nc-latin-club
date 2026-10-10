@@ -221,7 +221,7 @@ El orden es una recomendación: la recopilación de fotos, perfiles, eventos y l
 
 El fundador aceptó el inicio nocturno y el diseño y plan de Events. La agenda está implementada con At NC, Out of NC, Fechas latinas, lista/calendario, detalles y galerías opcionales. El [diseño aprobado](superpowers/specs/2026-10-10-events-calendar-design.md), [plan](superpowers/plans/2026-10-10-events-calendar.md) y [QA](EVENTS_QA.md) documentan alcance y comprobaciones.
 
-El siguiente avance propuesto es **Familia y staff**: definir misión e historia, preparar perfiles EN/ES y publicar nombres, cargos y fotografías aprobados. El logo oficial sigue pendiente; Instagram está conectado a @nclat1nclub. La carga de archivos desde el portal admin requiere su propio diseño de permisos y almacenamiento.
+El fundador priorizó ahora **Discover Latin Niagara**: mapa de negocios públicos y directorio con los recursos aportados. El [diseño para revisión](superpowers/specs/2026-10-10-niagara-map-design.md) adapta el paquete al estilo nocturno y separa 16 fichas revisables de pendientes/candidatos. El globo cultural y Familia/staff mantienen sus hitos posteriores. El logo oficial sigue pendiente; Instagram está conectado a @nclat1nclub. La carga de archivos desde el portal admin requiere su propio diseño de permisos y almacenamiento.
 
 El asistente está autorizado a investigar contenido público. [Events Research](EVENTS_RESEARCH.md) registra el nuevo intento y el bloqueo CONNECT 403, que impide verificar entradas regionales y culturales. Latin Fiesta conserva la evidencia aportada por el fundador; no se publicaron datos ficticios para llenar pestañas.
 
