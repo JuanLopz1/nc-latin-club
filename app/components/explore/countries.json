@@ -1,0 +1,176 @@
+[
+  {
+    "slug": "brasil",
+    "iso2": "BR",
+    "name": {
+      "en": "Brazil",
+      "es": "Brasil"
+    },
+    "aliases": [
+      "Brazil",
+      "Brasil",
+      "Seja bem-vindo!"
+    ],
+    "region": "sudamerica",
+    "center": {
+      "lat": -12.098687,
+      "lng": -49.55945
+    },
+    "intro": {
+      "en": "Explore Brazil, in South America. Choose a place on the globe and begin discovering the Americas.",
+      "es": "Explora Brasil, en Sudamérica. Elige un lugar en el globo y comienza a descubrir las Américas."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "colombia",
+    "iso2": "CO",
+    "name": {
+      "en": "Colombia",
+      "es": "Colombia"
+    },
+    "aliases": [
+      "Colombia",
+      "Colombia",
+      "¡Qué más, parce!"
+    ],
+    "region": "sudamerica",
+    "center": {
+      "lat": 3.373111,
+      "lng": -73.174347
+    },
+    "intro": {
+      "en": "Explore Colombia, in South America. Choose a place on the globe and begin discovering the Americas.",
+      "es": "Explora Colombia, en Sudamérica. Elige un lugar en el globo y comienza a descubrir las Américas."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "mexico",
+    "iso2": "MX",
+    "name": {
+      "en": "Mexico",
+      "es": "México"
+    },
+    "aliases": [
+      "Mexico",
+      "México",
+      "¡Qué onda!"
+    ],
+    "region": "norteamerica",
+    "center": {
+      "lat": 23.919988,
+      "lng": -102.289448
+    },
+    "intro": {
+      "en": "Explore Mexico, in North America. Choose a place on the globe and begin discovering the Americas.",
+      "es": "Explora México, en Norteamérica. Elige un lugar en el globo y comienza a descubrir las Américas."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "haiti",
+    "iso2": "HT",
+    "name": {
+      "en": "Haiti",
+      "es": "Haití"
+    },
+    "aliases": [
+      "Haiti",
+      "Haití",
+      "Sak pase!"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 19.263784,
+      "lng": -72.224051
+    },
+    "intro": {
+      "en": "Explore Haiti, in the Caribbean. Choose a place on the globe and begin discovering the Americas.",
+      "es": "Explora Haití, en el Caribe. Elige un lugar en el globo y comienza a descubrir las Américas."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "jamaica",
+    "iso2": "JM",
+    "name": {
+      "en": "Jamaica",
+      "es": "Jamaica"
+    },
+    "aliases": [
+      "Jamaica",
+      "Jamaica",
+      "Wah gwaan!"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 18.137124,
+      "lng": -77.318767
+    },
+    "intro": {
+      "en": "Explore Jamaica, in the Caribbean. Choose a place on the globe and begin discovering the Americas.",
+      "es": "Explora Jamaica, en el Caribe. Elige un lugar en el globo y comienza a descubrir las Américas."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  },
+  {
+    "slug": "curazao",
+    "iso2": "CW",
+    "name": {
+      "en": "Curaçao",
+      "es": "Curazao"
+    },
+    "aliases": [
+      "Curaçao",
+      "Curazao",
+      "Bon bini na Kòrsou!"
+    ],
+    "region": "caribe",
+    "center": {
+      "lat": 12.145039,
+      "lng": -68.920578
+    },
+    "intro": {
+      "en": "Explore Curaçao, in the Caribbean. Choose a place on the globe and begin discovering the Americas.",
+      "es": "Explora Curazao, en el Caribe. Elige un lugar en el globo y comienza a descubrir las Américas."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
+  }
+]

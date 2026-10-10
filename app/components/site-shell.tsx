@@ -17,7 +17,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
     window.addEventListener('keydown', escape); window.addEventListener('popstate', closeOnBack);
     return () => { window.removeEventListener('keydown', escape); window.removeEventListener('popstate', closeOnBack); };
   }, [menuOpen]);
-  const links = ['/#familia', '/events', '/#roots', '/niagara', '/#join'];
+  const links = ['/#familia', '/events', '/explore', '/niagara', '/#join'];
   return <div className={s.site} id="top">
     <a href="#main-content" className={s.skip}>{t.skip}</a>
     <header className={s.header}>

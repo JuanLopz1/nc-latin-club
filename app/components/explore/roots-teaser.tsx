@@ -1,0 +1,8 @@
+import Link from 'next/link';
+import type { Language } from '../home-copy';
+import { exploreCopy } from './explore-copy';
+import s from './explore.module.css';
+export default function RootsTeaser({ language }: { language: Language }) {
+  const t = exploreCopy[language];
+  return <section id="roots" className={s.teaser} aria-labelledby="roots-title"><div><p className={s.eyebrow}>{t.eyebrow}</p><h2 id="roots-title">{t.title[0]}<br /><em>{t.title[1]}</em></h2><p>{t.teaser}</p><Link className={s.action} href="/explore">{t.cta}<span aria-hidden="true">→</span></Link></div><Link href="/explore" className={s.teaserArt} aria-label={t.cta}><svg viewBox="0 0 420 380" fill="none" aria-hidden="true"><defs><radialGradient id="roots-sphere"><stop stopColor="#314b5d"/><stop offset="1" stopColor="#111c2d"/></radialGradient><clipPath id="roots-sphere-clip"><circle cx="210" cy="184" r="155"/></clipPath></defs><circle cx="210" cy="184" r="155" fill="url(#roots-sphere)" stroke="#76dbe3" strokeOpacity=".4"/><g clipPath="url(#roots-sphere-clip)" stroke="#76dbe3" strokeOpacity=".25"><ellipse cx="210" cy="184" rx="92" ry="155"/><ellipse cx="210" cy="184" rx="35" ry="155"/><ellipse cx="210" cy="184" rx="155" ry="65"/><ellipse cx="210" cy="184" rx="155" ry="120"/><path d="M55 184h310M210 29v310"/></g><g stroke="#ffe06a" fill="#ffe06a"><circle cx="142" cy="139" r="4"/><circle cx="168" cy="194" r="4"/><circle cx="213" cy="240" r="4"/><path d="M142 139q7 41 26 55t45 46" strokeDasharray="3 6" fill="none"/></g><path d="M82 71 72 88M329 271l17 11" stroke="#ffe06a"/><text x="210" y="366" textAnchor="middle">EXPLORE OUR ROOTS / NC LATIN CLUB</text></svg></Link></section>;
+}
