@@ -96,7 +96,7 @@ Approved milestones are committed and pushed to `origin/work`; `main` stays unch
 
 ## Latin Niagara directory
 
-`/niagara` contains 21 selected businesses and 16 public destinations at 15 points. CoCo uses the founder-confirmed 155 St Paul Crescent address. La Paisana grocery store and restaurant remain separate with unit-specific Maps destinations and a shared-pin selector. Search covers names, cities, descriptions and documented offerings without accents; city/category/mode filters intersect. Businesses without a public destination retain their cards and documented online channels, without pins or directions.
+`/niagara` contains 21 selected businesses and 16 public destinations at 15 points. cocobar uses the founder-confirmed 155 St Paul Crescent address. La Paisana grocery store and restaurant remain separate with unit-specific Maps destinations and a shared-pin selector. Search covers names, cities, descriptions and documented offerings without accents; city/category/mode filters intersect. Businesses without a public destination retain their cards and documented online channels, without pins or directions.
 
 Curated public data: `app/components/niagara/places.json`. Do not publish raw private editorial records, production/home addresses or inferred owner nationalities. Resolve a public address and reviewed coordinates together before enabling navigation. Pending commercial channels are labelled transparently. [Candidate review](docs/NIAGARA_RESEARCH.md) preserves the ten individual research outcomes and closure concerns.
 

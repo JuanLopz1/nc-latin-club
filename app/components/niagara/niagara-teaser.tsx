@@ -5,7 +5,7 @@ import s from './niagara.module.css';
 export default function NiagaraTeaser({ language }: { language: Language }) {
   const t = niagaraCopy[language];
   const featured = [
-    { id: 'coco-bar-mexican-grill', name: 'CoCo', tag: 'BAR / MEXICAN GRILL', city: 'St. Catharines', symbol: '✺' },
+    { id: 'coco-bar-mexican-grill', name: 'cocobar', tag: 'BAR / MEXICAN GRILL', city: 'St. Catharines', symbol: '✺' },
     { id: 'la-paisana-tienda', name: 'La Paisana', tag: language === 'en' ? 'GROCERIES / RESTAURANT' : 'TIENDA / RESTAURANTE', city: 'Niagara Falls', symbol: '◈' },
     { id: 'origen-bistro-bakery', name: 'Origen', tag: 'BISTRO / BAKERY', city: 'St. Catharines', symbol: '✦' },
   ];

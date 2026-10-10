@@ -35,12 +35,12 @@ const {SiteProvider}=require('../app/components/site-context.tsx');
 test('directory renders all selected businesses and only resolved directions',()=>{
  const Component=load('../app/components/niagara/niagara-directory.tsx').default;assert.equal(typeof Component,'function');
  const html=renderToStaticMarkup(React.createElement(SiteProvider,null,React.createElement(Component,{places})));
- for(const name of ['El Camino','Sombra','La Paisana','CoCo'])assert.ok(html.includes(name));
+ for(const name of ['El Camino','Sombra','La Paisana','cocobar'])assert.ok(html.includes(name));
  assert.ok(html.includes('Search'));assert.ok(html.includes('21'));assert.ok(html.includes('155 St Paul Crescent'));assert.ok(!html.includes('Private kitchen'));
 });
-test('hub highlights CoCo La Paisana and Origen with links to Niagara',()=>{
+test('hub highlights cocobar La Paisana and Origen with links to Niagara',()=>{
  const Component=load('../app/components/niagara/niagara-teaser.tsx').default;assert.equal(typeof Component,'function');
  const html=renderToStaticMarkup(React.createElement(Component,{language:'es'}));
- for(const label of ['Descubre el Niagara latino','CoCo','La Paisana','Origen','Explorar Niagara'])assert.ok(html.includes(label));
+ for(const label of ['Descubre el Niagara latino','cocobar','La Paisana','Origen','Explorar Niagara'])assert.ok(html.includes(label));
  assert.equal((html.match(/href="\/niagara/g)||[]).length,4);
 });
