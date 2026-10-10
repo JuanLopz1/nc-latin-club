@@ -43,12 +43,15 @@ export default function EventsSection({ language }: { language: Language }) {
         <div className={s.cards}>
           {clubEvents.map(event => (
             <article className={s.card} key={event.id} aria-labelledby={`event-${event.id}-title`}>
-              <p className={s.eyebrow}>NC LATIN CLUB</p>
+              <p className={s.eyebrow}>{t.campus}</p>
               <h3 id={`event-${event.id}-title`}>{event.title[language]}</h3>
               <p className={s.body}>{event.description[language]}</p>
               <dl className={s.details}>
                 <div><dt>{t.date}</dt><dd><time dateTime={event.startsAt}>{dateFormat.format(new Date(event.startsAt))}</time></dd></div>
+                {event.endsAt && <div><dt>{t.until}</dt><dd><time dateTime={event.endsAt}>{dateFormat.format(new Date(event.endsAt))}</time></dd></div>}
                 <div><dt>{t.venue}</dt><dd>{event.venue[language]}</dd></div>
+                {event.organizer && <div><dt>{t.organizer}</dt><dd>{event.organizer[language]}</dd></div>}
+                {event.admission && <div><dt>{t.admission}</dt><dd>{event.admission[language]}</dd></div>}
               </dl>
               {event.registrationUrl && <a className={s.joinLink} href={event.registrationUrl} target="_blank" rel="noopener noreferrer" aria-label={`${t.registration}: ${event.title[language]}`}>{t.registration}<ActionArrow /></a>}
             </article>

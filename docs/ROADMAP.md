@@ -20,7 +20,7 @@ Las preferencias posteriores del usuario prevalecen sobre las notas históricas 
 | --- | --- |
 | Inicio | Prototipo con paisaje original, Familia, Eventos, Raíces, Niagara y contacto. |
 | Idiomas | EN por defecto y cambio a ES en el inicio; todavía mediante estado del navegador, sin rutas traducidas ni metadatos por idioma. |
-| Eventos | Sección y tarjetas preparadas; colección vacía y mensaje de próximamente. No existe página de eventos ni calendario. |
+| Eventos | Primera entrada real: Latin Fiesta!, 23–24 de octubre de 2026, The Core, organizada por International; datos y enlace NC Engage aportados por el usuario. No existe página de eventos ni calendario. |
 | Mapa | Ilustración con México, Colombia, Perú y Brasil y diálogos accesibles. No es el mapa/globo regional definitivo. |
 | Contacto | Mailto al correo solicitado con el mensaje de unión prellenado. |
 | Instagram | Falta el perfil oficial; la acción muestra un aviso pendiente. |
@@ -80,6 +80,8 @@ Propuesta de idiomas: inglés en las rutas principales y español con prefijo `/
 
 - [ ] Alternar lista y calendario, avanzar y retroceder meses y volver al mes actual.
 - [ ] Distinguir eventos del club y fechas culturales; una celebración cultural no implica un encuentro organizado por el club.
+- [ ] Incorporar las pestañas solicitadas **At NC** y **Out of NC**: eventos del college y eventos latinos de la región, respectivamente. Conservar el organizador real de cada entrada.
+- [ ] Preparar una selección regional con ciudad, fecha, precio y enlace a la fuente oficial. Niagara es el alcance inicial propuesto; cualquier ampliación se decide antes de buscar contenido. Revisar cada entrada antes de publicar; la lista no promete cobertura exhaustiva ni sincronización automática.
 - [ ] Seleccionar una fecha para ver sus entradas; fechas sin entradas muestran un estado claro.
 - [ ] Mostrar próximos y pasados, lugar, horario, descripción y enlace de inscripción confirmado cuando exista.
 - [ ] Reflejar cancelaciones o reprogramaciones sin conservar datos contradictorios.
@@ -202,7 +204,7 @@ El orden es una recomendación: la recopilación de fotos, perfiles, eventos y l
 | Necesario | Cuándo afecta al trabajo |
 | --- | --- |
 | Archivo del logo y enlace/@ oficial de Instagram | Identidad final y acciones sociales; la base puede avanzar mientras faltan. |
-| Primer evento confirmado: fecha, lugar, descripción e inscripción | Publicar contenido real del calendario; se puede construir con casos locales de verificación. |
+| Próximos eventos confirmados y fuentes regionales | Latin Fiesta! ya fue aportado y publicado en el inicio. Faltan entradas verificadas para Out of NC y el calendario cultural. |
 | Nombres, cargos, biografías y fotos aprobados del staff | Publicar perfiles reales. |
 | Países/territorios del mapa y primeras fuentes culturales | Cerrar el alcance del mapa y sus páginas. |
 | Lugares y enlaces verificados de Niagara | Publicar el directorio. |
