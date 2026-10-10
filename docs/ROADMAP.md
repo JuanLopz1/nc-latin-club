@@ -21,7 +21,7 @@ Las preferencias posteriores del usuario prevalecen sobre las notas históricas 
 | Inicio | Prototipo nocturno aprobado, Familia, Eventos enlazados a la agenda, Raíces, Niagara y contacto. |
 | Idiomas | EN por defecto; idioma compartido entre inicio, agenda y detalle. Una recarga vuelve a EN; sin rutas traducidas ni metadatos por idioma. |
 | Eventos | Primera entrada real: Latin Fiesta!, 23–24 de octubre de 2026, The Core, organizada por International; datos y enlace NC Engage aportados por el usuario. `/events`, calendario de seis semanas, detalles y galerías opcionales implementados. Out of NC y Fechas latinas esperan contenido verificado. |
-| Mapa | `/explore`: globo 3D del planeta, Américas destacadas, 54 destinos con búsqueda/lista, controles visibles y EN/ES. Cuatro introducciones culturales; perfiles completos pendientes. |
+| Mapa | `/explore`: globo 3D del planeta, Américas destacadas, 54 destinos con búsqueda/lista, opciones desplegables y EN/ES. Cuatro introducciones culturales; perfiles completos pendientes. |
 | Contacto | Mailto al correo solicitado con el mensaje de unión prellenado. |
 | Instagram | Perfil oficial `https://www.instagram.com/nclat1nclub/`, aportado por el fundador y conectado en inicio/contacto. |
 | Identidad | El logo oficial existe según el usuario, pero no está incorporado al repositorio. |
@@ -113,7 +113,7 @@ Para la entrega de Events, el fundador aprobó conservar el selector EN/ES del p
 
 - [x] Prototipo de seis destinos comprobado con globe.gl y Three.js; carga pesada aislada de la entrada del hub.
 - [x] Mostrar el planeta completo, con las Américas destacadas y el resto tenue: aclaración directa del fundador tras revisar el nuevo ZIP. Los 54 países/territorios aportados son los destinos culturales. Resolver geometrías y puntos de territorios pequeños antes de escalar.
-- [x] Arrastrar o rotar, hacer zoom, seleccionar un país y restablecer la vista; giro optativo y controles móviles visibles.
+- [x] Arrastrar o rotar, hacer zoom, seleccionar un país y restablecer la vista; giro visible de entrada que se detiene al tocarlo, reinicio optativo y controles móviles dentro de Opciones del mapa.
 - [x] Abrir una única vista previa por selección; acceso cultural para Brasil, Colombia, México y Jamaica.
 - [ ] Completar por lotes los perfiles culturales de los 54 destinos; las cuatro páginas actuales son introducciones limitadas.
 - [x] Incorporar geometrías reales de dominio público (Natural Earth) para los 54 destinos, incluidos territorios pequeños.
@@ -258,3 +258,7 @@ El fundador aportó `NC_LATIN_CLUB_CODEX_EXPLORE_OUR_ROOTS_FINAL.zip` como refer
 ## Implementación de Explore Our Roots
 
 El fundador aprobó la implementación sin otra ronda de propuesta. El [registro de entrega](EXPLORE_ROOTS_DELIVERY.md) y la [revisión de contenido](EXPLORE_ROOTS_CONTENT_REVIEW.md) distinguen el globo/directorio de 54 destinos, las cuatro introducciones culturales y los perfiles/medios aún pendientes. El hito inicial de seis destinos se envió en `c6df33d`; el resto del alcance cultural continúa abierto. Niagara, eventos y calendario conservan sus funciones y pendientes propios.
+
+### Ajuste de presentación del globo — 10 octubre 2026
+
+Preferencia actual del fundador: giro visible al entrar, pausa al tocar el globo o seleccionar destino, y opciones desplegables cerradas por defecto. Sustituye la instrucción anterior de zoom/restablecer siempre expuestos. Las opciones conservan acceso por teclado y móvil; movimiento reducido mantiene el mundo quieto. El alcance de 54 destinos y los perfiles culturales pendientes se conserva.

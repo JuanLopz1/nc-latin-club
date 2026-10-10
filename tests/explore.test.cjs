@@ -45,3 +45,12 @@ test('overlapping island markers offer explicit choices without silently choosin
  assert.equal(utils.nearbyCountries(data.prototypeCountries,data.countries.find(c=>c.slug==='jamaica')).length,1);
  assert.equal(utils.nearbyCountries([],saba).length,0);
 });
+test('first visit starts the globe presentation in rotation mode',()=>{
+ const state=utils.initialExploreState();assert.equal(state.rotating,true);assert.equal(state.selectedSlug,null);
+});
+test('first view keeps map tools collapsed while search and all destinations remain accessible',()=>{
+ const React=require('react'),{renderToStaticMarkup}=require('react-dom/server');
+ const {SiteProvider}=require('../app/components/site-context.tsx');const Explore=require('../app/components/explore/explore-experience.tsx').default;
+ const html=renderToStaticMarkup(React.createElement(SiteProvider,null,React.createElement(Explore,{countries:data.countries})));
+ assert.match(html,/data-tools-trigger[^>]*aria-expanded="false"/);assert.ok(!html.includes('data-tools-panel'));assert.ok(!html.includes('data-region="all"'));assert.ok(!html.includes('data-zoom="in"'));assert.ok(html.includes('type="search"'));assert.equal((html.match(/data-country=/g)||[]).length,54);
+});

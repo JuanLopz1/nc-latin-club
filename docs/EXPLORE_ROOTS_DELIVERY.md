@@ -1,5 +1,7 @@
 # Explore Our Roots — delivery record
 
+This records successive deliveries. The latest presentation adjustment below supersedes the earlier stationary default and permanently visible controls.
+
 ## Milestone 1: functional prototype
 
 `/explore` and the hub invitation use the existing night palette. A real 3D globe renders the whole planet, highlights the Americas, and supports six initial destinations: Colombia, Brazil, Mexico, Jamaica, Haiti and Curaçao. Search, independent region toggles and the list also select destinations. Zoom/reset remain visible at 320px; rotation is off until the visitor chooses it. Reduced motion disables rotation and camera tweens. The global English/Spanish selector translates the interface and geographic previews.
@@ -45,3 +47,15 @@ This supplements `npm test`, `npm run lint` and `npm run build`; screenshots can
 Final batch verification: 46/46 native Node tests; ESLint and production build pass. Chromium/CDP passes real canvas selection, explicit choice for overlapping Saba/Sint Eustatius/Saint Martin/Sint Maarten/Saint Barthélemy marker areas, preview focus/Escape return, widths 320–1440, visitor-controlled rotation, reduced motion, locale changes on a cultural page, camera/selection restoration, canvas disposal, and search/list selection with WebGL disabled. HTTP checks confirm the hub, Niagara, events, all four introductions and local geometry respond. Physical-device performance and assistive-technology testing remain pending.
 
 A fresh reviewer identified overlapping island targets and keyboard focus remaining in the offscreen list. Both were reproduced and fixed; the final browser checks cover the corrected flows. Source authenticity beyond the supplied excerpts remains unverified under the current network restrictions.
+
+## Presentation adjustment — 10 October 2026
+
+The founder chose visible rotation on arrival, stopping when the visitor touches the globe or chooses a destination. Initial rotation now runs at globe.gl/OrbitControls speed 0.8; reduced-motion users get a stationary scene. After interaction, only an explicit Rotate action restarts it. Automatic rotation uses no damping inertia, so pausing does not leave a residual spin; manual navigation retains damping when reduced motion is off. Camera and rotation preference still survive internal navigation.
+
+A single bilingual Map options / Opciones del mapa disclosure replaces the always-visible zoom/reset/rotation and region buttons. It starts closed on desktop and mobile. Search, destination count and all 54 list entries stay accessible. The panel supports keyboard activation, Escape/focus return, outside dismissal, 44px controls and scrolling at narrow widths. Choosing a destination closes it so it does not stack over the destination preview. Subtle night lighting and an arrival fade give the globe more presence; the hub entry and geography are retained.
+
+No cultural content or music is added in this adjustment. The four limited introductions and the remaining cultural work retain their previous status.
+
+Verification for this adjustment: 48/48 Node tests, ESLint and production build pass. Chromium checks verify visible initial rotation, stopping on touch, keyboard disclosure/close/focus return, zoom, EN/ES, region combinations, widths 320/375/768/1440 with 44px controls, small-island selection, camera preservation, canvas disposal and WebGL fallback. Desktop and mobile screenshots were inspected.
+
+The broad browser run had one synchronization failure: it inspected the reduced-motion controls immediately after changing the browser media preference, before React applied the change. The test now waits for that applied state. A focused browser rerun passes dynamic reduced-motion changes, a stationary real camera, first arrival with reduced motion already enabled and no runtime exceptions. The other passing cases were not repeated after this test-only correction. Physical-device/assistive-technology review and the cultural content expansion remain pending.

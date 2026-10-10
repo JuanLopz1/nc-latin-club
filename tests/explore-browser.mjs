@@ -10,16 +10,30 @@ const pause=ms=>new Promise(r=>setTimeout(r,ms));
 const check=(name,ok)=>{console.log(name,ok);if(!ok)failures.push(name);};
 async function wait(expr){for(let i=0;i<200;i++){if(await evaluate(expr))return;await pause(75);}throw Error(expr);}
 async function click(sel){await evaluate(`document.querySelector(${JSON.stringify(sel)}).click()`);await pause(150);}
-async function key(key,code){await send('Input.dispatchKeyEvent',{type:'keyDown',key,code,windowsVirtualKeyCode:key==='Escape'?27:9});await send('Input.dispatchKeyEvent',{type:'keyUp',key,code,windowsVirtualKeyCode:key==='Escape'?27:9});}
+async function key(key,code){await send('Input.dispatchKeyEvent',{type:'keyDown',key,code,text:key==='Enter'?'\r':undefined,windowsVirtualKeyCode:key==='Escape'?27:key==='Enter'?13:9});await send('Input.dispatchKeyEvent',{type:'keyUp',key,code,windowsVirtualKeyCode:key==='Escape'?27:key==='Enter'?13:9});}
+async function openTools(){if(!await evaluate('!!document.querySelector("[data-tools-panel]")'))await click('[data-tools-trigger]');}
 async function viewport(width){await send('Emulation.setDeviceMetricsOverride',{width,height:920,deviceScaleFactor:1,mobile:true});}
 try {
- await send('Page.enable');await send('Runtime.enable');await viewport(375);
+ await send('Page.enable');await send('Page.bringToFront');await send('Emulation.setFocusEmulationEnabled',{enabled:true});await send('Runtime.enable');await send('Emulation.setTouchEmulationEnabled',{enabled:true,maxTouchPoints:1});await viewport(375);
  await send('Page.navigate',{url:base+'/explore'});await wait('!!document.querySelector("[data-globe-scene][data-ready=true]")');
  check('real WebGL globe rendered',await evaluate('!!document.querySelector("[data-globe-scene] canvas") && document.querySelector("[data-globe-scene] canvas").width>0'));
  const count=Number(process.env.EXPECT_DESTINATIONS || 6);
  check('destination list covers this milestone',await evaluate(`document.querySelectorAll('[data-country]').length===${count}`));
- const start=await evaluate('document.querySelector("[data-globe-scene]").dataset.camera');await pause(1800);
- check('globe remains still and rotation is opt-in',await evaluate(`document.querySelector('[data-rotate]').getAttribute('aria-pressed')==='false' && document.querySelector('[data-globe-scene]').dataset.camera===${JSON.stringify(start)}`));
+ check('controls are collapsed on arrival',await evaluate('document.querySelector("[data-tools-trigger]").getAttribute("aria-expanded")==="false" && !document.querySelector("[data-region=all]") && !document.querySelector("[data-zoom]")'));
+ const arrival=await evaluate('JSON.parse(document.querySelector("[data-globe-scene]").dataset.camera)');await pause(1800);
+ check('presentation rotation is visibly active on arrival',await evaluate(`Math.abs(JSON.parse(document.querySelector('[data-globe-scene]').dataset.camera).lng-(${arrival.lng}))>.5`));
+ await evaluate('document.querySelector("[data-globe-scene]").scrollIntoView({block:"center",behavior:"instant"})');
+ await pause(200);
+ const touch=await evaluate('(()=>{const r=document.querySelector("[data-globe-scene] canvas").getBoundingClientRect();return{x:r.left+r.width/2,y:r.top+r.height/2}})()');
+ await send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{...touch,radiusX:1,radiusY:1}]});
+ await pause(150);await send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await pause(1800);
+ const touched=await evaluate('JSON.parse(document.querySelector("[data-globe-scene]").dataset.camera)');await pause(1000);
+ check('touching the globe stops its initial rotation',await evaluate(`Math.abs(JSON.parse(document.querySelector('[data-globe-scene]').dataset.camera).lng-(${touched.lng}))<.5`));
+ await evaluate('document.querySelector("[data-tools-trigger]").focus()');await key('Enter','Enter');await pause(150);
+ check('map options opens with keyboard',await evaluate('!!document.querySelector("[data-tools-panel]") && document.querySelector("[data-tools-trigger]").getAttribute("aria-expanded")==="true"'));
+ await key('Tab','Tab');check('keyboard reaches the panel close button',await evaluate('document.activeElement.getAttribute("aria-label")==="Close map options"'));
+ await pause(700);const start=await evaluate('document.querySelector("[data-globe-scene]").dataset.camera');await pause(1000);
+ check('interaction pauses the presentation',await evaluate(`document.querySelector('[data-rotate]').getAttribute('aria-pressed')==='false' && Math.abs(JSON.parse(document.querySelector('[data-globe-scene]').dataset.camera).lng-(${JSON.parse(start).lng}))<.5`));
  await click('[aria-label="Zoom in"]');await wait(`JSON.parse(document.querySelector('[data-globe-scene]').dataset.camera).altitude<${JSON.parse(start).altitude}`);const zoomed=await evaluate('JSON.parse(document.querySelector("[data-globe-scene]").dataset.camera).altitude');
  check('visible zoom controls change real camera',zoomed<JSON.parse(start).altitude);
  await click('[data-reset]');await pause(500);
@@ -27,19 +41,23 @@ try {
  check('list activation moves keyboard focus into the selected preview',await evaluate('document.activeElement.id==="selected-country-title"'));
  check('small island is selectable and camera focuses it',await evaluate('document.querySelector("[data-selected-country] h2").textContent==="Curaçao" && Math.abs(JSON.parse(document.querySelector("[data-globe-scene]").dataset.camera).lng+68.9)<1'));
  await evaluate('[...document.querySelectorAll("footer button")].find(b=>b.textContent==="Español").click()');await pause(150);
- check('global language translates UI and content while retaining destination',await evaluate('document.querySelector("[data-selected-country=curazao] h2").textContent==="Curazao" && document.querySelector("main input").placeholder.includes("Prueba") && document.querySelector("[data-rotate]").getAttribute("aria-pressed")==="false"'));
+ check('global language translates UI and content while retaining destination',await evaluate('document.querySelector("[data-selected-country=curazao] h2").textContent==="Curazao" && document.querySelector("main input").placeholder.includes("Prueba") && document.querySelector("[data-tools-trigger]").textContent.includes("Opciones")'));
  await key('Escape','Escape');check('Escape closes panel and restores destination focus',await evaluate('!document.querySelector("[data-selected-country]") && document.activeElement.dataset.country==="curazao"'));
  await evaluate('[...document.querySelectorAll("footer button")].find(b=>b.textContent==="English").click()');await pause(100);
- await click('[data-region=none]');check('empty region selection has no hidden reset',await evaluate('document.querySelectorAll("[data-country]").length===0'));
+ await openTools();await click('[data-region=none]');check('empty region selection has no hidden reset',await evaluate('document.querySelectorAll("[data-country]").length===0'));
  await click('[data-region=sudamerica]');await click('[data-region=norteamerica]');check('multiple regions combine',await evaluate('!!document.querySelector("[data-country=brasil]") && !!document.querySelector("[data-country=mexico]") && !document.querySelector("[data-country=jamaica]")'));
  await click('[data-region=all]');
- for(const width of [320,375,768,1440]){await viewport(width);await pause(80);check('responsive explorer width '+width,await evaluate('document.documentElement.scrollWidth<=innerWidth && [...document.querySelectorAll("button[data-reset],button[data-zoom]")].every(b=>{const r=b.getBoundingClientRect();return r.width>=44 && r.height>=44 && r.left>=0 && r.right<=innerWidth})'));}
+ for(const width of [320,375,768,1440]){await viewport(width);await pause(80);check('responsive explorer width '+width,await evaluate('document.documentElement.scrollWidth<=innerWidth && [...document.querySelectorAll("button[data-reset],button[data-zoom]")].every(b=>{const r=b.getBoundingClientRect();return r.width>=44 && r.height>=44 && r.left>=0 && r.right<=innerWidth})'));if(process.env.ARTIFACT_DIR && width===375){await evaluate('document.querySelector("[data-globe-scene]").scrollIntoView({block:"center",behavior:"instant"})');await fs.mkdir(process.env.ARTIFACT_DIR,{recursive:true});const shot=await send('Page.captureScreenshot',{format:'png'});await fs.writeFile(process.env.ARTIFACT_DIR+'/roots-tools-mobile.png',Buffer.from(shot.data,'base64'));}}
  await viewport(1440);
  if(count===54){await evaluate('document.querySelector("[data-country=bermudas]").scrollIntoView({block:"center",behavior:"instant"})');await click('[data-country=bermudas]');await wait('(()=>{const r=document.querySelector("[data-selected-country]").getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight})()');check('last list destination brings its preview into view',true);await key('Escape','Escape');}
  await click('[data-country=colombia]');await pause(600);await evaluate('document.querySelector("[data-globe-scene]").scrollIntoView({block:"center",behavior:"instant"})');
  if(process.env.ARTIFACT_DIR){await fs.mkdir(process.env.ARTIFACT_DIR,{recursive:true});const r=await send('Page.captureScreenshot',{format:'png'});await fs.writeFile(process.env.ARTIFACT_DIR+'/roots-globe-desktop.png',Buffer.from(r.data,'base64'));}
- await click('[aria-label="Close place details"]');await click('[data-rotate]');await pause(250);check('visitor can start rotation',await evaluate('document.querySelector("[data-rotate]").getAttribute("aria-pressed")==="true"'));
- await click('[data-rotate]');await send('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]});
+ await click('[aria-label="Close place details"]');await openTools();await click('[data-rotate]');await pause(250);check('visitor can start rotation',await evaluate('document.querySelector("[data-rotate]").getAttribute("aria-pressed")==="true"'));
+ await key('Escape','Escape');check('Escape collapses tools and restores its trigger focus',await evaluate('!document.querySelector("[data-tools-panel]") && document.activeElement.hasAttribute("data-tools-trigger")'));
+ await openTools();
+ await send('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]});
+ await wait('document.querySelector("[data-rotate]").disabled && document.querySelector("[data-rotate]").getAttribute("aria-pressed")==="false"');
+ check('reduced motion disables automatic rotation controls',await evaluate('document.querySelector("[data-rotate]").disabled && document.querySelector("[data-rotate]").getAttribute("aria-pressed")==="false"'));
  await click('[data-reset]');check('reduced motion settles without a camera tween',await evaluate('new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve(Math.abs(JSON.parse(document.querySelector("[data-globe-scene]").dataset.camera).altitude-2.15)<.02))))'));
  if(count===54){
   for(const slug of ['saba','san-martin-frances','sint-maarten']){
@@ -66,7 +84,7 @@ try {
  await wait('!document.querySelector("[data-globe-scene] canvas")');check('scene releases its canvas on navigation',await evaluate('!document.querySelector("[data-globe-scene] canvas")'));
  await send('Page.addScriptToEvaluateOnNewDocument',{source:`const rootsGetContext=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(type,...args){return /webgl/i.test(type)?null:rootsGetContext.call(this,type,...args);};`});
  await send('Page.navigate',{url:base+'/explore'});await wait('!!document.querySelector("[role=status]") && [...document.querySelectorAll("[role=status]")].some(el=>el.textContent.includes("3D globe is unavailable"))');
- check('WebGL failure keeps the full list and visible disabled zoom controls',await evaluate(`document.querySelectorAll('[data-country]').length===${count} && document.querySelector('[data-zoom]').disabled && !!document.querySelector('[data-reset]')`));
+ await openTools();check('WebGL failure keeps the full list and accessible disabled zoom controls',await evaluate(`document.querySelectorAll('[data-country]').length===${count} && document.querySelector('[data-zoom]').disabled && !!document.querySelector('[data-reset]')`));
  await evaluate('document.querySelector("main input").focus()');await send('Input.insertText',{text:count===54?'Saba':'Curaçao'});await wait('document.querySelectorAll("[data-country]").length===1');
  await click(count===54?'[data-country=saba]':'[data-country=curazao]');
  check('search and selection work without WebGL',await evaluate('!!document.querySelector("[data-selected-country]")'));
