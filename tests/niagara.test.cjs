@@ -17,9 +17,9 @@ test('order-only businesses cannot acquire directions even with accidental addre
 });
 test('search ignores accents and filters intersect categories city and mode',()=>{
  assert.equal(typeof u.filterPlaces,'function');
- assert.ok(u.filterPlaces(places,{query:'pao DE QUEIJO',city:'',category:'',mode:''}).some(p=>p.id==='paz-bakery'));
- assert.deepEqual(u.filterPlaces(places,{query:'paisana',city:'Niagara Falls',category:'grocery_store',mode:'storefront'}).map(p=>p.id),['la-paisana-tienda']);
- assert.equal(u.filterPlaces(places,{query:'no such shop',city:'',category:'',mode:''}).length,0);
+ assert.ok(u.filterPlaces(places,{...u.initialPlaceFilters(places),query:'pao DE QUEIJO'}).some(p=>p.id==='paz-bakery'));
+ assert.deepEqual(u.filterPlaces(places,{query:'paisana',city:['Niagara Falls'],category:['grocery_store'],mode:['storefront']}).map(p=>p.id),['la-paisana-tienda']);
+ assert.equal(u.filterPlaces(places,{...u.initialPlaceFilters(places),query:'no such shop'}).length,0);
 });
 test('overlapping pins retain distinct La Paisana units in directions',()=>{
  assert.equal(typeof u.markerGroups,'function');
@@ -43,4 +43,27 @@ test('hub highlights cocobar La Paisana and Origen with links to Niagara',()=>{
  const html=renderToStaticMarkup(React.createElement(Component,{language:'es'}));
  for(const label of ['Descubre el Niagara latino','cocobar','La Paisana','Origen','Explorar Niagara'])assert.ok(html.includes(label));
  assert.equal((html.match(/href="\/niagara/g)||[]).length,4);
+});
+test('directory starts with every option and supports OR within filters and AND across filters',()=>{
+ const all=u.initialPlaceFilters(places);
+ assert.equal(u.filterPlaces(places,all).length,places.length);
+ const both={...all,query:'paisana',category:['grocery_store','restaurant']};
+ assert.deepEqual(u.filterPlaces(places,both).map(p=>p.id),['la-paisana-tienda','la-paisana-restaurante']);
+ assert.equal(u.filterPlaces(places,{...both,city:['Welland']}).length,0);
+ for(const key of ['city','category','mode'])assert.equal(u.filterPlaces(places,{...all,[key]:[]}).length,0,key);
+ const cities={...all,city:['Welland','Niagara Falls']};
+ assert.ok(u.filterPlaces(places,cities).every(p=>cities.city.includes(p.city)));
+});
+test('expanded spot has one heading description address and set of actions',()=>{
+ const Component=load('../app/components/niagara/place-card.tsx').default;
+ assert.equal(typeof Component,'function');
+ const place=places.find(p=>p.id==='coco-bar-mexican-grill');
+ const html=renderToStaticMarkup(React.createElement(Component,{place,index:0,language:'en',expanded:true,onToggle:()=>{},registerButton:()=>{}}));
+ assert.equal((html.match(/<article/g)||[]).length,1);
+ assert.equal((html.match(/<h2/g)||[]).length,1);
+ assert.equal(html.split(place.description.en).length-1,1);
+ assert.equal((html.match(/>Take me there/g)||[]).length,1);
+ assert.ok(html.includes('aria-expanded="true"'));
+ assert.ok(html.includes('detail-coco-bar-mexican-grill'));
+ assert.ok(html.includes('Research supplied'));
 });

@@ -42,7 +42,7 @@ Un único `selectedPlaceId` sincroniza tarjeta, pin y detalle. Pulsar un pin sel
 
 Pan con mouse/tacto, zoom por botones y pinch táctil. Rueda de mouse desactivada para conservar scroll de página. Ver Niagara ajusta el encuadre a los pins publicados; no pide ubicación del visitante. Mover el mapa no altera resultados.
 
-Búsqueda insensible a tildes/mayúsculas sobre nombre, ciudad, descripción cultural y oferta acreditada. Filtros por ciudad, categoría y modalidad; categorías disponibles derivadas de fichas públicas. Todos y Limpiar filtros recuperan resultados. Se muestran por separado cantidad de fichas y cantidad de pins.
+Búsqueda insensible a tildes/mayúsculas sobre nombre, ciudad, descripción cultural y oferta acreditada. Filtros por ciudad, categoría y modalidad; categorías disponibles derivadas de fichas públicas. Cada filtro empieza con todas sus opciones y permite seleccionar o deseleccionar varias. Las opciones se combinan dentro de cada grupo y los grupos se intersectan. Una selección vacía muestra cero fichas; Todos y Limpiar filtros recuperan resultados. Se muestran por separado cantidad de fichas y cantidad de pins.
 
 Si un filtro excluye el lugar seleccionado, se limpia la selección. Cerrar detalle conserva filtros. Marcadores coincidentes se agrupan con selector de lugares, sin desplazar coordenadas para inventar separación. La lista ofrece las mismas acciones que el mapa y permanece utilizable sin éste.
 
@@ -69,7 +69,7 @@ Si faltan teselas o falla el módulo, mostrar mensaje traducido y mantener direc
 
 ## Accesibilidad y movimiento
 
-Pins y botones con nombres EN/ES, controles táctiles cómodos y foco visible. Lista equivalente accesible por teclado; contador y selección anunciados brevemente. Abrir desde una tarjeta conserva el foco del botón, revela el panel contiguo y conecta ambos con aria-controls. Seleccionar desde un pin revela el detalle y lleva el foco a su título para acceder a sus acciones. Cerrar o Escape devuelve el foco a la tarjeta.
+Pins y botones con nombres EN/ES, controles táctiles cómodos y foco visible. Lista equivalente accesible por teclado; contador y selección anunciados brevemente. Abrir desde una tarjeta conserva el foco del botón, expande los detalles dentro de la misma ficha y conecta el botón con su región mediante aria-controls, sin repetir título, descripción ni acciones. Seleccionar desde un pin expande esa misma ficha y lleva el foco a su título para acceder a sus acciones. Cerrar o Escape devuelve el foco a la tarjeta.
 
 Movimientos de cámara y panel son breves y respetan `prefers-reduced-motion`; no animación continua. No capturar gestos de página fuera del mapa. El teclado permite acceder a una ficha sin operar una superficie cartográfica.
 

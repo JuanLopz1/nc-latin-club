@@ -236,3 +236,15 @@ Cada hito completado incluye una revisión apropiada al cambio, commit y push a 
 - Calendario cultural: 225 ocurrencias de 2026/2027, rangos y temporadas inclusivos.
 - Pendientes concretos: canales/destinos de seleccionados todavía no documentados, candidatos con señales de cierre, permisos de imágenes y verificación de proveedor de mapas desde una red habilitada.
 - Próximos productos separados: globo de países, staff/fototeca/news/minijuegos, portal admin autenticado y cargas de imágenes.
+
+### Niagara admin y etiquetas — alcance futuro
+
+Solicitud del fundador del 10 octubre: permitir que el equipo añada, edite, elimine y etiquete negocios desde el portal. Este hito cambia la experiencia pública; no activa todavía cuentas, backend ni edición administrativa.
+
+- Crear y editar nombre, descripción EN/ES, categorías, ciudad, modalidad, canales, fuentes, imágenes aprobadas y destino público. La Paisana tienda/restaurante siguen como registros separados.
+- Gestionar etiquetas cortas con o sin `#` al introducirlas; normalizar espacios, tildes y mayúsculas, evitar duplicados y permitir búsqueda por etiquetas además de nombre/oferta. Las etiquetas deben describir oferta documentada; no deducir nacionalidad de propietarios.
+- Permitir borradores, vista previa y publicación. Archivar/retirar una ficha de la vista pública, con recuperación y registro de cambios, antes de contemplar borrado definitivo. Una señal de cierre necesita revisión antes de publicarla como activa.
+- Validar permisos Admin/Editor en el servidor y conservar revisión/fuentes. Un cambio de dirección exige revisar coordenadas; solo un destino público resuelto habilita pin y navegación. Los negocios por encargo mantienen contacto sin dirección privada.
+- Admitir una o más imágenes aprobadas por negocio, con límites de carga, permisos de uso, texto alternativo y retirada desde el portal.
+
+Criterio de entrega futura: un admin crea, corrige, etiqueta y retira una ficha; el público encuentra etiquetas publicadas y no accede a borradores ni acciones editoriales. Depende de elegir y conectar el proveedor de autenticación, datos y almacenamiento del portal.

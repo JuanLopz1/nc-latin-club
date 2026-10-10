@@ -1,6 +1,7 @@
 export const eventsCopy = {
   en: {
     eyebrow: 'THE LATIN AGENDA', title: ['Make plans.', 'Make memories.'], body: 'Campus connections. Local discoveries. Dates that bring our cultures to life. Find your next moment here.',
+    all: 'All', none: 'Deselect all', filterHint: 'Combine categories to find your next moment.', noCategories: 'Choose at least one category.', noMatches: 'No activities match these filters.', monthObservances: 'This month', wholeMonth: 'All month',
     categories: { 'at-nc': 'At NC', 'out-of-nc': 'Out of NC', 'latin-dates': 'Latin dates' },
     intros: { 'at-nc': 'Meet up, dance and connect through events at Niagara College.', 'out-of-nc': 'Discover Latin music, culture and community in Niagara, with selected festivals in Burlington and Toronto.', 'latin-dates': 'Celebrations and traditions from across Latin America. Cultural dates, each with its own story.' },
     emptyTitles: { 'at-nc': 'The next gathering is on its way.', 'out-of-nc': 'More Latin Niagara is on the way.', 'latin-dates': 'Our cultural calendar is growing.' },
@@ -11,6 +12,7 @@ export const eventsCopy = {
   },
   es: {
     eyebrow: 'LA AGENDA LATINA', title: ['Haz planes.', 'Crea recuerdos.'], body: 'Encuentros en el campus. Descubrimientos locales. Fechas que dan vida a nuestras culturas. Encuentra aquí tu próximo momento.',
+    all: 'Todos', none: 'Deseleccionar todos', filterHint: 'Combina categorías para encontrar tu próximo plan.', noCategories: 'Selecciona al menos una categoría.', noMatches: 'No hay actividades con estos filtros.', monthObservances: 'Este mes', wholeMonth: 'Todo el mes',
     categories: { 'at-nc': 'En NC', 'out-of-nc': 'Fuera de NC', 'latin-dates': 'Fechas latinas' },
     intros: { 'at-nc': 'Encuéntrate, baila y conecta a través de los eventos de Niagara College.', 'out-of-nc': 'Descubre música, cultura y comunidad latina en Niagara, con festivales seleccionados en Burlington y Toronto.', 'latin-dates': 'Celebraciones y tradiciones de Latinoamérica. Fechas culturales, cada una con su propia historia.' },
     emptyTitles: { 'at-nc': 'El próximo encuentro está en camino.', 'out-of-nc': 'Pronto, más Niagara latino.', 'latin-dates': 'Nuestro calendario cultural está creciendo.' },

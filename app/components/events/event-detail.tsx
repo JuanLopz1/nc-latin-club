@@ -15,7 +15,7 @@ export default function EventDetail({ entry }: { entry: AgendaEntry }) {
   const { language } = useSiteLanguage(), { state, setState } = useAgendaState(), now = useAgendaClock();
   const t = eventsCopy[language], date = entryDate(entry);
   return <main id="main-content" tabIndex={-1} className={s.detail}>
-    <Link className={s.back} href="/events" onClick={() => { if (!state) setState(initialAgendaState(now ?? new Date(), entry.category)); }}><span aria-hidden="true">←</span>{t.back}</Link>
+    <Link className={s.back} href="/events" onClick={() => { if (!state) setState(initialAgendaState(now ?? new Date())); }}><span aria-hidden="true">←</span>{t.back}</Link>
     <div className={s.heading}><p className={s.eyebrow}>{t.categories[entry.category]}</p><h1>{entry.title[language]}</h1><p className={s.description}>{entry.description[language]}</p></div>
     <div className={s.layout}>
       <div className={s.media}>
@@ -35,7 +35,7 @@ export default function EventDetail({ entry }: { entry: AgendaEntry }) {
             <div><dt>{t.where}</dt><dd>{[entry.venue[language], entry.city?.[language]].filter(Boolean).join(' · ')}{entry.address && <p>{entry.address}</p>}</dd></div>
             <div><dt>{t.organizer}</dt><dd>{entry.organizer[language]}</dd></div>
             {entry.admission && <div><dt>{t.admission}</dt><dd>{entry.admission[language]}</dd></div>}
-          </> : <><div><dt>{t.scope}</dt><dd>{entry.scope[language]}</dd></div><div><dt>{t.when}</dt><dd>{t.fullDay}</dd></div>{entry.endDate && entry.endDate !== entry.date && <div><dt>{t.until}</dt><dd><time dateTime={entry.endDate}>{formatCalendarDate(entry.endDate, language)}</time></dd></div>}</>}
+          </> : <><div><dt>{t.scope}</dt><dd>{entry.scope[language]}</dd></div><div><dt>{t.when}</dt><dd>{entry.calendarDisplay === 'month' ? t.wholeMonth : t.fullDay}</dd></div>{entry.endDate && entry.endDate !== entry.date && <div><dt>{t.until}</dt><dd><time dateTime={entry.endDate}>{formatCalendarDate(entry.endDate, language)}</time></dd></div>}</>}
         </dl>
         {entry.note && <div className={s.notice}><p>{entry.note[language]}</p></div>}
         {entry.kind === 'event' && entry.dateSpan && !entry.sessions?.length && <p className={s.zone}>{language === 'en' ? 'Hours not published · check with the organizer.' : 'Horario no publicado · consulta al organizador.'}</p>}

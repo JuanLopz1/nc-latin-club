@@ -43,6 +43,10 @@ export function validateAgenda(entries: readonly AgendaEntry[]): void {
       requireValue(entry.kind === 'cultural-date' && entry.category === 'latin-dates' && validDate(entry.date), 'invalid cultural date');
       text(entry.scope, 'cultural scope required');
       if (entry.endDate) requireValue(validDate(entry.endDate) && entry.endDate >= entry.date, 'invalid cultural end date');
+      if (entry.calendarDisplay !== undefined) {
+        const finalDay = new Date(Date.UTC(Number(entry.date.slice(0, 4)), Number(entry.date.slice(5, 7)), 0)).toISOString().slice(0, 10);
+        requireValue(entry.calendarDisplay === 'month' && entry.date.endsWith('-01') && entry.endDate === finalDay, 'monthly observance must cover one whole calendar month');
+      }
     }
     requireValue(entry.images === undefined || Array.isArray(entry.images), 'images must be a collection');
     for (const image of entry.images ?? []) {

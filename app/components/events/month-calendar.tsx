@@ -1,8 +1,9 @@
 'use client';
+import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import type { Language } from '../home-copy';
 import type { AgendaEntry, CalendarDate, CalendarMonth } from './event-types';
-import { entriesOnDate, formatCalendarDate, monthCells, shiftMonth } from './agenda-dates';
+import { dailyEntriesOnDate, monthObservances, formatCalendarDate, monthCells, shiftMonth } from './agenda-dates';
 import { eventsCopy } from './events-copy';
 import s from './month-calendar.module.css';
 export default function MonthCalendar({ entries, month, selectedDate, today, language, onMonthChange, onSelectDate }: { entries: readonly AgendaEntry[]; month: CalendarMonth; selectedDate: CalendarDate; today: CalendarDate; language: Language; onMonthChange(month: CalendarMonth): void; onSelectDate(date: CalendarDate): void }) {
@@ -30,10 +31,14 @@ export default function MonthCalendar({ entries, month, selectedDate, today, lan
     <div className={s.weekdays} aria-hidden="true">{days.slice(0, 7).map(date => <span key={date}>{formatCalendarDate(date, language, { weekday: 'short' })}</span>)}</div>
     <div className={s.grid} ref={grid}>
       {days.map(date => {
-        const count = entriesOnDate(entries, date).length;
+        const count = dailyEntriesOnDate(entries, date).length;
         return <button className={s.day} type="button" key={date} data-date={date} data-outside={date.slice(0, 7) !== month} aria-current={date === today ? 'date' : undefined} aria-pressed={date === selectedDate} aria-label={`${formatCalendarDate(date, language, { dateStyle: 'full' })}: ${count} ${count === 1 ? t.activity : t.activities}${date === today ? ` · ${t.today}` : ''}`} onClick={() => onSelectDate(date)}><span>{Number(date.slice(-2))}</span>{count > 0 && <span className={s.count} aria-hidden="true">{count}</span>}</button>;
       })}
     </div>
+    {monthObservances(entries, month).length > 0 && <section className={s.observances} aria-labelledby="month-observances">
+      <h3 id="month-observances">✦ {t.monthObservances}</h3>
+      <div>{monthObservances(entries, month).map(entry => <Link key={entry.id} href={`/events/${entry.slug}`} data-month-observance={entry.id}><span>{t.wholeMonth} · {entry.kind === 'cultural-date' ? entry.scope[language] : ''}</span><strong>{entry.title[language]}</strong><span>{t.explore} ↗</span></Link>)}</div>
+    </section>}
     <p className={s.hint}>{t.dayHint}</p>
   </section>;
 }

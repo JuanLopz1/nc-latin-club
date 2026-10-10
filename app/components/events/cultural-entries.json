@@ -991,6 +991,7 @@
   },
   {
     "id": "juninas-2026",
+    "calendarDisplay": "month",
     "slug": "juninas-2026",
     "kind": "cultural-date",
     "category": "latin-dates",
@@ -2047,6 +2048,7 @@
   },
   {
     "id": "latin-heritage-2026",
+    "calendarDisplay": "month",
     "slug": "latin-heritage-2026",
     "kind": "cultural-date",
     "category": "latin-dates",
@@ -4267,6 +4269,7 @@
   },
   {
     "id": "juninas-2027",
+    "calendarDisplay": "month",
     "slug": "juninas-2027",
     "kind": "cultural-date",
     "category": "latin-dates",
@@ -5323,6 +5326,7 @@
   },
   {
     "id": "latin-heritage-2027",
+    "calendarDisplay": "month",
     "slug": "latin-heritage-2027",
     "kind": "cultural-date",
     "category": "latin-dates",

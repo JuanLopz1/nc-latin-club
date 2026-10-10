@@ -11,7 +11,7 @@ Se entregan `/niagara`, entrada desde el hub y contenido real de eventos/calenda
 
 Suite31/31, lint sin avisos, build244páginas. Navegación de Fiesta/404/idioma/reduced-motion preservada. Chromium 320–1440, filtros/pins/unidades, calendario cultural/rangos, archivo y sesiones. Regresiones RED→GREEN: panel junto a tarjeta con navegación/foco; última sesión sin cierre no archiva al empezar. Arrastre, zoom, reset con redondeo, cambio de idioma sin recentrado y pinch emulado pasan. No se verificaron lectores de pantalla ni dispositivos físicos.
 
-Revisión fresca independiente: dos importantes corregidos, ningún crítico. Menor diferido: deduplicar cuatro canales Web/Facebook que apuntan al mismo destino. Fuentes comerciales y teselas no pueden comprobarse en vivo por CONNECT403; no se afirman accesos exitosos. Las fichas y destinos documentados siguen utilizables.
+Revisión fresca independiente: dos importantes corregidos, ningún crítico. El hallazgo menor de canales Web/Facebook duplicados se resuelve en el ajuste posterior de fichas. Fuentes comerciales y teselas no pueden comprobarse en vivo por CONNECT403; no se afirman accesos exitosos. Las fichas y destinos documentados siguen utilizables.
 
 ## Decisiones tomadas
 
@@ -27,3 +27,13 @@ Canal comercial y destino público de El Camino/by McNips y Sombra; destino de T
 Instalación y arranque reproducibles verificados; install_script/start_skill guardados. Dominios adicionales de investigación y OSM guardados en borrador de configuración; aplicarlo/publicarlo desde configuración del entorno habilita el reintento, no prueba conectividad por sí solo. No hacen falta secretos para estas funciones.
 
 Push verificado a origin/work en cada hito, main sin cambios. No se verifica estado Ready de Vercel desde este entorno.
+
+## Ajustes de experiencia solicitados después de la entrega
+
+- Agenda: las tres categorías activas al entrar, combinación de varias, deselección individual y controles Todos/Deseleccionar todos. El regreso desde un detalle conserva esa selección; una entrada directa vuelve con todas.
+- Celebraciones mensuales: cuatro ocurrencias de Juninas/Latin American Heritage Month se muestran una vez en «Este mes», con fuente y detalles accesibles. No se repiten en cada día ni en los contadores. Sus fechas finales reales siguen determinando el archivo; Muertos/Posadas y otros rangos breves se mantienen diarios.
+- Niagara: ciudad, categoría y modalidad permiten varias opciones y empiezan completas. Una selección vacía da cero resultados, Limpiar filtros recupera todo. Las opciones se combinan en cada grupo y se intersectan entre grupos/búsqueda.
+- Una sola tarjeta por negocio: pin y botones expanden la ficha original; no hay otro panel repitiendo título, descripción, dirección y acciones. Toggle/Escape cierran; el foco y la selección del mapa siguen conectados. Los canales comerciales repetidos se muestran una vez.
+- Crear, editar, retirar fichas, gestionar imágenes y buscar por `#etiquetas` quedan definidos en ROADMAP para el portal autenticado futuro; no hay CRUD ni búsqueda por tags activados en esta entrega.
+
+Validación de esta actualización: 38 pruebas Node, lint sin avisos, build de 244 páginas; producción local nueva y dos recorridos Chromium. Selección múltiple/vacía, archivo, banner mensual, EN/ES, regreso de detalle, año nuevo, movimiento reducido, filtros/pins, ficha única y navegación de teclado; sin desbordamiento de 320 a 1440 px. Capturas locales fuera del repositorio en `/workspace/artifacts`. Las verificaciones locales no establecen el estado del despliegue de Vercel.

@@ -1,5 +1,6 @@
 import type { Language } from '../home-copy';
 import type { AgendaCategory, AgendaEntry, AgendaState, CalendarDate, CalendarMonth, EventEntry, EventSession } from './event-types';
+export const agendaCategories = ['at-nc', 'out-of-nc', 'latin-dates'] as const;
 export const NIAGARA_ZONE = 'America/Toronto';
 const localDate = new Intl.DateTimeFormat('en-CA', { timeZone: NIAGARA_ZONE, year: 'numeric', month: '2-digit', day: '2-digit' });
 export function validDate(value: string): boolean {
@@ -31,6 +32,12 @@ export function entriesOnDate(entries: readonly AgendaEntry[], date: CalendarDat
     return date >= start && date <= end;
   });
 }
+export function dailyEntriesOnDate(entries: readonly AgendaEntry[], date: CalendarDate): AgendaEntry[] {
+  return entriesOnDate(entries.filter(entry => entry.kind !== 'cultural-date' || entry.calendarDisplay !== 'month'), date);
+}
+export function monthObservances(entries: readonly AgendaEntry[], month: CalendarMonth): AgendaEntry[] {
+  return entries.filter(entry => entry.kind === 'cultural-date' && entry.calendarDisplay === 'month' && entry.date.slice(0, 7) === month);
+}
 export function isPast(entry: AgendaEntry, now: Date): boolean {
   if (entry.kind === 'cultural-date') return (entry.endDate ?? entry.date) < niagaraDate(now);
   if (entry.dateSpan) {
@@ -41,14 +48,15 @@ export function isPast(entry: AgendaEntry, now: Date): boolean {
   }
   return Date.parse(entry.endsAt ?? entry.startsAt) <= now.getTime();
 }
-export function listEntries(entries: readonly AgendaEntry[], category: AgendaCategory, period: 'upcoming' | 'past', now: Date): AgendaEntry[] {
+export function listEntries(entries: readonly AgendaEntry[], category: AgendaCategory | readonly AgendaCategory[], period: 'upcoming' | 'past', now: Date): AgendaEntry[] {
   const time = (entry: AgendaEntry) => Date.parse(entry.kind === 'cultural-date' ? entry.date : entry.dateSpan ? entry.dateSpan.start : entry.startsAt);
-  return entries.filter(entry => entry.category === category && isPast(entry, now) === (period === 'past'))
+  const categories = typeof category === 'string' ? [category] : category;
+  return entries.filter(entry => categories.includes(entry.category) && isPast(entry, now) === (period === 'past'))
     .sort((a, b) => (time(a) - time(b)) * (period === 'past' ? -1 : 1));
 }
-export function initialAgendaState(now: Date, category: AgendaCategory = 'at-nc'): AgendaState {
+export function initialAgendaState(now: Date): AgendaState {
   const today = niagaraDate(now);
-  return { category, view: 'list', period: 'upcoming', month: today.slice(0, 7), selectedDate: today };
+  return { categories: [...agendaCategories], view: 'list', period: 'upcoming', month: today.slice(0, 7), selectedDate: today };
 }
 export function formatCalendarDate(date: CalendarDate, language: Language, options: Intl.DateTimeFormatOptions = { dateStyle: 'long' }): string {
   return new Intl.DateTimeFormat(language === 'en' ? 'en-CA' : 'es', { ...options, timeZone: 'UTC' }).format(new Date(date + 'T12:00:00Z'));
