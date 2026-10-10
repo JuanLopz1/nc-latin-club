@@ -1,0 +1,16 @@
+.gallery { min-width: 0; }
+.track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: #76dbe3 #151d2f; border: 1px solid #ffffff33; border-radius: 12px; }
+.slide { flex: 0 0 100%; min-width: 0; margin: 0; scroll-snap-align: start; }
+.frame { aspect-ratio: 4 / 3; background: #151d2f; display: grid; place-items: center; }
+.frame img { width: 100%; height: 100%; object-fit: contain; }
+.error { padding: 24px; text-align: center; color: var(--muted); }
+.slide figcaption { background: #151d2f; padding: 14px 20px; font-size: 13px; line-height: 1.6; color: var(--muted); }
+.controls { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 16px 0; font-size: 12px; }
+.controls button { border: 1px solid #ffffff55; border-radius: 50%; width: 44px; height: 44px; cursor: pointer; font-size: 22px; transition: background .22s, transform .22s; }
+.controls button:hover:not(:disabled) { background: #ffe06a; color: #0c101b; transform: translateY(-2px); }
+.controls button:disabled { opacity: .35; cursor: default; }
+.thumbnails { display: flex; gap: 12px; overflow-x: auto; padding: 7px; }
+.thumbnails button { flex: 0 0 72px; height: 52px; overflow: hidden; border-radius: 5px; border: 2px solid transparent; background: #151d2f; cursor: pointer; }
+.thumbnails button[aria-pressed="true"] { border-color: var(--gold); }
+.thumbnails img { width: 100%; height: 100%; object-fit: cover; }
+@media (prefers-reduced-motion: reduce) { .gallery * { transition: none !important; scroll-behavior: auto !important; } }
