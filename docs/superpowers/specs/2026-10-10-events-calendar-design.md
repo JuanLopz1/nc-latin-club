@@ -1,12 +1,12 @@
-# Events y calendario latino — diseño propuesto
+# Events y calendario latino — diseño aprobado
 
-Fecha: 10 de octubre de 2026. Estado: diseño aprobado por el fundador, incluyendo galerías de varias imágenes y calendario dinámico; pendiente de plan de implementación y ejecución.
+Fecha: 10 de octubre de 2026. Estado: diseño aprobado por el fundador, incluyendo galerías de varias imágenes y calendario dinámico; recorrido público implementado; ver evidencia en `docs/EVENTS_QA.md`.
 
 ## Propósito y punto de partida
 
 Ayudar a estudiantes y jóvenes latinos en Niagara a encontrar encuentros del college, actividades latinas de la región y fechas culturales. El visitante debe poder elegir un evento, entender cuándo y dónde ocurre y abrir la inscripción del organizador.
 
-El fundador aprobó el estilo de festival urbano nocturno y pidió incluir eventos fuera de NC. El inicio ya publica Latin Fiesta!, organizada por International, con datos de las capturas y enlace NC Engage aportados por el fundador. La colección local, el selector EN/ES y las tarjetas existen; solo hay una página de inicio, sin calendario, detalles ni administración.
+El fundador aprobó el estilo de festival urbano nocturno y pidió incluir eventos fuera de NC. El inicio ya publica Latin Fiesta!, organizada por International, con datos de las capturas y enlace NC Engage aportados por el fundador. Al aprobar este diseño, existían la colección local, el selector EN/ES y las tarjetas del inicio; calendario y detalles se añadieron en esta entrega. Administración sigue pendiente.
 
 ## Enfoque recomendado
 

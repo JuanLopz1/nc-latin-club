@@ -1,10 +1,10 @@
 # NC Latin Club — Plan de los siguientes avances
 
-Fecha: 9 de octubre de 2026, America/Toronto.
+Actualización: 10 de octubre de 2026, America/Toronto.
 
-Estado: propuesta de prioridades y entregables para revisar con el fundador.
+Estado: inicio nocturno aprobado; agenda pública implementada; próximos hitos pendientes.
 
-Base revisada: commit `47eabb3`, brief de contexto y preferencias posteriores del usuario.
+Base: brief de contexto y preferencias posteriores del fundador; agenda pública `ba5c36c` y correcciones `8a240dd`.
 
 ## 1. Qué queremos construir
 
@@ -18,15 +18,15 @@ Las preferencias posteriores del usuario prevalecen sobre las notas históricas 
 
 | Área | Estado comprobado en el repositorio |
 | --- | --- |
-| Inicio | Prototipo con paisaje original, Familia, Eventos, Raíces, Niagara y contacto. |
-| Idiomas | EN por defecto y cambio a ES en el inicio; todavía mediante estado del navegador, sin rutas traducidas ni metadatos por idioma. |
-| Eventos | Primera entrada real: Latin Fiesta!, 23–24 de octubre de 2026, The Core, organizada por International; datos y enlace NC Engage aportados por el usuario. No existe página de eventos ni calendario. |
+| Inicio | Prototipo nocturno aprobado, Familia, Eventos enlazados a la agenda, Raíces, Niagara y contacto. |
+| Idiomas | EN por defecto; idioma compartido entre inicio, agenda y detalle. Una recarga vuelve a EN; sin rutas traducidas ni metadatos por idioma. |
+| Eventos | Primera entrada real: Latin Fiesta!, 23–24 de octubre de 2026, The Core, organizada por International; datos y enlace NC Engage aportados por el usuario. `/events`, calendario de seis semanas, detalles y galerías opcionales implementados. Out of NC y Fechas latinas esperan contenido verificado. |
 | Mapa | Ilustración con México, Colombia, Perú y Brasil y diálogos accesibles. No es el mapa/globo regional definitivo. |
 | Contacto | Mailto al correo solicitado con el mensaje de unión prellenado. |
 | Instagram | Falta el perfil oficial; la acción muestra un aviso pendiente. |
 | Identidad | El logo oficial existe según el usuario, pero no está incorporado al repositorio. |
 | Administración | Sin autenticación, base de datos, almacenamiento administrado ni portal. |
-| Páginas internas | Solo están las rutas de inicio y 404 generada por Next.js. |
+| Páginas internas | Inicio, `/events`, `/events/[slug]` y 404 propia bilingüe. |
 | GitHub | Avances en `work`; commit y push tras cada hito verificado. `main` permanece separado. |
 
 Las comprobaciones anteriores de lint, build y navegador corresponden al prototipo. Cada nuevo hito tendrá su propia verificación.
@@ -66,10 +66,10 @@ Para la entrega de Events, el fundador aprobó conservar el selector EN/ES del p
 
 **Entregable:** navegación, idiomas y acceso al contenido preparados para crecer.
 
-- [ ] Confirmar la estrategia EN/ES y compartir encabezado, pie y controles entre páginas.
-- [ ] Preservar el título, el paisaje, Discover Latin Niagara, el patrocinio y el correo actuales.
+- [x] Confirmar la estrategia EN/ES y compartir encabezado, pie y controles entre páginas.
+- [x] Preservar el título, el paisaje, Discover Latin Niagara, el patrocinio y el correo actuales.
 - [ ] Incorporar el logo y la cuenta de Instagram cuando el fundador los facilite.
-- [ ] Separar contratos de contenido de su fuente: primero archivos locales; después el portal suministrará los mismos campos.
+- [x] Separar contratos de contenido de su fuente: primero archivos locales; después el portal suministrará los mismos campos.
 - [ ] Definir contenido global y por página, medios, eventos y fechas culturales; ampliar con staff, países, noticias y directorio cuando corresponda.
 
 **Terminado cuando:** navegar y cambiar de idioma conserva contexto, las rutas iniciales se renderizan con el idioma correcto y los componentes consumen contenido sin depender de un proveedor concreto. No debe perderse ningún comportamiento del inicio.
@@ -78,14 +78,18 @@ Para la entrega de Events, el fundador aprobó conservar el selector EN/ES del p
 
 **Entregable:** `/events`, detalles de eventos y calendario mensual que comparten los datos con el inicio.
 
-- [ ] Alternar lista y calendario, avanzar y retroceder meses y volver al mes actual.
-- [ ] Distinguir eventos del club y fechas culturales; una celebración cultural no implica un encuentro organizado por el club.
-- [ ] Incorporar las pestañas solicitadas **At NC** y **Out of NC**: eventos del college y eventos latinos de la región, respectivamente. Conservar el organizador real de cada entrada.
+- [x] Alternar lista y calendario, avanzar y retroceder meses y volver al mes actual.
+- [x] Distinguir eventos del club y fechas culturales; una celebración cultural no implica un encuentro organizado por el club.
+- [x] Incorporar las pestañas solicitadas **At NC** y **Out of NC**: eventos del college y eventos latinos de la región, respectivamente. Conservar el organizador real de cada entrada.
 - [ ] Preparar una selección regional con ciudad, fecha, precio y enlace a la fuente oficial. Niagara es el alcance inicial propuesto; cualquier ampliación se decide antes de buscar contenido. Revisar cada entrada antes de publicar; la lista no promete cobertura exhaustiva ni sincronización automática.
-- [ ] Seleccionar una fecha para ver sus entradas; fechas sin entradas muestran un estado claro.
-- [ ] Mostrar próximos y pasados, lugar, horario, descripción y enlace de inscripción confirmado cuando exista.
-- [ ] Reflejar cancelaciones o reprogramaciones sin conservar datos contradictorios.
-- [ ] Mantener próximamente y meses vacíos útiles hasta que haya contenido real.
+- [x] Seleccionar una fecha para ver sus entradas; fechas sin entradas muestran un estado claro.
+- [x] Mostrar próximos y pasados, lugar, horario, descripción y enlace de inscripción confirmado cuando exista.
+- [x] Reflejar cancelaciones o reprogramaciones sin conservar datos contradictorios.
+- [x] Mantener próximamente y meses vacíos útiles hasta que haya contenido real.
+
+- [x] Mostrar cero, una o varias imágenes ordenadas por entrada con galería accesible, swipe, miniaturas y fallback ante fallo.
+
+**Estado:** recorrido funcional implementado; contenido regional y cultural pendiente de verificación. La carga de imágenes mediante admin conserva su hito propio.
 
 **Datos importantes:** eventos con hora usan un timestamp con zona y se presentan en `America/Toronto`. Fechas culturales de día completo usan fecha de calendario, sin convertirlas a medianoche UTC. Las celebraciones tienen país o ámbito y fuente editorial; las que cambian de fecha se revisan para cada año.
 
@@ -213,13 +217,11 @@ El orden es una recomendación: la recopilación de fotos, perfiles, eventos y l
 
 ## 8. Próximo avance concreto
 
-El fundador aceptó el diseño nocturno del inicio. La prioridad actual es **Events y calendario**, con At NC, Out of NC, Fechas latinas y galerías opcionales de varias imágenes.
+El fundador aceptó el inicio nocturno y el diseño y plan de Events. La agenda está implementada con At NC, Out of NC, Fechas latinas, lista/calendario, detalles y galerías opcionales. El [diseño aprobado](superpowers/specs/2026-10-10-events-calendar-design.md), [plan](superpowers/plans/2026-10-10-events-calendar.md) y [QA](EVENTS_QA.md) documentan alcance y comprobaciones.
 
-El [diseño de Events y calendario](superpowers/specs/2026-10-10-events-calendar-design.md) está aprobado. El [plan de implementación](superpowers/plans/2026-10-10-events-calendar.md) concreta contratos, archivos, pruebas, galería y transiciones suaves de calendario; espera revisión del fundador y selección del método de ejecución.
+El siguiente avance propuesto es **Familia y staff**: definir misión e historia, preparar perfiles EN/ES y publicar nombres, cargos y fotografías aprobados. El logo y el Instagram oficiales siguen pendientes. La carga de archivos desde el portal admin requiere su propio diseño de permisos y almacenamiento.
 
-El asistente está autorizado a investigar contenido público. Los intentos y fuentes candidatas se registran en [Events Research](EVENTS_RESEARCH.md); el bloqueo 403 del entorno impidió verificar entradas regionales y fechas culturales. Latin Fiesta sigue siendo el contenido aportado por el fundador. La programación no está realizada todavía.
-
-Elegir el backend no bloquea esta entrega pública. La carga de archivos desde el portal admin conserva su hito propio; la agenda usará una colección de medios locales preparada para varias imágenes por entrada.
+El asistente está autorizado a investigar contenido público. [Events Research](EVENTS_RESEARCH.md) registra el nuevo intento y el bloqueo CONNECT 403, que impide verificar entradas regionales y culturales. Latin Fiesta conserva la evidencia aportada por el fundador; no se publicaron datos ficticios para llenar pestañas.
 
 ## 9. Regla de entrega
 

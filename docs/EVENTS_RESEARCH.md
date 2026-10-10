@@ -25,3 +25,7 @@ Para encuentros: confirmar nombre, organizador, ciudad, lugar, fecha con año, h
 Para fechas culturales: confirmar fecha y año aplicable, país o ámbito, descripción respetuosa y fuente. No tratar una fecha cultural como una fiesta organizada por NC ni inferir recurrencia de celebraciones variables.
 
 Los enlaces candidatos no son entradas verificadas del calendario. El bloqueo de investigación no impide construir las pestañas y sus estados vacíos. Reanudar la búsqueda cuando el entorno tenga acceso a estas fuentes públicas.
+
+## Reintento al terminar la implementación
+
+El 10 de octubre de 2026 se reintentaron NC Engage y las cuatro fuentes institucionales/regionales de la tabla. Las cinco conexiones volvieron a fallar con `CONNECT tunnel failed, response 403` y HTTP final `000`. No se obtuvo contenido nuevo ni se confirmó una edición regional o fecha cultural. La agenda se entrega con Latin Fiesta aportada por el fundador y categorías vacías útiles; no hay fixtures públicos.
