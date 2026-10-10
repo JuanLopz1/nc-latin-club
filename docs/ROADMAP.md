@@ -58,7 +58,7 @@ Preparar los modelos de contenido ahora; elegir el proveedor de administración 
 
 El contacto puede seguir como sección de inicio; una página `/join` solo se añade si hay instrucciones que necesiten más espacio. Conservar los enlaces actuales de inicio durante la transición. Añadir enlaces públicos a nuevas páginas cuando funcionen. Priorizar Eventos, Explore y Familia en la navegación; agrupar el resto para mantener un menú simple.
 
-Propuesta de idiomas: inglés en las rutas principales y español con prefijo `/es`, conservando identificadores de ruta estables, por ejemplo `/events` y `/es/events`. El cambio de idioma conserva la página equivalente. Una sola fuente de traducciones alimenta encabezados, contenido y metadatos. Esta estrategia se confirma en el primer hito antes de crear más páginas.
+Para la entrega de Events, el fundador aprobó conservar el selector EN/ES del prototipo mediante un contexto compartido: navegar mantiene el idioma y una recarga completa comienza en inglés. Las rutas con prefijo `/es` y metadatos localizados siguen como propuesta para un hito posterior de internacionalización.
 
 ## 5. Hitos y criterios de finalización
 
@@ -213,13 +213,13 @@ El orden es una recomendación: la recopilación de fotos, perfiles, eventos y l
 
 ## 8. Próximo avance concreto
 
-Prioridad actual: terminar y revisar el rediseño del inicio con la dirección nocturna elegida, antes de retomar las funciones nuevas.
+El fundador aceptó el diseño nocturno del inicio. La prioridad actual es **Events y calendario**, con At NC, Out of NC, Fechas latinas y galerías opcionales de varias imágenes.
 
-Preparar el diseño técnico de **Eventos y calendario**, con una revisión breve de la base necesaria para rutas e idiomas. Definir pantallas de lista, mes y detalle, los campos compartidos con el inicio y el tratamiento de fechas culturales. Decidir entonces las tareas y archivos exactos; elegir el backend no bloquea ese diseño.
+El [diseño de Events y calendario](superpowers/specs/2026-10-10-events-calendar-design.md) está aprobado. El [plan de implementación](superpowers/plans/2026-10-10-events-calendar.md) concreta contratos, archivos, pruebas, galería y transiciones suaves de calendario; espera revisión del fundador y selección del método de ejecución.
 
-La [propuesta concreta de Events y calendario](superpowers/specs/2026-10-10-events-calendar-design.md) está escrita para revisión del fundador. Incluye At NC, Out of NC y Fechas latinas, y propone conservar por ahora el selector de idioma del prototipo durante la navegación. Todavía no es una implementación ni una aprobación de la estrategia de idiomas.
+El asistente está autorizado a investigar contenido público. Los intentos y fuentes candidatas se registran en [Events Research](EVENTS_RESEARCH.md); el bloqueo 403 del entorno impidió verificar entradas regionales y fechas culturales. Latin Fiesta sigue siendo el contenido aportado por el fundador. La programación no está realizada todavía.
 
-Los puntos a resolver en ese diseño son la estrategia de idiomas propuesta, las categorías del calendario y el comportamiento de las entradas de día completo. La siguiente implementación construye este subsistema; los demás hitos mantienen su alcance propio.
+Elegir el backend no bloquea esta entrega pública. La carga de archivos desde el portal admin conserva su hito propio; la agenda usará una colección de medios locales preparada para varias imágenes por entrada.
 
 ## 9. Regla de entrega
 

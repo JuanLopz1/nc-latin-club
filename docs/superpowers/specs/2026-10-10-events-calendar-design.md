@@ -1,6 +1,6 @@
 # Events y calendario latino — diseño propuesto
 
-Fecha: 10 de octubre de 2026. Estado: propuesta para revisión del fundador; no se ha implementado este subsistema.
+Fecha: 10 de octubre de 2026. Estado: diseño aprobado por el fundador, incluyendo galerías de varias imágenes y calendario dinámico; pendiente de plan de implementación y ejecución.
 
 ## Propósito y punto de partida
 
@@ -30,9 +30,19 @@ Cada categoría permite alternar **List / Lista** y **Calendar / Calendario**. L
 
 **Calendario:** semana de lunes a domingo, botones mes anterior/siguiente y volver a hoy. Cada día con entradas muestra cantidad o marcas con texto accesible. Elegir un día actualiza una lista de entradas debajo del calendario; desde esa lista se abre el detalle. Los días sin entradas se pueden seleccionar y explican que no hay actividades publicadas. Se evita llenar las celdas móviles con títulos largos.
 
+El calendario debe sentirse dinámico y suave. Mantiene una cuadrícula de seis semanas para evitar saltos de altura. Al cambiar de mes, la cuadrícula entra con una transición direccional breve de opacidad y desplazamiento, de 180–240 ms; la fecha seleccionada se destaca con luz y color. Botones y tarjetas tienen respuesta visual al foco, toque y hover; los resultados aparecen suavemente. No usa animaciones continuas, parpadeos ni una librería nueva. `prefers-reduced-motion: reduce` elimina transiciones, desplazamientos animados y scroll suave. La interacción no queda bloqueada durante una animación.
+
 **`/events/[slug]`:** título, categoría, descripción, inicio y fin completos, lugar, ciudad si está confirmada, organizador, precio y reglas de invitados cuando existan. Inscripción externa en nueva pestaña con aviso accesible y enlace a la fuente. Latin Fiesta conserva su nombre y la atribución a International. Una entrada cancelada muestra el aviso y oculta el botón de inscripción; una reprogramada muestra la fecha vigente y un aviso descriptivo. Un slug inexistente devuelve 404.
 
 Las fechas culturales usan el mismo recorrido de detalle, pero muestran fecha de día completo, país o ámbito y fuente editorial, sin campos de entradas ni organizador de un encuentro.
+
+## Imágenes y galería
+
+Cada entrada puede tener una colección opcional `images`, con cero, una o varias imágenes ordenadas. La primera sirve de portada en la tarjeta; el detalle ofrece galería con controles anterior/siguiente, contador y miniaturas. Con una sola imagen no aparecen controles innecesarios. En móvil la galería permite desplazamiento táctil horizontal; los botones y el teclado permiten llegar a las mismas imágenes. Cambiar idioma conserva la imagen seleccionada. Cambiar de entrada reinicia la selección en la primera imagen.
+
+Cada imagen contiene ruta local del archivo, dimensiones, texto alternativo EN/ES y pie EN/ES opcional. Usar `next/image`, tamaños responsivos, espacio reservado y carga diferida para imágenes fuera de vista. Un fallo de carga muestra un estado accesible; la información y los botones del evento continúan disponibles. No hay un límite editorial fijo de una imagen ni un requisito de añadir fotos.
+
+Esta entrega implementa el consumo y la presentación de imágenes. Los archivos se incorporan como medios locales autorizados; adjuntar, ordenar, reemplazar y borrar archivos desde una interfaz será una función del futuro portal admin y requerirá almacenamiento y permisos. No se añade un formulario público de subida ni se simula que el admin ya existe.
 
 ## Navegación e idiomas
 
@@ -40,7 +50,7 @@ Extraer encabezado, pie y control de idioma a una estructura compartida en el la
 
 El inglés sigue siendo el idioma inicial. Un proveedor de idioma compartido mantiene EN/ES durante la navegación interna y actualiza `document.documentElement.lang`. El inicio consume ese mismo estado; sus textos no se duplican. Los metadatos iniciales de las nuevas rutas serán descriptivos en inglés.
 
-Esta entrega conserva el mecanismo de idioma del prototipo: una recarga completa comienza en inglés. Las rutas `/es`, metadatos localizados y persistencia entre visitas quedan para un hito de internacionalización. Es una propuesta de alcance distinta de la estrategia `/es` sugerida en el roadmap; debe aprobarse antes de implementar.
+Esta entrega conserva el mecanismo de idioma del prototipo: una recarga completa comienza en inglés. Las rutas `/es`, metadatos localizados y persistencia entre visitas quedan para un hito de internacionalización. El fundador aprobó este alcance de entrega, distinto de la estrategia `/es` sugerida inicialmente en el roadmap.
 
 Los filtros permanecen en estado del navegador, sin prometer enlaces que compartan mes o categoría. El detalle tiene URL estable y puede compartirse directamente. El control de retorno desde un detalle abierto dentro de la agenda usa el contexto conservado en el layout para recuperar categoría, mes y vista; un acceso directo al detalle vuelve a la categoría correspondiente en la agenda con valores iniciales.
 
@@ -55,9 +65,9 @@ Una entrada de encuentro contiene:
 - Inicio con offset; fin con offset cuando esté confirmado.
 - Estado `scheduled`, `cancelled` o `rescheduled`; aviso bilingüe obligatorio para los dos últimos.
 - URL de fuente, fecha de revisión editorial y procedencia de la información; inscripción HTTPS opcional.
-- Imagen y texto alternativo bilingüe opcionales, solo si hay un archivo autorizado disponible.
+- Colección opcional y ordenada `images`, con ruta local, ancho, alto, texto alternativo EN/ES y pie EN/ES opcional por imagen; solo archivos autorizados disponibles.
 
-Una entrada cultural contiene ID, slug, tipo `cultural-date`, título y descripción EN/ES, fecha `YYYY-MM-DD`, país o ámbito, fuente y fecha de revisión editorial. No genera recurrencias anuales automáticamente: cada año se revisa su fecha.
+Una entrada cultural contiene ID, slug, tipo `cultural-date`, título y descripción EN/ES, fecha `YYYY-MM-DD`, país o ámbito, fuente, fecha de revisión editorial y colección opcional `images` con el mismo contrato. No genera recurrencias anuales automáticamente: cada año se revisa su fecha.
 
 La colección inicial tiene Latin Fiesta y ninguna entrada regional o cultural. Su ciudad y dirección exacta no se deducen de “The Core”. La fuente se registra como capturas proporcionadas por el fundador y URL NC Engage, sin afirmar verificación en vivo. No se usa la ilustración ficticia del inicio como fotografía del evento. Sin un póster autorizado, la tarjeta usa tipografía y fecha.
 
@@ -75,7 +85,7 @@ Las fechas culturales se comparan como fechas de calendario. No se convierten a 
 
 Out of NC comienza con “Estamos reuniendo eventos latinos de Niagara”, acompañado de un enlace al correo del club para sugerencias. Fechas latinas explica que las celebraciones aparecerán después de revisión. Meses y días vacíos conservan navegación y controles de categoría.
 
-Las entradas se revisan antes de publicarse y muestran fuente. La selección regional no promete recoger todos los eventos ni sincronizar automáticamente precios, disponibilidad o cancelaciones. La búsqueda regional se realiza cuando haya acceso a fuentes públicas; el bloqueo de red observado no autoriza inventar datos ni obtenerlos de páginas privadas.
+Las entradas se revisan antes de publicarse y muestran fuente. El fundador autorizó que el asistente investigue y añada eventos y fechas de fuentes públicas verificables. La selección regional no promete recoger todos los eventos ni sincronizar automáticamente precios, disponibilidad o cancelaciones. La búsqueda regional se realiza cuando haya acceso a fuentes públicas; el bloqueo de red observado no autoriza inventar datos ni obtenerlos de páginas privadas. Las fuentes candidatas y la evidencia del bloqueo quedan en `docs/EVENTS_RESEARCH.md`; no se publican entradas solo por conocer una URL o recordar una celebración.
 
 No se publican entradas con identificadores duplicados, fecha inválida, fin anterior al inicio, categoría incompatible o campos obligatorios incompletos. La validación del contenido informa el error durante las verificaciones previas al despliegue. Los enlaces externos se limitan a HTTPS.
 
@@ -85,7 +95,7 @@ Controles con nombres traducidos, estados de selección accesibles y foco visibl
 
 Comprobar con el mismo conjunto de datos: inicio/lista/detalle coincidentes, calendario vacío, varios eventos en un día, fin a medianoche y después de medianoche, cambio de mes y año, horario de verano y fechas culturales sin desplazamiento. Los casos ficticios solo existen en verificaciones locales.
 
-En navegador comprobar EN/ES, idioma conservado entre rutas, filtros conservados al volver, 404, registro externo, cancelación y ausencia de inscripción cuando no hay URL. Revisar teclado, contraste, movimiento reducido y anchos de 320 px a escritorio. Ejecutar lint y build antes del commit y push a `origin/work`; verificar SHA remoto. No modificar `main`.
+En navegador comprobar EN/ES, idioma conservado entre rutas, filtros conservados al volver, 404, registro externo, cancelación y ausencia de inscripción cuando no hay URL. Comprobar galería vacía, de una y varias imágenes, selección, teclado, gesto táctil, cambio de idioma y fallo de carga. Revisar teclado, contraste, movimiento reducido, transición de mes sin bloquear clics rápidos y anchos de 320 px a escritorio. Ejecutar lint y build antes del commit y push a `origin/work`; verificar SHA remoto. No modificar `main`.
 
 ## Límites y resultado de esta entrega
 
