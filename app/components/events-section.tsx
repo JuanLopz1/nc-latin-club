@@ -1,5 +1,9 @@
+'use client';
 import Link from "next/link";
 import { eventsCopy } from "./events/events-copy";
+import { listEntries } from "./events/agenda-dates";
+import { useAgendaClock } from "./events/agenda-clock";
+import type { EventEntry } from "./events/event-types";
 import { copy, type Language } from "./home-copy";
 import { clubEvents } from "./club-events";
 import { joinEmailHref } from "./club-links";
@@ -11,6 +15,8 @@ function ActionArrow() {
 
 export default function EventsSection({ language }: { language: Language }) {
   const t = copy[language].events;
+  const statusCopy = eventsCopy[language], now = useAgendaClock();
+  const upcoming = now ? listEntries(clubEvents, 'at-nc', 'upcoming', now).filter((entry): entry is EventEntry => entry.kind === 'event') : [];
   const dateFormat = new Intl.DateTimeFormat(language === "en" ? "en-CA" : "es", {
     dateStyle: "long", timeStyle: "short", timeZone: "America/Toronto",
   });
@@ -25,7 +31,7 @@ export default function EventsSection({ language }: { language: Language }) {
         <p className={s.introBody}>{t.body}</p>
       </div>
 
-      {clubEvents.length === 0 ? (
+      {!now ? <p className={s.body} role="status">{statusCopy.loading}</p> : upcoming.length === 0 ? (
         <div className={s.empty}>
           <svg className={s.energy} viewBox="0 0 180 180" fill="none" aria-hidden="true">
             <path d="M112 15 45 98h42l-15 67 68-85H98Z" fill="currentColor" />
@@ -43,9 +49,10 @@ export default function EventsSection({ language }: { language: Language }) {
         </div>
       ) : (
         <div className={s.cards}>
-          {clubEvents.map(event => (
+          {upcoming.map(event => (
             <article className={s.card} key={event.id} aria-labelledby={`event-${event.id}-title`}>
               <p className={s.eyebrow}>{t.campus}</p>
+              {event.status !== 'scheduled' && <div className={s.notice}><strong>{statusCopy[event.status]}</strong><p>{event.statusNote?.[language]}</p></div>}
               <h3 id={`event-${event.id}-title`}><Link href={`/events/${event.slug}`}>{event.title[language]}</Link></h3>
               <p className={s.body}>{event.description[language]}</p>
               <dl className={s.details}>
@@ -55,7 +62,7 @@ export default function EventsSection({ language }: { language: Language }) {
                 {event.organizer && <div><dt>{t.organizer}</dt><dd>{event.organizer[language]}</dd></div>}
                 {event.admission && <div><dt>{t.admission}</dt><dd>{event.admission[language]}</dd></div>}
               </dl>
-              {event.registrationUrl && <a className={s.joinLink} href={event.registrationUrl} target="_blank" rel="noopener noreferrer" aria-label={`${t.registration}: ${event.title[language]}`}>{t.registration}<ActionArrow /></a>}
+              {event.registrationUrl && event.status !== 'cancelled' && <a className={s.joinLink} href={event.registrationUrl} target="_blank" rel="noopener noreferrer" aria-label={`${t.registration}: ${event.title[language]} (${statusCopy.external})`}>{t.registration}<ActionArrow /></a>}
             </article>
           ))}
         </div>

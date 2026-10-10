@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test:events": "node --test tests/events.test.cjs tests/gallery.test.cjs"
+    "test:events": "node --test tests/events.test.cjs tests/gallery.test.cjs tests/events-home.test.cjs"
   },
   "dependencies": {
     "next": "16.4.0",
