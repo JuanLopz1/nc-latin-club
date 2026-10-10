@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NC Latin Club",
-  description: "Where cultures bloom. A place to belong.",
+  title: "NC LATIN CLUB",
+  description: "Latin roots. Niagara energy. A place to belong.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

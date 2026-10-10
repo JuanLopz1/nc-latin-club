@@ -1,8 +1,8 @@
 # NC Latin Club
 
-Public website for **NC Latin Club**, an independent cultural community in Niagara, Ontario. The current release is a first homepage prototype with an original illustrated landscape, an editorial scroll through Our Familia, Events, cultural exploration, Latin Niagara, and a welcome section.
+Public website for **NC Latin Club**, an independent cultural community in Niagara, Ontario. The current homepage prototype follows the founder’s chosen direction: an urban night festival with lights and energy, bold typography and a midnight/yellow/coral/cyan palette. It scrolls through Our Familia, Events, cultural exploration, Latin Niagara, and a welcome section.
 
-The English/Spanish switch, mobile menu, country selection with accessible popups, and Niagara disclosures work locally. The map is an illustrated cultural introduction, not a precise geographic or member-location map. Country articles, verified listings, confirmed events, invitation links, member photography, and a CMS remain future work. The artwork depicts an imaginary landscape; it does not represent a verified real location.
+The English/Spanish switch, mobile menu, country selection with accessible popups, and Niagara disclosures work locally. The map is an illustrated cultural introduction, not a precise geographic or member-location map. Country articles, verified listings, confirmed events, invitation links, member photography, and a CMS remain future work. The original hero illustration in `public/images/latin-night-festival.png` depicts an imaginary street festival and fictional people; it is not a photograph or an announcement of a real club event. The earlier artwork remains available in `public/images/` and Git history.
 
 ## Stack
 

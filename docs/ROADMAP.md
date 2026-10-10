@@ -10,9 +10,9 @@ Base revisada: commit `47eabb3`, brief de contexto y preferencias posteriores de
 
 Una casa digital de **NC LATIN CLUB** que haga sentir pertenencia, permita encontrar eventos y descubrir culturas latinoamericanas, y pueda mantenerse por futuras generaciones del club sin programar.
 
-El inicio será un recorrido visual sencillo y cálido; las páginas internas darán espacio a las funciones importantes. La sensación de un mundo latino nace del paisaje, las historias, la música, las imágenes y las interacciones. Mantener la paleta crema, esmeralda, terracota y dorado, la tipografía editorial y el movimiento intencional. El usuario descartó el patio como protagonista. Las referencias de ambiente son Encanto y Coco, con ilustraciones originales y sin copiar personajes.
+Dirección visual elegida el 10 de octubre de 2026: **festival urbano nocturno, con luces y energía**, para una comunidad joven en sus 20s. El prototipo anterior resultó demasiado sereno para el grupo. El inicio combinará fondo azul noche, tipografía sans fuerte, amarillo luminoso y acentos coral/cian, composiciones de cartel y un festival callejero latino imaginado. El movimiento acompaña el recorrido y respeta la preferencia de movimiento reducido. La magia nace de la luz, la profundidad y el descubrimiento cultural. El usuario descartó el patio como protagonista y la decoración floral como lenguaje dominante.
 
-Las preferencias posteriores del usuario prevalecen sobre las notas históricas del brief: título **NC LATIN CLUB**, paisaje actual, botones de contacto solicitados, patrocinio NCSAC y mapa regional hasta Estados Unidos. El brief original continúa siendo material de contexto; este documento resume el trabajo siguiente.
+Las preferencias posteriores del usuario prevalecen sobre las notas históricas del brief: título **NC LATIN CLUB**, nueva dirección nocturna, botones de contacto solicitados, patrocinio NCSAC y mapa regional hasta Estados Unidos. El brief original continúa siendo material de contexto; este documento resume el trabajo siguiente.
 
 ## 2. Punto de partida real
 
@@ -210,6 +210,8 @@ El orden es una recomendación: la recopilación de fotos, perfiles, eventos y l
 | Prioridad y fecha deseada de lanzamiento | Ajustar qué entra en la primera versión; todavía no hay una fecha prometida. |
 
 ## 8. Próximo avance concreto
+
+Prioridad actual: terminar y revisar el rediseño del inicio con la dirección nocturna elegida, antes de retomar las funciones nuevas.
 
 Preparar el diseño técnico de **Eventos y calendario**, con una revisión breve de la base necesaria para rutas e idiomas. Definir pantallas de lista, mes y detalle, los campos compartidos con el inicio y el tratamiento de fechas culturales. Decidir entonces las tareas y archivos exactos; elegir el backend no bloquea ese diseño.
 

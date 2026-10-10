@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: light;
-  --background: #f8f3e7;
-  --foreground: #173d32;
-  --muted: #59745d;
-  --terracotta: #9b5139;
-  --gold: #c28b42;
+  color-scheme: dark;
+  --background: #0c101b;
+  --foreground: #f6f5ef;
+  --muted: #b3bdd1;
+  --terracotta: #ff977d;
+  --gold: #ffe06a;
 }
 
 @theme inline {
@@ -34,8 +34,8 @@ button, summary {
 }
 
 ::selection {
-  background: #e5c4a4;
-  color: #173d32;
+  background: #ffe06a;
+  color: #0c101b;
 }
 
 @media (prefers-reduced-motion: reduce) {

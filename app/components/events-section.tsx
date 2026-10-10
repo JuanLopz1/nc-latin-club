@@ -25,11 +25,9 @@ export default function EventsSection({ language }: { language: Language }) {
 
       {clubEvents.length === 0 ? (
         <div className={s.empty}>
-          <svg className={s.sun} viewBox="0 0 180 180" fill="none" aria-hidden="true">
-            <circle cx="90" cy="90" r="77" stroke="currentColor" strokeDasharray="2 7" />
-            {Array.from({ length: 12 }, (_, i) => <ellipse key={i} cx="90" cy="56" rx="9" ry="22" stroke="currentColor" transform={`rotate(${i * 30} 90 90)`} />)}
-            <circle cx="90" cy="90" r="17" fill="currentColor" />
-            <path d="m22 20 3 8 8 3-8 3-3 8-3-8-8-3 8-3Zm135 113 3 8 8 3-8 3-3 8-3-8-8-3 8-3Z" fill="currentColor" />
+          <svg className={s.energy} viewBox="0 0 180 180" fill="none" aria-hidden="true">
+            <path d="M112 15 45 98h42l-15 67 68-85H98Z" fill="currentColor" />
+            <path d="m22 39 16 8m104 83 16 8M25 130l14-9m102-70 14-9" stroke="#76dbe3" strokeWidth="3" />
           </svg>
           <div className={s.emptyCopy}>
             <p className={s.eyebrow}>{t.emptyLabel}</p>
