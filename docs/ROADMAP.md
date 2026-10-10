@@ -217,6 +217,8 @@ Prioridad actual: terminar y revisar el rediseño del inicio con la dirección n
 
 Preparar el diseño técnico de **Eventos y calendario**, con una revisión breve de la base necesaria para rutas e idiomas. Definir pantallas de lista, mes y detalle, los campos compartidos con el inicio y el tratamiento de fechas culturales. Decidir entonces las tareas y archivos exactos; elegir el backend no bloquea ese diseño.
 
+La [propuesta concreta de Events y calendario](superpowers/specs/2026-10-10-events-calendar-design.md) está escrita para revisión del fundador. Incluye At NC, Out of NC y Fechas latinas, y propone conservar por ahora el selector de idioma del prototipo durante la navegación. Todavía no es una implementación ni una aprobación de la estrategia de idiomas.
+
 Los puntos a resolver en ese diseño son la estrategia de idiomas propuesta, las categorías del calendario y el comportamiento de las entradas de día completo. La siguiente implementación construye este subsistema; los demás hitos mantienen su alcance propio.
 
 ## 9. Regla de entrega
