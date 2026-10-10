@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { copy, countries, type Language } from "./home-copy";
+import { copy, countries } from "./home-copy";
 import { clubLinks, joinEmailHref } from "./club-links";
 import EventsSection from "./events-section";
+import { useSiteLanguage } from "./site-context";
 import s from "./club-home.module.css";
 
 function Signal({ className = "" }: { className?: string }) {
@@ -54,24 +54,12 @@ function NiagaraArt() {
 }
 
 export default function ClubHome() {
-  const [language, setLanguage] = useState<Language>("en");
-  const [menuOpen, setMenuOpen] = useState(false);
+  const { language } = useSiteLanguage();
   const [countryId, setCountryId] = useState<string>(countries[0].id);
-  const menuButton = useRef<HTMLButtonElement>(null);
   const countryDialog = useRef<HTMLDialogElement>(null);
   const t = copy[language];
   const country = countries.find(item => item.id === countryId) ?? countries[0];
 
-  useEffect(() => { document.documentElement.lang = language; }, [language]);
-  useEffect(() => {
-    if (!menuOpen) return;
-    const close = (event: KeyboardEvent) => { if (event.key === "Escape") { setMenuOpen(false); menuButton.current?.focus(); } };
-    window.addEventListener("keydown", close);
-    return () => window.removeEventListener("keydown", close);
-  }, [menuOpen]);
-
-  const navIds = ["familia", "events", "roots", "niagara", "join"];
-  const toggleLanguage = () => setLanguage(language === "en" ? "es" : "en");
   const openCountry = (id: string) => {
     setCountryId(id);
     countryDialog.current?.showModal();
@@ -80,19 +68,7 @@ export default function ClubHome() {
     ? <a href={clubLinks.instagramUrl} className={s.textLink} target="_blank" rel="noopener noreferrer">{t.heroSecondary}<Arrow /></a>
     : <span className={s.socialPending}><span>{t.heroSecondary}</span><small>{t.instagramPending}</small></span>;
 
-  return <div className={s.home} id="top">
-    <a href="#main-content" className={s.skip}>{t.skip}</a>
-    <header className={s.header}>
-      <Link href="/" className={s.brand} aria-label="NC Latin Club — Home"><Signal /><span>NC LATIN<span className={s.brandSmall}>CLUB</span></span></Link>
-      <nav id="main-navigation" aria-label={language === "en" ? "Main navigation" : "Navegación principal"} className={`${s.nav} ${menuOpen ? s.navOpen : ""}`}>
-        {navIds.map((id, index) => <a href={`#${id}`} key={id} onClick={() => setMenuOpen(false)} className={id === "join" ? s.navJoin : undefined}>{t.nav[index]}{id === "join" && <Arrow />}</a>)}
-      </nav>
-      <div className={s.headerTools}>
-        <button className={s.languageButton} onClick={toggleLanguage} aria-label={`${t.language}: ${language === "en" ? "Español" : "English"}`}><span className={language === "en" ? s.activeLanguage : ""}>EN</span><span aria-hidden="true">/</span><span className={language === "es" ? s.activeLanguage : ""}>ES</span></button>
-        <button ref={menuButton} className={s.menuButton} aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? t.close : t.menu}<span aria-hidden="true">{menuOpen ? "−" : "+"}</span></button>
-      </div>
-    </header>
-
+  return <div className={s.home}>
     <main id="main-content" tabIndex={-1}>
       <section className={s.hero} aria-labelledby="hero-title">
         <div className={s.heroCopy}>
@@ -144,6 +120,6 @@ export default function ClubHome() {
       <section id="join" className={s.join} aria-labelledby="join-title"><Pulse className={s.joinPulseLeft} /><Pulse className={s.joinPulseRight} /><Signal className={s.joinSignal} /><p className={s.eyebrow}>{t.joinLabel}</p><h2 id="join-title">{t.joinTitle[0]}<br /><em>{t.joinTitle[1]}</em></h2><p className={s.joinBody}>{t.joinBody}</p><div className={s.joinActions}><a href={joinEmailHref} className={s.button} title={t.emailHint}>{t.joinAction}<Arrow /></a>{instagramAction}</div><p className={s.joinNote}>{t.joinNote}</p></section>
     </main>
 
-    <footer className={s.footer}><div className={s.footerTop}><Link href="/" className={s.brand}><Signal /><span>NC LATIN<span className={s.brandSmall}>CLUB</span></span></Link><p>{t.footerLine}</p><a href="#top" className={s.textLink}>{t.backTop}<span aria-hidden="true">↑</span></a></div><div className={s.footerBottom}><span>© 2026 NC Latin Club</span><span>{t.footerNote}</span><div><button onClick={() => setLanguage("en")} aria-pressed={language === "en"}>English</button><span aria-hidden="true">/</span><button onClick={() => setLanguage("es")} aria-pressed={language === "es"}>Español</button></div></div></footer>
+
   </div>;
 }
