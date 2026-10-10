@@ -23,7 +23,7 @@ Las preferencias posteriores del usuario prevalecen sobre las notas históricas 
 | Eventos | Primera entrada real: Latin Fiesta!, 23–24 de octubre de 2026, The Core, organizada por International; datos y enlace NC Engage aportados por el usuario. `/events`, calendario de seis semanas, detalles y galerías opcionales implementados. Out of NC y Fechas latinas esperan contenido verificado. |
 | Mapa | Ilustración con México, Colombia, Perú y Brasil y diálogos accesibles. No es el mapa/globo regional definitivo. |
 | Contacto | Mailto al correo solicitado con el mensaje de unión prellenado. |
-| Instagram | Falta el perfil oficial; la acción muestra un aviso pendiente. |
+| Instagram | Perfil oficial `https://www.instagram.com/nclat1nclub/`, aportado por el fundador y conectado en inicio/contacto. |
 | Identidad | El logo oficial existe según el usuario, pero no está incorporado al repositorio. |
 | Administración | Sin autenticación, base de datos, almacenamiento administrado ni portal. |
 | Páginas internas | Inicio, `/events`, `/events/[slug]` y 404 propia bilingüe. |
@@ -68,7 +68,8 @@ Para la entrega de Events, el fundador aprobó conservar el selector EN/ES del p
 
 - [x] Confirmar la estrategia EN/ES y compartir encabezado, pie y controles entre páginas.
 - [x] Preservar el título, el paisaje, Discover Latin Niagara, el patrocinio y el correo actuales.
-- [ ] Incorporar el logo y la cuenta de Instagram cuando el fundador los facilite.
+- [ ] Incorporar el logo oficial cuando el fundador lo facilite.
+- [x] Conectar el Instagram oficial @nclat1nclub en las acciones de inicio y contacto.
 - [x] Separar contratos de contenido de su fuente: primero archivos locales; después el portal suministrará los mismos campos.
 - [ ] Definir contenido global y por página, medios, eventos y fechas culturales; ampliar con staff, países, noticias y directorio cuando corresponda.
 
@@ -157,7 +158,8 @@ Primera entrega del portal: acceso, permisos, ajustes globales, medios y eventos
 - [ ] Añadir después el envío de fotos por visitantes: información de autorización, carga controlada y confirmación de recepción.
 - [ ] Mantener los envíos pendientes en almacenamiento privado hasta la aprobación del admin; permitir rechazo y retirada de imágenes publicadas.
 - [ ] Definir límites de tamaño, formatos y frecuencia de envío según el servicio elegido.
-- [ ] Activar el enlace oficial de Instagram y evaluar posts seleccionados mediante integraciones permitidas, con alternativa si la plataforma o el visitante bloquea el contenido externo.
+- [x] Activar el enlace oficial de Instagram @nclat1nclub.
+- [ ] Evaluar posts seleccionados mediante integraciones permitidas, con alternativa si la plataforma o el visitante bloquea el contenido externo.
 
 **Terminado cuando:** un visitante envía una foto, un admin la revisa y solo una aprobación la hace pública; los originales pendientes no quedan accesibles mediante enlaces públicos. La fototeca sigue funcionando si Instagram no carga.
 
@@ -207,7 +209,7 @@ El orden es una recomendación: la recopilación de fotos, perfiles, eventos y l
 
 | Necesario | Cuándo afecta al trabajo |
 | --- | --- |
-| Archivo del logo y enlace/@ oficial de Instagram | Identidad final y acciones sociales; la base puede avanzar mientras faltan. |
+| Archivo del logo oficial | Identidad final y acciones sociales; la base puede avanzar mientras faltan. |
 | Próximos eventos confirmados y fuentes regionales | Latin Fiesta! ya fue aportado y publicado en el inicio. Faltan entradas verificadas para Out of NC y el calendario cultural. |
 | Nombres, cargos, biografías y fotos aprobados del staff | Publicar perfiles reales. |
 | Países/territorios del mapa y primeras fuentes culturales | Cerrar el alcance del mapa y sus páginas. |
@@ -219,7 +221,7 @@ El orden es una recomendación: la recopilación de fotos, perfiles, eventos y l
 
 El fundador aceptó el inicio nocturno y el diseño y plan de Events. La agenda está implementada con At NC, Out of NC, Fechas latinas, lista/calendario, detalles y galerías opcionales. El [diseño aprobado](superpowers/specs/2026-10-10-events-calendar-design.md), [plan](superpowers/plans/2026-10-10-events-calendar.md) y [QA](EVENTS_QA.md) documentan alcance y comprobaciones.
 
-El siguiente avance propuesto es **Familia y staff**: definir misión e historia, preparar perfiles EN/ES y publicar nombres, cargos y fotografías aprobados. El logo y el Instagram oficiales siguen pendientes. La carga de archivos desde el portal admin requiere su propio diseño de permisos y almacenamiento.
+El siguiente avance propuesto es **Familia y staff**: definir misión e historia, preparar perfiles EN/ES y publicar nombres, cargos y fotografías aprobados. El logo oficial sigue pendiente; Instagram está conectado a @nclat1nclub. La carga de archivos desde el portal admin requiere su propio diseño de permisos y almacenamiento.
 
 El asistente está autorizado a investigar contenido público. [Events Research](EVENTS_RESEARCH.md) registra el nuevo intento y el bloqueo CONNECT 403, que impide verificar entradas regionales y culturales. Latin Fiesta conserva la evidencia aportada por el fundador; no se publicaron datos ficticios para llenar pestañas.
 

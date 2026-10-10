@@ -73,7 +73,7 @@ Validation runs when the collection loads; `npm run test:events` also checks ref
 
 This release displays media from local files. Uploading, ordering and replacing images through an admin interface still requires the future authenticated portal and storage. Filters are held in browser state, not shareable query parameters. A full reload begins in English; localized metadata and `/es` routes remain future work. [QA evidence](docs/EVENTS_QA.md) records browser and fixture checks.
 
-The homepage title is **NC LATIN CLUB** in both languages. “Join us” opens the visitor's email application with the club contact and requested introduction filled in; the website does not send email. Public contact and social destinations are centralized in `app/components/club-links.ts`. The Instagram destination is awaiting the official profile URL. The sponsor text identifies NCSAC, as requested by club leadership.
+The homepage title is **NC LATIN CLUB** in both languages. “Join us” opens the visitor's email application with the club contact and requested introduction filled in; the website does not send email. Public contact and social destinations are centralized in `app/components/club-links.ts`. “Stay in the loop” opens the official Instagram profile, [@nclat1nclub](https://www.instagram.com/nclat1nclub/), in a new tab. The sponsor text identifies NCSAC, as requested by club leadership.
 
 ## Requested next stages
 
