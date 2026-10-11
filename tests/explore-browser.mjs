@@ -17,7 +17,7 @@ try {
  await send('Page.enable');await send('Page.bringToFront');await send('Emulation.setFocusEmulationEnabled',{enabled:true});await send('Runtime.enable');await send('Emulation.setTouchEmulationEnabled',{enabled:true,maxTouchPoints:1});await viewport(375);
  await send('Page.navigate',{url:base+'/explore'});await wait('!!document.querySelector("[data-globe-scene][data-ready=true]")');
  check('real WebGL globe rendered',await evaluate('!!document.querySelector("[data-globe-scene] canvas") && document.querySelector("[data-globe-scene] canvas").width>0'));
- const count=Number(process.env.EXPECT_DESTINATIONS || 6);
+ const count=Number(process.env.EXPECT_DESTINATIONS || 55);
  check('destination list covers this milestone',await evaluate(`document.querySelectorAll('[data-country]').length===${count}`));
  check('controls are collapsed on arrival',await evaluate('document.querySelector("[data-tools-trigger]").getAttribute("aria-expanded")==="false" && !document.querySelector("[data-region=all]") && !document.querySelector("[data-zoom]")'));
  const arrival=await evaluate('JSON.parse(document.querySelector("[data-globe-scene]").dataset.camera)');await pause(1800);
@@ -49,7 +49,7 @@ try {
  await click('[data-region=all]');
  for(const width of [320,375,768,1440]){await viewport(width);await pause(80);check('responsive explorer width '+width,await evaluate('document.documentElement.scrollWidth<=innerWidth && [...document.querySelectorAll("button[data-reset],button[data-zoom]")].every(b=>{const r=b.getBoundingClientRect();return r.width>=44 && r.height>=44 && r.left>=0 && r.right<=innerWidth})'));if(process.env.ARTIFACT_DIR && width===375){await evaluate('document.querySelector("[data-globe-scene]").scrollIntoView({block:"center",behavior:"instant"})');await fs.mkdir(process.env.ARTIFACT_DIR,{recursive:true});const shot=await send('Page.captureScreenshot',{format:'png'});await fs.writeFile(process.env.ARTIFACT_DIR+'/roots-tools-mobile.png',Buffer.from(shot.data,'base64'));}}
  await viewport(1440);
- if(count===54){await evaluate('document.querySelector("[data-country=bermudas]").scrollIntoView({block:"center",behavior:"instant"})');await click('[data-country=bermudas]');await wait('(()=>{const r=document.querySelector("[data-selected-country]").getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight})()');check('last list destination brings its preview into view',true);await key('Escape','Escape');}
+ if(count>=54){await evaluate('document.querySelector("[data-country=bermudas]").scrollIntoView({block:"center",behavior:"instant"})');await click('[data-country=bermudas]');await wait('(()=>{const r=document.querySelector("[data-selected-country]").getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight})()');check('last list destination brings its preview into view',true);await key('Escape','Escape');}
  await click('[data-country=colombia]');await pause(600);await evaluate('document.querySelector("[data-globe-scene]").scrollIntoView({block:"center",behavior:"instant"})');
  if(process.env.ARTIFACT_DIR){await fs.mkdir(process.env.ARTIFACT_DIR,{recursive:true});const r=await send('Page.captureScreenshot',{format:'png'});await fs.writeFile(process.env.ARTIFACT_DIR+'/roots-globe-desktop.png',Buffer.from(r.data,'base64'));}
  await click('[aria-label="Close place details"]');await openTools();await click('[data-rotate]');await pause(250);check('visitor can start rotation',await evaluate('document.querySelector("[data-rotate]").getAttribute("aria-pressed")==="true"'));
@@ -59,7 +59,7 @@ try {
  await wait('document.querySelector("[data-rotate]").disabled && document.querySelector("[data-rotate]").getAttribute("aria-pressed")==="false"');
  check('reduced motion disables automatic rotation controls',await evaluate('document.querySelector("[data-rotate]").disabled && document.querySelector("[data-rotate]").getAttribute("aria-pressed")==="false"'));
  await click('[data-reset]');check('reduced motion settles without a camera tween',await evaluate('new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve(Math.abs(JSON.parse(document.querySelector("[data-globe-scene]").dataset.camera).altitude-2.15)<.02))))'));
- if(count===54){
+ if(count>=54){
   for(const slug of ['saba','san-martin-frances','sint-maarten']){
    await click('[data-country='+slug+']');await pause(150);await click('[aria-label="Close place details"]');await evaluate('document.querySelector("[data-globe-scene]").scrollIntoView({block:"center",behavior:"instant"})');
    const islandRect=await evaluate('(()=>{const r=document.querySelector("[data-globe-scene] canvas").getBoundingClientRect();return{x:r.left+r.width/2,y:r.top+r.height/2}})()');
@@ -75,8 +75,8 @@ try {
   await click('[data-country=colombia]');await wait('Math.abs(JSON.parse(document.querySelector("[data-globe-scene]").dataset.camera).lng+73.174)<.2');
   await evaluate('new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)))');
   const saved=await evaluate('document.querySelector("[data-globe-scene]").dataset.camera');await click('[data-selected-country] a[href="/explore/colombia"]');await wait('location.pathname==="/explore/colombia" && !!document.querySelector("[data-culture-page=colombia]")');
-  check('culture page has real sections and no draft instructions',await evaluate('document.querySelector("[data-culture-page] h1").textContent.includes("Barranquilla") && document.querySelectorAll("[data-culture-page] section").length>=3 && !/ui_placeholder|needs_research|Investigar/.test(document.querySelector("[data-culture-page]").textContent)'));
-  await evaluate('[...document.querySelectorAll("footer button")].find(b=>b.textContent==="Español").click()');await pause(100);check('culture content follows shared Spanish selector',await evaluate('document.querySelector("[data-culture-page] h1").textContent==="Barranquilla se expresa en carnaval"'));
+  check('culture page has real sections and no draft instructions',await evaluate('document.querySelector("[data-culture-page] h1").textContent==="Colombia" && document.querySelectorAll("[data-culture-page] section").length>=3 && !/ui_placeholder|needs_research|Investigar/.test(document.querySelector("[data-culture-page]").textContent)'));
+  await evaluate('[...document.querySelectorAll("footer button")].find(b=>b.textContent==="Español").click()');await pause(100);check('culture content follows shared Spanish selector',await evaluate('document.querySelector("[data-culture-page] h1").textContent==="Colombia" && document.querySelector("[data-culture-page]").textContent.includes("Barranquilla se expresa en carnaval")'));
   await click('[data-culture-page] a[href="/explore"]');await wait('location.pathname==="/explore" && !!document.querySelector("[data-globe-scene][data-ready=true]")');
   check('return from culture page restores camera and selection',await evaluate(`(()=>{const a=JSON.parse(document.querySelector('[data-globe-scene]').dataset.camera),b=${saved};return Math.abs(a.lat-b.lat)<.02&&Math.abs(a.lng-b.lng)<.02&&Math.abs(a.altitude-b.altitude)<.02&&!!document.querySelector('[data-selected-country=colombia]')})()`));
  }
@@ -85,8 +85,8 @@ try {
  await send('Page.addScriptToEvaluateOnNewDocument',{source:`const rootsGetContext=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(type,...args){return /webgl/i.test(type)?null:rootsGetContext.call(this,type,...args);};`});
  await send('Page.navigate',{url:base+'/explore'});await wait('!!document.querySelector("[role=status]") && [...document.querySelectorAll("[role=status]")].some(el=>el.textContent.includes("3D globe is unavailable"))');
  await openTools();check('WebGL failure keeps the full list and accessible disabled zoom controls',await evaluate(`document.querySelectorAll('[data-country]').length===${count} && document.querySelector('[data-zoom]').disabled && !!document.querySelector('[data-reset]')`));
- await evaluate('document.querySelector("main input").focus()');await send('Input.insertText',{text:count===54?'Saba':'Curaçao'});await wait('document.querySelectorAll("[data-country]").length===1');
- await click(count===54?'[data-country=saba]':'[data-country=curazao]');
+ await evaluate('document.querySelector("main input").focus()');await send('Input.insertText',{text:count>=54?'Saba':'Curaçao'});await wait('document.querySelectorAll("[data-country]").length===1');
+ await click(count>=54?'[data-country=saba]':'[data-country=curazao]');
  check('search and selection work without WebGL',await evaluate('!!document.querySelector("[data-selected-country]")'));
  check('no runtime exceptions',errors.length===0);if(errors.length)console.log(errors);
  if(failures.length)throw Error(failures.join('; '));console.log('PASS Explore Our Roots');

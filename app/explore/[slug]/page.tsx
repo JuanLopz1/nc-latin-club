@@ -8,7 +8,7 @@ export function generateStaticParams() { return culturePages.map(page => ({ slug
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params, page = getCulturePage(slug);
   if (!page) notFound();
-  return { title: `${countries.find(c => c.slug === slug)?.name.en} · Explore Our Roots | NC LATIN CLUB`, description: page.introduction.en };
+  return { title: `${countries.find(c => c.slug === slug)?.name.en} · Explore Our Roots | NC LATIN CLUB`, description: countries.find(c => c.slug === slug)?.intro.en };
 }
 export default function CultureRoute({ params }: { params: Promise<{ slug: string }> }) { return <Suspense fallback={null}><ResolvedCulture params={params} /></Suspense>; }
 async function ResolvedCulture({ params }: { params: Promise<{ slug: string }> }) {

@@ -65,3 +65,5 @@
 @media (max-width: 1100px) {
   .navOpen { display: flex; flex-wrap: wrap; gap: 4px 24px; }
 }
+
+.brandLogo{width:64px;height:64px;object-fit:contain;flex-shrink:0}.footer .brandLogo{width:80px;height:80px}@media(max-width:760px){.brandLogo{width:48px;height:48px}.footer .brandLogo{width:64px;height:64px}}

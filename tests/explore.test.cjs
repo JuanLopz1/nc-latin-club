@@ -23,8 +23,8 @@ test('simplified world polygons do not paint the complement of a small island',a
  const {geoArea}=await import('d3-geo');const world=JSON.parse(require('node:fs').readFileSync(require('node:path').join(__dirname,'../public/data/roots-world.geojson'),'utf8'));
  for(const feature of world.features){const polygons=feature.geometry.type==='Polygon'?[feature.geometry.coordinates]:feature.geometry.coordinates;for(const coordinates of polygons)assert.ok(geoArea({type:'Polygon',coordinates})<2*Math.PI,'inverted geometry: '+feature.properties.name);}
 });
-test('final directory exposes all 54 distinct countries and small territories',()=>{
- assert.equal(data.countries.length,54);assert.equal(new Set(data.countries.map(c=>c.slug)).size,54);
+test('final directory exposes all 55 distinct countries and small territories',()=>{
+ assert.equal(data.countries.length,55);assert.equal(new Set(data.countries.map(c=>c.slug)).size,55);
  for(const slug of ['bonaire','saba','san-eustaquio','guayana-francesa','guadalupe','martinica','san-martin-frances','sint-maarten'])assert.equal(utils.filterCountries(data.countries,slug.replaceAll('-',' '),utils.regions).some(c=>c.slug===slug),true,slug);
 });
 test('published cultural pages contain reviewed bilingual content and no draft sections',()=>{
@@ -33,7 +33,7 @@ test('published cultural pages contain reviewed bilingual content and no draft s
  for(const value of [page.title,page.introduction,...page.sections.flatMap(s=>[s.title,s.text])]){assert.ok(value.en&&value.es);assert.doesNotMatch(value.en+' '+value.es,/needs_research|ui_placeholder|investigar|comprobación pendiente/i);}assert.ok(page.sections.length>0);}
  assert.deepEqual(pages.map(p=>p.slug).sort(),['brasil','colombia','jamaica','mexico']);
 });
-test('all 54 destinations have independent selectable world geometry, including shared ISO territories',()=>{
+test('all 55 destinations have independent selectable world geometry, including shared ISO territories',()=>{
  const fs=require('node:fs'),path=require('node:path'),world=JSON.parse(fs.readFileSync(path.join(__dirname,'../public/data/roots-world.geojson'),'utf8'));
  for(const c of data.countries){const geometry=world.features.filter(f=>f.properties.slug?f.properties.slug===c.slug:f.properties.iso2===c.iso2);assert.equal(geometry.length,1,c.slug);assert.ok(geometry[0].properties.americas);}
  const islands=world.features.filter(f=>f.properties.iso2==='BQ');assert.equal(islands.length,3);assert.equal(new Set(islands.map(f=>JSON.stringify(f.geometry))).size,3);
@@ -52,5 +52,17 @@ test('first view keeps map tools collapsed while search and all destinations rem
  const React=require('react'),{renderToStaticMarkup}=require('react-dom/server');
  const {SiteProvider}=require('../app/components/site-context.tsx');const Explore=require('../app/components/explore/explore-experience.tsx').default;
  const html=renderToStaticMarkup(React.createElement(SiteProvider,null,React.createElement(Explore,{countries:data.countries})));
- assert.match(html,/data-tools-trigger[^>]*aria-expanded="false"/);assert.ok(!html.includes('data-tools-panel'));assert.ok(!html.includes('data-region="all"'));assert.ok(!html.includes('data-zoom="in"'));assert.ok(html.includes('type="search"'));assert.equal((html.match(/data-country=/g)||[]).length,54);
+ assert.match(html,/data-tools-trigger[^>]*aria-expanded="false"/);assert.ok(!html.includes('data-tools-panel'));assert.ok(!html.includes('data-region="all"'));assert.ok(!html.includes('data-zoom="in"'));assert.ok(html.includes('type="search"'));assert.equal((html.match(/data-country=/g)||[]).length,55);
+});
+
+test('Canada is selectable from bilingual search with the North America region',()=>{
+ for(const query of ['Canada','Canadá','canada']){
+ const found=utils.filterCountries(data.countries,query,['norteamerica']);assert.equal(found.length,1);assert.equal(found[0].slug,'canada');assert.equal(found[0].iso2,'CA');assert.ok(found[0].name.en && found[0].name.es);
+ }
+ assert.equal(utils.filterCountries(data.countries,'Canada',['caribe']).length,0);
+});
+test('culture detail leads with the country and presents its tradition as a spotlight',()=>{
+ const React=require('react'),{renderToStaticMarkup}=require('react-dom/server');const {SiteProvider}=require('../app/components/site-context.tsx');const Detail=require('../app/components/explore/country-detail.tsx').default;
+ const page=require('../app/components/explore/culture-data.ts').getCulturePage('colombia'),country=data.countries.find(c=>c.slug==='colombia');const html=renderToStaticMarkup(React.createElement(SiteProvider,null,React.createElement(Detail,{country,page})));
+ assert.match(html,/<h1>Colombia<\/h1>/);assert.match(html,/<h2[^>]*>Barranquilla, expressed through carnival<\/h2>/);assert.match(html,/Cultural spotlight/);
 });

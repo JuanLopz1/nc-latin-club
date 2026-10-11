@@ -1621,5 +1621,34 @@
       "en": "A British Overseas Territory.",
       "es": "Territorio británico de ultramar."
     }
+  },
+  {
+    "slug": "canada",
+    "iso2": "CA",
+    "name": {
+      "en": "Canada",
+      "es": "Canadá"
+    },
+    "aliases": [
+      "Canada",
+      "Canadá",
+      "canada"
+    ],
+    "region": "norteamerica",
+    "center": {
+      "lat": 60.324287,
+      "lng": -101.9107
+    },
+    "intro": {
+      "en": "Our home in Niagara, and another place to explore together. Discover Canada and its connections with our familia.",
+      "es": "Nuestro hogar en Niagara y otro lugar para explorar juntos. Descubre Canadá y sus conexiones con nuestra familia."
+    },
+    "sources": [
+      {
+        "title": "Natural Earth · geographic location",
+        "url": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_countries.geojson"
+      }
+    ],
+    "culturalStatus": "pending"
   }
 ]

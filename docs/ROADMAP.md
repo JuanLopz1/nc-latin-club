@@ -21,7 +21,7 @@ Las preferencias posteriores del usuario prevalecen sobre las notas históricas 
 | Inicio | Prototipo nocturno aprobado, Familia, Eventos enlazados a la agenda, Raíces, Niagara y contacto. |
 | Idiomas | EN por defecto; idioma compartido entre inicio, agenda y detalle. Una recarga vuelve a EN; sin rutas traducidas ni metadatos por idioma. |
 | Eventos | Primera entrada real: Latin Fiesta!, 23–24 de octubre de 2026, The Core, organizada por International; datos y enlace NC Engage aportados por el usuario. `/events`, calendario de seis semanas, detalles y galerías opcionales implementados. Out of NC y Fechas latinas esperan contenido verificado. |
-| Mapa | `/explore`: globo 3D del planeta, Américas destacadas, 54 destinos con búsqueda/lista, opciones desplegables y EN/ES. Cuatro introducciones culturales; perfiles completos pendientes. |
+| Mapa | `/explore`: globo 3D del planeta, Américas destacadas, 55 destinos con búsqueda/lista, opciones desplegables y EN/ES. Cuatro introducciones culturales; perfiles completos pendientes. |
 | Contacto | Mailto al correo solicitado con el mensaje de unión prellenado. |
 | Instagram | Perfil oficial `https://www.instagram.com/nclat1nclub/`, aportado por el fundador y conectado en inicio/contacto. |
 | Identidad | El logo oficial existe según el usuario, pero no está incorporado al repositorio. |
@@ -262,3 +262,9 @@ El fundador aprobó la implementación sin otra ronda de propuesta. El [registro
 ### Ajuste de presentación del globo — 10 octubre 2026
 
 Preferencia actual del fundador: giro visible al entrar, pausa al tocar el globo o seleccionar destino, y opciones desplegables cerradas por defecto. Sustituye la instrucción anterior de zoom/restablecer siempre expuestos. Las opciones conservan acceso por teclado y móvil; movimiento reducido mantiene el mundo quieto. El alcance de 54 destinos y los perfiles culturales pendientes se conserva.
+
+### Logo, Canadá y contenido aportado por el fundador
+
+Nuevo alcance confirmado: los 54 destinos originales más Canadá (55), seleccionables desde el globo, la búsqueda y la lista. El logo adaptado reemplaza la marca provisional en encabezado y pie. Las cuatro páginas existentes presentan el país como título principal y su tradición como sección cultural; siguen siendo introducciones limitadas.
+
+El fundador eligió aportar los textos, imágenes y música. [La plantilla de contenido](country-content/LEEME.md) organiza 55 fichas y permite entregar por lotes, solo en español si lo prefiere. La ampliación cultural y las nuevas páginas esperan ese material y su revisión; no se publica una ruta vacía para simular que el perfil está completo.

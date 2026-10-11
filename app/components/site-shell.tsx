@@ -1,10 +1,11 @@
 'use client';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { copy } from './home-copy';
 import { useSiteLanguage } from './site-context';
 import s from './site-shell.module.css';
-function Brand() { return <><svg viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="m32 2 7 19 19-7-15 18 15 18-19-7-7 19-7-19-19 7 15-18L6 14l19 7Z" fill="currentColor" /><circle cx="32" cy="32" r="6" fill="var(--background)" /></svg><span>NC LATIN<span className={s.brandSmall}>CLUB</span></span></>; }
+function Brand() { return <><Image src="/images/brand/nc-latin-club.png" width={64} height={64} sizes="64px" alt="" className={s.brandLogo} /><span>NC LATIN<span className={s.brandSmall}>CLUB</span></span></>; }
 function Arrow() { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" /></svg>; }
 export default function SiteShell({ children }: { children: ReactNode }) {
   const { language, setLanguage } = useSiteLanguage();
