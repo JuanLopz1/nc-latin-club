@@ -51,7 +51,7 @@ export default function GlobeScene({ ref: handleRef, ...props }: Props) {
         .onPolygonHover(o => { const c = o ? match(o) : undefined; g.polygonStrokeColor(f => match(f)?.slug === c?.slug && c ? '#ffe06a' : match(f)?.slug === live.current.selectedSlug ? '#ffe06a' : match(f) ? '#76b3bd' : '#3a4b5a'); });
       g.renderer().setPixelRatio(Math.min(devicePixelRatio, 1.5));
       const controls = g.controls(); controls.enablePan = false; controls.minDistance = 165; controls.maxDistance = 400; controls.autoRotate = live.current.rotating && !getReducedMotion(); controls.autoRotateSpeed = .8; controls.enableDamping = !controls.autoRotate && !getReducedMotion(); controls.dampingFactor = .12;
-      if (live.current.presentation) { controls.enableZoom = false; controls.enableRotate = false; }
+      if (live.current.presentation) { controls.enableZoom = false; controls.enableRotate = true; }
       controls.addEventListener('start', interaction); controls.addEventListener('end', saveCamera);
       g.onZoom(camera => { element.dataset.camera = JSON.stringify(camera); });
       const pendingSelection = live.current.countries.find(c => c.slug === live.current.selectedSlug);
@@ -59,7 +59,7 @@ export default function GlobeScene({ ref: handleRef, ...props }: Props) {
       lastSelection.current = live.current.selectedSlug;
       g.pointOfView(view, 0);
       live.current.onCamera(view);
-      g.renderer().domElement.style.touchAction = 'pan-y';
+      g.renderer().domElement.style.touchAction = 'none';
       g.renderer().domElement.addEventListener('webglcontextlost', contextLost);
       resize = new ResizeObserver(() => { if (!disposed) g.width(element.clientWidth).height(element.clientHeight); }); resize.observe(element);
       document.addEventListener('visibilitychange', visibility);

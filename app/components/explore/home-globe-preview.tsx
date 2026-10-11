@@ -40,6 +40,7 @@ export default function HomeGlobePreview({ language }: { language: Language }) {
   return <div ref={root} className={s.teaserPreview} data-home-globe data-preview-country={selected} data-preview-playing={playing}>
     {loaded && !failed && <GlobeScene ref={handle} countries={destinations} selectedSlug={selected} camera={camera} rotating={playing} active={visible} presentation language={language} onSelect={select} onCamera={changedCamera} onReady={setReady} onInteraction={interacted} onError={error} />}
     {!ready && <div className={s.teaserPreviewFallback} style={{ backgroundImage: `url(/images/roots/${selected}.svg)` }} aria-hidden="true" />}
+    <p className={s.previewHint}>{language === 'en' ? 'Drag the globe · make it yours' : 'Arrastra el globo · hazlo tuyo'}</p>
     <div className={s.previewCaption}><span>{country.name[language]}</span><Link href={`/explore/${selected}`}>{language === 'en' ? 'Discover' : 'Descubrir'}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" /></svg></Link></div>
   </div>;
 }

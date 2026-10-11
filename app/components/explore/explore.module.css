@@ -44,3 +44,6 @@
 @media(prefers-reduced-motion:reduce){:global(html:not([data-motion="full"])) .connectionCard,:global(html:not([data-motion="full"])) .connectionArt{transition:none}:global(html:not([data-motion="full"])) .connectionCard:hover,:global(html:not([data-motion="full"])) .connectionCard:hover .connectionArt{transform:none}}
 :global(html[data-motion="reduce"]) .connectionCard,:global(html[data-motion="reduce"]) .connectionArt{transition:none}
 :global(html[data-motion="reduce"]) .connectionCard:hover,:global(html[data-motion="reduce"]) .connectionCard:hover .connectionArt{transform:none}
+
+.scene{touch-action:none;cursor:grab}.scene:active{cursor:grabbing}
+.previewHint{position:absolute;top:10px;left:16px;right:16px;text-align:center;pointer-events:none;font-size:.65rem!important;color:#b9c7da!important;line-height:1.4!important}

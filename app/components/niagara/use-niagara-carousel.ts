@@ -18,12 +18,14 @@ export function useNiagaraCarousel() {
   const [paused, setPaused] = useState(false);
   const [hovered, setHovered] = useState(false);
   const [focused, setFocused] = useState(false);
+  const [pressed, setPressed] = useState(false);
+  const pointerFocus = useRef(false);
   const [dragging, setDragging] = useState(false);
   const direction = useRef(1);
   const pointer = useRef<{ id: number; x: number; y: number; left: number; dragging: boolean } | null>(null);
   const suppressClick = useRef(false);
   const idleTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
-  const playing = !paused && !reduced && inView && documentVisible && !hovered && !focused && !dragging;
+  const playing = !paused && !reduced && inView && documentVisible && !hovered && !focused && !dragging && !pressed;
 
   useEffect(() => {
     const rail = railRef.current;
@@ -73,6 +75,8 @@ export function useNiagaraCarousel() {
     rail.scrollTo({ left: target ? target.offsetLeft : delta > 0 ? rail.scrollWidth : 0, behavior: reduced ? 'instant' : 'smooth' });
   };
   const onKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    pointerFocus.current = false;
+    setFocused(true);
     if (event.altKey || event.ctrlKey || event.metaKey) return;
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
       event.preventDefault();
@@ -84,6 +88,9 @@ export function useNiagaraCarousel() {
     }
   };
   const onPointerDown = (event: PointerEvent<HTMLDivElement>) => {
+    pointerFocus.current = true;
+    setFocused(false);
+    setPressed(true);
     pause();
     suppressClick.current = false;
     if (event.pointerType !== 'mouse' || event.button !== 0) return;
@@ -106,6 +113,8 @@ export function useNiagaraCarousel() {
     }
   };
   const endPointer = (event: PointerEvent<HTMLDivElement>) => {
+    setPressed(false);
+    pause();
     const start = pointer.current;
     if (!start || start.id !== event.pointerId) return;
     pointer.current = null;
@@ -128,10 +137,10 @@ export function useNiagaraCarousel() {
       onPointerCancel: endPointer, onLostPointerCapture: endPointer, onClickCapture, onKeyDown,
       onDragStart: (event: DragEvent<HTMLDivElement>) => event.preventDefault(),
       onMouseEnter: () => setHovered(true),
-      onMouseLeave: () => { setHovered(false); if (pointer.current && !pointer.current.dragging) pointer.current = null; },
+      onMouseLeave: () => { setHovered(false); if (!pointer.current?.dragging) setPressed(false); if (pointer.current && !pointer.current.dragging) pointer.current = null; },
     },
     focusEvents: {
-      onFocusCapture: () => { setFocused(true); pause(); },
+      onFocusCapture: () => { setFocused(!pointerFocus.current); pointerFocus.current = false; pause(); },
       onBlurCapture: (event: FocusEvent<HTMLDivElement>) => { if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false); },
     },
   };

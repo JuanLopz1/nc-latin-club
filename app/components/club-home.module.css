@@ -300,3 +300,9 @@
 :global(html[data-motion="reduce"]) .ribbonGroup svg{width:10px;height:10px}
 :global(html[data-motion="reduce"]) .ribbonGroup>span:nth-child(4)>svg{display:none}
 :global(html[data-motion="reduce"]) .ribbonGroup>span:nth-child(n+5),:global(html[data-motion="reduce"]) .ribbonGroup:nth-child(2){display:none}
+
+.spotifyPanel{min-width:0;padding:24px;border:1px solid #40566e;background:#15243a;border-radius:18px}
+.spotifyPanel>p{margin-bottom:16px}
+.spotifyFrame{overflow:hidden;border-radius:12px;background:transparent;line-height:0;isolation:isolate}
+.spotifyFrame iframe{display:block;width:100%;height:352px;border:0;border-radius:12px;background:transparent}
+@media(max-width:760px){.spotifyPanel{padding:16px}}
