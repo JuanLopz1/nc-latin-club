@@ -20,13 +20,13 @@ Las preferencias posteriores del usuario prevalecen sobre las notas históricas 
 | --- | --- |
 | Inicio | Prototipo nocturno aprobado, Familia, Eventos enlazados a la agenda, Raíces, Niagara y contacto. |
 | Idiomas | EN por defecto; idioma compartido entre inicio, agenda y detalle. Una recarga vuelve a EN; sin rutas traducidas ni metadatos por idioma. |
-| Eventos | Primera entrada real: Latin Fiesta!, 23–24 de octubre de 2026, The Core, organizada por International; datos y enlace NC Engage aportados por el usuario. `/events`, calendario de seis semanas, detalles y galerías opcionales implementados. Out of NC y Fechas latinas esperan contenido verificado. |
-| Mapa | `/explore`: globo 3D del planeta, Américas destacadas, 55 destinos con búsqueda/lista, opciones desplegables y EN/ES. Cuatro introducciones culturales; perfiles completos pendientes. |
+| Eventos | Agenda con Latin Fiesta!, once eventos regionales y 225 ocurrencias culturales aportadas. Filtros múltiples, calendario, fechas de mes completo, detalles, archivo por fecha y galerías opcionales implementados. |
+| Mapa | `/explore`: globo 3D del planeta, Américas destacadas, 55 destinos con búsqueda/lista, opciones desplegables y EN/ES. 55 perfiles documentales EN/ES, 172 secciones con fuentes y 60 pistas Spotify opt-in. Fotos autorizadas, revisión comunitaria y ampliaciones específicas pendientes. |
 | Contacto | Mailto al correo solicitado con el mensaje de unión prellenado. |
 | Instagram | Perfil oficial `https://www.instagram.com/nclat1nclub/`, aportado por el fundador y conectado en inicio/contacto. |
-| Identidad | El logo oficial existe según el usuario, pero no está incorporado al repositorio. |
+| Identidad | Logo oficial adaptado al fondo nocturno e incorporado en cabecera y pie. |
 | Administración | Sin autenticación, base de datos, almacenamiento administrado ni portal. |
-| Páginas internas | Inicio, `/events`, `/events/[slug]` y 404 propia bilingüe. |
+| Páginas internas | Inicio, `/events`, `/events/[slug]`, `/niagara`, `/explore`, 55 rutas `/explore/[slug]` y 404 bilingüe. |
 | GitHub | Avances en `work`; commit y push tras cada hito verificado. `main` permanece separado. |
 
 Las comprobaciones anteriores de lint, build y navegador corresponden al prototipo. Cada nuevo hito tendrá su propia verificación.

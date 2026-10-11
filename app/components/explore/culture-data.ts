@@ -1,48 +1,22 @@
+import raw from './data/culture-pages.json';
 import type { LocalizedText } from '../events/event-types';
-export type CulturePage = {
-  slug: string; title: LocalizedText; introduction: LocalizedText;
-  sections: { id: string; title: LocalizedText; text: LocalizedText; expression?: string }[];
-  sources: { title: LocalizedText; url: string; excerptOriginal: string; excerptTranslation: LocalizedText }[];
-  review: { basis: 'founder-supplied-UNESCO-excerpt'; date: string };
+export type CultureTrack = {
+  trackId: string;
+  title: string;
+  artist: string;
+  context: LocalizedText;
+  verification: 'spotify-title-and-artist';
 };
-// Deliberately limited to claims supported by the literal UNESCO excerpts in
-// the founder's package. Full draft profiles and unverified music are excluded.
-export const culturePages: CulturePage[] = [
-  {
-    slug: 'brasil', title: { en: 'Music, dance and poetry in a roda', es: 'Música, danza y poesía en una roda' },
-    introduction: { en: 'Samba de Roda brings music, dance and poetry together in a festive expression. The UNESCO entry focuses on the Recôncavo of Bahia: a specific cultural setting within Brazil.', es: 'El Samba de Roda reúne música, danza y poesía en una expresión festiva. La ficha de UNESCO se centra en el Recôncavo de Bahía: un contexto cultural específico dentro de Brasil.' },
-    sections: [
-      { id: 'expression', title: { en: 'An encounter between art forms', es: 'Un encuentro entre expresiones artísticas' }, expression: 'Samba de Roda', text: { en: 'UNESCO describes Samba de Roda as a popular festive event involving music, dance and poetry. Thinking about these forms together gives a richer starting point than treating it only as a dance or only as a musical style.', es: 'UNESCO describe el Samba de Roda como una celebración popular que involucra música, danza y poesía. Mirar estas expresiones en conjunto ofrece un punto de partida más rico que entenderlo solo como baile o solo como género musical.' } },
-      { id: 'context', title: { en: 'Begin with a place', es: 'Comienza por un lugar' }, text: { en: 'The name of the UNESCO entry connects this expression to the Recôncavo of Bahia. This is one doorway into Brazil’s cultural life, rather than a complete portrait of every region and community.', es: 'El nombre de la ficha de UNESCO conecta esta expresión con el Recôncavo de Bahía. Es una puerta de entrada a la vida cultural de Brasil, en lugar de un retrato completo de todas sus regiones y comunidades.' } }
-    ],
-    sources: [{ title: { en: 'UNESCO · Samba de Roda of the Recôncavo of Bahia', es: 'UNESCO · Samba de Roda del Recôncavo de Bahía' }, url: 'https://ich.unesco.org/en/RL/samba-de-roda-of-reconcavo-of-bahia-00101', excerptOriginal: 'The Samba de Roda, which involves music, dance and poetry, is a popular festive event', excerptTranslation: { en: 'Samba de Roda involves music, dance and poetry and is a popular festive event.', es: 'El Samba de Roda involucra música, danza y poesía y es una celebración popular.' } }], review: { basis: 'founder-supplied-UNESCO-excerpt', date: '2026-10-10' }
-  },
-  {
-    slug: 'colombia', title: { en: 'Barranquilla, expressed through carnival', es: 'Barranquilla se expresa en carnaval' },
-    introduction: { en: 'The Carnaval de Barranquilla offers a repertoire of dances and musical expressions during the four days before Lent. It is a place to begin discovering how celebration brings different forms of expression together in Colombia.', es: 'El Carnaval de Barranquilla presenta un repertorio de danzas y expresiones musicales durante los cuatro días previos a la Cuaresma. Es un lugar para comenzar a descubrir cómo la celebración reúne distintas formas de expresión en Colombia.' },
-    sections: [
-      { id: 'celebration', title: { en: 'A repertoire, not a single rhythm', es: 'Un repertorio de expresiones' }, expression: 'Carnaval de Barranquilla', text: { en: 'The UNESCO description speaks of dances and musical expressions in the plural. That wording invites us to approach the carnival as a meeting of expressions rather than reduce it to one dance or sound.', es: 'La descripción de UNESCO habla de danzas y expresiones musicales en plural. Esa forma de nombrarlo invita a acercarnos al carnaval como un encuentro de expresiones, sin reducirlo a un solo baile o sonido.' } },
-      { id: 'time', title: { en: 'Four days before Lent', es: 'Cuatro días antes de la Cuaresma' }, text: { en: 'UNESCO places the annual celebration in the four days preceding Lent. Because that timing follows the religious calendar, the description gives a seasonal relationship, rather than one fixed date to repeat every year.', es: 'UNESCO sitúa la celebración anual en los cuatro días anteriores a la Cuaresma. Como ese momento sigue el calendario religioso, la descripción ofrece una relación temporal, en lugar de una fecha fija que deba repetirse todos los años.' } }
-    ],
-    sources: [{ title: { en: 'UNESCO · Carnival of Barranquilla', es: 'UNESCO · Carnaval de Barranquilla' }, url: 'https://ich.unesco.org/en/RL/carnival-of-barranquilla-00051', excerptOriginal: 'Every year during the four days before Lent, the Carnival de Barranquilla offers a repertory of dances and musical expressions', excerptTranslation: { en: 'Every year, during the four days before Lent, the Carnival of Barranquilla offers a repertoire of dances and musical expressions.', es: 'Cada año, durante los cuatro días anteriores a la Cuaresma, el Carnaval de Barranquilla ofrece un repertorio de danzas y expresiones musicales.' } }], review: { basis: 'founder-supplied-UNESCO-excerpt', date: '2026-10-10' }
-  },
-  {
-    slug: 'mexico', title: { en: 'A foundation of corn, beans and chile', es: 'Una base de maíz, frijol y chile' },
-    introduction: { en: 'The UNESCO description of traditional Mexican cuisine identifies corn, beans and chile as the foundation of the system. These ingredients offer a starting point for looking at food as a cultural practice.', es: 'La descripción de UNESCO sobre la cocina tradicional mexicana identifica el maíz, el frijol y el chile como la base del sistema. Estos ingredientes ofrecen un punto de partida para mirar la alimentación como una práctica cultural.' },
-    sections: [
-      { id: 'foundation', title: { en: 'Three ingredients to begin with', es: 'Tres ingredientes para comenzar' }, expression: 'Maíz · frijol · chile', text: { en: 'Corn, beans and chile appear together in the source. The emphasis is on a foundation, rather than a list of prepared dishes. Start with these ingredients when exploring the cultural description, then follow the UNESCO resource for its wider context.', es: 'El maíz, el frijol y el chile aparecen juntos en la fuente. El énfasis está en una base, más que en una lista de platos preparados. Estos ingredientes permiten comenzar a explorar la descripción cultural y seguir después el recurso de UNESCO para conocer su contexto más amplio.' } },
-      { id: 'scope', title: { en: 'An invitation to look beyond one dish', es: 'Una invitación a mirar más allá de un plato' }, text: { en: 'A foundational ingredient is not a recipe. This introduction does not prescribe one way to cook or serve these foods, or turn a short selection into a description of every household and region in Mexico.', es: 'Un ingrediente fundamental no equivale a una receta. Esta introducción no prescribe una única forma de cocinar o servir estos alimentos, ni convierte una selección breve en una descripción de todos los hogares y regiones de México.' } }
-    ],
-    sources: [{ title: { en: 'UNESCO · Traditional Mexican cuisine', es: 'UNESCO · Cocina tradicional mexicana' }, url: 'https://ich.unesco.org/en/lists?RL=00400', excerptOriginal: 'The basis of the system is founded on corn, beans and chili', excerptTranslation: { en: 'The basis of the system is founded on corn, beans and chile.', es: 'La base del sistema está en el maíz, el frijol y el chile.' } }], review: { basis: 'founder-supplied-UNESCO-excerpt', date: '2026-10-10' }
-  },
-  {
-    slug: 'jamaica', title: { en: 'Reggae begins with a community', es: 'El reggae comienza en una comunidad' },
-    introduction: { en: 'The UNESCO description locates the origins of reggae in a cultural space that was home to marginalized groups, mainly in Western Kingston. Its social setting is part of the story of the music.', es: 'La descripción de UNESCO sitúa el origen del reggae en un espacio cultural donde vivían grupos marginados, principalmente en el oeste de Kingston. Su contexto social forma parte de la historia de la música.' },
-    sections: [
-      { id: 'community', title: { en: 'Listen with context in mind', es: 'Escuchar teniendo presente el contexto' }, expression: 'Reggae', text: { en: 'The source introduces reggae through the communities and cultural space from which it emerged. That is a useful starting point for approaching the music with curiosity about people and place, alongside the sound itself.', es: 'La fuente presenta el reggae a través de las comunidades y el espacio cultural donde surgió. Es un punto de partida para acercarse a la música con curiosidad por las personas y el lugar, además del sonido en sí.' } },
-      { id: 'place', title: { en: 'Western Kingston', es: 'El oeste de Kingston' }, text: { en: 'UNESCO names Western Kingston as the principal setting in this introductory account. Reggae is an entry point into Jamaica’s cultural life; it does not stand in for every musical expression on the island.', es: 'UNESCO nombra el oeste de Kingston como el contexto principal de este relato introductorio. El reggae es una puerta de entrada a la vida cultural de Jamaica; no representa por sí solo todas las expresiones musicales de la isla.' } }
-    ],
-    sources: [{ title: { en: 'UNESCO · Reggae music of Jamaica', es: 'UNESCO · Música reggae de Jamaica' }, url: 'https://ich.unesco.org/en/RL/reggae-music-of-jamaica-01398', excerptOriginal: 'Having originated within a cultural space that was home to marginalized groups, mainly in Western Kingston', excerptTranslation: { en: 'Reggae originated in a cultural space that was home to marginalized groups, mainly in Western Kingston.', es: 'El reggae surgió en un espacio cultural donde vivían grupos marginados, principalmente en el oeste de Kingston.' } }], review: { basis: 'founder-supplied-UNESCO-excerpt', date: '2026-10-10' }
-  }
-];
+export type CulturePage = {
+  slug: string;
+  title: LocalizedText;
+  introduction: LocalizedText;
+  sections: { id: string; title: LocalizedText; text: LocalizedText; sourceIds: string[] }[];
+  sources: { id: string; title: LocalizedText; url: string }[];
+  music: CultureTrack[];
+  review: { basis: 'documentary-source-review'; date: string };
+};
+// Published summaries are separate from the founder's Spanish working drafts.
+// See docs/EXPLORE_ROOTS_LOTE07_REVIEW.md for evidence and remaining fields.
+export const culturePages: CulturePage[] = raw as CulturePage[];
 export function getCulturePage(slug: string) { return culturePages.find(page => page.slug === slug); }

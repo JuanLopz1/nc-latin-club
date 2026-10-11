@@ -28,3 +28,9 @@ Las fichas son entradas culturales; no habrá quizzes de relleno. Las fechas cul
 - Fuentes: enlaces de donde sale cada dato; tu experiencia personal puede indicarse como tal y atribuirse a quien la aporta.
 
 `INDICE.csv` sirve para marcar qué entregaste. Los espacios vacíos y las instrucciones de este paquete son solo editoriales: no se publican.
+
+## Entrega recibida: lote 07
+
+El fundador entregó las 55 fichas el 10 de octubre de 2026. Los originales recibidos están en `submitted-lote07/paises/`; las fichas de esta carpeta `paises/` siguen siendo las plantillas iniciales. No confundirlas con el contenido público.
+
+La integración y los pendientes de cada destino se registran en [EXPLORE_ROOTS_LOTE07_REVIEW.md](../EXPLORE_ROOTS_LOTE07_REVIEW.md). La web usa resúmenes revisados EN/ES separados de los borradores, con 60 pistas comprobadas y sin fotos de derechos pendientes.

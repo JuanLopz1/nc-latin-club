@@ -27,11 +27,12 @@ test('final directory exposes all 55 distinct countries and small territories',(
  assert.equal(data.countries.length,55);assert.equal(new Set(data.countries.map(c=>c.slug)).size,55);
  for(const slug of ['bonaire','saba','san-eustaquio','guayana-francesa','guadalupe','martinica','san-martin-frances','sint-maarten'])assert.equal(utils.filterCountries(data.countries,slug.replaceAll('-',' '),utils.regions).some(c=>c.slug===slug),true,slug);
 });
-test('published cultural pages contain reviewed bilingual content and no draft sections',()=>{
- const pages=load('../app/components/explore/culture-data.ts').culturePages;assert.ok(Array.isArray(pages));assert.equal(pages.length,4);
- for(const page of pages){assert.ok(data.countries.some(c=>c.slug===page.slug));assert.equal(page.review.basis,'founder-supplied-UNESCO-excerpt');assert.ok(page.sources.every(s=>s.excerptOriginal&&s.url.startsWith('https://ich.unesco.org/')));
- for(const value of [page.title,page.introduction,...page.sections.flatMap(s=>[s.title,s.text])]){assert.ok(value.en&&value.es);assert.doesNotMatch(value.en+' '+value.es,/needs_research|ui_placeholder|investigar|comprobación pendiente/i);}assert.ok(page.sections.length>0);}
- assert.deepEqual(pages.map(p=>p.slug).sort(),['brasil','colombia','jamaica','mexico']);
+test('every destination has a reviewed bilingual national page with traceable sections',()=>{
+ const pages=load('../app/components/explore/culture-data.ts').culturePages;assert.equal(pages.length,55);assert.equal(new Set(pages.map(p=>p.slug)).size,55);
+ for(const page of pages){assert.ok(data.countries.some(c=>c.slug===page.slug));assert.equal(page.review.basis,'documentary-source-review');assert.ok(page.sources.length>0);assert.ok(page.sources.every(s=>s.id && s.url.startsWith('https://')));assert.ok(page.sections.length>=3);
+ for(const section of page.sections){assert.ok(section.sourceIds.length>0);assert.ok(section.sourceIds.every(id=>page.sources.some(s=>s.id===id)),page.slug+'/'+section.id);}
+ for(const value of [page.title,page.introduction,...page.sections.flatMap(s=>[s.title,s.text])]){assert.ok(value.en&&value.es);assert.doesNotMatch(value.en+' '+value.es,/needs_research|ui_placeholder|pendiente_verificar|NO PUBLICAR|CMS sugerido/i);}assert.equal(new Set(page.sections.map(s=>s.id)).size,page.sections.length);}
+ assert.equal(data.countries.filter(c=>c.culturalStatus==='reviewed').length,55);
 });
 test('all 55 destinations have independent selectable world geometry, including shared ISO territories',()=>{
  const fs=require('node:fs'),path=require('node:path'),world=JSON.parse(fs.readFileSync(path.join(__dirname,'../public/data/roots-world.geojson'),'utf8'));
@@ -61,8 +62,21 @@ test('Canada is selectable from bilingual search with the North America region',
  }
  assert.equal(utils.filterCountries(data.countries,'Canada',['caribe']).length,0);
 });
-test('culture detail leads with the country and presents its tradition as a spotlight',()=>{
+test('Colombia presents multiple regions and traditions, instead of centering one festival',()=>{
+ const page=load('../app/components/explore/culture-data.ts').getCulturePage('colombia');const all=[page.title,page.introduction,...page.sections.map(s=>s.text)].map(x=>x.en+' '+x.es).join(' ');
+ assert.match(all,/Pacífico|Pacific/);assert.match(all,/Magdalena/);assert.match(all,/arepas/i);assert.match(all,/Barranquilla/);assert.ok(page.sections.some(s=>s.id==='food'));
+});
+test('published music uses direct Spotify tracks with matched title and artist metadata',()=>{
+ const pages=load('../app/components/explore/culture-data.ts').culturePages;const tracks=pages.flatMap(p=>p.music||[]);assert.ok(tracks.length>0);
+ for(const t of tracks){assert.match(t.trackId,/^[A-Za-z0-9]{22}$/);assert.ok(t.title&&t.artist);assert.equal(t.verification,'spotify-title-and-artist');assert.ok(t.context.en&&t.context.es);}
+});
+test('music players are absent before the visitor chooses to load one',()=>{
  const React=require('react'),{renderToStaticMarkup}=require('react-dom/server');const {SiteProvider}=require('../app/components/site-context.tsx');const Detail=require('../app/components/explore/country-detail.tsx').default;
- const page=require('../app/components/explore/culture-data.ts').getCulturePage('colombia'),country=data.countries.find(c=>c.slug==='colombia');const html=renderToStaticMarkup(React.createElement(SiteProvider,null,React.createElement(Detail,{country,page})));
- assert.match(html,/<h1>Colombia<\/h1>/);assert.match(html,/<h2[^>]*>Barranquilla, expressed through carnival<\/h2>/);assert.match(html,/Cultural spotlight/);
+ const page=load('../app/components/explore/culture-data.ts').getCulturePage('colombia'),country=data.countries.find(c=>c.slug==='colombia');const html=renderToStaticMarkup(React.createElement(SiteProvider,null,React.createElement(Detail,{country,page})));
+ assert.match(html,/<h1>Colombia<\/h1>/);assert.doesNotMatch(html,/<iframe|<audio/);assert.match(html,/data-load-track/);assert.match(html,/PROVENZA/);
+});
+test('unknown cultural destinations return a real 404 before the streamed shell, while all published pages remain reachable',()=>{
+ const {proxy}=load('../proxy.ts'),{NextRequest}=require('next/server');
+ assert.equal(proxy(new NextRequest('https://club.example/explore/does-not-exist')).status,404);
+ for(const page of load('../app/components/explore/culture-data.ts').culturePages)assert.equal(proxy(new NextRequest('https://club.example/explore/'+page.slug)).status,200,page.slug);
 });

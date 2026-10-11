@@ -1,0 +1,964 @@
+[
+  {
+    "slug": "guatemala",
+    "title": "Fuiste Tú",
+    "artist": "Ricardo Arjona, Gaby Moreno",
+    "spotifyTrackUrl": "https://open.spotify.com/track/7J6IYudWsxHy3stN5aMKSN",
+    "verified": true,
+    "oembedTitle": "Fuiste Tú",
+    "spotifyDescription": "Ricardo Arjona, Gaby Moreno · Independiente · Song · 2011"
+  },
+  {
+    "slug": "guatemala",
+    "title": "Luna de Xelajú (feat. Oscar Isaac) - Dusk Version",
+    "artist": "Gaby Moreno, Oscar Isaac",
+    "spotifyTrackUrl": "https://open.spotify.com/track/6SLRN9ZLNZNP7GbjRNYxgM",
+    "verified": true,
+    "oembedTitle": "Luna de Xelajú (feat. Oscar Isaac) - Dusk Version",
+    "spotifyDescription": "Gaby Moreno, Oscar Isaac · Dusk · Song · 2024"
+  },
+  {
+    "slug": "belice",
+    "title": "Wátina",
+    "artist": "Andy Palacio, the Garifuna Collective",
+    "spotifyTrackUrl": "https://open.spotify.com/track/0Xdz9xpuU9E05eXDmkoxhl",
+    "verified": true,
+    "oembedTitle": "Wátina",
+    "spotifyDescription": "Andy Palacio, the Garifuna Collective · Wátina · Song · 2007"
+  },
+  {
+    "slug": "belice",
+    "title": "Miami",
+    "artist": "Andy Palacio, the Garifuna Collective",
+    "spotifyTrackUrl": "https://open.spotify.com/track/4hSMqpc9m0CmVumHLnv4qv",
+    "verified": true,
+    "oembedTitle": "Miami",
+    "spotifyDescription": "Andy Palacio, the Garifuna Collective · Wátina · Song · 2007"
+  },
+  {
+    "slug": "honduras",
+    "title": "Sopa de Caracol",
+    "artist": "Banda Blanca",
+    "spotifyTrackUrl": "https://open.spotify.com/track/4V8uHuLaBRxQ02H4YNCOO7",
+    "verified": true,
+    "oembedTitle": "Sopa de Caracol",
+    "spotifyDescription": "Banda Blanca · Lo Mejor de Banda Blanca - 16 Exitos · Song · 1993"
+  },
+  {
+    "slug": "honduras",
+    "title": "En Mi Pais",
+    "artist": "Guillermo Anderson",
+    "spotifyTrackUrl": "https://open.spotify.com/track/0MsMBHkSUKmcyCwmsllniV",
+    "verified": true,
+    "oembedTitle": "En Mi Pais",
+    "spotifyDescription": "Guillermo Anderson · Desde El Fondo Del Mar · Song · 2003"
+  },
+  {
+    "slug": "el-salvador",
+    "title": "Salvadoreñas",
+    "artist": "Los Hermanos Flores",
+    "spotifyTrackUrl": "https://open.spotify.com/track/6wrRpYCJU78jMSHNzGHabN",
+    "verified": true,
+    "oembedTitle": "Salvadoreñas",
+    "spotifyDescription": "Los Hermanos Flores · Las Obligadas de Fin de Año · Song · 2024"
+  },
+  {
+    "slug": "el-salvador",
+    "title": "La Bala",
+    "artist": "Los Hermanos Flores",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "nicaragua",
+    "title": "Nicaragua, Nicaragüita",
+    "artist": "Carlos Mejía Godoy, Los de Palacagüina",
+    "spotifyTrackUrl": "https://open.spotify.com/track/7h8xgCdaj2GGQXGGAYPquR",
+    "verified": true,
+    "oembedTitle": "Nicaragua, Nicaraguita",
+    "spotifyDescription": "Carlos Mejía Godoy, Los De Palacagüina · Aromas de Libertad (Son Tus Perjumenes Mujer) · Song · 2013"
+  },
+  {
+    "slug": "nicaragua",
+    "title": "El Cristo de Palacagüina",
+    "artist": "Carlos Mejía Godoy, Los de Palacagüina",
+    "spotifyTrackUrl": "https://open.spotify.com/track/5pJcxhXGM0v0HCFTj2C7LM",
+    "verified": true,
+    "oembedTitle": "El Cristo de Palacagüina",
+    "spotifyDescription": "Carlos Mejía Godoy, Los De Palacagüina · Aromas de Libertad (Son Tus Perjumenes Mujer) · Song · 2013"
+  },
+  {
+    "slug": "costa-rica",
+    "title": "Contramarea (Vivo)",
+    "artist": "Malpaís",
+    "spotifyTrackUrl": "https://open.spotify.com/track/1B0wPBnyl3DCCJSzfcQLsi",
+    "verified": true,
+    "oembedTitle": "Contramarea (Vivo)",
+    "spotifyDescription": "Malpaís · En Vivo · Song · 2006"
+  },
+  {
+    "slug": "costa-rica",
+    "title": "Mazurca de Dámaso",
+    "artist": "Malpaís",
+    "spotifyTrackUrl": "https://open.spotify.com/track/11dlfqH0Az6ZNiMB1i5t5X",
+    "verified": true,
+    "oembedTitle": "Mazurca de Dámaso",
+    "spotifyDescription": "Malpaís · Historias de Nadie · Song · 2004"
+  },
+  {
+    "slug": "panama",
+    "title": "Patria (Motherland)",
+    "artist": "Rubén Blades",
+    "spotifyTrackUrl": "https://open.spotify.com/track/4ehnEfkruuTJD496GhPIWl",
+    "verified": true,
+    "oembedTitle": "Patria (Motherland)",
+    "spotifyDescription": "Rubén Blades · Antecedente · Song · 1988"
+  },
+  {
+    "slug": "panama",
+    "title": "Picky",
+    "artist": "Joey Montana",
+    "spotifyTrackUrl": "https://open.spotify.com/track/1ThJmihxAH2OuKWR47VeVD",
+    "verified": true,
+    "oembedTitle": "Picky",
+    "spotifyDescription": "Joey Montana · Latino Party · Song · 2020"
+  },
+  {
+    "slug": "anguila",
+    "title": "Oh Africa",
+    "artist": "Omari Banks",
+    "spotifyTrackUrl": "https://open.spotify.com/track/3zU3zDBXyBBOPMoXFEhGg7",
+    "verified": true,
+    "oembedTitle": "Oh Africa",
+    "spotifyDescription": "Omari Banks · Move On · Song · 2013"
+  },
+  {
+    "slug": "anguila",
+    "title": "Still In Paradise",
+    "artist": "Bankie Banx",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "bonaire",
+    "title": "Porfin Tin Un Homber",
+    "artist": "Rincon Boyz",
+    "spotifyTrackUrl": "https://open.spotify.com/track/2zgyWORhYbbuyWnPDSbbkJ",
+    "verified": true,
+    "oembedTitle": "Porfin Tin Un Homber",
+    "spotifyDescription": "Rincon Boyz · Goes International · Song · 2011"
+  },
+  {
+    "slug": "bonaire",
+    "title": "Ta Mi Hendenan",
+    "artist": "Jeon & Rincon Boyz",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "montserrat",
+    "title": "Hot Hot Hot",
+    "artist": "Arrow",
+    "spotifyTrackUrl": "https://open.spotify.com/track/7Cof7oLSdMkfyejXP38oHI",
+    "verified": true,
+    "oembedTitle": "Hot Hot Hot",
+    "spotifyDescription": "Arrow · Les plus grands succès du Club Balattou · Song · 2011"
+  },
+  {
+    "slug": "montserrat",
+    "title": "Lo Lay-Lo Lai",
+    "artist": "Arrow",
+    "spotifyTrackUrl": "https://open.spotify.com/track/3FDaiWs2C8gKg9l89LbLZw",
+    "verified": true,
+    "oembedTitle": "Lo Lay-Lo Lai",
+    "spotifyDescription": "Arrow · Hot Hot Hot: The Very Best of Arrow · Song · 2022"
+  },
+  {
+    "slug": "saba",
+    "title": "Actuaciones locales de Saba Carnival",
+    "artist": "Artista sin identificar",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "saba",
+    "title": "Percy Rankin and the Band (repertorio)",
+    "artist": "Percy Rankin",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "san-martin-frances",
+    "title": "La Rumba de San Martin",
+    "artist": "Mighty Dow",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "san-martin-frances",
+    "title": "Christmas Morning in St. Maarten",
+    "artist": "Young Dow y varios artistas",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "sint-maarten",
+    "title": "Christmas Morning in St. Maarten",
+    "artist": "Young Dow y artistas locales",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "sint-maarten",
+    "title": "La Rumba de San Martin",
+    "artist": "Mighty Dow",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "san-eustaquio",
+    "title": "Bubble It",
+    "artist": "JR Kenna & Big Shenn",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "san-eustaquio",
+    "title": "Welcome To My Island \"Statia\"",
+    "artist": "Juvelle Maduro",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "cuba",
+    "title": "Chan Chan",
+    "artist": "Buena Vista Social Club",
+    "spotifyTrackUrl": "https://open.spotify.com/track/7DqTaelFf846rl1CHmyfOW",
+    "verified": true,
+    "oembedTitle": "Chan Chan",
+    "spotifyDescription": "Buena Vista Social Club · Buena Vista Social Club · Song · 1997"
+  },
+  {
+    "slug": "cuba",
+    "title": "La Gozadera",
+    "artist": "Gente de Zona feat. Marc Anthony",
+    "spotifyTrackUrl": "https://open.spotify.com/track/0OMRAvrtLWE2TvcXorRiB9",
+    "verified": true,
+    "oembedTitle": "La Gozadera (feat. Marc Anthony)",
+    "spotifyDescription": "Gente De Zona, Marc Anthony · Visualízate · Song · 2016"
+  },
+  {
+    "slug": "republica-dominicana",
+    "title": "Bachata en Fukuoka",
+    "artist": "Juan Luis Guerra 4.40",
+    "spotifyTrackUrl": "https://open.spotify.com/track/09CIkNRK2vs5eVJUhN7kRU",
+    "verified": true,
+    "oembedTitle": "Bachata En Fukuoka",
+    "spotifyDescription": "Juan Luis Guerra 4.40 · Para el Camino · Song · 2020"
+  },
+  {
+    "slug": "republica-dominicana",
+    "title": "Propuesta Indecente",
+    "artist": "Romeo Santos",
+    "spotifyTrackUrl": "https://open.spotify.com/track/5PycBIeabfvX3n9ILG7Vrv",
+    "verified": true,
+    "oembedTitle": "Propuesta Indecente",
+    "spotifyDescription": "Romeo Santos · Fórmula, Vol. 2 (Deluxe Edition) · Song · 2014"
+  },
+  {
+    "slug": "trinidad-y-tobago",
+    "title": "Differentology (Ready for the Road)",
+    "artist": "Bunji Garlin",
+    "spotifyTrackUrl": "https://open.spotify.com/track/3k4I2QGwFrcP6dGEfhbw2X",
+    "verified": true,
+    "oembedTitle": "Differentology (Ready for the Road)",
+    "spotifyDescription": "Bunji Garlin · Differentology (Ready for the Road) · Song · 2014"
+  },
+  {
+    "slug": "trinidad-y-tobago",
+    "title": "Famalay",
+    "artist": "Skinny Fabulous, Machel Montano, Bunji Garlin",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "barbados",
+    "title": "Roll It Gal",
+    "artist": "Alison Hinds",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "barbados",
+    "title": "We Found Love",
+    "artist": "Rihanna feat. Calvin Harris",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "bahamas",
+    "title": "Who Let the Dogs Out",
+    "artist": "Baha Men",
+    "spotifyTrackUrl": "https://open.spotify.com/track/3ZXrtJKKpzfqZqJdijV6sj",
+    "verified": true,
+    "oembedTitle": "Who Let The Dogs Out",
+    "spotifyDescription": "Baha Men · Kids Songs: Birthday Party! · Song · 2022"
+  },
+  {
+    "slug": "bahamas",
+    "title": "Funky Nassau (Pt.1)",
+    "artist": "The Beginning of the End",
+    "spotifyTrackUrl": "https://open.spotify.com/track/41Yin2VAZ9Fx9sf2KoXrXI",
+    "verified": true,
+    "oembedTitle": "Funky Nassau (Pt.1)",
+    "spotifyDescription": "The Beginning Of The End · Best Songmix of the 60´s, Vol.2: Soul Man · Song · 2017"
+  },
+  {
+    "slug": "antigua-y-barbuda",
+    "title": "Workey Workey",
+    "artist": "Burning Flames",
+    "spotifyTrackUrl": "https://open.spotify.com/track/6I99lYxuqUDOOic2EqNb6p",
+    "verified": true,
+    "oembedTitle": "Workey Workey",
+    "spotifyDescription": "Burning Flames · Me Na Freard · Song · 1989"
+  },
+  {
+    "slug": "antigua-y-barbuda",
+    "title": "Hot Hot Hot",
+    "artist": "Burning Flames",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "dominica",
+    "title": "Balance Batty",
+    "artist": "WCK",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "dominica",
+    "title": "I Love My Life",
+    "artist": "Asa Bantan",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "colombia",
+    "title": "PROVENZA",
+    "artist": "KAROL G",
+    "spotifyTrackUrl": "https://open.spotify.com/track/3HqcNJdZ2seoGxhn0wVNDK",
+    "verified": true,
+    "oembedTitle": "PROVENZA",
+    "spotifyDescription": "KAROL G · MAÑANA SERÁ BONITO · Song · 2023"
+  },
+  {
+    "slug": "colombia",
+    "title": "Hips Don't Lie",
+    "artist": "Shakira feat. Wyclef Jean",
+    "spotifyTrackUrl": "https://open.spotify.com/track/0yHhDpBAZWpd6dlZMQgU49",
+    "verified": true,
+    "oembedTitle": "Hips Don't Lie",
+    "spotifyDescription": "Shakira, Wyclef Jean · Hips Don't Lie · Song · 2006"
+  },
+  {
+    "slug": "granada",
+    "title": "Rolly Polly",
+    "artist": "Mr. Killa",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "granada",
+    "title": "Run Wid It",
+    "artist": "Mr. Killa",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "santa-lucia",
+    "title": "Split In di Middle",
+    "artist": "Freezy",
+    "spotifyTrackUrl": "https://open.spotify.com/track/69dHCVCbP6TnwDq1AgM5vS",
+    "verified": true,
+    "oembedTitle": "Split In di Middle",
+    "spotifyDescription": "Freezy · Get Soca 2018 · Song · 2018"
+  },
+  {
+    "slug": "santa-lucia",
+    "title": "Pressure Boom",
+    "artist": "Ricky T",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "san-vicente-y-las-granadinas",
+    "title": "Turn Me On",
+    "artist": "Kevin Lyttle",
+    "spotifyTrackUrl": "https://open.spotify.com/track/3usYNLv37qBTUQ5V6WGhqd",
+    "verified": true,
+    "oembedTitle": "Turn Me On",
+    "spotifyDescription": "Kevin Lyttle · Weekend Party Starter · Song · 2020"
+  },
+  {
+    "slug": "san-vicente-y-las-granadinas",
+    "title": "Famalay",
+    "artist": "Skinny Fabulous, Machel Montano & Bunji Garlin",
+    "spotifyTrackUrl": "https://open.spotify.com/track/5Xb7MwpJ1bwazL6gC8DOO3",
+    "verified": true,
+    "oembedTitle": "Famalay",
+    "spotifyDescription": "Skinny Fabulous, Machel Montano, Bunji Garlin · Island Stories · Song · 2021"
+  },
+  {
+    "slug": "san-cristobal-y-nieves",
+    "title": "Talibans",
+    "artist": "Byron Messia",
+    "spotifyTrackUrl": "https://open.spotify.com/track/0TTOsyDKykWhCh3qDd9wMY",
+    "verified": true,
+    "oembedTitle": "Talibans",
+    "spotifyDescription": "Byron Messia · No Love · Song · 2023"
+  },
+  {
+    "slug": "san-cristobal-y-nieves",
+    "title": "Wuk It Up",
+    "artist": "Small Axe Band",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "aruba",
+    "title": "Dushi Bida",
+    "artist": "Jeon",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "aruba",
+    "title": "Hend’i Mondi",
+    "artist": "Jeon",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "guadalupe",
+    "title": "Maldòn - Version originale",
+    "artist": "Zouk Machine",
+    "spotifyTrackUrl": "https://open.spotify.com/track/0iQzDAzvSICgxG6zmK4I58",
+    "verified": true,
+    "oembedTitle": "Maldon - Version originale",
+    "spotifyDescription": "Zouk Machine · Zouk Hits Collection · Song · 2012"
+  },
+  {
+    "slug": "guadalupe",
+    "title": "Zouk la sé sél médikaman nou ni",
+    "artist": "Kassav’",
+    "spotifyTrackUrl": "https://open.spotify.com/track/1ClNPMTFEKVSZBgTBVoweW",
+    "verified": true,
+    "oembedTitle": "Zouk la sé sél médikaman nou ni",
+    "spotifyDescription": "Kassav' · Best of 20ème anniversaire · Song · 1999"
+  },
+  {
+    "slug": "martinica",
+    "title": "Mwaka Moon",
+    "artist": "Kalash & Damso",
+    "spotifyTrackUrl": "https://open.spotify.com/track/66yjf2AVGCOatTxaZmXBqz",
+    "verified": true,
+    "oembedTitle": "Mwaka Moon",
+    "spotifyDescription": "Kalash, Damso · Sport Rap · Song · 2020"
+  },
+  {
+    "slug": "martinica",
+    "title": "Kolé séré",
+    "artist": "Kassav’",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "guyana",
+    "title": "Dil Mora (Waist Breaker)",
+    "artist": "Terry Gajraj",
+    "spotifyTrackUrl": "https://open.spotify.com/track/5X7cXuCEaRJIG3Sn3KxYTv",
+    "verified": true,
+    "oembedTitle": "Dil Mora (Waist Breaker)",
+    "spotifyDescription": "Terry Gajraj · Latest Chutney Hitz · Song · 2011"
+  },
+  {
+    "slug": "guyana",
+    "title": "Guyana Baboo",
+    "artist": "Terry Gajraj",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "paraguay",
+    "title": "Recuerdos de Ypacarai",
+    "artist": "Luis Alberto del Paraná",
+    "spotifyTrackUrl": "https://open.spotify.com/track/6kIuBnp0A0uoyylVTQN4x7",
+    "verified": true,
+    "oembedTitle": "Recuerdos de Ypacarai",
+    "spotifyDescription": "Luis Alberto Del Paraná · Melodías Del Sol · Song · 1956"
+  },
+  {
+    "slug": "paraguay",
+    "title": "Galopera",
+    "artist": "Mauricio Cardozo Ocampo",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "surinam",
+    "title": "Parijs",
+    "artist": "Kenny B",
+    "spotifyTrackUrl": "https://open.spotify.com/track/2lYcDlNQLkQCLXutvL0AZR",
+    "verified": true,
+    "oembedTitle": "Parijs",
+    "spotifyDescription": "Kenny B · 100x Zomer 2015 · Song · 2015"
+  },
+  {
+    "slug": "surinam",
+    "title": "Sranan Mi Kondre",
+    "artist": "Lieve Hugo",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "uruguay",
+    "title": "Brindis Por Pierrot",
+    "artist": "Jaime Roos y Canario Luna",
+    "spotifyTrackUrl": "https://open.spotify.com/track/1RvSvJ4FxgsCMRqqG3gQbu",
+    "verified": false,
+    "oembedTitle": "Brindis Por Pierrot - Con Murga Falta y Resto",
+    "spotifyDescription": "Jaime Roos, Canario Luna · Repertorio · Song · 1997",
+    "reason": "Title/artist metadata did not match completely"
+  },
+  {
+    "slug": "uruguay",
+    "title": "A Don José",
+    "artist": "Los Olimareños",
+    "spotifyTrackUrl": "https://open.spotify.com/intl-fr/track/6JR37SZGKejERT03Zsev8e",
+    "verified": true,
+    "oembedTitle": "A Don José",
+    "spotifyDescription": "Los Olimareños · Estadio Centenario, 18 de Mayo de 1984 · Song · 1999"
+  },
+  {
+    "slug": "guayana-francesa",
+    "title": "Musiques du Carnaval Guyanais",
+    "artist": "artistas del carnaval — por seleccionar",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "guayana-francesa",
+    "title": "Kassialata",
+    "artist": "grupo del carnaval guayanés — obra por seleccionar",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "islas-malvinas-falkland",
+    "title": "Selección de artista residente",
+    "artist": "pendiente de curaduría",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "islas-malvinas-falkland",
+    "title": "Grabación comunitaria con permiso",
+    "artist": "pendiente de verificación",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "estados-unidos",
+    "title": "Como La Flor",
+    "artist": "Selena",
+    "spotifyTrackUrl": "https://open.spotify.com/track/5ubqSAc9LxUS2CsMHcA4kF",
+    "verified": true,
+    "oembedTitle": "Como La Flor",
+    "spotifyDescription": "Selena · Dreaming Of You · Song · 1995"
+  },
+  {
+    "slug": "estados-unidos",
+    "title": "Conga",
+    "artist": "Gloria Estefan y Miami Sound Machine",
+    "spotifyTrackUrl": "https://open.spotify.com/track/6OlwUtrUglXv8nyBsy8PFq",
+    "verified": false,
+    "oembedTitle": "Conga",
+    "spotifyDescription": "Gloria Estefan, Miami Sound Machine · 20th Anniversary · Song · 1990",
+    "reason": "Title/artist metadata did not match completely"
+  },
+  {
+    "slug": "islas-virgenes-britanicas",
+    "title": "BVI Fungi Festival — repertorio local",
+    "artist": "selección de intérprete pendiente",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "islas-virgenes-britanicas",
+    "title": "Artista de las BVI contemporáneo",
+    "artist": "selección de pista pendiente",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "islas-caiman",
+    "title": "Swanky Kitchen Band",
+    "artist": "banda — pista pendiente",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "islas-caiman",
+    "title": "Canción del Batabano",
+    "artist": "repertorio por curar",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "san-bartolome",
+    "title": "Música de Saint-Barth",
+    "artist": "artista local por seleccionar",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "san-bartolome",
+    "title": "Grabación de fiesta patronal",
+    "artist": "pendiente de permiso y pista",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "turcas-y-caicos",
+    "title": "Lovey Forbes — ripsaw",
+    "artist": "pista específica por verificar",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "turcas-y-caicos",
+    "title": "Artista local ripsaw",
+    "artist": "selección por curar",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "islas-virgenes-eeuu",
+    "title": "Quelbe Resurrection",
+    "artist": "grupo tradicional — pista pendiente",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "islas-virgenes-eeuu",
+    "title": "Pressure Busspipe",
+    "artist": "artista de Saint Thomas — canción pendiente",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "bermudas",
+    "title": "Gombey troupe recording",
+    "artist": "audio oficial por verificar",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "bermudas",
+    "title": "Artista bermudeño contemporáneo",
+    "artist": "pista por seleccionar",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "argentina",
+    "title": "De Música Ligera",
+    "artist": "Soda Stereo",
+    "spotifyTrackUrl": "https://open.spotify.com/track/2WD9ggmpZE7Wodh3qVVCgg",
+    "verified": true,
+    "oembedTitle": "De Música Ligera",
+    "spotifyDescription": "Soda Stereo · Originales - 20 Exitos · Song · 1983"
+  },
+  {
+    "slug": "argentina",
+    "title": "Por una Cabeza",
+    "artist": "Carlos Gardel",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "peru",
+    "title": "Cariñito",
+    "artist": "Los Hijos del Sol",
+    "spotifyTrackUrl": "https://open.spotify.com/track/5gtds0gyyFhfi0NfqLafRJ",
+    "verified": true,
+    "oembedTitle": "Cariñito",
+    "spotifyDescription": "Los Hijos del sol · Cumbias Bailables · Song · 2018"
+  },
+  {
+    "slug": "peru",
+    "title": "La Flor de la Canela",
+    "artist": "Chabuca Granda",
+    "spotifyTrackUrl": "https://open.spotify.com/track/7bM0LJvT2T0iCJ1hairNIw",
+    "verified": true,
+    "oembedTitle": "La Flor de la Canela",
+    "spotifyDescription": "Chabuca Granda · RCA 100 Anos De Musica - Segunda Parte (Lo Mejor Del Folklore Latinoamericano) · Song · 2018"
+  },
+  {
+    "slug": "ecuador",
+    "title": "Nuestro Juramento",
+    "artist": "Julio Jaramillo",
+    "spotifyTrackUrl": "https://open.spotify.com/track/0X2tvdSAB6hnZ78UzuwxXQ",
+    "verified": true,
+    "oembedTitle": "Nuestro Juramento",
+    "spotifyDescription": "Julio Jaramillo · El Mítico Julio Jaramillo · Song · 1955"
+  },
+  {
+    "slug": "ecuador",
+    "title": "Vasija de Barro",
+    "artist": "Gonzalo Benítez y Segundo Bautista",
+    "spotifyTrackUrl": "https://open.spotify.com/track/7HsUPRmcUOyP3IrXwtEQCu",
+    "verified": false,
+    "oembedTitle": "Vasija de Barro",
+    "spotifyDescription": "Gonzalo Benítez, Segundo Bautista · Bodas de Oro...y Algo Más - Con El Conjunto de Segundo Bautista · Song · 1989",
+    "reason": "Title/artist metadata did not match completely"
+  },
+  {
+    "slug": "bolivia",
+    "title": "Llorando Se Fue",
+    "artist": "Los Kjarkas",
+    "spotifyTrackUrl": "https://open.spotify.com/track/6OZROqTzWkH2c47ypb95ST",
+    "verified": true,
+    "oembedTitle": "Llorando Se Fue",
+    "spotifyDescription": "Los Kjarkas · Sentimiento Andino · Song · 1997"
+  },
+  {
+    "slug": "bolivia",
+    "title": "La Bomba",
+    "artist": "Azul Azul",
+    "spotifyTrackUrl": "https://open.spotify.com/track/4NVqjGHxiNUnnUL3tos5dZ",
+    "verified": true,
+    "oembedTitle": "La Bomba",
+    "spotifyDescription": "Azul Azul · Top Latino 2000 · Song · 2000"
+  },
+  {
+    "slug": "chile",
+    "title": "Tren Al Sur",
+    "artist": "Los Prisioneros",
+    "spotifyTrackUrl": "https://open.spotify.com/track/6T1aHvxKQE8kCDwZMwmqR1",
+    "verified": true,
+    "oembedTitle": "Tren Al Sur",
+    "spotifyDescription": "Los Prisioneros · Éxitos del Ayer Vol. 1 · Song · 2020"
+  },
+  {
+    "slug": "chile",
+    "title": "Gracias a la Vida",
+    "artist": "Violeta Parra",
+    "spotifyTrackUrl": "https://open.spotify.com/track/770rEwqqSXBP61eWQt9NDt",
+    "verified": true,
+    "oembedTitle": "Gracias a la Vida",
+    "spotifyDescription": "Violeta Parra, Los Calchakis, Isabel & Angel Parras · Chants & Rythmes du Chili (feat. Isabel & Angel Parras) [Songs & Rhythms from Chile] · Song · 1991"
+  },
+  {
+    "slug": "venezuela",
+    "title": "Me Rehúso",
+    "artist": "Danny Ocean",
+    "spotifyTrackUrl": "https://open.spotify.com/track/6De0lHrwBfPfrhorm9q1Xl",
+    "verified": true,
+    "oembedTitle": "Me Rehúso",
+    "spotifyDescription": "Danny Ocean · Me Rehúso · Song · 2016"
+  },
+  {
+    "slug": "venezuela",
+    "title": "Caballo Viejo",
+    "artist": "Simón Díaz",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "puerto-rico",
+    "title": "Gasolina",
+    "artist": "Daddy Yankee",
+    "spotifyTrackUrl": "https://open.spotify.com/track/3DL87tGCPxTLi2deEXHcmU",
+    "verified": true,
+    "oembedTitle": "Gasolina",
+    "spotifyDescription": "Daddy Yankee · Hasta El Piso · Song · 2021"
+  },
+  {
+    "slug": "puerto-rico",
+    "title": "Tití Me Preguntó",
+    "artist": "Bad Bunny",
+    "spotifyTrackUrl": "https://open.spotify.com/track/1IHWl5LamUGEuP4ozKQSXZ",
+    "verified": true,
+    "oembedTitle": "Tití Me Preguntó",
+    "spotifyDescription": "Bad Bunny · Un Verano Sin Ti · Song · 2022"
+  },
+  {
+    "slug": "colombia",
+    "title": "Cali Pachanguero",
+    "artist": "Grupo Niche",
+    "spotifyTrackUrl": "https://open.spotify.com/track/3SXWtn3YbXOuz6s9LN8LeJ",
+    "verified": true,
+    "oembedTitle": "Cali Pachanguero",
+    "spotifyDescription": "Grupo Niche · Sólo Hits · Song · 2006"
+  },
+  {
+    "slug": "colombia",
+    "title": "La Tierra del Olvido",
+    "artist": "Carlos Vives",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "brasil",
+    "title": "Mas Que Nada",
+    "artist": "Jorge Ben Jor",
+    "spotifyTrackUrl": "https://open.spotify.com/track/1XtIQKTv4zdAgHGgjUzCwb",
+    "verified": true,
+    "oembedTitle": "Mas Que Nada",
+    "spotifyDescription": "Jorge Ben Jor · The Best of Brazil · Song · 2014"
+  },
+  {
+    "slug": "brasil",
+    "title": "Ai Se Eu Te Pego",
+    "artist": "Michel Teló",
+    "spotifyTrackUrl": "https://open.spotify.com/track/3beYWrrAxtVWScYAihLChF",
+    "verified": true,
+    "oembedTitle": "Ai se eu te pego - Original Version",
+    "spotifyDescription": "Michel Teló · Ai se eu te pego (Original Version) · Song · 2011"
+  },
+  {
+    "slug": "mexico",
+    "title": "La Chona",
+    "artist": "Los Tucanes de Tijuana",
+    "spotifyTrackUrl": "https://open.spotify.com/track/79xkyiTBHqdGg3SirACPwy",
+    "verified": true,
+    "oembedTitle": "La Chona",
+    "spotifyDescription": "Los Tucanes De Tijuana · Para Tucancillos y Tucancillas · Song · 2017"
+  },
+  {
+    "slug": "mexico",
+    "title": "Cielito Lindo",
+    "artist": "Vicente Fernández",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "jamaica",
+    "title": "One Love / People Get Ready",
+    "artist": "Bob Marley & The Wailers",
+    "spotifyTrackUrl": "https://open.spotify.com/track/05VlGC380rZvDx5suJE9sH",
+    "verified": true,
+    "oembedTitle": "One Love / People Get Ready",
+    "spotifyDescription": "Bob Marley & The Wailers · Legend (The Definitive Remasters) · Song · 1984"
+  },
+  {
+    "slug": "jamaica",
+    "title": "Three Little Birds",
+    "artist": "Bob Marley & The Wailers",
+    "spotifyTrackUrl": "https://open.spotify.com/track/7vggqxNKwd6xdRoYS0pQtM",
+    "verified": true,
+    "oembedTitle": "Three Little Birds",
+    "spotifyDescription": "Bob Marley & The Wailers · Legend - The Best Of Bob Marley And The Wailers · Song · 2002"
+  },
+  {
+    "slug": "haiti",
+    "title": "Ayiti - Bang Bang",
+    "artist": "Carimi",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "haiti",
+    "title": "Kite M Kriye",
+    "artist": "Rutshelle Guillaume",
+    "spotifyTrackUrl": null,
+    "verified": false,
+    "reason": "No direct track URL"
+  },
+  {
+    "slug": "curazao",
+    "title": "Kòrsou",
+    "artist": "Rich Kalashh & Izaline Calister",
+    "spotifyTrackUrl": "https://open.spotify.com/track/1GnuIDFxeKqmEmZHuzHiVj",
+    "verified": true,
+    "oembedTitle": "Korsou",
+    "spotifyDescription": "Rich Kalashh, Izaline Calister · Korsou · Song · 2017"
+  },
+  {
+    "slug": "curazao",
+    "title": "Ketu Ketu Ketu",
+    "artist": "Izaline Calister",
+    "spotifyTrackUrl": "https://open.spotify.com/track/1wiJowjUqWzd87AdOO48H7",
+    "verified": true,
+    "oembedTitle": "Ketu Ketu Ketu",
+    "spotifyDescription": "Izaline Calister · Di Fiesta · Song · 2011"
+  },
+  {
+    "slug": "canada",
+    "title": "Blinding Lights",
+    "artist": "The Weeknd",
+    "spotifyTrackUrl": "https://open.spotify.com/track/22Pj0MqPGaN5jBghFlvDuW",
+    "verified": true,
+    "oembedTitle": "Blinding Lights",
+    "spotifyDescription": "The Weeknd · Fresh Pop Hits · Song · 2022"
+  },
+  {
+    "slug": "canada",
+    "title": "Electric Pow Wow Drum",
+    "artist": "The Halluci Nation",
+    "spotifyTrackUrl": "https://open.spotify.com/track/1qHeVLeFeMrpbkR9yaNsd5",
+    "verified": true,
+    "oembedTitle": "Electric Pow Wow Drum",
+    "spotifyDescription": "The Halluci Nation · A Tribe Called Red · Song · 2013"
+  }
+]

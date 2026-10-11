@@ -1,6 +1,6 @@
 # Explore Our Roots — delivery record
 
-This records successive deliveries. The latest presentation adjustment below supersedes the earlier stationary default and permanently visible controls.
+This records successive deliveries. The latest entry below is authoritative for current content and verification; earlier milestone notes are historical.
 
 ## Milestone 1: functional prototype
 
@@ -73,3 +73,11 @@ The founder chose to supply the full texts, photos and music. [The content kit](
 A fresh network check can reach English Wikipedia, although Colombia's tourism site still returns CONNECT 403. This is connectivity evidence only; no new Wikipedia claims or music resources were published in this milestone.
 
 Verification: 50/50 Node tests, ESLint and production build pass. Focused Chromium checks pass header/footer logo loading; home and country-page widths 320/375/1440; all 55 destinations; Canada list focus and native globe click; global Canada/Canadá names; country-first Colombia framing and its EN/ES spotlight. No runtime exceptions. Mobile screenshots were inspected. The ZIP was checked for 55 distinct matching forms, 55 image folders, guide/index and archive integrity. Full browser regression was not repeated after these bounded changes; physical-device and assistive-technology review remain pending.
+
+## Milestone 5: founder’s lote 07 — 55 cultural pages
+
+55 destination pages now contain localized English/Spanish documentary summaries, 172 referenced sections and 60 verified Spotify track links with opt-in players. All globe/list/search selections have a cultural route, including Canada and the smallest territories. Colombia covers multiple regions, food, Greater Magdalena vallenato, Pacific marimba and Barranquilla. Every page uses a public-domain geographic illustration; no unlicensed draft covers are included.
+
+[EXPLORE_ROOTS_LOTE07_REVIEW.md](EXPLORE_ROOTS_LOTE07_REVIEW.md) records every destination, source reachability, published scope and specific remaining work. Community review, licensed documentary photography, colloquial expressions and 52 unverified track candidates remain pending. These are complete public summaries, not complete approval of every field in the original nine-section drafts.
+
+Verification: 53 tests, ESLint, production build, 55 routes and illustrations responding HTTP 200, and Chromium checks for EN/ES, mobile widths, Colombia breadth, tiny territories, Canada and explicit media activation/replacement/cleanup. The new media lifecycle is checked under Next’s cached-route Activity behavior. Niagara and the agenda remain independent.

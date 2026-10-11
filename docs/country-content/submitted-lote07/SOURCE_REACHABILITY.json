@@ -1,0 +1,1388 @@
+{
+  "date": "2026-10-10",
+  "package": "NC_LATIN_CLUB_55_FICHAS_REVISADAS_LOTE_07_TODOS_LOS_DESTINOS.zip",
+  "sourceRequests": [
+    {
+      "url": "https://ivisitanguilla.com/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://ivisitanguilla.com/festivals-and-events/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://tourismanguilla.com/things-to-do/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.anguilla-beaches.com/anguilla-events.html",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.visitantiguabarbuda.com/events_festivals/antiguas-carnival-the-caribbeans-greatest-summer-festival/2/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://cdn.discoverdominica.com/production/20250707105806-dominica-launches-25th-edition-of-world-creole-music-festival.pdf",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://ich.unesco.org/en/rl/tango-00258",
+      "status": 200,
+      "title": "Tango - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/rl/tango-00258"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/chamame-01600",
+      "status": 200,
+      "title": "Chamamé - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/chamame-01600"
+    },
+    {
+      "url": "https://ich.unesco.org/en/state/argentina-AR?info=elements-on-the-lists",
+      "status": 200,
+      "title": "Argentina - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/state/argentina-AR?info=elements-on-the-lists"
+    },
+    {
+      "url": "https://www.aruba.com/es/nuestra-isla/historia-y-cultura/carnaval-en-aruba",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.aruba.com/es/blog/7-especialidades-culinarias-de-aruba",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.aruba.com/us/autentico/recipes",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.aruba.com/es/evento/gran-final-de-concurso-de-tumba",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.bahamas.com/pressroom/embrace-the-holiday-magic-in-the-bahamas-grand-bahama-island",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.bahamas.com/es/experiences/culture",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.visitbarbados.org/crop-over-festival-2026",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.visitbarbados.org/bajan-music-of-the-sun",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.visitbarbados.org/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.travelbelize.org/culture/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.travelbelize.org/blog/how-celebrate-garifuna-settlement-day-home/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/christmas-bram-and-sambai-of-gales-point-manatee-belize-02298",
+      "status": 200,
+      "title": "Christmas Bram and Sambai of Gales Point Manatee, Belize - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/christmas-bram-and-sambai-of-gales-point-manatee-belize-02298"
+    },
+    {
+      "url": "https://www.travelbelize.org/blog/around-belize-four-dishes/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.travelbelize.org/blog/5-garifuna-must-eats/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/language-dance-and-music-of-the-garifuna-00001",
+      "status": 200,
+      "title": "Language, dance and music of the Garifuna - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/language-dance-and-music-of-the-garifuna-00001"
+    },
+    {
+      "url": "https://www.gov.bm/articles/bermuda-day",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.gotobermuda.com/our-island/festivals-holidays/bermuda-day",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://ich.unesco.org/es/RL/el-carnaval-de-oruro-00003",
+      "status": 200,
+      "title": "El carnaval de Oruro - UNESCO Patrimonio cultural inmaterial",
+      "finalUrl": "https://ich.unesco.org/es/RL/el-carnaval-de-oruro-00003"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/pujllay-and-ayarichi-music-and-dances-of-the-yampara-culture-00630",
+      "status": 200,
+      "title": "Pujllay and Ayarichi, music and dances of the Yampara culture - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/pujllay-and-ayarichi-music-and-dances-of-the-yampara-culture-00630"
+    },
+    {
+      "url": "https://bonaireisland.com/tourism-corporation-bonaire-announces-the-start-of-cultural-month-april/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://bonaireisland.com/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://bonaire.com/en/blog/bonaire-local-food-kunuku-culture/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/samba-de-roda-of-reconcavo-of-bahia-00101",
+      "status": 200,
+      "title": "Samba de Roda of the Recôncavo of Bahia - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/samba-de-roda-of-reconcavo-of-bahia-00101"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/frevo-performing-arts-of-the-carnival-of-recife-00603",
+      "status": 200,
+      "title": "Frevo, performing arts of the Carnival of Recife - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/frevo-performing-arts-of-the-carnival-of-recife-00603"
+    },
+    {
+      "url": "https://www.gov.br/iphan/pt-br/assuntos/noticias/baianas-de-acaraje-do-rj-lancam-produto-audiovisual-sobre-o-oficio",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/roda-of-capoeira-00892",
+      "status": 200,
+      "title": "Capoeira circle - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/roda-of-capoeira-00892"
+    },
+    {
+      "url": "https://ich.unesco.org/en/state/brazil-BR",
+      "status": 200,
+      "title": "Brazil - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/state/brazil-BR"
+    },
+    {
+      "url": "https://www.canada.ca/en/canadian-heritage/campaigns/celebrate-canada.html",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://parks.canada.ca/culture/autochtones-indigenous",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www150.statcan.gc.ca/n1/pub/89-657-x/89-657-x2026006-eng.htm",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.canada.ca/en/services/culture/canadian-identity-society/indigenous-peoples-cultures/commemorative-days.html",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.canada.ca/en/parks-canada/news/2024/06/government-of-canada-recognizes-the-national-historic-significance-of-the-shiibaashkaigan--jingle-dress.html",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/baile-chino-00988",
+      "status": 200,
+      "title": "Baile Chino - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/baile-chino-00988"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/carnival-of-barranquilla-00051",
+      "status": 200,
+      "title": "Carnival of Barranquilla - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/carnival-of-barranquilla-00051"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/marimba-music-traditional-chants-and-dances-from-the-colombia-south-pacific-region-and-esmeraldas-province-of-ecuador-01099",
+      "status": 200,
+      "title": "Marimba music, traditional chants and dances from the Colombia South Pacific region and Esmeraldas Province of Ecuador - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/marimba-music-traditional-chants-and-dances-from-the-colombia-south-pacific-region-and-esmeraldas-province-of-ecuador-01099"
+    },
+    {
+      "url": "https://ich.unesco.org/en/USL/vallenato-traditional-music-of-the-greater-magdalena-region-01095",
+      "status": 200,
+      "title": "Traditional Vallenato music of the Greater Magdalena region - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/USL/vallenato-traditional-music-of-the-greater-magdalena-region-01095"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/oxherding-and-oxcart-traditions-in-costa-rica-00103",
+      "status": 200,
+      "title": "Oxherding and oxcart traditions in Costa Rica - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/oxherding-and-oxcart-traditions-in-costa-rica-00103"
+    },
+    {
+      "url": "https://es.visitcostarica.com/planning-your-trip/restaurants/all",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.visitcostarica.com/things-to-do/culinary-adventures",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.visitcostarica.com/faq/html/costa-rica.html",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/rumba-in-cuba-a-festive-combination-of-music-and-dances-and-all-the-practices-associated-01185",
+      "status": 200,
+      "title": "Rumba in Cuba, a festive combination of music and dances and all the practices associated - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/rumba-in-cuba-a-festive-combination-of-music-and-dances-and-all-the-practices-associated-01185"
+    },
+    {
+      "url": "https://ich.unesco.org/en/state/cuba-CU?cp=CU&info=elements-on-the-lists&topic=en-state",
+      "status": 200,
+      "title": "Cuba - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/state/cuba-CU?cp=CU&info=elements-on-the-lists&topic=en-state"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/festivity-of-las-parrandas-in-the-centre-of-cuba-01405",
+      "status": 200,
+      "title": "Festivity of Las Parrandas in the centre of Cuba - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/festivity-of-las-parrandas-in-the-centre-of-cuba-01405"
+    },
+    {
+      "url": "https://ich.unesco.org/en/state/cuba-CU",
+      "status": 200,
+      "title": "Cuba - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/state/cuba-CU"
+    },
+    {
+      "url": "https://www.curacao.com/en/culture",
+      "status": 200,
+      "title": "Curaçao: the Caribbean Getaway to Feel for Yourself",
+      "finalUrl": "https://www.curacao.com/en/culture"
+    },
+    {
+      "url": "https://www.curacao.com/es/estilo-curazoleno",
+      "status": 200,
+      "title": "Curaçao: the Caribbean Getaway to Feel for Yourself",
+      "finalUrl": "https://www.curacao.com/es/estilo-curazoleno"
+    },
+    {
+      "url": "https://www.curacao.com/en/article/caribbean-food-top-10-dishes-to-try-in-curacao",
+      "status": 200,
+      "title": "Curaçao: the Caribbean Getaway to Feel for Yourself",
+      "finalUrl": "https://www.curacao.com/en/article/caribbean-food-top-10-dishes-to-try-in-curacao"
+    },
+    {
+      "url": "https://www.curacao.com/en/article/seu-curacao-harvest-festival-one-of-the-biggest-cultural-celebrations",
+      "status": 200,
+      "title": "Curaçao: the Caribbean Getaway to Feel for Yourself",
+      "finalUrl": "https://www.curacao.com/en/article/seu-curacao-harvest-festival-one-of-the-biggest-cultural-celebrations"
+    },
+    {
+      "url": "https://www.curacao.com/en/questions/culture/what-is-the-native-language-spoken-in-curacao",
+      "status": 200,
+      "title": "Curaçao: the Caribbean Getaway to Feel for Yourself",
+      "finalUrl": "https://www.curacao.com/en/questions/culture/what-is-the-native-language-spoken-in-curacao"
+    },
+    {
+      "url": "https://discoverdominica.com/festivals-and-events/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://legacy.discoverdominica.com/en/posts/42/a-taste-of-the-island-dominicas-delicious-culinary-experiences",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://cdn.discoverdominica.com/production/20250227150007-bouyon-day-2025-brings-dominicas-signature-sound-to-hanover-street.pdf",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://legacy.discoverdominica.com/en/events/1/mas-domnik-the-real-mas",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/pasillo-song-and-poetry-01702",
+      "status": 200,
+      "title": "Pasillo, song and poetry - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/pasillo-song-and-poetry-01702"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/marimba-music-traditional-chants-and-dances-from-colombias-south-pacific-region-and-esmeraldas-province-of-ecuador-01099",
+      "status": 200,
+      "title": "Marimba music, traditional chants and dances from the Colombia South Pacific region and Esmeraldas Province of Ecuador - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/marimba-music-traditional-chants-and-dances-from-colombias-south-pacific-region-and-esmeraldas-province-of-ecuador-01099"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/traditional-weaving-of-the-ecuadorian-toquilla-straw-hat-00729",
+      "status": 200,
+      "title": "Traditional weaving of the Ecuadorian toquilla straw hat - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/traditional-weaving-of-the-ecuadorian-toquilla-straw-hat-00729"
+    },
+    {
+      "url": "https://elsalvador.travel/esp/dia-nacional-de-la-pupusa-destinos-para-disfrutar-de-un-sabor-de-cultura-y-tradicion/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://elsalvador.travel/esp/nahuizalco/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/the-confraternity-of-flowers-and-palms-02240",
+      "status": 200,
+      "title": "The Confraternity of flowers and palms - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/the-confraternity-of-flowers-and-palms-02240"
+    },
+    {
+      "url": "https://elsalvador.travel/preforocimap/gastronomia-salvadorena/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.nps.gov/subjects/latinoheritage/index.htm",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.nps.gov/subjects/npscelebrates/native-american-heritage-month.htm",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://home.nps.gov/subjects/npscelebrates/hispanic-heritage-month.htm",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.puregrenada.com/spicemas/?v=0b3b97fa6688",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.puregrenada.com/about-carriacou/?v=0b3b97fa6688",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.puregrenada.com/the-gta-collaborates-with-various-partners-for-spicemas-press-trip-2025/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.puregrenada.com/experiences/festivals-culture/?v=0b3b97fa6688",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://ich.unesco.org/es/RL/el-gwoka-musicas-cantos-danzas-y-expresiones-culturales-representativas-de-la-identidad-guadalupena-00991",
+      "status": 200,
+      "title": "El gwoka: músicas, cantos, danzas y expresiones culturales representativas de la identidad guadalupeña - UNESCO Patrimonio cultural inmaterial",
+      "finalUrl": "https://ich.unesco.org/es/RL/el-gwoka-musicas-cantos-danzas-y-expresiones-culturales-representativas-de-la-identidad-guadalupena-00991"
+    },
+    {
+      "url": "https://www.lesilesdeguadeloupe.com/en/explore/gastronomy-spirits/tastes-of-guadeloupe/bokit/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/gwoka-music-song-dance-and-cultural-practice-representative-of-guadeloupean-identity-00991",
+      "status": 200,
+      "title": "Gwoka: music, song, dance and cultural practice representative of Guadeloupean identity - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/gwoka-music-song-dance-and-cultural-practice-representative-of-guadeloupean-identity-00991"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/rabinal-achi-dance-drama-tradition-00144",
+      "status": 200,
+      "title": "Rabinal Achí dance drama tradition - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/rabinal-achi-dance-drama-tradition-00144"
+    },
+    {
+      "url": "https://visitguatemala.gt/blog/platos-tipicos-guatemala/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/technique-of-making-the-giant-kites-of-santiago-sacatepequez-and-sumpango-guatemala-01991",
+      "status": 200,
+      "title": "Technique of making the giant kites of Santiago Sacatepéquez and Sumpango, Guatemala - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/technique-of-making-the-giant-kites-of-santiago-sacatepequez-and-sumpango-guatemala-01991"
+    },
+    {
+      "url": "https://ich.unesco.org/en/state/guatemala-GT?info=elements-on-the-lists",
+      "status": 200,
+      "title": "Guatemala - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/state/guatemala-GT?info=elements-on-the-lists"
+    },
+    {
+      "url": "https://www.ctguyane.fr/la-programmation-culturelle-carnaval-en-toutes-sauces-revient-pour-sa-5%E1%B5%89-edition-du-14-janvier-au-14-fevrier-2026/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.ctguyane.fr/carnaval-a-decouverte-premiers-dancings/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.ctguyane.fr/recherche-patrimoniale-autour-carnaval-de-rue-dhier-daujourdhui/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://dpi.gov.gy/mashramani-then-and-now/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://guyanatourism.com/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://caribbean.eclac.org/countries",
+      "status": "failed",
+      "reason": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/joumou-soup-01853",
+      "status": 200,
+      "title": "Joumou soup - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/joumou-soup-01853"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/the-compas-of-haiti-02273",
+      "status": 200,
+      "title": "The Compas of Haiti - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/the-compas-of-haiti-02273"
+    },
+    {
+      "url": "https://ich.unesco.org/en/state/haiti-HT",
+      "status": 200,
+      "title": "Haiti - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/state/haiti-HT"
+    },
+    {
+      "url": "https://www.honduras.travel/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://ich.unesco.org/en/state/honduras-HN?info=elements-on-the-lists",
+      "status": 200,
+      "title": "Honduras - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/state/honduras-HN?info=elements-on-the-lists"
+    },
+    {
+      "url": "https://dnh.gob.hn/diario/honduras-se-come-con-las-manos-un-viaje-por-los-sabores-que-cuentan-la-historia-del-pais",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.visitcaymanislands.com/en-gb/things-to-do/food-drink",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.visitcaymanislands.com/en-ca/events/festivals-cultural-events",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.falklandislands.com/about/history-and-heritage?p=2",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://falklands.gov.fk/naturalresources/agriculture",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.gov.fk/wp-content/uploads/2025/05/Our-Islands-Our-Home.pdf",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.bvitourism.com/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.bvitourism.com/events",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.visitusvi.com/explore/heritage-culture-and-customs/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.visitusvi.com/experience/st-thomas-carnival/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.visitusvi.com/press-release/us-virgin-islands-announces-performance-lineup-for-the-2026-st-john-celebration-village-featuring-ashanti-kes-the-band-pumpa-bunji-garlin-fay-ann-lyons-tarrus-riley-and-more/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/reggae-music-of-jamaica-01398",
+      "status": 200,
+      "title": "Reggae music of Jamaica - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/reggae-music-of-jamaica-01398"
+    },
+    {
+      "url": "https://ich.unesco.org/en/state/jamaica-JM",
+      "status": 200,
+      "title": "Jamaica - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/state/jamaica-JM"
+    },
+    {
+      "url": "https://www.visitjamaica.com/discover-jamaica/cuisine/jamaican-food/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.visitjamaica.com/best-of-jamaica/food/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.martinique.org/fr/blog/gastronomie/specialites-culinaires-martiniquaises",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.martinique.org/fr/unesco",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.martinique.org/fr/tout-savoir/culture/tour-de-martinique-des-yoles-rondes",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.martinique.org/fr/blog/culture-patrimoine/chants-danses-et-contes-le-bele",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.martinique.org/fr/tout-savoir/culture/danse",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/traditional-mexican-cuisine-ancestral-ongoing-community-culture-the-michoacan-paradigm-00400",
+      "status": 200,
+      "title": "Traditional Mexican cuisine - ancestral, ongoing community culture, the Michoacán paradigm - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/traditional-mexican-cuisine-ancestral-ongoing-community-culture-the-michoacan-paradigm-00400"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/mariachi-string-music-song-and-trumpet-00575",
+      "status": 200,
+      "title": "Mariachi, string music, song and trumpet - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/mariachi-string-music-song-and-trumpet-00575"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/dia-de-muertos-the-indigenous-festivity-dedicated-to-the-dead-00054",
+      "status": 200,
+      "title": "Indigenous festivity dedicated to the dead - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/dia-de-muertos-the-indigenous-festivity-dedicated-to-the-dead-00054"
+    },
+    {
+      "url": "https://www.visitmontserrat.com/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.visitmontserrat.com/about-montserrat/national-dish/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.gov.ms/about-us/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.visitmontserrat.com/festivals-events/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/el-gueguense-00111",
+      "status": 200,
+      "title": "El Güegüense - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/el-gueguense-00111"
+    },
+    {
+      "url": "https://ich.unesco.org/en/state/nicaragua-NI",
+      "status": 200,
+      "title": "Nicaragua - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/state/nicaragua-NI"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/ritual-and-festive-expressions-of-the-congo-culture-01383?RL=01383",
+      "status": 200,
+      "title": "Ritual and festive expressions of the Congo culture - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/ritual-and-festive-expressions-of-the-congo-culture-01383?RL=01383"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/artisanal-processes-and-plant-fibers-techniques-for-talcos-crinejas-and-pintas-weaving-of-the-pinta-o-hat-01272",
+      "status": 200,
+      "title": "Artisanal processes and plant fibers techniques for talcos, crinejas and pintas weaving of the pinta’o hat - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/artisanal-processes-and-plant-fibers-techniques-for-talcos-crinejas-and-pintas-weaving-of-the-pinta-o-hat-01272"
+    },
+    {
+      "url": "https://es.tourismpanama.com/planea-tu-viaje/itinerarios/riviera-pacifica/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://ich.unesco.org/en/state/panama-PA",
+      "status": 200,
+      "title": "Panama - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/state/panama-PA"
+    },
+    {
+      "url": "https://ich.unesco.org/es/RL/guarania-sonido-del-alma-paraguaya-02128",
+      "status": 200,
+      "title": "Guarania, sonido del alma paraguaya - UNESCO Patrimonio cultural inmaterial",
+      "finalUrl": "https://ich.unesco.org/es/RL/guarania-sonido-del-alma-paraguaya-02128"
+    },
+    {
+      "url": "https://cultura.gov.py/2025/09/practicas-y-saberes-tradicionales-del-terere-en-la-cultura-del-poha-nana-bebida-ancestral-guarani-en-paraguay-2/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://ich.unesco.org/es/estado/paraguay-el-PY",
+      "status": 200,
+      "title": "Paraguay (el) - UNESCO Patrimonio cultural inmaterial",
+      "finalUrl": "https://ich.unesco.org/es/estado/paraguay-el-PY"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/ceviche-an-expression-of-traditional-peruvian-cuisine-01952",
+      "status": 200,
+      "title": "Practices and meanings associated with the preparation and consumption of ceviche, an expression of Peruvian traditional cuisine - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/ceviche-an-expression-of-traditional-peruvian-cuisine-01952"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/knowledge-skills-and-rituals-related-to-the-annual-renewal-of-the-q-eswachaka-bridge-00594",
+      "status": 200,
+      "title": "Knowledge, skills and rituals related to the annual renewal of the Q’eswachaka bridge - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/knowledge-skills-and-rituals-related-to-the-annual-renewal-of-the-q-eswachaka-bridge-00594"
+    },
+    {
+      "url": "https://ich.unesco.org/en/state/peru-PE?info=elements-on-the-lists",
+      "status": 200,
+      "title": "Peru - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/state/peru-PE?info=elements-on-the-lists"
+    },
+    {
+      "url": "https://www.discoverpuertorico.com/es/la-isla/musica-y-baile",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.discoverpuertorico.com/es/articulo/bomba-una-expresion-esencial-de-la-cultura-puertorriquena",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.discoverpuertorico.com/es/article/guide-to-plena",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.discoverpuertorico.com/article/guide-to-traditional-puerto-rican-food",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://folkways.si.edu/puerto-rican-bomba-plena-shared-traditions-distinct-rhythms/latin-world/music/article/smithsonian",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/music-and-dance-of-dominican-bachata-01514",
+      "status": 200,
+      "title": "Music and dance of Dominican Bachata - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/music-and-dance-of-dominican-bachata-01514"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/music-and-dance-of-the-merengue-in-the-dominican-republic-01162",
+      "status": 200,
+      "title": "Music and dance of the merengue in the Dominican Republic - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/music-and-dance-of-the-merengue-in-the-dominican-republic-01162"
+    },
+    {
+      "url": "https://www.godominicanrepublic.com/travel/faqs",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.sabatourism.com/events/2025-12-05/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.sabatourism.com/things-to-do/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.sabatourism.com/rlfest/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.sabatourism.com/restaurants/island-flavor",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.sabatourism.com/events/2025-08/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.sabatourism.com/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.saintbarth-tourisme.com/fr/discover",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.saintbarth-tourisme.com/fr",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.saintbarth-tourisme.com/wp-content/uploads/2024/04/Uniquely-St-Barth.pdf",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.gov.kn/festivals-and-traditions/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.nevisisland.com/culturama",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.nevisisland.com/discover/about",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://statia-tourism.com/about-statia/culture/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.statia-tourism.com/about-statia",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.statia-tourism.com/statia-day-2026-the-250th-celebration",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.musicmetricsvault.com/artists/big-shenn/1oRevsg3KXvciSXKMlsEZl",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.visitstmaarten.com/things-to-do/st-eustatius/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.france.fr/fr/destination/saint-martin/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.france.fr/fr/article/saint-martin-que-faire-que-voir/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.visitstmaarten.com/the-daily-hearld-in-the-hot-seat-with-young-dow/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://tourism.gov.vc/tourism/index.php/festivals-a-events/66-nine-mornings-festival",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.gov.vc/index.php/visitors/culture-festivals",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://foreign.gov.vc/foreign/index.php/the-national-dish",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://tourism.gov.vc/tourism/index.php/festivals-a-events/65-breadfruit-festival",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.govt.lc/flowerfestivals",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://tourism.govt.lc/news/jounen-kw-y-l-host-communities-announced",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://stlucia.org/en/discover-saint-lucia/culinary/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://stlucia.org/en_uk/things-to-do/saint-lucian-street-food/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://tourism.govt.lc/news/jounen-kw-y-l-featured-indian-traditions",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.visitstmaarten.com/st-maarten-carnival-2026-schedule/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.visitstmaarten.com/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.st-maarten.com/carnival-on-sint-maarten-twice/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.thedailyherald.sx/images/pdf/Apr-10-2026-CARNIVAL-SPECIAL-2026.pdf",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://whc.unesco.org/en/statesparties/sr",
+      "status": 200,
+      "title": "Suriname - UNESCO World Heritage Convention",
+      "finalUrl": "https://whc.unesco.org/en/statesparties/sr"
+    },
+    {
+      "url": "https://suriname-guide.com/interests/cultural-experiences/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.amare.nl/en/celebrate-keti-koti-in-amare-mbyk",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://visittrinidad.tt/blog/trinidad-carnival-countdown/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://visittobago.gov.tt/local-culture-people-heritage/tobago-food",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://visittobago.gov.tt/festivals-events",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.visittci.com/nature-and-history/culture-and-heritage",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.visittci.com/events/fish-fry",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.visittci.com/about/overview-es",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://comisionunesco.org.uy/rutas-unesco/candombe/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://comisionunesco.org.uy/rutas-unesco/tango/",
+      "status": "failed",
+      "reason": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.unesco.org/es/articles/rutas-unesco-uruguay-la-cultura-como-motor-del-desarrollo-sostenible",
+      "status": 200,
+      "title": "Rutas UNESCO Uruguay: La cultura como motor del desarrollo sostenible",
+      "finalUrl": "https://www.unesco.org/es/articles/rutas-unesco-uruguay-la-cultura-como-motor-del-desarrollo-sostenible"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/festive-cycle-around-the-devotion-and-worship-towards-saint-john-the-baptist-01682",
+      "status": 200,
+      "title": "Festive cycle around the devotion and worship towards Saint John the Baptist  - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/festive-cycle-around-the-devotion-and-worship-towards-saint-john-the-baptist-01682"
+    },
+    {
+      "url": "https://ich.unesco.org/en/RL/dancing-devils-of-corpus-christi-00639",
+      "status": 200,
+      "title": "Venezuela's Dancing Devils of Corpus Christi - UNESCO Intangible Cultural Heritage",
+      "finalUrl": "https://ich.unesco.org/en/RL/dancing-devils-of-corpus-christi-00639"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Argentina",
+      "status": 200,
+      "title": "Argentina - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Argentina"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Bolivia",
+      "status": 200,
+      "title": "Bolivia - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Bolivia"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Brazil",
+      "status": 200,
+      "title": "Brazil - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Brazil"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Chile",
+      "status": 200,
+      "title": "Chile - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Chile"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Colombia",
+      "status": 200,
+      "title": "Colombia - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Colombia"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Ecuador",
+      "status": 200,
+      "title": "Ecuador - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Ecuador"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Guyana",
+      "status": 200,
+      "title": "Guyana - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Guyana"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Paraguay",
+      "status": 200,
+      "title": "Paraguay - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Paraguay"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Peru",
+      "status": 200,
+      "title": "Peru - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Peru"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Suriname",
+      "status": 200,
+      "title": "Suriname - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Suriname"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Uruguay",
+      "status": 200,
+      "title": "Uruguay - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Uruguay"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Venezuela",
+      "status": 200,
+      "title": "Venezuela - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Venezuela"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/French_Guiana",
+      "status": 200,
+      "title": "French Guiana - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/French_Guiana"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Falkland_Islands",
+      "status": 200,
+      "title": "Falkland Islands - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Falkland_Islands"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Belize",
+      "status": 200,
+      "title": "Belize - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Belize"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Costa_Rica",
+      "status": 200,
+      "title": "Costa Rica - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Costa_Rica"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/El_Salvador",
+      "status": 200,
+      "title": "El Salvador - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/El_Salvador"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Guatemala",
+      "status": 200,
+      "title": "Guatemala - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Guatemala"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Honduras",
+      "status": 200,
+      "title": "Honduras - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Honduras"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Nicaragua",
+      "status": 200,
+      "title": "Nicaragua - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Nicaragua"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Panama",
+      "status": 200,
+      "title": "Panama - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Panama"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Mexico",
+      "status": 200,
+      "title": "Mexico - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Mexico"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/United_States",
+      "status": 200,
+      "title": "United States - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/United_States"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Antigua_and_Barbuda",
+      "status": 200,
+      "title": "Antigua and Barbuda - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Antigua_and_Barbuda"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/The_Bahamas",
+      "status": 200,
+      "title": "The Bahamas - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/The_Bahamas"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Barbados",
+      "status": 200,
+      "title": "Barbados - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Barbados"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Cuba",
+      "status": 200,
+      "title": "Cuba - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Cuba"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Dominica",
+      "status": 200,
+      "title": "Dominica - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Dominica"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Dominican_Republic",
+      "status": 200,
+      "title": "Dominican Republic - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Dominican_Republic"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Grenada",
+      "status": 200,
+      "title": "Grenada - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Grenada"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Haiti",
+      "status": 200,
+      "title": "Haiti - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Haiti"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Jamaica",
+      "status": 200,
+      "title": "Jamaica - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Jamaica"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Saint_Kitts_and_Nevis",
+      "status": 200,
+      "title": "Saint Kitts and Nevis - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Saint_Kitts_and_Nevis"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Saint_Lucia",
+      "status": 200,
+      "title": "Saint Lucia - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Saint_Lucia"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Saint_Vincent_and_the_Grenadines",
+      "status": 200,
+      "title": "Saint Vincent and the Grenadines - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Saint_Vincent_and_the_Grenadines"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Trinidad_and_Tobago",
+      "status": 200,
+      "title": "Trinidad and Tobago - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Trinidad_and_Tobago"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Anguilla",
+      "status": 200,
+      "title": "Anguilla - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Anguilla"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Aruba",
+      "status": 200,
+      "title": "Aruba - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Aruba"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Bonaire",
+      "status": 200,
+      "title": "Bonaire - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Bonaire"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/British_Virgin_Islands",
+      "status": 200,
+      "title": "British Virgin Islands - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/British_Virgin_Islands"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Cayman_Islands",
+      "status": 200,
+      "title": "Cayman Islands - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Cayman_Islands"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Cura%C3%A7ao",
+      "status": 200,
+      "title": "Curaçao - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Cura%C3%A7ao"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Guadeloupe",
+      "status": 200,
+      "title": "Guadeloupe - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Guadeloupe"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Martinique",
+      "status": 200,
+      "title": "Martinique - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Martinique"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Montserrat",
+      "status": 200,
+      "title": "Montserrat - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Montserrat"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Puerto_Rico",
+      "status": 200,
+      "title": "Puerto Rico - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Puerto_Rico"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Saba",
+      "status": 200,
+      "title": "Saba - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Saba"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Saint_Barth%C3%A9lemy",
+      "status": 200,
+      "title": "Saint Barthélemy - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Saint_Barth%C3%A9lemy"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Collectivity_of_Saint_Martin",
+      "status": 200,
+      "title": "Collectivity of Saint Martin - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Collectivity_of_Saint_Martin"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Sint_Eustatius",
+      "status": 200,
+      "title": "Sint Eustatius - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Sint_Eustatius"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Sint_Maarten",
+      "status": 200,
+      "title": "Sint Maarten - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Sint_Maarten"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Turks_and_Caicos_Islands",
+      "status": 200,
+      "title": "Turks and Caicos Islands - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Turks_and_Caicos_Islands"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/United_States_Virgin_Islands",
+      "status": 200,
+      "title": "United States Virgin Islands - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/United_States_Virgin_Islands"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Bermuda",
+      "status": 200,
+      "title": "Bermuda - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Bermuda"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Canada",
+      "status": 200,
+      "title": "Canada - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Canada"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Saba_(island)",
+      "status": 200,
+      "title": "Saba (island) - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Saba_(island)"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Music_of_the_Bahamas",
+      "status": 200,
+      "title": "Music of the Bahamas - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Music_of_the_Bahamas"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Dia_di_Rincon",
+      "status": "failed",
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Music_of_the_Virgin_Islands",
+      "status": 200,
+      "title": "Music of the Virgin Islands - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Music_of_the_Virgin_Islands"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Music_of_Cura%C3%A7ao",
+      "status": 200,
+      "title": "Music of Curaçao - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Music_of_Cura%C3%A7ao"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/The_Halluci_Nation",
+      "status": 200,
+      "title": "The Halluci Nation - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/The_Halluci_Nation"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Music_of_Dominica",
+      "status": 200,
+      "title": "Music of Dominica - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Music_of_Dominica"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Music_of_Grenada",
+      "status": 200,
+      "title": "Music of Grenada - Wikipedia",
+      "finalUrl": "https://en.wikipedia.org/wiki/Music_of_Grenada"
+    }
+  ],
+  "notes": [
+    "Saba disambiguation page was rejected and replaced with Saba_(island).",
+    "Curaçao tourism URLs returned generic app shells; they are not used as factual evidence.",
+    "Dia_di_Rincon could not be retrieved; the specific festival claim remains unpublished.",
+    "Wikipedia is secondary evidence; blocked primary sources remain pending, not silently marked verified."
+  ]
+}
