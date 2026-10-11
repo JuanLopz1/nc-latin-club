@@ -11,8 +11,8 @@ test('motion choice survives a storage write failure for the current session', (
     globalThis.document = { documentElement: { dataset: {} } };
     globalThis.window = new EventTarget();
     globalThis.matchMedia = () => ({ matches: true });
-    assert.equal(readMotionPreference(), 'system');
-    assert.equal(getReducedMotion(), true);
+    assert.equal(readMotionPreference(), 'full');
+    assert.equal(getReducedMotion(), false);
     persistMotionPreference('full');
     assert.equal(readMotionPreference(), 'full');
     assert.equal(getReducedMotion(), false);
@@ -22,9 +22,13 @@ test('motion choice survives a storage write failure for the current session', (
     assert.equal(document.documentElement.dataset.motion, 'reduce');
     let saved = null;
     globalThis.localStorage = { getItem: () => saved, setItem: (_, value) => { saved = value; } };
-    persistMotionPreference('system');
-    assert.equal(saved, 'system');
-    assert.equal(readMotionPreference(), 'system');
+    persistMotionPreference('full');
+    assert.equal(saved, 'full');
+    assert.equal(readMotionPreference(), 'full');
+    saved = 'system';
+    assert.equal(readMotionPreference(), 'full');
+    saved = 'reduce';
+    assert.equal(readMotionPreference(), 'reduce');
   } finally {
     for (const [key, descriptor] of Object.entries(originals)) {
       if (descriptor) Object.defineProperty(globalThis, key, descriptor);

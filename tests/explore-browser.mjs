@@ -15,7 +15,7 @@ async function openTools(){if(!await evaluate('!!document.querySelector("[data-t
 async function viewport(width){await send('Emulation.setDeviceMetricsOverride',{width,height:920,deviceScaleFactor:1,mobile:true});}
 try {
  await send('Page.enable');await send('Page.bringToFront');await send('Emulation.setFocusEmulationEnabled',{enabled:true});await send('Runtime.enable');await send('Emulation.setTouchEmulationEnabled',{enabled:true,maxTouchPoints:1});await viewport(375);
- await send('Page.navigate',{url:base+'/explore'});await wait('!!document.querySelector("[data-globe-scene][data-ready=true]")');await evaluate('localStorage.removeItem("nc-latin-club-language")');await send('Page.reload');await wait('document.documentElement?.lang==="en" && !!document.querySelector("[data-globe-scene][data-ready=true]")');
+ await send('Page.navigate',{url:base+'/explore'});await wait('!!document.querySelector("[data-globe-scene][data-ready=true]")');await evaluate('localStorage.removeItem("nc-latin-club-language");localStorage.removeItem("nc-latin-club-motion")');await send('Page.reload');await wait('document.documentElement?.lang==="en" && !!document.querySelector("[data-globe-scene][data-ready=true]")');
  check('real WebGL globe rendered',await evaluate('!!document.querySelector("[data-globe-scene] canvas") && document.querySelector("[data-globe-scene] canvas").width>0'));
  const count=Number(process.env.EXPECT_DESTINATIONS || 55);
  check('destination list covers this milestone',await evaluate(`document.querySelectorAll('[data-country]').length===${count}`));
@@ -55,7 +55,7 @@ try {
  await click('[aria-label="Close place details"]');await openTools();await click('[data-rotate]');await pause(250);check('visitor can start rotation',await evaluate('document.querySelector("[data-rotate]").getAttribute("aria-pressed")==="true"'));
  await key('Escape','Escape');check('Escape collapses tools and restores its trigger focus',await evaluate('!document.querySelector("[data-tools-panel]") && document.activeElement.hasAttribute("data-tools-trigger")'));
  await openTools();
- await send('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]});
+ await click('[data-menu-trigger]');await click('[data-motion-toggle]');await click('[data-menu-trigger]');
  await wait('document.querySelector("[data-rotate]").disabled && document.querySelector("[data-rotate]").getAttribute("aria-pressed")==="false"');
  check('reduced motion disables automatic rotation controls',await evaluate('document.querySelector("[data-rotate]").disabled && document.querySelector("[data-rotate]").getAttribute("aria-pressed")==="false"'));
  await click('[data-reset]');check('reduced motion settles without a camera tween',await evaluate('new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve(Math.abs(JSON.parse(document.querySelector("[data-globe-scene]").dataset.camera).altitude-2.15)<.02))))'));

@@ -11,8 +11,6 @@
 .teaserPreview{position:relative;width:100%;min-width:0;height:380px;border-radius:18px;background:radial-gradient(ellipse,#29475c60,transparent 72%);overflow:hidden}
 .teaserPreview :global([data-globe-scene]){height:360px;width:100%}
 .teaserPreviewFallback{position:absolute;inset:0 0 35px;background-position:center;background-size:contain;background-repeat:no-repeat;pointer-events:none}
-.previewMotion{position:absolute;right:12px;top:12px;display:grid;place-items:center;min-width:44px;min-height:44px;border:1px solid #54718b;border-radius:50%;background:#14263c;color:#ffe06a;cursor:pointer}
-.previewMotion svg{width:16px;height:16px}.previewMotion:disabled{opacity:.45;cursor:default}
 .previewCaption{position:absolute;left:24px;right:24px;bottom:5px;display:flex;align-items:center;justify-content:space-between;gap:14px;pointer-events:none}
 .previewCaption>span{color:#ffe06a;font-size:1.2rem;font-weight:750;letter-spacing:-.035em}
 .previewCaption>a{display:flex;align-items:center;gap:10px;min-height:44px;color:#76dbe3;font-size:.75rem;text-decoration:none;pointer-events:auto}

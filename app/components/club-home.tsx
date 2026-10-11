@@ -6,7 +6,6 @@ import { useHomeMotion } from "./use-home-motion";
 import CultureMarquee from "./culture-marquee";
 import FamiliaSection from "./familia-section";
 import InstagramSection from "./instagram-section";
-import { HomeMotionNotice } from "./motion-control";
 import { copy } from "./home-copy";
 import { clubLinks, joinEmailHref } from "./club-links";
 import RootsTeaser from "./explore/roots-teaser";
@@ -46,10 +45,10 @@ export default function ClubHome() {
           <p className={s.eyebrow}><span className={s.eyebrowDot} />{t.heroLabel}</p>
           <h1 id="hero-title">{t.heroTitle[0]}{" "}<br /><em>{t.heroTitle[1]}</em><Signal className={s.titleSignal} /></h1>
           <p className={s.heroBody}>{t.heroText}</p>
-          <div className={s.heroActions}><a href={joinEmailHref} className={s.button} title={t.emailHint}>{t.heroAction}<Arrow /></a>{instagramAction}</div>
-          <div className={s.heroFoot}><Signal className={s.smallSignal} />{t.location}</div>
+          <div className={s.heroActions} data-reveal><a href={joinEmailHref} className={s.button} title={t.emailHint}>{t.heroAction}<Arrow /></a>{instagramAction}</div>
+          <div className={s.heroFoot} data-reveal><Signal className={s.smallSignal} />{t.location}</div>
         </div>
-        <div className={s.heroArt}>
+        <div className={s.heroArt} data-reveal data-hero-art>
           <div className={s.artFrame} data-hero-parallax><Image src="/images/latin-night-festival.png" alt={language === "en" ? "Original illustration of an imagined Latin American street festival at night, with music, murals, colourful lights and glowing hummingbirds" : "Ilustración original de un festival callejero latinoamericano imaginado de noche, con música, murales, luces de colores y colibríes luminosos"} fill preload sizes="(max-width: 760px) 100vw, 55vw" className={s.worldImage} /></div>
           <div className={s.worldStamp}><Signal /><span>{t.heroTag[0]}<br /><i>{t.heroTag[1]}</i></span></div>
           <span className={s.artCaption}>{t.imageNote}<Arrow /></span>
@@ -58,7 +57,6 @@ export default function ClubHome() {
       </section>
       <a href="#familia" className={s.scrollLink}>{t.scroll}<Arrow down /></a>
       <CultureMarquee language={language} />
-      <HomeMotionNotice language={language} />
 
       <FamiliaSection language={language} />
 

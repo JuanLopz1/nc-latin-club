@@ -13,14 +13,14 @@ const homePlaces = [...firstIds.flatMap(id => places.filter(place => place.id ==
 const originalNames: Record<string, string> = { 'coco-bar-mexican-grill': 'cocobar', 'la-paisana-tienda': 'La Paisana', 'origen-bistro-bakery': 'Origen' };
 const symbols = ['✺', '◈', '✦'];
 const controls = {
-  en: { previous: 'Previous business', next: 'Next business', pause: 'Pause automatic scrolling', resume: 'Resume automatic scrolling', paused: 'Paused', playing: 'Slow scroll', reduced: 'Motion reduced', hint: 'Drag or swipe to explore all 21 businesses', rail: 'Local Niagara businesses' },
-  es: { previous: 'Negocio anterior', next: 'Negocio siguiente', pause: 'Pausar desplazamiento automático', resume: 'Reanudar desplazamiento automático', paused: 'En pausa', playing: 'Desplazamiento lento', reduced: 'Movimiento reducido', hint: 'Arrastra o desliza para explorar los 21 negocios', rail: 'Negocios locales de Niagara' },
+  en: { previous: 'Previous business', next: 'Next business', hint: 'Drag or swipe to explore all 21 businesses', rail: 'Local Niagara businesses' },
+  es: { previous: 'Negocio anterior', next: 'Negocio siguiente', hint: 'Arrastra o desliza para explorar los 21 negocios', rail: 'Negocios locales de Niagara' },
 };
 
 export default function NiagaraTeaser({ language }: { language: Language }) {
   const t = niagaraCopy[language];
   const labels = controls[language];
-  const { railRef, reduced, paused, playing, dragging, move, toggle, railEvents, focusEvents } = useNiagaraCarousel();
+  const { railRef, playing, dragging, move, railEvents, focusEvents } = useNiagaraCarousel();
   return <section id="niagara" className={s.teaser} aria-labelledby="niagara-title">
     <div className={s.teaserIntro}>
       <div><p className={s.eyebrow}>{t.featured}</p><h2 id="niagara-title">{t.title}</h2><p>{t.invite}</p></div>
@@ -31,9 +31,6 @@ export default function NiagaraTeaser({ language }: { language: Language }) {
         <p id="niagara-rail-hint">{labels.hint}</p>
         <div className={c.controls} role="group" aria-label={labels.rail}>
           <button type="button" aria-label={labels.previous} aria-controls="niagara-businesses" data-rail-previous onClick={() => move(-1)}><span aria-hidden="true">←</span></button>
-          <button type="button" className={c.playback} aria-label={paused ? labels.resume : labels.pause} aria-controls="niagara-businesses" data-rail-toggle onClick={toggle} disabled={reduced}>
-            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">{paused || reduced ? <path d="m6 4 9 6-9 6Z" /> : <path d="M7 4v12m6-12v12" />}</svg> {reduced ? labels.reduced : paused ? labels.paused : labels.playing}
-          </button>
           <button type="button" aria-label={labels.next} aria-controls="niagara-businesses" data-rail-next onClick={() => move(1)}><span aria-hidden="true">→</span></button>
         </div>
       </div>

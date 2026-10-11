@@ -22,6 +22,7 @@ export function useNiagaraCarousel() {
   const direction = useRef(1);
   const pointer = useRef<{ id: number; x: number; y: number; left: number; dragging: boolean } | null>(null);
   const suppressClick = useRef(false);
+  const idleTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const playing = !paused && !reduced && inView && documentVisible && !hovered && !focused && !dragging;
 
   useEffect(() => {
@@ -29,7 +30,7 @@ export function useNiagaraCarousel() {
     if (!rail) return;
     const observer = new IntersectionObserver(entries => setInView(entries[0].isIntersecting), { threshold: 0.1 });
     observer.observe(rail);
-    return () => observer.disconnect();
+    return () => { observer.disconnect(); clearTimeout(idleTimer.current); };
   }, []);
 
   useEffect(() => {
@@ -55,7 +56,11 @@ export function useNiagaraCarousel() {
     return () => cancelAnimationFrame(frame);
   }, [playing]);
 
-  const pause = () => setPaused(true);
+  const pause = () => {
+    setPaused(true);
+    clearTimeout(idleTimer.current);
+    idleTimer.current = setTimeout(() => setPaused(false), 8000);
+  };
   const move = (delta: number) => {
     pause();
     const rail = railRef.current;
@@ -117,8 +122,7 @@ export function useNiagaraCarousel() {
   };
 
   return {
-    railRef, reduced, paused, playing, dragging, move,
-    toggle: () => setPaused(value => !value),
+    railRef, playing, dragging, move,
     railEvents: {
       onWheel: pause, onPointerDown, onPointerMove, onPointerUp: endPointer,
       onPointerCancel: endPointer, onLostPointerCapture: endPointer, onClickCapture, onKeyDown,

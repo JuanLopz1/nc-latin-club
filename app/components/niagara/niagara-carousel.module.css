@@ -2,8 +2,6 @@
 .toolbar > p { color: #aebfd4; font-size: .77rem; line-height: 1.6; margin: 0; }
 .controls { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
 .controls button { min-width: 44px; min-height: 44px; border: 1px solid #405675; border-radius: 8px; background: #19263e; color: #ffe06a; cursor: pointer; font: inherit; font-size: 1.05rem; }
-.controls .playback { display: flex; align-items: center; justify-content: center; gap: 9px; padding: 0 14px; font-size: .74rem; color: #bac8db; }
-.playback svg { width: 15px; height: 15px; flex-shrink: 0; }
 .controls button:hover { border-color: #76dbe3; }
 .controls button:disabled { cursor: default; opacity: .7; }
 .rail { position: relative; display: flex; gap: 22px; overflow-x: auto; overflow-y: hidden; padding: 7px 4px 18px; margin: 0 -4px; scrollbar-width: thin; scrollbar-color: #526985 #142038; cursor: grab; overscroll-behavior-x: contain; }

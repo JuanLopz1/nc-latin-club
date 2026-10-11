@@ -258,14 +258,15 @@
 .countryDialog > .dialogNote { border-top: 1px solid #ffffff33; padding-top: 17px; font-size: 12px; color: #b3bdd1; }
 
 /* Motion enhances the existing composition; SSR and reduced motion stay visible. */
-.hero h1{animation:heroArrive .65s .08s both cubic-bezier(.2,.7,.2,1)}
-.heroBody{animation:heroArrive .65s .18s both cubic-bezier(.2,.7,.2,1)}
-.heroActions{animation:heroArrive .65s .28s both cubic-bezier(.2,.7,.2,1)}
-.heroArt{animation:heroArrive .8s .2s both cubic-bezier(.2,.7,.2,1)}
+.hero h1{--reveal-delay:80ms;--reveal-duration:1.2s}
+.heroBody{--reveal-delay:220ms}
+.heroActions{--reveal-delay:360ms}
+.heroFoot{--reveal-delay:440ms}
+.heroArt{--reveal-delay:160ms;--reveal-duration:1.2s}
 .worldImage{transform:translateY(var(--hero-drift,0px)) scale(1.05)}
 .worldStamp{animation:stampFloat 7s ease-in-out infinite}
-.home [data-reveal-state]{transition:opacity .65s ease,translate .65s cubic-bezier(.2,.7,.2,1)}
-.home [data-reveal-state=waiting]{opacity:0;translate:0 18px}
+.home [data-reveal-state]{transition:opacity var(--reveal-duration,1.05s) ease var(--reveal-delay,0ms),translate var(--reveal-duration,1.05s) cubic-bezier(.2,.7,.2,1) var(--reveal-delay,0ms),transform .35s ease,border-color .2s ease}
+.home [data-reveal-state=waiting]{opacity:0;translate:0 24px;transition:none}
 .home [data-reveal-state=visible]{opacity:1;translate:0 0}
 .home a>svg{transition:transform .2s ease}
 .home .button:hover>svg,.home .textLink:hover>svg{transform:translateX(3px)}
@@ -275,9 +276,6 @@
 .ribbonGroup{display:flex;align-items:center;flex:none;min-width:100vw;padding:0 24px;gap:48px;justify-content:space-around}
 .ribbonGroup>span{display:inline-flex;align-items:center;flex:none;gap:48px;font-size:24px;font-weight:850;letter-spacing:-.04em;text-transform:uppercase;white-space:nowrap;line-height:1.3}
 .ribbonGroup svg{width:23px;height:23px;flex:none}
-.ribbonPause{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:44px;height:44px;display:grid;place-items:center;background:#ffe06a;border:1px solid #0c101b66;border-radius:50%;cursor:pointer;box-shadow:0 0 22px 16px #ffe06a}
-.ribbonPause svg{width:17px;height:17px}
-.ribbon[data-paused=true] .ribbonTrack{animation-play-state:paused}
 .familiaPage{max-width:1260px;margin:auto;padding:35px 50px 70px}
 .familiaPage .section{padding:55px 0}
 .familia :is(h1,h2){font-size:clamp(42px,4.5vw,63px);line-height:1.03;margin:25px 0}
@@ -290,15 +288,13 @@
 .instagramPanel iframe{display:block;width:100%;height:520px;border:0;border-radius:9px;margin-top:20px;background:#fff}
 .instagramHandle{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:40px 0 18px;color:#76dbe3;font-size:clamp(22px,3vw,36px);font-weight:750;letter-spacing:-.05em}
 .instagramHandle>span{color:#ffe06a}
-@keyframes heroArrive{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @keyframes cultureMarquee{to{transform:translateX(-50%)}}
 @keyframes stampFloat{0%,100%{transform:rotate(8deg) translateY(0)}50%{transform:rotate(5deg) translateY(-5px)}}
-@media(max-width:760px){.ribbon{padding:19px 0}.ribbonGroup{gap:28px;padding:0 14px}.ribbonGroup>span{font-size:18px;gap:28px}.ribbonGroup svg{width:18px;height:18px}.ribbonPause{right:8px}.familiaPage{padding:30px 25px 60px}.familiaPage .section{padding:30px 0 40px}.instagram{grid-template-columns:1fr;padding:60px 25px;gap:28px}.instagramPanel{padding:22px}.instagramPanel iframe{height:480px}}
-@media(prefers-reduced-motion:reduce){:global(html:not([data-motion="full"])) .home [data-reveal-state]{opacity:1!important;translate:none!important;transition:none!important}:global(html:not([data-motion="full"])) .worldImage{transform:none}:global(html:not([data-motion="full"])) .ribbonTrack{width:100%;animation:none!important;transform:none!important}:global(html:not([data-motion="full"])) .ribbonPause{display:none}:global(html:not([data-motion="full"])) .ribbonGroup{min-width:0;width:100%;gap:14px;padding:0 16px;justify-content:space-around}:global(html:not([data-motion="full"])) .ribbonGroup>span{font-size:clamp(11px,1.7vw,24px);gap:12px}:global(html:not([data-motion="full"])) .ribbonGroup svg{width:10px;height:10px}:global(html:not([data-motion="full"])) .ribbonGroup>span:nth-child(4)>svg{display:none}:global(html:not([data-motion="full"])) .ribbonGroup>span:nth-child(n+5),:global(html:not([data-motion="full"])) .ribbonGroup:nth-child(2){display:none}}
+@media(max-width:760px){.ribbon{padding:19px 0}.ribbonGroup{gap:28px;padding:0 14px}.ribbonGroup>span{font-size:18px;gap:28px}.ribbonGroup svg{width:18px;height:18px}.familiaPage{padding:30px 25px 60px}.familiaPage .section{padding:30px 0 40px}.instagram{grid-template-columns:1fr;padding:60px 25px;gap:28px}.instagramPanel{padding:22px}.instagramPanel iframe{height:480px}}
+@media(prefers-reduced-motion:reduce){:global(html:not([data-motion="full"])) .home [data-reveal-state]{opacity:1!important;translate:none!important;transition:none!important}:global(html:not([data-motion="full"])) .worldImage{transform:none}:global(html:not([data-motion="full"])) .ribbonTrack{width:100%;animation:none!important;transform:none!important}:global(html:not([data-motion="full"])) .ribbonGroup{min-width:0;width:100%;gap:14px;padding:0 16px;justify-content:space-around}:global(html:not([data-motion="full"])) .ribbonGroup>span{font-size:clamp(11px,1.7vw,24px);gap:12px}:global(html:not([data-motion="full"])) .ribbonGroup svg{width:10px;height:10px}:global(html:not([data-motion="full"])) .ribbonGroup>span:nth-child(4)>svg{display:none}:global(html:not([data-motion="full"])) .ribbonGroup>span:nth-child(n+5),:global(html:not([data-motion="full"])) .ribbonGroup:nth-child(2){display:none}}
 :global(html[data-motion="reduce"]) .home [data-reveal-state]{opacity:1!important;translate:none!important;transition:none!important}
 :global(html[data-motion="reduce"]) .worldImage{transform:none}
 :global(html[data-motion="reduce"]) .ribbonTrack{width:100%;animation:none!important;transform:none!important}
-:global(html[data-motion="reduce"]) .ribbonPause{display:none}
 :global(html[data-motion="reduce"]) .ribbonGroup{min-width:0;width:100%;gap:14px;padding:0 16px;justify-content:space-around}
 :global(html[data-motion="reduce"]) .ribbonGroup>span{font-size:clamp(11px,1.7vw,24px);gap:12px}
 :global(html[data-motion="reduce"]) .ribbonGroup svg{width:10px;height:10px}

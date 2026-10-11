@@ -40,13 +40,13 @@ export default function CanadaConnections({ language }: { language: Language }) 
     <div className={s.connectionCards}>
       {destinations.map((destination, index) => <Link
         key={destination.slug} href={`/explore/${destination.slug}`}
-        className={s.connectionCard} data-reveal data-featured-country={destination.slug}
+        className={s.connectionCard} data-featured-country={destination.slug}
       >
-        <span className={s.connectionArt} aria-hidden="true" style={{ backgroundImage: `url(/images/roots/${destination.slug}.svg)` }} />
+        <span className={s.connectionArt} data-reveal aria-hidden="true" style={{ backgroundImage: `url(/images/roots/${destination.slug}.svg)` }} />
         <span className={s.connectionNumber} aria-hidden="true">0{index + 1} / ✦</span>
         <h4>{destination.name[language]}</h4>
         <p>{destination.invitation[language]}</p>
-        <span className={s.connectionLink}>{t.explore} {destination.name[language]}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" /></svg></span>
+        <span className={s.connectionLink} data-reveal>{t.explore} {destination.name[language]}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" /></svg></span>
       </Link>)}
     </div>
     <p className={s.connectionsSource}>{t.note} <a href="https://www150.statcan.gc.ca/n1/pub/11-627-m/11-627-m2024042-eng.htm" target="_blank" rel="noopener noreferrer">{t.source}</a></p>

@@ -51,7 +51,7 @@ try {
  check('short multiday cultural traditions remain daily',await evaluate('!!document.querySelector("[data-entry=muertos-2026]") && document.querySelectorAll("[data-month-observance]").length===0'));
  await click('button[aria-label="Next month"]');await click('button[aria-label="Next month"]');
  check('month controls cross year boundary',await evaluate(`document.querySelector('[data-date="2027-01-01"]').getAttribute('aria-pressed')==='true'`));
- await send('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]});await click('button[aria-label="Previous month"]');
+ await click('[data-menu-trigger]');await click('[data-motion-toggle]');await click('[data-menu-trigger]');await click('button[aria-label="Previous month"]');
  check('reduced motion calendar has no active animations',await evaluate('document.querySelector("main").getAnimations({subtree:true}).every(a=>a.playState!=="running")'));
  for(const width of [320,375,768,1440]){await viewport(width);check('calendar fits width '+width,await evaluate('document.documentElement.scrollWidth<=innerWidth'));}
  await goto('/events/latin-heritage-2026');await wait(`!!document.querySelector('main a[href="/events"]')`);

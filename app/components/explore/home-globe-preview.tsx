@@ -3,7 +3,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import type { Language } from '../home-copy';
-import { getReducedMotion, useReducedMotion } from '../motion-preference';
+import { getReducedMotion, subscribeMotion, useReducedMotion } from '../motion-preference';
 import raw from './countries.json';
 import type { Camera, Country, GlobeHandle } from './explore-types';
 import s from './explore.module.css';
@@ -22,6 +22,7 @@ export default function HomeGlobePreview({ language }: { language: Language }) {
   const changedCamera = useCallback((value: Camera) => { setCamera(value); }, []);
   const error = useCallback(() => setFailed(true), []);
   const select = useCallback((slug: string) => { setSelected(slug); setPaused(true); }, []);
+  useEffect(() => subscribeMotion(() => { if (!getReducedMotion()) setPaused(false); }), []);
   useEffect(() => {
     const element = root.current;
     if (!element || !('IntersectionObserver' in window)) return;
@@ -39,9 +40,6 @@ export default function HomeGlobePreview({ language }: { language: Language }) {
   return <div ref={root} className={s.teaserPreview} data-home-globe data-preview-country={selected} data-preview-playing={playing}>
     {loaded && !failed && <GlobeScene ref={handle} countries={destinations} selectedSlug={selected} camera={camera} rotating={playing} active={visible} presentation language={language} onSelect={select} onCamera={changedCamera} onReady={setReady} onInteraction={interacted} onError={error} />}
     {!ready && <div className={s.teaserPreviewFallback} style={{ backgroundImage: `url(/images/roots/${selected}.svg)` }} aria-hidden="true" />}
-    <button className={s.previewMotion} type="button" data-preview-motion disabled={reduced || failed} aria-pressed={!paused && !reduced} aria-label={language === 'en' ? paused ? 'Play globe preview' : 'Pause globe preview' : paused ? 'Animar vista del globo' : 'Pausar vista del globo'} onClick={() => setPaused(!paused)}>
-      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">{paused || reduced ? <path d="m8 5 11 7-11 7Z" /> : <path d="M6 5h4v14H6zm8 0h4v14h-4z" />}</svg>
-    </button>
     <div className={s.previewCaption}><span>{country.name[language]}</span><Link href={`/explore/${selected}`}>{language === 'en' ? 'Discover' : 'Descubrir'}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" /></svg></Link></div>
   </div>;
 }

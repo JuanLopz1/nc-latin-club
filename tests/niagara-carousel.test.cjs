@@ -19,11 +19,12 @@ test('homepage rail links to every public business once, keeping the original fi
   assert.ok(html.includes('data-niagara-rail'));
 });
 
-test('homepage rail exposes named manual and playback controls in both languages', () => {
-  for (const [language, labels] of [['en', ['Previous business', 'Next business', 'Pause automatic scrolling']], ['es', ['Negocio anterior', 'Negocio siguiente', 'Pausar desplazamiento automático']]]) {
+test('homepage rail exposes manual navigation without repeating the global animation switch', () => {
+  for (const [language, labels] of [['en', ['Previous business', 'Next business']], ['es', ['Negocio anterior', 'Negocio siguiente']]]) {
     const html = renderToStaticMarkup(React.createElement(NiagaraTeaser, { language }));
     for (const label of labels) assert.ok(html.includes(`aria-label="${label}"`), label);
-    assert.equal((html.match(/aria-controls="niagara-businesses"/g) || []).length, 3);
+    assert.equal((html.match(/aria-controls="niagara-businesses"/g) || []).length, 2);
+    assert.ok(!html.includes('data-rail-toggle'));
     assert.ok(html.includes('tabindex="0"'));
     assert.ok(html.includes('aria-live="off"'));
   }
