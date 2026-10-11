@@ -32,7 +32,7 @@ function Gallery({ images, language }: { images: readonly EntryImage[]; language
     <div className={s.track} ref={track} onScroll={onScroll}>
       {images.map((image, index) => <figure className={s.slide} key={`${image.src}-${index}`}>
         <div className={s.frame}>
-          {failed.has(index) ? <p className={s.error} role="status">{t.imageUnavailable}</p> : <Image src={image.src} width={image.width} height={image.height} alt={image.alt[language]} sizes="(max-width: 760px) 100vw, 65vw" loading="lazy" onError={() => setFailed(previous => new Set(previous).add(index))} />}
+          {failed.has(index) ? <p className={s.error} role="status">{t.imageUnavailable}</p> : <Image src={image.src} unoptimized={image.src.startsWith('/api/media/')} width={image.width} height={image.height} alt={image.alt[language]} sizes="(max-width: 760px) 100vw, 65vw" loading="lazy" onError={() => setFailed(previous => new Set(previous).add(index))} />}
         </div>
         {image.caption && <figcaption>{image.caption[language]}</figcaption>}
       </figure>)}
@@ -45,7 +45,7 @@ function Gallery({ images, language }: { images: readonly EntryImage[]; language
       </div>
       <div className={s.thumbnails}>
         {images.map((image, index) => <button type="button" key={`${image.src}-${index}`} aria-label={`${t.viewImage} ${index + 1}: ${image.alt[language]}`} aria-pressed={active === index} onClick={() => goTo(index)}>
-          {failed.has(index) ? <span aria-hidden="true">✧</span> : <Image src={image.src} width={72} height={52} alt="" loading="lazy" />}
+          {failed.has(index) ? <span aria-hidden="true">✧</span> : <Image src={image.src} unoptimized={image.src.startsWith('/api/media/')} width={72} height={52} alt="" loading="lazy" />}
         </button>)}
       </div>
     </>}

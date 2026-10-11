@@ -2,7 +2,7 @@
 
 Public website for **NC Latin Club**, an independent cultural community in Niagara, Ontario. The current homepage prototype follows the founder’s chosen direction: an urban night festival with lights and energy, bold typography and a midnight/yellow/coral/cyan palette. It scrolls through Our Familia, Events, cultural exploration, Latin Niagara, and a welcome section.
 
-The English/Spanish switch, shared mobile menu, country selection with accessible popups, and Niagara disclosures work locally. `/events` provides At NC, Out of NC and Latin dates, upcoming/past lists, an animated monthly calendar and individual details with optional image galleries. Language and agenda selections survive internal navigation. The map is an illustrated cultural introduction, not a precise geographic or member-location map. Country articles, invitation links, member photography, and a CMS remain future work. The original hero illustration in `public/images/latin-night-festival.png` depicts an imaginary street festival and fictional people; it is not a photograph or an announcement of a real club event. The earlier artwork remains available in `public/images/` and Git history.
+The English/Spanish switch, shared mobile menu, interactive globe with 55 destinations, and Niagara directory work locally. `/events` provides At NC, Out of NC and Latin dates, upcoming/past lists, an animated monthly calendar and individual details with optional image galleries. Language and agenda selections persist in the browser. All 55 destinations have bilingual cultural pages. The authenticated `/admin` panel now manages existing site content, with private drafts, publication, image uploads and history. It requires a Supabase Free project: follow [ADMIN_SETUP.md](docs/ADMIN_SETUP.md). Until configured, the public site uses reviewed repository defaults and the panel shows setup instructions. Visitor photo submissions remain future work. The original hero illustration in `public/images/latin-night-festival.png` depicts an imaginary street festival and fictional people; it is not a photograph or an announcement of a real club event. The earlier artwork remains available in `public/images/` and Git history.
 
 ## Stack
 
@@ -40,7 +40,7 @@ public/images/ Static images used by the site
 
 `app/page.tsx` renders `app/components/club-home.tsx`. Edit homepage translations in `home-copy.ts` and visual styles in `club-home.module.css`. The language switch changes the page content and document language; localized URLs and translated metadata have not yet been implemented. The development server reloads as you save.
 
-Motion respects `prefers-reduced-motion`. No database, new runtime dependencies, or application secrets are required for this prototype. Build-time Google Font downloads require access to `fonts.googleapis.com` and `fonts.gstatic.com`.
+Motion respects the visitor’s motion settings. Public repository defaults require no credentials. Online administration requires the three server environment variables in `.env.example`; secrets must stay outside Git. The existing sharp package is declared directly to sanitize uploaded images. Build-time Google Font downloads require access to `fonts.googleapis.com` and `fonts.gstatic.com`.
 
 ## Events and images
 
@@ -69,9 +69,9 @@ The first image becomes the agenda card cover. The detail has swipe, keyboard co
 
 The homepage only highlights upcoming At NC entries, using the same runtime clock and temporal rules as the agenda; cancelled entries show their notice and no registration action. Dates display in `America/Toronto`. The calendar uses six Monday-start weeks and the visitor's runtime clock for Niagara's today. An event ending exactly at midnight occupies only its preceding day; its detail still displays the complete end date. A cultural range stays upcoming through its inclusive last Niagara day. Date-only events with unknown hours also stay upcoming through their inclusive last day; daily timed schedules archive after their last documented endpoint; an unpublished final end keeps the festival upcoming through its inclusive last day. The agenda starts with all three categories selected. Category buttons independently toggle inclusion; All selects every category and Deselect all clears the selection. Multiple categories form a union without duplicate entries; none gives a helpful empty state. Calendar view uses the selected categories, with whole-month observances in their separate block; list view selects upcoming or past. The details return action preserves the selected categories, view, month and selected day; a fresh direct detail entry returns with all categories selected.
 
-Validation runs when the collection loads; `npm run test:events` also checks referenced media files. Run `npm test` (31 checks), lint and a fresh build before publishing. `proxy.ts` checks the same collection before streaming an unknown detail, preserving HTTP 404 with Next.js Cache Components. A future CMS must keep this routing guard aligned with its published collection.
+Validation runs when the collection loads; `npm run test:events` also checks referenced media files. Run `npm test`, lint and a fresh build before publishing. `proxy.ts` checks the same collection before streaming an unknown detail, preserving HTTP 404 with Next.js Cache Components. With Supabase configured, the routing guard reads the same published collections as the public pages.
 
-This release displays media from local files. Uploading, ordering and replacing images through an admin interface still requires the future authenticated portal and storage. Filters are held in browser state, not shareable query parameters. A full reload begins in English; localized metadata and `/es` routes remain future work. [QA evidence](docs/EVENTS_QA.md) records browser and fixture checks.
+The authenticated panel can upload, order, replace and remove images once Supabase is connected. Private uploads are served only to editors until published. Filters are held in browser state, not shareable query parameters. English is the default; a chosen language persists after reload; localized metadata and `/es` routes remain future work. [QA evidence](docs/EVENTS_QA.md) records browser and fixture checks.
 
 The homepage title is **NC LATIN CLUB** in both languages. “Join us” opens the visitor's email application with the club contact and requested introduction filled in; the website does not send email. Public contact and social destinations are centralized in `app/components/club-links.ts`. “Stay in the loop” opens the official Instagram profile, [@nclat1nclub](https://www.instagram.com/nclat1nclub/), in a new tab. The sponsor text identifies NCSAC, as requested by club leadership.
 
@@ -81,12 +81,11 @@ See [the roadmap](docs/ROADMAP.md) for priorities, milestone acceptance criteria
 
 These are future requirements, not implemented capabilities:
 
-- A fully interactive cultural map/globe restricted to the Americas from South America through the United States, including Central America and the Caribbean. Country selection should open an accessible country popup, with touch and keyboard alternatives. The current four-country illustration is only a prototype.
 - Staff/team profiles using approved names, roles, and photography.
 - A photo library with visitor submissions and admin approval before publication.
 - News and a richer Instagram experience using the official account and permitted integrations.
 - A future minigames page.
-- An authenticated admin portal with editing for the existing official logo, all managed images, site copy and translations, events, staff, country content, news, social links, and gallery moderation. Backend and content schemas must be designed before implementation.
+- Admin management of future staff/news sections and moderation of visitor photo submissions. The existing portal already manages the logo, homepage copy, contact/social/Spotify links, events, cultural dates, Niagara businesses and country pages.
 
 The homepage should keep a simple, inviting scroll experience with purposeful movement. Discover Latin Niagara remains part of the approved direction.
 
@@ -104,8 +103,8 @@ Leaflet 1.9.4 loads only on the Niagara client. OSM attribution stays visible; w
 
 Browser regression: with a fresh app and Chromium CDP at port9222, run `CHECK_URL=http://localhost:<port> node tests/niagara-browser.mjs`. It checks detail visibility, focus order, Escape and selection from the map on mobile with reduced motion.
 
-### Future administration of Niagara
+### Administration of Niagara
 
-The public directory still reads reviewed data from the repository. The future authenticated admin portal will add/create, edit, archive/remove businesses and manage approved images and searchable `#tags`. See [the admin scope](docs/ROADMAP.md#niagara-admin-y-etiquetas--alcance-futuro). Public create/edit/delete and hashtag search are not implemented in this milestone.
+With Supabase connected, `/admin` can create, edit, duplicate and remove business records, upload approved images and maintain searchable offerings. Draft removal changes the directory only after publication. Repository data remains the fallback before first publication. A dedicated hashtag model and public submissions remain future work.
 
 Browser regression checks (fresh `npm run build` + running production server, Chromium CDP on 9222): `CHECK_URL=http://localhost:3025 node tests/agenda-directory-browser.mjs` and `CHECK_URL=http://localhost:3025 node tests/niagara-browser.mjs`. Optional `ARTIFACT_DIR` saves screenshots outside the checkout.

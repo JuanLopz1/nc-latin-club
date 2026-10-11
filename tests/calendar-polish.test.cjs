@@ -79,14 +79,13 @@ test('agenda renders accessible independent tabs and accurate visible counts in 
  }
 });
 test('home shows countdown and calendar download for published Fiesta, but no countdown for cancellation',()=>{
- const collection=require('../app/components/club-events.ts'),originalEvents=collection.clubEvents,originalClock=clock.useAgendaClock;
- collection.clubEvents=[fiesta];clock.useAgendaClock=()=>now;
+ const {ContentProvider}=require('../app/components/content-context.tsx'),{defaultContent}=require('../app/cms/defaults.ts'),originalClock=clock.useAgendaClock;
+ clock.useAgendaClock=()=>now;
  try {
   const Component=require('../app/components/events-section.tsx').default;
-  const html=renderToStaticMarkup(React.createElement(Component,{language:'en'}));
+  const html=renderToStaticMarkup(React.createElement(ContentProvider,{content:{...defaultContent,events:[fiesta]}},React.createElement(Component,{language:'en'})));
   assert.ok(html.includes('role="timer"'));assert.ok(html.includes('download="latin-fiesta-2026.ics"'));
-  collection.clubEvents=[{...fiesta,status:'cancelled'}];
-  const cancelled=renderToStaticMarkup(React.createElement(Component,{language:'en'}));
+  const cancelled=renderToStaticMarkup(React.createElement(ContentProvider,{content:{...defaultContent,events:[{...fiesta,status:'cancelled'}]}},React.createElement(Component,{language:'en'})));
   assert.ok(!cancelled.includes('role="timer"'));assert.ok(!cancelled.includes('download="latin-fiesta-2026.ics"'));
- } finally {collection.clubEvents=originalEvents;clock.useAgendaClock=originalClock;}
+ } finally {clock.useAgendaClock=originalClock;}
 });

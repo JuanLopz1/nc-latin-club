@@ -6,9 +6,8 @@ import { eventsCopy } from "./events/events-copy";
 import { listEntries, eventDateTime, formatEntryWhen } from "./events/agenda-dates";
 import { useAgendaClock } from "./events/agenda-clock";
 import type { EventEntry } from "./events/event-types";
-import { copy, type Language } from "./home-copy";
-import { clubEvents } from "./club-events";
-import { joinEmailHref } from "./club-links";
+import type { Language } from "./home-copy";
+import { useContent, emailHref } from './content-context';
 import s from "./events-section.module.css";
 
 function ActionArrow() {
@@ -16,6 +15,7 @@ function ActionArrow() {
 }
 
 export default function EventsSection({ language }: { language: Language }) {
+  const {home:copy,events:clubEvents,settings}=useContent(),joinEmailHref=emailHref(settings.joinEmail);
   const t = copy[language].events;
   const statusCopy = eventsCopy[language], now = useAgendaClock();
   const upcoming = now ? listEntries(clubEvents, 'at-nc', 'upcoming', now).filter((entry): entry is EventEntry => entry.kind === 'event') : [];

@@ -4,6 +4,7 @@ import type { Place } from './place-types';
 import { directionsUrl, hasPin } from './place-utils';
 import { categoryLabels, niagaraCopy } from './niagara-copy';
 import s from './niagara.module.css';
+import EventGallery from '../events/event-gallery';
 export default function PlaceCard({ place: p, index, language, expanded, onToggle, registerButton }: { place: Place; index: number; language: Language; expanded: boolean; onToggle(): void; registerButton(node: HTMLButtonElement | null): void }) {
   const t = niagaraCopy[language], destination = directionsUrl(p), pinned = hasPin(p);
   const channels = p.channels.filter((channel, i, all) => all.findIndex(c => c.url === channel.url) === i);
@@ -21,6 +22,7 @@ export default function PlaceCard({ place: p, index, language, expanded, onToggl
     </div>
     <button className={s.more} onClick={onToggle} aria-controls={`detail-${p.id}`} aria-expanded={expanded}>{expanded ? t.close : t.details}<span aria-hidden="true">{expanded ? '↑' : '→'}</span></button>
     <section id={`detail-${p.id}`} className={s.expanded} hidden={!expanded} aria-label={`${t.details}: ${p.name}`}>
+      {expanded && !!p.images?.length && <EventGallery images={p.images} language={language} entryId={p.id}/>}
       {p.mode === 'mobile' && <p className={s.note}>{t.mobile}</p>}
       <div className={s.sources}><p>{t.reviewed}: {p.reviewedOn}</p>{p.sources.map((source, i) => <a key={source.url} href={source.url} target="_blank" rel="noopener noreferrer" aria-label={`${t.source} ${i + 1}: ${p.name} (${t.external})`}>{t.source} {i + 1} ↗</a>)}</div>
     </section>

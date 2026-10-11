@@ -12,7 +12,7 @@ export default function EventCard({ entry, language }: { entry: AgendaEntry; lan
   const t = eventsCopy[language], date = entryDate(entry), image = entry.images?.[0];
   return <article className={s.card} data-entry={entry.slug} aria-labelledby={`card-${entry.slug}`}>
     <div className={s.poster}>
-      {image && !failed ? <Image src={image.src} width={image.width} height={image.height} alt={image.alt[language]} sizes="(max-width: 760px) 100vw, 35vw" onError={() => setFailed(true)} /> : <div className={s.dateArt} aria-hidden="true"><span>{formatCalendarDate(date, language, { month: 'short' })}</span><strong>{entry.kind === 'cultural-date' && entry.calendarDisplay === 'month' ? '✦' : date.slice(-2)}</strong><span>{t.categories[entry.category]}</span><svg viewBox="0 0 100 100" fill="none"><path d="m50 4 11 30 32-11-23 27 23 27-32-11-11 30-11-30L7 77l23-27L7 23l32 11Z" fill="currentColor" /></svg></div>}
+      {image && !failed ? <Image src={image.src} unoptimized={image.src.startsWith('/api/media/')} width={image.width} height={image.height} alt={image.alt[language]} sizes="(max-width: 760px) 100vw, 35vw" onError={() => setFailed(true)} /> : <div className={s.dateArt} aria-hidden="true"><span>{formatCalendarDate(date, language, { month: 'short' })}</span><strong>{entry.kind === 'cultural-date' && entry.calendarDisplay === 'month' ? '✦' : date.slice(-2)}</strong><span>{t.categories[entry.category]}</span><svg viewBox="0 0 100 100" fill="none"><path d="m50 4 11 30 32-11-23 27 23 27-32-11-11 30-11-30L7 77l23-27L7 23l32 11Z" fill="currentColor" /></svg></div>}
       {failed && <span className={s.imageError}>{t.imageUnavailable}</span>}
     </div>
     <div className={s.content}>

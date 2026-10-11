@@ -2,14 +2,15 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { copy } from './home-copy';
+import { useContent } from './content-context';
 import { useSiteLanguage } from './site-context';
 import MotionControl from './motion-control';
 import s from './site-shell.module.css';
-function Brand() { return <><Image src="/images/brand/nc-latin-club.png" width={64} height={64} sizes="64px" alt="" className={s.brandLogo} /><span>NC LATIN<span className={s.brandSmall}>CLUB</span></span></>; }
+function Brand() { const {settings}=useContent(); return <><Image src={settings.logoSrc} unoptimized={settings.logoSrc.startsWith('/api/media/')} width={64} height={64} sizes="64px" alt="" className={s.brandLogo} /><span>NC LATIN<span className={s.brandSmall}>CLUB</span></span></>; }
 function Arrow() { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" /></svg>; }
 export default function SiteShell({ children }: { children: ReactNode }) {
   const { language, setLanguage } = useSiteLanguage();
+  const {home:copy}=useContent();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
   const headerDock = useRef<HTMLDivElement>(null);

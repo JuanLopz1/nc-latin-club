@@ -2,14 +2,13 @@
 
 import Link from 'next/link';
 import type { Language } from '../home-copy';
-import { categoryLabels, niagaraCopy } from './niagara-copy';
-import { places } from './place-data';
+import { categoryLabels } from './niagara-copy';
+import { useContent } from '../content-context';
 import { useNiagaraCarousel } from './use-niagara-carousel';
 import s from './niagara.module.css';
 import c from './niagara-carousel.module.css';
 
 const firstIds = ['coco-bar-mexican-grill', 'la-paisana-tienda', 'origen-bistro-bakery'];
-const homePlaces = [...firstIds.flatMap(id => places.filter(place => place.id === id)), ...places.filter(place => !firstIds.includes(place.id))];
 const originalNames: Record<string, string> = { 'coco-bar-mexican-grill': 'cocobar', 'la-paisana-tienda': 'La Paisana', 'origen-bistro-bakery': 'Origen' };
 const symbols = ['✺', '◈', '✦'];
 const controls = {
@@ -18,17 +17,18 @@ const controls = {
 };
 
 export default function NiagaraTeaser({ language }: { language: Language }) {
-  const t = niagaraCopy[language];
+  const {places,settings:{niagara:invitation}}=useContent();
+  const homePlaces = [...firstIds.flatMap(id => places.filter(place => place.id === id)), ...places.filter(place => !firstIds.includes(place.id))];
   const labels = controls[language];
   const { railRef, playing, dragging, move, railEvents, focusEvents } = useNiagaraCarousel();
   return <section id="niagara" className={s.teaser} aria-labelledby="niagara-title">
     <div className={s.teaserIntro}>
-      <div><p className={s.eyebrow}>{t.featured}</p><h2 id="niagara-title">{t.title}</h2><p>{t.invite}</p></div>
-      <Link className={s.explore} href="/niagara">{t.explore} <span aria-hidden="true">↗</span></Link>
+      <div><p className={s.eyebrow}>{invitation.label[language]}</p><h2 id="niagara-title">{invitation.title[language]}</h2><p>{invitation.text[language]}</p></div>
+      <Link className={s.explore} href="/niagara">{invitation.action[language]} <span aria-hidden="true">↗</span></Link>
     </div>
     <div>
       <div className={c.toolbar}>
-        <p id="niagara-rail-hint">{labels.hint}</p>
+        <p id="niagara-rail-hint">{labels.hint.replace('21',String(places.length))}</p>
         <div className={c.controls} role="group" aria-label={labels.rail}>
           <button type="button" aria-label={labels.previous} aria-controls="niagara-businesses" data-rail-previous onClick={() => move(-1)}><span aria-hidden="true">←</span></button>
           <button type="button" aria-label={labels.next} aria-controls="niagara-businesses" data-rail-next onClick={() => move(1)}><span aria-hidden="true">→</span></button>

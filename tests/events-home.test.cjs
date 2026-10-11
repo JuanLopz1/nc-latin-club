@@ -3,16 +3,17 @@ require('./register-typescript.cjs');
 const test=require('node:test'), assert=require('node:assert/strict');
 const React=require('react'), {renderToStaticMarkup}=require('react-dom/server');
 const clock=require('../app/components/events/agenda-clock.ts');
-const collection=require('../app/components/club-events.ts');
+const {ContentProvider}=require('../app/components/content-context.tsx');
+const {defaultContent}=require('../app/cms/defaults.ts');
 const {agendaEntries}=require('../app/components/events/agenda-data.ts');
 const {copy}=require('../app/components/home-copy.ts');
 const EventsSection=require('../app/components/events-section.tsx').default;
 const fiesta=agendaEntries.find(e=>e.slug==='latin-fiesta-2026');
 function render(events,now,language='en') {
- const originalClock=clock.useAgendaClock, originalEvents=collection.clubEvents;
- clock.useAgendaClock=()=>now;collection.clubEvents=events;
- try {return renderToStaticMarkup(React.createElement(EventsSection,{language}));}
- finally {clock.useAgendaClock=originalClock;collection.clubEvents=originalEvents;}
+ const originalClock=clock.useAgendaClock;
+ clock.useAgendaClock=()=>now;
+ try {return renderToStaticMarkup(React.createElement(ContentProvider,{content:{...defaultContent,events}},React.createElement(EventsSection,{language})));}
+ finally {clock.useAgendaClock=originalClock;}
 }
 test('home cancellation removes registration and shows its bilingual notice; rescheduling keeps the current date',()=>{
  const notice={en:'This gathering is cancelled.',es:'Este encuentro está cancelado.'};

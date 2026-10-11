@@ -1,5 +1,5 @@
 import raw from './data/culture-pages.json';
-import type { LocalizedText } from '../events/event-types';
+import type { LocalizedText, EntryImage } from '../events/event-types';
 export type CultureTrack = {
   trackId: string;
   title: string;
@@ -15,6 +15,7 @@ export type CulturePage = {
   sources: { id: string; title: LocalizedText; url: string }[];
   music: CultureTrack[];
   review: { basis: 'documentary-source-review'; date: string };
+  images?: EntryImage[];
 };
 // Published summaries are separate from the founder's Spanish working drafts.
 // See docs/EXPLORE_ROOTS_LOTE07_REVIEW.md for evidence and remaining fields.

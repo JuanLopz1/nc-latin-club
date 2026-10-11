@@ -50,7 +50,7 @@ export function validateAgenda(entries: readonly AgendaEntry[]): void {
     }
     requireValue(entry.images === undefined || Array.isArray(entry.images), 'images must be a collection');
     for (const image of entry.images ?? []) {
-      requireValue(/^\/images\/events\/(?:[\w-]+\/)*[\w-]+\.(?:avif|webp|jpe?g|png|gif|svg)$/.test(image.src), 'invalid local image path');
+      requireValue(/^\/images\/events\/(?:[\w-]+\/)*[\w-]+\.(?:avif|webp|jpe?g|png|gif|svg)$/.test(image.src) || /^\/api\/media\/[0-9a-f-]{36}$/.test(image.src), 'invalid local or uploaded image path');
       requireValue(Number.isInteger(image.width) && image.width > 0 && Number.isInteger(image.height) && image.height > 0, 'invalid image dimensions');
       text(image.alt, 'image needs bilingual alt text');
       if (image.caption) text(image.caption, 'bilingual image caption required');

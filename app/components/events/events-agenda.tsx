@@ -1,7 +1,7 @@
 'use client';
 import type { KeyboardEvent } from 'react';
 import { useAgendaState, useSiteLanguage } from '../site-context';
-import { joinEmailHref } from '../club-links';
+import { useContent, emailHref } from '../content-context';
 import type { AgendaEntry, AgendaScope, AgendaState } from './event-types';
 import { agendaPeriodEntries, dailyEntriesOnDate, formatCalendarDate, initialAgendaState, niagaraDate } from './agenda-dates';
 import { useAgendaClock } from './agenda-clock';
@@ -11,6 +11,7 @@ import MonthCalendar from './month-calendar';
 import s from './events-agenda.module.css';
 const categories = ['at-nc', 'out-of-nc'] as const;
 export default function EventsAgenda({ entries }: { entries: readonly AgendaEntry[] }) {
+  const {settings}=useContent(),joinEmailHref=emailHref(settings.joinEmail);
   const { language } = useSiteLanguage(), { state: saved, setState } = useAgendaState();
   const now = useAgendaClock(), t = eventsCopy[language];
   const state = saved ?? (now ? initialAgendaState(now) : null), scope = state?.scope ?? 'events';

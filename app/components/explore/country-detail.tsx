@@ -4,6 +4,7 @@ import { useSiteLanguage } from '../site-context';
 import type { Country } from './explore-types';
 import type { CulturePage } from './culture-data';
 import CultureMusic from './culture-music';
+import EventGallery from '../events/event-gallery';
 import { exploreCopy } from './explore-copy';
 import s from './explore.module.css';
 export default function CountryDetail({ country, page }: { country: Country; page: CulturePage }) {
@@ -13,6 +14,7 @@ export default function CountryDetail({ country, page }: { country: Country; pag
     <Link href="/explore" className={s.back}>← {t.back}</Link>
     <p className={s.eyebrow}>{country.name[language]} / {t.regions[country.region]}</p>
     <header className={s.cultureHero}><div><h1>{country.name[language]}</h1><p>{page.introduction[language]}</p>{country.politicalStatus && <p className={s.politicalNote}>{country.politicalStatus[language]}</p>}</div><div className={s.cultureArt} aria-hidden="true" style={{ backgroundImage: `url(/images/roots/${country.slug}.svg)` }} /></header>
+    {!!page.images?.length && <EventGallery images={page.images} language={language} entryId={page.slug}/>}
     <div className={s.spotlightHeading}><p className={s.eyebrow}>{labels.story}</p><h2>{page.title[language]}</h2></div>
     <nav className={s.cultureNav} aria-label={labels.contents}>{page.sections.map(section => <a key={section.id} href={`#culture-${section.id}`}>{section.title[language]}</a>)}{!!page.music.length && <a href="#culture-music">♪ {labels.music}</a>}</nav>
     <div className={s.cultureSections}>{page.sections.map(section => <section className={s.cultureSection} key={section.id} aria-labelledby={`culture-${section.id}`}><h2 id={`culture-${section.id}`}>{section.title[language]}</h2><p>{section.text[language]}</p><div className={s.sectionReferences} aria-label={labels.reference}>{section.sourceIds.map(id => { const source = page.sources.find(source => source.id === id)!; return <a key={id} href={source.url} target="_blank" rel="noopener noreferrer">{source.title[language]} ↗</a>; })}</div></section>)}</div>

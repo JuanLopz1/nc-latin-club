@@ -6,8 +6,8 @@ import { useHomeMotion } from "./use-home-motion";
 import CultureMarquee from "./culture-marquee";
 import FamiliaSection from "./familia-section";
 import InstagramSection from "./instagram-section";
-import { copy } from "./home-copy";
-import { clubLinks, joinEmailHref } from "./club-links";
+import { useContent, emailHref } from "./content-context";
+import SpotifySection from './spotify-section';
 import RootsTeaser from "./explore/roots-teaser";
 import NiagaraTeaser from "./niagara/niagara-teaser";
 import EventsSection from "./events-section";
@@ -33,7 +33,8 @@ export default function ClubHome() {
   const root = useRef<HTMLDivElement>(null);
   useHomeMotion(root);
   const { language } = useSiteLanguage();
-  const t = copy[language];
+  const {home:copy,settings:clubLinks}=useContent();
+  const joinEmailHref=emailHref(clubLinks.joinEmail), t = copy[language];
   const instagramAction = clubLinks.instagramUrl
     ? <a href={clubLinks.instagramUrl} className={s.textLink} target="_blank" rel="noopener noreferrer">{t.heroSecondary}<Arrow /></a>
     : <span className={s.socialPending}><span>{t.heroSecondary}</span><small>{t.instagramPending}</small></span>;
@@ -49,7 +50,7 @@ export default function ClubHome() {
           <div className={s.heroFoot} data-reveal><Signal className={s.smallSignal} />{t.location}</div>
         </div>
         <div className={s.heroArt} data-reveal data-hero-art>
-          <div className={s.artFrame} data-hero-parallax><Image src="/images/latin-night-festival.png" alt={language === "en" ? "Original illustration of an imagined Latin American street festival at night, with music, murals, colourful lights and glowing hummingbirds" : "Ilustración original de un festival callejero latinoamericano imaginado de noche, con música, murales, luces de colores y colibríes luminosos"} fill preload sizes="(max-width: 760px) 100vw, 55vw" className={s.worldImage} /></div>
+          <div className={s.artFrame} data-hero-parallax><Image src={clubLinks.heroSrc} unoptimized={clubLinks.heroSrc.startsWith('/api/media/')} alt={clubLinks.heroAlt[language]} fill preload sizes="(max-width: 760px) 100vw, 55vw" className={s.worldImage} /></div>
           <div className={s.worldStamp}><Signal /><span>{t.heroTag[0]}<br /><i>{t.heroTag[1]}</i></span></div>
           <span className={s.artCaption}>{t.imageNote}<Arrow /></span>
           <svg className={s.heroSparkle} viewBox="0 0 60 60" fill="none" aria-hidden="true"><path d="M30 0c0 21 9 30 30 30-21 0-30 9-30 30 0-21-9-30-30-30C21 30 30 21 30 0Z" fill="currentColor" /></svg>
@@ -68,6 +69,7 @@ export default function ClubHome() {
 
       <section id="join" className={s.join} aria-labelledby="join-title"><Pulse className={s.joinPulseLeft} /><Pulse className={s.joinPulseRight} /><Signal className={s.joinSignal} /><p className={s.eyebrow}>{t.joinLabel}</p><h2 id="join-title">{t.joinTitle[0]}<br /><em>{t.joinTitle[1]}</em></h2><p className={s.joinBody}>{t.joinBody}</p><div className={s.joinActions}><a href={joinEmailHref} className={s.button} title={t.emailHint}>{t.joinAction}<Arrow /></a>{instagramAction}</div><p className={s.joinNote}>{t.joinNote}</p></section>
       <InstagramSection language={language} />
+      <SpotifySection language={language} />
     </main>
 
 
