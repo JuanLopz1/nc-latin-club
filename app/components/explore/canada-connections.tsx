@@ -40,7 +40,7 @@ export default function CanadaConnections({ language }: { language: Language }) 
     <div className={s.connectionCards}>
       {destinations.map((destination, index) => <Link
         key={destination.slug} href={`/explore/${destination.slug}`}
-        className={s.connectionCard} data-featured-country={destination.slug}
+        className={s.connectionCard} data-reveal data-featured-country={destination.slug}
       >
         <span className={s.connectionArt} aria-hidden="true" style={{ backgroundImage: `url(/images/roots/${destination.slug}.svg)` }} />
         <span className={s.connectionNumber} aria-hidden="true">0{index + 1} / ✦</span>

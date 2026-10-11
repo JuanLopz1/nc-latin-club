@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteProvider } from "./components/site-context";
 import SiteShell from "./components/site-shell";
+import { pageMetadata, siteOrigin } from './components/site-metadata';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NC LATIN CLUB",
-  description: "Latin roots. Niagara energy. A place to belong.",
+  ...pageMetadata('NC LATIN CLUB', 'Latin roots. Niagara energy. A place to belong.', '/'),
+  metadataBase: new URL(siteOrigin),
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

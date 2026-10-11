@@ -15,7 +15,7 @@ async function openTools(){if(!await evaluate('!!document.querySelector("[data-t
 async function viewport(width){await send('Emulation.setDeviceMetricsOverride',{width,height:920,deviceScaleFactor:1,mobile:true});}
 try {
  await send('Page.enable');await send('Page.bringToFront');await send('Emulation.setFocusEmulationEnabled',{enabled:true});await send('Runtime.enable');await send('Emulation.setTouchEmulationEnabled',{enabled:true,maxTouchPoints:1});await viewport(375);
- await send('Page.navigate',{url:base+'/explore'});await wait('!!document.querySelector("[data-globe-scene][data-ready=true]")');
+ await send('Page.navigate',{url:base+'/explore'});await wait('!!document.querySelector("[data-globe-scene][data-ready=true]")');await evaluate('localStorage.removeItem("nc-latin-club-language")');await send('Page.reload');await wait('document.documentElement?.lang==="en" && !!document.querySelector("[data-globe-scene][data-ready=true]")');
  check('real WebGL globe rendered',await evaluate('!!document.querySelector("[data-globe-scene] canvas") && document.querySelector("[data-globe-scene] canvas").width>0'));
  const count=Number(process.env.EXPECT_DESTINATIONS || 55);
  check('destination list covers this milestone',await evaluate(`document.querySelectorAll('[data-country]').length===${count}`));
@@ -82,6 +82,7 @@ try {
  }
  await evaluate(`document.querySelector('nav a[href="/events"]').click()`);await wait('location.pathname==="/events"');
  await wait('!document.querySelector("[data-globe-scene] canvas")');check('scene releases its canvas on navigation',await evaluate('!document.querySelector("[data-globe-scene] canvas")'));
+ await evaluate('[...document.querySelectorAll("footer button")].find(b=>b.textContent==="English").click()');await wait('document.documentElement?.lang==="en"');
  await send('Page.addScriptToEvaluateOnNewDocument',{source:`const rootsGetContext=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(type,...args){return /webgl/i.test(type)?null:rootsGetContext.call(this,type,...args);};`});
  await send('Page.navigate',{url:base+'/explore'});await wait('!!document.querySelector("[role=status]") && [...document.querySelectorAll("[role=status]")].some(el=>el.textContent.includes("3D globe is unavailable"))');
  await openTools();check('WebGL failure keeps the full list and accessible disabled zoom controls',await evaluate(`document.querySelectorAll('[data-country]').length===${count} && document.querySelector('[data-zoom]').disabled && !!document.querySelector('[data-reset]')`));

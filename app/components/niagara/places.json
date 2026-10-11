@@ -843,6 +843,12 @@
       "es": "Comida mexicana en Niagara Falls, seleccionada por el fundador."
     },
     "offerings": [],
+    "address": "6405 Stanley Ave, Niagara Falls, ON L2G 5Y3, Canada",
+    "coordinates": {
+      "lat": 43.0822502,
+      "lng": -79.0845853,
+      "accuracy": "business_published"
+    },
     "channels": [
       {
         "label": "Web",
@@ -851,11 +857,11 @@
     ],
     "sources": [
       {
-        "url": "https://www.tacontequila.com/our-story",
-        "title": "Taco N Tequila historia oficial"
+        "url": "https://www.tacontequila.com/",
+        "title": "Taco N Tequila: dirección pública y coordenadas publicadas por el negocio"
       }
     ],
-    "reviewedOn": "2026-10-10"
+    "reviewedOn": "2026-10-11"
   },
   {
     "id": "sombra",

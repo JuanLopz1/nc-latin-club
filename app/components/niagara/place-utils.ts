@@ -20,11 +20,12 @@ export function directionsUrl(place: Place): string | null {
   return url.href;
 }
 export function markerGroups(places: readonly Place[]) {
-  const groups = new Map<string, { lat: number; lng: number; places: Place[] }>();
-  for (const p of places.filter(hasPin)) {
+  const groups = new Map<string, { lat: number; lng: number; places: Place[]; numbers: number[] }>();
+  for (const [index, p] of places.entries()) {
+    if (!hasPin(p)) continue;
     const { lat, lng } = p.coordinates!, key = `${lat},${lng}`;
-    const group = groups.get(key) ?? { lat, lng, places: [] };
-    group.places.push(p); groups.set(key, group);
+    const group = groups.get(key) ?? { lat, lng, places: [], numbers: [] };
+    group.places.push(p); group.numbers.push(index + 1); groups.set(key, group);
   }
   return [...groups.values()];
 }

@@ -1,6 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import { useRef } from "react";
+import { useHomeMotion } from "./use-home-motion";
+import CultureMarquee from "./culture-marquee";
+import FamiliaSection from "./familia-section";
+import InstagramSection from "./instagram-section";
 import { copy } from "./home-copy";
 import { clubLinks, joinEmailHref } from "./club-links";
 import RootsTeaser from "./explore/roots-teaser";
@@ -25,13 +30,15 @@ function Pulse({ className = "" }: { className?: string }) {
 }
 
 export default function ClubHome() {
+  const root = useRef<HTMLDivElement>(null);
+  useHomeMotion(root);
   const { language } = useSiteLanguage();
   const t = copy[language];
   const instagramAction = clubLinks.instagramUrl
     ? <a href={clubLinks.instagramUrl} className={s.textLink} target="_blank" rel="noopener noreferrer">{t.heroSecondary}<Arrow /></a>
     : <span className={s.socialPending}><span>{t.heroSecondary}</span><small>{t.instagramPending}</small></span>;
 
-  return <div className={s.home}>
+  return <div className={s.home} ref={root}>
     <main id="main-content" tabIndex={-1}>
       <section className={s.hero} aria-labelledby="hero-title">
         <div className={s.heroCopy}>
@@ -42,19 +49,16 @@ export default function ClubHome() {
           <div className={s.heroFoot}><Signal className={s.smallSignal} />{t.location}</div>
         </div>
         <div className={s.heroArt}>
-          <div className={s.artFrame}><Image src="/images/latin-night-festival.png" alt={language === "en" ? "Original illustration of an imagined Latin American street festival at night, with music, murals, colourful lights and glowing hummingbirds" : "Ilustración original de un festival callejero latinoamericano imaginado de noche, con música, murales, luces de colores y colibríes luminosos"} fill preload sizes="(max-width: 760px) 100vw, 55vw" className={s.worldImage} /></div>
+          <div className={s.artFrame} data-hero-parallax><Image src="/images/latin-night-festival.png" alt={language === "en" ? "Original illustration of an imagined Latin American street festival at night, with music, murals, colourful lights and glowing hummingbirds" : "Ilustración original de un festival callejero latinoamericano imaginado de noche, con música, murales, luces de colores y colibríes luminosos"} fill preload sizes="(max-width: 760px) 100vw, 55vw" className={s.worldImage} /></div>
           <div className={s.worldStamp}><Signal /><span>{t.heroTag[0]}<br /><i>{t.heroTag[1]}</i></span></div>
           <span className={s.artCaption}>{t.imageNote}<Arrow /></span>
           <svg className={s.heroSparkle} viewBox="0 0 60 60" fill="none" aria-hidden="true"><path d="M30 0c0 21 9 30 30 30-21 0-30 9-30 30 0-21-9-30-30-30C21 30 30 21 30 0Z" fill="currentColor" /></svg>
         </div>
       </section>
       <a href="#familia" className={s.scrollLink}>{t.scroll}<Arrow down /></a>
-      <div className={s.ribbon} aria-hidden="true">{t.ribbon.map(word => <span key={word}>{word}<Signal /></span>)}</div>
+      <CultureMarquee language={language} />
 
-      <section id="familia" className={`${s.section} ${s.familia}`} aria-labelledby="familia-title">
-        <div className={s.familiaCopy}><p className={s.eyebrow}>{t.familiaLabel}</p><h2 id="familia-title">{t.familiaTitle[0]}<br /><em>{t.familiaTitle[1]}</em></h2><p className={s.lead}>{t.familiaBody}</p><p className={s.bodyCopy}>{t.familiaSecond}</p><div className={s.values}>{t.values.map((value, index) => <span key={value}><span aria-hidden="true">{["✧", "♫", "♡"][index]}</span>{value}</span>)}</div></div>
-        <div className={s.familiaArt}><Pulse className={s.familiaPulse} /><span className={s.familiaArtLabel}>BIENVENIDOS</span><Signal className={s.familiaSignal} /><p>{t.familiaQuote[0]}<br /><em>{t.familiaQuote[1]}</em></p><span className={s.familiaArtFoot}>{t.familiaNote}</span><span className={s.familiaPosterLines} aria-hidden="true" /></div>
-      </section>
+      <FamiliaSection language={language} />
 
       <EventsSection language={language} />
 
@@ -63,6 +67,7 @@ export default function ClubHome() {
       <NiagaraTeaser language={language} />
 
       <section id="join" className={s.join} aria-labelledby="join-title"><Pulse className={s.joinPulseLeft} /><Pulse className={s.joinPulseRight} /><Signal className={s.joinSignal} /><p className={s.eyebrow}>{t.joinLabel}</p><h2 id="join-title">{t.joinTitle[0]}<br /><em>{t.joinTitle[1]}</em></h2><p className={s.joinBody}>{t.joinBody}</p><div className={s.joinActions}><a href={joinEmailHref} className={s.button} title={t.emailHint}>{t.joinAction}<Arrow /></a>{instagramAction}</div><p className={s.joinNote}>{t.joinNote}</p></section>
+      <InstagramSection language={language} />
     </main>
 
 

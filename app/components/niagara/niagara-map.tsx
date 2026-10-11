@@ -4,7 +4,7 @@ import type * as Leaflet from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import type { Language } from '../home-copy';
 import type { Place } from './place-types';
-import { markerGroups } from './place-utils';
+import { hasPin, markerGroups } from './place-utils';
 import { niagaraCopy } from './niagara-copy';
 import s from './niagara.module.css';
 type Props = { places: readonly Place[]; selectedId: string | null; onSelect(id: string): void; language: Language; reset: number };
@@ -38,12 +38,15 @@ export default function NiagaraMap({ places, selectedId, onSelect, language, res
     layer.clearLayers();
     for (const group of markerGroups(places)) {
       const selected = group.places.some(p => p.id === selectedId);
-      const icon = L.divIcon({ className: s.pinRoot, html: `<span class="${s.pin} ${selected ? s.pinSelected : ''}">${group.places.length > 1 ? group.places.length : '✦'}</span>`, iconSize: [38, 44], iconAnchor: [19, 40] });
-      const marker = L.marker([group.lat, group.lng], { icon, title: group.places.map(p => p.name).join(' / '), alt: group.places.map(p => p.name).join(' / '), keyboard: true }).addTo(layer);
+      const numbers = group.numbers.map(number => String(number).padStart(2, '0')).join('·');
+      const width = group.places.length > 1 ? 62 : 38;
+      const icon = L.divIcon({ className: s.pinRoot, html: `<span class="${s.pin} ${group.places.length > 1 ? s.pinGroup : ''} ${selected ? s.pinSelected : ''}"><span>${numbers}</span></span>`, iconSize: [width, 44], iconAnchor: [width / 2, 40] });
+      const label = group.places.map((p, index) => `${group.numbers[index]}. ${p.name}`).join(' / ');
+      const marker = L.marker([group.lat, group.lng], { icon, title: label, alt: label, keyboard: true }).addTo(layer);
       if (group.places.length === 1) marker.on('click', () => select.current(group.places[0].id));
       else {
         const panel = document.createElement('div'), heading = document.createElement('p'); heading.textContent = niagaraCopy[language].group; panel.append(heading);
-        for (const p of group.places) { const button = document.createElement('button'); button.type = 'button'; button.textContent = p.name; button.className = s.popupButton; button.addEventListener('click', () => { select.current(p.id); marker.closePopup(); }); panel.append(button); }
+        for (const [index, p] of group.places.entries()) { const button = document.createElement('button'); button.type = 'button'; button.textContent = `${String(group.numbers[index]).padStart(2, '0')} · ${p.name}`; button.className = s.popupButton; button.addEventListener('click', () => { select.current(p.id); marker.closePopup(); }); panel.append(button); }
         marker.bindPopup(panel);
       }
     }
@@ -57,7 +60,7 @@ export default function NiagaraMap({ places, selectedId, onSelect, language, res
     if (!ready || !map.current || selectedId === lastSelection.current) return;
     lastSelection.current = selectedId;
     const p = currentPlaces.current.find(p => p.id === selectedId);
-    if (p?.coordinates) map.current.setView([p.coordinates.lat, p.coordinates.lng], Math.max(map.current.getZoom(), 13), { animate: !window.matchMedia('(prefers-reduced-motion: reduce)').matches });
+    if (p && hasPin(p)) map.current.setView([p.coordinates!.lat, p.coordinates!.lng], Math.max(map.current.getZoom(), 13), { animate: !window.matchMedia('(prefers-reduced-motion: reduce)').matches });
   }, [selectedId, ready]);
   return <div className={s.mapWrap}>
     <div ref={container} className={s.map} role="region" aria-label={language === 'en' ? 'Niagara business map' : 'Mapa de negocios de Niagara'} />

@@ -4,8 +4,8 @@ const test=require('node:test'),assert=require('node:assert/strict');
 const dates=require('../app/components/events/agenda-dates.ts');
 const {agendaEntries}=require('../app/components/events/agenda-data.ts');
 const now=new Date('2026-10-10T16:00:00Z');
-test('agenda starts with all categories and combines selected categories without duplicates',()=>{
- assert.deepEqual(dates.initialAgendaState(now).categories,['at-nc','out-of-nc','latin-dates']);
+test('agenda starts with real event categories and combines selected categories without duplicates',()=>{
+ assert.deepEqual(dates.initialAgendaState(now).categories,['at-nc','out-of-nc']);
  const categories=['at-nc','out-of-nc'];
  const combined=dates.listEntries(agendaEntries,categories,'upcoming',now);
  assert.ok(combined.some(e=>e.category==='at-nc'));

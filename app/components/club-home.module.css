@@ -3,7 +3,7 @@
 .home em { font-weight: inherit; font-style: normal; }
 .home a, .home button, .home summary { -webkit-tap-highlight-color: transparent; }
 .home a:focus-visible, .home button:focus-visible, .home summary:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
-.home section { scroll-margin-top: 110px; }
+.home section { scroll-margin-top: 16px; }
 .skip { position: fixed; left: 24px; top: -100px; z-index: 100; padding: 14px 20px; background: var(--foreground); color: var(--background); }
 .skip:focus { top: 16px; }
 .header { max-width: 1360px; margin: 0 auto; padding: 24px 50px; display: flex; align-items: center; gap: 28px; border-bottom: 1px solid #ffffff22; position: relative; z-index: 20; }
@@ -135,12 +135,6 @@
 .footerBottom button { min-height: 44px; cursor: pointer; }
 .footerBottom button[aria-pressed="true"] { text-decoration: underline; text-underline-offset: 4px; }
 @keyframes gentleTurn { 0%, 100% { transform: rotate(-8deg) scale(.95); } 50% { transform: rotate(8deg) scale(1.05); } }
-@media (min-width: 761px) and (prefers-reduced-motion: no-preference) {
-  @supports (animation-timeline: view()) {
-    .familiaArt, .niagaraArt { animation: reveal both linear; animation-timeline: view(); animation-range: entry 0% entry 70%; }
-    @keyframes reveal { from { opacity: .65; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
-  }
-}
 @media (max-width: 1100px) {
   .header, .hero, .section, .rootsInner, .footer { padding-left: 32px; padding-right: 32px; }
   .nav { gap: 18px; }
@@ -261,3 +255,42 @@
 .countryDialog ul { display: flex; flex-wrap: wrap; gap: 9px; padding: 24px 0; list-style: none; }
 .countryDialog li { padding: 8px 13px; border: 1px solid #ffffff33; border-radius: 30px; font-size: 12px; }
 .countryDialog > .dialogNote { border-top: 1px solid #ffffff33; padding-top: 17px; font-size: 12px; color: #b3bdd1; }
+
+/* Motion enhances the existing composition; SSR and reduced motion stay visible. */
+.hero h1{animation:heroArrive .65s .08s both cubic-bezier(.2,.7,.2,1)}
+.heroBody{animation:heroArrive .65s .18s both cubic-bezier(.2,.7,.2,1)}
+.heroActions{animation:heroArrive .65s .28s both cubic-bezier(.2,.7,.2,1)}
+.heroArt{animation:heroArrive .8s .2s both cubic-bezier(.2,.7,.2,1)}
+.worldImage{transform:translateY(var(--hero-drift,0px)) scale(1.05)}
+.worldStamp{animation:stampFloat 7s ease-in-out infinite}
+.home [data-reveal-state]{transition:opacity .65s ease,translate .65s cubic-bezier(.2,.7,.2,1)}
+.home [data-reveal-state=waiting]{opacity:0;translate:0 18px}
+.home [data-reveal-state=visible]{opacity:1;translate:0 0}
+.home a>svg{transition:transform .2s ease}
+.home .button:hover>svg,.home .textLink:hover>svg{transform:translateX(3px)}
+.home .button:active{transform:translateY(0)}
+.ribbon{position:relative;display:block;overflow:hidden;padding:23px 0;white-space:nowrap}
+.ribbonTrack{display:flex;width:max-content;animation:cultureMarquee 28s linear infinite}
+.ribbonGroup{display:flex;align-items:center;flex:none;min-width:100vw;padding:0 24px;gap:48px;justify-content:space-around}
+.ribbonGroup>span{display:inline-flex;align-items:center;flex:none;gap:48px;font-size:24px;font-weight:850;letter-spacing:-.04em;text-transform:uppercase;white-space:nowrap;line-height:1.3}
+.ribbonGroup svg{width:23px;height:23px;flex:none}
+.ribbonPause{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:44px;height:44px;display:grid;place-items:center;background:#ffe06a;border:1px solid #0c101b66;border-radius:50%;cursor:pointer;box-shadow:0 0 22px 16px #ffe06a}
+.ribbonPause svg{width:17px;height:17px}
+.ribbon[data-paused=true] .ribbonTrack{animation-play-state:paused}
+.familiaPage{max-width:1260px;margin:auto;padding:35px 50px 70px}
+.familiaPage .section{padding:55px 0}
+.familia :is(h1,h2){font-size:clamp(42px,4.5vw,63px);line-height:1.03;margin:25px 0}
+.familia h1 em{color:#ffe06a}
+.instagram{max-width:1360px;margin:0 auto;padding:80px 50px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.instagram h2{font-size:clamp(36px,4vw,56px)}
+.instagram .textLink{color:#76dbe3;margin-top:18px}
+.instagramPanel{min-width:0;padding:28px;border:1px solid #40566e;background:#15243a;border-radius:14px}
+.instagramPanel>p{font-size:11px;color:#b3bdd1;line-height:1.7;margin-top:15px}
+.instagramPanel iframe{display:block;width:100%;height:520px;border:0;border-radius:9px;margin-top:20px;background:#fff}
+.instagramHandle{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:40px 0 18px;color:#76dbe3;font-size:clamp(22px,3vw,36px);font-weight:750;letter-spacing:-.05em}
+.instagramHandle>span{color:#ffe06a}
+@keyframes heroArrive{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes cultureMarquee{to{transform:translateX(-50%)}}
+@keyframes stampFloat{0%,100%{transform:rotate(8deg) translateY(0)}50%{transform:rotate(5deg) translateY(-5px)}}
+@media(max-width:760px){.ribbon{padding:19px 0}.ribbonGroup{gap:28px;padding:0 14px}.ribbonGroup>span{font-size:18px;gap:28px}.ribbonGroup svg{width:18px;height:18px}.ribbonPause{right:8px}.familiaPage{padding:30px 25px 60px}.familiaPage .section{padding:30px 0 40px}.instagram{grid-template-columns:1fr;padding:60px 25px;gap:28px}.instagramPanel{padding:22px}.instagramPanel iframe{height:480px}}
+@media(prefers-reduced-motion:reduce){.home [data-reveal-state]{opacity:1!important;translate:none!important;transition:none!important}.worldImage{transform:none}.ribbonTrack{animation:none!important;transform:none!important}.ribbonPause{display:none}.ribbonGroup{min-width:0;width:100%;gap:14px;padding:0 16px;justify-content:space-around}.ribbonGroup>span{font-size:clamp(11px,1.7vw,24px);gap:12px}.ribbonGroup svg{width:10px;height:10px}.ribbonGroup>span:nth-child(4)>svg{display:none}.ribbonGroup>span:nth-child(n+5),.ribbonGroup:nth-child(2){display:none}}

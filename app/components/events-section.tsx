@@ -1,5 +1,7 @@
 'use client';
 import Link from "next/link";
+import EventCountdown from "./events/event-countdown";
+import AddToCalendar from "./events/add-to-calendar";
 import { eventsCopy } from "./events/events-copy";
 import { listEntries, eventDateTime, formatEntryWhen } from "./events/agenda-dates";
 import { useAgendaClock } from "./events/agenda-clock";
@@ -53,6 +55,7 @@ export default function EventsSection({ language }: { language: Language }) {
               {event.status !== 'scheduled' && <div className={s.notice}><strong>{statusCopy[event.status]}</strong><p>{event.statusNote?.[language]}</p></div>}
               <h3 id={`event-${event.id}-title`}><Link href={`/events/${event.slug}`}>{event.title[language]}</Link></h3>
               <p className={s.body}>{event.description[language]}</p>
+              <EventCountdown entry={event} language={language} />
               <dl className={s.details}>
                 <div><dt>{t.date}</dt><dd><time dateTime={eventDateTime(event)}>{formatEntryWhen(event, language)}</time></dd></div>
                 {event.endsAt && <div><dt>{t.until}</dt><dd><time dateTime={event.endsAt}>{formatEntryWhen({ ...event, startsAt: event.endsAt, dateSpan: undefined }, language)}</time></dd></div>}
@@ -61,6 +64,7 @@ export default function EventsSection({ language }: { language: Language }) {
                 {event.admission && <div><dt>{t.admission}</dt><dd>{event.admission[language]}</dd></div>}
               </dl>
               {event.registrationUrl && event.status !== 'cancelled' && <a className={s.joinLink} href={event.registrationUrl} target="_blank" rel="noopener noreferrer" aria-label={`${t.registration}: ${event.title[language]} (${statusCopy.external})`}>{t.registration}<ActionArrow /></a>}
+              <AddToCalendar entry={event} language={language} />
             </article>
           ))}
         </div>

@@ -11,7 +11,18 @@ export default function SiteShell({ children }: { children: ReactNode }) {
   const { language, setLanguage } = useSiteLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
+  const headerDock = useRef<HTMLDivElement>(null);
   const t = copy[language];
+  useEffect(() => {
+    const dock = headerDock.current;
+    if (!dock) return;
+    const scrolled = () => { dock.dataset.scrolled = String(window.scrollY > 16); };
+    const sized = () => { document.documentElement.style.setProperty('--site-header-height', `${dock.getBoundingClientRect().height}px`); };
+    const observer = new ResizeObserver(sized);
+    observer.observe(dock); sized(); scrolled();
+    window.addEventListener('scroll', scrolled, { passive: true });
+    return () => { observer.disconnect(); window.removeEventListener('scroll', scrolled); document.documentElement.style.removeProperty('--site-header-height'); };
+  }, []);
   useEffect(() => {
     const closeOnBack = () => setMenuOpen(false);
     const escape = (event: KeyboardEvent) => { if (event.key === 'Escape' && menuOpen) { setMenuOpen(false); menuButton.current?.focus(); } };
@@ -21,7 +32,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
   const links = ['/#familia', '/events', '/explore', '/niagara', '/#join'];
   return <div className={s.site} id="top">
     <a href="#main-content" className={s.skip}>{t.skip}</a>
-    <header className={s.header}>
+    <div ref={headerDock} className={s.headerDock} data-scrolled="false"><header className={s.header}>
       <Link href="/" className={s.brand} onClick={() => setMenuOpen(false)} aria-label={language === 'en' ? 'NC Latin Club — Home' : 'NC Latin Club — Inicio'}><Brand /></Link>
       <nav id="main-navigation" aria-label={language === 'en' ? 'Main navigation' : 'Navegación principal'} className={`${s.nav} ${menuOpen ? s.navOpen : ''}`}>
         {links.map((href, index) => <Link href={href} key={href} onClick={() => setMenuOpen(false)} className={index === 4 ? s.navJoin : undefined}>{t.nav[index]}{index === 4 && <Arrow />}</Link>)}
@@ -30,7 +41,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
         <button className={s.languageButton} onClick={() => setLanguage(language === 'en' ? 'es' : 'en')} aria-label={`${t.language}: ${language === 'en' ? 'Español' : 'English'}`}><span className={language === 'en' ? s.activeLanguage : ''}>EN</span><span aria-hidden="true">/</span><span className={language === 'es' ? s.activeLanguage : ''}>ES</span></button>
         <button ref={menuButton} className={s.menuButton} aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? t.close : t.menu}<span aria-hidden="true">{menuOpen ? '−' : '+'}</span></button>
       </div>
-    </header>
+    </header></div>
     {children}
     <footer className={s.footer}><div className={s.footerTop}><Link href="/" className={s.brand} onClick={() => setMenuOpen(false)}><Brand /></Link><p>{t.footerLine}</p><a href="#top" className={s.textLink}>{t.backTop}<span aria-hidden="true">↑</span></a></div><div className={s.footerBottom}><span>© 2026 NC Latin Club</span><span>{t.footerNote}</span><div><button onClick={() => setLanguage('en')} aria-pressed={language === 'en'}>English</button><span aria-hidden="true">/</span><button onClick={() => setLanguage('es')} aria-pressed={language === 'es'}>Español</button></div></div></footer>
   </div>;

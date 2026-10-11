@@ -19,14 +19,14 @@ Las preferencias posteriores del usuario prevalecen sobre las notas históricas 
 | Área | Estado comprobado en el repositorio |
 | --- | --- |
 | Inicio | Prototipo nocturno aprobado, Familia, Eventos enlazados a la agenda, Raíces, Niagara y contacto. |
-| Idiomas | EN por defecto; idioma compartido entre inicio, agenda y detalle. Una recarga vuelve a EN; sin rutas traducidas ni metadatos por idioma. |
+| Idiomas | EN por defecto; idioma compartido entre inicio, agenda y detalle. La preferencia EN/ES se conserva en el navegador; EN para visitantes nuevos y HTML inicial. Sin rutas traducidas ni metadatos por idioma. |
 | Eventos | Agenda con Latin Fiesta!, once eventos regionales y 225 ocurrencias culturales aportadas. Filtros múltiples, calendario, fechas de mes completo, detalles, archivo por fecha y galerías opcionales implementados. |
 | Mapa | `/explore`: globo 3D del planeta, Américas destacadas, 55 destinos con búsqueda/lista, opciones desplegables y EN/ES. 55 perfiles documentales EN/ES, 172 secciones con fuentes y 60 pistas Spotify opt-in. Fotos autorizadas, revisión comunitaria y ampliaciones específicas pendientes. |
 | Contacto | Mailto al correo solicitado con el mensaje de unión prellenado. |
 | Instagram | Perfil oficial `https://www.instagram.com/nclat1nclub/`, aportado por el fundador y conectado en inicio/contacto. |
 | Identidad | Logo oficial adaptado al fondo nocturno e incorporado en cabecera y pie. |
 | Administración | Sin autenticación, base de datos, almacenamiento administrado ni portal. |
-| Páginas internas | Inicio, `/events`, `/events/[slug]`, `/niagara`, `/explore`, 55 rutas `/explore/[slug]` y 404 bilingüe. |
+| Páginas internas | Inicio, `/familia`, `/events`, `/events/[slug]`, `/niagara`, `/explore`, 55 rutas `/explore/[slug]` y 404 bilingüe. |
 | GitHub | Avances en `work`; commit y push tras cada hito verificado. `main` permanece separado. |
 
 Las comprobaciones anteriores de lint, build y navegador corresponden al prototipo. Cada nuevo hito tendrá su propia verificación.
@@ -58,7 +58,7 @@ Preparar los modelos de contenido ahora; elegir el proveedor de administración 
 
 El contacto puede seguir como sección de inicio; una página `/join` solo se añade si hay instrucciones que necesiten más espacio. Conservar los enlaces actuales de inicio durante la transición. Añadir enlaces públicos a nuevas páginas cuando funcionen. Priorizar Eventos, Explore y Familia en la navegación; agrupar el resto para mantener un menú simple.
 
-Para la entrega de Events, el fundador aprobó conservar el selector EN/ES del prototipo mediante un contexto compartido: navegar mantiene el idioma y una recarga completa comienza en inglés. Las rutas con prefijo `/es` y metadatos localizados siguen como propuesta para un hito posterior de internacionalización.
+La aclaración posterior del fundador actualiza la decisión inicial: el selector EN/ES comparte y guarda la preferencia en el navegador, también después de recargar. El inglés sigue siendo el idioma de una visita nueva y del HTML inicial. Las rutas con prefijo `/es` y metadatos localizados siguen como propuesta para un hito posterior de internacionalización.
 
 ## 5. Hitos y criterios de finalización
 
@@ -161,7 +161,8 @@ Primera entrega del portal: acceso, permisos, ajustes globales, medios y eventos
 - [ ] Mantener los envíos pendientes en almacenamiento privado hasta la aprobación del admin; permitir rechazo y retirada de imágenes publicadas.
 - [ ] Definir límites de tamaño, formatos y frecuencia de envío según el servicio elegido.
 - [x] Activar el enlace oficial de Instagram @nclat1nclub.
-- [ ] Evaluar posts seleccionados mediante integraciones permitidas, con alternativa si la plataforma o el visitante bloquea el contenido externo.
+- [x] Incrustar el perfil oficial de Instagram con carga por decisión del visitante y enlace alternativo al perfil.
+- [ ] Seleccionar posts/reels concretos con el fundador para una selección editorial, si se prefiere al perfil completo.
 
 **Terminado cuando:** un visitante envía una foto, un admin la revisa y solo una aprobación la hace pública; los originales pendientes no quedan accesibles mediante enlaces públicos. La fototeca sigue funcionando si Instagram no carga.
 
@@ -181,7 +182,15 @@ Primera entrega del portal: acceso, permisos, ajustes globales, medios y eventos
 
 **Entregable inicial:** trivia cultural en `/play`, sin cuenta obligatoria, con explicaciones y preguntas revisadas editables desde administración.
 
-Después se pueden sumar otros minijuegos, diccionario regional y playlist. Cada uno se diseña por separado. After Dark y chat son ideas del brief para una etapa posterior; necesitarán definición de acceso y moderación antes de convertirse en funciones.
+Antes de ampliar los minijuegos, el fundador pidió preparar **Latin Club Spotify**: una playlist oficial recomendada.
+
+- [ ] Recibir el enlace oficial de la playlist (no inventar una cuenta o lista).
+- [ ] Añadir un bloque EN/ES con portada autorizada, enlace a Spotify y reproductor opt-in; sin reproducción automática.
+- [ ] Preparar edición futura de título, enlace, portada y descripción desde administración.
+
+La fototeca pública aprobada y sus envíos moderados continúan en el hito 7, después de este pulido visual.
+
+Después se pueden sumar otros minijuegos, diccionario regional y una playlist ampliada. Cada uno se diseña por separado. After Dark y chat son ideas del brief para una etapa posterior; necesitarán definición de acceso y moderación antes de convertirse en funciones.
 
 **Terminado cuando:** el primer juego funciona en móvil y con teclado, se puede volver a jugar y el equipo mantiene el banco de preguntas.
 

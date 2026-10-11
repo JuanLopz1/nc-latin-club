@@ -6,6 +6,8 @@ import { useAgendaClock } from './agenda-clock';
 import type { AgendaEntry } from './event-types';
 import { eventsCopy } from './events-copy';
 import EventGallery from './event-gallery';
+import EventCountdown from './event-countdown';
+import AddToCalendar from './add-to-calendar';
 import s from './event-detail.module.css';
 export function EventDetailLoading() {
   const { language } = useSiteLanguage();
@@ -28,6 +30,7 @@ export default function EventDetail({ entry }: { entry: AgendaEntry }) {
       </div>
       <aside className={s.facts} aria-label={language === 'en' ? 'Activity details' : 'Detalles de la actividad'}>
         {entry.kind === 'event' && entry.status !== 'scheduled' && <div className={s.notice}><strong>{t[entry.status]}</strong><p>{entry.statusNote?.[language]}</p></div>}
+        {entry.kind === 'event' && <EventCountdown entry={entry} language={language} />}
         <dl>
           <div><dt>{t.when}</dt><dd><time dateTime={entry.kind === 'event' ? eventDateTime(entry) : entry.date}>{formatEntryWhen(entry, language)}</time></dd></div>
           {entry.kind === 'event' ? <>
@@ -43,6 +46,7 @@ export default function EventDetail({ entry }: { entry: AgendaEntry }) {
         {!!entry.links?.length && <div className={s.moreLinks}>{entry.links.map(link => <a key={link.url} href={link.url} target="_blank" rel="noopener noreferrer" aria-label={`${link.label[language]} (${t.external})`}>{link.label[language]} ↗</a>)}</div>}
         {entry.kind === 'event' ? <>
           <p className={s.zone}>{t.zone}</p>
+          <AddToCalendar entry={entry} language={language} />
           {entry.registrationUrl && entry.status !== 'cancelled' && <a className={s.registration} href={entry.registrationUrl} target="_blank" rel="noopener noreferrer" aria-label={`${t.register}: ${entry.title[language]} (${t.external})`}>{t.register}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M5 19 19 5M9 5h10v10" /></svg></a>}
           {entry.registrationUrl && entry.status !== 'cancelled' && <p className={s.external}>{t.external}</p>}
         </> : <p className={s.zone}>{t.cultural}</p>}

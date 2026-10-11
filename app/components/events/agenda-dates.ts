@@ -56,7 +56,7 @@ export function listEntries(entries: readonly AgendaEntry[], category: AgendaCat
 }
 export function initialAgendaState(now: Date): AgendaState {
   const today = niagaraDate(now);
-  return { categories: [...agendaCategories], view: 'list', period: 'upcoming', month: today.slice(0, 7), selectedDate: today };
+  return { scope: 'events', cultureYear: today.slice(0, 4), categories: ['at-nc', 'out-of-nc'], view: 'list', period: 'upcoming', month: today.slice(0, 7), selectedDate: today };
 }
 export function formatCalendarDate(date: CalendarDate, language: Language, options: Intl.DateTimeFormatOptions = { dateStyle: 'long' }): string {
   return new Intl.DateTimeFormat(language === 'en' ? 'en-CA' : 'es', { ...options, timeZone: 'UTC' }).format(new Date(date + 'T12:00:00Z'));
@@ -75,3 +75,17 @@ export function formatEntryWhen(entry: AgendaEntry, language: Language): string 
   return formatCalendarDate(start, language) + (end && end !== start ? ` – ${formatCalendarDate(end, language)}` : '');
 }
 export function eventDateTime(entry: EventEntry): string { return entry.startsAt ?? entry.dateSpan.start; }
+
+/** Counts and results share the same scope, period and visible month/year. */
+export function agendaPeriodEntries(entries: readonly AgendaEntry[], state: AgendaState, now: Date): AgendaEntry[] {
+  const culture = state.scope === 'culture';
+  const scoped = entries.filter(entry => culture ? entry.kind === 'cultural-date' : entry.kind === 'event');
+  const period = listEntries(scoped, culture ? ['latin-dates'] : ['at-nc', 'out-of-nc'], state.period, now);
+  if (state.view === 'list') return culture ? period.filter(entry => entryDate(entry).slice(0, 4) === (state.cultureYear ?? state.month.slice(0, 4))) : period;
+  const first = state.month + '-01', next = shiftMonth(state.month, 1) + '-01';
+  return period.filter(entry => {
+    const start = entryDate(entry);
+    const end = entry.kind === 'cultural-date' ? entry.endDate ?? entry.date : entry.dateSpan ? entry.dateSpan.end : entry.endsAt ? niagaraDate(new Date(Date.parse(entry.endsAt) - 1)) : start;
+    return start < next && end >= first;
+  });
+}

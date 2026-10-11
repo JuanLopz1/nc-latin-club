@@ -10,4 +10,5 @@ export type EventSession = { startsAt: string; endsAt?: string; title?: Localize
 export type EventEntry = EntryBase & { kind: 'event'; category: 'at-nc' | 'out-of-nc'; venue: LocalizedText; city?: LocalizedText; address?: string; organizer: LocalizedText; admission?: LocalizedText; registrationUrl?: string; status: 'scheduled' | 'cancelled' | 'rescheduled'; statusNote?: LocalizedText; sessions?: readonly EventSession[] } & ({ startsAt: string; endsAt?: string; dateSpan?: never } | { dateSpan: { start: CalendarDate; end: CalendarDate }; startsAt?: never; endsAt?: never });
 export type CulturalEntry = EntryBase & { kind: 'cultural-date'; category: 'latin-dates'; date: CalendarDate; endDate?: CalendarDate; calendarDisplay?: 'month'; scope: LocalizedText };
 export type AgendaEntry = EventEntry | CulturalEntry;
-export type AgendaState = { categories: AgendaCategory[]; view: 'list' | 'calendar'; period: 'upcoming' | 'past'; month: CalendarMonth; selectedDate: CalendarDate };
+export type AgendaScope = 'events' | 'culture';
+export type AgendaState = { scope?: AgendaScope; cultureYear?: string; categories: AgendaCategory[]; view: 'list' | 'calendar'; period: 'upcoming' | 'past'; month: CalendarMonth; selectedDate: CalendarDate };
