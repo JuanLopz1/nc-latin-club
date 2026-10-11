@@ -32,3 +32,11 @@ Una revisión independiente encontró cinco problemas importantes. Se corrigiero
 Se necesita un proyecto **Supabase Free**, ejecutar el SQL, crear el usuario autorizado y configurar las tres variables de servidor en Vercel antes de redeploy. [Guía completa](ADMIN_SETUP.md). No se contrató ningún servicio ni se conectó un proyecto real: no se recibieron credenciales.
 
 Las pruebas locales de contrato REST y Postgres no sustituyen la comprobación de Supabase/Vercel reales. El enlace oficial del álbum funciona; la reproducción del proveedor externo depende de su disponibilidad y restricciones. Staff, noticias, fototeca con envíos/moderación y un constructor de layouts siguen como funciones futuras. La retirada de fotos no borra el archivo del bucket para conservar el historial; el respaldo JSON no incorpora los archivos.
+
+## Corrección de acceso durante la activación
+
+Los logs aportados mostraron una solicitud 404 a `/rest/v1/auth/v1/token`: se había configurado la URL de Data API con `/rest/v1` como base. El cliente ahora normaliza ese sufijo conocido a la raíz del proyecto, conservando las rutas correctas de Auth, REST y Storage. La guía recomienda guardar directamente la URL raíz en Vercel.
+
+También se corrigió el mensaje que convertía cualquier rechazo de autenticación en “Email or password could not be verified”. Solo el error de credenciales mantiene ese mensaje; se distinguen correo sin confirmar, Email deshabilitado, clave de aplicación rechazada, límite de intentos y fallo del servicio. No se exponen mensajes crudos, claves ni tokens del proveedor.
+
+Verificación: **87/87** pruebas, lint y build aprobados; pruebas HTTP de producción con servicio REST local, tanto con URL raíz como con `/rest/v1`. Se comprobaron errores diferenciados, acceso válido, permisos, CSRF, borradores, publicación, rutas y medios privados/publicados. La validación del acceso al proyecto real después del despliegue requiere un nuevo intento del fundador; no se disponía de su sesión ni contraseña.

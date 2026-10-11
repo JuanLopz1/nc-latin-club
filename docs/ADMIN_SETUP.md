@@ -34,7 +34,7 @@ En **Vercel → nc-latin-club → Settings → Environment Variables** añade:
 
 | Nombre | Valor de Supabase |
 |---|---|
-| `SUPABASE_URL` | Project URL, empieza con `https://` |
+| `SUPABASE_URL` | Project URL, `https://TU_PROYECTO.supabase.co`, sin `/rest/v1` |
 | `SUPABASE_ANON_KEY` | Clave `anon` |
 | `SUPABASE_SERVICE_ROLE_KEY` | Clave `service_role` |
 
@@ -69,3 +69,19 @@ Staff, noticias, fototeca con envíos de visitantes y un constructor de layouts 
 4. Entra como editor: puede guardar, pero Publicar está desactivado y la API también rechaza la publicación.
 
 El código se verifica en producción local con un servicio REST de prueba y el SQL se ejecuta sobre Postgres mediante PGlite. Eso comprueba la implementación y los permisos del script; la conexión con tu proyecto real de Supabase y Vercel se valida solo después de completar estos pasos.
+
+## Si falla el acceso
+
+Si los logs muestran `/rest/v1/auth/v1/token` con 404, se copió la URL de Data API en lugar de la raíz del proyecto. Configura `SUPABASE_URL` sin `/rest/v1`. El panel también normaliza ese sufijo conocido para que Auth, REST y Storage resuelvan sus rutas correctamente.
+
+El panel usa la cuenta creada en **Authentication → Users** del proyecto indicado por `SUPABASE_URL`. Esa contraseña es independiente de la cuenta del Dashboard de Supabase y de la contraseña de la base de datos.
+
+- **Conectar Supabase:** comprueba las tres variables y la URL HTTPS en el despliegue Preview de `work`; después haz redeploy.
+- **Email or password could not be verified:** Supabase devolvió el error de credenciales. Comprueba el proyecto y el usuario en Authentication; consulta el último intento `/token` en Logs → Auth antes de cambiar configuración.
+- **Email confirmation:** confirma el correo desde Authentication → Users.
+- **Application API key:** la aplicación fue rechazada por la clave. Comprueba que URL y clave `anon` legacy provengan del mismo proyecto y actualiza Preview antes de redeploy.
+- **Email provider:** conserva Email habilitado para iniciar sesión. Puedes mantener deshabilitado el registro público.
+- **Too many sign-in attempts:** espera antes de volver a intentar.
+- **Content service:** consulta la disponibilidad del proyecto y sus logs; el panel ya no presenta ese fallo como una contraseña incorrecta.
+
+Comparte solo el mensaje o código de error si necesitas ayuda; nunca claves, contraseñas, tokens ni encabezados de las solicitudes.

@@ -13,7 +13,9 @@ export function startCmsFixture(port=3060) {
   const chunks=[];for await(const chunk of req)chunks.push(chunk);const bytes=Buffer.concat(chunks);let body;try{body=bytes.length?JSON.parse(bytes):{};}catch{body={};}
   if(url.pathname==='/auth/v1/token') {
    const name=url.searchParams.get('grant_type')==='refresh_token'?String(body.refresh_token).replace('refresh-',''):String(body.email).split('@')[0];
-   if(!members[name] || (url.searchParams.get('grant_type')==='password'&&body.password!=='fixture-only-password'))return json({message:'Invalid login'},400);
+   const failure={ 'key-rejection':[{message:'Invalid API key'},401], 'unconfirmed':[{code:400,error_code:'email_not_confirmed'},400], 'provider-disabled':[{error_code:'email_provider_disabled'},400], 'rate-limit':[{code:'over_request_rate_limit'},429], 'upstream-failure':[{message:'private fixture details'},500]}[name];
+   if(failure)return json(failure[0],failure[1]);
+   if(!members[name] || (url.searchParams.get('grant_type')==='password'&&body.password!=='fixture-only-password'))return json({code:400,error_code:'invalid_credentials'},400);
    return json({access_token:`fixture-${name}`,refresh_token:`refresh-${name}`,expires_in:3600});
   }
   if(url.pathname==='/auth/v1/user')return member?json({id:member.id,email:Object.entries(members).find(([,v])=>v===member)[0]+'@example.com'}):json({message:'Invalid session'},401);

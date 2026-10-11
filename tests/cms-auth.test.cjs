@@ -22,3 +22,41 @@ test('refresh outages stay unavailable rather than signing the visitor out',()=>
  stored.set('nc-admin-refresh','valid');global.fetch=async()=>{throw Error('fixture network unavailable');};
  await assert.rejects(requireSession(new Request('https://club.example/api/admin/session')),error=>error.status===503);assert.equal(stored.size,1);
 }));
+test('sign-in keeps a Supabase service failure distinct from invalid credentials',()=>withBackend(async()=>{
+ global.fetch=async()=>Response.json({message:'private upstream details must not leak'},{status:500});
+ await assert.rejects(signIn('admin@example.com','fixture',new Request('https://club.example/api/admin/session')),error=>error.status===502&&!error.message.includes('password')&&!error.message.includes('private upstream'));
+ assert.equal(writes.length,0);
+}));
+test('sign-in identifies application API-key rejection without blaming the password',()=>withBackend(async()=>{
+ global.fetch=async()=>Response.json({message:'Invalid API key',hint:'private key details'},{status:401});
+ await assert.rejects(signIn('admin@example.com','fixture',new Request('https://club.example/api/admin/session')),error=>error.status===503&&error.message.includes('API key')&&!error.message.includes('private key'));
+ assert.equal(writes.length,0);
+}));
+test('unconfirmed email gets confirmation guidance instead of a password error',()=>withBackend(async()=>{
+ global.fetch=async()=>Response.json({code:400,error_code:'email_not_confirmed',msg:'Email not confirmed'},{status:400});
+ await assert.rejects(signIn('admin@example.com','fixture',new Request('https://club.example/api/admin/session')),error=>error.status===403&&error.message.includes('confirm'));
+ assert.equal(writes.length,0);
+}));
+test('sign-in rate limits remain retryable rate limits',()=>withBackend(async()=>{
+ global.fetch=async()=>Response.json({code:'over_request_rate_limit'},{status:429});
+ await assert.rejects(signIn('admin@example.com','fixture',new Request('https://club.example/api/admin/session')),error=>error.status===429);
+ assert.equal(writes.length,0);
+}));
+test('invalid credentials still have a generic credential error and no session',()=>withBackend(async()=>{
+ global.fetch=async()=>Response.json({code:400,error_code:'invalid_credentials',msg:'Invalid login credentials'},{status:400});
+ await assert.rejects(signIn('admin@example.com','fixture',new Request('https://club.example/api/admin/session')),error=>error.status===401&&error.message==='Email or password could not be verified.');
+ assert.equal(writes.length,0);
+}));
+test('disabled email sign-in identifies the provider setting',()=>withBackend(async()=>{
+ global.fetch=async()=>Response.json({error_code:'email_provider_disabled'},{status:400});
+ await assert.rejects(signIn('admin@example.com','fixture',new Request('https://club.example/api/admin/session')),error=>error.status===503&&error.message.includes('Email provider'));
+ assert.equal(writes.length,0);
+}));
+test('a Supabase Data API URL resolves auth at the project root',()=>withBackend(async()=>{
+ process.env.SUPABASE_URL='https://fixture.example/rest/v1/';const urls=[];
+ global.fetch=async url=>{urls.push(String(url));return Response.json(String(url).includes('/token')?{access_token:'good',refresh_token:'good-refresh',expires_in:3600}:String(url).includes('/user')?{id:'admin',email:'admin@example.com'}:[{role:'admin'}]);};
+ await signIn('admin@example.com','fixture',new Request('https://club.example/api/admin/session'));
+ assert.equal(urls[0],'https://fixture.example/auth/v1/token?grant_type=password');
+ assert.equal(urls[1],'https://fixture.example/auth/v1/user');assert.ok(urls[2].startsWith('https://fixture.example/rest/v1/cms_members?'));
+ assert.equal(writes.length,2);
+}));

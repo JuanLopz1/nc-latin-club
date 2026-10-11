@@ -35,9 +35,7 @@ export async function requireSession(request: Request) {
   return session;
 }
 export async function signIn(email:string,password:string,request:Request) {
-  let tokens:Tokens;
-  try { tokens=await (await backendFetch('/auth/v1/token?grant_type=password',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,password})})).json(); }
-  catch(error) { if(error instanceof CmsError && error.status===503) throw error; throw new CmsError(401,'Email or password could not be verified.'); }
+  const tokens=await (await backendFetch('/auth/v1/token?grant_type=password',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,password})})).json() as Tokens;
   const session=await identity(tokens.access_token);
   await setSession(tokens,externalProtocol(request)==='https');
   return session;
