@@ -6,6 +6,7 @@ import { useHomeMotion } from "./use-home-motion";
 import CultureMarquee from "./culture-marquee";
 import FamiliaSection from "./familia-section";
 import InstagramSection from "./instagram-section";
+import { HomeMotionNotice } from "./motion-control";
 import { copy } from "./home-copy";
 import { clubLinks, joinEmailHref } from "./club-links";
 import RootsTeaser from "./explore/roots-teaser";
@@ -57,6 +58,7 @@ export default function ClubHome() {
       </section>
       <a href="#familia" className={s.scrollLink}>{t.scroll}<Arrow down /></a>
       <CultureMarquee language={language} />
+      <HomeMotionNotice language={language} />
 
       <FamiliaSection language={language} />
 

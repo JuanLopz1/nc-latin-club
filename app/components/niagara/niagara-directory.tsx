@@ -1,4 +1,5 @@
 'use client';
+import { getReducedMotion } from '../motion-preference';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useSiteLanguage } from '../site-context';
@@ -23,7 +24,7 @@ export default function NiagaraDirectory({ places }: { places: readonly Place[] 
     setSelectedId(id);
     requestAnimationFrame(() => {
       const panel = document.getElementById(id);
-      panel?.scrollIntoView({ block: 'start', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+      panel?.scrollIntoView({ block: 'start', behavior: getReducedMotion() ? 'instant' : 'smooth' });
       if (fromMap) document.getElementById(`place-title-${id}`)?.focus({ preventScroll: true });
     });
   };

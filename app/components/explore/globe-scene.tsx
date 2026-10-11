@@ -6,6 +6,7 @@ import type { Language } from '../home-copy';
 import type { Camera, Country, GlobeHandle } from './explore-types';
 import { clampAltitude, initialCamera, nearbyCountries } from './explore-utils';
 import s from './explore.module.css';
+import { getReducedMotion, subscribeMotion } from '../motion-preference';
 type WorldFeature = Feature<Polygon | MultiPolygon, { iso2: string; name: string; americas: boolean; slug?: string }>;
 type Props = { ref: Ref<GlobeHandle>; countries: readonly Country[]; selectedSlug: string | null; camera: Camera; rotating: boolean; active?: boolean; presentation?: boolean; language: Language; onSelect(slug: string, nearby?: string[]): void; onCamera(camera: Camera): void; onReady(ready: boolean): void; onInteraction(): void; onError(): void };
 export default function GlobeScene({ ref: handleRef, ...props }: Props) {
@@ -14,20 +15,20 @@ export default function GlobeScene({ ref: handleRef, ...props }: Props) {
   const { countries, selectedSlug, rotating, onCamera } = props;
   useEffect(() => { live.current = props; }, [props]);
   useImperativeHandle(handleRef, () => ({
-    zoom(direction) { const g = globe.current; if (!g) return; const current = g.pointOfView(); const camera = { ...current, altitude: clampAltitude(current.altitude * (direction > 0 ? .8 : 1.25)) }; live.current.onInteraction(); live.current.onCamera(camera); g.pointOfView(camera, matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 220); },
-    reset() { live.current.onInteraction(); live.current.onCamera({ ...initialCamera }); globe.current?.pointOfView(initialCamera, matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 350); }
+    zoom(direction) { const g = globe.current; if (!g) return; const current = g.pointOfView(); const camera = { ...current, altitude: clampAltitude(current.altitude * (direction > 0 ? .8 : 1.25)) }; live.current.onInteraction(); live.current.onCamera(camera); g.pointOfView(camera, getReducedMotion() ? 0 : 220); },
+    reset() { live.current.onInteraction(); live.current.onCamera({ ...initialCamera }); globe.current?.pointOfView(initialCamera, getReducedMotion() ? 0 : 350); }
   }), []);
   useEffect(() => {
     const element = container.current;
     if (!element) return;
     let disposed = false, resize: ResizeObserver | undefined;
-    const media = matchMedia('(prefers-reduced-motion: reduce)');
-    if (media.matches) live.current.onInteraction();
+    if (getReducedMotion()) live.current.onInteraction();
     const fail = () => { live.current.onReady(false); live.current.onError(); };
     const saveCamera = () => { if (globe.current) live.current.onCamera(globe.current.pointOfView()); };
     const interaction = () => { if (globe.current) globe.current.controls().autoRotate = false; live.current.onInteraction(); };
     element.addEventListener('pointerdown', interaction, { passive: true });
-    const preference = () => { const controls = globe.current?.controls(); if (controls) { if (media.matches) live.current.onInteraction(); controls.autoRotate = live.current.rotating && !media.matches; controls.enableDamping = !controls.autoRotate && !media.matches; controls.update(); } };
+    const preference = () => { const controls = globe.current?.controls(); if (controls) { if (getReducedMotion()) live.current.onInteraction(); controls.autoRotate = live.current.rotating && !getReducedMotion(); controls.enableDamping = !controls.autoRotate && !getReducedMotion(); controls.update(); } };
+    const unsubscribeMotion = subscribeMotion(preference);
     const visibility = () => { if (!globe.current) return; if (document.hidden || live.current.active === false) { saveCamera(); globe.current.pauseAnimation(); } else globe.current.resumeAnimation(); };
     const contextLost = (event: Event) => { event.preventDefault(); fail(); };
     Promise.all([import('globe.gl'), import('three'), fetch('/data/roots-world.geojson').then(r => { if (!r.ok) throw Error('World geometry unavailable'); return r.json() as Promise<FeatureCollection>; })]).then(([{ default: Globe }, { MeshPhongMaterial }, world]) => {
@@ -49,7 +50,7 @@ export default function GlobeScene({ ref: handleRef, ...props }: Props) {
         .onPointClick(o => { interaction(); live.current.onSelect((o as Country).slug, nearbyCountries(live.current.countries, o as Country).map(c => c.slug)); })
         .onPolygonHover(o => { const c = o ? match(o) : undefined; g.polygonStrokeColor(f => match(f)?.slug === c?.slug && c ? '#ffe06a' : match(f)?.slug === live.current.selectedSlug ? '#ffe06a' : match(f) ? '#76b3bd' : '#3a4b5a'); });
       g.renderer().setPixelRatio(Math.min(devicePixelRatio, 1.5));
-      const controls = g.controls(); controls.enablePan = false; controls.minDistance = 165; controls.maxDistance = 400; controls.autoRotate = live.current.rotating && !media.matches; controls.autoRotateSpeed = .8; controls.enableDamping = !controls.autoRotate && !media.matches; controls.dampingFactor = .12;
+      const controls = g.controls(); controls.enablePan = false; controls.minDistance = 165; controls.maxDistance = 400; controls.autoRotate = live.current.rotating && !getReducedMotion(); controls.autoRotateSpeed = .8; controls.enableDamping = !controls.autoRotate && !getReducedMotion(); controls.dampingFactor = .12;
       if (live.current.presentation) { controls.enableZoom = false; controls.enableRotate = false; }
       controls.addEventListener('start', interaction); controls.addEventListener('end', saveCamera);
       g.onZoom(camera => { element.dataset.camera = JSON.stringify(camera); });
@@ -61,12 +62,12 @@ export default function GlobeScene({ ref: handleRef, ...props }: Props) {
       g.renderer().domElement.style.touchAction = 'pan-y';
       g.renderer().domElement.addEventListener('webglcontextlost', contextLost);
       resize = new ResizeObserver(() => { if (!disposed) g.width(element.clientWidth).height(element.clientHeight); }); resize.observe(element);
-      media.addEventListener('change', preference); document.addEventListener('visibilitychange', visibility);
+      document.addEventListener('visibilitychange', visibility);
       element.dataset.camera = JSON.stringify(g.pointOfView()); element.dataset.ready = 'true'; live.current.onReady(true);
       if (document.hidden || live.current.active === false) g.pauseAnimation();
     }).catch(() => { if (!disposed) fail(); });
     return () => {
-      disposed = true; element.removeEventListener('pointerdown', interaction); resize?.disconnect(); media.removeEventListener('change', preference); document.removeEventListener('visibilitychange', visibility);
+      disposed = true; element.removeEventListener('pointerdown', interaction); resize?.disconnect(); unsubscribeMotion(); document.removeEventListener('visibilitychange', visibility);
       const g = globe.current;
       if (g) { saveCamera(); g.controls().removeEventListener('start', interaction); g.controls().removeEventListener('end', saveCamera); g.renderer().domElement.removeEventListener('webglcontextlost', contextLost); g._destructor(); g.renderer().dispose(); g.renderer().forceContextLoss(); }
       globe.current = null; element.replaceChildren(); delete element.dataset.ready; delete element.dataset.camera; live.current.onReady(false);
@@ -85,12 +86,12 @@ export default function GlobeScene({ ref: handleRef, ...props }: Props) {
     g.polygonCapColor(o => match(o)?.slug === selectedSlug ? '#517982' : (o as WorldFeature).properties.americas ? '#293d4e' : '#192638')
       .polygonStrokeColor(o => match(o)?.slug === selectedSlug ? '#ffe06a' : match(o) ? '#76b3bd' : '#3a4b5a')
       .pointColor(o => (o as Country).slug === selectedSlug ? '#ffe06a' : '#76dbe3');
-    const controls = g.controls(), reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const controls = g.controls(), reduceMotion = getReducedMotion();
     controls.autoRotate = rotating && !reduceMotion; controls.enableDamping = !controls.autoRotate && !reduceMotion;
     if (lastSelection.current !== selectedSlug) {
       lastSelection.current = selectedSlug;
       const c = countries.find(c => c.slug === selectedSlug);
-      if (c) { const camera = { ...c.center, altitude: 1.65 }; onCamera(camera); g.pointOfView(camera, matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 500); }
+      if (c) { const camera = { ...c.center, altitude: 1.65 }; onCamera(camera); g.pointOfView(camera, getReducedMotion() ? 0 : 500); }
     }
   }, [countries, selectedSlug, rotating, onCamera]);
   return <div ref={container} className={s.scene} aria-hidden="true" data-globe-scene />;

@@ -1,4 +1,5 @@
 'use client';
+import { getReducedMotion } from '../motion-preference';
 import { useEffect, useRef, useState } from 'react';
 import { useSiteLanguage } from '../site-context';
 import type { CultureTrack } from './culture-data';
@@ -26,7 +27,7 @@ export default function CultureMusic({ tracks }: { tracks: CultureTrack[] }) {
     return () => { document.removeEventListener('visibilitychange', hide); removePlayer(); setActive(null); };
   }, []);
   useEffect(() => {
-    if (active) player.current?.scrollIntoView({ block: 'center', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+    if (active) player.current?.scrollIntoView({ block: 'center', behavior: getReducedMotion() ? 'instant' : 'smooth' });
   }, [active]);
   const close = (id: string) => { setActive(null); triggers.current.get(id)?.focus(); };
   return <section className={s.musicSection} aria-labelledby="culture-music-title" id="culture-music">

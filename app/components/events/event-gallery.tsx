@@ -1,4 +1,5 @@
 'use client';
+import { getReducedMotion } from '../motion-preference';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import type { Language } from '../home-copy';
@@ -19,7 +20,7 @@ function Gallery({ images, language }: { images: readonly EntryImage[]; language
   const goTo = (index: number) => {
     const next = Math.max(0, Math.min(images.length - 1, index));
     setActive(next);
-    track.current?.scrollTo({ left: next * track.current.clientWidth, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+    track.current?.scrollTo({ left: next * track.current.clientWidth, behavior: getReducedMotion() ? 'instant' : 'smooth' });
   };
   const onScroll = () => {
     if (settle.current) clearTimeout(settle.current);

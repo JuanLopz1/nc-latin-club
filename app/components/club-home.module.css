@@ -236,8 +236,9 @@
   .countryButtons > button { padding: 7px 11px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .home *, .home *::before, .home *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  :global(html:not([data-motion="full"])) .home *, :global(html:not([data-motion="full"])) .home *::before, :global(html:not([data-motion="full"])) .home *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+:global(html[data-motion="reduce"]) .home *, :global(html[data-motion="reduce"]) .home *::before, :global(html[data-motion="reduce"]) .home *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 @media (min-width: 761px) and (max-width: 1100px) {
   .header { flex-wrap: wrap; }
   .headerTools { margin-left: auto; }
@@ -293,4 +294,13 @@
 @keyframes cultureMarquee{to{transform:translateX(-50%)}}
 @keyframes stampFloat{0%,100%{transform:rotate(8deg) translateY(0)}50%{transform:rotate(5deg) translateY(-5px)}}
 @media(max-width:760px){.ribbon{padding:19px 0}.ribbonGroup{gap:28px;padding:0 14px}.ribbonGroup>span{font-size:18px;gap:28px}.ribbonGroup svg{width:18px;height:18px}.ribbonPause{right:8px}.familiaPage{padding:30px 25px 60px}.familiaPage .section{padding:30px 0 40px}.instagram{grid-template-columns:1fr;padding:60px 25px;gap:28px}.instagramPanel{padding:22px}.instagramPanel iframe{height:480px}}
-@media(prefers-reduced-motion:reduce){.home [data-reveal-state]{opacity:1!important;translate:none!important;transition:none!important}.worldImage{transform:none}.ribbonTrack{animation:none!important;transform:none!important}.ribbonPause{display:none}.ribbonGroup{min-width:0;width:100%;gap:14px;padding:0 16px;justify-content:space-around}.ribbonGroup>span{font-size:clamp(11px,1.7vw,24px);gap:12px}.ribbonGroup svg{width:10px;height:10px}.ribbonGroup>span:nth-child(4)>svg{display:none}.ribbonGroup>span:nth-child(n+5),.ribbonGroup:nth-child(2){display:none}}
+@media(prefers-reduced-motion:reduce){:global(html:not([data-motion="full"])) .home [data-reveal-state]{opacity:1!important;translate:none!important;transition:none!important}:global(html:not([data-motion="full"])) .worldImage{transform:none}:global(html:not([data-motion="full"])) .ribbonTrack{width:100%;animation:none!important;transform:none!important}:global(html:not([data-motion="full"])) .ribbonPause{display:none}:global(html:not([data-motion="full"])) .ribbonGroup{min-width:0;width:100%;gap:14px;padding:0 16px;justify-content:space-around}:global(html:not([data-motion="full"])) .ribbonGroup>span{font-size:clamp(11px,1.7vw,24px);gap:12px}:global(html:not([data-motion="full"])) .ribbonGroup svg{width:10px;height:10px}:global(html:not([data-motion="full"])) .ribbonGroup>span:nth-child(4)>svg{display:none}:global(html:not([data-motion="full"])) .ribbonGroup>span:nth-child(n+5),:global(html:not([data-motion="full"])) .ribbonGroup:nth-child(2){display:none}}
+:global(html[data-motion="reduce"]) .home [data-reveal-state]{opacity:1!important;translate:none!important;transition:none!important}
+:global(html[data-motion="reduce"]) .worldImage{transform:none}
+:global(html[data-motion="reduce"]) .ribbonTrack{width:100%;animation:none!important;transform:none!important}
+:global(html[data-motion="reduce"]) .ribbonPause{display:none}
+:global(html[data-motion="reduce"]) .ribbonGroup{min-width:0;width:100%;gap:14px;padding:0 16px;justify-content:space-around}
+:global(html[data-motion="reduce"]) .ribbonGroup>span{font-size:clamp(11px,1.7vw,24px);gap:12px}
+:global(html[data-motion="reduce"]) .ribbonGroup svg{width:10px;height:10px}
+:global(html[data-motion="reduce"]) .ribbonGroup>span:nth-child(4)>svg{display:none}
+:global(html[data-motion="reduce"]) .ribbonGroup>span:nth-child(n+5),:global(html[data-motion="reduce"]) .ribbonGroup:nth-child(2){display:none}

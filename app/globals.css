@@ -41,10 +41,14 @@ button, summary {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
+  html:not([data-motion="full"]) {
     scroll-behavior: auto;
   }
 }
+
+html[data-motion="reduce"] {
+    scroll-behavior: auto;
+  }
 
 a:focus-visible,
 main:focus-visible {

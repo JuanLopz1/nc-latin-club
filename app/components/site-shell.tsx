@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { copy } from './home-copy';
 import { useSiteLanguage } from './site-context';
+import MotionControl from './motion-control';
 import s from './site-shell.module.css';
 function Brand() { return <><Image src="/images/brand/nc-latin-club.png" width={64} height={64} sizes="64px" alt="" className={s.brandLogo} /><span>NC LATIN<span className={s.brandSmall}>CLUB</span></span></>; }
 function Arrow() { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" /></svg>; }
@@ -38,6 +39,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
         {links.map((href, index) => <Link href={href} key={href} onClick={() => setMenuOpen(false)} className={index === 4 ? s.navJoin : undefined}>{t.nav[index]}{index === 4 && <Arrow />}</Link>)}
       </nav>
       <div className={s.headerTools}>
+        <MotionControl language={language} />
         <button className={s.languageButton} onClick={() => setLanguage(language === 'en' ? 'es' : 'en')} aria-label={`${t.language}: ${language === 'en' ? 'Español' : 'English'}`}><span className={language === 'en' ? s.activeLanguage : ''}>EN</span><span aria-hidden="true">/</span><span className={language === 'es' ? s.activeLanguage : ''}>ES</span></button>
         <button ref={menuButton} className={s.menuButton} aria-expanded={menuOpen} aria-controls="main-navigation" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? t.close : t.menu}<span aria-hidden="true">{menuOpen ? '−' : '+'}</span></button>
       </div>

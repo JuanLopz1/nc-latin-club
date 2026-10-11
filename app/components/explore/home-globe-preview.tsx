@@ -3,7 +3,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import type { Language } from '../home-copy';
-import { useReducedMotion } from '../motion-preference';
+import { getReducedMotion, useReducedMotion } from '../motion-preference';
 import raw from './countries.json';
 import type { Camera, Country, GlobeHandle } from './explore-types';
 import s from './explore.module.css';
@@ -18,7 +18,7 @@ export default function HomeGlobePreview({ language }: { language: Language }) {
   const reduced = useReducedMotion();
   const country = destinations.find(c => c.slug === selected)!;
   const playing = visible && ready && !paused && !reduced;
-  const interacted = useCallback(() => setPaused(true), []);
+  const interacted = useCallback(() => { if (!getReducedMotion()) setPaused(true); }, []);
   const changedCamera = useCallback((value: Camera) => { setCamera(value); }, []);
   const error = useCallback(() => setFailed(true), []);
   const select = useCallback((slug: string) => { setSelected(slug); setPaused(true); }, []);

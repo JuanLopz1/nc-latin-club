@@ -1,6 +1,7 @@
 'use client';
 import { createContext, useContext, useEffect, useState, useSyncExternalStore, type ReactNode, type Dispatch, type SetStateAction } from 'react';
 import { persistLanguage, readLanguage, serverLanguage, subscribeLanguage } from './language-store';
+import { syncMotionDocument } from './motion-preference';
 import type { Language } from './home-copy';
 import { initialExploreState } from './explore/explore-utils';
 import type { ExploreState } from './explore/explore-types';
@@ -13,6 +14,7 @@ export function SiteProvider({ children }: { children: ReactNode }) {
   const [exploreState, setExploreState] = useState(initialExploreState);
   const [state, setState] = useState<AgendaState | null>(null);
   useEffect(() => { document.documentElement.lang = language; }, [language]);
+  useEffect(() => { syncMotionDocument(); }, []);
   return <SiteContext.Provider value={{ language, setLanguage, state, setState, exploreState, setExploreState }}>{children}</SiteContext.Provider>;
 }
 function useSite() { const value = useContext(SiteContext); if (!value) throw Error('SiteProvider is required'); return value; }

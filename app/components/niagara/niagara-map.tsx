@@ -1,4 +1,5 @@
 'use client';
+import { getReducedMotion } from '../motion-preference';
 import { useEffect, useRef, useState } from 'react';
 import type * as Leaflet from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -60,7 +61,7 @@ export default function NiagaraMap({ places, selectedId, onSelect, language, res
     if (!ready || !map.current || selectedId === lastSelection.current) return;
     lastSelection.current = selectedId;
     const p = currentPlaces.current.find(p => p.id === selectedId);
-    if (p && hasPin(p)) map.current.setView([p.coordinates!.lat, p.coordinates!.lng], Math.max(map.current.getZoom(), 13), { animate: !window.matchMedia('(prefers-reduced-motion: reduce)').matches });
+    if (p && hasPin(p)) map.current.setView([p.coordinates!.lat, p.coordinates!.lng], Math.max(map.current.getZoom(), 13), { animate: !getReducedMotion() });
   }, [selectedId, ready]);
   return <div className={s.mapWrap}>
     <div ref={container} className={s.map} role="region" aria-label={language === 'en' ? 'Niagara business map' : 'Mapa de negocios de Niagara'} />

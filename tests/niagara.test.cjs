@@ -86,7 +86,7 @@ test('hub highlights cocobar La Paisana and Origen with links to Niagara',()=>{
  const Component=load('../app/components/niagara/niagara-teaser.tsx').default;assert.equal(typeof Component,'function');
  const html=renderToStaticMarkup(React.createElement(Component,{language:'es'}));
  for(const label of ['Descubre el Niagara latino','cocobar','La Paisana','Origen','Explorar Niagara'])assert.ok(html.includes(label));
- assert.equal((html.match(/href="\/niagara/g)||[]).length,4);
+ assert.equal((html.match(/href="\/niagara/g)||[]).length,22);
 });
 test('directory starts with every option and supports OR within filters and AND across filters',()=>{
  const all=u.initialPlaceFilters(places);

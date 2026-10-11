@@ -6,22 +6,20 @@ import type { AgendaEntry, CalendarDate, CalendarMonth } from './event-types';
 import { dailyEntriesOnDate, monthObservances, formatCalendarDate, monthCells, shiftMonth } from './agenda-dates';
 import { eventsCopy } from './events-copy';
 import s from './month-calendar.module.css';
+import { useReducedMotion } from '../motion-preference';
 export default function MonthCalendar({ entries, month, selectedDate, today, language, onMonthChange, onSelectDate, countKind }: { entries: readonly AgendaEntry[]; month: CalendarMonth; selectedDate: CalendarDate; today: CalendarDate; language: Language; countKind?: 'events' | 'culture'; onMonthChange(month: CalendarMonth): void; onSelectDate(date: CalendarDate): void }) {
-  const t = eventsCopy[language];
+  const t = eventsCopy[language], reduced = useReducedMotion();
   const grid = useRef<HTMLDivElement>(null), previous = useRef(month);
   useEffect(() => {
     const element = grid.current;
-    const media = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const stop = () => { if (media.matches) element?.getAnimations().forEach(a => a.cancel()); };
     element?.getAnimations().forEach(a => a.cancel());
-    if (previous.current !== month && !media.matches) {
+    if (previous.current !== month && !reduced) {
       const direction = month > previous.current ? 1 : -1;
       element?.animate([{ opacity: .5, transform: `translateX(${direction * 14}px)` }, { opacity: 1, transform: 'translateX(0)' }], { duration: 220, easing: 'ease-out' });
     }
     previous.current = month;
-    media.addEventListener('change', stop);
-    return () => { media.removeEventListener('change', stop); element?.getAnimations().forEach(a => a.cancel()); };
-  }, [month]);
+    return () => { element?.getAnimations().forEach(a => a.cancel()); };
+  }, [month, reduced]);
   const days = monthCells(month);
   const countLabel = (count: number) => countKind === 'culture' ? count === 1 ? t.culturalDate : t.culturalDates : countKind === 'events' ? count === 1 ? t.event : t.events : count === 1 ? t.activity : t.activities;
   return <section className={s.calendar} aria-label={t.calendar}>

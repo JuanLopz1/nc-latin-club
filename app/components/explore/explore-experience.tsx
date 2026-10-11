@@ -1,5 +1,5 @@
 'use client';
-import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useExploreState, useSiteLanguage } from '../site-context';
 import type { Camera, Country, GlobeHandle } from './explore-types';
@@ -7,21 +7,18 @@ import { filterCountries, regions } from './explore-utils';
 import { exploreCopy } from './explore-copy';
 import GlobeScene from './globe-scene';
 import s from './explore.module.css';
-const motionQuery = '(prefers-reduced-motion: reduce)';
-function subscribeMotion(callback: () => void) { const media = matchMedia(motionQuery); media.addEventListener('change', callback); return () => media.removeEventListener('change', callback); }
-const motionSnapshot = () => matchMedia(motionQuery).matches;
-const serverMotionSnapshot = () => false;
+import { getReducedMotion, useReducedMotion } from '../motion-preference';
 export default function ExploreExperience({ countries }: { countries: readonly Country[] }) {
   const { language } = useSiteLanguage(), { state, setState } = useExploreState(), t = exploreCopy[language];
   const [ready, setReady] = useState(false), [failed, setFailed] = useState(false), [nearby, setNearby] = useState<string[]>([]), [toolsOpen, setToolsOpen] = useState(false);
-  const reducedMotion = useSyncExternalStore(subscribeMotion, motionSnapshot, serverMotionSnapshot);
+  const reducedMotion = useReducedMotion();
   const tools = useRef<HTMLDivElement>(null), toolsTrigger = useRef<HTMLButtonElement>(null);
   const frame = useRef<HTMLDivElement>(null), selectionSource = useRef<'list' | 'map'>('list');
   const scene = useRef<GlobeHandle>(null), triggers = useRef(new Map<string, HTMLButtonElement>()), previewTitle = useRef<HTMLHeadingElement>(null);
   const matches = useMemo(() => filterCountries(countries, state.query, state.regions), [countries, state.query, state.regions]), selected = countries.find(c => c.slug === state.selectedSlug);
   const onCamera = useCallback((camera: Camera) => setState(s => ({ ...s, camera })), [setState]);
   const stop = useCallback(() => setState(s => s.rotating ? { ...s, rotating: false } : s), [setState]);
-  const choose = (slug: string, fromMap = false) => { setToolsOpen(false); setNearby([]); selectionSource.current = fromMap ? 'map' : 'list'; setState(s => ({ ...s, selectedSlug: slug, rotating: false })); requestAnimationFrame(() => previewTitle.current?.focus({ preventScroll: true })); if (!fromMap) frame.current?.scrollIntoView({ block: 'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' }); };
+  const choose = (slug: string, fromMap = false) => { setToolsOpen(false); setNearby([]); selectionSource.current = fromMap ? 'map' : 'list'; setState(s => ({ ...s, selectedSlug: slug, rotating: false })); requestAnimationFrame(() => previewTitle.current?.focus({ preventScroll: true })); if (!fromMap) frame.current?.scrollIntoView({ block: 'start', behavior: getReducedMotion() ? 'instant' : 'smooth' }); };
   const close = useCallback(() => { setNearby([]); setState(s => ({ ...s, selectedSlug: null })); if (selectionSource.current === 'list' && state.selectedSlug) triggers.current.get(state.selectedSlug)?.focus(); else toolsTrigger.current?.focus({ preventScroll: true }); }, [state.selectedSlug, setState]);
   useEffect(() => {
     const escape = (event: KeyboardEvent) => { if (event.key !== 'Escape') return; if (toolsOpen) { setToolsOpen(false); toolsTrigger.current?.focus({ preventScroll: true }); } else if (state.selectedSlug || nearby.length) close(); };
