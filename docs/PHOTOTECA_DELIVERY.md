@@ -20,3 +20,9 @@ La revisión independiente señaló reintentos de finalización, conservación d
 ## Pendiente en el entorno del fundador
 
 Ejecutar [la actualización de Supabase](PHOTOTECA_SETUP.md), esperar el despliegue Preview y comprobar un envío real con las cuentas del club. No se ejecutó SQL contra su proyecto ni se verificó el despliegue remoto desde el entorno cloud. No hay nuevas dependencias ni servicios de pago. `main` permanece intacta; los hitos se envían a `work`.
+
+## Corrección del nivel musical — 2026-10-11
+
+El fundador informó que Play no producía sonido audible. Una prueba de Chromium con un analizador Web Audio conectado a la señal real reprodujo una salida de aproximadamente −49 dBFS al volumen inicial: el contexto funcionaba, pero las voces y la ganancia maestra atenuaban demasiado el sonido. Se ajustó únicamente la ganancia maestra, manteniendo los controles y el inicio por Play.
+
+La regresión falló antes del ajuste y pasó después: nivel inicial aproximado −30 dBFS, pico máximo observado 0.53 (sin recorte), respuesta del volumen, silencio a cero, pausa/reinicio y limpieza al salir mediante navegación interna. La prueba está en `tests/phototeca-audio-browser.mjs`; utiliza AudioContext/AnalyserNode nativos y comprueba la señal, además del estado visual. Pasaron también las 96 pruebas unitarias, lint y build. Estas mediciones verifican la salida del navegador local; el dispositivo de audio del visitante y el despliegue remoto se comprueban al actualizar el preview.
