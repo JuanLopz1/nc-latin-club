@@ -22,20 +22,20 @@
 - Mobile dialogs, forms and sticky actions fit 320px; external embed failure retains usable links.
 
 ### 1. Existing interaction fixes
-- [ ] Add/run failing SSR embed tests and CDP gesture/idle regressions.
-- [ ] Update spotify-section, instagram-section, use-niagara-carousel, globe-scene and preview.
-- [ ] Run unit/lint/build and desktop/mobile browser checks; commit/push milestone.
+- [x] Add/run failing SSR embed tests and CDP gesture/idle regressions.
+- [x] Update spotify-section, instagram-section, use-niagara-carousel, globe-scene and preview.
+- [x] Run unit/lint/build and desktop/mobile browser checks; commit/push milestone.
 
 ### 2. Gallery schema and private submission service
-- [ ] Add/run failing gallery validation and SQL privacy/quota/concurrency tests.
-- [ ] Define `GalleryContent`, `GalleryPhoto` and collection defaults/validation.
-- [ ] Add additive SQL, service-only submission reserve/finish, editorial moderation RPCs.
-- [ ] Add status/challenge, bounded upload POST and authenticated inbox/moderation endpoints; reuse private image delivery.
-- [ ] Verify real Postgres and production HTTP contract, including permission/rate/retry cases.
+- [x] Add/run failing gallery validation and SQL privacy/quota/concurrency tests.
+- [x] Define `GalleryContent`, `GalleryPhoto` and collection defaults/validation.
+- [x] Add additive SQL, service-only submission reserve/finish, editorial moderation RPCs.
+- [x] Add status/challenge, bounded upload POST and authenticated inbox/moderation endpoints; reuse private image delivery.
+- [x] Verify real Postgres and production HTTP contract, including permission/rate/retry cases.
 
 ### 3. Retro UI and admin flow
-- [ ] Add/run failing route/rendering and browser flow checks.
-- [ ] Add gallery client, submission form, lightbox, Web Audio cassette and CSS.
-- [ ] Add homepage/navigation invitation, gallery editor/inbox and clearer sticky publishing guidance.
-- [ ] Verify empty/default/public/draft/moderated content, multilingual copy, music cleanup and small screens.
-- [ ] Run full tests/lint/build, inspect screenshots and diff, document deployment upgrade, commit/push and report implemented/tested/external activation separately.
+- [x] Add/run failing route/rendering and browser flow checks.
+- [x] Add gallery client, submission form, lightbox, Web Audio cassette and CSS.
+- [x] Add homepage/navigation invitation, gallery editor/inbox and clearer sticky publishing guidance.
+- [x] Verify empty/default/public/draft/moderated content, multilingual copy, music cleanup and small screens.
+- [x] Run full tests/lint/build, inspect screenshots and diff, document deployment upgrade, commit/push and report implemented/tested/external activation separately.

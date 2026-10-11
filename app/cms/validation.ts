@@ -35,6 +35,19 @@ export function validateContent(key: ContentKey, input: unknown): void {
     for(const value of [s.roots?.label,s.roots?.text,s.roots?.action,s.niagara?.label,s.niagara?.title,s.niagara?.text,s.niagara?.action])localized(value,'homepage invitation');
     invariant(Array.isArray(s.roots?.title) && s.roots.title.length===2,'The roots title needs two lines.');s.roots.title.forEach(value=>localized(value,'roots title'));
     invariant(/^https:\/\/open\.spotify\.com\/(album|playlist|track)\/[A-Za-z0-9]{22}(?:\?[^#]*)?$/.test(s.spotifyUrl), 'Use a Spotify album, playlist or track URL.');
+  } else if (key === 'gallery') {
+    const g=value as SiteContent['gallery'];
+    invariant(g && typeof g==='object' && !Array.isArray(g),'A photo library is required.');
+    localized(g.title,'gallery title'); localized(g.description,'gallery description');
+    invariant(/^https:\/\/open\.spotify\.com\/(album|playlist|track)\/[A-Za-z0-9]{22}(?:\?[^#]*)?$/.test(g.musicUrl),'Use a Spotify album, playlist or track URL.');
+    invariant(Array.isArray(g.photos) && g.photos.length<=600,'Use at most 600 photos.');
+    const ids=new Set<string>();
+    for(const p of g.photos) {
+      invariant(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(p.id) && !ids.has(p.id),'Unique photo identifier required.'); ids.add(p.id);
+      images([p.image]);localized(p.caption,'photo caption');
+      invariant(typeof p.album==='string' && p.album.trim() && p.album.length<=80,'An album up to 80 characters is required.');
+      invariant(p.credit===undefined || typeof p.credit==='string' && p.credit.length<=100,'Photo credit is limited to 100 characters.');
+    }
   } else if (key === 'home') sameShape(copy,value,'homepage');
   else {
     invariant(Array.isArray(value) && value.length <= 600, 'A collection with at most 600 items is required.');

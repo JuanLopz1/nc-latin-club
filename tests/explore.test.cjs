@@ -70,10 +70,10 @@ test('published music uses direct Spotify tracks with matched title and artist m
  const pages=load('../app/components/explore/culture-data.ts').culturePages;const tracks=pages.flatMap(p=>p.music||[]);assert.ok(tracks.length>0);
  for(const t of tracks){assert.match(t.trackId,/^[A-Za-z0-9]{22}$/);assert.ok(t.title&&t.artist);assert.equal(t.verification,'spotify-title-and-artist');assert.ok(t.context.en&&t.context.es);}
 });
-test('music players are absent before the visitor chooses to load one',()=>{
+test('reviewed music players are present without autoplay or load buttons',()=>{
  const React=require('react'),{renderToStaticMarkup}=require('react-dom/server');const {SiteProvider}=require('../app/components/site-context.tsx');const Detail=require('../app/components/explore/country-detail.tsx').default;
  const page=load('../app/components/explore/culture-data.ts').getCulturePage('colombia'),country=data.countries.find(c=>c.slug==='colombia');const html=renderToStaticMarkup(React.createElement(SiteProvider,null,React.createElement(Detail,{country,page})));
- assert.match(html,/<h1>Colombia<\/h1>/);assert.doesNotMatch(html,/<iframe|<audio/);assert.match(html,/data-load-track/);assert.match(html,/PROVENZA/);
+ assert.match(html,/<h1>Colombia<\/h1>/);assert.match(html,/<iframe/);assert.doesNotMatch(html,/data-load-track|autoplay|<audio/);assert.match(html,/PROVENZA/);
 });
 test('unknown cultural destinations return a real 404 before the streamed shell, while all published pages remain reachable',()=>{
  const {proxy}=load('../proxy.ts'),{NextRequest}=require('next/server');

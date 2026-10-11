@@ -5,7 +5,7 @@ import {createRequire} from 'node:module';
 const require=createRequire(import.meta.url);require('./register-typescript.cjs');
 const {defaultContent}=require('../app/cms/defaults.ts');
 export function startCmsFixture(port=3060) {
- const documents=new Map(),history=[],files=new Map();let sequence=0;
+ const documents=new Map(),history=[],files=new Map(),submissions=new Map();let sequence=0;
  const members={admin:{id:'11111111-1111-4111-8111-111111111111',role:'admin'},editor:{id:'22222222-2222-4222-8222-222222222222',role:'editor'},visitor:{id:'33333333-3333-4333-8333-333333333333',role:null}};
  const server=http.createServer(async(req,res)=>{
   const url=new URL(req.url,'http://127.0.0.1'),token=req.headers.authorization?.replace('Bearer ',''),member=Object.entries(members).find(([name])=>token===`fixture-${name}`)?.[1];
@@ -23,16 +23,48 @@ export function startCmsFixture(port=3060) {
   if(url.pathname==='/rest/v1/cms_published')return json([...documents.values()].filter(d=>d.published!==null).map(d=>({key:d.key,content:d.published,published_version:d.published_version})));
   if(url.pathname.startsWith('/storage/v1/object/')) {
    if(token!=='fixture-service-key')return json({},403);
+   if(req.method==='DELETE'){for(const prefix of body.prefixes??[])files.delete(prefix);return json([]);}
    const filename=url.pathname.split('/').at(-1);
-   if(req.method==='POST'){files.set(filename,bytes);return json({Key:filename});}
+   if(req.method==='POST'){if(files.has(filename))return json({},409);files.set(filename,bytes);return json({Key:filename});}
    if(!files.has(filename))return json({},404);
    res.writeHead(200,{'Content-Type':'image/webp'});return res.end(files.get(filename));
+  }
+  if(url.pathname==='/rest/v1/photo_submissions') {
+   if(token!=='fixture-service-key'&&!member?.role)return json({},403);
+   const id=url.searchParams.get('id')?.replace('eq.',''),status=url.searchParams.get('status')?.replace('eq.','');
+   return json([...submissions.values()].filter(item=>(!id||item.id===id)&&(!status||item.status===status)).slice(0,160).map(({id,photos,status,created_at})=>({id,photos,status,created_at})));
+  }
+  if(url.pathname==='/rest/v1/rpc/gallery_reserve') {
+   if(token!=='fixture-service-key')return json({},403);
+   if([...submissions.values()].filter(s=>s.fingerprint===body.p_fingerprint).length>=3||submissions.size>=60)return json({code:'P0001'},400);
+   submissions.set(body.p_id,{id:body.p_id,fingerprint:body.p_fingerprint,photos:[],uploads:[],uploads_cleared:false,status:'uploading',created_at:new Date().toISOString()});return json(body.p_id);
+  }
+  if(url.pathname==='/rest/v1/rpc/gallery_claim_slot'){
+   if(token!=='fixture-service-key')return json({},403);const item=submissions.get(body.p_id);if(item?.status!=='uploading'||body.p_slot<0||body.p_slot>7)return json({code:'23514'},400);const previous=item.uploads.find(u=>u.slot===body.p_slot);if(previous)return json(previous.media_id);item.uploads.push({slot:body.p_slot,media_id:body.p_media_id});return json(body.p_media_id);
+  }
+  if(url.pathname==='/rest/v1/rpc/gallery_cleanup_candidates'){if(token!=='fixture-service-key')return json({},403);return json([...submissions.values()].filter(s=>s.status==='failed'&&!s.uploads_cleared).map(s=>({id:s.id,uploads:s.uploads})));}
+  if(url.pathname==='/rest/v1/rpc/gallery_clear_uploads'){if(token!=='fixture-service-key')return json({},403);const item=submissions.get(body.p_id);if(item)item.uploads_cleared=true;return json(null);}
+  if(url.pathname==='/rest/v1/rpc/gallery_finish') {
+   if(token!=='fixture-service-key')return json({},403);const item=submissions.get(body.p_id);
+   if(item && ['pending','approved','rejected'].includes(item.status) && JSON.stringify(item.photos)===JSON.stringify(body.p_photos)&&body.p_consent===true)return json(null);
+   if(item?.status!=='uploading'||body.p_consent!==true||!body.p_photos.length||body.p_photos.length>8)return json({code:'23514'},400);
+   item.photos=body.p_photos;item.status='pending';return json(null);
   }
   if(!member?.role)return json({},403);
   if(url.pathname==='/rest/v1/cms_members')return json([{role:member.role}]);
   const key=url.searchParams.get('key')?.replace('eq.','');
   if(url.pathname==='/rest/v1/cms_documents')return json(documents.has(key)?[documents.get(key)]:[]);
   if(url.pathname==='/rest/v1/cms_history')return json(history.filter(h=>h.key===key).slice(-30).reverse());
+  if(url.pathname==='/rest/v1/rpc/gallery_moderate') {
+   const item=submissions.get(body.p_id),old=documents.get('gallery');
+   if(item?.status!=='pending')return json({code:'23514'},400);
+   if((old?.version??0)!==body.p_version)return json({code:'40001'},409);
+   if(body.p_action==='approve'){
+    if(!old)return json({code:'23514'},400);
+    const doc={...old,draft:{...old.draft,photos:[...old.draft.photos,...item.photos]},version:old.version+1,updated_at:new Date().toISOString()};documents.set('gallery',doc);history.push({id:++sequence,key:'gallery',content:doc.draft,action:'save',version:doc.version,created_at:doc.updated_at});
+   }
+   item.status=body.p_action==='approve'?'approved':'rejected';return json(documents.has('gallery')?[documents.get('gallery')]:[]);
+  }
   if(url.pathname==='/rest/v1/rpc/cms_write') {
    if(body.p_publish&&member.role!=='admin')return json({},403);
    if(body.p_publish&&['events','culture'].includes(body.p_key)){const other=body.p_key==='events'?'culture':'events',entries=documents.get(other)?.published??defaultContent[other];if(body.p_content.some(item=>entries.some(other=>other.id===item.id||other.slug===item.slug)))return json({code:'23514'},400);}

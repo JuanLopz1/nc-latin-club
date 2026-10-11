@@ -1,6 +1,7 @@
 'use client';
 import type { Language } from './home-copy';
 import { useContent } from './content-context';
+import SpotifyEmbed from './spotify-embed';
 import s from './club-home.module.css';
 export default function SpotifySection({language}:{language:Language}) {
   const {settings}=useContent();
@@ -8,6 +9,6 @@ export default function SpotifySection({language}:{language:Language}) {
   const path=new URL(settings.spotifyUrl).pathname;
   return <section className={s.instagram} id="spotify" aria-labelledby="spotify-title" data-spotify-section>
     <div><p className={s.eyebrow}>{t.label}</p><h2 id="spotify-title">{t.title}</h2><p className={s.bodyCopy}>{settings.spotifyDescription[language]}</p><a className={s.textLink} href={settings.spotifyUrl} target="_blank" rel="noopener noreferrer">{t.visit} ↗</a></div>
-    <div className={s.spotifyPanel}><p className={s.eyebrow}>{settings.spotifyTitle[language]}</p><div id="home-spotify-player" className={s.spotifyFrame}><iframe src={`https://open.spotify.com/embed${path}?theme=0`} title={settings.spotifyTitle[language]} height="352" loading="lazy" allow="encrypted-media; fullscreen; picture-in-picture" referrerPolicy="strict-origin-when-cross-origin"/></div></div>
+    <div className={s.spotifyPanel}><p className={s.eyebrow}>{settings.spotifyTitle[language]}</p><div id="home-spotify-player" className={s.spotifyFrame}><SpotifyEmbed src={`https://open.spotify.com/embed${path}?theme=0`} title={settings.spotifyTitle[language]}/></div></div>
   </section>;
 }

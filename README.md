@@ -75,6 +75,12 @@ The authenticated panel can upload, order, replace and remove images once Supaba
 
 The homepage title is **NC LATIN CLUB** in both languages. “Join us” opens the visitor's email application with the club contact and requested introduction filled in; the website does not send email. Public contact and social destinations are centralized in `app/components/club-links.ts`. “Stay in the loop” opens the official Instagram profile, [@nclat1nclub](https://www.instagram.com/nclat1nclub/), in a new tab. The sponsor text identifies NCSAC, as requested by club leadership.
 
+## Retro photo library
+
+`/fototeca` presents published photographs as an 80s album with filters, keyboard-accessible lightbox and an original synth mix started by the visitor. Visitors can submit 1–8 JPEG/PNG/WebP images, each up to 3 MiB, with caption, album, optional credit and permission confirmation. Each image uses a separate request within Vercel’s body limit. Pending images stay private. Assigned editors review submissions into a private gallery draft; an admin reviews EN/ES captions and publishes. Admin image fields show thumbnails and replacement controls instead of exposing media paths.
+
+Existing Supabase installations require the additive [gallery upgrade](docs/PHOTOTECA_SETUP.md). [Delivery evidence and limits](docs/PHOTOTECA_DELIVERY.md) distinguish local verification from activation on the actual project. Spotify and Instagram frames appear directly, with external links as fallbacks; audio still requires visitor interaction. Spotify frames stop when hidden or when leaving their route. Niagara’s homepage carousel resumes after pointer interaction; the globe owns vertical touch gestures inside its canvas.
+
 ## Requested next stages
 
 See [the roadmap](docs/ROADMAP.md) for priorities, milestone acceptance criteria, dependencies, and remaining decisions. It reflects the founder’s latest preferences and distinguishes implemented behavior from planned capabilities.
@@ -82,10 +88,9 @@ See [the roadmap](docs/ROADMAP.md) for priorities, milestone acceptance criteria
 These are future requirements, not implemented capabilities:
 
 - Staff/team profiles using approved names, roles, and photography.
-- A photo library with visitor submissions and admin approval before publication.
 - News and a richer Instagram experience using the official account and permitted integrations.
 - A future minigames page.
-- Admin management of future staff/news sections and moderation of visitor photo submissions. The existing portal already manages the logo, homepage copy, contact/social/Spotify links, events, cultural dates, Niagara businesses and country pages.
+- Admin management of future staff/news sections. The existing portal manages the logo, homepage copy, contact/social/Spotify links, events, cultural dates, Niagara businesses, country pages and moderated gallery.
 
 The homepage should keep a simple, inviting scroll experience with purposeful movement. Discover Latin Niagara remains part of the approved direction.
 

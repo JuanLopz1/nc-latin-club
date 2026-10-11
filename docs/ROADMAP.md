@@ -21,7 +21,7 @@ Las preferencias posteriores del usuario prevalecen sobre las notas históricas 
 | Inicio | Prototipo nocturno aprobado, Familia, Eventos enlazados a la agenda, Raíces, Niagara y contacto. |
 | Idiomas | EN por defecto; idioma compartido entre inicio, agenda y detalle. La preferencia EN/ES se conserva en el navegador; EN para visitantes nuevos y HTML inicial. Sin rutas traducidas ni metadatos por idioma. |
 | Eventos | Agenda con Latin Fiesta!, once eventos regionales y 225 ocurrencias culturales aportadas. Filtros múltiples, calendario, fechas de mes completo, detalles, archivo por fecha y galerías opcionales implementados. |
-| Mapa | `/explore`: globo 3D del planeta, Américas destacadas, 55 destinos con búsqueda/lista, opciones desplegables y EN/ES. 55 perfiles documentales EN/ES, 172 secciones con fuentes y 60 pistas Spotify opt-in. Fotos autorizadas, revisión comunitaria y ampliaciones específicas pendientes. |
+| Mapa | `/explore`: globo 3D del planeta, Américas destacadas, 55 destinos con búsqueda/lista, opciones desplegables y EN/ES. 55 perfiles documentales EN/ES, 172 secciones con fuentes y 60 pistas Spotify con reproductores visibles, sin autoplay. Fotos autorizadas, revisión comunitaria y ampliaciones específicas pendientes. |
 | Contacto | Mailto al correo solicitado con el mensaje de unión prellenado. |
 | Instagram | Perfil oficial `https://www.instagram.com/nclat1nclub/`, aportado por el fundador y conectado en inicio/contacto. |
 | Identidad | Logo oficial adaptado al fondo nocturno e incorporado en cabecera y pie. |
@@ -156,15 +156,15 @@ Primera entrega del portal: acceso, permisos, ajustes globales, medios y eventos
 
 **Entregable:** recuerdos autorizados y conexión con la cuenta oficial.
 
-- [ ] Publicar álbumes y fotos aprobadas con textos alternativos y asociación a eventos cuando corresponda.
-- [ ] Añadir después el envío de fotos por visitantes: información de autorización, carga controlada y confirmación de recepción.
-- [ ] Mantener los envíos pendientes en almacenamiento privado hasta la aprobación del admin; permitir rechazo y retirada de imágenes publicadas.
-- [ ] Definir límites de tamaño, formatos y frecuencia de envío según el servicio elegido.
+- [x] Implementar álbumes y fotos publicadas, textos EN/ES, créditos y visor accesible. Activación en Supabase pendiente: [instrucciones](PHOTOTECA_SETUP.md).
+- [x] Implementar envíos de 1–8 fotos, permiso, límites, reintentos y confirmación.
+- [x] Mantener pendientes privados; revisión al borrador, rechazo y retirada desde administración. Publicar exige admin.
+- [x] Limitar tamaño, formatos, frecuencia, cola y almacenamiento temporal; limpiar abandonados/rechazados sin referencias.
 - [x] Activar el enlace oficial de Instagram @nclat1nclub.
-- [x] Incrustar el perfil oficial de Instagram con carga por decisión del visitante y enlace alternativo al perfil.
+- [x] Incrustar el perfil oficial de Instagram directamente y conservar un enlace alternativo.
 - [ ] Seleccionar posts/reels concretos con el fundador para una selección editorial, si se prefiere al perfil completo.
 
-**Terminado cuando:** un visitante envía una foto, un admin la revisa y solo una aprobación la hace pública; los originales pendientes no quedan accesibles mediante enlaces públicos. La fototeca sigue funcionando si Instagram no carga.
+**Terminado cuando:** un visitante envía una foto, un admin la revisa y su aprobación la añade al borrador y una publicación admin la hace pública; los originales pendientes no quedan accesibles mediante enlaces públicos. La fototeca sigue funcionando si Instagram no carga.
 
 ### Hito 8 — Primera versión pública y relevo
 
@@ -185,10 +185,10 @@ Primera entrega del portal: acceso, permisos, ajustes globales, medios y eventos
 Antes de ampliar los minijuegos, el fundador pidió preparar **Latin Club Spotify**: una playlist oficial recomendada.
 
 - [ ] Recibir el enlace oficial de la playlist (no inventar una cuenta o lista).
-- [ ] Añadir un bloque EN/ES con portada autorizada, enlace a Spotify y reproductor opt-in; sin reproducción automática.
-- [ ] Preparar edición futura de título, enlace, portada y descripción desde administración.
+- [x] Añadir bloque musical EN/ES con álbum provisional y reproductor visible sin reproducción automática. La playlist oficial sigue pendiente.
+- [x] Editar textos y enlace musical desde administración; medios usan el almacenamiento privado existente.
 
-La fototeca pública aprobada y sus envíos moderados continúan en el hito 7, después de este pulido visual.
+La fototeca y sus envíos moderados están implementados en el hito 7. Falta ejecutar la actualización SQL en el proyecto real y comprobar la publicación desde ese entorno.
 
 Después se pueden sumar otros minijuegos, diccionario regional y una playlist ampliada. Cada uno se diseña por separado. After Dark y chat son ideas del brief para una etapa posterior; necesitarán definición de acceso y moderación antes de convertirse en funciones.
 

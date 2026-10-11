@@ -33,6 +33,8 @@ export async function backendFetch(path: string, init: RequestInit = {}, token?:
       if(details.message==='Invalid API key') throw new CmsError(503,'Supabase rejected the application API key. Check that SUPABASE_URL and SUPABASE_ANON_KEY belong to the same project.');
     }
     if(path.startsWith('/auth/v1/token?grant_type=refresh_token') && [400,401,403].includes(response.status)) throw new CmsError(401,'Please sign in again.');
+    if(path.startsWith('/rest/v1/photo_submissions') && ['42P01','PGRST205'].includes(details.code)) throw new CmsError(503,'Run supabase/gallery.sql in your existing Supabase SQL editor to activate photo submissions.');
+    if(path.endsWith('/gallery_moderate') && details.code==='23514') throw new CmsError(422,'This submission is already resolved or cannot be added to the gallery draft. Reload the inbox.');
     if(details.code==='23514') throw new CmsError(422,'An event or cultural date uses an existing identifier or URL. Choose unique IDs and slugs.');
     if(details.code==='40001') throw new CmsError(409,'Another editor changed this collection. Reload it before saving.');
     if(response.status===401 || response.status===403) throw new CmsError(response.status,'Your session or permissions do not allow this operation.');

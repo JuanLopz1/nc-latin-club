@@ -1,5 +1,7 @@
 'use client';
 import Image from 'next/image';
+import ImageFields from './image-fields';
+import type {EntryImage} from '../components/events/event-types';
 import type { Language } from '../components/home-copy';
 import { adminCopy, fieldLabels } from './admin-copy';
 import { categoryLabels, modeLabels } from '../components/niagara/niagara-copy';
@@ -35,7 +37,7 @@ function emptyItem(key:string,path:string):JsonValue {
   if(key==='categories')return 'restaurant';
   return '';
 }
-export default function EditorFields({value,path,language,onChange,onError,onUpload,depth=0,optionalKeys=[]}:{value:JsonValue;path:string;language:Language;onChange(value:JsonValue):void;onError(error:unknown):void;onUpload(file:File,apply:(src:string)=>void):Promise<void>;depth?:number;optionalKeys?:string[]}) {
+export default function EditorFields({value,path,language,onChange,onError,onUpload,depth=0,optionalKeys=[]}:{value:JsonValue;path:string;language:Language;onChange(value:JsonValue):void;onError(error:unknown):void;onUpload(file:File,apply:(src:string,dimensions?:{width:number;height:number})=>void):Promise<void>;depth?:number;optionalKeys?:string[]}) {
   const t=adminCopy[language], key=path.split('.').at(-1)!, parent=path.split('.').at(-2),label=fieldLabels[key]?.[language==='en'?0:1] ?? key.replace(/([a-z])([A-Z])/g,'$1 $2');
   if(depth>8)return null;
   if(typeof value==='string' || typeof value==='number') {
@@ -44,6 +46,7 @@ export default function EditorFields({value,path,language,onChange,onError,onUpl
     const image=['src','logoSrc','heroSrc'].includes(key);
     return <label className={s.field}><span>{/^\d+$/.test(key)?`#${Number(key)+1}`:label}</span>{list?<select name={path} value={String(value)} disabled={readonly} onChange={e=>onChange(e.target.value)}><option value="">—</option>{list.map(v=><option key={v} value={v}>{(parent==='categories'?categoryLabels[v]?.[language]:key==='mode'?modeLabels[v]?.[language]:null) ?? v}</option>)}</select>:typeof value==='number'?<input name={path} type="number" step="any" value={value} readOnly={readonly} onChange={e=>onChange(Number(e.target.value))}/>:<textarea name={path} value={value} rows={value.length>180?6:2} onChange={e=>onChange(e.target.value)} spellCheck={!/url|src|id|slug|At$/.test(key)} readOnly={readonly}/>} {image && <><input aria-label={`${t.images}: ${label}`} type="file" accept="image/png,image/jpeg,image/webp" onChange={async e=>{const file=e.target.files?.[0];if(!file)return;await onUpload(file,onChange);e.target.value='';}}/>{String(value).startsWith('/') && <Image src={String(value)} alt={label} width={200} height={130} unoptimized className={s.image}/>}</>}</label>;
   }
+  if(Array.isArray(value) && key==='images')return <ImageFields images={value as unknown as EntryImage[]} path={path} language={language} onUpload={onUpload} onChange={next=>onChange(next as unknown as JsonValue)}/>;
   if(Array.isArray(value))return <fieldset className={s.group}><legend>{label}</legend>{value.map((v,i)=><div className={s.arrayItem} key={i}><EditorFields value={v} path={`${path}.${i}`} language={language} depth={depth+1} onError={onError} onUpload={onUpload} onChange={next=>onChange(value.map((item,index)=>index===i?next:item))}/>{!path.startsWith('home.') && <div className={s.itemActions}><button type="button" aria-label={`${t.remove} ${i+1}`} onClick={()=>onChange(value.filter((_,index)=>index!==i))}>× {t.remove}</button><button type="button" disabled={i===0} aria-label={`↑ ${i+1}`} onClick={()=>{const next=[...value];[next[i-1],next[i]]=[next[i],next[i-1]];onChange(next);}}>↑</button></div>}</div>)}{!path.startsWith('home.') && key!=='images' && <button type="button" onClick={()=>onChange([...value,value[0]===undefined?emptyItem(key,path):blankClone(value[0])])}>{t.add} +</button>}</fieldset>;
   if(value && typeof value==='object') {
     const localized=typeof value.en==='string' && typeof value.es==='string';

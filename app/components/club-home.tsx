@@ -7,6 +7,7 @@ import CultureMarquee from "./culture-marquee";
 import FamiliaSection from "./familia-section";
 import InstagramSection from "./instagram-section";
 import { useContent, emailHref } from "./content-context";
+import GalleryTeaser from './gallery/gallery-teaser';
 import SpotifySection from './spotify-section';
 import RootsTeaser from "./explore/roots-teaser";
 import NiagaraTeaser from "./niagara/niagara-teaser";
@@ -69,6 +70,7 @@ export default function ClubHome() {
 
       <section id="join" className={s.join} aria-labelledby="join-title"><Pulse className={s.joinPulseLeft} /><Pulse className={s.joinPulseRight} /><Signal className={s.joinSignal} /><p className={s.eyebrow}>{t.joinLabel}</p><h2 id="join-title">{t.joinTitle[0]}<br /><em>{t.joinTitle[1]}</em></h2><p className={s.joinBody}>{t.joinBody}</p><div className={s.joinActions}><a href={joinEmailHref} className={s.button} title={t.emailHint}>{t.joinAction}<Arrow /></a>{instagramAction}</div><p className={s.joinNote}>{t.joinNote}</p></section>
       <InstagramSection language={language} />
+      <GalleryTeaser/>
       <SpotifySection language={language} />
     </main>
 

@@ -59,7 +59,11 @@ Para desarrollo local, guarda esos mismos nombres en `.env.local`, que está ign
 
 Las imágenes no referenciadas en contenido publicado requieren sesión editorial; los visitantes reciben 404. Retirar una imagen de una ficha no elimina su archivo del bucket, para permitir recuperar versiones del historial. La limpieza de archivos antiguos se hace en Supabase después de revisar qué versiones se quieren conservar.
 
-Staff, noticias, fototeca con envíos de visitantes y un constructor de layouts continúan como funciones separadas. Esta versión administra las secciones de contenido que ya existen.
+- **Fototeca:** fotos, álbumes, créditos, textos EN/ES y enlace musical. La bandeja añade los envíos revisados al borrador privado; solo Publicar los muestra en la web. Las fotos se pueden buscar, ordenar, reemplazar y retirar.
+
+Si ya instalaste el panel antes de la fototeca, ejecuta únicamente [supabase/gallery.sql](../supabase/gallery.sql), siguiendo [la actualización de fototeca](PHOTOTECA_SETUP.md). Conserva usuarios, contenido e historial; no necesitas crear otro proyecto ni cambiar las variables de Vercel.
+
+Staff, noticias y un constructor de layouts continúan como funciones separadas.
 
 ## Comprobación de activación
 

@@ -32,20 +32,20 @@ export default function SiteShell({ children }: { children: ReactNode }) {
     window.addEventListener('keydown', escape); window.addEventListener('popstate', closeOnBack); window.addEventListener('pointerdown', outside);
     return () => { window.removeEventListener('keydown', escape); window.removeEventListener('popstate', closeOnBack); window.removeEventListener('pointerdown', outside); };
   }, [menuOpen]);
-  const links = ['/#familia', '/events', '/explore', '/niagara', '/#join'];
+  const links = [{href:'/#familia',label:t.nav[0]},{href:'/events',label:t.nav[1]},{href:'/explore',label:t.nav[2]},{href:'/niagara',label:t.nav[3]},{href:'/fototeca',label:'Fototeca'},{href:'/#join',label:t.nav[4]}];
   return <div className={s.site} id="top">
     <a href="#main-content" className={s.skip}>{t.skip}</a>
     <div ref={headerDock} className={s.headerDock} data-scrolled="false"><header className={s.header}>
       <Link href="/" className={s.brand} onClick={() => setMenuOpen(false)} aria-label={language === 'en' ? 'NC Latin Club — Home' : 'NC Latin Club — Inicio'}><Brand /></Link>
       <nav id="main-navigation" aria-label={language === 'en' ? 'Main navigation' : 'Navegación principal'} className={s.nav}>
-        {links.map((href, index) => <Link href={href} key={href} onClick={() => setMenuOpen(false)} className={index === 4 ? s.navJoin : undefined}>{t.nav[index]}{index === 4 && <Arrow />}</Link>)}
+        {links.map(({href,label}) => <Link href={href} key={href} onClick={() => setMenuOpen(false)} className={href === '/#join' ? s.navJoin : undefined}>{label}{href === '/#join' && <Arrow />}</Link>)}
       </nav>
       <div className={s.headerTools}>
         <button className={s.languageButton} onClick={() => setLanguage(language === 'en' ? 'es' : 'en')} aria-label={`${t.language}: ${language === 'en' ? 'Español' : 'English'}`}><span className={language === 'en' ? s.activeLanguage : ''}>EN</span><span aria-hidden="true">/</span><span className={language === 'es' ? s.activeLanguage : ''}>ES</span></button>
         <button ref={menuButton} className={s.menuButton} data-menu-trigger aria-expanded={menuOpen} aria-controls={menuOpen ? 'site-menu' : undefined} onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? t.close : t.menu}<span aria-hidden="true">{menuOpen ? '−' : '+'}</span></button>
       </div>
     </header>{menuOpen && <div id="site-menu" className={s.menuPanel} data-site-menu>
-      <nav className={s.menuNav} aria-label={language === 'en' ? 'Menu navigation' : 'Navegación del menú'}>{links.map((href, index) => <Link href={href} key={href} onClick={() => setMenuOpen(false)}>{t.nav[index]}</Link>)}</nav>
+      <nav className={s.menuNav} aria-label={language === 'en' ? 'Menu navigation' : 'Navegación del menú'}>{links.map(({href,label}) => <Link href={href} key={href} onClick={() => setMenuOpen(false)}>{label}</Link>)}</nav>
       <MotionControl language={language} />
     </div>}</div>
     {children}

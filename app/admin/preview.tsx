@@ -1,6 +1,7 @@
 'use client';
 import { useContent, ContentProvider } from '../components/content-context';
 import type { SiteContent, ContentKey } from '../cms/types';
+import PhotoLibrary from '../components/gallery/photo-library';
 import ClubHome from '../components/club-home';
 import EventDetail from '../components/events/event-detail';
 import NiagaraDirectory from '../components/niagara/niagara-directory';
@@ -14,5 +15,5 @@ export default function DraftPreview({contentKey,value,index}:{contentKey:Conten
   const content={...published,[contentKey]:value} as SiteContent;
   const entry=contentKey==='events'?content.events[index]:content.culture[index];
   const page=content.pages[index],country=page?countries.find(c=>c.slug===page.slug):null;
-  return <ContentProvider content={content}>{contentKey==='events'||contentKey==='culture'?entry?<EventDetail entry={entry}/>:null:contentKey==='places'?<NiagaraDirectory places={content.places}/>:contentKey==='pages'?page&&country?<CountryDetail page={page} country={country}/>:null:<ClubHome/>}</ContentProvider>;
+  return <ContentProvider content={content}>{contentKey==='gallery'?<PhotoLibrary/>:contentKey==='events'||contentKey==='culture'?entry?<EventDetail entry={entry}/>:null:contentKey==='places'?<NiagaraDirectory places={content.places}/>:contentKey==='pages'?page&&country?<CountryDetail page={page} country={country}/>:null:<ClubHome/>}</ContentProvider>;
 }
