@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteProvider } from "./components/site-context";
@@ -31,7 +32,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col"><Suspense fallback={<p style={{padding:32}}>NC LATIN CLUB · Loading / Cargando…</p>}><PublishedSite>{children}</PublishedSite></Suspense></body>
+      <body className="min-h-full flex flex-col">
+        <Suspense fallback={<p style={{padding:32}}>NC LATIN CLUB · Loading / Cargando…</p>}>
+          <PublishedSite>{children}</PublishedSite>
+        </Suspense>
+        <Analytics />
+      </body>
     </html>
   );
 }
