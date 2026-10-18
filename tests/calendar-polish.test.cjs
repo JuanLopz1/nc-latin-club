@@ -17,7 +17,7 @@ test('category counts follow archive/list period and calendar month',()=>{
  assert.equal(typeof dates.agendaPeriodEntries,'function');
  const state={...dates.initialAgendaState(now),view:'calendar',month:'2026-10'};
  const shown=dates.agendaPeriodEntries(agendaEntries,state,now);
- assert.deepEqual(shown.map(e=>e.id),['lataff','latin-fiesta-2026','muertos-niagara']);
+ assert.deepEqual(shown.map(e=>e.id).sort(),['karaoke-latino-2026','la-pachanga-waterloo-2026','lataff','latin-fiesta-2026','muertos-niagara','salsa-hard-rock-2026']);
  assert.deepEqual(dates.agendaPeriodEntries(agendaEntries,{...state,month:'2027-10'},now),[]);
  const octoberArchive=dates.agendaPeriodEntries(agendaEntries,{...state,period:'past'},now);
  assert.deepEqual(octoberArchive.map(e=>e.id),['alucine']);

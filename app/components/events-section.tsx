@@ -3,9 +3,9 @@ import Link from "next/link";
 import EventCountdown from "./events/event-countdown";
 import AddToCalendar from "./events/add-to-calendar";
 import { eventsCopy } from "./events/events-copy";
-import { listEntries, eventDateTime, formatEntryWhen } from "./events/agenda-dates";
+import { eventDateTime, formatEntryWhen } from "./events/agenda-dates";
+import { homeEvents } from './events/home-events';
 import { useAgendaClock } from "./events/agenda-clock";
-import type { EventEntry } from "./events/event-types";
 import type { Language } from "./home-copy";
 import { useContent, emailHref } from './content-context';
 import s from "./events-section.module.css";
@@ -18,7 +18,7 @@ export default function EventsSection({ language }: { language: Language }) {
   const {home:copy,events:clubEvents,settings}=useContent(),joinEmailHref=emailHref(settings.joinEmail);
   const t = copy[language].events;
   const statusCopy = eventsCopy[language], now = useAgendaClock();
-  const upcoming = now ? listEntries(clubEvents, 'at-nc', 'upcoming', now).filter((entry): entry is EventEntry => entry.kind === 'event') : [];
+  const upcoming = now ? homeEvents(clubEvents, now) : [];
 
 
   return (
@@ -50,8 +50,8 @@ export default function EventsSection({ language }: { language: Language }) {
       ) : (
         <div className={s.cards}>
           {upcoming.map(event => (
-            <article className={s.card} key={event.id} aria-labelledby={`event-${event.id}-title`}>
-              <p className={s.eyebrow}>{t.campus}</p>
+            <article className={s.card} key={event.id} data-home-event={event.slug} aria-labelledby={`event-${event.id}-title`}>
+              <p className={s.eyebrow}>{event.category === 'at-nc' ? t.campus : statusCopy.categories[event.category]}{event.city && ` · ${event.city[language]}`}</p>
               {event.status !== 'scheduled' && <div className={s.notice}><strong>{statusCopy[event.status]}</strong><p>{event.statusNote?.[language]}</p></div>}
               <h3 id={`event-${event.id}-title`}><Link href={`/events/${event.slug}`}>{event.title[language]}</Link></h3>
               <p className={s.body}>{event.description[language]}</p>

@@ -1,0 +1,76 @@
+[
+  {
+    "id": "salsa-hard-rock-2026", "slug": "salsa-hard-rock-2026",
+    "kind": "event", "category": "out-of-nc", "status": "scheduled",
+    "source": { "url": "https://buffalosalsadance.com/event/latin-night/", "reviewedOn": "2026-10-18", "provenance": "official-page" },
+    "title": { "en": "Salsa Night at Hard Rock Café", "es": "Noche de Salsa en Hard Rock Café" },
+    "description": {
+      "en": "A salsa social hosted by Fanny Salsa Dance, with music by DJ CPerfect. This event is in Niagara Falls, New York, in the United States.",
+      "es": "Un encuentro de salsa de Fanny Salsa Dance con música de DJ CPerfect. Es en Niagara Falls, Nueva York, Estados Unidos."
+    },
+    "startsAt": "2026-10-23T20:00:00-04:00", "endsAt": "2026-10-23T22:30:00-04:00",
+    "venue": { "en": "Hard Rock Café — Niagara Falls USA", "es": "Hard Rock Café — Niagara Falls, EE. UU." },
+    "city": { "en": "Niagara Falls, NY, USA", "es": "Niagara Falls, NY, Estados Unidos" },
+    "address": "333 Prospect Street, Niagara Falls, NY 14303, USA",
+    "organizer": { "en": "Fanny Salsa Dance", "es": "Fanny Salsa Dance" },
+    "admission": { "en": "$10 admission, per the organizer.", "es": "Entrada de $10, según el organizador." },
+    "note": {
+      "en": "United States venue: attending from Ontario requires crossing the international border. Times shown are local to Niagara Falls. Check details with the organizer before travelling.",
+      "es": "Sede en Estados Unidos: desde Ontario requiere cruzar la frontera internacional. Los horarios son locales de Niagara Falls. Confirma los detalles con el organizador antes de viajar."
+    }
+  },
+  {
+    "id": "gala-gasworks-2026", "slug": "gala-gasworks-2026",
+    "kind": "event", "category": "out-of-nc", "status": "scheduled",
+    "source": { "url": "https://www.salsasoulproductions.com/", "reviewedOn": "2026-10-18", "provenance": "official-page" },
+    "title": { "en": "Gala at the Gasworks", "es": "Gala at the Gasworks" },
+    "description": {
+      "en": "A Latin dance gala from SalsaSoul Productions, with live salsa music, DJs and bachata. Salsa and bachata lessons are offered with the lesson ticket. Hamilton is outside the Niagara region.",
+      "es": "Gala de baile latino de SalsaSoul Productions, con salsa en vivo, DJs y bachata. Hay clases de salsa y bachata con la entrada que incluye clase. Hamilton está fuera de la región de Niagara."
+    },
+    "dateSpan": { "start": "2026-11-07", "end": "2026-11-07" },
+    "venue": { "en": "The Gasworks", "es": "The Gasworks" },
+    "city": { "en": "Hamilton, ON", "es": "Hamilton, Ontario" },
+    "address": "141 Park Street North, Hamilton, ON L8R 2N4",
+    "organizer": { "en": "SalsaSoul Productions", "es": "SalsaSoul Productions" },
+    "admission": { "en": "CAD $30 advance dance entry; CAD $35 with a lesson or at the door, per the organizer.", "es": "CAD $30 por baile en preventa; CAD $35 con clase o en puerta, según el organizador." },
+    "registrationUrl": "https://www.zeffy.com/en-CA/ticketing/gala-at-the-gasworks-by-salsasoul-productions-november-7--2026",
+    "note": { "en": "Date confirmed for November 7, 2026. Check the organizer's ticket page for the start time and current programme before travelling.", "es": "Fecha confirmada: 7 de noviembre de 2026. Consulta la hora de inicio y el programa vigente en la página de entradas antes de viajar." }
+  },
+  {
+    "id": "salsasoul-saturday-2026-11-21", "slug": "salsasoul-saturday-2026-11-21",
+    "kind": "event", "category": "out-of-nc", "status": "scheduled",
+    "source": { "url": "https://www.salsasoulproductions.com/", "reviewedOn": "2026-10-18", "provenance": "official-page" },
+    "title": { "en": "SalsaSoul Saturday Night", "es": "SalsaSoul Saturday Night" },
+    "description": {
+      "en": "A community Latin dance night in Hamilton: beginner lesson at 8 p.m., followed by social dancing from 9 p.m. to 1 a.m. The organizer explicitly lists November 21 in its Fall 2026 schedule.",
+      "es": "Noche comunitaria de baile latino en Hamilton: clase para principiantes a las 8 p. m. y baile social de 9 p. m. a 1 a. m. El organizador incluye expresamente el 21 de noviembre en su calendario de otoño de 2026."
+    },
+    "startsAt": "2026-11-21T20:00:00-05:00", "endsAt": "2026-11-22T01:00:00-05:00",
+    "venue": { "en": "SalsaSoul Saturday Nights — 747 King Street East", "es": "SalsaSoul Saturday Nights — 747 King Street East" },
+    "city": { "en": "Hamilton, ON", "es": "Hamilton, Ontario" },
+    "address": "747 King Street East, Hamilton, ON",
+    "organizer": { "en": "SalsaSoul Productions", "es": "SalsaSoul Productions" },
+    "admission": { "en": "CAD $20 dance party only; CAD $25 with the lesson. Organizer requests cash.", "es": "CAD $20 solo baile; CAD $25 con clase. El organizador pide efectivo." },
+    "note": { "en": "Outside Niagara: Hamilton, Ontario. Doors open at 7:30 p.m. This is the indoor autumn series, not the summer waterfront venue. Only the explicitly published November date is listed.", "es": "Fuera de Niagara: Hamilton, Ontario. Puertas a las 7:30 p. m. Es la serie interior de otoño, no la sede de verano junto al agua. Solo se incluye la fecha de noviembre publicada expresamente." }
+  },
+  {
+    "id": "la-pachanga-waterloo-2026", "slug": "la-pachanga-waterloo-2026",
+    "kind": "event", "category": "out-of-nc", "status": "scheduled",
+    "source": { "url": "https://www.eventbrite.com/e/la-pachanga-salsa-and-bachata-social-october-edition-tickets-2003219311887", "reviewedOn": "2026-10-18", "provenance": "official-page" },
+    "title": { "en": "La Pachanga — Salsa & Bachata Social", "es": "La Pachanga — Social de Salsa y Bachata" },
+    "description": {
+      "en": "Salsa lesson with Bee and Curtis from 8–9 p.m., then social dancing with DJs Gury Gury and Tarek: salsa on vinyl, Dominican and urban bachata, cha-cha-cha, Latin boogaloo and merengue. No partner or experience required; Spanish is spoken.",
+      "es": "Clase de salsa con Bee y Curtis de 8 a 9 p. m., seguida de baile social con DJs Gury Gury y Tarek: salsa en vinilo, bachata dominicana y urbana, chachachá, boogaloo latino y merengue. No necesitas pareja ni experiencia; se habla español."
+    },
+    "dateSpan": { "start": "2026-10-23", "end": "2026-10-23" },
+    "sessions": [{ "startsAt": "2026-10-23T20:00:00-04:00" }],
+    "venue": { "en": "Hepcat Swing Dance Studio", "es": "Hepcat Swing Dance Studio" },
+    "city": { "en": "Waterloo, ON", "es": "Waterloo, Ontario" },
+    "address": "42 Erb Street East, Unit E117, Waterloo, ON N2J 1L7",
+    "organizer": { "en": "Tarek / DANCE-GPT Productions", "es": "Tarek / DANCE-GPT Productions" },
+    "admission": { "en": "CAD $15 cover, per the organizer.", "es": "Entrada de CAD $15, según el organizador." },
+    "registrationUrl": "https://www.eventbrite.com/e/la-pachanga-salsa-and-bachata-social-october-edition-tickets-2003219311887",
+    "note": { "en": "Outside Niagara: Waterloo, Ontario. Social dancing starts at 9 p.m.; the finishing time is not published. The ticket page confirms October 23, 2026; its description also contains an unrelated September 18 line.", "es": "Fuera de Niagara: Waterloo, Ontario. El baile social empieza a las 9 p. m.; no se publica la hora de cierre. La página de entradas confirma el 23 de octubre de 2026; su descripción también contiene una línea ajena sobre el 18 de septiembre." }
+  }
+]

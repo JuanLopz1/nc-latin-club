@@ -28,9 +28,11 @@ test('details label unknown hours explicitly and show sourced session times and 
  assert.ok(render(culture).includes('2026-12-24'));
 });
 const {agendaEntries}=require('../app/components/events/agenda-data.ts');
-test('supplied collection contains eleven real regional events and 225 cultural occurrences in separate categories',()=>{
- assert.equal(agendaEntries.filter(e=>e.category==='out-of-nc').length,11);assert.equal(agendaEntries.filter(e=>e.kind==='cultural-date').length,225);
- assert.equal(agendaEntries.filter(e=>e.category==='at-nc').length,1);assert.doesNotThrow(()=>validateAgenda(agendaEntries));
+test('original regional collection is preserved alongside reviewed additions and 225 cultural occurrences',()=>{
+ const original=require('../app/components/events/researched-events.json');
+ assert.equal(original.length,11);assert.ok(original.every(entry=>agendaEntries.some(e=>e.id===entry.id)));
+ assert.equal(agendaEntries.filter(e=>e.category==='out-of-nc').length,15);assert.equal(agendaEntries.filter(e=>e.kind==='cultural-date').length,225);
+ assert.equal(agendaEntries.filter(e=>e.category==='at-nc').length,2);assert.doesNotThrow(()=>validateAgenda(agendaEntries));
  for(const e of agendaEntries){assert.ok(e.description.en&&e.description.es);assert.ok(!e.images?.length)}
 });
 test('Muertos preserves the supplied venue and hour discrepancy instead of copying Eventbrite header',()=>{
