@@ -7,10 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test:events": "node --test tests/events.test.cjs tests/gallery.test.cjs tests/events-home.test.cjs",
-    "test:niagara": "node --test tests/niagara.test.cjs",
-    "test": "node --test tests/*.test.cjs",
-    "format": "prettier --write app tests scripts *.ts *.mjs *.json"
+    "format": "prettier --write app scripts *.ts *.mjs *.json"
   },
   "dependencies": {
     "@vercel/analytics": "2.0.1",

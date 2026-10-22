@@ -6,7 +6,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useContent } from './content-context';
 import { useSiteLanguage } from './site-context';
-import MotionControl from './motion-control';
 import styles from './site-shell.module.css';
 function Brand() {
   const { settings } = useContent();
@@ -132,9 +131,6 @@ export default function SiteShell({ children }: { children: ReactNode }) {
               <UiIcon name="up" />
             </span>
           </a>
-        </div>
-        <div className={styles.footerMotion}>
-          <MotionControl language={language} />
         </div>
         <div className={styles.footerBottom}>
           <span>© 2026 NC Latin Club</span>

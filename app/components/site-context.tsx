@@ -15,7 +15,6 @@ import {
   serverLanguage,
   subscribeLanguage,
 } from './language-store';
-import { syncMotionDocument } from './motion-preference';
 import type { Language } from '../translations/language';
 import { initialExploreState } from './explore/explore-utils';
 import type { ExploreState } from './explore/explore-types';
@@ -37,9 +36,6 @@ export function SiteProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     document.documentElement.lang = language;
   }, [language]);
-  useEffect(() => {
-    syncMotionDocument();
-  }, []);
   return (
     <SiteContext.Provider
       value={{ language, setLanguage, state, setState, exploreState, setExploreState }}

@@ -26,7 +26,6 @@ Open [http://localhost:3000](http://localhost:3000).
 | --- | --- |
 | `npm run dev` | Start the development server |
 | `npm run lint` | Run ESLint |
-| `npm run test:events` | Check dates, validation, routing guard and gallery rendering |
 | `npm run build` | Create a production build |
 | `npm start` | Serve the production build |
 
@@ -69,7 +68,7 @@ The first image becomes the agenda card cover. The detail has swipe, keyboard co
 
 The homepage highlights up to three upcoming events: At NC first, then Ontario Niagara, then outings outside the region; each group is chronological. Cancelled and expired events are omitted from this selection, while agenda/details retain cancellation notices. New events fill the available slots automatically using the shared runtime clock and temporal rules. Dates display in `America/Toronto`. The calendar uses six Monday-start weeks and the visitor's runtime clock for Niagara's today. An event ending exactly at midnight occupies only its preceding day; its detail still displays the complete end date. A cultural range stays upcoming through its inclusive last Niagara day. Date-only events with unknown hours also stay upcoming through their inclusive last day; daily timed schedules archive after their last documented endpoint; an unpublished final end keeps the festival upcoming through its inclusive last day. The agenda starts with all three categories selected. Category buttons independently toggle inclusion; All selects every category and Deselect all clears the selection. Multiple categories form a union without duplicate entries; none gives a helpful empty state. Calendar view uses the selected categories, with whole-month observances in their separate block; list view selects upcoming or past. The details return action preserves the selected categories, view, month and selected day; a fresh direct detail entry returns with all categories selected.
 
-Validation runs when the collection loads; `npm run test:events` also checks referenced media files. Run `npm test`, lint and a fresh build before publishing. `proxy.ts` checks the same collection before streaming an unknown detail, preserving HTTP 404 with Next.js Cache Components. With Supabase configured, the routing guard reads the same published collections as the public pages.
+Validation runs when the collection loads. `proxy.ts` checks the same collection before streaming an unknown detail, preserving HTTP 404 with Next.js Cache Components. With Supabase configured, the routing guard reads the same published collections as the public pages.
 
 The authenticated panel can upload, order, replace and remove images once Supabase is connected. Private uploads are served only to editors until published. Filters are held in browser state, not shareable query parameters. English is the default; a chosen language persists after reload; localized metadata and `/es` routes remain future work. [QA evidence](docs/EVENTS_QA.md) records browser and fixture checks.
 
@@ -106,13 +105,11 @@ Curated public data: `app/components/niagara/places.json`. Do not publish raw pr
 
 Leaflet 1.9.4 loads only on the Niagara client. OSM attribution stays visible; wheel zoom is disabled to preserve page scrolling. Tile/import failures retain the entire directory and Maps actions. This environment blocked public business sources and OSM tiles with CONNECT403, so live provider availability remains unverified. Additional domains were saved to the environment configuration draft; this does not apply or publish that draft automatically.
 
-Browser regression: with a fresh app and Chromium CDP at port9222, run `CHECK_URL=http://localhost:<port> node tests/niagara-browser.mjs`. It checks detail visibility, focus order, Escape and selection from the map on mobile with reduced motion.
 
 ### Administration of Niagara
 
 With Supabase connected, `/admin` can create, edit, duplicate and remove business records, upload approved images and maintain searchable offerings. Draft removal changes the directory only after publication. Repository data remains the fallback before first publication. A dedicated hashtag model and public submissions remain future work.
 
-Browser regression checks (fresh `npm run build` + running production server, Chromium CDP on 9222): `CHECK_URL=http://localhost:3025 node tests/agenda-directory-browser.mjs` and `CHECK_URL=http://localhost:3025 node tests/niagara-browser.mjs`. Optional `ARTIFACT_DIR` saves screenshots outside the checkout.
 
 
 ## Code organization

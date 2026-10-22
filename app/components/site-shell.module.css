@@ -119,52 +119,6 @@
   align-items: center;
   gap: 8px;
 }
-.motionToggle {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  gap: 12px;
-  min-height: 48px;
-  color: #b3bdd1;
-  font-size: 12px;
-  cursor: pointer;
-  text-align: left;
-}
-.motionToggle > span:first-child {
-  margin-right: auto;
-  color: #f4f2ea;
-  font-size: 13px;
-}
-.motionToggle > span:last-child {
-  min-width: 26px;
-  font-size: 11px;
-}
-.motionSwitch {
-  width: 36px;
-  height: 22px;
-  border: 1px solid #526985;
-  border-radius: 20px;
-  background: #263553;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  padding: 3px;
-}
-.motionSwitch i {
-  display: block;
-  width: 14px;
-  height: 14px;
-  background: #b3bdd1;
-  border-radius: 50%;
-}
-.motionToggle[aria-checked='true'] .motionSwitch {
-  background: var(--gold);
-  border-color: var(--gold);
-}
-.motionToggle[aria-checked='true'] .motionSwitch i {
-  background: #15243a;
-  transform: translateX(14px);
-}
 .languageButton {
   display: inline-flex;
   align-items: center;
@@ -390,10 +344,6 @@
   transition: none !important;
 }
 
-.footerMotion {
-  max-width: 240px;
-  margin: 16px 0 0 auto;
-}
 @media (max-width: 1100px) {
   .nav > a {
     flex-shrink: 0;

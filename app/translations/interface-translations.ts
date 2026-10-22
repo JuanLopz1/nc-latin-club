@@ -167,15 +167,6 @@ export const homeGlobePreviewMessages = {
   },
 } as const;
 
-export const motionControlMessages = {
-  en: {
-    animations: 'Animations',
-  },
-  es: {
-    animations: 'Animaciones',
-  },
-} as const;
-
 export const niagaraDirectoryMessages = {
   en: {
     tryPupusasBakeryWelland: 'Try pupusas, bakery, Welland…',
