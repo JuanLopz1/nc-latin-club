@@ -1,6 +1,6 @@
 'use client';
 import UiIcon from '../ui-icon';
-import Link from 'next/link';
+import Link from '../localized-link';
 import { useSiteLanguage } from '../site-context';
 import type { Country } from './explore-types';
 import type { CulturePage } from './culture-data';

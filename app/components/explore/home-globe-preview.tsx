@@ -2,7 +2,7 @@
 import { homeGlobePreviewMessages } from '../../translations/interface-translations';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
-import Link from 'next/link';
+import Link from '../localized-link';
 import type { Language } from '../../translations/language';
 import {
   getReducedMotion,

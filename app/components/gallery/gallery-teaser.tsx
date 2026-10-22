@@ -1,6 +1,6 @@
 'use client';
 import UiIcon from '../ui-icon';
-import Link from 'next/link';
+import Link from '../localized-link';
 import { useSiteLanguage } from '../site-context';
 import { galleryTranslations } from '../../translations/gallery-translations';
 import { Cassette } from './room-music';

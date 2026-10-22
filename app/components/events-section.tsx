@@ -1,5 +1,5 @@
 'use client';
-import Link from 'next/link';
+import Link from './localized-link';
 import EventCountdown from './events/event-countdown';
 import AddToCalendar from './events/add-to-calendar';
 import { eventsTranslations } from '../translations/events-translations';

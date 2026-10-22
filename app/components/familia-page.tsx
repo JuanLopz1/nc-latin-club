@@ -1,6 +1,6 @@
 'use client';
 import UiIcon from './ui-icon';
-import Link from 'next/link';
+import Link from './localized-link';
 import FamiliaSection from './familia-section';
 import { useSiteLanguage } from './site-context';
 import { useContent, emailHref } from './content-context';

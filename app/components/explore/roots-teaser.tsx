@@ -1,5 +1,5 @@
 import UiIcon from '../ui-icon';
-import Link from 'next/link';
+import Link from '../localized-link';
 import type { Language } from '../../translations/language';
 import { useContent } from '../content-context';
 import styles from './explore.module.css';

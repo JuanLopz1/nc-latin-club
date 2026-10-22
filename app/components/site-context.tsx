@@ -2,19 +2,12 @@
 import {
   createContext,
   useContext,
-  useEffect,
   useState,
-  useSyncExternalStore,
   type ReactNode,
   type Dispatch,
   type SetStateAction,
 } from 'react';
-import {
-  persistLanguage,
-  readLanguage,
-  serverLanguage,
-  subscribeLanguage,
-} from './language-store';
+import { languageCookie, localizedPath } from '../translations/routing';
 import type { Language } from '../translations/language';
 import { initialExploreState } from './explore/explore-utils';
 import type { ExploreState } from './explore/explore-types';
@@ -28,14 +21,24 @@ type ContextValue = {
   setState(state: AgendaState): void;
 };
 const SiteContext = createContext<ContextValue | null>(null);
-export function SiteProvider({ children }: { children: ReactNode }) {
-  const language = useSyncExternalStore(subscribeLanguage, readLanguage, serverLanguage);
-  const setLanguage = persistLanguage;
+export function SiteProvider({
+  children,
+  language,
+}: {
+  children: ReactNode;
+  language: Language;
+}) {
+  const setLanguage = (nextLanguage: Language) => {
+    document.cookie = `${languageCookie}=${nextLanguage}; Path=/; Max-Age=31536000; SameSite=Lax${window.location.protocol === 'https:' ? '; Secure' : ''}`;
+    if (nextLanguage === language) return;
+    window.location.assign(
+      localizedPath(window.location.pathname, nextLanguage) +
+        window.location.search +
+        window.location.hash,
+    );
+  };
   const [exploreState, setExploreState] = useState(initialExploreState);
   const [state, setState] = useState<AgendaState | null>(null);
-  useEffect(() => {
-    document.documentElement.lang = language;
-  }, [language]);
   return (
     <SiteContext.Provider
       value={{ language, setLanguage, state, setState, exploreState, setExploreState }}

@@ -3,7 +3,7 @@ import { panelMessages } from '../translations/interface-translations';
 import UiIcon from '../components/ui-icon';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
-import Link from 'next/link';
+import Link from '../components/localized-link';
 import { useRouter } from 'next/navigation';
 import { useSiteLanguage } from '../components/site-context';
 import {

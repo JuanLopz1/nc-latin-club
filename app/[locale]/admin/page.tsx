@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import AdminPanel from './panel';
+import AdminPanel from '../../admin/panel';
 export const metadata: Metadata = {
   title: 'Admin | NC LATIN CLUB',
   robots: { index: false, follow: false },

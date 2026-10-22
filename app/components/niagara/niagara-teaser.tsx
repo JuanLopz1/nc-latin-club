@@ -2,7 +2,7 @@
 
 import { niagaraCarouselTranslations } from '../../translations/niagara-carousel-translations';
 import UiIcon from '../ui-icon';
-import Link from 'next/link';
+import Link from '../localized-link';
 import type { Language } from '../../translations/language';
 import { categoryLabels } from '../../translations/niagara-translations';
 import { useContent } from '../content-context';

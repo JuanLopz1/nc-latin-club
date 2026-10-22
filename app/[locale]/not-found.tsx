@@ -1,9 +1,9 @@
 'use client';
-import { notFoundMessages } from './translations/interface-translations';
-import UiIcon from './components/ui-icon';
-import Link from 'next/link';
-import { useSiteLanguage } from './components/site-context';
-import styles from './components/events/event-detail.module.css';
+import { notFoundMessages } from '../translations/interface-translations';
+import UiIcon from '../components/ui-icon';
+import Link from '../components/localized-link';
+import { useSiteLanguage } from '../components/site-context';
+import styles from '../components/events/event-detail.module.css';
 export default function NotFound() {
   const { language } = useSiteLanguage();
   return (

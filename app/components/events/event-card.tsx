@@ -2,7 +2,7 @@
 import UiIcon from '../ui-icon';
 import { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from '../localized-link';
 import type { Language } from '../../translations/language';
 import type { AgendaEntry } from './event-types';
 import {

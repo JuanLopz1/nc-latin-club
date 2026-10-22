@@ -37,7 +37,7 @@ app/components/ Shared shell, homepage, events, bilingual copy, and scoped style
 public/images/ Static images used by the site
 ```
 
-`app/page.tsx` renders `app/components/club-home.tsx`. Edit homepage translations in `app/translations/home-translations.ts` and visual styles in `club-home.module.css`. The language switch changes the page content and document language; localized URLs and translated metadata have not yet been implemented. The development server reloads as you save.
+`app/[locale]/page.tsx` renders `app/components/club-home.tsx`. Edit homepage translations in `app/translations/home-translations.ts` and visual styles in `club-home.module.css`. The `/en` and `/es` routes render the matching language on the server, including document language and metadata. The development server reloads as you save.
 
 Motion respects the visitor’s motion settings. Public repository defaults require no credentials. Online administration requires the three server environment variables in `.env.example`; secrets must stay outside Git. The existing sharp package is declared directly to sanitize uploaded images. Build-time Google Font downloads require access to `fonts.googleapis.com` and `fonts.gstatic.com`.
 
@@ -121,3 +121,10 @@ With Supabase connected, `/admin` can create, edit, duplicate and remove busines
 - `app/api/`: server endpoints.
 
 Run `npm run format` to expand JSX, separate declarations and maintain consistent indentation. This command only formats files; it does not run tests or build the application.
+
+
+## Language routing
+
+Pages live under `app/[locale]/`. The URL determines the rendered language. Unprefixed routes redirect using the saved language cookie, then the browser Accept-Language preference, with English as fallback. Manual switching saves a one-year cookie and preserves the current path, query and hash. API, media and static asset URLs remain unprefixed.
+
+Use `LocalizedLink` for internal page navigation. Language detection lives in `app/translations/routing.ts`; it never changes a language-prefixed URL automatically.

@@ -1,7 +1,7 @@
 'use client';
 import UiIcon from '../ui-icon';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import Link from 'next/link';
+import Link from '../localized-link';
 import { useExploreState, useSiteLanguage } from '../site-context';
 import type { Camera, Country, GlobeHandle } from './explore-types';
 import { filterCountries, regions } from './explore-utils';

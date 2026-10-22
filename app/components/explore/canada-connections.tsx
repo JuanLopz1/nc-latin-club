@@ -1,6 +1,6 @@
 import { canadaConnectionsTranslations } from '../../translations/canada-connections-translations';
 import UiIcon from '../ui-icon';
-import Link from 'next/link';
+import Link from '../localized-link';
 import type { Language } from '../../translations/language';
 import styles from './explore.module.css';
 

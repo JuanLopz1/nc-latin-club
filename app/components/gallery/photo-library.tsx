@@ -2,7 +2,7 @@
 import UiIcon from '../ui-icon';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from '../localized-link';
 import { useContent } from '../content-context';
 import { useSiteLanguage } from '../site-context';
 import { galleryTranslations } from '../../translations/gallery-translations';

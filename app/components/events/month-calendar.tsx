@@ -1,6 +1,6 @@
 'use client';
 import UiIcon from '../ui-icon';
-import Link from 'next/link';
+import Link from '../localized-link';
 import { useEffect, useRef } from 'react';
 import type { Language } from '../../translations/language';
 import type { AgendaEntry, CalendarDate, CalendarMonth } from './event-types';

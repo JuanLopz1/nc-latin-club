@@ -3,7 +3,7 @@ import { niagaraDirectoryMessages } from '../../translations/interface-translati
 import UiIcon from '../ui-icon';
 import { getReducedMotion } from '../motion-preference';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import Link from 'next/link';
+import Link from '../localized-link';
 import { useSiteLanguage } from '../site-context';
 import type { Place, PlaceFilters } from './place-types';
 import {

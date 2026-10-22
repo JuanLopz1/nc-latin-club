@@ -1,7 +1,7 @@
 'use client';
 import { eventDetailMessages } from '../../translations/interface-translations';
 import UiIcon from '../ui-icon';
-import Link from 'next/link';
+import Link from '../localized-link';
 import { useAgendaState, useSiteLanguage } from '../site-context';
 import {
   entryDate,
