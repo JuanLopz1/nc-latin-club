@@ -1,43 +1,206 @@
 import assert from 'node:assert/strict';
 import sharp from 'sharp';
-const base=process.env.CHECK_URL||'http://127.0.0.1:3061';
-async function login(name='admin') {
- const r=await fetch(base+'/api/admin/session',{method:'POST',headers:{origin:base,'Content-Type':'application/json'},body:JSON.stringify({email:name+'@example.com',password:'fixture-only-password'})});
- return {response:r,cookie:r.headers.getSetCookie().map(v=>v.split(';')[0]).join('; ')};
+const base = process.env.CHECK_URL || 'http://127.0.0.1:3061';
+async function login(name = 'admin') {
+  const r = await fetch(base + '/api/admin/session', {
+    method: 'POST',
+    headers: { origin: base, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      email: name + '@example.com',
+      password: 'fixture-only-password',
+    }),
+  });
+  return {
+    response: r,
+    cookie: r.headers
+      .getSetCookie()
+      .map((v) => v.split(';')[0])
+      .join('; '),
+  };
 }
-const get=(path,cookie)=>fetch(base+path,{headers:cookie?{cookie}:{}});
-const write=(key,data,cookie,origin=base)=>fetch(base+'/api/admin/documents/'+key,{method:'PUT',headers:{cookie,origin,'Content-Type':'application/json'},body:JSON.stringify(data)});
-assert.equal((await get('/admin')).status,200);
-assert.equal((await get('/api/admin/documents/home')).status,401);
-assert.equal((await login('visitor')).response.status,403);
-const admin=await login();assert.equal(admin.response.status,200);
-assert.ok(admin.response.headers.getSetCookie().every(v=>v.includes('HttpOnly')&&v.includes('SameSite=lax')));
-const proxied=await fetch(base+'/api/admin/session',{method:'POST',headers:{origin:base.replace('http:','https:'),'x-forwarded-proto':'https','Content-Type':'application/json'},body:JSON.stringify({email:'admin@example.com',password:'fixture-only-password'})});assert.equal(proxied.status,200);assert.ok(proxied.headers.getSetCookie().every(value=>value.includes('Secure')));
-const revoked=await get('/api/admin/session','nc-admin-access=expired; nc-admin-refresh=revoked');assert.equal(revoked.status,200);assert.equal((await revoked.json()).user,null);assert.equal(revoked.headers.getSetCookie().length,2);
-const editor=await login('editor');assert.equal(editor.response.status,200);
-let home=await (await get('/api/admin/documents/home',admin.cookie)).json();
-const marker='Private draft proof '+crypto.randomUUID();home.draft.en.heroText=marker;
-assert.equal((await write('home',{action:'save',version:home.version,content:home.draft},admin.cookie,'https://evil.example')).status,403);
-let response=await write('home',{action:'save',version:home.version,content:home.draft},editor.cookie);assert.equal(response.status,200);home=await response.json();
-assert.ok(!(await (await get('/')).text()).includes(marker),'Draft must not leak to public HTML or serialized props');
-assert.equal((await write('home',{action:'publish',version:home.version,content:home.draft},editor.cookie)).status,403);
-assert.equal((await write('home',{action:'save',version:home.version-1,content:home.draft},admin.cookie)).status,409);
-const invalid=structuredClone(home.draft);invalid.es.heroText='';assert.equal((await write('home',{action:'publish',version:home.version,content:invalid},admin.cookie)).status,422);
-response=await write('home',{action:'publish',version:home.version,content:home.draft},admin.cookie);assert.equal(response.status,200);
-assert.ok((await (await get('/')).text()).includes(marker),'Published content must appear on a fresh public request');
-const history=await (await get('/api/admin/history/home',admin.cookie)).json();assert.ok(history.length>=2);assert.equal((await get('/api/admin/history/home')).status,401);
-let events=await (await get('/api/admin/documents/events',admin.cookie)).json();
-const event={...events.draft[0],id:'fixture-new-event',slug:'fixture-new-event',title:{en:'CMS event proof',es:'Prueba de evento CMS'}};events.draft.push(event);
-response=await write('events',{action:'publish',version:events.version,content:events.draft},admin.cookie);assert.equal(response.status,200);
-assert.equal((await get('/events/fixture-new-event')).status,200);assert.equal((await get('/events/missing-cms-event')).status,404);
-const culture=await (await get('/api/admin/documents/culture',admin.cookie)).json();culture.draft[0].slug=event.slug;assert.equal((await write('culture',{action:'publish',version:culture.version,content:culture.draft},admin.cookie)).status,422);
-const image=await sharp({create:{width:24,height:16,channels:3,background:'#ffe06a'}}).png().toBuffer();
-const form=new FormData();form.set('image',new File([image],'test.png',{type:'image/png'}));
-response=await fetch(base+'/api/admin/media',{method:'POST',headers:{cookie:admin.cookie,origin:base},body:form});assert.equal(response.status,200);const media=await response.json();assert.equal(media.width,24);assert.equal(media.height,16);
-assert.equal((await get(media.src)).status,404);assert.equal((await get(media.src,admin.cookie)).status,200);
-events=await (await get('/api/admin/documents/events',admin.cookie)).json();events.draft.at(-1).images=[{...media,alt:{en:'Fixture image',es:'Imagen de prueba'}}];
-assert.equal((await write('events',{action:'publish',version:events.version,content:events.draft},admin.cookie)).status,200);
-assert.equal((await get(media.src)).status,200);
-const fake=new FormData();fake.set('image',new File(['<svg onload="evil()"/>'],'fake.png',{type:'image/png'}));
-assert.equal((await fetch(base+'/api/admin/media',{method:'POST',headers:{cookie:admin.cookie,origin:base},body:fake})).status,422);
-console.log('PASS CMS production HTTP: private sessions, Secure proxy cookies, revoked refresh recovery, roles, CSRF, draft separation, revisions, validation, dynamic routes, private/published sanitized media. Uses local REST contract fixture.');
+const get = (path, cookie) => fetch(base + path, { headers: cookie ? { cookie } : {} });
+const write = (key, data, cookie, origin = base) =>
+  fetch(base + '/api/admin/documents/' + key, {
+    method: 'PUT',
+    headers: { cookie, origin, 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+  });
+assert.equal((await get('/admin')).status, 200);
+assert.equal((await get('/api/admin/documents/home')).status, 401);
+assert.equal((await login('visitor')).response.status, 403);
+const admin = await login();
+assert.equal(admin.response.status, 200);
+assert.ok(
+  admin.response.headers
+    .getSetCookie()
+    .every((v) => v.includes('HttpOnly') && v.includes('SameSite=lax')),
+);
+const proxied = await fetch(base + '/api/admin/session', {
+  method: 'POST',
+  headers: {
+    origin: base.replace('http:', 'https:'),
+    'x-forwarded-proto': 'https',
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ email: 'admin@example.com', password: 'fixture-only-password' }),
+});
+assert.equal(proxied.status, 200);
+assert.ok(proxied.headers.getSetCookie().every((value) => value.includes('Secure')));
+const revoked = await get(
+  '/api/admin/session',
+  'nc-admin-access=expired; nc-admin-refresh=revoked',
+);
+assert.equal(revoked.status, 200);
+assert.equal((await revoked.json()).user, null);
+assert.equal(revoked.headers.getSetCookie().length, 2);
+const editor = await login('editor');
+assert.equal(editor.response.status, 200);
+let home = await (await get('/api/admin/documents/home', admin.cookie)).json();
+const marker = 'Private draft proof ' + crypto.randomUUID();
+home.draft.en.heroText = marker;
+assert.equal(
+  (
+    await write(
+      'home',
+      { action: 'save', version: home.version, content: home.draft },
+      admin.cookie,
+      'https://evil.example',
+    )
+  ).status,
+  403,
+);
+let response = await write(
+  'home',
+  { action: 'save', version: home.version, content: home.draft },
+  editor.cookie,
+);
+assert.equal(response.status, 200);
+home = await response.json();
+assert.ok(
+  !(await (await get('/')).text()).includes(marker),
+  'Draft must not leak to public HTML or serialized props',
+);
+assert.equal(
+  (
+    await write(
+      'home',
+      { action: 'publish', version: home.version, content: home.draft },
+      editor.cookie,
+    )
+  ).status,
+  403,
+);
+assert.equal(
+  (
+    await write(
+      'home',
+      { action: 'save', version: home.version - 1, content: home.draft },
+      admin.cookie,
+    )
+  ).status,
+  409,
+);
+const invalid = structuredClone(home.draft);
+invalid.es.heroText = '';
+assert.equal(
+  (
+    await write(
+      'home',
+      { action: 'publish', version: home.version, content: invalid },
+      admin.cookie,
+    )
+  ).status,
+  422,
+);
+response = await write(
+  'home',
+  { action: 'publish', version: home.version, content: home.draft },
+  admin.cookie,
+);
+assert.equal(response.status, 200);
+assert.ok(
+  (await (await get('/')).text()).includes(marker),
+  'Published content must appear on a fresh public request',
+);
+const history = await (await get('/api/admin/history/home', admin.cookie)).json();
+assert.ok(history.length >= 2);
+assert.equal((await get('/api/admin/history/home')).status, 401);
+let events = await (await get('/api/admin/documents/events', admin.cookie)).json();
+const event = {
+  ...events.draft[0],
+  id: 'fixture-new-event',
+  slug: 'fixture-new-event',
+  title: { en: 'CMS event proof', es: 'Prueba de evento CMS' },
+};
+events.draft.push(event);
+response = await write(
+  'events',
+  { action: 'publish', version: events.version, content: events.draft },
+  admin.cookie,
+);
+assert.equal(response.status, 200);
+assert.equal((await get('/events/fixture-new-event')).status, 200);
+assert.equal((await get('/events/missing-cms-event')).status, 404);
+const culture = await (await get('/api/admin/documents/culture', admin.cookie)).json();
+culture.draft[0].slug = event.slug;
+assert.equal(
+  (
+    await write(
+      'culture',
+      { action: 'publish', version: culture.version, content: culture.draft },
+      admin.cookie,
+    )
+  ).status,
+  422,
+);
+const image = await sharp({
+  create: { width: 24, height: 16, channels: 3, background: '#ffe06a' },
+})
+  .png()
+  .toBuffer();
+const form = new FormData();
+form.set('image', new File([image], 'test.png', { type: 'image/png' }));
+response = await fetch(base + '/api/admin/media', {
+  method: 'POST',
+  headers: { cookie: admin.cookie, origin: base },
+  body: form,
+});
+assert.equal(response.status, 200);
+const media = await response.json();
+assert.equal(media.width, 24);
+assert.equal(media.height, 16);
+assert.equal((await get(media.src)).status, 404);
+assert.equal((await get(media.src, admin.cookie)).status, 200);
+events = await (await get('/api/admin/documents/events', admin.cookie)).json();
+events.draft.at(-1).images = [
+  { ...media, alt: { en: 'Fixture image', es: 'Imagen de prueba' } },
+];
+assert.equal(
+  (
+    await write(
+      'events',
+      { action: 'publish', version: events.version, content: events.draft },
+      admin.cookie,
+    )
+  ).status,
+  200,
+);
+assert.equal((await get(media.src)).status, 200);
+const fake = new FormData();
+fake.set(
+  'image',
+  new File(['<svg onload="evil()"/>'], 'fake.png', { type: 'image/png' }),
+);
+assert.equal(
+  (
+    await fetch(base + '/api/admin/media', {
+      method: 'POST',
+      headers: { cookie: admin.cookie, origin: base },
+      body: fake,
+    })
+  ).status,
+  422,
+);
+console.log(
+  'PASS CMS production HTTP: private sessions, Secure proxy cookies, revoked refresh recovery, roles, CSRF, draft separation, revisions, validation, dynamic routes, private/published sanitized media. Uses local REST contract fixture.',
+);

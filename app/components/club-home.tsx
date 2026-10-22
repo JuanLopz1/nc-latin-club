@@ -1,79 +1,194 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { useRef } from "react";
-import { useHomeMotion } from "./use-home-motion";
-import CultureMarquee from "./culture-marquee";
-import FamiliaSection from "./familia-section";
-import InstagramSection from "./instagram-section";
-import { useContent, emailHref } from "./content-context";
+import Image from 'next/image';
+import { useRef } from 'react';
+import { useHomeMotion } from './use-home-motion';
+import CultureMarquee from './culture-marquee';
+import FamiliaSection from './familia-section';
+import InstagramSection from './instagram-section';
+import { useContent, emailHref } from './content-context';
 import GalleryTeaser from './gallery/gallery-teaser';
 import SpotifySection from './spotify-section';
-import RootsTeaser from "./explore/roots-teaser";
-import NiagaraTeaser from "./niagara/niagara-teaser";
-import EventsSection from "./events-section";
+import RootsTeaser from './explore/roots-teaser';
+import NiagaraTeaser from './niagara/niagara-teaser';
+import EventsSection from './events-section';
 import HeroWordmark from './hero-wordmark';
-import { useSiteLanguage } from "./site-context";
-import s from "./club-home.module.css";
+import { useSiteLanguage } from './site-context';
+import styles from './club-home.module.css';
 
-function Signal({ className = "" }: { className?: string }) {
-  return <svg className={className} viewBox="0 0 64 64" fill="none" aria-hidden="true">
-    <path d="m32 2 7 19 19-7-15 18 15 18-19-7-7 19-7-19-19 7 15-18L6 14l19 7Z" fill="currentColor" />
-    <circle cx="32" cy="32" r="6" fill="var(--background)" />
-  </svg>;
+function Signal({ className = '' }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 64 64" fill="none" aria-hidden="true">
+      <path
+        d="m32 2 7 19 19-7-15 18 15 18-19-7-7 19-7-19-19 7 15-18L6 14l19 7Z"
+        fill="currentColor"
+      />
+      <circle cx="32" cy="32" r="6" fill="var(--background)" />
+    </svg>
+  );
 }
 
 function Arrow({ down = false }: { down?: boolean }) {
-  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true" style={down ? { transform: "rotate(90deg)" } : undefined}><path d="M4 12h15m-6-6 6 6-6 6" /></svg>;
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      aria-hidden="true"
+      style={down ? { transform: 'rotate(90deg)' } : undefined}
+    >
+      <path d="M4 12h15m-6-6 6 6-6 6" />
+    </svg>
+  );
 }
 
-function Pulse({ className = "" }: { className?: string }) {
-  return <svg className={className} viewBox="0 0 240 320" fill="none" stroke="currentColor" strokeWidth="12" aria-hidden="true"><path d="M20 135v50m40-95v140m40-200v260m40-225v190m40-150v110m40-75v40" /></svg>;
+function Pulse({ className = '' }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 240 320"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="12"
+      aria-hidden="true"
+    >
+      <path d="M20 135v50m40-95v140m40-200v260m40-225v190m40-150v110m40-75v40" />
+    </svg>
+  );
 }
 
 export default function ClubHome() {
   const root = useRef<HTMLDivElement>(null);
   useHomeMotion(root);
   const { language } = useSiteLanguage();
-  const {home:copy,settings:clubLinks}=useContent();
-  const joinEmailHref=emailHref(clubLinks.joinEmail), t = copy[language];
-  const instagramAction = clubLinks.instagramUrl
-    ? <a href={clubLinks.instagramUrl} className={s.textLink} target="_blank" rel="noopener noreferrer">{t.heroSecondary}<Arrow /></a>
-    : <span className={s.socialPending}><span>{t.heroSecondary}</span><small>{t.instagramPending}</small></span>;
+  const { home: homeTranslations, settings: clubLinks } = useContent();
+  const joinEmailHref = emailHref(clubLinks.joinEmail);
+  const translations = homeTranslations[language];
+  const instagramAction = clubLinks.instagramUrl ? (
+    <a
+      href={clubLinks.instagramUrl}
+      className={styles.textLink}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {translations.heroSecondary}
+      <Arrow />
+    </a>
+  ) : (
+    <span className={styles.socialPending}>
+      <span>{translations.heroSecondary}</span>
+      <small>{translations.instagramPending}</small>
+    </span>
+  );
 
-  return <div className={s.home} ref={root}>
-    <main id="main-content" tabIndex={-1}>
-      <section className={s.hero} aria-labelledby="hero-title">
-        <div className={s.heroCopy}>
-          <h1 id="hero-title">{t.heroTitle[0]}{" "}<br /><em><HeroWordmark word={t.heroTitle[1]} language={language} /></em></h1>
-          <p className={s.heroBody}>{t.heroText}</p>
-          <div className={s.heroActions} data-reveal><a href={joinEmailHref} className={s.button} title={t.emailHint}>{t.heroAction}<Arrow /></a>{instagramAction}</div>
-          <div className={s.heroFoot} data-reveal><Signal className={s.smallSignal} />{t.location}</div>
-        </div>
-        <div className={s.heroArt} data-reveal data-hero-art>
-          <div className={s.artFrame} data-hero-parallax><Image src={clubLinks.heroSrc} unoptimized={clubLinks.heroSrc.startsWith('/api/media/')} alt={clubLinks.heroAlt[language]} fill preload sizes="(max-width: 760px) 100vw, 55vw" className={s.worldImage} /></div>
-          <div className={s.worldStamp}><Signal /><span>{t.heroTag[0]}<br /><i>{t.heroTag[1]}</i></span></div>
-          <span className={s.artCaption}>{t.imageNote}<Arrow /></span>
-          <svg className={s.heroSparkle} viewBox="0 0 60 60" fill="none" aria-hidden="true"><path d="M30 0c0 21 9 30 30 30-21 0-30 9-30 30 0-21-9-30-30-30C21 30 30 21 30 0Z" fill="currentColor" /></svg>
-        </div>
-      </section>
-      <a href="#familia" className={s.scrollLink}>{t.scroll}<Arrow down /></a>
-      <CultureMarquee language={language} />
+  return (
+    <div className={styles.home} ref={root}>
+      <main id="main-content" tabIndex={-1}>
+        <section className={styles.hero} aria-labelledby="hero-title">
+          <div className={styles.heroContent}>
+            <h1 id="hero-title">
+              {translations.heroTitle[0]} <br />
+              <em>
+                <HeroWordmark word={translations.heroTitle[1]} language={language} />
+              </em>
+            </h1>
+            <p className={styles.heroBody}>{translations.heroText}</p>
+            <div className={styles.heroActions} data-reveal>
+              <a
+                href={joinEmailHref}
+                className={styles.button}
+                title={translations.emailHint}
+              >
+                {translations.heroAction}
+                <Arrow />
+              </a>
+              {instagramAction}
+            </div>
+            <div className={styles.heroFoot} data-reveal>
+              <Signal className={styles.smallSignal} />
+              {translations.location}
+            </div>
+          </div>
+          <div className={styles.heroArt} data-reveal data-hero-art>
+            <div className={styles.artFrame} data-hero-parallax>
+              <Image
+                src={clubLinks.heroSrc}
+                unoptimized={clubLinks.heroSrc.startsWith('/api/media/')}
+                alt={clubLinks.heroAlt[language]}
+                fill
+                preload
+                sizes="(max-width: 760px) 100vw, 55vw"
+                className={styles.worldImage}
+              />
+            </div>
+            <div className={styles.worldStamp}>
+              <Signal />
+              <span>
+                {translations.heroTag[0]}
+                <br />
+                <i>{translations.heroTag[1]}</i>
+              </span>
+            </div>
+            <span className={styles.artCaption}>
+              {translations.imageNote}
+              <Arrow />
+            </span>
+            <svg
+              className={styles.heroSparkle}
+              viewBox="0 0 60 60"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M30 0c0 21 9 30 30 30-21 0-30 9-30 30 0-21-9-30-30-30C21 30 30 21 30 0Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+        </section>
+        <a href="#familia" className={styles.scrollLink}>
+          {translations.scroll}
+          <Arrow down />
+        </a>
+        <CultureMarquee language={language} />
 
-      <FamiliaSection language={language} />
+        <FamiliaSection language={language} />
 
-      <EventsSection language={language} />
+        <EventsSection language={language} />
 
-      <RootsTeaser language={language} />
+        <RootsTeaser language={language} />
 
-      <NiagaraTeaser language={language} />
+        <NiagaraTeaser language={language} />
 
-      <section id="join" className={s.join} aria-labelledby="join-title"><Pulse className={s.joinPulseLeft} /><Pulse className={s.joinPulseRight} /><Signal className={s.joinSignal} /><p className={s.eyebrow}>{t.joinLabel}</p><h2 id="join-title">{t.joinTitle[0]}<br /><em>{t.joinTitle[1]}</em></h2><p className={s.joinBody}>{t.joinBody}</p><div className={s.joinActions}><a href={joinEmailHref} className={s.button} title={t.emailHint}>{t.joinAction}<Arrow /></a>{instagramAction}</div><p className={s.joinNote}>{t.joinNote}</p></section>
-      <InstagramSection language={language} />
-      <GalleryTeaser/>
-      <SpotifySection language={language} />
-    </main>
-
-
-  </div>;
+        <section id="join" className={styles.join} aria-labelledby="join-title">
+          <Pulse className={styles.joinPulseLeft} />
+          <Pulse className={styles.joinPulseRight} />
+          <Signal className={styles.joinSignal} />
+          <p className={styles.eyebrow}>{translations.joinLabel}</p>
+          <h2 id="join-title">
+            {translations.joinTitle[0]}
+            <br />
+            <em>{translations.joinTitle[1]}</em>
+          </h2>
+          <p className={styles.joinBody}>{translations.joinBody}</p>
+          <div className={styles.joinActions}>
+            <a
+              href={joinEmailHref}
+              className={styles.button}
+              title={translations.emailHint}
+            >
+              {translations.joinAction}
+              <Arrow />
+            </a>
+            {instagramAction}
+          </div>
+          <p className={styles.joinNote}>{translations.joinNote}</p>
+        </section>
+        <InstagramSection language={language} />
+        <GalleryTeaser />
+        <SpotifySection language={language} />
+      </main>
+    </div>
+  );
 }

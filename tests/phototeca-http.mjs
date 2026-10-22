@@ -1,40 +1,227 @@
 import assert from 'node:assert/strict';
 import sharp from 'sharp';
-const base=process.env.CHECK_URL||'http://127.0.0.1:3070';
-const get=(path,cookie)=>fetch(base+path,{headers:cookie?{cookie}:{}});
-const post=(path,body,headers={})=>fetch(base+path,{method:'POST',headers:{origin:base,'Content-Type':'application/json',...headers},body:JSON.stringify(body)});
-const login=async name=>{const response=await post('/api/admin/session',{email:name+'@example.com',password:'fixture-only-password'});assert.equal(response.status,200);return response.headers.getSetCookie().map(c=>c.split(';')[0]).join('; ');};
-let response=await get('/api/gallery/submissions');assert.equal(response.status,200,'Gallery submission endpoint exists');let status=await response.json();assert.equal(status.available,true);
-const statusBefore=await post('/api/gallery/submissions',{challenge:status.challenge,consent:true,website:''});assert.equal(statusBefore.status,400,'Form has a minimum age');
-await new Promise(resolve=>setTimeout(resolve,2100));
-assert.equal((await post('/api/gallery/submissions',{challenge:status.challenge,consent:false})).status,422);
-assert.equal((await post('/api/gallery/submissions',{challenge:status.challenge,consent:true,website:'spam'})).status,422);
-assert.equal((await post('/api/gallery/submissions',{challenge:status.challenge,consent:true},{origin:'https://evil.example'})).status,403);
-response=await post('/api/gallery/submissions',{challenge:status.challenge,consent:true});assert.equal(response.status,200);const batch=await response.json();
-const bytes=await sharp({create:{width:90,height:70,channels:3,background:'#ff75cb'}}).png().toBuffer();
-const upload=async(slot,bytes,type='image/png',token=batch.token)=>{const form=new FormData();form.set('image',new File([bytes],'memory.png',{type}));return fetch(`${base}/api/gallery/submissions/${batch.id}/images`,{method:'POST',headers:{origin:base,'x-photo-token':token,'x-photo-slot':String(slot)},body:form});};
-assert.equal((await upload(0,bytes,'image/png','bad')).status,400);
-assert.equal((await upload(8,bytes)).status,422);
-assert.equal((await upload(0,Buffer.from('<svg onload="evil()"/>'))).status,422);
-assert.equal((await upload(0,Buffer.alloc(3*1024*1024+1))).status,413);
-const images=[];for(let i=0;i<2;i++){response=await upload(i,bytes);assert.equal(response.status,200);images.push(await response.json());assert.equal((await get(images[i].src)).status,404);}
-response=await upload(0,bytes);assert.equal(response.status,200);assert.deepEqual(await response.json(),images[0],'Retries reuse immutable upload slots');
-const finish={images,caption:'Friends at our club',album:'Familia',credit:'Founder',consent:true};
-assert.equal((await post(`/api/gallery/submissions/${batch.id}`,{...finish,images:[{...images[0],width:999}]},{'x-photo-token':batch.token})).status,422);
-response=await post(`/api/gallery/submissions/${batch.id}`,finish,{'x-photo-token':batch.token});assert.equal(response.status,200);
-assert.equal((await post(`/api/gallery/submissions/${batch.id}`,finish,{'x-photo-token':batch.token})).status,200,'A lost completion response can be retried');
-assert.equal((await upload(2,bytes)).status,409,'Completed submissions cannot upload more');
-assert.equal((await get('/api/admin/photo-submissions')).status,401);
-const admin=await login('admin'),editor=await login('editor');let inbox=await(await get('/api/admin/photo-submissions',admin)).json();const item=inbox.find(item=>item.id===batch.id);assert.equal(item.photos.length,2);assert.equal((await get(images[0].src,admin)).status,200);
-assert.ok(!(await(await get('/fototeca')).text()).includes('Friends at our club'),'Pending caption does not leak');
-let gallery=await(await get('/api/admin/documents/gallery',admin)).json();
-response=await fetch(base+'/api/admin/documents/gallery',{method:'PUT',headers:{origin:base,cookie:admin,'Content-Type':'application/json'},body:JSON.stringify({version:gallery.version,action:'save',content:gallery.draft})});assert.equal(response.status,200);gallery=await response.json();
-assert.equal((await post(`/api/admin/photo-submissions/${batch.id}`,{action:'approve',version:gallery.version-1},{cookie:editor})).status,409);
-response=await post(`/api/admin/photo-submissions/${batch.id}`,{action:'approve',version:gallery.version},{cookie:editor});assert.equal(response.status,200);gallery=await response.json();assert.equal(gallery.draft.photos.length,2);
-assert.equal((await get(images[0].src)).status,404,'Accepted draft images remain private');
-assert.equal((await post(`/api/admin/photo-submissions/${batch.id}`,{action:'approve',version:gallery.version},{cookie:admin})).status,422);
-const publish=async cookie=>fetch(base+'/api/admin/documents/gallery',{method:'PUT',headers:{origin:base,cookie,'Content-Type':'application/json'},body:JSON.stringify({version:gallery.version,action:'publish',content:gallery.draft})});
-assert.equal((await publish(editor)).status,403);assert.equal((await publish(admin)).status,200);assert.equal((await get(images[0].src)).status,200);assert.ok((await(await get('/fototeca')).text()).includes('Friends at our club'));
-inbox=await(await get('/api/admin/photo-submissions',admin)).json();assert.equal(inbox.some(item=>item.id===batch.id),false);
-for(let i=0;i<2;i++)assert.equal((await post('/api/gallery/submissions',{challenge:status.challenge,consent:true})).status,200);assert.equal((await post('/api/gallery/submissions',{challenge:status.challenge,consent:true})).status,429);
-console.log('PASS gallery production HTTP: signed forms, origin, quota, per-image Vercel-safe upload, corrupt/oversized rejection, immutable retry, private staging, protected moderation, revision conflict, no double acceptance, editor draft/admin publication and public photo route. Local REST contract fixture.');
+const base = process.env.CHECK_URL || 'http://127.0.0.1:3070';
+const get = (path, cookie) => fetch(base + path, { headers: cookie ? { cookie } : {} });
+const post = (path, body, headers = {}) =>
+  fetch(base + path, {
+    method: 'POST',
+    headers: { origin: base, 'Content-Type': 'application/json', ...headers },
+    body: JSON.stringify(body),
+  });
+const login = async (name) => {
+  const response = await post('/api/admin/session', {
+    email: name + '@example.com',
+    password: 'fixture-only-password',
+  });
+  assert.equal(response.status, 200);
+  return response.headers
+    .getSetCookie()
+    .map((c) => c.split(';')[0])
+    .join('; ');
+};
+let response = await get('/api/gallery/submissions');
+assert.equal(response.status, 200, 'Gallery submission endpoint exists');
+let status = await response.json();
+assert.equal(status.available, true);
+const statusBefore = await post('/api/gallery/submissions', {
+  challenge: status.challenge,
+  consent: true,
+  website: '',
+});
+assert.equal(statusBefore.status, 400, 'Form has a minimum age');
+await new Promise((resolve) => setTimeout(resolve, 2100));
+assert.equal(
+  (
+    await post('/api/gallery/submissions', {
+      challenge: status.challenge,
+      consent: false,
+    })
+  ).status,
+  422,
+);
+assert.equal(
+  (
+    await post('/api/gallery/submissions', {
+      challenge: status.challenge,
+      consent: true,
+      website: 'spam',
+    })
+  ).status,
+  422,
+);
+assert.equal(
+  (
+    await post(
+      '/api/gallery/submissions',
+      { challenge: status.challenge, consent: true },
+      { origin: 'https://evil.example' },
+    )
+  ).status,
+  403,
+);
+response = await post('/api/gallery/submissions', {
+  challenge: status.challenge,
+  consent: true,
+});
+assert.equal(response.status, 200);
+const batch = await response.json();
+const bytes = await sharp({
+  create: { width: 90, height: 70, channels: 3, background: '#ff75cb' },
+})
+  .png()
+  .toBuffer();
+const upload = async (slot, bytes, type = 'image/png', token = batch.token) => {
+  const form = new FormData();
+  form.set('image', new File([bytes], 'memory.png', { type }));
+  return fetch(`${base}/api/gallery/submissions/${batch.id}/images`, {
+    method: 'POST',
+    headers: { origin: base, 'x-photo-token': token, 'x-photo-slot': String(slot) },
+    body: form,
+  });
+};
+assert.equal((await upload(0, bytes, 'image/png', 'bad')).status, 400);
+assert.equal((await upload(8, bytes)).status, 422);
+assert.equal((await upload(0, Buffer.from('<svg onload="evil()"/>'))).status, 422);
+assert.equal((await upload(0, Buffer.alloc(3 * 1024 * 1024 + 1))).status, 413);
+const images = [];
+for (let i = 0; i < 2; i++) {
+  response = await upload(i, bytes);
+  assert.equal(response.status, 200);
+  images.push(await response.json());
+  assert.equal((await get(images[i].src)).status, 404);
+}
+response = await upload(0, bytes);
+assert.equal(response.status, 200);
+assert.deepEqual(
+  await response.json(),
+  images[0],
+  'Retries reuse immutable upload slots',
+);
+const finish = {
+  images,
+  caption: 'Friends at our club',
+  album: 'Familia',
+  credit: 'Founder',
+  consent: true,
+};
+assert.equal(
+  (
+    await post(
+      `/api/gallery/submissions/${batch.id}`,
+      { ...finish, images: [{ ...images[0], width: 999 }] },
+      { 'x-photo-token': batch.token },
+    )
+  ).status,
+  422,
+);
+response = await post(`/api/gallery/submissions/${batch.id}`, finish, {
+  'x-photo-token': batch.token,
+});
+assert.equal(response.status, 200);
+assert.equal(
+  (
+    await post(`/api/gallery/submissions/${batch.id}`, finish, {
+      'x-photo-token': batch.token,
+    })
+  ).status,
+  200,
+  'A lost completion response can be retried',
+);
+assert.equal(
+  (await upload(2, bytes)).status,
+  409,
+  'Completed submissions cannot upload more',
+);
+assert.equal((await get('/api/admin/photo-submissions')).status, 401);
+const admin = await login('admin');
+const editor = await login('editor');
+let inbox = await (await get('/api/admin/photo-submissions', admin)).json();
+const item = inbox.find((item) => item.id === batch.id);
+assert.equal(item.photos.length, 2);
+assert.equal((await get(images[0].src, admin)).status, 200);
+assert.ok(
+  !(await (await get('/fototeca')).text()).includes('Friends at our club'),
+  'Pending caption does not leak',
+);
+let gallery = await (await get('/api/admin/documents/gallery', admin)).json();
+response = await fetch(base + '/api/admin/documents/gallery', {
+  method: 'PUT',
+  headers: { origin: base, cookie: admin, 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    version: gallery.version,
+    action: 'save',
+    content: gallery.draft,
+  }),
+});
+assert.equal(response.status, 200);
+gallery = await response.json();
+assert.equal(
+  (
+    await post(
+      `/api/admin/photo-submissions/${batch.id}`,
+      { action: 'approve', version: gallery.version - 1 },
+      { cookie: editor },
+    )
+  ).status,
+  409,
+);
+response = await post(
+  `/api/admin/photo-submissions/${batch.id}`,
+  { action: 'approve', version: gallery.version },
+  { cookie: editor },
+);
+assert.equal(response.status, 200);
+gallery = await response.json();
+assert.equal(gallery.draft.photos.length, 2);
+assert.equal(
+  (await get(images[0].src)).status,
+  404,
+  'Accepted draft images remain private',
+);
+assert.equal(
+  (
+    await post(
+      `/api/admin/photo-submissions/${batch.id}`,
+      { action: 'approve', version: gallery.version },
+      { cookie: admin },
+    )
+  ).status,
+  422,
+);
+const publish = async (cookie) =>
+  fetch(base + '/api/admin/documents/gallery', {
+    method: 'PUT',
+    headers: { origin: base, cookie, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      version: gallery.version,
+      action: 'publish',
+      content: gallery.draft,
+    }),
+  });
+assert.equal((await publish(editor)).status, 403);
+assert.equal((await publish(admin)).status, 200);
+assert.equal((await get(images[0].src)).status, 200);
+assert.ok((await (await get('/fototeca')).text()).includes('Friends at our club'));
+inbox = await (await get('/api/admin/photo-submissions', admin)).json();
+assert.equal(
+  inbox.some((item) => item.id === batch.id),
+  false,
+);
+for (let i = 0; i < 2; i++)
+  assert.equal(
+    (
+      await post('/api/gallery/submissions', {
+        challenge: status.challenge,
+        consent: true,
+      })
+    ).status,
+    200,
+  );
+assert.equal(
+  (await post('/api/gallery/submissions', { challenge: status.challenge, consent: true }))
+    .status,
+  429,
+);
+console.log(
+  'PASS gallery production HTTP: signed forms, origin, quota, per-image Vercel-safe upload, corrupt/oversized rejection, immutable retry, private staging, protected moderation, revision conflict, no double acceptance, editor draft/admin publication and public photo route. Local REST contract fixture.',
+);

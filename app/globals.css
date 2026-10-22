@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   color-scheme: dark;
@@ -36,11 +36,19 @@ html {
   scroll-padding-top: calc(var(--site-header-height) + 16px);
 }
 
-button, summary {
+button,
+summary {
   font: inherit;
 }
 
-.ui-icon { display: inline-block; width: 1em; height: 1em; min-width: 1em; vertical-align: -.15em; flex-shrink: 0; }
+.ui-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  min-width: 1em;
+  vertical-align: -0.15em;
+  flex-shrink: 0;
+}
 
 ::selection {
   background: var(--gold);
@@ -48,14 +56,14 @@ button, summary {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html:not([data-motion="full"]) {
+  html:not([data-motion='full']) {
     scroll-behavior: auto;
   }
 }
 
-html[data-motion="reduce"] {
-    scroll-behavior: auto;
-  }
+html[data-motion='reduce'] {
+  scroll-behavior: auto;
+}
 
 a:focus-visible,
 main:focus-visible {

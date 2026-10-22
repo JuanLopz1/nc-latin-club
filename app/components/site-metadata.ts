@@ -1,14 +1,40 @@
 import type { Metadata } from 'next';
 
 export const siteOrigin = 'https://nc-latin-club.vercel.app';
-export function pageMetadata(title: string, description: string, path: string, image = '/opengraph-image'): Metadata {
-  const assetOrigin = process.env.VERCEL_ENV === 'preview' && process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : siteOrigin;
+export function pageMetadata(
+  title: string,
+  description: string,
+  path: string,
+  image = '/opengraph-image',
+): Metadata {
+  const assetOrigin =
+    process.env.VERCEL_ENV === 'preview' && process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : siteOrigin;
   const imageUrl = new URL(image, assetOrigin).href;
-  const images = [{ url: imageUrl, alt: image === '/opengraph-image' ? 'NC LATIN CLUB — Latin roots. Niagara energy.' : 'NC Latin Club — Latin night festival illustration' }];
+  const images = [
+    {
+      url: imageUrl,
+      alt:
+        image === '/opengraph-image'
+          ? 'NC LATIN CLUB — Latin roots. Niagara energy.'
+          : 'NC Latin Club — Latin night festival illustration',
+    },
+  ];
   return {
-    title, description,
+    title,
+    description,
     alternates: { canonical: path },
-    openGraph: { type: 'website', siteName: 'NC LATIN CLUB', title, description, url: path, locale: 'en_CA', alternateLocale: ['es_ES'], images },
+    openGraph: {
+      type: 'website',
+      siteName: 'NC LATIN CLUB',
+      title,
+      description,
+      url: path,
+      locale: 'en_CA',
+      alternateLocale: ['es_ES'],
+      images,
+    },
     twitter: { card: 'summary_large_image', title, description, images: [imageUrl] },
   };
 }

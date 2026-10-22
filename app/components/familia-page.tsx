@@ -4,14 +4,27 @@ import Link from 'next/link';
 import FamiliaSection from './familia-section';
 import { useSiteLanguage } from './site-context';
 import { useContent, emailHref } from './content-context';
-import s from './club-home.module.css';
+import styles from './club-home.module.css';
 
 export default function FamiliaPage() {
   const { language } = useSiteLanguage();
-  const {home:copy,settings}=useContent(),joinEmailHref=emailHref(settings.joinEmail);
-  return <div className={s.home}><main id="main-content" tabIndex={-1} className={s.familiaPage}>
-    <Link href="/" className={s.textLink}><UiIcon name="left" /> NC LATIN CLUB</Link>
-    <FamiliaSection language={language} standalone />
-    <a href={joinEmailHref} className={s.button} title={copy[language].emailHint}>{copy[language].joinAction}</a>
-  </main></div>;
+  const { home: homeTranslations, settings } = useContent();
+  const joinEmailHref = emailHref(settings.joinEmail);
+  return (
+    <div className={styles.home}>
+      <main id="main-content" tabIndex={-1} className={styles.familiaPage}>
+        <Link href="/" className={styles.textLink}>
+          <UiIcon name="left" /> NC LATIN CLUB
+        </Link>
+        <FamiliaSection language={language} standalone />
+        <a
+          href={joinEmailHref}
+          className={styles.button}
+          title={homeTranslations[language].emailHint}
+        >
+          {homeTranslations[language].joinAction}
+        </a>
+      </main>
+    </div>
+  );
 }

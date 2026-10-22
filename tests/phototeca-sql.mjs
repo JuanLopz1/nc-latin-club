@@ -1,50 +1,222 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-const {PGlite}=await import(process.env.PGLITE_MODULE||'@electric-sql/pglite');
-const db=new PGlite(),admin='11111111-1111-4111-8111-111111111111',editor='22222222-2222-4222-8222-222222222222',visitor='33333333-3333-4333-8333-333333333333';
-await db.exec(`create role anon;create role authenticated;create role service_role bypassrls;create schema auth;create table auth.users(id uuid primary key,email text);create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;grant usage on schema auth to authenticated;grant execute on function auth.uid() to authenticated;create schema storage;create table storage.buckets(id text primary key,name text,public boolean,file_size_limit bigint,allowed_mime_types text[]);insert into auth.users values('${admin}','admin@example.com'),('${editor}','editor@example.com'),('${visitor}','visitor@example.com');`);
-await db.exec(await fs.readFile('supabase/admin.sql','utf8'));
-const upgrade=await fs.readFile('supabase/gallery.sql','utf8').catch(error=>{if(error.code==='ENOENT')return '';throw error;});
-if(upgrade){await db.exec(upgrade);await db.exec(upgrade);}
-await db.exec(`insert into public.cms_members values('${admin}','admin'),('${editor}','editor');`);
-const role=async(name,id='')=>{await db.exec('reset role');await db.query("select set_config('request.jwt.claim.sub',$1,false)",[id]);await db.exec('set role '+name);};
-const gallery={title:{en:'Memories',es:'Recuerdos'},description:{en:'Club photos',es:'Fotos del club'},musicUrl:'https://open.spotify.com/album/4kS7bSuU0Jm9LYMosFU2x5',photos:[]};
-await role('authenticated',admin);
-await db.query('select * from public.cms_write($1,$2,0,false)',['gallery',JSON.stringify(gallery)]);
-await role('anon');await assert.rejects(db.query('select * from public.photo_submissions'));await assert.rejects(db.query("select public.gallery_reserve('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa',repeat('a',64))"));
-await role('authenticated',visitor);await assert.rejects(db.query("select public.gallery_moderate('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa','approve',1)"));
+const { PGlite } = await import(process.env.PGLITE_MODULE || '@electric-sql/pglite');
+const db = new PGlite();
+const admin = '11111111-1111-4111-8111-111111111111';
+const editor = '22222222-2222-4222-8222-222222222222';
+const visitor = '33333333-3333-4333-8333-333333333333';
+await db.exec(
+  `create role anon;create role authenticated;create role service_role bypassrls;create schema auth;create table auth.users(id uuid primary key,email text);create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;grant usage on schema auth to authenticated;grant execute on function auth.uid() to authenticated;create schema storage;create table storage.buckets(id text primary key,name text,public boolean,file_size_limit bigint,allowed_mime_types text[]);insert into auth.users values('${admin}','admin@example.com'),('${editor}','editor@example.com'),('${visitor}','visitor@example.com');`,
+);
+await db.exec(await fs.readFile('supabase/admin.sql', 'utf8'));
+const upgrade = await fs.readFile('supabase/gallery.sql', 'utf8').catch((error) => {
+  if (error.code === 'ENOENT') return '';
+  throw error;
+});
+if (upgrade) {
+  await db.exec(upgrade);
+  await db.exec(upgrade);
+}
+await db.exec(
+  `insert into public.cms_members values('${admin}','admin'),('${editor}','editor');`,
+);
+const role = async (name, id = '') => {
+  await db.exec('reset role');
+  await db.query("select set_config('request.jwt.claim.sub',$1,false)", [id]);
+  await db.exec('set role ' + name);
+};
+const gallery = {
+  title: { en: 'Memories', es: 'Recuerdos' },
+  description: { en: 'Club photos', es: 'Fotos del club' },
+  musicUrl: 'https://open.spotify.com/album/4kS7bSuU0Jm9LYMosFU2x5',
+  photos: [],
+};
+await role('authenticated', admin);
+await db.query('select * from public.cms_write($1,$2,0,false)', [
+  'gallery',
+  JSON.stringify(gallery),
+]);
+await role('anon');
+await assert.rejects(db.query('select * from public.photo_submissions'));
+await assert.rejects(
+  db.query(
+    "select public.gallery_reserve('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa',repeat('a',64))",
+  ),
+);
+await role('authenticated', visitor);
+await assert.rejects(
+  db.query(
+    "select public.gallery_moderate('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa','approve',1)",
+  ),
+);
 await role('service_role');
-const submission='aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa',other='bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb',photo={id:'memory-a',image:{src:'/api/media/aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa',width:100,height:100,alt:{en:'Friends',es:'Amigos'}},caption:{en:'Friends',es:'Amigos'},album:'Familia',credit:'Juan'};
-await db.query('select public.gallery_reserve($1,$2)',[submission,'a'.repeat(64)]);
-assert.equal((await db.query('select public.gallery_claim_slot($1,0,$2) as id',[submission,submission])).rows[0].id,submission);
-assert.equal((await db.query('select public.gallery_claim_slot($1,0,$2) as id',[submission,other])).rows[0].id,submission);
-await assert.rejects(db.query('select public.gallery_claim_slot($1,8,$2)',[submission,submission]));
-await assert.rejects(db.query('select public.gallery_finish($1,$2,$3)',[submission,JSON.stringify([]),true]));
-await assert.rejects(db.query('select public.gallery_finish($1,$2,$3)',[submission,JSON.stringify([photo]),false]));
-await db.query('select public.gallery_finish($1,$2,$3)',[submission,JSON.stringify([photo]),true]);
-await db.query('select public.gallery_finish($1,$2,$3)',[submission,JSON.stringify([photo]),true]);
-await assert.rejects(db.query('select public.gallery_finish($1,$2,$3)',[submission,JSON.stringify([{...photo,album:'Changed'}]),true]));
-for(const id of [other,'cccccccc-cccc-4ccc-8ccc-cccccccccccc'])await db.query('select public.gallery_reserve($1,$2)',[id,'a'.repeat(64)]);
-await assert.rejects(db.query('select public.gallery_reserve($1,$2)',['dddddddd-dddd-4ddd-8ddd-dddddddddddd','a'.repeat(64)]),error=>error.code==='P0001');
-await role('authenticated',editor);assert.equal((await db.query("select id,photos,status,created_at from public.photo_submissions where status='pending'")).rows.length,1);
-await assert.rejects(db.query('select public.gallery_moderate($1,$2,$3)',[submission,'approve',0]),error=>error.code==='40001');
-await db.query('select public.gallery_moderate($1,$2,$3)',[submission,'approve',1]);
-let doc=(await db.query("select * from public.cms_documents where key='gallery'")).rows[0];assert.equal(doc.version,2);assert.equal(doc.draft.photos.length,1);assert.equal(doc.published,null);
-await assert.rejects(db.query('select public.gallery_moderate($1,$2,$3)',[submission,'approve',2]));
-await assert.rejects(db.query('select * from public.cms_write($1,$2,$3,true)',['gallery',JSON.stringify(doc.draft),2]));
-await role('anon');assert.equal((await db.query("select * from public.cms_published where key='gallery'")).rows.length,0);
-await role('authenticated',admin);await db.query('select * from public.cms_write($1,$2,$3,true)',['gallery',JSON.stringify(doc.draft),2]);
-await role('anon');assert.equal((await db.query("select * from public.cms_published where key='gallery'")).rows[0].content.photos.length,1);await assert.rejects(db.query('select * from public.cms_history'));
-await role('service_role');await db.query('select public.gallery_finish($1,$2,$3)',[other,JSON.stringify([{...photo,id:'memory-b'}]),true]);
-await role('authenticated',admin);await db.query('select public.gallery_moderate($1,$2,$3)',[other,'reject',3]);assert.equal((await db.query('select status from public.photo_submissions where id=$1',[other])).rows[0].status,'rejected');
+const submission = 'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa';
+const other = 'bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb';
+const photo = {
+  id: 'memory-a',
+  image: {
+    src: '/api/media/aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa',
+    width: 100,
+    height: 100,
+    alt: { en: 'Friends', es: 'Amigos' },
+  },
+  caption: { en: 'Friends', es: 'Amigos' },
+  album: 'Familia',
+  credit: 'Juan',
+};
+await db.query('select public.gallery_reserve($1,$2)', [submission, 'a'.repeat(64)]);
+assert.equal(
+  (
+    await db.query('select public.gallery_claim_slot($1,0,$2) as id', [
+      submission,
+      submission,
+    ])
+  ).rows[0].id,
+  submission,
+);
+assert.equal(
+  (await db.query('select public.gallery_claim_slot($1,0,$2) as id', [submission, other]))
+    .rows[0].id,
+  submission,
+);
+await assert.rejects(
+  db.query('select public.gallery_claim_slot($1,8,$2)', [submission, submission]),
+);
+await assert.rejects(
+  db.query('select public.gallery_finish($1,$2,$3)', [
+    submission,
+    JSON.stringify([]),
+    true,
+  ]),
+);
+await assert.rejects(
+  db.query('select public.gallery_finish($1,$2,$3)', [
+    submission,
+    JSON.stringify([photo]),
+    false,
+  ]),
+);
+await db.query('select public.gallery_finish($1,$2,$3)', [
+  submission,
+  JSON.stringify([photo]),
+  true,
+]);
+await db.query('select public.gallery_finish($1,$2,$3)', [
+  submission,
+  JSON.stringify([photo]),
+  true,
+]);
+await assert.rejects(
+  db.query('select public.gallery_finish($1,$2,$3)', [
+    submission,
+    JSON.stringify([{ ...photo, album: 'Changed' }]),
+    true,
+  ]),
+);
+for (const id of [other, 'cccccccc-cccc-4ccc-8ccc-cccccccccccc'])
+  await db.query('select public.gallery_reserve($1,$2)', [id, 'a'.repeat(64)]);
+await assert.rejects(
+  db.query('select public.gallery_reserve($1,$2)', [
+    'dddddddd-dddd-4ddd-8ddd-dddddddddddd',
+    'a'.repeat(64),
+  ]),
+  (error) => error.code === 'P0001',
+);
+await role('authenticated', editor);
+assert.equal(
+  (
+    await db.query(
+      "select id,photos,status,created_at from public.photo_submissions where status='pending'",
+    )
+  ).rows.length,
+  1,
+);
+await assert.rejects(
+  db.query('select public.gallery_moderate($1,$2,$3)', [submission, 'approve', 0]),
+  (error) => error.code === '40001',
+);
+await db.query('select public.gallery_moderate($1,$2,$3)', [submission, 'approve', 1]);
+let doc = (await db.query("select * from public.cms_documents where key='gallery'"))
+  .rows[0];
+assert.equal(doc.version, 2);
+assert.equal(doc.draft.photos.length, 1);
+assert.equal(doc.published, null);
+await assert.rejects(
+  db.query('select public.gallery_moderate($1,$2,$3)', [submission, 'approve', 2]),
+);
+await assert.rejects(
+  db.query('select * from public.cms_write($1,$2,$3,true)', [
+    'gallery',
+    JSON.stringify(doc.draft),
+    2,
+  ]),
+);
+await role('anon');
+assert.equal(
+  (await db.query("select * from public.cms_published where key='gallery'")).rows.length,
+  0,
+);
+await role('authenticated', admin);
+await db.query('select * from public.cms_write($1,$2,$3,true)', [
+  'gallery',
+  JSON.stringify(doc.draft),
+  2,
+]);
+await role('anon');
+assert.equal(
+  (await db.query("select * from public.cms_published where key='gallery'")).rows[0]
+    .content.photos.length,
+  1,
+);
+await assert.rejects(db.query('select * from public.cms_history'));
 await role('service_role');
-await db.query('select public.gallery_claim_slot($1,0,$2)',['cccccccc-cccc-4ccc-8ccc-cccccccccccc','cccccccc-cccc-4ccc-8ccc-cccccccccccc']);
-await db.query("update public.photo_submissions set created_at=now()-interval '2 hours' where id=$1",['cccccccc-cccc-4ccc-8ccc-cccccccccccc']);
-let candidates=(await db.query('select * from public.gallery_cleanup_candidates()')).rows;
-assert.ok(candidates.some(item=>item.id==='cccccccc-cccc-4ccc-8ccc-cccccccccccc'));assert.ok(!candidates.some(item=>item.id===submission));
-await db.query('select public.gallery_clear_uploads($1)',['cccccccc-cccc-4ccc-8ccc-cccccccccccc']);
-assert.ok(!(await db.query('select * from public.gallery_cleanup_candidates()')).rows.some(item=>item.id==='cccccccc-cccc-4ccc-8ccc-cccccccccccc'));
+await db.query('select public.gallery_finish($1,$2,$3)', [
+  other,
+  JSON.stringify([{ ...photo, id: 'memory-b' }]),
+  true,
+]);
+await role('authenticated', admin);
+await db.query('select public.gallery_moderate($1,$2,$3)', [other, 'reject', 3]);
+assert.equal(
+  (await db.query('select status from public.photo_submissions where id=$1', [other]))
+    .rows[0].status,
+  'rejected',
+);
+await role('service_role');
+await db.query('select public.gallery_claim_slot($1,0,$2)', [
+  'cccccccc-cccc-4ccc-8ccc-cccccccccccc',
+  'cccccccc-cccc-4ccc-8ccc-cccccccccccc',
+]);
+await db.query(
+  "update public.photo_submissions set created_at=now()-interval '2 hours' where id=$1",
+  ['cccccccc-cccc-4ccc-8ccc-cccccccccccc'],
+);
+let candidates = (await db.query('select * from public.gallery_cleanup_candidates()'))
+  .rows;
+assert.ok(candidates.some((item) => item.id === 'cccccccc-cccc-4ccc-8ccc-cccccccccccc'));
+assert.ok(!candidates.some((item) => item.id === submission));
+await db.query('select public.gallery_clear_uploads($1)', [
+  'cccccccc-cccc-4ccc-8ccc-cccccccccccc',
+]);
+assert.ok(
+  !(await db.query('select * from public.gallery_cleanup_candidates()')).rows.some(
+    (item) => item.id === 'cccccccc-cccc-4ccc-8ccc-cccccccccccc',
+  ),
+);
 // One rejected batch plus fifteen new batches fill the staging budget.
-for(let i=0;i<15;i++)await db.query('select public.gallery_reserve($1,$2)',[`eeeeeeee-eeee-4eee-8eee-${String(i).padStart(12,'0')}`,String(i).padStart(64,'0')]);
-await assert.rejects(db.query('select public.gallery_reserve($1,$2)',['eeeeeeee-eeee-4eee-8eee-000000000099','b'.repeat(64)]),error=>error.code==='P0001');
-await db.close();console.log('PASS gallery real Postgres: additive/repeatable migration, private submissions, service-only insertion, per-source/global/staging quotas, bounded consent/images, editorial moderation, retry/conflict protection, cleanup of abandoned uploads, protected published media and admin-only publication.');
+for (let i = 0; i < 15; i++)
+  await db.query('select public.gallery_reserve($1,$2)', [
+    `eeeeeeee-eeee-4eee-8eee-${String(i).padStart(12, '0')}`,
+    String(i).padStart(64, '0'),
+  ]);
+await assert.rejects(
+  db.query('select public.gallery_reserve($1,$2)', [
+    'eeeeeeee-eeee-4eee-8eee-000000000099',
+    'b'.repeat(64),
+  ]),
+  (error) => error.code === 'P0001',
+);
+await db.close();
+console.log(
+  'PASS gallery real Postgres: additive/repeatable migration, private submissions, service-only insertion, per-source/global/staging quotas, bounded consent/images, editorial moderation, retry/conflict protection, cleanup of abandoned uploads, protected published media and admin-only publication.',
+);

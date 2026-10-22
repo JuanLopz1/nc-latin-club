@@ -1,34 +1,92 @@
 // Run with PGLITE_MODULE pointing to a temporary installation, outside the app.
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-const {PGlite}=await import(process.env.PGLITE_MODULE || '@electric-sql/pglite');
-const db=new PGlite();
-const admin='11111111-1111-4111-8111-111111111111',editor='22222222-2222-4222-8222-222222222222',visitor='33333333-3333-4333-8333-333333333333';
-await db.exec(`create role anon;create role authenticated;create role service_role bypassrls;create schema auth;create table auth.users(id uuid primary key,email text);create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;grant usage on schema auth to authenticated;grant execute on function auth.uid() to authenticated;create schema storage;create table storage.buckets(id text primary key,name text,public boolean,file_size_limit bigint,allowed_mime_types text[]);insert into auth.users values('${admin}','admin@example.com'),('${editor}','editor@example.com'),('${visitor}','visitor@example.com');`);
-await db.exec(await fs.readFile('supabase/admin.sql','utf8'));
-await db.exec(`insert into public.cms_members values('${admin}','admin'),('${editor}','editor');`);
-const role=async(name,id='')=>{await db.exec('reset role');await db.query("select set_config('request.jwt.claim.sub',$1,false)",[id]);await db.exec('set role '+name);};
-await role('anon');assert.equal((await db.query('select * from public.cms_published')).rows.length,0);
+const { PGlite } = await import(process.env.PGLITE_MODULE || '@electric-sql/pglite');
+const db = new PGlite();
+const admin = '11111111-1111-4111-8111-111111111111';
+const editor = '22222222-2222-4222-8222-222222222222';
+const visitor = '33333333-3333-4333-8333-333333333333';
+await db.exec(
+  `create role anon;create role authenticated;create role service_role bypassrls;create schema auth;create table auth.users(id uuid primary key,email text);create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;grant usage on schema auth to authenticated;grant execute on function auth.uid() to authenticated;create schema storage;create table storage.buckets(id text primary key,name text,public boolean,file_size_limit bigint,allowed_mime_types text[]);insert into auth.users values('${admin}','admin@example.com'),('${editor}','editor@example.com'),('${visitor}','visitor@example.com');`,
+);
+await db.exec(await fs.readFile('supabase/admin.sql', 'utf8'));
+await db.exec(
+  `insert into public.cms_members values('${admin}','admin'),('${editor}','editor');`,
+);
+const role = async (name, id = '') => {
+  await db.exec('reset role');
+  await db.query("select set_config('request.jwt.claim.sub',$1,false)", [id]);
+  await db.exec('set role ' + name);
+};
+await role('anon');
+assert.equal((await db.query('select * from public.cms_published')).rows.length, 0);
 await assert.rejects(db.query('select draft from public.cms_documents'));
 await assert.rejects(db.query(`select * from public.cms_write('home','{}',0,false)`));
-await role('authenticated',visitor);assert.equal((await db.query('select * from public.cms_documents')).rows.length,0);await assert.rejects(db.query(`select * from public.cms_write('home','{}',0,false)`));
-await role('authenticated',editor);
-let result=await db.query(`select * from public.cms_write('home','{"message":"draft"}',0,false)`);assert.equal(result.rows[0].version,1);
-await assert.rejects(db.query(`select * from public.cms_write('home','{"message":"draft"}',1,true)`));
-await assert.rejects(db.query(`update public.cms_members set role='admin' where user_id='${editor}'`));
-await role('anon');assert.equal((await db.query('select * from public.cms_published')).rows.length,0);
-await role('authenticated',admin);
+await role('authenticated', visitor);
+assert.equal((await db.query('select * from public.cms_documents')).rows.length, 0);
+await assert.rejects(db.query(`select * from public.cms_write('home','{}',0,false)`));
+await role('authenticated', editor);
+let result = await db.query(
+  `select * from public.cms_write('home','{"message":"draft"}',0,false)`,
+);
+assert.equal(result.rows[0].version, 1);
+await assert.rejects(
+  db.query(`select * from public.cms_write('home','{"message":"draft"}',1,true)`),
+);
+await assert.rejects(
+  db.query(`update public.cms_members set role='admin' where user_id='${editor}'`),
+);
+await role('anon');
+assert.equal((await db.query('select * from public.cms_published')).rows.length, 0);
+await role('authenticated', admin);
 await assert.rejects(db.query(`select * from public.cms_write('home','{}',null,true)`));
-result=await db.query(`select * from public.cms_write('home','{"message":"public"}',1,true)`);assert.equal(result.rows[0].published_version,2);
-await assert.rejects(db.query(`select * from public.cms_write('home','{}',1,false)`),error=>error.code==='40001');
-await db.query(`select * from public.cms_write('home','{"message":"private-new-draft"}',2,false)`);
-await role('anon');result=await db.query('select * from public.cms_published');assert.deepEqual(result.rows[0].content,{message:'public'});assert.equal('draft' in result.rows[0],false);
+result = await db.query(
+  `select * from public.cms_write('home','{"message":"public"}',1,true)`,
+);
+assert.equal(result.rows[0].published_version, 2);
+await assert.rejects(
+  db.query(`select * from public.cms_write('home','{}',1,false)`),
+  (error) => error.code === '40001',
+);
+await db.query(
+  `select * from public.cms_write('home','{"message":"private-new-draft"}',2,false)`,
+);
+await role('anon');
+result = await db.query('select * from public.cms_published');
+assert.deepEqual(result.rows[0].content, { message: 'public' });
+assert.equal('draft' in result.rows[0], false);
 await assert.rejects(db.query('select * from public.cms_history'));
-await role('authenticated',editor);assert.equal((await db.query('select * from public.cms_history')).rows.length,3);
-await role('authenticated',admin);
-await db.query(`select * from public.cms_write('events','[{"id":"test-real","slug":"test-shared"}]',0,true)`);
-await assert.rejects(db.query(`select * from public.cms_write('culture','[{"id":"test-cultural","slug":"test-shared"}]',0,true)`),error=>error.code==='23514');
-await assert.rejects(db.query(`select * from public.cms_write('culture','[{"id":"test-real","slug":"test-another"}]',0,true)`),error=>error.code==='23514');
-await assert.rejects(db.query(`select * from public.cms_write('events','[{"id":"test-id","slug":"national-hn-0915-2026"}]',1,true)`),error=>error.code==='23514');
-await role('postgres');assert.equal((await db.query("select public from storage.buckets where id='club-media'")).rows[0].public,false);
-await db.close();console.log('PASS real Postgres SQL (PGlite): schema, RLS, role escalation denial, anonymous draft/history denial, draft/public separation, admin-only publish, revision conflict, private bucket.');
+await role('authenticated', editor);
+assert.equal((await db.query('select * from public.cms_history')).rows.length, 3);
+await role('authenticated', admin);
+await db.query(
+  `select * from public.cms_write('events','[{"id":"test-real","slug":"test-shared"}]',0,true)`,
+);
+await assert.rejects(
+  db.query(
+    `select * from public.cms_write('culture','[{"id":"test-cultural","slug":"test-shared"}]',0,true)`,
+  ),
+  (error) => error.code === '23514',
+);
+await assert.rejects(
+  db.query(
+    `select * from public.cms_write('culture','[{"id":"test-real","slug":"test-another"}]',0,true)`,
+  ),
+  (error) => error.code === '23514',
+);
+await assert.rejects(
+  db.query(
+    `select * from public.cms_write('events','[{"id":"test-id","slug":"national-hn-0915-2026"}]',1,true)`,
+  ),
+  (error) => error.code === '23514',
+);
+await role('postgres');
+assert.equal(
+  (await db.query("select public from storage.buckets where id='club-media'")).rows[0]
+    .public,
+  false,
+);
+await db.close();
+console.log(
+  'PASS real Postgres SQL (PGlite): schema, RLS, role escalation denial, anonymous draft/history denial, draft/public separation, admin-only publish, revision conflict, private bucket.',
+);

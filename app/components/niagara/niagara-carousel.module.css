@@ -1,21 +1,107 @@
-.toolbar { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 17px; }
-.toolbar > p { color: #aebfd4; font-size: .77rem; line-height: 1.6; margin: 0; }
-.controls { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
-.controls button { min-width: 44px; min-height: 44px; border: 1px solid #405675; border-radius: 8px; background: #19263e; color: #ffe06a; cursor: pointer; font: inherit; font-size: 1.05rem; }
-.controls button:hover { border-color: #76dbe3; }
-.controls button:disabled { cursor: default; opacity: .7; }
-.rail { position: relative; display: flex; gap: 22px; overflow-x: auto; overflow-y: hidden; padding: 7px 4px 18px; margin: 0 -4px; scrollbar-width: thin; scrollbar-color: #526985 #142038; cursor: grab; overscroll-behavior-x: contain; }
-.rail[data-dragging='true'] { cursor: grabbing; user-select: none; }
-.rail .card { display: block; flex: 0 0 calc((100% - 44px) / 2.7); min-width: 0; }
-.card h3 { gap: 12px; overflow-wrap: anywhere; }
-.card h3 > span { flex-shrink: 0; }
-.rail .card:nth-child(3n + 2) > div:first-child { background: repeating-linear-gradient(20deg, transparent 0 24px, #76dbe319 24px 26px), #224350; color: #76dbe3; }
-.rail .card:nth-child(3n) > div:first-child { background: repeating-linear-gradient(-20deg, transparent 0 24px, #ff977d17 24px 26px), #493448; color: #ff977d; }
-@media (max-width: 1000px) { .rail { gap: 16px; } .rail .card { flex-basis: calc((100% - 32px) / 2.4); } }
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 17px;
+}
+.toolbar > p {
+  color: #aebfd4;
+  font-size: 0.77rem;
+  line-height: 1.6;
+  margin: 0;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.controls button {
+  min-width: 44px;
+  min-height: 44px;
+  border: 1px solid #405675;
+  border-radius: 8px;
+  background: #19263e;
+  color: #ffe06a;
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.05rem;
+}
+.controls button:hover {
+  border-color: #76dbe3;
+}
+.controls button:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+.rail {
+  position: relative;
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 7px 4px 18px;
+  margin: 0 -4px;
+  scrollbar-width: thin;
+  scrollbar-color: #526985 #142038;
+  cursor: grab;
+  overscroll-behavior-x: contain;
+}
+.rail[data-dragging='true'] {
+  cursor: grabbing;
+  user-select: none;
+}
+.rail .card {
+  display: block;
+  flex: 0 0 calc((100% - 44px) / 2.7);
+  min-width: 0;
+}
+.card h3 {
+  gap: 12px;
+  overflow-wrap: anywhere;
+}
+.card h3 > span {
+  flex-shrink: 0;
+}
+.rail .card:nth-child(3n + 2) > div:first-child {
+  background:
+    repeating-linear-gradient(20deg, transparent 0 24px, #76dbe319 24px 26px), #224350;
+  color: #76dbe3;
+}
+.rail .card:nth-child(3n) > div:first-child {
+  background:
+    repeating-linear-gradient(-20deg, transparent 0 24px, #ff977d17 24px 26px), #493448;
+  color: #ff977d;
+}
+@media (max-width: 1000px) {
+  .rail {
+    gap: 16px;
+  }
+  .rail .card {
+    flex-basis: calc((100% - 32px) / 2.4);
+  }
+}
 @media (max-width: 760px) {
-  .toolbar { align-items: start; flex-direction: column; gap: 12px; }
-  .rail .card { flex-basis: 84%; }
-  .rail .card > div:first-child { height: 180px; min-height: 0; }
-  .rail .card > div:first-child > span { font-size: 132px; }
-  .rail .card > div:first-child > i { bottom: 17px; left: 20px; font-size: .58rem; letter-spacing: .18em; }
+  .toolbar {
+    align-items: start;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .rail .card {
+    flex-basis: 84%;
+  }
+  .rail .card > div:first-child {
+    height: 180px;
+    min-height: 0;
+  }
+  .rail .card > div:first-child > span {
+    font-size: 132px;
+  }
+  .rail .card > div:first-child > i {
+    bottom: 17px;
+    left: 20px;
+    font-size: 0.58rem;
+    letter-spacing: 0.18em;
+  }
 }

@@ -1,31 +1,240 @@
 import assert from 'node:assert/strict';
-const base=process.env.CHECK_URL||'http://127.0.0.1:3068';
-const page=await(await fetch('http://127.0.0.1:9222/json/new?about:blank',{method:'PUT'})).json();
-const ws=new WebSocket(page.webSocketDebuggerUrl);await new Promise(r=>ws.addEventListener('open',r,{once:true}));
-let id=0;const pending=new Map(),errors=[];
-ws.addEventListener('message',event=>{const m=JSON.parse(event.data);if(pending.has(m.id)){const p=pending.get(m.id);pending.delete(m.id);if(m.error)p.reject(m.error);else p.resolve(m.result);}if(m.method==='Runtime.exceptionThrown')errors.push(m.params.exceptionDetails.text);});
-const send=(method,params={})=>new Promise((resolve,reject)=>{const n=++id;pending.set(n,{resolve,reject});ws.send(JSON.stringify({id:n,method,params}));});
-const ev=async expression=>{const r=await send('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true});if(r.exceptionDetails)throw Error(r.exceptionDetails.text);return r.result.value;};
-const pause=ms=>new Promise(r=>setTimeout(r,ms));
-const wait=async expr=>{for(let i=0;i<160;i++){if(await ev(expr))return;await pause(100);}throw Error('Timed out: '+expr);};
-try{
- await send('Page.enable');await send('Runtime.enable');await send('Page.bringToFront');await send('Emulation.setFocusEmulationEnabled',{enabled:true});await send('Emulation.setDeviceMetricsOverride',{width:1440,height:900,deviceScaleFactor:1,mobile:false});
- await send('Page.navigate',{url:base});await wait('!!document.querySelector("[data-niagara-rail]")');await ev('localStorage.clear()');await send('Page.reload');await wait('!!document.querySelector("[data-niagara-rail]")');await pause(700);await send('Page.bringToFront');
- await ev('document.querySelector("[data-niagara-rail]").scrollIntoView({block:"center",behavior:"instant"})');await wait('document.querySelector("[data-niagara-rail]").dataset.railPlaying==="true"');
- // Real pointer focus, held drag, then leave the rail while preserving its focus.
- const p=await ev('(()=>{const r=document.querySelector("[data-niagara-rail]").getBoundingClientRect();return{x:r.left+150,y:r.top+70}})()');
- await send('Input.dispatchMouseEvent',{type:'mouseMoved',...p});await send('Input.dispatchMouseEvent',{type:'mousePressed',button:'left',clickCount:1,...p});await send('Input.dispatchMouseEvent',{type:'mouseMoved',button:'left',buttons:1,x:p.x-90,y:p.y});await send('Input.dispatchMouseEvent',{type:'mouseReleased',button:'left',clickCount:1,x:p.x-90,y:p.y});await send('Input.dispatchMouseEvent',{type:'mouseMoved',x:10,y:800});await wait('document.querySelector("[data-niagara-rail]").dataset.railPlaying==="true"');console.log('PASS Niagara resumes after pointer interaction, with focus retained');
- await ev('document.querySelector("[data-niagara-rail]").focus()');await send('Input.dispatchKeyEvent',{type:'keyDown',key:'ArrowRight',code:'ArrowRight'});await send('Input.dispatchKeyEvent',{type:'keyUp',key:'ArrowRight',code:'ArrowRight'});await pause(3500);assert.equal(await ev('document.querySelector("[data-niagara-rail]").dataset.railPlaying'),'false');await ev('document.activeElement.blur()');await wait('document.querySelector("[data-niagara-rail]").dataset.railPlaying==="true"');console.log('PASS Keyboard focus safely pauses Niagara');
- await ev('document.querySelector("[data-home-globe]").scrollIntoView({block:"center",behavior:"instant"})');await wait('document.querySelector("[data-home-globe] [data-globe-scene]")?.dataset.ready==="true"');
- await ev('document.querySelector("[data-home-globe]").scrollIntoView({block:"center",behavior:"instant"})');await pause(900);
- const g=await ev('(()=>{const r=document.querySelector("[data-home-globe] canvas").getBoundingClientRect();return{x:r.left+r.width/2,y:r.top+r.height/2}})()');
- await send('Input.dispatchMouseEvent',{type:'mouseMoved',...g});await send('Input.dispatchMouseEvent',{type:'mousePressed',button:'left',clickCount:1,...g});const initial=await ev('JSON.parse(document.querySelector("[data-home-globe] [data-globe-scene]").dataset.camera).lat');for(let i=1;i<=6;i++){await send('Input.dispatchMouseEvent',{type:'mouseMoved',button:'left',buttons:1,x:g.x,y:g.y-i*12});await pause(30);}await send('Input.dispatchMouseEvent',{type:'mouseReleased',button:'left',clickCount:1,x:g.x,y:g.y-75});await pause(700);const finalLat=await ev('JSON.parse(document.querySelector("[data-home-globe] [data-globe-scene]").dataset.camera).lat');console.log('Home drag latitude',initial,finalLat,await ev(`document.elementFromPoint(${g.x},${g.y})?.tagName`));assert.ok(Math.abs(finalLat-initial)>3);console.log('PASS Homepage globe rotates manually');
- assert.equal(await ev('document.querySelectorAll("#home-spotify-player iframe").length'),1);assert.equal(await ev('document.querySelectorAll("#instagram-profile iframe").length'),1);assert.equal(await ev('document.querySelectorAll("[data-spotify-load],[data-instagram-load]").length'),0);
- await send('Page.navigate',{url:base+'/explore'});await wait('document.querySelector("[data-globe-scene]")?.dataset.ready==="true"');
- await send('Emulation.setDeviceMetricsOverride',{width:375,height:860,deviceScaleFactor:1,mobile:true});await send('Emulation.setTouchEmulationEnabled',{enabled:true});await ev('document.querySelector("[data-globe-scene]").scrollIntoView({block:"center",behavior:"instant"})');await pause(300);
- const t=await ev('(()=>{const r=document.querySelector("[data-globe-scene] canvas").getBoundingClientRect();return{x:r.left+r.width/2,y:r.top+r.height/2}})()');const before=await ev('({y:scrollY,lat:JSON.parse(document.querySelector("[data-globe-scene]").dataset.camera).lat})');
- await send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[t]});for(let i=1;i<=6;i++)await send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:t.x,y:t.y-i*12}]});await send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await pause(700);
- const after=await ev('({y:scrollY,lat:JSON.parse(document.querySelector("[data-globe-scene]").dataset.camera).lat})');assert.ok(Math.abs(after.lat-before.lat)>3);assert.ok(Math.abs(after.y-before.y)<2);console.log('PASS Mobile vertical globe gesture rotates without document scrolling');
- for(const width of [320,375,768,1440]){await send('Emulation.setDeviceMetricsOverride',{width,height:900,deviceScaleFactor:1,mobile:width<768});await send('Page.navigate',{url:base});await wait('!!document.querySelector("#home-spotify-player iframe")');assert.equal(await ev('document.documentElement.scrollWidth<=innerWidth'),true);assert.equal(await ev('getComputedStyle(document.querySelector("#home-spotify-player")).overflow'),'hidden');}
- assert.deepEqual(errors,[]);console.log('PASS embeds always present, rounded Spotify and responsive homepage');
-}finally{ws.close();await fetch('http://127.0.0.1:9222/json/close/'+page.id);}
+const base = process.env.CHECK_URL || 'http://127.0.0.1:3068';
+const page = await (
+  await fetch('http://127.0.0.1:9222/json/new?about:blank', { method: 'PUT' })
+).json();
+const ws = new WebSocket(page.webSocketDebuggerUrl);
+await new Promise((r) => ws.addEventListener('open', r, { once: true }));
+let id = 0;
+const pending = new Map();
+const errors = [];
+ws.addEventListener('message', (event) => {
+  const m = JSON.parse(event.data);
+  if (pending.has(m.id)) {
+    const p = pending.get(m.id);
+    pending.delete(m.id);
+    if (m.error) p.reject(m.error);
+    else p.resolve(m.result);
+  }
+  if (m.method === 'Runtime.exceptionThrown') errors.push(m.params.exceptionDetails.text);
+});
+const send = (method, params = {}) =>
+  new Promise((resolve, reject) => {
+    const n = ++id;
+    pending.set(n, { resolve, reject });
+    ws.send(JSON.stringify({ id: n, method, params }));
+  });
+const ev = async (expression) => {
+  const r = await send('Runtime.evaluate', {
+    expression,
+    returnByValue: true,
+    awaitPromise: true,
+  });
+  if (r.exceptionDetails) throw Error(r.exceptionDetails.text);
+  return r.result.value;
+};
+const pause = (ms) => new Promise((r) => setTimeout(r, ms));
+const wait = async (expr) => {
+  for (let i = 0; i < 160; i++) {
+    if (await ev(expr)) return;
+    await pause(100);
+  }
+  throw Error('Timed out: ' + expr);
+};
+try {
+  await send('Page.enable');
+  await send('Runtime.enable');
+  await send('Page.bringToFront');
+  await send('Emulation.setFocusEmulationEnabled', { enabled: true });
+  await send('Emulation.setDeviceMetricsOverride', {
+    width: 1440,
+    height: 900,
+    deviceScaleFactor: 1,
+    mobile: false,
+  });
+  await send('Page.navigate', { url: base });
+  await wait('!!document.querySelector("[data-niagara-rail]")');
+  await ev('localStorage.clear()');
+  await send('Page.reload');
+  await wait('!!document.querySelector("[data-niagara-rail]")');
+  await pause(700);
+  await send('Page.bringToFront');
+  await ev(
+    'document.querySelector("[data-niagara-rail]").scrollIntoView({block:"center",behavior:"instant"})',
+  );
+  await wait(
+    'document.querySelector("[data-niagara-rail]").dataset.railPlaying==="true"',
+  );
+  // Real pointer focus, held drag, then leave the rail while preserving its focus.
+  const p = await ev(
+    '(()=>{const r=document.querySelector("[data-niagara-rail]").getBoundingClientRect();return{x:r.left+150,y:r.top+70}})()',
+  );
+  await send('Input.dispatchMouseEvent', { type: 'mouseMoved', ...p });
+  await send('Input.dispatchMouseEvent', {
+    type: 'mousePressed',
+    button: 'left',
+    clickCount: 1,
+    ...p,
+  });
+  await send('Input.dispatchMouseEvent', {
+    type: 'mouseMoved',
+    button: 'left',
+    buttons: 1,
+    x: p.x - 90,
+    y: p.y,
+  });
+  await send('Input.dispatchMouseEvent', {
+    type: 'mouseReleased',
+    button: 'left',
+    clickCount: 1,
+    x: p.x - 90,
+    y: p.y,
+  });
+  await send('Input.dispatchMouseEvent', { type: 'mouseMoved', x: 10, y: 800 });
+  await wait(
+    'document.querySelector("[data-niagara-rail]").dataset.railPlaying==="true"',
+  );
+  console.log('PASS Niagara resumes after pointer interaction, with focus retained');
+  await ev('document.querySelector("[data-niagara-rail]").focus()');
+  await send('Input.dispatchKeyEvent', {
+    type: 'keyDown',
+    key: 'ArrowRight',
+    code: 'ArrowRight',
+  });
+  await send('Input.dispatchKeyEvent', {
+    type: 'keyUp',
+    key: 'ArrowRight',
+    code: 'ArrowRight',
+  });
+  await pause(3500);
+  assert.equal(
+    await ev('document.querySelector("[data-niagara-rail]").dataset.railPlaying'),
+    'false',
+  );
+  await ev('document.activeElement.blur()');
+  await wait(
+    'document.querySelector("[data-niagara-rail]").dataset.railPlaying==="true"',
+  );
+  console.log('PASS Keyboard focus safely pauses Niagara');
+  await ev(
+    'document.querySelector("[data-home-globe]").scrollIntoView({block:"center",behavior:"instant"})',
+  );
+  await wait(
+    'document.querySelector("[data-home-globe] [data-globe-scene]")?.dataset.ready==="true"',
+  );
+  await ev(
+    'document.querySelector("[data-home-globe]").scrollIntoView({block:"center",behavior:"instant"})',
+  );
+  await pause(900);
+  const g = await ev(
+    '(()=>{const r=document.querySelector("[data-home-globe] canvas").getBoundingClientRect();return{x:r.left+r.width/2,y:r.top+r.height/2}})()',
+  );
+  await send('Input.dispatchMouseEvent', { type: 'mouseMoved', ...g });
+  await send('Input.dispatchMouseEvent', {
+    type: 'mousePressed',
+    button: 'left',
+    clickCount: 1,
+    ...g,
+  });
+  const initial = await ev(
+    'JSON.parse(document.querySelector("[data-home-globe] [data-globe-scene]").dataset.camera).lat',
+  );
+  for (let i = 1; i <= 6; i++) {
+    await send('Input.dispatchMouseEvent', {
+      type: 'mouseMoved',
+      button: 'left',
+      buttons: 1,
+      x: g.x,
+      y: g.y - i * 12,
+    });
+    await pause(30);
+  }
+  await send('Input.dispatchMouseEvent', {
+    type: 'mouseReleased',
+    button: 'left',
+    clickCount: 1,
+    x: g.x,
+    y: g.y - 75,
+  });
+  await pause(700);
+  const finalLat = await ev(
+    'JSON.parse(document.querySelector("[data-home-globe] [data-globe-scene]").dataset.camera).lat',
+  );
+  console.log(
+    'Home drag latitude',
+    initial,
+    finalLat,
+    await ev(`document.elementFromPoint(${g.x},${g.y})?.tagName`),
+  );
+  assert.ok(Math.abs(finalLat - initial) > 3);
+  console.log('PASS Homepage globe rotates manually');
+  assert.equal(
+    await ev('document.querySelectorAll("#home-spotify-player iframe").length'),
+    1,
+  );
+  assert.equal(
+    await ev('document.querySelectorAll("#instagram-profile iframe").length'),
+    1,
+  );
+  assert.equal(
+    await ev(
+      'document.querySelectorAll("[data-spotify-load],[data-instagram-load]").length',
+    ),
+    0,
+  );
+  await send('Page.navigate', { url: base + '/explore' });
+  await wait('document.querySelector("[data-globe-scene]")?.dataset.ready==="true"');
+  await send('Emulation.setDeviceMetricsOverride', {
+    width: 375,
+    height: 860,
+    deviceScaleFactor: 1,
+    mobile: true,
+  });
+  await send('Emulation.setTouchEmulationEnabled', { enabled: true });
+  await ev(
+    'document.querySelector("[data-globe-scene]").scrollIntoView({block:"center",behavior:"instant"})',
+  );
+  await pause(300);
+  const t = await ev(
+    '(()=>{const r=document.querySelector("[data-globe-scene] canvas").getBoundingClientRect();return{x:r.left+r.width/2,y:r.top+r.height/2}})()',
+  );
+  const before = await ev(
+    '({y:scrollY,lat:JSON.parse(document.querySelector("[data-globe-scene]").dataset.camera).lat})',
+  );
+  await send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [t] });
+  for (let i = 1; i <= 6; i++)
+    await send('Input.dispatchTouchEvent', {
+      type: 'touchMove',
+      touchPoints: [{ x: t.x, y: t.y - i * 12 }],
+    });
+  await send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+  await pause(700);
+  const after = await ev(
+    '({y:scrollY,lat:JSON.parse(document.querySelector("[data-globe-scene]").dataset.camera).lat})',
+  );
+  assert.ok(Math.abs(after.lat - before.lat) > 3);
+  assert.ok(Math.abs(after.y - before.y) < 2);
+  console.log('PASS Mobile vertical globe gesture rotates without document scrolling');
+  for (const width of [320, 375, 768, 1440]) {
+    await send('Emulation.setDeviceMetricsOverride', {
+      width,
+      height: 900,
+      deviceScaleFactor: 1,
+      mobile: width < 768,
+    });
+    await send('Page.navigate', { url: base });
+    await wait('!!document.querySelector("#home-spotify-player iframe")');
+    assert.equal(await ev('document.documentElement.scrollWidth<=innerWidth'), true);
+    assert.equal(
+      await ev(
+        'getComputedStyle(document.querySelector("#home-spotify-player")).overflow',
+      ),
+      'hidden',
+    );
+  }
+  assert.deepEqual(errors, []);
+  console.log('PASS embeds always present, rounded Spotify and responsive homepage');
+} finally {
+  ws.close();
+  await fetch('http://127.0.0.1:9222/json/close/' + page.id);
+}

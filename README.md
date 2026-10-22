@@ -38,7 +38,7 @@ app/components/ Shared shell, homepage, events, bilingual copy, and scoped style
 public/images/ Static images used by the site
 ```
 
-`app/page.tsx` renders `app/components/club-home.tsx`. Edit homepage translations in `home-copy.ts` and visual styles in `club-home.module.css`. The language switch changes the page content and document language; localized URLs and translated metadata have not yet been implemented. The development server reloads as you save.
+`app/page.tsx` renders `app/components/club-home.tsx`. Edit homepage translations in `app/translations/home-translations.ts` and visual styles in `club-home.module.css`. The language switch changes the page content and document language; localized URLs and translated metadata have not yet been implemented. The development server reloads as you save.
 
 Motion respects the visitor’s motion settings. Public repository defaults require no credentials. Online administration requires the three server environment variables in `.env.example`; secrets must stay outside Git. The existing sharp package is declared directly to sanitize uploaded images. Build-time Google Font downloads require access to `fonts.googleapis.com` and `fonts.gstatic.com`.
 
@@ -113,3 +113,14 @@ Browser regression: with a fresh app and Chromium CDP at port9222, run `CHECK_UR
 With Supabase connected, `/admin` can create, edit, duplicate and remove business records, upload approved images and maintain searchable offerings. Draft removal changes the directory only after publication. Repository data remains the fallback before first publication. A dedicated hashtag model and public submissions remain future work.
 
 Browser regression checks (fresh `npm run build` + running production server, Chromium CDP on 9222): `CHECK_URL=http://localhost:3025 node tests/agenda-directory-browser.mjs` and `CHECK_URL=http://localhost:3025 node tests/niagara-browser.mjs`. Optional `ARTIFACT_DIR` saves screenshots outside the checkout.
+
+
+## Code organization
+
+- `app/translations/`: English and Spanish interface catalogs. `language.ts` defines the shared language type.
+- `app/components/`: React sections and their CSS modules. Components select a catalog with `[language]`; published club content still comes from `useContent()`.
+- `app/cms/`: published content, validation, authentication and media services.
+- `app/admin/`: content editors and administration screens.
+- `app/api/`: server endpoints.
+
+Run `npm run format` to expand JSX, separate declarations and maintain consistent indentation. This command only formats files; it does not run tests or build the application.

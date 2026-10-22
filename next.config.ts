@@ -1,4 +1,4 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -6,10 +6,10 @@ const nextConfig: NextConfig = {
   partialPrefetching: true,
   turbopack: {
     rules: {
-      "*.css": {
-        condition: { not: { path: "*.module.css" } },
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
+      '*.css': {
+        condition: { not: { path: '*.module.css' } },
+        loaders: ['@tailwindcss/turbopack'],
+        as: '*.css',
       },
     },
   },

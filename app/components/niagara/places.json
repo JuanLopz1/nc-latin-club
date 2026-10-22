@@ -3,10 +3,7 @@
     "id": "origen-bistro-bakery",
     "name": "Origen Bistro Bakery",
     "city": "St. Catharines",
-    "categories": [
-      "restaurant",
-      "cafe_bakery"
-    ],
+    "categories": ["restaurant", "cafe_bakery"],
     "mode": "storefront",
     "description": {
       "en": "Latin bistro and bakery with a family story rooted in Colombian flavours.",
@@ -49,9 +46,7 @@
     "id": "la-paisana-tienda",
     "name": "La Paisana Latin Groceries",
     "city": "Niagara Falls",
-    "categories": [
-      "grocery_store"
-    ],
+    "categories": ["grocery_store"],
     "mode": "storefront",
     "description": {
       "en": "A Latin grocery store for discovering ingredients and flavours from the region.",
@@ -86,9 +81,7 @@
     "id": "la-paisana-restaurante",
     "name": "La Paisana Restaurante",
     "city": "Niagara Falls",
-    "categories": [
-      "restaurant"
-    ],
+    "categories": ["restaurant"],
     "mode": "storefront",
     "description": {
       "en": "La Paisana restaurant in the same plaza as the Latin grocery store, listed separately.",
@@ -123,9 +116,7 @@
     "id": "mexican-taco-zone",
     "name": "Mexican Taco Zone",
     "city": "Welland",
-    "categories": [
-      "food_truck"
-    ],
+    "categories": ["food_truck"],
     "mode": "mobile",
     "description": {
       "en": "A Mexican street-food truck with tacos, birria and other dishes on its official menu.",
@@ -160,9 +151,7 @@
     "id": "mojito-house",
     "name": "Mojito House",
     "city": "Niagara Falls",
-    "categories": [
-      "nightlife_bar"
-    ],
+    "categories": ["nightlife_bar"],
     "mode": "storefront",
     "description": {
       "en": "A bar and dance venue with Latin music, DJs and cocktails.",
@@ -201,10 +190,7 @@
     "id": "coco-bar-mexican-grill",
     "name": "cocobar",
     "city": "St. Catharines",
-    "categories": [
-      "restaurant",
-      "nightlife_bar"
-    ],
+    "categories": ["restaurant", "nightlife_bar"],
     "mode": "storefront",
     "description": {
       "en": "A restaurant and bar declaring Mexican roots and Latin music activities.",
@@ -243,18 +229,13 @@
     "id": "chile-agave",
     "name": "Chile & Agave Mexican Grill",
     "city": "St. Catharines",
-    "categories": [
-      "restaurant"
-    ],
+    "categories": ["restaurant"],
     "mode": "storefront",
     "description": {
       "en": "Mexican restaurant offering tacos, dining and catering.",
       "es": "Cocina mexicana con tacos, menú de restaurante y catering."
     },
-    "offerings": [
-      "Tacos",
-      "Catering"
-    ],
+    "offerings": ["Tacos", "Catering"],
     "channels": [
       {
         "label": "Web",
@@ -287,17 +268,13 @@
     "id": "la-revolucion",
     "name": "La Revolución Taqueria Mexicana",
     "city": "Niagara Falls",
-    "categories": [
-      "restaurant"
-    ],
+    "categories": ["restaurant"],
     "mode": "storefront",
     "description": {
       "en": "A taqueria with recipes and a story rooted in Mexico City.",
       "es": "Taquería con recetas e historia vinculadas a Ciudad de México."
     },
-    "offerings": [
-      "Tacos"
-    ],
+    "offerings": ["Tacos"],
     "channels": [
       {
         "label": "Web",
@@ -334,10 +311,7 @@
     "id": "havana",
     "name": "HAVANA Restaurant & Cocktail Lounge",
     "city": "Niagara Falls",
-    "categories": [
-      "restaurant",
-      "nightlife_bar"
-    ],
+    "categories": ["restaurant", "nightlife_bar"],
     "mode": "storefront",
     "description": {
       "en": "Cuban cuisine and cocktails in downtown Niagara Falls.",
@@ -384,10 +358,7 @@
     "id": "pattys-delights",
     "name": "Patty’s Delights Peruvian Culinary",
     "city": "Niagara Falls",
-    "categories": [
-      "restaurant",
-      "desserts_custom"
-    ],
+    "categories": ["restaurant", "desserts_custom"],
     "mode": "storefront",
     "description": {
       "en": "Peruvian food, Colombian empanadas, tres leches cake and alfajores on the consulted menu.",
@@ -432,17 +403,13 @@
     "id": "el-bodegon",
     "name": "El Bodegón Niagara",
     "city": "St. Catharines",
-    "categories": [
-      "grocery_store"
-    ],
+    "categories": ["grocery_store"],
     "mode": "storefront",
     "description": {
       "en": "A family store specializing in Latin American groceries.",
       "es": "Tienda familiar especializada en ingredientes y productos latinoamericanos."
     },
-    "offerings": [
-      "Ingredientes y productos latinos"
-    ],
+    "offerings": ["Ingredientes y productos latinos"],
     "channels": [
       {
         "label": "Web",
@@ -475,17 +442,13 @@
     "id": "los-amigos",
     "name": "Los Amigos Latin Grocery",
     "city": "St. Catharines",
-    "categories": [
-      "grocery_store"
-    ],
+    "categories": ["grocery_store"],
     "mode": "storefront",
     "description": {
       "en": "Latin grocery store with restock posts reproduced in 2026.",
       "es": "Tienda de productos latinos con publicaciones de reposición de mercancía reproducidas en 2026."
     },
-    "offerings": [
-      "Productos latinos"
-    ],
+    "offerings": ["Productos latinos"],
     "channels": [
       {
         "label": "Web",
@@ -522,19 +485,13 @@
     "id": "ruta-latina",
     "name": "Ruta Latina",
     "city": "Beamsville (Lincoln)",
-    "categories": [
-      "grocery_store",
-      "restaurant"
-    ],
+    "categories": ["grocery_store", "restaurant"],
     "mode": "storefront",
     "description": {
       "en": "Latin grocery store with Mexican products and takeaway food.",
       "es": "Tienda latina con productos mexicanos y oferta de comida para llevar."
     },
-    "offerings": [
-      "Productos mexicanos",
-      "Quesabirrias según publicación comercial"
-    ],
+    "offerings": ["Productos mexicanos", "Quesabirrias según publicación comercial"],
     "channels": [
       {
         "label": "Web",
@@ -571,19 +528,13 @@
     "id": "mi-casa-905",
     "name": "Mi Casa 905",
     "city": "Fort Erie",
-    "categories": [
-      "grocery_store",
-      "restaurant"
-    ],
+    "categories": ["grocery_store", "restaurant"],
     "mode": "storefront",
     "description": {
       "en": "An international market with Latin American food in Fort Erie.",
       "es": "Mercado internacional y comida latinoamericana para la comunidad de Fort Erie."
     },
-    "offerings": [
-      "Mercado internacional",
-      "Comida latinoamericana"
-    ],
+    "offerings": ["Mercado internacional", "Comida latinoamericana"],
     "channels": [
       {
         "label": "Web",
@@ -628,20 +579,13 @@
     "id": "happy-snack",
     "name": "Happy Snack",
     "city": "St. Catharines",
-    "categories": [
-      "cafe_bakery",
-      "desserts_custom"
-    ],
+    "categories": ["cafe_bakery", "desserts_custom"],
     "mode": "storefront",
     "description": {
       "en": "A family bakery founded by a Brazilian entrepreneur, offering breads, snacks and baked sweets.",
       "es": "Panadería familiar de una emprendedora brasileña, con panes, bocados y repostería."
     },
-    "offerings": [
-      "Panadería",
-      "Repostería",
-      "Pedidos con anticipación"
-    ],
+    "offerings": ["Panadería", "Repostería", "Pedidos con anticipación"],
     "channels": [
       {
         "label": "Web",
@@ -678,18 +622,13 @@
     "id": "paz-bakery",
     "name": "Paz Bakery",
     "city": "Niagara Falls",
-    "categories": [
-      "cafe_bakery",
-      "food_by_order"
-    ],
+    "categories": ["cafe_bakery", "food_by_order"],
     "mode": "order_only",
     "description": {
       "en": "A Brazilian-inspired cheese snack business with an online store and stockists.",
       "es": "Emprendimiento de bocados de queso inspirados en pão de queijo, con tienda online y distribuidores."
     },
-    "offerings": [
-      "Cheese Dots inspirados en pão de queijo"
-    ],
+    "offerings": ["Cheese Dots inspirados en pão de queijo"],
     "channels": [
       {
         "label": "Web",
@@ -720,19 +659,13 @@
     "id": "la-casita-guanaca",
     "name": "La Casita Guanaca",
     "city": "St. Catharines",
-    "categories": [
-      "food_by_order",
-      "market_vendor"
-    ],
+    "categories": ["food_by_order", "market_vendor"],
     "mode": "order_only",
     "description": {
       "en": "A Salvadoran food business offering pupusas and announcing Niagara market appearances.",
       "es": "Emprendimiento de comida salvadoreña con pupusas y presencia anunciada en mercados de Niagara."
     },
-    "offerings": [
-      "Pupusas",
-      "Comida salvadoreña"
-    ],
+    "offerings": ["Pupusas", "Comida salvadoreña"],
     "channels": [
       {
         "label": "Web",
@@ -759,19 +692,13 @@
     "id": "twisted-bar",
     "name": "Twisted Bar NOTL",
     "city": "Virgil (Niagara-on-the-Lake)",
-    "categories": [
-      "restaurant",
-      "nightlife_bar"
-    ],
+    "categories": ["restaurant", "nightlife_bar"],
     "mode": "storefront",
     "description": {
       "en": "A Mexican restaurant in Virgil operated by the team behind Chile & Agave.",
       "es": "Restaurante de cocina mexicana en Virgil, de los operadores de Chile & Agave."
     },
-    "offerings": [
-      "Cocina mexicana",
-      "Tortillas de la casa según ficha comercial"
-    ],
+    "offerings": ["Cocina mexicana", "Tortillas de la casa según ficha comercial"],
     "channels": [
       {
         "label": "Web",
@@ -812,9 +739,7 @@
     "id": "el-camino-kitchen",
     "name": "El Camino Kitchen / by McNips",
     "city": "Welland",
-    "categories": [
-      "food_truck"
-    ],
+    "categories": ["food_truck"],
     "mode": "mobile",
     "description": {
       "en": "A food option selected by the club founder near Niagara College in Welland.",
@@ -834,9 +759,7 @@
     "id": "taco-n-tequila",
     "name": "Taco N Tequila",
     "city": "Niagara Falls",
-    "categories": [
-      "restaurant"
-    ],
+    "categories": ["restaurant"],
     "mode": "storefront",
     "description": {
       "en": "Mexican food in Niagara Falls, selected by the club founder.",
@@ -867,9 +790,7 @@
     "id": "sombra",
     "name": "Sombra Mexican Kitchen",
     "city": "Niagara-on-the-Lake",
-    "categories": [
-      "restaurant"
-    ],
+    "categories": ["restaurant"],
     "mode": "storefront",
     "description": {
       "en": "Mexican food in Niagara-on-the-Lake, selected by the club founder.",

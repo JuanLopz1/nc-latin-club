@@ -6,10 +6,7 @@
       "en": "Argentina",
       "es": "Argentina"
     },
-    "aliases": [
-      "argentina",
-      "Argentina"
-    ],
+    "aliases": ["argentina", "Argentina"],
     "region": "sudamerica",
     "center": {
       "lat": -33.501159,
@@ -34,10 +31,7 @@
       "en": "Bolivia",
       "es": "Bolivia"
     },
-    "aliases": [
-      "bolivia",
-      "Bolivia"
-    ],
+    "aliases": ["bolivia", "Bolivia"],
     "region": "sudamerica",
     "center": {
       "lat": -16.666015,
@@ -62,11 +56,7 @@
       "en": "Brazil",
       "es": "Brasil"
     },
-    "aliases": [
-      "Brasil",
-      "brasil",
-      "Brazil"
-    ],
+    "aliases": ["Brasil", "brasil", "Brazil"],
     "region": "sudamerica",
     "center": {
       "lat": -12.098687,
@@ -91,10 +81,7 @@
       "en": "Chile",
       "es": "Chile"
     },
-    "aliases": [
-      "chile",
-      "Chile"
-    ],
+    "aliases": ["chile", "Chile"],
     "region": "sudamerica",
     "center": {
       "lat": -38.151771,
@@ -119,10 +106,7 @@
       "en": "Colombia",
       "es": "Colombia"
     },
-    "aliases": [
-      "Colombia",
-      "colombia"
-    ],
+    "aliases": ["Colombia", "colombia"],
     "region": "sudamerica",
     "center": {
       "lat": 3.373111,
@@ -147,10 +131,7 @@
       "en": "Ecuador",
       "es": "Ecuador"
     },
-    "aliases": [
-      "ecuador",
-      "Ecuador"
-    ],
+    "aliases": ["ecuador", "Ecuador"],
     "region": "sudamerica",
     "center": {
       "lat": -1.259076,
@@ -175,10 +156,7 @@
       "en": "Guyana",
       "es": "Guyana"
     },
-    "aliases": [
-      "guyana",
-      "Guyana"
-    ],
+    "aliases": ["guyana", "Guyana"],
     "region": "sudamerica",
     "center": {
       "lat": 5.124317,
@@ -203,10 +181,7 @@
       "en": "Paraguay",
       "es": "Paraguay"
     },
-    "aliases": [
-      "Paraguay",
-      "paraguay"
-    ],
+    "aliases": ["Paraguay", "paraguay"],
     "region": "sudamerica",
     "center": {
       "lat": -21.674509,
@@ -231,11 +206,7 @@
       "en": "Peru",
       "es": "Perú"
     },
-    "aliases": [
-      "Perú",
-      "Peru",
-      "peru"
-    ],
+    "aliases": ["Perú", "Peru", "peru"],
     "region": "sudamerica",
     "center": {
       "lat": -12.976679,
@@ -260,11 +231,7 @@
       "en": "Suriname",
       "es": "Surinam"
     },
-    "aliases": [
-      "Surinam",
-      "Suriname",
-      "surinam"
-    ],
+    "aliases": ["Surinam", "Suriname", "surinam"],
     "region": "sudamerica",
     "center": {
       "lat": 4.143987,
@@ -289,10 +256,7 @@
       "en": "Uruguay",
       "es": "Uruguay"
     },
-    "aliases": [
-      "uruguay",
-      "Uruguay"
-    ],
+    "aliases": ["uruguay", "Uruguay"],
     "region": "sudamerica",
     "center": {
       "lat": -32.961127,
@@ -317,10 +281,7 @@
       "en": "Venezuela",
       "es": "Venezuela"
     },
-    "aliases": [
-      "Venezuela",
-      "venezuela"
-    ],
+    "aliases": ["Venezuela", "venezuela"],
     "region": "sudamerica",
     "center": {
       "lat": 7.182476,
@@ -345,11 +306,7 @@
       "en": "French Guiana",
       "es": "Guayana Francesa"
     },
-    "aliases": [
-      "guayana francesa",
-      "French Guiana",
-      "Guayana Francesa"
-    ],
+    "aliases": ["guayana francesa", "French Guiana", "Guayana Francesa"],
     "region": "sudamerica",
     "center": {
       "lat": 3.999223,
@@ -411,11 +368,7 @@
       "en": "Belize",
       "es": "Belice"
     },
-    "aliases": [
-      "Belice",
-      "Belize",
-      "belice"
-    ],
+    "aliases": ["Belice", "Belize", "belice"],
     "region": "centroamerica",
     "center": {
       "lat": 17.202068,
@@ -440,10 +393,7 @@
       "en": "Costa Rica",
       "es": "Costa Rica"
     },
-    "aliases": [
-      "costa rica",
-      "Costa Rica"
-    ],
+    "aliases": ["costa rica", "Costa Rica"],
     "region": "centroamerica",
     "center": {
       "lat": 10.0651,
@@ -468,10 +418,7 @@
       "en": "El Salvador",
       "es": "El Salvador"
     },
-    "aliases": [
-      "el salvador",
-      "El Salvador"
-    ],
+    "aliases": ["el salvador", "El Salvador"],
     "region": "centroamerica",
     "center": {
       "lat": 13.685371,
@@ -496,10 +443,7 @@
       "en": "Guatemala",
       "es": "Guatemala"
     },
-    "aliases": [
-      "guatemala",
-      "Guatemala"
-    ],
+    "aliases": ["guatemala", "Guatemala"],
     "region": "centroamerica",
     "center": {
       "lat": 14.982133,
@@ -524,10 +468,7 @@
       "en": "Honduras",
       "es": "Honduras"
     },
-    "aliases": [
-      "Honduras",
-      "honduras"
-    ],
+    "aliases": ["Honduras", "honduras"],
     "region": "centroamerica",
     "center": {
       "lat": 14.794801,
@@ -552,10 +493,7 @@
       "en": "Nicaragua",
       "es": "Nicaragua"
     },
-    "aliases": [
-      "nicaragua",
-      "Nicaragua"
-    ],
+    "aliases": ["nicaragua", "Nicaragua"],
     "region": "centroamerica",
     "center": {
       "lat": 12.670697,
@@ -580,11 +518,7 @@
       "en": "Panama",
       "es": "Panamá"
     },
-    "aliases": [
-      "Panama",
-      "Panamá",
-      "panama"
-    ],
+    "aliases": ["Panama", "Panamá", "panama"],
     "region": "centroamerica",
     "center": {
       "lat": 8.72198,
@@ -609,11 +543,7 @@
       "en": "Mexico",
       "es": "México"
     },
-    "aliases": [
-      "México",
-      "mexico",
-      "Mexico"
-    ],
+    "aliases": ["México", "mexico", "Mexico"],
     "region": "norteamerica",
     "center": {
       "lat": 23.919988,
@@ -638,11 +568,7 @@
       "en": "United States",
       "es": "Estados Unidos"
     },
-    "aliases": [
-      "estados unidos",
-      "United States",
-      "Estados Unidos"
-    ],
+    "aliases": ["estados unidos", "United States", "Estados Unidos"],
     "region": "norteamerica",
     "center": {
       "lat": 39.538479,
@@ -667,11 +593,7 @@
       "en": "Antigua and Barbuda",
       "es": "Antigua y Barbuda"
     },
-    "aliases": [
-      "antigua y barbuda",
-      "Antigua y Barbuda",
-      "Antigua and Barbuda"
-    ],
+    "aliases": ["antigua y barbuda", "Antigua y Barbuda", "Antigua and Barbuda"],
     "region": "caribe",
     "center": {
       "lat": 17.352249,
@@ -696,11 +618,7 @@
       "en": "The Bahamas",
       "es": "Bahamas"
     },
-    "aliases": [
-      "Bahamas",
-      "bahamas",
-      "The Bahamas"
-    ],
+    "aliases": ["Bahamas", "bahamas", "The Bahamas"],
     "region": "caribe",
     "center": {
       "lat": 26.401789,
@@ -725,10 +643,7 @@
       "en": "Barbados",
       "es": "Barbados"
     },
-    "aliases": [
-      "Barbados",
-      "barbados"
-    ],
+    "aliases": ["Barbados", "barbados"],
     "region": "caribe",
     "center": {
       "lat": 13.163709,
@@ -753,10 +668,7 @@
       "en": "Cuba",
       "es": "Cuba"
     },
-    "aliases": [
-      "Cuba",
-      "cuba"
-    ],
+    "aliases": ["Cuba", "cuba"],
     "region": "caribe",
     "center": {
       "lat": 21.334024,
@@ -781,10 +693,7 @@
       "en": "Dominica",
       "es": "Dominica"
     },
-    "aliases": [
-      "dominica",
-      "Dominica"
-    ],
+    "aliases": ["dominica", "Dominica"],
     "region": "caribe",
     "center": {
       "lat": 15.458829,
@@ -809,11 +718,7 @@
       "en": "Dominican Republic",
       "es": "República Dominicana"
     },
-    "aliases": [
-      "republica dominicana",
-      "Dominican Republic",
-      "República Dominicana"
-    ],
+    "aliases": ["republica dominicana", "Dominican Republic", "República Dominicana"],
     "region": "caribe",
     "center": {
       "lat": 19.104137,
@@ -838,11 +743,7 @@
       "en": "Grenada",
       "es": "Granada"
     },
-    "aliases": [
-      "granada",
-      "Grenada",
-      "Granada"
-    ],
+    "aliases": ["granada", "Grenada", "Granada"],
     "region": "caribe",
     "center": {
       "lat": 12.113156,
@@ -867,11 +768,7 @@
       "en": "Haiti",
       "es": "Haití"
     },
-    "aliases": [
-      "Haiti",
-      "haiti",
-      "Haití"
-    ],
+    "aliases": ["Haiti", "haiti", "Haití"],
     "region": "caribe",
     "center": {
       "lat": 19.263784,
@@ -896,10 +793,7 @@
       "en": "Jamaica",
       "es": "Jamaica"
     },
-    "aliases": [
-      "jamaica",
-      "Jamaica"
-    ],
+    "aliases": ["jamaica", "Jamaica"],
     "region": "caribe",
     "center": {
       "lat": 18.137124,
@@ -953,11 +847,7 @@
       "en": "Saint Lucia",
       "es": "Santa Lucía"
     },
-    "aliases": [
-      "Santa Lucía",
-      "Saint Lucia",
-      "santa lucia"
-    ],
+    "aliases": ["Santa Lucía", "Saint Lucia", "santa lucia"],
     "region": "caribe",
     "center": {
       "lat": 13.892371,
@@ -1011,11 +901,7 @@
       "en": "Trinidad and Tobago",
       "es": "Trinidad y Tobago"
     },
-    "aliases": [
-      "Trinidad y Tobago",
-      "trinidad y tobago",
-      "Trinidad and Tobago"
-    ],
+    "aliases": ["Trinidad y Tobago", "trinidad y tobago", "Trinidad and Tobago"],
     "region": "caribe",
     "center": {
       "lat": 10.9989,
@@ -1040,11 +926,7 @@
       "en": "Anguilla",
       "es": "Anguila"
     },
-    "aliases": [
-      "anguila",
-      "Anguila",
-      "Anguilla"
-    ],
+    "aliases": ["anguila", "Anguila", "Anguilla"],
     "region": "caribe",
     "center": {
       "lat": 18.242979,
@@ -1073,10 +955,7 @@
       "en": "Aruba",
       "es": "Aruba"
     },
-    "aliases": [
-      "Aruba",
-      "aruba"
-    ],
+    "aliases": ["Aruba", "aruba"],
     "region": "caribe",
     "center": {
       "lat": 12.5174,
@@ -1105,10 +984,7 @@
       "en": "Bonaire",
       "es": "Bonaire"
     },
-    "aliases": [
-      "bonaire",
-      "Bonaire"
-    ],
+    "aliases": ["bonaire", "Bonaire"],
     "region": "caribe",
     "center": {
       "lat": 12.166123500000001,
@@ -1170,11 +1046,7 @@
       "en": "Cayman Islands",
       "es": "Islas Caimán"
     },
-    "aliases": [
-      "Islas Caimán",
-      "islas caiman",
-      "Cayman Islands"
-    ],
+    "aliases": ["Islas Caimán", "islas caiman", "Cayman Islands"],
     "region": "caribe",
     "center": {
       "lat": 19.319862,
@@ -1203,11 +1075,7 @@
       "en": "Curaçao",
       "es": "Curazao"
     },
-    "aliases": [
-      "Curaçao",
-      "Curazao",
-      "curazao"
-    ],
+    "aliases": ["Curaçao", "Curazao", "curazao"],
     "region": "caribe",
     "center": {
       "lat": 12.145039,
@@ -1236,11 +1104,7 @@
       "en": "Guadeloupe",
       "es": "Guadalupe"
     },
-    "aliases": [
-      "Guadeloupe",
-      "Guadalupe",
-      "guadalupe"
-    ],
+    "aliases": ["Guadeloupe", "Guadalupe", "guadalupe"],
     "region": "caribe",
     "center": {
       "lat": 16.299332,
@@ -1269,11 +1133,7 @@
       "en": "Martinique",
       "es": "Martinica"
     },
-    "aliases": [
-      "Martinique",
-      "martinica",
-      "Martinica"
-    ],
+    "aliases": ["Martinique", "martinica", "Martinica"],
     "region": "caribe",
     "center": {
       "lat": 14.711979,
@@ -1302,10 +1162,7 @@
       "en": "Montserrat",
       "es": "Montserrat"
     },
-    "aliases": [
-      "Montserrat",
-      "montserrat"
-    ],
+    "aliases": ["Montserrat", "montserrat"],
     "region": "caribe",
     "center": {
       "lat": 16.73717,
@@ -1334,10 +1191,7 @@
       "en": "Puerto Rico",
       "es": "Puerto Rico"
     },
-    "aliases": [
-      "Puerto Rico",
-      "puerto rico"
-    ],
+    "aliases": ["Puerto Rico", "puerto rico"],
     "region": "caribe",
     "center": {
       "lat": 18.234668,
@@ -1366,10 +1220,7 @@
       "en": "Saba",
       "es": "Saba"
     },
-    "aliases": [
-      "Saba",
-      "saba"
-    ],
+    "aliases": ["Saba", "saba"],
     "region": "caribe",
     "center": {
       "lat": 17.6308045,
@@ -1398,11 +1249,7 @@
       "en": "Saint Barthélemy",
       "es": "San Bartolomé"
     },
-    "aliases": [
-      "Saint Barthélemy",
-      "san bartolome",
-      "San Bartolomé"
-    ],
+    "aliases": ["Saint Barthélemy", "san bartolome", "San Bartolomé"],
     "region": "caribe",
     "center": {
       "lat": 17.901987,
@@ -1464,11 +1311,7 @@
       "en": "Sint Eustatius",
       "es": "San Eustaquio"
     },
-    "aliases": [
-      "san eustaquio",
-      "San Eustaquio",
-      "Sint Eustatius"
-    ],
+    "aliases": ["san eustaquio", "San Eustaquio", "Sint Eustatius"],
     "region": "caribe",
     "center": {
       "lat": 17.495096,
@@ -1497,11 +1340,7 @@
       "en": "Sint Maarten",
       "es": "Sint Maarten (parte neerlandesa)"
     },
-    "aliases": [
-      "sint maarten",
-      "Sint Maarten (parte neerlandesa)",
-      "Sint Maarten"
-    ],
+    "aliases": ["sint maarten", "Sint Maarten (parte neerlandesa)", "Sint Maarten"],
     "region": "caribe",
     "center": {
       "lat": 18.04088,
@@ -1530,11 +1369,7 @@
       "en": "Turks and Caicos Islands",
       "es": "Islas Turcas y Caicos"
     },
-    "aliases": [
-      "turcas y caicos",
-      "Islas Turcas y Caicos",
-      "Turks and Caicos Islands"
-    ],
+    "aliases": ["turcas y caicos", "Islas Turcas y Caicos", "Turks and Caicos Islands"],
     "region": "caribe",
     "center": {
       "lat": 21.81663,
@@ -1596,11 +1431,7 @@
       "en": "Bermuda",
       "es": "Bermudas"
     },
-    "aliases": [
-      "Bermuda",
-      "Bermudas",
-      "bermudas"
-    ],
+    "aliases": ["Bermuda", "Bermudas", "bermudas"],
     "region": "caribe_ampliado",
     "center": {
       "lat": 32.296592,
@@ -1629,11 +1460,7 @@
       "en": "Canada",
       "es": "Canadá"
     },
-    "aliases": [
-      "Canada",
-      "Canadá",
-      "canada"
-    ],
+    "aliases": ["Canada", "Canadá", "canada"],
     "region": "norteamerica",
     "center": {
       "lat": 60.324287,

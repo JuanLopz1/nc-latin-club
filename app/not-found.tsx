@@ -1,9 +1,23 @@
 'use client';
+import { notFoundMessages } from './translations/interface-translations';
 import UiIcon from './components/ui-icon';
 import Link from 'next/link';
 import { useSiteLanguage } from './components/site-context';
-import s from './components/events/event-detail.module.css';
+import styles from './components/events/event-detail.module.css';
 export default function NotFound() {
   const { language } = useSiteLanguage();
-  return <main id="main-content" tabIndex={-1} className={s.detail}><div className={s.heading}><p className={s.eyebrow}>404</p><h1>{language === 'en' ? 'A different path.' : 'Otro camino.'}</h1><p className={s.description}>{language === 'en' ? 'We couldn’t find that page. Come back to the agenda and discover what’s happening.' : 'No encontramos esa página. Vuelve a la agenda y descubre qué está pasando.'}</p><Link className={s.back} href="/events">{language === 'en' ? 'Explore the agenda' : 'Explora la agenda'} <UiIcon name="right" /></Link></div></main>;
+  return (
+    <main id="main-content" tabIndex={-1} className={styles.detail}>
+      <div className={styles.heading}>
+        <p className={styles.eyebrow}>404</p>
+        <h1>{notFoundMessages[language].aDifferentPath}</h1>
+        <p className={styles.description}>
+          {notFoundMessages[language].weCouldnTFindThatPageComeBackTo}
+        </p>
+        <Link className={styles.back} href="/events">
+          {notFoundMessages[language].exploreTheAgenda} <UiIcon name="right" />
+        </Link>
+      </div>
+    </main>
+  );
 }

@@ -1,4 +1,36 @@
-.countdown { display: grid; gap: 8px; margin: 22px 0; padding: 18px 20px; border: 1px solid #76dbe355; border-radius: 8px; background: #76dbe30a; color: #76dbe3; font-size: 13px; line-height: 1.6; }
-.countdown strong { color: var(--gold); font-size: clamp(16px, 2vw, 20px); font-weight: 650; font-variant-numeric: tabular-nums; }
-.calendarLink { display: inline-flex; align-items: center; gap: 18px; min-height: 44px; margin-top: 16px; padding: 8px 0; font-size: 13px; text-decoration: underline; text-underline-offset: 5px; color: #76dbe3; }
-.disabled { display: block; margin-top: 20px; font-size: 12px; color: var(--muted); }
+.countdown {
+  display: grid;
+  gap: 8px;
+  margin: 22px 0;
+  padding: 18px 20px;
+  border: 1px solid #76dbe355;
+  border-radius: 8px;
+  background: #76dbe30a;
+  color: #76dbe3;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.countdown strong {
+  color: var(--gold);
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+.calendarLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 44px;
+  margin-top: 16px;
+  padding: 8px 0;
+  font-size: 13px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  color: #76dbe3;
+}
+.disabled {
+  display: block;
+  margin-top: 20px;
+  font-size: 12px;
+  color: var(--muted);
+}

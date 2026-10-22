@@ -20,9 +20,7 @@
           "en": "Buenos Aires lies on the Río de la Plata; the Andes mark the western landscape, while Patagonia stretches south. Spanish is widely spoken, alongside Indigenous and migrant languages, including Guaraní in the northeast.",
           "es": "Buenos Aires se encuentra sobre el Río de la Plata; los Andes marcan el paisaje occidental y la Patagonia se extiende al sur. El español convive con lenguas indígenas y migratorias, incluido el guaraní en el noreste."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -34,9 +32,7 @@
           "en": "Empanadas, locro and humita tell different stories of maize, fillings and regional cooking. Asado gathers people around the grill, while mate and alfajores belong to another side of the table: shared drinks and sweet treats.",
           "es": "Empanadas, locro y humita cuentan historias distintas de maíz, rellenos y cocinas regionales. El asado reúne alrededor de la parrilla; el mate y los alfajores muestran otra cara de la mesa: bebidas compartidas y dulces."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -48,11 +44,7 @@
           "en": "Tango grew in the urban communities of Buenos Aires and Montevideo, crossing today’s Argentina–Uruguay border. In Corrientes, chamamé brings close-embrace dancing, music and Guaraní-linked oral traditions to family and community gatherings.",
           "es": "El tango creció en las comunidades urbanas de Buenos Aires y Montevideo, atravesando la frontera actual entre Argentina y Uruguay. En Corrientes, el chamamé reúne baile enlazado, música y tradiciones orales vinculadas al guaraní en encuentros familiares y comunitarios."
         },
-        "sourceIds": [
-          "background",
-          "tango-00258",
-          "chamame-01600"
-        ]
+        "sourceIds": ["background", "tango-00258", "chamame-01600"]
       }
     ],
     "sources": [
@@ -119,9 +111,7 @@
           "en": "La Paz and El Alto belong to the highland landscape; Santa Cruz and the eastern lowlands offer different climates and histories. Spanish and numerous Indigenous languages have official recognition, reflecting the country’s plurinational identity.",
           "es": "La Paz y El Alto pertenecen al paisaje del altiplano; Santa Cruz y las tierras bajas orientales ofrecen otros climas e historias. El español y numerosas lenguas indígenas tienen reconocimiento oficial, reflejo de la identidad plurinacional del país."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "heritage",
@@ -149,9 +139,7 @@
           "en": "Quechua and Aymara are prominent in Andean communities, while Guaraní is among the languages of eastern Bolivia. Archaeological places such as Tiwanaku and living traditions of weaving, ceramics and music offer different paths into these histories.",
           "es": "El quechua y el aimara tienen presencia importante en comunidades andinas; el guaraní es una de las lenguas del oriente boliviano. Sitios como Tiwanaku y tradiciones vivas de tejidos, cerámica y música abren caminos distintos hacia estas historias."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -228,9 +216,7 @@
           "en": "Portuguese is the official language, alongside the living languages of Indigenous communities. The Amazon, northeastern coast and southern cities have distinct environments and cultural histories, shaped by Indigenous peoples, the African diaspora and successive migrations.",
           "es": "El portugués es el idioma oficial y convive con lenguas vivas de comunidades indígenas. La Amazonía, la costa nordestina y las ciudades del sur tienen entornos e historias distintas, marcados por pueblos indígenas, la diáspora africana y sucesivas migraciones."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -242,9 +228,7 @@
           "en": "Brazilian kitchens vary strongly by region. Feijoada, churrasco, moqueca, vatapá and acarajé are different entry points; cassava flour, rice and beans also appear in everyday meals. These names lead to regional traditions and household variations.",
           "es": "Las cocinas brasileñas cambian mucho por región. Feijoada, churrasco, moqueca, vatapá y acarajé ofrecen entradas distintas; la harina de mandioca, el arroz y los frijoles también aparecen en comidas cotidianas. Estos nombres conducen a tradiciones regionales y variantes familiares."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -272,10 +256,7 @@
           "en": "A capoeira roda brings together players, a master and accompanying singers and percussionists. The practice combines fighting, dance and knowledge passed between generations; the surrounding circle participates through singing, clapping and instruments.",
           "es": "Una roda de capoeira reúne jugadores, un maestro y acompañantes que cantan y tocan percusión. La práctica combina combate, danza y conocimientos transmitidos entre generaciones; el círculo participa con cantos, palmas e instrumentos."
         },
-        "sourceIds": [
-          "background",
-          "roda-of-capoeira-00892"
-        ]
+        "sourceIds": ["background", "roda-of-capoeira-00892"]
       }
     ],
     "sources": [
@@ -360,9 +341,7 @@
           "en": "The northern desert contrasts with the central region and the wetter south. Mapuche histories are important in southern Chile, while Chiloé and Rapa Nui have their own island settings. Migration has also shaped southern architecture and cooking.",
           "es": "El desierto del norte contrasta con la zona central y el sur más húmedo. Las historias mapuches tienen importancia en el sur; Chiloé y Rapa Nui poseen contextos insulares propios. Las migraciones también han marcado la arquitectura y la cocina austral."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -374,9 +353,7 @@
           "en": "Empanadas, humitas, pastel de choclo and cazuela reveal different uses of maize, vegetables and meat. Seafood and preparations such as curanto connect meals with the southern coast and islands. Family recipes and regional ingredients keep the table varied.",
           "es": "Empanadas, humitas, pastel de choclo y cazuela muestran distintos usos del maíz, las verduras y la carne. Los mariscos y preparaciones como el curanto conectan la mesa con costas e islas del sur. Recetas familiares e ingredientes regionales mantienen esa diversidad."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "heritage",
@@ -388,10 +365,7 @@
           "en": "Baile Chino brotherhoods express devotion through music, dancing and singing, mainly between Norte Chico and central Chile. Their styles vary by valley or basin; flutes, percussion and collective movement are part of these community celebrations.",
           "es": "Las hermandades de Baile Chino expresan devoción mediante música, danza y canto, principalmente entre el Norte Chico y Chile central. Sus estilos cambian según el valle o la cuenca; flautas, percusión y movimiento colectivo forman parte de estas celebraciones comunitarias."
         },
-        "sourceIds": [
-          "background",
-          "baile-chino-00988"
-        ]
+        "sourceIds": ["background", "baile-chino-00988"]
       }
     ],
     "sources": [
@@ -460,9 +434,7 @@
           "en": "Andean mountain ranges, two ocean coasts, eastern plains, Amazonian forests and island territories form Colombia’s geographic mosaic. Spanish shares the country with Indigenous languages, Creoles and Colombian Sign Language; the San Andrés archipelago also has an English-speaking history.",
           "es": "Cordilleras andinas, dos costas oceánicas, llanuras orientales, bosques amazónicos y territorios insulares forman el mosaico geográfico colombiano. El español convive con lenguas indígenas, criollas y la lengua de señas colombiana; el archipiélago de San Andrés tiene también historia anglófona."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -474,9 +446,7 @@
           "en": "Arepas are maize-based cakes with many preparations. Bandeja paisa, ajiaco and sancocho offer other paths into regional kitchens, alongside rice, cassava, potatoes, fish and tropical fruits. Ingredients and accompaniments change with place and household.",
           "es": "Las arepas son preparaciones de maíz con muchas variantes. Bandeja paisa, ajiaco y sancocho abren otros caminos hacia cocinas regionales, junto con arroz, yuca, papa, pescado y frutas tropicales. Ingredientes y acompañamientos cambian según el lugar y la familia."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -518,10 +488,7 @@
           "en": "During the four days before Lent, Barranquilla’s carnival fills the city with dances, music, masks and costumes. Caribbean trading histories brought Indigenous, African and European expressions into contact; cumbia, puya and porro are among its varied musical forms.",
           "es": "Durante los cuatro días anteriores a la Cuaresma, el Carnaval de Barranquilla reúne danzas, música, máscaras y vestuario. Las historias comerciales del Caribe pusieron en contacto expresiones indígenas, africanas y europeas; cumbia, puya y porro forman parte de su repertorio."
         },
-        "sourceIds": [
-          "background",
-          "carnival-of-barranquilla-00051"
-        ]
+        "sourceIds": ["background", "carnival-of-barranquilla-00051"]
       }
     ],
     "sources": [
@@ -616,9 +583,7 @@
           "en": "The coast, Sierra, Amazonian east and Galápagos offer distinct environments. Spanish is widely spoken, alongside Kichwa, Shuar and other Indigenous languages. Quito’s Andean setting and Esmeraldas’ Pacific coast lead into different community histories.",
           "es": "La Costa, la Sierra, el oriente amazónico y Galápagos ofrecen entornos distintos. El español convive con kichwa, shuar y otras lenguas indígenas. El contexto andino de Quito y la costa pacífica de Esmeraldas conducen a historias comunitarias diferentes."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -724,9 +689,7 @@
           "en": "Georgetown and the Atlantic coastal plain hold much of the population. Farther inland, rainforests and the Rupununi savannahs create different environments, including the territories and settlements of Indigenous communities.",
           "es": "Georgetown y la llanura costera atlántica concentran gran parte de la población. Hacia el interior, bosques y sabanas del Rupununi ofrecen otros entornos, incluidos territorios y asentamientos de comunidades indígenas."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -738,9 +701,7 @@
           "en": "English is the official language, while Guyanese Creole is widely used in everyday conversation. Indigenous languages include Akawaio, Wai-Wai and Macushi; communities with Indian heritage also preserve linguistic and religious connections across generations.",
           "es": "El inglés es el idioma oficial y el criollo guyanés se usa ampliamente en la conversación cotidiana. Entre las lenguas indígenas están akawaio, wai-wai y macushi; comunidades de herencia india conservan también vínculos lingüísticos y religiosos entre generaciones."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "heritage",
@@ -752,9 +713,7 @@
           "en": "Afro-Guyanese and Indo-Guyanese histories reflect enslavement, indentured labour and later migrations under colonial rule. Together with Indigenous histories, they shape distinct religious festivals, music and food traditions within a country closely connected to the English-speaking Caribbean.",
           "es": "Las historias afroguyanesas e indoguyanesas reflejan esclavitud, trabajo bajo contrato y migraciones posteriores durante el dominio colonial. Junto con las historias indígenas, forman celebraciones religiosas, músicas y cocinas distintas en un país muy conectado con el Caribe anglófono."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -805,9 +764,7 @@
           "en": "The Paraguay River separates the eastern region from the western Chaco. Asunción is the capital; rural communities and Indigenous territories elsewhere have distinct histories and environments. The landscape ranges from wooded hills to plains and wetlands.",
           "es": "El río Paraguay separa la región oriental del Chaco occidental. Asunción es la capital; comunidades rurales y territorios indígenas tienen historias y entornos propios. El paisaje va de colinas boscosas a llanuras y humedales."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -819,9 +776,7 @@
           "en": "Spanish and Guaraní are both official languages. Everyday speech also includes Jopara, which combines elements of both. Guaraní’s presence in public and family life gives language a central place in Paraguayan cultural identity.",
           "es": "El español y el guaraní son idiomas oficiales. El habla cotidiana incluye también el jopara, que combina elementos de ambos. La presencia del guaraní en la vida pública y familiar da a la lengua un lugar central en la identidad cultural paraguaya."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -833,10 +788,7 @@
           "en": "Guarania is a Paraguayan musical genre created in the early twentieth century. Its slow, lyrical character carries shared feelings and values through song; UNESCO inscribed it in 2024. The genre offers a different listening experience from faster Paraguayan dance music.",
           "es": "La guarania es un género musical paraguayo creado a comienzos del siglo XX. Su carácter lento y lírico transmite sentimientos y valores compartidos mediante el canto; UNESCO la inscribió en 2024. Ofrece una escucha diferente de las músicas paraguayas de baile más rápido."
         },
-        "sourceIds": [
-          "background",
-          "guarania-sonido-del-alma-paraguaya-02128"
-        ]
+        "sourceIds": ["background", "guarania-sonido-del-alma-paraguaya-02128"]
       }
     ],
     "sources": [
@@ -895,9 +847,7 @@
           "en": "The Pacific coast, Andean mountains and eastern Amazon form three broad geographic regions. Spanish coexists with Quechua, Aymara and other Indigenous languages. Lima, Cusco and Amazonian communities lead into different histories and ways of life.",
           "es": "La costa pacífica, la cordillera andina y la Amazonía oriental forman tres grandes regiones geográficas. El español convive con quechua, aimara y otras lenguas indígenas. Lima, Cusco y las comunidades amazónicas abren historias y formas de vida distintas."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -1004,9 +954,7 @@
           "en": "Paramaribo sits near the Atlantic coast, while the interior is largely tropical forest crossed by rivers. Indigenous and Maroon communities maintain histories and settlements different from those of the coastal capital.",
           "es": "Paramaribo está cerca de la costa atlántica; el interior es mayormente bosque tropical atravesado por ríos. Comunidades indígenas y cimarronas mantienen historias y asentamientos diferentes de los de la capital costera."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -1018,9 +966,7 @@
           "en": "Dutch is the official language. Sranan Tongo functions as a shared language between communities; Sarnami, Javanese, Maroon and Indigenous languages reflect further histories of migration and belonging. Religious and cultural festivals draw on this diversity.",
           "es": "El neerlandés es el idioma oficial. El sranan tongo funciona como lengua compartida entre comunidades; sarnami, javanés y lenguas cimarronas e indígenas reflejan otras historias de migración y pertenencia. Las fiestas religiosas y culturales se nutren de esa diversidad."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "heritage",
@@ -1032,10 +978,7 @@
           "en": "UNESCO’s World Heritage list includes Paramaribo’s historic inner city, the Jodensavanne archaeological site and Cassipora Creek Cemetery, and the Central Suriname Nature Reserve. Together they connect urban history, community memory and the forest landscape.",
           "es": "La Lista del Patrimonio Mundial de UNESCO incluye el centro histórico de Paramaribo, el sitio arqueológico de Jodensavanne y el cementerio de Cassipora Creek, y la Reserva Natural de Surinam Central. Conectan historia urbana, memoria comunitaria y paisaje selvático."
         },
-        "sourceIds": [
-          "background",
-          "sr"
-        ]
+        "sourceIds": ["background", "sr"]
       }
     ],
     "sources": [
@@ -1109,9 +1052,7 @@
           "en": "Asado is a gathering around meat cooked over a grill or open fire. The chivito is a beef sandwich with varied toppings. Pasta, milanesa and dulce de leche reflect other culinary connections, while mate accompanies many everyday encounters.",
           "es": "El asado reúne alrededor de carnes cocidas a la parrilla o al fuego. El chivito es un sándwich de carne vacuna con acompañamientos variados. Pasta, milanesa y dulce de leche muestran otros vínculos culinarios; el mate acompaña muchos encuentros cotidianos."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -1123,9 +1064,7 @@
           "en": "Candombe has strong Afro-Uruguayan roots and a prominent place in carnival. Tango connects Uruguay with Argentina across the Río de la Plata; guitar-based payadas bring singers into an exchange of improvised verses. Contemporary music adds further voices.",
           "es": "El candombe tiene fuertes raíces afrouruguayas y presencia destacada en el carnaval. El tango conecta Uruguay con Argentina a través del Río de la Plata; las payadas reúnen cantores en un intercambio de versos improvisados con guitarra. La música contemporánea suma otras voces."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -1184,9 +1123,7 @@
           "en": "The Maracaibo lowlands, northern mountains, Llanos and Guiana Highlands offer contrasting landscapes. Spanish coexists with Indigenous languages including Wayuu, Warao and Pemón, whose communities have their own histories and cultural knowledge.",
           "es": "Las tierras bajas de Maracaibo, montañas del norte, Llanos y tierras altas de Guayana ofrecen paisajes contrastantes. El español convive con lenguas indígenas como wayuunaiki, warao y pemón, cuyas comunidades tienen historias y saberes culturales propios."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -1198,9 +1135,7 @@
           "en": "Joropo and the cuatro are important musical paths into the Llanos. Zulia’s gaita has a different regional sound, often heard around Christmas. These traditions coexist with orchestral music, pop and the work of contemporary Venezuelan artists.",
           "es": "El joropo y el cuatro son caminos musicales importantes hacia los Llanos. La gaita zuliana tiene otro sonido regional y suele escucharse en Navidad. Estas tradiciones conviven con música orquestal, pop y creaciones de artistas venezolanos contemporáneos."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "heritage",
@@ -1283,9 +1218,7 @@
           "en": "Most residents live along the coastal strip, including Cayenne, Kourou and Saint-Laurent-du-Maroni. Dense rainforest covers much of the interior; the Maroni and Oyapock rivers connect settlements and border landscapes.",
           "es": "La mayoría de los habitantes vive en la franja costera, incluidas Cayena, Kourou y Saint-Laurent-du-Maroni. La selva densa cubre gran parte del interior; los ríos Maroni y Oyapock conectan asentamientos y paisajes fronterizos."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -1297,9 +1230,7 @@
           "en": "French is the official language, alongside French Guianese Creole and Indigenous languages such as Kali’na, Wayana and Wayampi. Maroon languages including Aluku and Ndyuka, and Hmong, add further community histories to the region’s linguistic life.",
           "es": "El francés es el idioma oficial y convive con criollo guayanés y lenguas indígenas como kali’na, wayana y wayampi. Lenguas cimarronas como aluku y ndyuka, y el hmong, suman otras historias comunitarias a la vida lingüística regional."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -1311,9 +1242,7 @@
           "en": "Creole, Maroon and Indigenous cuisines meet other migrant kitchens in the towns. Awara broth, cassava preparations and fish dishes offer different starting points; ingredients from rivers, forests and cultivated land connect cooking with the local landscape.",
           "es": "Las cocinas criollas, cimarronas e indígenas se encuentran con otras cocinas migratorias en las ciudades. El bouillon d’awara, las preparaciones de mandioca y los platos de pescado ofrecen entradas distintas; ingredientes de ríos, bosques y cultivos conectan comida y territorio."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -1353,9 +1282,7 @@
           "en": "East Falkland / Isla Soledad and West Falkland / Gran Malvina are the two main islands. Stanley / Puerto Argentino is the largest settlement; areas outside it are commonly called Camp, a term linked to the Spanish word campo.",
           "es": "Isla Soledad / East Falkland y Gran Malvina / West Falkland son las dos islas principales. Stanley / Puerto Argentino es el mayor asentamiento; las áreas exteriores suelen llamarse Camp, término relacionado con la palabra española campo."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -1367,9 +1294,7 @@
           "en": "English is the predominant language. Island society has connections with British culture and with communities that migrated from elsewhere, including Saint Helena and Chile. Small settlements and long distances are important features of everyday life.",
           "es": "El inglés es el idioma predominante. La sociedad insular tiene conexiones con la cultura británica y con comunidades migradas de otros lugares, incluidos Santa Elena y Chile. Los pequeños asentamientos y las largas distancias forman parte importante de la vida cotidiana."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "heritage",
@@ -1381,9 +1306,7 @@
           "en": "The islands are administered by the United Kingdom and claimed by Argentina. The 1982 war remains part of their recent history. Using both geographic names here makes space for different perspectives while keeping the focus on people, places and documented history.",
           "es": "Las islas son administradas por el Reino Unido y reclamadas por Argentina. La guerra de 1982 forma parte de su historia reciente. Usar ambos nombres geográficos permite reconocer perspectivas distintas y centrar el recorrido en personas, lugares e historia documentada."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -1423,9 +1346,7 @@
           "en": "English is official, while Belizean Kriol, Spanish, Maya languages and Garifuna are spoken in different communities. This multilingual setting carries histories that cross the borders of Belize and connect it with neighbouring countries and Caribbean islands.",
           "es": "El inglés es oficial; el kriol beliceño, el español, las lenguas mayas y el garífuna se hablan en distintas comunidades. Este contexto multilingüe conserva historias que atraviesan fronteras y conectan Belice con países vecinos e islas caribeñas."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -1437,9 +1358,7 @@
           "en": "Fry jacks, flour tortillas and beans are among breakfast foods. Rice and beans, stewed dishes and ingredients such as coconut, plantain and seafood bring Caribbean and Central American connections to the table, with different community and household preparations.",
           "es": "Fry jacks, tortillas de harina y frijoles forman parte de los desayunos. Arroz con frijoles, guisos e ingredientes como coco, plátano y mariscos llevan conexiones caribeñas y centroamericanas a la mesa, con preparaciones comunitarias y familiares distintas."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "heritage",
@@ -1532,9 +1451,7 @@
           "en": "San José and the Central Valley contrast with Guanacaste and the Caribbean coast. The country lies where Mesoamerican and South American cultural histories meet; Afro-Caribbean communities add important histories along the Atlantic side.",
           "es": "San José y el Valle Central contrastan con Guanacaste y la costa caribeña. El país está en un punto de encuentro de historias culturales mesoamericanas y sudamericanas; comunidades afrocaribeñas aportan memorias importantes en la vertiente atlántica."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -1546,9 +1463,7 @@
           "en": "Spanish is widely spoken, alongside Indigenous languages and the English-based Creole of the Caribbean coast. Migration and regional histories help explain why language, cooking and community traditions change across this relatively small country.",
           "es": "El español convive con lenguas indígenas y el criollo de base inglesa de la costa caribeña. Las migraciones y las historias regionales ayudan a explicar por qué lengua, cocina y tradiciones comunitarias cambian dentro de este país relativamente pequeño."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "heritage",
@@ -1560,10 +1475,7 @@
           "en": "Decorated carretas recall the transport of coffee from the Central Valley to Puntarenas. Their painted geometric designs became a distinctive craft tradition. Knowledge of making, painting and driving the carts is passed through families and community celebrations.",
           "es": "Las carretas decoradas recuerdan el transporte de café desde el Valle Central hasta Puntarenas. Sus diseños geométricos pintados se convirtieron en una tradición artesanal distintiva. Saberes de construcción, pintura y conducción pasan por familias y celebraciones comunitarias."
         },
-        "sourceIds": [
-          "background",
-          "oxherding-and-oxcart-traditions-in-costa-rica-00103"
-        ]
+        "sourceIds": ["background", "oxherding-and-oxcart-traditions-in-costa-rica-00103"]
       }
     ],
     "sources": [
@@ -1632,9 +1544,7 @@
           "en": "A central plateau lies between volcanic mountains and the Pacific lowlands. San Salvador is the capital, while towns and coastal communities offer other local histories. Spanish predominates, and Indigenous traditions remain part of the country’s cultural life.",
           "es": "Una meseta central se encuentra entre montañas volcánicas y tierras bajas pacíficas. San Salvador es la capital; pueblos y comunidades costeras ofrecen otras historias locales. Predomina el español y las tradiciones indígenas forman parte de la vida cultural."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -1646,9 +1556,7 @@
           "en": "Pupusas are thick, filled tortillas made with maize or rice dough. Fillings include cheese, beans and chicharrón, with loroco appearing in some versions. Their handmade preparation and many combinations make them a strong starting point for discovering Salvadoran cooking.",
           "es": "Las pupusas son tortillas gruesas y rellenas hechas con masa de maíz o arroz. Sus rellenos incluyen queso, frijoles y chicharrón; algunas versiones llevan loroco. La elaboración manual y sus muchas combinaciones ofrecen una entrada a la cocina salvadoreña."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -1660,9 +1568,7 @@
           "en": "Salvadoran musical life includes marimba, bands, religious songs and the dance called xuc, associated with Cojutepeque. Cumbia, salsa, bolero and contemporary Latin styles also circulate through radio, celebrations and everyday listening.",
           "es": "La vida musical salvadoreña incluye marimba, bandas, cantos religiosos y el baile llamado xuc, asociado a Cojutepeque. Cumbia, salsa, bolero y estilos latinos contemporáneos también circulan por la radio, las celebraciones y la escucha cotidiana."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -1713,9 +1619,7 @@
           "en": "The highlands, Pacific coast and northern Petén differ in climate and landscape. Spanish shares the country with many Maya languages, Xinka and Garifuna. Caribbean Garifuna traditions connect Guatemala with neighbouring Central American communities.",
           "es": "El altiplano, la costa pacífica y el Petén septentrional difieren en clima y paisaje. El español convive con muchas lenguas mayas, xinka y garífuna. Las tradiciones garífunas del Caribe conectan Guatemala con comunidades centroamericanas vecinas."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -1727,9 +1631,7 @@
           "en": "Maize, chili and black beans are important ingredients. Kak’ik is a turkey-based stew, while pepián and cocido offer other preparations. Tamales, fried plantains and tostadas appear in different settings; fiambre is associated with All Saints’ Day.",
           "es": "Maíz, chile y frijoles negros son ingredientes importantes. El kak’ik es un caldo de pavo; pepián y cocido ofrecen otras preparaciones. Tamales, plátanos fritos y tostadas aparecen en distintos contextos; el fiambre se asocia al Día de Todos los Santos."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -1741,10 +1643,7 @@
           "en": "Rabinal Achí brings masked drama, dance, music and oral narrative together in a Maya tradition. Marimba has another prominent place in Guatemala’s musical life, with repertoires that span older compositions and contemporary performance.",
           "es": "El Rabinal Achí reúne drama enmascarado, danza, música y narración oral en una tradición maya. La marimba ocupa otro lugar destacado en la vida musical guatemalteca, con repertorios de composiciones antiguas e interpretaciones contemporáneas."
         },
-        "sourceIds": [
-          "background",
-          "rabinal-achi-dance-drama-tradition-00144"
-        ]
+        "sourceIds": ["background", "rabinal-achi-dance-drama-tradition-00144"]
       },
       {
         "id": "heritage",
@@ -1836,9 +1735,7 @@
           "en": "Mountains dominate the interior, with coastal plains along the Caribbean and the Gulf of Fonseca. The Bay Islands lie off the northern coast, while the northeastern Mosquitia has a different lowland forest setting.",
           "es": "Las montañas dominan el interior y hay llanuras costeras junto al Caribe y el golfo de Fonseca. Las Islas de la Bahía están frente a la costa norte; la Mosquitia nororiental tiene otro entorno de bosque en tierras bajas."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -1850,9 +1747,7 @@
           "en": "Baleadas, tamales, fried fish and grilled meat are among the country’s varied foods. Coconut milk appears in coastal and island seafood preparations as well as sweet dishes. Beans, plantain and cassava connect many meals with regional ingredients.",
           "es": "Baleadas, tamales, pescado frito y carne asada forman parte de una mesa diversa. La leche de coco aparece en preparaciones marinas de costas e islas y también en dulces. Frijoles, plátano y yuca conectan comidas con ingredientes regionales."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "heritage",
@@ -1864,10 +1759,7 @@
           "en": "Garifuna language, song, drums and dance form a shared heritage along Central America’s Caribbean coast. Oral stories and community knowledge pass between generations; this tradition connects Honduran communities with Belize, Guatemala and Nicaragua.",
           "es": "La lengua, el canto, los tambores y la danza garífunas forman un patrimonio compartido en la costa caribeña centroamericana. Relatos orales y saberes comunitarios pasan entre generaciones; conectan comunidades hondureñas con Belice, Guatemala y Nicaragua."
         },
-        "sourceIds": [
-          "background",
-          "language-dance-and-music-of-the-garifuna-00001"
-        ]
+        "sourceIds": ["background", "language-dance-and-music-of-the-garifuna-00001"]
       }
     ],
     "sources": [
@@ -1936,9 +1828,7 @@
           "en": "Pacific lowlands surround Lakes Managua and Nicaragua; central mountains lead toward Caribbean lowlands. Spanish is widely used, while the Caribbean coast also sustains Miskito and other Indigenous languages and English-based Creoles.",
           "es": "Las tierras bajas pacíficas rodean los lagos Managua y Nicaragua; las montañas centrales conducen a las tierras bajas caribeñas. El español convive en la costa caribeña con miskitu, otras lenguas indígenas y criollos de base inglesa."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -1950,9 +1840,7 @@
           "en": "Gallo pinto combines rice and beans, with Caribbean versions sometimes adding coconut. Maize appears in nacatamales, güirilas and drinks such as pinolillo. Coastal cooking brings seafood and coconut into a different regional table.",
           "es": "El gallo pinto combina arroz y frijoles; algunas versiones caribeñas incorporan coco. El maíz aparece en nacatamales, güirilas y bebidas como el pinolillo. La cocina costera lleva mariscos y coco a una mesa regional distinta."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -1964,10 +1852,7 @@
           "en": "El Güegüense is a satirical drama joining theatre, dance and music, performed during Diriamba’s feast of San Sebastián. On the Caribbean coast, Palo de Mayo and Garifuna punta offer other musical settings, while marimba accompanies social gatherings elsewhere.",
           "es": "El Güegüense es un drama satírico que une teatro, danza y música durante la fiesta de San Sebastián en Diriamba. En el Caribe, Palo de Mayo y punta garífuna ofrecen otros contextos musicales; la marimba acompaña reuniones sociales en otras zonas."
         },
-        "sourceIds": [
-          "background",
-          "el-gueguense-00111"
-        ]
+        "sourceIds": ["background", "el-gueguense-00111"]
       }
     ],
     "sources": [
@@ -2036,9 +1921,7 @@
           "en": "Panama City faces the Pacific; Colón faces the Caribbean. The country’s isthmus joins two oceans, while Indigenous communities and inland regions carry distinct languages, environments and histories.",
           "es": "Ciudad de Panamá mira al Pacífico y Colón al Caribe. El istmo conecta dos océanos; comunidades indígenas y regiones interiores conservan lenguas, entornos e historias distintas."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -2145,9 +2028,7 @@
           "en": "Northern deserts, central highlands, southern mountains and the Yucatán Peninsula create contrasting settings. Spanish is widely spoken alongside many Indigenous languages; each region carries histories that reach beyond the familiar images of the capital.",
           "es": "Desiertos del norte, altiplanos centrales, montañas del sur y península de Yucatán crean entornos contrastantes. El español convive con numerosas lenguas indígenas; cada región conserva historias que van más allá de las imágenes conocidas de la capital."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -2174,10 +2055,7 @@
           "en": "Mariachi brings together song and stringed instruments; modern ensembles often include trumpets, violins, vihuela and guitarrón. Its repertoire includes regional songs, serenades and dance forms, carrying knowledge through listening, learning and performance.",
           "es": "El mariachi reúne canto e instrumentos de cuerda; los conjuntos modernos suelen incluir trompetas, violines, vihuela y guitarrón. Su repertorio abarca canciones regionales, serenatas y formas de baile, transmitiendo saberes mediante escucha, aprendizaje e interpretación."
         },
-        "sourceIds": [
-          "background",
-          "mariachi-string-music-song-and-trumpet-00575"
-        ]
+        "sourceIds": ["background", "mariachi-string-music-song-and-trumpet-00575"]
       },
       {
         "id": "heritage",
@@ -2267,9 +2145,7 @@
           "en": "Atlantic cities, the Midwest, the Southwest, Pacific states, Alaska and Hawaii have different environments and histories. Hispanic and Latino communities include many national origins, racial identities and experiences of migration or long-established residence.",
           "es": "Ciudades atlánticas, Medio Oeste, Suroeste, estados del Pacífico, Alaska y Hawái tienen entornos e historias distintos. Las comunidades hispanas y latinas incluyen muchos orígenes nacionales, identidades raciales y experiencias migratorias o de residencia histórica."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -2281,9 +2157,7 @@
           "en": "English is the most widely used language, while Spanish has a major presence in homes and communities. Indigenous languages and many other migrant languages also belong to everyday American life. Language use changes with region, community and generation.",
           "es": "El inglés es la lengua más usada y el español tiene una presencia importante en hogares y comunidades. Lenguas indígenas y otras muchas lenguas migratorias forman parte de la vida cotidiana. Su uso cambia con región, comunidad y generación."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -2295,9 +2169,7 @@
           "en": "African American histories are central to blues, jazz, gospel, rock and hip-hop. Latin and Caribbean musical connections add further paths through the country’s recording and performance scenes, alongside Indigenous and regional folk traditions.",
           "es": "Las historias afroestadounidenses son centrales en blues, jazz, góspel, rock y hip-hop. Las conexiones musicales latinas y caribeñas añaden recorridos por sus escenas de grabación e interpretación, junto con tradiciones indígenas y folclores regionales."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -2348,9 +2220,7 @@
           "en": "Antigua and Barbuda are relatively low-lying islands. St. John’s is the capital on Antigua; Barbuda’s landscape and settlements offer another island perspective, rather than simply extending the experience of the capital.",
           "es": "Antigua y Barbuda son islas de relieve relativamente bajo. St. John’s es la capital en Antigua; el paisaje y los asentamientos de Barbuda ofrecen otra perspectiva insular, más allá de la experiencia de la capital."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -2362,9 +2232,7 @@
           "en": "Fungee is a cornmeal preparation served alongside other dishes; pepperpot is another well-known dish. Saltfish, sweet-potato ducana and seafood bring different ingredients and preparations to island tables.",
           "es": "El fungee es una preparación de harina de maíz que acompaña otros platos; el pepperpot es otra comida conocida. Pescado salado, ducana de batata y mariscos llevan ingredientes y preparaciones distintas a las mesas insulares."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -2376,9 +2244,7 @@
           "en": "Carnival brings calypso, soca, steelpan, costumes and public celebration into the streets. The country’s musical life also includes traditions rooted in African heritage and exchanges with neighbouring Caribbean islands.",
           "es": "El carnaval lleva calipso, soca, steelpan, vestuario y celebración pública a las calles. La vida musical incluye también tradiciones de herencia africana e intercambios con islas caribeñas vecinas."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -2429,9 +2295,7 @@
           "en": "New Providence holds Nassau, while Grand Bahama and the Family Islands have other settlements and histories. The archipelago lies east of Florida and north of Cuba and Hispaniola, connecting Atlantic and Caribbean routes.",
           "es": "New Providence alberga Nassau; Grand Bahama y las Family Islands tienen otros asentamientos e historias. El archipiélago está al este de Florida y al norte de Cuba y La Española, conectado con rutas atlánticas y caribeñas."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -2443,9 +2307,7 @@
           "en": "English is official, and Bahamian Creole is widely heard in everyday speech. Afro-Bahamian histories, British colonial connections and migration from the United States and neighbouring islands all contribute to community life.",
           "es": "El inglés es oficial y el criollo bahameño se escucha en la vida cotidiana. Historias afrobahameñas, conexiones coloniales británicas y migraciones de Estados Unidos e islas vecinas contribuyen a la vida comunitaria."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -2457,10 +2319,7 @@
           "en": "Junkanoo brings music, dance and elaborate costumes to public celebrations, especially around Boxing Day and New Year. Rake ’n’ scrape adds another distinctive sound, using instruments that include a scraped saw.",
           "es": "Junkanoo reúne música, danza y vestuario elaborado en celebraciones públicas, especialmente alrededor del 26 de diciembre y Año Nuevo. El rake ’n’ scrape aporta otro sonido distintivo con instrumentos que incluyen una sierra raspada."
         },
-        "sourceIds": [
-          "background",
-          "music-background"
-        ]
+        "sourceIds": ["background", "music-background"]
       }
     ],
     "sources": [
@@ -2529,9 +2388,7 @@
           "en": "Bridgetown is the capital of this eastern Caribbean island. African, British, Indian and other histories meet in its communities. English is official, while Bajan speech brings its own rhythms and vocabulary to everyday conversation.",
           "es": "Bridgetown es la capital de esta isla del Caribe oriental. Historias africanas, británicas, indias y otras se encuentran en sus comunidades. El inglés es oficial; el habla bajan aporta ritmos y vocabulario propios a la conversación cotidiana."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -2543,9 +2400,7 @@
           "en": "Bajan meals often combine fish or meat, seasoned accompaniments and salads. Flying fish and cou-cou are well-known preparations; fish cakes and other dishes show further ways that local ingredients meet varied culinary histories.",
           "es": "Las comidas bajan suelen combinar pescado o carne, acompañamientos condimentados y ensaladas. Pescado volador y cou-cou son preparaciones conocidas; fish cakes y otros platos muestran encuentros de ingredientes locales con historias culinarias diversas."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -2557,9 +2412,7 @@
           "en": "Crop Over grew from the sugar-cane harvest season and now brings calypso, soca and costumed celebrations together. Kadooment is a major parade within this festive cycle, while Bajan music also reaches global audiences through contemporary artists.",
           "es": "Crop Over surgió de la temporada de cosecha de caña y hoy reúne calipso, soca y fiestas con vestuario. Kadooment es un gran desfile dentro de ese ciclo; la música bajan también llega a públicos mundiales mediante artistas contemporáneos."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -2599,9 +2452,7 @@
           "en": "Cuba is an archipelago in the northern Caribbean. Spanish is predominant; Afro-Cuban religious and cultural histories, Haitian connections and migration contribute other linguistic and community traditions. Urban and rural settings sustain different forms of cultural life.",
           "es": "Cuba es un archipiélago del Caribe norte. Predomina el español; historias religiosas y culturales afrocubanas, conexiones haitianas y migraciones aportan otras tradiciones lingüísticas y comunitarias. Entornos urbanos y rurales sostienen formas distintas de vida cultural."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -2708,9 +2559,7 @@
           "en": "Roseau is the capital, while the island’s steep volcanic landscape includes forested mountains and coastal settlements. The Kalinago Territory is a distinct community setting on the island’s eastern side.",
           "es": "Roseau es la capital; el relieve volcánico escarpado incluye montañas boscosas y asentamientos costeros. El Territorio Kalinago es un entorno comunitario propio en el lado oriental de la isla."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -2722,9 +2571,7 @@
           "en": "English is official, alongside widely spoken Dominican Creole, a French-based Creole. French and British colonial histories and continuing Caribbean connections help explain this multilingual cultural landscape.",
           "es": "El inglés es oficial y convive con el criollo dominiqués de base francesa, ampliamente hablado. Historias coloniales francesas y británicas y conexiones caribeñas actuales ayudan a explicar este paisaje cultural multilingüe."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -2736,10 +2583,7 @@
           "en": "Bouyon and cadence-lypso are important parts of Dominica’s musical scene. The World Creole Music Festival gathers performers from different Creole traditions; carnival adds another setting for music, costumes and community celebration.",
           "es": "Bouyon y cadence-lypso son partes importantes de la escena musical de Dominica. El World Creole Music Festival reúne intérpretes de tradiciones criollas distintas; el carnaval suma otro espacio de música, vestuario y fiesta comunitaria."
         },
-        "sourceIds": [
-          "background",
-          "music-background"
-        ]
+        "sourceIds": ["background", "music-background"]
       }
     ],
     "sources": [
@@ -2787,9 +2631,7 @@
           "en": "The country occupies the eastern part of Hispaniola, sharing the island with Haiti. Santo Domingo and Santiago are major urban centres; mountain ranges, valleys and coastlines create other settings for community life.",
           "es": "El país ocupa el este de La Española y comparte la isla con Haití. Santo Domingo y Santiago son grandes centros urbanos; cordilleras, valles y costas ofrecen otros entornos de vida comunitaria."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -2801,9 +2643,7 @@
           "en": "Mangú is made from boiled, mashed plantain. Rice, beans and meat form the familiar combination called la bandera; sancocho brings another kind of gathering around a hearty stew. Recipes and accompaniments vary by household.",
           "es": "El mangú se prepara con plátano hervido y majado. Arroz, frijoles y carne forman la combinación conocida como la bandera; el sancocho invita a otra forma de encuentro alrededor de un caldo abundante. Recetas y acompañamientos cambian por hogar."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -2896,9 +2736,7 @@
           "en": "St. George’s is the capital on Grenada. Carriacou and Petite Martinique lie farther north and have smaller island communities. Nutmeg and other spices are important features of Grenada’s agricultural history.",
           "es": "St. George’s es la capital en Granada. Carriacou y Petite Martinique están más al norte y tienen comunidades insulares menores. Nuez moscada y otras especias son importantes en la historia agrícola granadina."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -2910,9 +2748,7 @@
           "en": "Oil down is a shared-pot dish cooked in coconut milk, traditionally bringing breadfruit, greens and other ingredients together. Household versions vary. Its name refers to the coconut oil remaining as the liquid cooks down.",
           "es": "El oil down es un plato de olla cocido en leche de coco que tradicionalmente reúne fruta de pan, hojas verdes y otros ingredientes. Hay variantes familiares. Su nombre alude al aceite de coco que queda al reducirse el líquido."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -2924,10 +2760,7 @@
           "en": "Calypso, soca and carnival music are prominent in island celebrations. Carriacou’s musical and dance traditions provide another perspective, connecting community memory and African heritage with today’s festival life.",
           "es": "Calipso, soca y músicas de carnaval tienen presencia importante en fiestas insulares. Las tradiciones musicales y dancísticas de Carriacou aportan otra perspectiva y conectan memoria comunitaria y herencia africana con la vida festiva actual."
         },
-        "sourceIds": [
-          "background",
-          "music-background"
-        ]
+        "sourceIds": ["background", "music-background"]
       }
     ],
     "sources": [
@@ -2975,9 +2808,7 @@
           "en": "Haiti occupies the western part of Hispaniola. Port-au-Prince, Cap-Haïtien, Jacmel and rural areas have different settings and histories. Haitian Creole and French are official languages; Kreyòl is central to everyday communication.",
           "es": "Haití ocupa el oeste de La Española. Puerto Príncipe, Cap-Haïtien, Jacmel y las zonas rurales tienen entornos e historias distintos. El criollo haitiano y el francés son oficiales; el kreyòl es central en la comunicación cotidiana."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -2989,10 +2820,7 @@
           "en": "Soup joumou combines squash, vegetables, plantain, meat, pasta and spices. Shared on 1 January, Haiti’s Independence Day, it connects cooking with dignity, freedom from slavery and family gathering; it also appears in Sunday meals.",
           "es": "La soup joumou reúne calabaza, verduras, plátano, carne, pasta y especias. Compartida el 1 de enero, Día de la Independencia de Haití, conecta comida con dignidad, libertad de la esclavitud y encuentro familiar; también aparece en comidas dominicales."
         },
-        "sourceIds": [
-          "background",
-          "joumou-soup-01853"
-        ]
+        "sourceIds": ["background", "joumou-soup-01853"]
       },
       {
         "id": "sounds",
@@ -3004,10 +2832,7 @@
           "en": "Compas joins syncopated rhythm, singing and dancing, with guitar, keyboard and drums among its instruments. UNESCO inscribed the tradition in 2025, describing its role in intergenerational transmission and community gatherings in Haiti and beyond.",
           "es": "El compas reúne ritmo sincopado, canto y baile, con guitarra, teclado y tambores entre sus instrumentos. UNESCO inscribió la tradición en 2025 y describe su papel en la transmisión entre generaciones y los encuentros comunitarios en Haití y más allá."
         },
-        "sourceIds": [
-          "background",
-          "the-compas-of-haiti-02273"
-        ]
+        "sourceIds": ["background", "the-compas-of-haiti-02273"]
       }
     ],
     "sources": [
@@ -3063,9 +2888,7 @@
           "en": "Kingston is a major urban and musical centre. The Blue Mountains rise in the east, while other ranges and coastal communities shape different landscapes. English and Jamaican Patois are used in different settings of everyday and public life.",
           "es": "Kingston es un gran centro urbano y musical. Las Blue Mountains se elevan al este; otras cordilleras y comunidades costeras forman paisajes distintos. El inglés y el patois jamaicano se usan en diferentes contextos cotidianos y públicos."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -3077,9 +2900,7 @@
           "en": "Jerk seasoning, curries and rice and peas are well-known parts of Jamaican cooking. Mountain-grown coffee and varied local ingredients offer further paths into the table, where household traditions and migration histories shape different combinations.",
           "es": "Condimentos jerk, curris y rice and peas son partes conocidas de la cocina jamaicana. El café de montaña e ingredientes locales variados abren otros caminos hacia la mesa, donde tradiciones familiares e historias migratorias forman combinaciones distintas."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -3091,10 +2912,7 @@
           "en": "Mento, ska, rocksteady, reggae, dub and dancehall mark different chapters in Jamaica’s musical life. UNESCO locates reggae’s origins mainly in marginalized communities of Western Kingston and highlights its social commentary, emotional expression and spiritual meaning.",
           "es": "Mento, ska, rocksteady, reggae, dub y dancehall marcan capítulos distintos de la vida musical jamaicana. UNESCO sitúa los orígenes del reggae principalmente en comunidades marginadas del oeste de Kingston y destaca su comentario social, expresión emocional y significado espiritual."
         },
-        "sourceIds": [
-          "background",
-          "reggae-music-of-jamaica-01398"
-        ]
+        "sourceIds": ["background", "reggae-music-of-jamaica-01398"]
       },
       {
         "id": "heritage",
@@ -3106,10 +2924,7 @@
           "en": "Reggae brings together earlier Jamaican forms with Caribbean and North American influences. Its transmission through performance, learning and community participation connects local histories with a worldwide listening culture. The island’s wider musical scene continues to evolve alongside it.",
           "es": "El reggae reúne formas jamaicanas anteriores con influencias caribeñas y norteamericanas. Su transmisión mediante interpretación, aprendizaje y participación comunitaria conecta historias locales con una cultura de escucha mundial. La escena musical insular sigue cambiando junto a él."
         },
-        "sourceIds": [
-          "background",
-          "reggae-music-of-jamaica-01398"
-        ]
+        "sourceIds": ["background", "reggae-music-of-jamaica-01398"]
       }
     ],
     "sources": [
@@ -3178,9 +2993,7 @@
           "en": "Saint Kitts and Nevis are two volcanic islands in the eastern Caribbean. Basseterre is the capital on Saint Kitts; Charlestown is a principal settlement on Nevis. Sugar cultivation left important traces in both islands’ histories.",
           "es": "San Cristóbal y Nieves son dos islas volcánicas del Caribe oriental. Basseterre es la capital en San Cristóbal y Charlestown un asentamiento principal en Nieves. El cultivo de azúcar dejó huellas importantes en ambas historias."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -3192,9 +3005,7 @@
           "en": "English is official and local Creole speech is part of everyday life. African heritage, British colonial connections and exchanges with neighbouring islands contribute to the country’s cultural landscape.",
           "es": "El inglés es oficial y el habla criolla local forma parte de la vida cotidiana. Herencia africana, conexiones coloniales británicas e intercambios con islas vecinas contribuyen al paisaje cultural."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -3206,9 +3017,7 @@
           "en": "Saint Kitts’ carnival gathers music and street celebration around the end of the year. Nevis has its own Culturama festivities. Calypso, soca and steelpan are among the sounds heard across the country’s festival life.",
           "es": "El carnaval de San Cristóbal reúne música y fiesta callejera alrededor de fin de año. Nieves tiene sus propias celebraciones de Culturama. Calipso, soca y steelpan están entre los sonidos de su vida festiva."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -3259,9 +3068,7 @@
           "en": "English is official, while Saint Lucian Creole, or Kwéyòl, is widely spoken. Castries is the capital; coastal towns and the mountainous interior provide different settings for the island’s community and creative life.",
           "es": "El inglés es oficial y el criollo santalucense, o kwéyòl, se habla ampliamente. Castries es la capital; pueblos costeros e interior montañoso ofrecen contextos distintos de vida comunitaria y creativa."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -3273,9 +3080,7 @@
           "en": "Green figs and saltfish combines green bananas with salted fish. Bakes, stews, rice and peas and roti offer other culinary paths, reflecting African, European, Indian and wider Caribbean connections.",
           "es": "Green figs and saltfish combina bananas verdes con pescado salado. Bakes, guisos, arroz con legumbres y roti ofrecen otros caminos culinarios, con conexiones africanas, europeas, indias y caribeñas."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -3287,9 +3092,7 @@
           "en": "La Rose and La Marguerite are distinct flower festivals. Carnival and jazz events add other gathering spaces; the contemporary Dennery Segment sound draws on kuduro, local solo music and dancehall influences.",
           "es": "La Rose y La Marguerite son fiestas de flores distintas. Carnaval y eventos de jazz suman otros lugares de encuentro; el sonido contemporáneo Dennery Segment combina influencias de kuduro, música solo local y dancehall."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -3340,9 +3143,7 @@
           "en": "Kingstown is the capital on Saint Vincent. Bequia, Union Island and other Grenadine islands have their own settlements and maritime connections. Volcanic mountains contrast with the smaller islands’ coastal landscapes.",
           "es": "Kingstown es la capital en San Vicente. Bequia, Union Island y otras Granadinas tienen asentamientos y conexiones marítimas propios. Las montañas volcánicas contrastan con paisajes costeros de las islas menores."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -3354,9 +3155,7 @@
           "en": "English is official; Vincentian Creole is widely used in everyday life. Community histories include Indigenous and African heritage, colonial encounters and continuing connections across the Caribbean.",
           "es": "El inglés es oficial y el criollo vicentino se usa ampliamente en la vida cotidiana. Las historias comunitarias incluyen herencias indígenas y africanas, encuentros coloniales y conexiones continuas por el Caribe."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -3368,9 +3167,7 @@
           "en": "Big drum, string bands, quadrille, storytelling, calypso, soca and steelpan offer varied cultural paths. Carnival is an important celebration, while musical traditions on the smaller islands add distinct local experiences.",
           "es": "Big drum, bandas de cuerda, cuadrilla, narración oral, calipso, soca y steelpan ofrecen caminos culturales diversos. El carnaval es una celebración importante y las tradiciones de las islas menores suman experiencias locales propias."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -3431,9 +3228,7 @@
           "en": "Trinidad lies close to Venezuela, with Port of Spain as the capital. Tobago sits farther northeast and has smaller island communities. English, local Creoles and other community languages reflect a long history of cultural exchange.",
           "es": "Trinidad está cerca de Venezuela y tiene a Puerto España como capital. Tobago se encuentra más al noreste y tiene comunidades insulares menores. Inglés, criollos locales y otras lenguas comunitarias reflejan una larga historia de intercambio cultural."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -3445,9 +3240,7 @@
           "en": "Doubles, roti, phoulourie and other street foods show strong South Asian connections within a wider Caribbean table. African, Creole, Chinese and other cooking histories contribute further dishes and household traditions.",
           "es": "Doubles, roti, phoulourie y otras comidas callejeras muestran fuertes conexiones surasiáticas dentro de una mesa caribeña más amplia. Historias culinarias africanas, criollas, chinas y otras aportan más platos y tradiciones familiares."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -3459,9 +3252,7 @@
           "en": "Calypso, steelpan and soca have influential roots in Trinidad and Tobago. Chutney, chutney-soca, parang and rapso add other musical paths. Carnival gathers performers and audiences through costumes, street celebrations and band music.",
           "es": "Calipso, steelpan y soca tienen raíces influyentes en Trinidad y Tobago. Chutney, chutney-soca, parang y rapso suman otros caminos musicales. El carnaval reúne intérpretes y públicos mediante vestuario, fiestas callejeras y música de bandas."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -3512,9 +3303,7 @@
           "en": "The Valley is the capital of this low-lying island. Coastal settlements and maritime work are important to its history; boat racing has become a prominent community activity and part of festive life.",
           "es": "The Valley es la capital de esta isla de relieve bajo. Asentamientos costeros y trabajo marítimo son importantes en su historia; las regatas se han convertido en una actividad comunitaria destacada y parte de su vida festiva."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -3526,9 +3315,7 @@
           "en": "Fish, lobster, conch and other seafood are important ingredients. Salt cod appears in stews and other preparations; pigeon peas and rice provide another familiar combination. Imported foods and local produce share the island’s table.",
           "es": "Pescado, langosta, caracol marino y otros mariscos son ingredientes importantes. El bacalao salado aparece en guisos y otras preparaciones; guandules con arroz ofrecen otra combinación conocida. Productos importados y locales comparten la mesa insular."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -3540,9 +3327,7 @@
           "en": "Reggae has a strong island presence alongside soca and calypso. Bankie Banx and Omari Banks are among its artists; Moonsplash brings reggae performance to another gathering space, while Summer Festival connects music with community celebration.",
           "es": "El reggae tiene fuerte presencia junto con soca y calipso. Bankie Banx y Omari Banks están entre sus artistas; Moonsplash lleva actuaciones de reggae a otro espacio de encuentro y Summer Festival conecta música y fiesta comunitaria."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -3593,9 +3378,7 @@
           "en": "Oranjestad is the capital; San Nicolas and other communities have distinct local histories. The island lies near Venezuela, with arid landscapes, rock formations and coastlines that connect it with its southern Caribbean neighbours.",
           "es": "Oranjestad es la capital; San Nicolas y otras comunidades tienen historias locales propias. La isla está cerca de Venezuela y tiene paisajes áridos, formaciones rocosas y costas conectadas con vecinos del Caribe sur."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -3607,9 +3390,7 @@
           "en": "Papiamento and Dutch are official languages, while English and Spanish are also widely used. Papiamento is a Creole language with multiple historical influences and an important role in everyday Aruban life.",
           "es": "Papiamento y neerlandés son idiomas oficiales; inglés y español también se usan ampliamente. El papiamento es una lengua criolla con múltiples influencias históricas y un papel importante en la vida cotidiana arubeña."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -3621,9 +3402,7 @@
           "en": "Carnival brings music and costumed parades together. Dande accompanies the New Year season, while Christmas gatherings include gaitas and shared foods. These celebrations connect family life with public musical traditions.",
           "es": "El carnaval reúne música y desfiles con vestuario. El dande acompaña la temporada de Año Nuevo y los encuentros navideños incluyen gaitas y comidas compartidas. Estas fiestas conectan vida familiar y tradiciones musicales públicas."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -3663,9 +3442,7 @@
           "en": "Kralendijk is the principal town, while Rincon is an older inland settlement. Klein Bonaire lies offshore; the main island’s northern hills contrast with flatter southern landscapes and salt-production areas.",
           "es": "Kralendijk es la localidad principal y Rincon un asentamiento interior antiguo. Klein Bonaire está frente a la costa; las colinas del norte contrastan con el sur más llano y las áreas de producción de sal."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -3677,9 +3454,7 @@
           "en": "Dutch is official, while Papiamentu is the main everyday language for many residents. English and Spanish are also spoken. This multilingual setting reflects relationships with Curaçao, Aruba and other Caribbean communities.",
           "es": "El neerlandés es oficial y el papiamentu es la lengua cotidiana principal de muchos habitantes. También se hablan inglés y español. Este entorno multilingüe refleja relaciones con Curazao, Aruba y otras comunidades caribeñas."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "heritage",
@@ -3691,9 +3466,7 @@
           "en": "Bonaire forms a special municipality of the Netherlands with a distinct Caribbean history. Rincon’s old houses and community life offer a different setting from the capital. Maritime work and salt production have left important traces across the island’s landscape and history.",
           "es": "Bonaire forma un municipio especial de los Países Bajos con historia caribeña propia. Las casas antiguas y la vida comunitaria de Rincon ofrecen otro contexto que la capital. Trabajo marítimo y producción de sal han dejado huellas importantes en su paisaje e historia."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -3744,9 +3517,7 @@
           "en": "Tortola is the largest island and holds Road Town, the capital. Virgin Gorda, Anegada and Jost Van Dyke have their own settlements and landscapes; the archipelago sits close to the U.S. Virgin Islands.",
           "es": "Tortola es la isla mayor y alberga Road Town, la capital. Virgin Gorda, Anegada y Jost Van Dyke tienen asentamientos y paisajes propios; el archipiélago está cerca de las Islas Vírgenes de Estados Unidos."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -3758,9 +3529,7 @@
           "en": "English is predominant, with local speech varieties and Spanish spoken by migrant communities. African heritage, colonial histories and connections with neighbouring islands are important parts of the cultural landscape.",
           "es": "Predomina el inglés, con variedades locales y español hablado por comunidades migratorias. Herencia africana, historias coloniales y conexiones con islas vecinas forman partes importantes del paisaje cultural."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -3772,9 +3541,7 @@
           "en": "Fungi bands, also called scratch bands, combine African and European influences through instruments such as calabash, washboard, bongos and ukulele. Their songs carry social commentary and local stories. The name also refers to a cornmeal dish.",
           "es": "Las bandas fungi, también llamadas scratch bands, combinan influencias africanas y europeas con instrumentos como calabaza, tabla de lavar, bongós y ukelele. Sus canciones transmiten comentario social y relatos locales. El nombre también designa un plato de harina de maíz."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -3814,9 +3581,7 @@
           "en": "George Town is on Grand Cayman, the largest island. Cayman Brac and Little Cayman lie farther northeast. All three are low-lying Caribbean islands, with different settlement patterns and landscapes.",
           "es": "George Town está en Grand Cayman, la isla mayor. Cayman Brac y Little Cayman se encuentran más al noreste. Las tres son islas caribeñas de relieve bajo con asentamientos y paisajes distintos."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -3828,9 +3593,7 @@
           "en": "English is official. Local speech retains influences from the islands’ settlement history, while Jamaican connections and more recent migration add other voices to community life.",
           "es": "El inglés es oficial. El habla local conserva influencias de la historia de poblamiento; conexiones jamaicanas y migraciones más recientes suman otras voces a la vida comunitaria."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -3842,9 +3605,7 @@
           "en": "The Cayman National Cultural Foundation supports folk music and performance through cultural programmes. The Harquail Theatre and cultural centre provide spaces for artistic activity, alongside community festivals and storytelling traditions.",
           "es": "La Cayman National Cultural Foundation apoya música folclórica e interpretación mediante programas culturales. El teatro y centro cultural Harquail ofrecen espacios de actividad artística, junto con fiestas comunitarias y tradiciones narrativas."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -3884,9 +3645,7 @@
           "en": "Willemstad is the capital, with neighbourhoods such as Punda and Otrobanda. The island lies near Venezuela and has dry, hilly landscapes; rural communities and the western coast offer other local histories.",
           "es": "Willemstad es la capital y tiene barrios como Punda y Otrobanda. La isla está cerca de Venezuela y tiene paisajes secos y montañosos; comunidades rurales y costa occidental ofrecen otras historias locales."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -3898,9 +3657,7 @@
           "en": "Papiamentu, Dutch and English are official languages. Papiamentu is widely used at home and in cultural expression, with Spanish also heard in this multilingual setting. Its spelling here differs from Aruba’s Papiamento.",
           "es": "Papiamentu, neerlandés e inglés son idiomas oficiales. El papiamentu se usa ampliamente en hogares y expresiones culturales; también se escucha español en este contexto multilingüe. Su grafía difiere del papiamento de Aruba."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -3912,9 +3669,7 @@
           "en": "Krioyo cooking includes stobá, a family of stews, and funchi, a cornmeal accompaniment. Keshi yena, pastechi and seafood offer further ways to explore the table, connected with neighbouring islands and varied migration histories.",
           "es": "La cocina krioyo incluye stobá, una familia de guisos, y funchi, acompañamiento de harina de maíz. Keshi yena, pastechi y mariscos ofrecen otras entradas a la mesa, conectada con islas vecinas e historias migratorias diversas."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -3926,10 +3681,7 @@
           "en": "Tambú, tumba and seú have distinct roles in Curaçao’s cultural life. Tumba is prominent during carnival; seú is linked to harvest celebration. Papiamentu singing and contemporary artists keep the island’s musical scene evolving.",
           "es": "Tambú, tumba y seú tienen papeles distintos en la vida cultural curazoleña. La tumba destaca en carnaval y el seú se vincula con la celebración de la cosecha. El canto en papiamentu y artistas actuales mantienen la escena musical en movimiento."
         },
-        "sourceIds": [
-          "background",
-          "music-background"
-        ]
+        "sourceIds": ["background", "music-background"]
       }
     ],
     "sources": [
@@ -3998,9 +3750,7 @@
           "en": "Basse-Terre and Grande-Terre are the two main islands, with contrasting volcanic and limestone landscapes. Marie-Galante, Les Saintes and La Désirade add distinct island communities to this French overseas region.",
           "es": "Basse-Terre y Grande-Terre son las dos islas principales, con paisajes volcánicos y calizos contrastantes. Marie-Galante, Les Saintes y La Désirade aportan comunidades insulares propias a esta región ultramarina francesa."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -4012,9 +3762,7 @@
           "en": "French is official and Guadeloupean Creole is widely spoken. African, French and Indian histories contribute to the archipelago’s cultural life, with Creole language playing a strong role in musical and everyday expression.",
           "es": "El francés es oficial y el criollo guadalupeño se habla ampliamente. Historias africanas, francesas e indias contribuyen a la vida cultural; la lengua criolla ocupa un papel importante en expresiones musicales y cotidianas."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -4098,9 +3846,7 @@
           "en": "Fort-de-France is the capital of this French overseas region. Mount Pelée and the former city of Saint-Pierre belong to the northern landscape, while southern coastal towns offer different histories and settings.",
           "es": "Fort-de-France es la capital de esta región ultramarina francesa. El monte Pelée y la antigua ciudad de Saint-Pierre pertenecen al paisaje norteño; localidades costeras del sur ofrecen otras historias y entornos."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -4112,9 +3858,7 @@
           "en": "Colombo combines spiced meat or fish with vegetables and carries connections with South Asian cooking. Creole kitchens also draw on African, French and Indigenous Caribbean histories, producing varied preparations across homes and restaurants.",
           "es": "El colombo combina carne o pescado especiados con verduras y conserva conexiones con cocinas surasiáticas. Las cocinas criollas también se nutren de historias africanas, francesas e indígenas caribeñas, con preparaciones diversas en hogares y restaurantes."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -4126,9 +3870,7 @@
           "en": "Zouk became an internationally influential sound shared with Guadeloupe. Its roots connect with older musical forms, including biguine; bèlè offers another path through singing, drumming and dance in the island’s musical life.",
           "es": "El zouk se convirtió en un sonido de influencia internacional compartido con Guadalupe. Sus raíces conectan con formas musicales anteriores, incluida la biguine; el bèlè ofrece otro recorrido por canto, tambor y danza en la vida musical insular."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -4179,9 +3921,7 @@
           "en": "Soufrière Hills eruptions beginning in the 1990s displaced communities and made Plymouth uninhabitable. Brades and northern settlements became important centres of life, with the southern exclusion zone remaining a major feature of the island’s landscape.",
           "es": "Las erupciones de Soufrière Hills iniciadas en los años noventa desplazaron comunidades y dejaron Plymouth inhabitable. Brades y asentamientos del norte se volvieron centros importantes de vida; la zona de exclusión del sur sigue marcando el paisaje."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -4193,9 +3933,7 @@
           "en": "Goat water is a hearty goat-meat stew, often served with bread. The island’s cooking connects British and Caribbean histories, with seafood, vegetables and other local or imported ingredients contributing to household meals.",
           "es": "El goat water es un guiso abundante de carne de cabra, a menudo servido con pan. La cocina conecta historias británicas y caribeñas; mariscos, verduras y otros ingredientes locales o importados contribuyen a comidas familiares."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "heritage",
@@ -4207,9 +3945,7 @@
           "en": "St. Patrick’s celebrations reflect Irish connections and Afro-Caribbean histories, including remembrance of resistance to slavery. Music has also connected Montserrat with international recording, while local festivals carry community identity through changing circumstances.",
           "es": "Las fiestas de San Patricio reflejan conexiones irlandesas e historias afrocaribeñas, incluida la memoria de resistencia a la esclavitud. La música ha conectado Montserrat con grabaciones internacionales; las fiestas locales mantienen identidad comunitaria en circunstancias cambiantes."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -4270,9 +4006,7 @@
           "en": "San Juan is the capital on the main island; Vieques and Culebra have distinct island settings. Puerto Rico is a U.S. territory, with Spanish and English as official languages and strong cultural connections across the Caribbean and mainland diaspora.",
           "es": "San Juan es la capital en la isla principal; Vieques y Culebra tienen contextos insulares propios. Puerto Rico es un territorio estadounidense con español e inglés oficiales y fuertes vínculos culturales por el Caribe y la diáspora continental."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -4284,9 +4018,7 @@
           "en": "Mofongo, arroz con gandules and pasteles are well-known preparations. Plantain, rice, pigeon peas and root vegetables connect many dishes with African, European and Taíno cooking histories, with different household recipes and occasions.",
           "es": "Mofongo, arroz con gandules y pasteles son preparaciones conocidas. Plátano, arroz, guandules y raíces conectan platos con historias culinarias africanas, europeas y taínas, con recetas y ocasiones distintas según la familia."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -4298,9 +4030,7 @@
           "en": "Bomba and plena have important Afro-Puerto Rican roots. Salsa and reggaetón open other musical chapters, shaped by movement between the island, Caribbean neighbours and U.S. cities. Contemporary artists carry these connections into international music scenes.",
           "es": "Bomba y plena tienen raíces afropuertorriqueñas importantes. Salsa y reguetón abren otros capítulos musicales, marcados por movimientos entre isla, vecinos caribeños y ciudades estadounidenses. Artistas actuales llevan esos vínculos a escenas internacionales."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -4361,9 +4091,7 @@
           "en": "The Bottom and Windwardside are principal settlements. Mount Scenery rises above the villages, and steep terrain has shaped access between communities and the sea. Saba is a special municipality of the Netherlands.",
           "es": "The Bottom y Windwardside son asentamientos principales. El monte Scenery se eleva sobre los pueblos y el relieve escarpado ha marcado los accesos entre comunidades y mar. Saba es un municipio especial de los Países Bajos."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -4375,9 +4103,7 @@
           "en": "English is widely used in everyday life, alongside Dutch in this Dutch Caribbean setting. Family and migration histories connect the island with European and Caribbean communities, while its small settlements maintain local connections.",
           "es": "El inglés se usa ampliamente en la vida cotidiana y convive con el neerlandés en este contexto caribeño. Historias familiares y migratorias conectan la isla con comunidades europeas y caribeñas; sus pequeños pueblos mantienen vínculos locales."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "heritage",
@@ -4389,9 +4115,7 @@
           "en": "Saba lace is a handwork tradition associated with the island. Women learned and sold this embroidery, including through overseas connections, creating a craft history tied to family work and local livelihoods.",
           "es": "El encaje de Saba es una tradición de trabajo manual asociada a la isla. Mujeres aprendieron y vendieron estos bordados, incluso mediante conexiones ultramarinas, creando una historia artesanal vinculada al trabajo familiar y al sustento local."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -4431,9 +4155,7 @@
           "en": "Gustavia is the capital of this French Caribbean collectivity. Its name and some historic buildings recall the island’s period under Swedish rule; other villages and coastal settings hold their own local histories.",
           "es": "Gustavia es la capital de esta colectividad francesa del Caribe. Su nombre y algunos edificios históricos recuerdan el período de dominio sueco; otros pueblos y entornos costeros conservan historias locales propias."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "food",
@@ -4445,9 +4167,7 @@
           "en": "French, West Indian and Creole cooking meet Italian and Asian influences in the island’s restaurants. Fish and seafood connect meals with the surrounding sea, while imported ingredients reflect the island’s international links.",
           "es": "Cocinas francesa, antillana y criolla se encuentran con influencias italianas y asiáticas en los restaurantes. Pescados y mariscos conectan la mesa con el mar; ingredientes importados reflejan vínculos internacionales."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -4459,9 +4179,7 @@
           "en": "The Saint Barthélemy Music Festival brings international performing arts to the island. Caribbean styles such as calypso, soca, zouk and reggae also form part of the wider regional musical landscape heard here.",
           "es": "El Saint Barthélemy Music Festival lleva artes escénicas internacionales a la isla. Estilos caribeños como calipso, soca, zouk y reggae forman también parte del paisaje musical regional que se escucha aquí."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -4501,9 +4219,7 @@
           "en": "Marigot is the capital of the French collectivity. Grand Case and other coastal settlements offer different local settings; the southern part of the island belongs to Sint Maarten, a separate country within the Kingdom of the Netherlands.",
           "es": "Marigot es la capital de la colectividad francesa. Grand Case y otros asentamientos costeros ofrecen contextos distintos; el sur pertenece a Sint Maarten, país separado dentro del Reino de los Países Bajos."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -4515,9 +4231,7 @@
           "en": "French is official, while English and other languages are used across the island’s communities. Migration, cross-border movement and tourism have contributed to a culturally diverse setting on both sides of the island.",
           "es": "El francés es oficial; inglés y otras lenguas se usan entre comunidades insulares. Migraciones, movimientos transfronterizos y turismo han contribuido a un contexto cultural diverso en ambos lados de la isla."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "heritage",
@@ -4529,9 +4243,7 @@
           "en": "The French and Dutch sides have distinct institutions and share a long history on the same island. Saint-Martin became a separate French overseas collectivity in 2007, after previously being administered as part of Guadeloupe.",
           "es": "Los lados francés y neerlandés tienen instituciones distintas y comparten una larga historia en la misma isla. Saint-Martin se convirtió en una colectividad ultramarina francesa separada en 2007, tras ser administrada como parte de Guadalupe."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -4571,9 +4283,7 @@
           "en": "Oranjestad is the main settlement. The dormant Quill volcano rises in the southeast, while lower hills occupy the northwest. Sint Eustatius is a special municipality of the Netherlands with its own Caribbean history.",
           "es": "Oranjestad es el asentamiento principal. El volcán inactivo Quill se eleva al sureste y colinas menores ocupan el noroeste. San Eustaquio es un municipio especial de los Países Bajos con historia caribeña propia."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -4585,9 +4295,7 @@
           "en": "Dutch is official, but English is the language of everyday life and schooling. Local English-based Creole speech adds another voice within a multilingual island community.",
           "es": "El neerlandés es oficial, pero el inglés es la lengua de la vida cotidiana y la educación. El habla criolla local de base inglesa aporta otra voz a una comunidad insular multilingüe."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "heritage",
@@ -4599,9 +4307,7 @@
           "en": "The island’s eighteenth-century harbour was an important trading centre within colonial Atlantic networks. Fort Oranje is associated with the 1776 salute to an American vessel, a historical event remembered in Statia’s public life.",
           "es": "El puerto del siglo XVIII fue un centro comercial importante dentro de redes atlánticas coloniales. Fort Oranje se asocia al saludo de 1776 a un barco estadounidense, acontecimiento recordado en la vida pública de Statia."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -4641,9 +4347,7 @@
           "en": "Philipsburg is the capital. The country shares a land border with the French collectivity of Saint-Martin and is a constituent country within the Kingdom of the Netherlands. Coastal bays and urban settlements shape its landscape.",
           "es": "Philipsburg es la capital. El país comparte frontera terrestre con la colectividad francesa de Saint-Martin y forma parte del Reino de los Países Bajos como país constituyente. Bahías costeras y asentamientos urbanos marcan su paisaje."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -4655,9 +4359,7 @@
           "en": "English is the main everyday language, alongside Dutch and languages of migrant communities. Local English-based Creole is also spoken, reflecting connections with the wider northeastern Caribbean.",
           "es": "El inglés es la lengua cotidiana principal y convive con neerlandés y lenguas de comunidades migratorias. También se habla un criollo local de base inglesa, conectado con el Caribe nororiental."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -4669,9 +4371,7 @@
           "en": "Carnival is a major public celebration with music, costumes and parades. The cultural landscape brings together African, European, North American and wider Caribbean influences, with regional styles and contemporary performances sharing festive spaces.",
           "es": "El carnaval es una gran celebración pública con música, vestuario y desfiles. El paisaje cultural reúne influencias africanas, europeas, norteamericanas y caribeñas; estilos regionales y actuaciones actuales comparten espacios festivos."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -4711,9 +4411,7 @@
           "en": "Grand Turk holds Cockburn Town, the capital, while Providenciales is another major centre. The Turks and Caicos island groups lie southeast of the Bahamas and share historical connections with the Lucayan archipelago.",
           "es": "Grand Turk alberga Cockburn Town, la capital; Providenciales es otro centro importante. Los grupos de islas Turcas y Caicos están al sureste de las Bahamas y comparten conexiones históricas con el archipiélago lucayo."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -4725,9 +4423,7 @@
           "en": "English is official, alongside local Creole speech. Haitian Creole and Spanish are also spoken by communities formed through migration, connecting everyday island life with nearby Haiti and the Spanish-speaking Caribbean.",
           "es": "El inglés es oficial y convive con el habla criolla local. Comunidades migratorias también hablan criollo haitiano y español, conectando la vida insular con Haití y el Caribe hispanohablante."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -4739,9 +4435,7 @@
           "en": "Ripsaw is a distinctive local musical tradition, with a rhythm made by scraping a saw. Music festivals and community performances provide spaces for local talent alongside artists and styles from the wider Caribbean.",
           "es": "El ripsaw es una tradición musical local distintiva que produce ritmo al raspar una sierra. Festivales y actuaciones comunitarias dan espacio a talentos locales junto con artistas y estilos del Caribe más amplio."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -4781,9 +4475,7 @@
           "en": "Charlotte Amalie is the capital on Saint Thomas. Saint John and Saint Croix offer other island landscapes and settlements. The territory shares the Virgin Islands archipelago with the British Virgin Islands and islands administered by Puerto Rico.",
           "es": "Charlotte Amalie es la capital en Saint Thomas. Saint John y Saint Croix ofrecen otros paisajes y asentamientos. El territorio comparte archipiélago con las Islas Vírgenes Británicas e islas administradas por Puerto Rico."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -4795,9 +4487,7 @@
           "en": "English is predominant, with Virgin Islands Creole used in everyday settings. Spanish and French-based Creoles are also spoken. Migration and close ties with neighbouring islands add to the territory’s multilingual life.",
           "es": "Predomina el inglés y el criollo de las Islas Vírgenes se usa en contextos cotidianos. También se hablan español y criollos de base francesa. Migración y vínculos con islas vecinas suman a su vida multilingüe."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -4809,10 +4499,7 @@
           "en": "Quelbe is a traditional musical form associated with scratch bands and community stories. Carnival celebrations, calypso, soca and other Caribbean styles provide further musical paths, with different festive traditions across the three main islands.",
           "es": "El quelbe es una forma musical tradicional asociada a scratch bands y relatos comunitarios. Carnavales, calipso, soca y otros estilos caribeños ofrecen más caminos musicales, con tradiciones festivas distintas en las tres islas principales."
         },
-        "sourceIds": [
-          "background",
-          "music-background"
-        ]
+        "sourceIds": ["background", "music-background"]
       }
     ],
     "sources": [
@@ -4860,9 +4547,7 @@
           "en": "Hamilton is the capital, while St. George’s preserves another historic townscape. The islands lie well east of the North American coast, with bridges and causeways connecting many parts of the archipelago.",
           "es": "Hamilton es la capital y St. George conserva otro paisaje urbano histórico. Las islas están muy al este de la costa norteamericana; puentes y calzadas conectan muchas partes del archipiélago."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "languages",
@@ -4874,9 +4559,7 @@
           "en": "Bermudian English is predominant. Portuguese is also spoken by communities with roots in the Azores, Madeira and Cape Verde. African, Caribbean, British and Portuguese histories contribute to the island’s cultural life.",
           "es": "Predomina el inglés bermudeño. También hablan portugués comunidades con raíces en Azores, Madeira y Cabo Verde. Historias africanas, caribeñas, británicas y portuguesas contribuyen a la vida cultural insular."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "heritage",
@@ -4888,9 +4571,7 @@
           "en": "Gombey performance combines drumming, dancing and elaborate costumes with African, Caribbean and other historical connections. Community groups sustain the tradition through performance and transmission between generations.",
           "es": "Las actuaciones gombey reúnen tambores, danza y vestuario elaborado con conexiones africanas, caribeñas y otras históricas. Los grupos comunitarios sostienen la tradición mediante interpretación y transmisión entre generaciones."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       }
     ],
     "sources": [
@@ -4930,10 +4611,7 @@
           "en": "Canada spans Atlantic, Pacific and Arctic landscapes, with provinces and territories that have distinct histories. Niagara lies in Ontario, where our club brings students together through cultural exchange and community activities.",
           "es": "Canadá abarca paisajes atlánticos, pacíficos y árticos, con provincias y territorios de historias distintas. Niagara está en Ontario, donde nuestro club reúne estudiantes mediante intercambio cultural y actividades comunitarias."
         },
-        "sourceIds": [
-          "background",
-          "club"
-        ]
+        "sourceIds": ["background", "club"]
       },
       {
         "id": "languages",
@@ -4945,9 +4623,7 @@
           "en": "English and French are official at the federal level. Indigenous languages and the languages of many migrant communities remain part of everyday life. First Nations, Inuit and Métis are distinct peoples with diverse cultures and histories.",
           "es": "Inglés y francés son oficiales en el ámbito federal. Lenguas indígenas y de muchas comunidades migratorias forman parte de la vida cotidiana. Primeras Naciones, inuit y métis son pueblos distintos con culturas e historias diversas."
         },
-        "sourceIds": [
-          "background"
-        ]
+        "sourceIds": ["background"]
       },
       {
         "id": "sounds",
@@ -4959,10 +4635,7 @@
           "en": "Canadian music includes many regional scenes, languages and styles. The tracks selected here offer two contemporary paths: international pop and Indigenous electronic music. They are a starting point for listening within a much wider cultural landscape.",
           "es": "La música canadiense incluye muchas escenas regionales, lenguas y estilos. Las pistas seleccionadas aquí ofrecen dos caminos contemporáneos: pop internacional y música electrónica indígena. Son un inicio para escuchar dentro de un paisaje cultural mucho más amplio."
         },
-        "sourceIds": [
-          "background",
-          "music-background"
-        ]
+        "sourceIds": ["background", "music-background"]
       }
     ],
     "sources": [

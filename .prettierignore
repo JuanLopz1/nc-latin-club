@@ -1,0 +1,9 @@
+node_modules
+.next
+coverage
+package-lock.json
+public/data
+public/images
+public/audio
+public/downloads
+app/fonts

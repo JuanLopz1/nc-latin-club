@@ -1,6 +1,16 @@
 'use client';
 
-import { useEffect, useRef, useState, useSyncExternalStore, type KeyboardEvent, type PointerEvent, type MouseEvent, type DragEvent, type FocusEvent } from 'react';
+import {
+  useEffect,
+  useRef,
+  useState,
+  useSyncExternalStore,
+  type KeyboardEvent,
+  type PointerEvent,
+  type MouseEvent,
+  type DragEvent,
+  type FocusEvent,
+} from 'react';
 import { useReducedMotion } from '../motion-preference';
 
 const subscribeVisibility = (callback: () => void) => {
@@ -13,7 +23,11 @@ const serverVisibleSnapshot = () => true;
 export function useNiagaraCarousel() {
   const railRef = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
-  const documentVisible = useSyncExternalStore(subscribeVisibility, visibleSnapshot, serverVisibleSnapshot);
+  const documentVisible = useSyncExternalStore(
+    subscribeVisibility,
+    visibleSnapshot,
+    serverVisibleSnapshot,
+  );
   const [inView, setInView] = useState(false);
   const [paused, setPaused] = useState(false);
   const [hovered, setHovered] = useState(false);
@@ -22,17 +36,37 @@ export function useNiagaraCarousel() {
   const pointerFocus = useRef(false);
   const [dragging, setDragging] = useState(false);
   const direction = useRef(1);
-  const pointer = useRef<{ id: number; x: number; y: number; left: number; dragging: boolean } | null>(null);
+  const pointer = useRef<{
+    id: number;
+    x: number;
+    y: number;
+    left: number;
+    dragging: boolean;
+  } | null>(null);
   const suppressClick = useRef(false);
   const idleTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
-  const playing = !paused && !reduced && inView && documentVisible && !hovered && !focused && !dragging && !pressed;
+  const playing =
+    !paused &&
+    !reduced &&
+    inView &&
+    documentVisible &&
+    !hovered &&
+    !focused &&
+    !dragging &&
+    !pressed;
 
   useEffect(() => {
     const rail = railRef.current;
     if (!rail) return;
-    const observer = new IntersectionObserver(entries => setInView(entries[0].isIntersecting), { threshold: 0.1 });
+    const observer = new IntersectionObserver(
+      (entries) => setInView(entries[0].isIntersecting),
+      { threshold: 0.1 },
+    );
     observer.observe(rail);
-    return () => { observer.disconnect(); clearTimeout(idleTimer.current); };
+    return () => {
+      observer.disconnect();
+      clearTimeout(idleTimer.current);
+    };
   }, []);
 
   useEffect(() => {
@@ -69,10 +103,14 @@ export function useNiagaraCarousel() {
     if (!rail) return;
     const cards = Array.from(rail.querySelectorAll<HTMLElement>('[data-home-place]'));
     const current = rail.scrollLeft;
-    const target = delta > 0
-      ? cards.find(card => card.offsetLeft > current + 4)
-      : [...cards].reverse().find(card => card.offsetLeft < current - 4);
-    rail.scrollTo({ left: target ? target.offsetLeft : delta > 0 ? rail.scrollWidth : 0, behavior: reduced ? 'instant' : 'smooth' });
+    const target =
+      delta > 0
+        ? cards.find((card) => card.offsetLeft > current + 4)
+        : [...cards].reverse().find((card) => card.offsetLeft < current - 4);
+    rail.scrollTo({
+      left: target ? target.offsetLeft : delta > 0 ? rail.scrollWidth : 0,
+      behavior: reduced ? 'instant' : 'smooth',
+    });
   };
   const onKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
     pointerFocus.current = false;
@@ -84,7 +122,10 @@ export function useNiagaraCarousel() {
     } else if (event.key === 'Home' || event.key === 'End') {
       event.preventDefault();
       pause();
-      railRef.current?.scrollTo({ left: event.key === 'Home' ? 0 : railRef.current.scrollWidth, behavior: reduced ? 'instant' : 'smooth' });
+      railRef.current?.scrollTo({
+        left: event.key === 'Home' ? 0 : railRef.current.scrollWidth,
+        behavior: reduced ? 'instant' : 'smooth',
+      });
     }
   };
   const onPointerDown = (event: PointerEvent<HTMLDivElement>) => {
@@ -94,7 +135,13 @@ export function useNiagaraCarousel() {
     pause();
     suppressClick.current = false;
     if (event.pointerType !== 'mouse' || event.button !== 0) return;
-    pointer.current = { id: event.pointerId, x: event.clientX, y: event.clientY, left: event.currentTarget.scrollLeft, dragging: false };
+    pointer.current = {
+      id: event.pointerId,
+      x: event.clientX,
+      y: event.clientY,
+      left: event.currentTarget.scrollLeft,
+      dragging: false,
+    };
   };
   const onPointerMove = (event: PointerEvent<HTMLDivElement>) => {
     const start = pointer.current;
@@ -119,9 +166,13 @@ export function useNiagaraCarousel() {
     if (!start || start.id !== event.pointerId) return;
     pointer.current = null;
     setDragging(false);
-    if (event.currentTarget.hasPointerCapture(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
+    if (event.currentTarget.hasPointerCapture(event.pointerId))
+      event.currentTarget.releasePointerCapture(event.pointerId);
     // A drag's click follows pointerup; later independent clicks stay usable.
-    if (start.dragging) window.setTimeout(() => { suppressClick.current = false; }, 0);
+    if (start.dragging)
+      window.setTimeout(() => {
+        suppressClick.current = false;
+      }, 0);
   };
   const onClickCapture = (event: MouseEvent<HTMLDivElement>) => {
     if (!suppressClick.current) return;
@@ -131,17 +182,36 @@ export function useNiagaraCarousel() {
   };
 
   return {
-    railRef, playing, dragging, move,
+    railRef,
+    playing,
+    dragging,
+    move,
     railEvents: {
-      onWheel: pause, onPointerDown, onPointerMove, onPointerUp: endPointer,
-      onPointerCancel: endPointer, onLostPointerCapture: endPointer, onClickCapture, onKeyDown,
+      onWheel: pause,
+      onPointerDown,
+      onPointerMove,
+      onPointerUp: endPointer,
+      onPointerCancel: endPointer,
+      onLostPointerCapture: endPointer,
+      onClickCapture,
+      onKeyDown,
       onDragStart: (event: DragEvent<HTMLDivElement>) => event.preventDefault(),
       onMouseEnter: () => setHovered(true),
-      onMouseLeave: () => { setHovered(false); if (!pointer.current?.dragging) setPressed(false); if (pointer.current && !pointer.current.dragging) pointer.current = null; },
+      onMouseLeave: () => {
+        setHovered(false);
+        if (!pointer.current?.dragging) setPressed(false);
+        if (pointer.current && !pointer.current.dragging) pointer.current = null;
+      },
     },
     focusEvents: {
-      onFocusCapture: () => { setFocused(!pointerFocus.current); pointerFocus.current = false; pause(); },
-      onBlurCapture: (event: FocusEvent<HTMLDivElement>) => { if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false); },
+      onFocusCapture: () => {
+        setFocused(!pointerFocus.current);
+        pointerFocus.current = false;
+        pause();
+      },
+      onBlurCapture: (event: FocusEvent<HTMLDivElement>) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false);
+      },
     },
   };
 }
