@@ -16,6 +16,8 @@ export type SiteSettings = {
   logoSrc: string;
   heroSrc: string;
   heroAlt: LocalizedText;
+  familiaPhotoSrc?: string;
+  familiaPhotoAlt?: LocalizedText;
   spotifyUrl: string;
   spotifyTitle: LocalizedText;
   spotifyDescription: LocalizedText;

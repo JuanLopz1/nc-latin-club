@@ -121,36 +121,17 @@ export default function ClubHome() {
                 sizes="(max-width: 760px) 100vw, 55vw"
                 className={styles.worldImage}
               />
+              <div className={styles.artCaption}>
+                <p className={styles.artSlogan}>
+                  {translations.heroTag[0]}
+                  <br />
+                  <em>{translations.heroTag[1]}</em>
+                </p>
+                <p className={styles.artImageNote}>{translations.imageNote}</p>
+              </div>
             </div>
-            <div className={styles.worldStamp}>
-              <Signal />
-              <span>
-                {translations.heroTag[0]}
-                <br />
-                <i>{translations.heroTag[1]}</i>
-              </span>
-            </div>
-            <span className={styles.artCaption}>
-              {translations.imageNote}
-              <Arrow />
-            </span>
-            <svg
-              className={styles.heroSparkle}
-              viewBox="0 0 60 60"
-              fill="none"
-              aria-hidden="true"
-            >
-              <path
-                d="M30 0c0 21 9 30 30 30-21 0-30 9-30 30 0-21-9-30-30-30C21 30 30 21 30 0Z"
-                fill="currentColor"
-              />
-            </svg>
           </div>
         </section>
-        <a href="#familia" className={styles.scrollLink}>
-          {translations.scroll}
-          <Arrow down />
-        </a>
         <CultureMarquee language={language} />
 
         <FamiliaSection language={language} />

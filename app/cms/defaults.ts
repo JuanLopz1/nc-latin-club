@@ -10,7 +10,9 @@ export const defaultContent: SiteContent = {
     joinEmail: 'dgonzalezaceved1@ncstudents.niagaracollege.ca',
     instagramUrl: 'https://www.instagram.com/nclat1nclub/',
     logoSrc: '/images/brand/nc-latin-club.png',
-    heroSrc: '/images/latin-night-festival.png',
+    heroSrc: '/images/Banner.png',
+    familiaPhotoSrc: '',
+    familiaPhotoAlt: { en: '', es: '' },
     heroAlt: {
       en: 'Original illustration of an imagined Latin American street festival at night, with music, murals, colourful lights and glowing hummingbirds',
       es: 'Ilustración original de un festival callejero latinoamericano imaginado de noche, con música, murales, luces de colores y colibríes luminosos',

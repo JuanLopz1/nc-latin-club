@@ -362,8 +362,16 @@ export default function AdminPanel() {
       ) : !session.user ? (
         <form className={styles.login} onSubmit={login} data-admin-login>
           <label className={styles.field}>
-            {translations.email}
-            <input type="email" name="email" required autoComplete="username" />
+            {translations.loginIdentifier}
+            <input
+              type="text"
+              name="email"
+              required
+              autoComplete="username"
+              autoCapitalize="none"
+              spellCheck={false}
+              maxLength={254}
+            />
           </label>
           <label className={styles.field}>
             {translations.password}

@@ -123,19 +123,21 @@
   display: none;
 }
 .hero {
-  max-width: 1360px;
+  width: 100%;
   margin: 0 auto;
-  padding: 48px 50px 32px;
+  padding: 0;
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  align-items: center;
-  gap: 30px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: stretch;
+  gap: 0;
   min-height: 720px;
 }
 .heroContent {
   position: relative;
   z-index: 2;
-  padding-bottom: 30px;
+  min-width: 0;
+  align-self: center;
+  padding: 70px 32px 70px max(50px, calc((100vw - 1260px) / 2));
 }
 .eyebrow {
   display: flex;
@@ -233,80 +235,62 @@
   color: var(--gold);
 }
 .heroArt {
-  height: 600px;
+  min-width: 0;
   position: relative;
-  margin-right: 0;
+  align-self: stretch;
+  margin: 0 0 0 -12%;
 }
 .artFrame {
   position: absolute;
-  inset: 14px 0 25px 0;
-  border-radius: 6px;
+  inset: 0;
   overflow: hidden;
-  background: #151d2f;
-  clip-path: polygon(0 0, 88% 0, 100% 12%, 100% 100%, 12% 100%, 0 88%);
+  background: var(--background);
+  clip-path: polygon(23.75% 0, 100% 0, 100% 100%, 0 100%);
+}
+.artFrame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    transparent 35%,
+    color-mix(in srgb, var(--background) 35%, transparent) 55%,
+    color-mix(in srgb, var(--background) 92%, transparent) 82%,
+    var(--background) 100%
+  );
+  pointer-events: none;
 }
 .worldImage {
   object-fit: cover;
   object-position: center 61%;
 }
-.worldStamp {
-  position: absolute;
-  width: 130px;
-  height: 100px;
-  top: -8px;
-  right: -5px;
-  background: var(--terracotta);
-  color: #0c101b;
-  border-radius: 2px;
-  display: grid;
-  place-content: center;
-  padding: 8px;
-  transform: rotate(8deg);
-  box-shadow: 5px 5px 0 #0c101b;
-  text-align: center;
-}
-.worldStamp > svg {
-  width: 20px;
-  height: 20px;
-  margin: 0 auto 3px;
-  color: #0c101b;
-}
-.worldStamp span {
-  font-size: 11px;
-  font-weight: 850;
-  letter-spacing: -0.01em;
-  line-height: 1.4;
-}
-.worldStamp i {
-  font-style: normal;
-  font-weight: 850;
-  font-size: 10px;
-}
 .artCaption {
   position: absolute;
-  bottom: 1px;
-  left: 15px;
-  right: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 9px;
-  letter-spacing: 0.08em;
-  color: #b3bdd1;
+  z-index: 2;
+  bottom: 26px;
+  left: 18%;
+  right: 26px;
 }
-.artCaption > svg {
-  width: 18px;
-  height: 18px;
-  transform: rotate(-35deg);
+.artSlogan {
+  margin: 0;
+  font-family: var(--font-club-display), sans-serif;
+  font-size: clamp(25px, 2.7vw, 38px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--foreground);
+  text-wrap: balance;
 }
-.heroSparkle {
-  position: absolute;
-  width: 45px;
-  height: 45px;
-  left: -21px;
-  bottom: 83px;
+.artSlogan em {
   color: var(--gold);
-  animation: gentleTurn 10s ease-in-out infinite;
+  font-style: normal;
+}
+.artImageNote {
+  margin: 14px 0 0;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
 }
 .scrollLink {
   display: flex;
@@ -396,75 +380,65 @@
   text-align: center;
   font-size: 21px;
 }
-.familiaArt {
-  background: #242849;
-  color: #f6f5ef;
+.familiaPolaroid {
   position: relative;
-  height: 470px;
-  border-radius: 6px;
-  border: 1px solid #666fac;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: center;
-  padding: 40px;
-  overflow: hidden;
+  width: 100%;
+  max-width: 470px;
+  margin: 0;
+  justify-self: center;
+  padding: 16px 16px 25px;
+  background: #fff6e8;
+  color: #20263a;
+  border: 1px solid #e5d7c3;
+  border-radius: 2px;
+  box-shadow: 0 18px 40px #00000040, 0 3px 8px #00000026;
   transform: rotate(2deg);
 }
-.familiaArtLabel {
-  font-size: 10px;
-  font-weight: 750;
-  letter-spacing: 0.2em;
-  margin: 0 0 20px;
-  color: #b3bdd1;
-  z-index: 1;
-}
-.familiaSignal {
-  width: 50px;
-  height: 50px;
-  color: var(--gold);
-  margin-bottom: 27px;
-}
-.familiaArt > p {
-  position: relative;
-  font-size: clamp(36px, 3.8vw, 53px);
-  font-weight: 850;
-  letter-spacing: -0.06em;
-  line-height: 1.08;
-  text-align: left;
-  max-width: 100%;
-  z-index: 1;
-}
-.familiaArt > p em {
-  color: var(--gold);
-}
-.familiaArtFoot {
-  font-size: 9px;
-  letter-spacing: 0.12em;
-  margin-top: 40px;
-  position: relative;
-  z-index: 1;
-}
-.familiaPulse {
+.familiaPolaroid::before {
+  content: '';
   position: absolute;
-  width: 260px;
-  height: 270px;
-  right: -100px;
-  bottom: -50px;
-  color: var(--aqua);
-  transform: rotate(-25deg);
-  opacity: 0.12;
-}
-.familiaPosterLines {
-  position: absolute;
-  inset: 0;
-  background: repeating-linear-gradient(
-    -30deg,
-    transparent 0 65px,
-    #ffffff0c 66px 67px,
-    transparent 68px 132px
-  );
+  z-index: 1;
+  top: -13px;
+  left: calc(50% - 46px);
+  width: 92px;
+  height: 28px;
+  background: #63dccdcb;
+  transform: rotate(-7deg);
   pointer-events: none;
+}
+.familiaPhoto {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #20263a;
+}
+.familiaPhotoImage {
+  object-fit: cover;
+}
+.familiaPhotoCaption {
+  padding: 22px 8px 0;
+  text-align: center;
+}
+.familiaPhotoQuote {
+  margin: 0;
+  font-family: var(--font-club-display), sans-serif;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.12;
+  overflow-wrap: anywhere;
+}
+.familiaPhotoQuote em {
+  color: #a44131;
+}
+.familiaPhotoNote {
+  display: block;
+  margin-top: 16px;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+  line-height: 1.6;
+  color: #635449;
 }
 .roots {
   background: #131d32;
@@ -846,7 +820,6 @@
 }
 @media (max-width: 1100px) {
   .header,
-  .hero,
   .section,
   .rootsInner,
   .footer {
@@ -862,8 +835,9 @@
   .hero h1 {
     font-size: 72px;
   }
-  .heroArt {
-    height: 510px;
+  .heroContent {
+    padding-left: 32px;
+    padding-right: 24px;
   }
   .heroActions {
     gap: 13px;
@@ -882,14 +856,8 @@
   .ribbon > span {
     font-size: 18px;
   }
-  .familiaArt {
-    height: 420px;
-  }
-  .familiaArt {
-    padding: 30px;
-  }
-  .familiaArt > p {
-    font-size: 40px;
+  .familiaPolaroid {
+    padding: 13px 13px 22px;
   }
   .joinPulseLeft,
   .joinPulseRight {
@@ -952,12 +920,12 @@
     display: flex;
     flex-direction: column;
     min-height: 0;
-    padding: 43px 24px 0;
+    padding: 0;
     gap: 0;
   }
   .heroContent {
     width: 100%;
-    padding: 0;
+    padding: 43px 24px 0;
     text-align: left;
   }
   .hero h1 {
@@ -985,39 +953,20 @@
   }
   .heroArt {
     width: 100%;
-    max-width: 550px;
     height: 420px;
     margin: 32px 0 0;
   }
   .artFrame {
-    inset: 0 0 23px;
-    border-radius: 5px;
-  }
-  .worldStamp {
-    width: 110px;
-    height: 85px;
-    top: 0;
-    right: -2px;
-  }
-  .worldStamp span {
-    font-size: 9px;
-  }
-  .worldStamp i {
-    font-size: 8px;
-  }
-  .worldStamp > svg {
-    width: 17px;
-    height: 17px;
-  }
-  .heroSparkle {
-    width: 32px;
-    height: 32px;
-    left: -11px;
-    bottom: 65px;
+    inset: 0;
+    clip-path: polygon(11.25% 0, 100% 0, 100% 100%, 0 100%);
   }
   .artCaption {
-    font-size: 8px;
-    left: 2px;
+    left: 24px;
+    right: 20px;
+    bottom: 22px;
+  }
+  .artSlogan {
+    font-size: clamp(24px, 6vw, 32px);
   }
   .scrollLink {
     padding: 27px 20px 30px;
@@ -1059,20 +1008,13 @@
   .values {
     gap: 9px;
   }
-  .familiaArt {
+  .familiaPolaroid {
     max-width: 430px;
-    width: 100%;
-    height: 390px;
+    width: calc(100% - 12px);
     margin: 0 auto;
   }
-  .familiaArt > p {
-    font-size: 44px;
-  }
-  .familiaArtLabel {
-    margin-top: 0;
-  }
-  .familiaArtFoot {
-    margin-top: 30px;
+  .familiaPhotoQuote {
+    font-size: clamp(28px, 7vw, 38px);
   }
   .roots {
     padding: 67px 0 60px;
@@ -1193,7 +1135,7 @@
   .headerTools {
     gap: 10px;
   }
-  .hero {
+  .heroContent {
     padding-left: 19px;
     padding-right: 19px;
   }
@@ -1205,9 +1147,6 @@
   }
   .heroActions {
     gap: 8px;
-  }
-  .familiaArt > p {
-    font-size: 37px;
   }
   .countryButtons {
     gap: 5px;
@@ -1345,9 +1284,6 @@
 }
 .worldImage {
   transform: translateY(var(--hero-drift, 0px)) scale(1.05);
-}
-.worldStamp {
-  animation: stampFloat 7s ease-in-out infinite;
 }
 .home [data-reveal-state] {
   transition:

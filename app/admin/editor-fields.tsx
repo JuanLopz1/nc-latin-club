@@ -102,7 +102,7 @@ export default function EditorFields({
   if (typeof value === 'string' || typeof value === 'number') {
     const list = parent === 'categories' ? Object.keys(categoryLabels) : choices[key];
     const readonly = ['kind', 'verification', 'basis', 'width', 'height'].includes(key);
-    const image = ['src', 'logoSrc', 'heroSrc'].includes(key);
+    const image = ['src', 'logoSrc', 'heroSrc', 'familiaPhotoSrc'].includes(key);
     return (
       <label className={styles.field}>
         <span>{/^\d+$/.test(key) ? `#${Number(key) + 1}` : label}</span>

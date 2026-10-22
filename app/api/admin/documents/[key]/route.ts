@@ -26,15 +26,23 @@ export async function GET(request: Request, { params }: Context) {
         token,
       )
     ).json();
+    const document = rows[0] ?? {
+      key,
+      draft: defaultContent[key],
+      published: null,
+      version: 0,
+      published_version: 0,
+      updated_at: null,
+    };
+    if (key === 'settings') {
+      document.draft = {
+        familiaPhotoSrc: '',
+        familiaPhotoAlt: { en: '', es: '' },
+        ...document.draft,
+      };
+    }
     return Response.json(
-      rows[0] ?? {
-        key,
-        draft: defaultContent[key],
-        published: null,
-        version: 0,
-        published_version: 0,
-        updated_at: null,
-      },
+      document,
       { headers: { 'Cache-Control': 'no-store' } },
     );
   } catch (error) {

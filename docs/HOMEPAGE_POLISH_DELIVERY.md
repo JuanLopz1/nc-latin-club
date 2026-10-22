@@ -29,7 +29,7 @@ No se añaden dependencias ni se cambian fotografías, colores principales, ruta
 ## Pendientes explícitos
 
 - Cuatro negocios permanecen sin pin: Paz Bakery y La Casita Guanaca operan por pedido; El Camino y Sombra necesitan confirmar un punto público actual. Conservan sus fichas y canales; no se inventan destinos.
-- El póster original de Latin Fiesta no está disponible como archivo del repositorio. Open Graph usa `/images/latin-night-festival.png`, la ilustración existente de la fiesta.
+- El póster original de Latin Fiesta no está disponible como archivo del repositorio. Open Graph usa `/images/Banner.png`, la ilustración existente de la fiesta.
 - Instagram decide la disponibilidad de su iframe. No se promete una integración de API ni una selección de publicaciones sin sus enlaces.
 - Fototeca, envíos con aprobación del admin y Latin Club Spotify están anotados para después. La playlist oficial necesita su enlace; no se crea una playlist provisional.
 - Portal editable, fotos culturales autorizadas y revisión comunitaria de los perfiles mantienen su alcance posterior.

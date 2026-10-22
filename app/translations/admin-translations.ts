@@ -5,6 +5,7 @@ export const adminTranslations = {
     intro: 'Keep the stories, plans and local favourites up to date.',
     loading: 'Loading the workspace…',
     email: 'Email',
+    loginIdentifier: 'Username or email',
     password: 'Password',
     login: 'Sign in',
     logout: 'Sign out',
@@ -66,6 +67,7 @@ export const adminTranslations = {
     intro: 'Mantén al día las historias, los planes y los favoritos locales.',
     loading: 'Cargando el espacio de trabajo…',
     email: 'Correo',
+    loginIdentifier: 'Usuario o correo',
     password: 'Contraseña',
     login: 'Entrar',
     logout: 'Cerrar sesión',
@@ -134,6 +136,11 @@ export const fieldLabels: Record<string, [string, string]> = {
   logoSrc: ['Club logo', 'Logo del club'],
   heroSrc: ['Homepage illustration', 'Ilustración del inicio'],
   heroAlt: ['Illustration description', 'Descripción de la ilustración'],
+  familiaPhotoSrc: ['Familia Polaroid photo', 'Foto Polaroid de Nuestra Familia'],
+  familiaPhotoAlt: [
+    'Familia photo description',
+    'Descripción de la foto de Nuestra Familia',
+  ],
   spotifyUrl: [
     'Spotify album, playlist or track',
     'Álbum, playlist o canción de Spotify',

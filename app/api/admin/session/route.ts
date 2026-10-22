@@ -34,7 +34,7 @@ export async function POST(request: Request) {
       !email.trim() ||
       !password
     )
-      throw new CmsError(400, 'Email and password are required.');
+      throw new CmsError(400, 'Username or email and password are required.');
     const { user, role } = await signIn(email.trim(), password, request);
     return Response.json(
       { configured: true, user, role },

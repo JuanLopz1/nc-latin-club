@@ -4,6 +4,10 @@ create table if not exists public.cms_members (
   user_id uuid primary key references auth.users(id) on delete cascade,
   role text not null check (role in ('admin','editor'))
 );
+alter table public.cms_members add column if not exists username text
+  check (username ~ '^[a-z0-9][a-z0-9_.-]{2,31}$');
+create unique index if not exists cms_members_username_unique
+  on public.cms_members (username) where username is not null;
 create or replace function public.cms_role() returns text
 language sql stable security definer set search_path = ''
 as $$ select role from public.cms_members where user_id=auth.uid() $$;

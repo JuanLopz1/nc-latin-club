@@ -104,6 +104,15 @@ export function validateContent(key: ContentKey, input: unknown): void {
       'Use a local or uploaded image.',
     );
     localized(s.heroAlt, 'hero alt text');
+    if (s.familiaPhotoSrc) {
+      invariant(imagePath(s.familiaPhotoSrc), 'Use a local or uploaded familia photo.');
+      localized(s.familiaPhotoAlt, 'familia photo description');
+    } else {
+      invariant(
+        s.familiaPhotoSrc === undefined || s.familiaPhotoSrc === '',
+        'Invalid familia photo.',
+      );
+    }
     localized(s.spotifyTitle, 'Spotify title');
     localized(s.spotifyDescription, 'Spotify description');
     for (const value of [

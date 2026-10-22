@@ -59,7 +59,7 @@ export async function backendFetch(
         details.msg === 'Invalid login credentials' ||
         details.error_description === 'Invalid login credentials'
       )
-        throw new CmsError(401, 'Email or password could not be verified.');
+        throw new CmsError(401, 'Username, email or password could not be verified.');
       if (code === 'email_provider_disabled')
         throw new CmsError(
           503,

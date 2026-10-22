@@ -22,7 +22,7 @@ export async function generateMetadata({
     `${entry.title[locale]} | NC LATIN CLUB`,
     entry.description[locale],
     `/events/${entry.slug}`,
-    entry.id === 'latin-fiesta-2026' ? '/images/latin-night-festival.png' : undefined,
+    entry.id === 'latin-fiesta-2026' ? '/images/Banner.png' : undefined,
     locale,
   );
 }

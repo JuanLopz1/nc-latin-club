@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import UiIcon from './ui-icon';
 import type { Language } from '../translations/language';
 import { useContent } from './content-context';
@@ -11,8 +12,13 @@ export default function FamiliaSection({
   language: Language;
   standalone?: boolean;
 }) {
-  const { home: homeTranslations } = useContent();
+  const { home: homeTranslations, gallery, settings } = useContent();
   const translations = homeTranslations[language];
+  const photo = gallery.photos[0];
+  const photoSrc = settings.familiaPhotoSrc || photo?.image.src || settings.heroSrc;
+  const photoAlt = settings.familiaPhotoSrc
+    ? settings.familiaPhotoAlt?.[language] || ''
+    : photo?.image.alt[language] || settings.heroAlt[language];
   const Heading = standalone ? 'h1' : 'h2';
   return (
     <section
@@ -42,38 +48,26 @@ export default function FamiliaSection({
           ))}
         </div>
       </div>
-      <div className={styles.familiaArt} data-reveal>
-        <svg
-          className={styles.familiaPulse}
-          viewBox="0 0 240 320"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="12"
-          aria-hidden="true"
-        >
-          <path d="M20 135v50m40-95v140m40-200v260m40-225v190m40-150v110m40-75v40" />
-        </svg>
-        <span className={styles.familiaArtLabel}>BIENVENIDOS</span>
-        <svg
-          className={styles.familiaSignal}
-          viewBox="0 0 64 64"
-          fill="none"
-          aria-hidden="true"
-        >
-          <path
-            d="m32 2 7 19 19-7-15 18 15 18-19-7-7 19-7-19-19 7 15-18L6 14l19 7Z"
-            fill="currentColor"
+      <figure className={styles.familiaPolaroid} data-reveal>
+        <div className={styles.familiaPhoto}>
+          <Image
+            src={photoSrc}
+            alt={photoAlt}
+            fill
+            unoptimized={Boolean(settings.familiaPhotoSrc || photo)}
+            sizes="(max-width: 760px) 85vw, (max-width: 1100px) 40vw, 440px"
+            className={styles.familiaPhotoImage}
           />
-          <circle cx="32" cy="32" r="6" fill="var(--background)" />
-        </svg>
-        <p>
-          {translations.familiaQuote[0]}
-          <br />
-          <em>{translations.familiaQuote[1]}</em>
-        </p>
-        <span className={styles.familiaArtFoot}>{translations.familiaNote}</span>
-        <span className={styles.familiaPosterLines} aria-hidden="true" />
-      </div>
+        </div>
+        <figcaption className={styles.familiaPhotoCaption}>
+          <p className={styles.familiaPhotoQuote}>
+            {translations.familiaQuote[0]}
+            <br />
+            <em>{translations.familiaQuote[1]}</em>
+          </p>
+          <span className={styles.familiaPhotoNote}>{translations.familiaNote}</span>
+        </figcaption>
+      </figure>
     </section>
   );
 }

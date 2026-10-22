@@ -12,6 +12,21 @@ Abre **SQL Editor**, crea una consulta y ejecuta el contenido completo de [supab
 
 ## 3. Tu cuenta de administrador
 
+El acceso admite correo o nombre de usuario. En proyectos existentes, ejecuta
+`supabase/admin-usernames.sql` para activar los nombres únicos; las cuentas sin nombre
+siguen entrando con correo. El nombre se guarda en `cms_members.username` en minúsculas
+(3 a 32 caracteres, letras, números, punto, guion o guion bajo).
+
+Para crear una cuenta nueva con permisos de administrador, configura de forma privada
+`SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY` y `CMS_NEW_USER_PASSWORD` en el entorno local.
+Después ejecuta `node scripts/create-admin-user.mjs kurotodev kurotodev@gmail.com`.
+También puedes cargar las claves desde `.env.local` usando
+`node --env-file=.env.local scripts/create-admin-user.mjs kurotodev kurotodev@gmail.com`.
+La contraseña no debe incluirse en el código ni como argumento del comando. El script
+crea la cuenta y su membresía; no cambia contraseñas de cuentas existentes ni envía correos.
+Si la membresía falla después de crear la cuenta, completa esa membresía en Supabase.
+Para una cuenta ya existente, asigna `username` a su fila de `cms_members` desde Supabase.
+
 En **Authentication → Users → Add user → Create new user**, crea tu cuenta con tu correo y una contraseña que conozcas. Confirma el correo desde el Dashboard si utilizas creación manual. Después ejecuta esta consulta en SQL Editor, sustituyendo solo el correo:
 
 ```sql

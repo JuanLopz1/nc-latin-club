@@ -71,7 +71,36 @@ export async function requireSession(request: Request) {
   await setSession(tokens, externalProtocol(request) === 'https');
   return session;
 }
-export async function signIn(email: string, password: string, request: Request) {
+async function resolveLoginEmail(identifier: string): Promise<string> {
+  const login = identifier.trim();
+  if (login.includes('@')) return login;
+  const username = login.toLowerCase();
+  const invalidLogin = () =>
+    new CmsError(401, 'Username, email or password could not be verified.');
+  if (!/^[a-z0-9][a-z0-9_.-]{2,31}$/.test(username)) throw invalidLogin();
+  const members = await (
+    await backendFetch(
+      `/rest/v1/cms_members?username=eq.${encodeURIComponent(username)}&select=user_id&limit=1`,
+      {},
+      undefined,
+      true,
+    )
+  ).json();
+  const userId = members[0]?.user_id;
+  if (typeof userId !== 'string') throw invalidLogin();
+  const user = await (
+    await backendFetch(
+      `/auth/v1/admin/users/${encodeURIComponent(userId)}`,
+      {},
+      undefined,
+      true,
+    )
+  ).json();
+  if (typeof user.email !== 'string') throw invalidLogin();
+  return user.email;
+}
+export async function signIn(identifier: string, password: string, request: Request) {
+  const email = await resolveLoginEmail(identifier);
   const tokens = (await (
     await backendFetch('/auth/v1/token?grant_type=password', {
       method: 'POST',
