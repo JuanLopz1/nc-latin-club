@@ -1,4 +1,5 @@
 'use client';
+import UiIcon from './ui-icon';
 import { useEffect, useRef, type ReactNode } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -37,6 +38,6 @@ export default function SiteShell({ children }: { children: ReactNode }) {
       </div>
     </header></div>
     {children}
-    <footer className={s.footer}><div className={s.footerTop}><Link href="/" className={s.brand}><Brand /></Link><p>{t.footerLine}</p><a href="#top" className={s.textLink}>{t.backTop}<span aria-hidden="true">↑</span></a></div><div className={s.footerMotion}><MotionControl language={language} /></div><div className={s.footerBottom}><span>© 2026 NC Latin Club</span><span>{t.footerNote}</span><div><button onClick={() => setLanguage('en')} aria-pressed={language === 'en'}>English</button><span aria-hidden="true">/</span><button onClick={() => setLanguage('es')} aria-pressed={language === 'es'}>Español</button></div></div></footer>
+    <footer className={s.footer}><div className={s.footerTop}><Link href="/" className={s.brand}><Brand /></Link><p>{t.footerLine}</p><a href="#top" className={s.textLink}>{t.backTop}<span aria-hidden="true"><UiIcon name="up" /></span></a></div><div className={s.footerMotion}><MotionControl language={language} /></div><div className={s.footerBottom}><span>© 2026 NC Latin Club</span><span>{t.footerNote}</span><div><button onClick={() => setLanguage('en')} aria-pressed={language === 'en'}>English</button><span aria-hidden="true">/</span><button onClick={() => setLanguage('es')} aria-pressed={language === 'es'}>Español</button></div></div></footer>
   </div>;
 }

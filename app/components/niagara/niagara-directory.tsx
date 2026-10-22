@@ -1,4 +1,5 @@
 'use client';
+import UiIcon from '../ui-icon';
 import { getReducedMotion } from '../motion-preference';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
@@ -29,7 +30,7 @@ export default function NiagaraDirectory({ places }: { places: readonly Place[] 
     });
   };
   return <main id="main-content" tabIndex={-1} className={s.page}>
-    <div className={s.intro}><Link href="/" className={s.back}>← NC LATIN CLUB</Link><p className={s.eyebrow}>NIAGARA / LOCAL CONNECTIONS</p><h1>{t.title}<span aria-hidden="true">✦</span></h1><p>{t.intro}</p></div>
+    <div className={s.intro}><Link href="/" className={s.back}><UiIcon name="left" /> NC LATIN CLUB</Link><p className={s.eyebrow}>NIAGARA / LOCAL CONNECTIONS</p><h1>{t.title}<span aria-hidden="true"><UiIcon name="sparkle" /></span></h1><p>{t.intro}</p></div>
     <div className={s.filters}>
       <label className={s.search}><span>{t.search}</span><input type="search" value={filters.query} onChange={e => update('query', e.target.value)} placeholder={language === 'en' ? 'Try pupusas, bakery, Welland…' : 'Prueba pupusas, panadería, Welland…'} /></label>
       {(['city', 'category', 'mode'] as const).map(key => <PlaceFilter key={key} name={key} label={t[key]} options={placeOptions(places, key)} selected={filters[key]} language={language} onChange={values => update(key, values)} optionLabel={v => key === 'category' ? categoryLabels[v]?.[language] ?? v : key === 'mode' ? modeLabels[v]?.[language] ?? v : v} />)}
@@ -39,7 +40,7 @@ export default function NiagaraDirectory({ places }: { places: readonly Place[] 
     <p className={s.count} role="status">{cards.length} {t.results}<span aria-hidden="true"> / </span>{pinnedCount} {t.pins}<span aria-hidden="true"> / </span>{markerCount} {t.markers}{cards.length > pinnedCount && <><span aria-hidden="true"> / </span>{cards.length - pinnedCount} {t.noPinCount}</>}{selected && ` · ${t.selected}: ${selected.name}`}</p>
     <p className={s.mapKey}>{t.mapKey}</p>
     <div className={s.layout}>
-      <section className={s.mapColumn} aria-label={language === 'en' ? 'Explore the map' : 'Explora el mapa'}><div className={s.mapHeading}><strong>NIAGARA, ON</strong><button onClick={() => setReset(v => v + 1)}>{t.reset} ↗</button></div><NiagaraMap places={cards} selectedId={selected?.id ?? null} language={language} onSelect={id => reveal(id, true)} reset={reset} /><p className={s.mapHint}>{t.hint}</p><p className={s.based}>{t.based}</p></section>
+      <section className={s.mapColumn} aria-label={language === 'en' ? 'Explore the map' : 'Explora el mapa'}><div className={s.mapHeading}><strong>NIAGARA, ON</strong><button onClick={() => setReset(v => v + 1)}>{t.reset} <UiIcon name="external" /></button></div><NiagaraMap places={cards} selectedId={selected?.id ?? null} language={language} onSelect={id => reveal(id, true)} reset={reset} /><p className={s.mapHint}>{t.hint}</p><p className={s.based}>{t.based}</p></section>
       <section className={s.directory} aria-label={language === 'en' ? 'Business directory' : 'Directorio de negocios'}>
         {!cards.length && <p className={s.empty}>{t.noResults}</p>}
         <div className={s.cards}>{cards.map((p, i) => <PlaceCard key={p.id} place={p} index={i} language={language} expanded={selected?.id === p.id} onToggle={() => reveal(p.id)} registerButton={node => { if (node) cardButtons.current.set(p.id, node); else cardButtons.current.delete(p.id); }} />)}</div>

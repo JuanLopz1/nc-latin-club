@@ -1,4 +1,5 @@
 'use client';
+import UiIcon from '../ui-icon';
 import Link from 'next/link';
 import { useAgendaState, useSiteLanguage } from '../site-context';
 import { entryDate, eventDateTime, formatCalendarDate, formatEventTime, formatEntryWhen, initialAgendaState } from './agenda-dates';
@@ -17,7 +18,7 @@ export default function EventDetail({ entry }: { entry: AgendaEntry }) {
   const { language } = useSiteLanguage(), { state, setState } = useAgendaState(), now = useAgendaClock();
   const t = eventsCopy[language], date = entryDate(entry);
   return <main id="main-content" tabIndex={-1} className={s.detail}>
-    <Link className={s.back} href="/events" onClick={() => { if (!state) setState(initialAgendaState(now ?? new Date())); }}><span aria-hidden="true">←</span>{t.back}</Link>
+    <Link className={s.back} href="/events" onClick={() => { if (!state) setState(initialAgendaState(now ?? new Date())); }}><span aria-hidden="true"><UiIcon name="left" /></span>{t.back}</Link>
     <div className={s.heading}><p className={s.eyebrow}>{t.categories[entry.category]}</p><h1>{entry.title[language]}</h1><p className={s.description}>{entry.description[language]}</p></div>
     <div className={s.layout}>
       <div className={s.media}>
@@ -42,8 +43,8 @@ export default function EventDetail({ entry }: { entry: AgendaEntry }) {
         </dl>
         {entry.note && <div className={s.notice}><p>{entry.note[language]}</p></div>}
         {entry.kind === 'event' && entry.dateSpan && !entry.sessions?.length && <p className={s.zone}>{language === 'en' ? 'Hours not published · check with the organizer.' : 'Horario no publicado · consulta al organizador.'}</p>}
-        {entry.kind === 'event' && !!entry.sessions?.length && <section className={s.schedule} aria-label={language === 'en' ? 'Published schedule' : 'Programa publicado'}><h2>{language === 'en' ? 'Published schedule' : 'Programa publicado'}</h2><ul>{entry.sessions.map((session, i) => <li key={i}>{session.title && <strong>{session.title[language]}</strong>}<p><time dateTime={session.startsAt}>{formatEventTime(session.startsAt, language)}</time>{session.endsAt && <> — <time dateTime={session.endsAt}>{formatEventTime(session.endsAt, language, { timeStyle: 'short' })}</time></>}</p>{!session.endsAt && <p>{language === 'en' ? 'End time not published.' : 'Hora de cierre no publicada.'}</p>}{session.registrationUrl && entry.status !== 'cancelled' && <a href={session.registrationUrl} target="_blank" rel="noopener noreferrer" aria-label={`${t.register}: ${session.title?.[language] ?? entry.title[language]} (${t.external})`}>{t.register} ↗</a>}</li>)}</ul></section>}
-        {!!entry.links?.length && <div className={s.moreLinks}>{entry.links.map(link => <a key={link.url} href={link.url} target="_blank" rel="noopener noreferrer" aria-label={`${link.label[language]} (${t.external})`}>{link.label[language]} ↗</a>)}</div>}
+        {entry.kind === 'event' && !!entry.sessions?.length && <section className={s.schedule} aria-label={language === 'en' ? 'Published schedule' : 'Programa publicado'}><h2>{language === 'en' ? 'Published schedule' : 'Programa publicado'}</h2><ul>{entry.sessions.map((session, i) => <li key={i}>{session.title && <strong>{session.title[language]}</strong>}<p><time dateTime={session.startsAt}>{formatEventTime(session.startsAt, language)}</time>{session.endsAt && <> — <time dateTime={session.endsAt}>{formatEventTime(session.endsAt, language, { timeStyle: 'short' })}</time></>}</p>{!session.endsAt && <p>{language === 'en' ? 'End time not published.' : 'Hora de cierre no publicada.'}</p>}{session.registrationUrl && entry.status !== 'cancelled' && <a href={session.registrationUrl} target="_blank" rel="noopener noreferrer" aria-label={`${t.register}: ${session.title?.[language] ?? entry.title[language]} (${t.external})`}>{t.register} <UiIcon name="external" /></a>}</li>)}</ul></section>}
+        {!!entry.links?.length && <div className={s.moreLinks}>{entry.links.map(link => <a key={link.url} href={link.url} target="_blank" rel="noopener noreferrer" aria-label={`${link.label[language]} (${t.external})`}>{link.label[language]} <UiIcon name="external" /></a>)}</div>}
         {entry.kind === 'event' ? <>
           <p className={s.zone}>{t.zone}</p>
           <AddToCalendar entry={entry} language={language} />

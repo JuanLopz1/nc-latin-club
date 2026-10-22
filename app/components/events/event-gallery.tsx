@@ -1,4 +1,5 @@
 'use client';
+import UiIcon from '../ui-icon';
 import { getReducedMotion } from '../motion-preference';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
@@ -39,13 +40,13 @@ function Gallery({ images, language }: { images: readonly EntryImage[]; language
     </div>
     {images.length > 1 && <>
       <div className={s.controls}>
-        <button type="button" aria-label={t.previousImage} disabled={active === 0} onClick={() => goTo(active - 1)}>←</button>
+        <button type="button" aria-label={t.previousImage} disabled={active === 0} onClick={() => goTo(active - 1)}><UiIcon name="left" /></button>
         <p aria-live="polite" aria-atomic="true">{t.image} {active + 1} / {images.length}</p>
-        <button type="button" aria-label={t.nextImage} disabled={active === images.length - 1} onClick={() => goTo(active + 1)}>→</button>
+        <button type="button" aria-label={t.nextImage} disabled={active === images.length - 1} onClick={() => goTo(active + 1)}><UiIcon name="right" /></button>
       </div>
       <div className={s.thumbnails}>
         {images.map((image, index) => <button type="button" key={`${image.src}-${index}`} aria-label={`${t.viewImage} ${index + 1}: ${image.alt[language]}`} aria-pressed={active === index} onClick={() => goTo(index)}>
-          {failed.has(index) ? <span aria-hidden="true">✧</span> : <Image src={image.src} unoptimized={image.src.startsWith('/api/media/')} width={72} height={52} alt="" loading="lazy" />}
+          {failed.has(index) ? <span aria-hidden="true"><UiIcon name="sparkle" /></span> : <Image src={image.src} unoptimized={image.src.startsWith('/api/media/')} width={72} height={52} alt="" loading="lazy" />}
         </button>)}
       </div>
     </>}

@@ -40,6 +40,8 @@ button, summary {
   font: inherit;
 }
 
+.ui-icon { display: inline-block; width: 1em; height: 1em; min-width: 1em; vertical-align: -.15em; flex-shrink: 0; }
+
 ::selection {
   background: var(--gold);
   color: #0c101b;

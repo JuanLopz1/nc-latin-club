@@ -1,3 +1,4 @@
+import UiIcon from '../ui-icon';
 import Link from 'next/link';
 import type { Language } from '../home-copy';
 import s from './explore.module.css';
@@ -43,7 +44,7 @@ export default function CanadaConnections({ language }: { language: Language }) 
         className={s.connectionCard} data-featured-country={destination.slug}
       >
         <span className={s.connectionArt} data-reveal aria-hidden="true" style={{ backgroundImage: `url(/images/roots/${destination.slug}.svg)` }} />
-        <span className={s.connectionNumber} aria-hidden="true">0{index + 1} / ✦</span>
+        <span className={s.connectionNumber} aria-hidden="true">0{index + 1} / <UiIcon name="sparkle" /></span>
         <h4>{destination.name[language]}</h4>
         <p>{destination.invitation[language]}</p>
         <span className={s.connectionLink} data-reveal>{t.explore} {destination.name[language]}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" /></svg></span>

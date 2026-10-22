@@ -1,4 +1,5 @@
 'use client';
+import UiIcon from '../ui-icon';
 import type { KeyboardEvent } from 'react';
 import { useAgendaState, useSiteLanguage } from '../site-context';
 import { useContent, emailHref } from '../content-context';
@@ -33,7 +34,7 @@ export default function EventsAgenda({ entries }: { entries: readonly AgendaEntr
     selectTab(next); document.getElementById(`scope-${next}`)?.focus();
   };
   return <main className={s.agenda} id="main-content" tabIndex={-1}>
-    <div className={s.intro}><div><p className={s.eyebrow}>{t.eyebrow}</p><h1 id="agenda-title">{t.title[0]}<br /><em>{t.title[1]}</em></h1></div><p className={s.body}>{t.body}</p><span className={s.signal} aria-hidden="true">✧</span></div>
+    <div className={s.intro}><div><p className={s.eyebrow}>{t.eyebrow}</p><h1 id="agenda-title">{t.title[0]}<br /><em>{t.title[1]}</em></h1></div><p className={s.body}>{t.body}</p><span className={s.signal} aria-hidden="true"><UiIcon name="sparkle" /></span></div>
     {!state || !now ? <p className={s.loading} role="status">{t.loading}</p> : <>
       <div className={s.tabs} role="tablist" aria-label={t.scopeLabel}>{(['events', 'culture'] as const).map(tab => <button key={tab} id={`scope-${tab}`} type="button" role="tab" aria-controls="agenda-panel" aria-selected={scope === tab} tabIndex={scope === tab ? 0 : -1} onKeyDown={tabKeys} onClick={() => selectTab(tab)}>{t.scopes[tab]}</button>)}</div>
       <section role="tabpanel" id="agenda-panel" aria-labelledby={`scope-${scope}`} tabIndex={0}>
@@ -48,7 +49,7 @@ export default function EventsAgenda({ entries }: { entries: readonly AgendaEntr
           {state.view === 'calendar' && <h2>{t.on} {formatCalendarDate(state.selectedDate, language, { dateStyle: 'full' })}</h2>}
           <p className={s.resultStatus} role="status">{shown.length} {countLabel(shown.length)}{state.view === 'calendar' ? ` · ${formatCalendarDate(state.selectedDate, language)}` : culture ? ` · ${year}` : ''}</p>
           {shown.length ? <div className={s.cards}>{shown.map(entry => <EventCard key={entry.slug} entry={entry} language={language} />)}</div> : <div className={s.empty}>
-            <span className={s.emptySignal} aria-hidden="true">✧</span><div><h2>{!culture && !selectedCategories.length ? t.noCategories : state.view === 'calendar' ? t.noDay : state.period === 'past' ? t.noPast : emptyCategory ? t.emptyTitles[emptyCategory] : t.noMatches}</h2><p>{emptyCategory ? t.emptyBodies[emptyCategory] : t.filterHint}</p><a href={joinEmailHref}>{t.suggest}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M5 19 19 5M9 5h10v10" /></svg></a></div>
+            <span className={s.emptySignal} aria-hidden="true"><UiIcon name="sparkle" /></span><div><h2>{!culture && !selectedCategories.length ? t.noCategories : state.view === 'calendar' ? t.noDay : state.period === 'past' ? t.noPast : emptyCategory ? t.emptyTitles[emptyCategory] : t.noMatches}</h2><p>{emptyCategory ? t.emptyBodies[emptyCategory] : t.filterHint}</p><a href={joinEmailHref}>{t.suggest}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M5 19 19 5M9 5h10v10" /></svg></a></div>
           </div>}
         </div>
         <p className={s.zone}>{culture ? t.emptyBodies['latin-dates'] : t.zone}</p>
