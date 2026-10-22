@@ -7,6 +7,7 @@ export const canadaConnectionsTranslations = {
     explore: 'Discover',
     note: '2021 Census · Country of birth, not ancestry or current nationality.',
     source: 'Statistics Canada',
+    photos: 'Photos',
   },
   es: {
     eyebrow: 'RAÍCES LATINAS EN CANADÁ',
@@ -16,5 +17,6 @@ export const canadaConnectionsTranslations = {
     explore: 'Descubrir',
     note: 'Censo 2021 · País de nacimiento, no ascendencia ni nacionalidad actual.',
     source: 'Statistics Canada',
+    photos: 'Fotos',
   },
 } as const;

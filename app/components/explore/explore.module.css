@@ -1189,45 +1189,41 @@
   isolation: isolate;
   overflow: hidden;
   min-width: 0;
-  min-height: 315px;
+  min-height: 470px;
   display: flex;
   flex-direction: column;
-  padding: 28px;
+  padding: 210px 28px 28px;
   border: 1px solid #54708b;
   border-radius: 16px;
-  background: linear-gradient(145deg, #263c54, #122137);
+  background: var(--background);
   text-decoration: none;
   transition:
     transform 0.2s ease,
     border-color 0.2s ease,
     box-shadow 0.2s ease;
 }
-.connectionCard:nth-child(2) {
-  background: linear-gradient(145deg, #344441, #132b33);
-}
-.connectionCard:nth-child(3) {
-  background: linear-gradient(145deg, #403d4b, #17293e);
+.connectionCard::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 12%,
+    color-mix(in srgb, var(--background) 25%, transparent) 32%,
+    color-mix(in srgb, var(--background) 94%, transparent) 62%,
+    var(--background) 100%
+  );
+  pointer-events: none;
 }
 .connectionArt {
   position: absolute;
-  z-index: -1;
-  inset: 0 -15% 0 15%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.23;
+  z-index: -2;
+  inset: 0;
+  object-fit: cover;
+  object-position: center 25%;
   pointer-events: none;
-  transform: rotate(-8deg);
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
-}
-.connectionNumber {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  color: #76dbe3;
-  margin-bottom: 68px;
+  transition: transform 0.3s ease;
 }
 .connectionCard h4 {
   font-weight: 750;
@@ -1236,6 +1232,7 @@
   letter-spacing: -0.045em;
   color: #fff3cc;
   margin-bottom: 15px;
+  margin-top: auto;
 }
 .connectionCard p {
   font-size: 0.8rem;
@@ -1267,8 +1264,18 @@
   box-shadow: 0 15px 35px #030a1540;
 }
 .connectionCard:hover .connectionArt {
-  opacity: 0.35;
-  transform: rotate(0deg) scale(1.05);
+  transform: scale(1.04);
+}
+.connections .connectionCredits {
+  max-width: none;
+  margin-top: 16px;
+  font-size: 11px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+.connectionCredits a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 .connections .connectionsSource {
   max-width: none !important;
@@ -1287,7 +1294,7 @@
 }
 @media (max-width: 900px) {
   .connectionCard {
-    padding: 23px 20px;
+    padding: 210px 20px 23px;
   }
   .connectionCard h4 {
     font-weight: 750;
@@ -1306,11 +1313,8 @@
     grid-template-columns: 1fr;
   }
   .connectionCard {
-    min-height: 230px;
-    padding: 25px;
-  }
-  .connectionNumber {
-    margin-bottom: 35px;
+    min-height: 420px;
+    padding: 200px 25px 25px;
   }
   .connectionCard h4 {
     font-weight: 750;
@@ -1320,8 +1324,7 @@
     max-width: 80% !important;
   }
   .connectionArt {
-    inset: -25% -15% -25% 35%;
-    opacity: 0.28;
+    object-position: center 22%;
   }
   .connections .connectionsSource {
     font-size: 0.7rem;
