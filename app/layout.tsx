@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { SiteProvider } from "./components/site-context";
 import SiteShell from "./components/site-shell";
@@ -19,6 +20,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const clubDisplay = localFont({
+  src: './fonts/bricolage-grotesque-latin.woff2',
+  variable: '--font-club-display',
+  weight: '800',
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
   ...pageMetadata('NC LATIN CLUB', 'Latin roots. Niagara energy. A place to belong.', '/'),
   metadataBase: new URL(siteOrigin),
@@ -30,7 +38,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       data-motion="full"
       data-scroll-behavior="smooth"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${clubDisplay.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Suspense fallback={<p style={{padding:32}}>NC LATIN CLUB · Loading / Cargando…</p>}>

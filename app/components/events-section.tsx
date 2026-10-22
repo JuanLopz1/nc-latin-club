@@ -63,8 +63,10 @@ export default function EventsSection({ language }: { language: Language }) {
                 {event.organizer && <div><dt>{t.organizer}</dt><dd>{event.organizer[language]}</dd></div>}
                 {event.admission && <div><dt>{t.admission}</dt><dd>{event.admission[language]}</dd></div>}
               </dl>
-              {event.registrationUrl && event.status !== 'cancelled' && <a className={s.joinLink} href={event.registrationUrl} target="_blank" rel="noopener noreferrer" aria-label={`${t.registration}: ${event.title[language]} (${statusCopy.external})`}>{t.registration}<ActionArrow /></a>}
-              <AddToCalendar entry={event} language={language} />
+              <div className={s.cardActions}>
+                {event.registrationUrl && event.status !== 'cancelled' && <a className={s.joinLink} href={event.registrationUrl} target="_blank" rel="noopener noreferrer" aria-label={`${t.registration}: ${event.title[language]} (${statusCopy.external})`}>{t.registration}<ActionArrow /></a>}
+                <AddToCalendar entry={event} language={language} />
+              </div>
             </article>
           ))}
         </div>

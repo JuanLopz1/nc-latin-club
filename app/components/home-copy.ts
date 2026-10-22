@@ -4,7 +4,7 @@ export const copy = {
   en: {
     skip: "Skip to content", menu: "Menu", close: "Close menu", language: "Change language",
     nav: ["Our Familia", "Events", "Our Roots", "Latin Niagara", "Find your place"],
-    location: "Sponsored by NCSAC", heroLabel: "CULTURE. CONNECTION. NIAGARA.",
+    location: "Sponsored by NCSAC",
     heroTitle: ["NC LATIN", "CLUB"], heroTag: ["LATIN ROOTS.", "NIAGARA ENERGY."], heroText: "Latin roots. Niagara energy. A place to belong. Bring your culture, discover something new and find your people.",
     heroAction: "Join us", heroSecondary: "Stay in the loop", instagramPending: "Instagram link coming soon", emailHint: "Opens your email app with a message ready to send", imageNote: "An imagined night. A real community.", scroll: "Follow the energy",
     ribbon: ["Culture", "Music", "Connection", "Familia"],
@@ -39,7 +39,7 @@ export const copy = {
   es: {
     skip: "Saltar al contenido", menu: "Menú", close: "Cerrar menú", language: "Cambiar idioma",
     nav: ["Nuestra Familia", "Eventos", "Nuestras Raíces", "Niagara Latino", "Encuentra tu lugar"],
-    location: "Patrocinado por NCSAC", heroLabel: "CULTURA. CONEXIÓN. NIAGARA.",
+    location: "Patrocinado por NCSAC",
     heroTitle: ["NC LATIN", "CLUB"], heroTag: ["RAÍCES LATINAS.", "ENERGÍA EN NIAGARA."], heroText: "Raíces latinas. Energía en Niagara. Un lugar al que pertenecer. Trae tu cultura, descubre algo nuevo y encuentra a tu gente.",
     heroAction: "Únete", heroSecondary: "Síguenos en Instagram", instagramPending: "Pronto, el enlace de Instagram", emailHint: "Abre tu aplicación de correo con un mensaje listo para enviar", imageNote: "Una noche imaginada. Una comunidad real.", scroll: "Sigue la energía",
     ribbon: ["Cultura", "Música", "Conexión", "Familia"],

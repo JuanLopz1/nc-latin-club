@@ -19,7 +19,9 @@ function sameShape(template: unknown, value: unknown, label: string) {
   if (typeof template === 'string') { invariant(typeof value === 'string' && value.trim(), `Text required: ${label}`); return; }
   if (Array.isArray(template)) { invariant(Array.isArray(value) && value.length === template.length, `Keep ${template.length} items: ${label}`); template.forEach((item,i) => sameShape(item,value[i],`${label}.${i}`)); return; }
   invariant(value && typeof value === 'object' && !Array.isArray(value), `Invalid field: ${label}`);
-  const source = template as Record<string,unknown>, target = value as Record<string,unknown>;
+  const source = template as Record<string,unknown>, target = {...value as Record<string,unknown>};
+  // Accept older homepage snapshots without restoring the retired welcome label.
+  if (label === 'home.en' || label === 'home.es') delete target.heroLabel;
   invariant(Object.keys(target).length === Object.keys(source).length, `Unknown or missing fields: ${label}`);
   for (const key of Object.keys(source)) sameShape(source[key], target[key], `${label}.${key}`);
 }

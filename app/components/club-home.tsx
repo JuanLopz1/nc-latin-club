@@ -12,6 +12,7 @@ import SpotifySection from './spotify-section';
 import RootsTeaser from "./explore/roots-teaser";
 import NiagaraTeaser from "./niagara/niagara-teaser";
 import EventsSection from "./events-section";
+import HeroWordmark from './hero-wordmark';
 import { useSiteLanguage } from "./site-context";
 import s from "./club-home.module.css";
 
@@ -44,8 +45,7 @@ export default function ClubHome() {
     <main id="main-content" tabIndex={-1}>
       <section className={s.hero} aria-labelledby="hero-title">
         <div className={s.heroCopy}>
-          <p className={s.eyebrow}><span className={s.eyebrowDot} />{t.heroLabel}</p>
-          <h1 id="hero-title">{t.heroTitle[0]}{" "}<br /><em>{t.heroTitle[1]}</em><Signal className={s.titleSignal} /></h1>
+          <h1 id="hero-title">{t.heroTitle[0]}{" "}<br /><em><HeroWordmark word={t.heroTitle[1]} language={language} /></em></h1>
           <p className={s.heroBody}>{t.heroText}</p>
           <div className={s.heroActions} data-reveal><a href={joinEmailHref} className={s.button} title={t.emailHint}>{t.heroAction}<Arrow /></a>{instagramAction}</div>
           <div className={s.heroFoot} data-reveal><Signal className={s.smallSignal} />{t.location}</div>
