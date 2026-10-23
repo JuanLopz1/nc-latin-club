@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useRef } from 'react';
+import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import { useHomeMotion } from './use-home-motion';
 import CultureMarquee from './culture-marquee';
 import FamiliaSection from './familia-section';
@@ -14,7 +14,42 @@ import NiagaraTeaser from './niagara/niagara-teaser';
 import EventsSection from './events-section';
 import HeroWordmark from './hero-wordmark';
 import { useSiteLanguage } from './site-context';
+import { waterfallPalettes } from './waterfall-palettes';
 import styles from './club-home.module.css';
+
+const initialPaletteIndex = waterfallPalettes.findIndex(({ slug }) => slug === 'mexico');
+
+function WaterfallLights() {
+  const [paletteIndex, setPaletteIndex] = useState(Math.max(0, initialPaletteIndex));
+  const palette = waterfallPalettes[paletteIndex];
+
+  useEffect(() => {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reducedMotion || document.documentElement.dataset.motion === 'reduce') return;
+
+    const interval = window.setInterval(() => {
+      setPaletteIndex((current) => (current + 1) % waterfallPalettes.length);
+    }, 4800);
+
+    return () => window.clearInterval(interval);
+  }, []);
+
+  const paletteStyle = {
+    '--falls-light-1': palette.colors[0],
+    '--falls-light-2': palette.colors[1],
+    '--falls-light-3': palette.colors[2],
+    '--falls-light-4': palette.colors[3],
+  } as CSSProperties;
+
+  return (
+    <span
+      className={styles.fallsLights}
+      style={paletteStyle}
+      data-light-country={palette.slug}
+      aria-hidden="true"
+    />
+  );
+}
 
 function Signal({ className = '' }: { className?: string }) {
   return (
@@ -123,7 +158,7 @@ export default function ClubHome() {
               />
               {clubLinks.heroSrc === '/images/Banner-natural.png' && (
                 <>
-                  <span className={styles.fallsLights} aria-hidden="true" />
+                  <WaterfallLights />
                   <Image
                     src="/images/Banner-foreground.png"
                     alt=""

@@ -267,110 +267,69 @@
   object-fit: cover;
   object-position: center 61%;
 }
+@property --falls-light-1 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #006847;
+}
+@property --falls-light-2 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #ffffff;
+}
+@property --falls-light-3 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #ffffff;
+}
+@property --falls-light-4 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #ce1126;
+}
 .fallsLights {
   --flag-light-radius: clamp(55px, 6vw, 95px);
-  --festival-light-radius: clamp(42px, 4.8vw, 72px);
   position: absolute;
   inset: -2%;
   z-index: 1;
   pointer-events: none;
   background:
     radial-gradient(
-      circle var(--flag-light-radius) at 48% 38%,
-      #ff315be6 0,
-      #dc283fa8 30%,
-      #dc283f52 58%,
+      circle var(--flag-light-radius) at 52% 38%,
+      color-mix(in srgb, var(--falls-light-4) 90%, transparent) 0,
+      color-mix(in srgb, var(--falls-light-4) 66%, transparent) 30%,
+      color-mix(in srgb, var(--falls-light-4) 32%, transparent) 58%,
       transparent 100%
     ),
     radial-gradient(
-      circle var(--flag-light-radius) at 34% 32%,
-      #fffef2e6 0,
-      #f4f0dfa8 30%,
-      #f4f0df52 58%,
+      circle var(--flag-light-radius) at 41% 34%,
+      color-mix(in srgb, var(--falls-light-3) 90%, transparent) 0,
+      color-mix(in srgb, var(--falls-light-3) 66%, transparent) 30%,
+      color-mix(in srgb, var(--falls-light-3) 32%, transparent) 58%,
       transparent 100%
     ),
     radial-gradient(
-      circle var(--flag-light-radius) at 20% 37%,
-      #14d978e6 0,
-      #009b52a8 30%,
-      #009b5252 58%,
+      circle var(--flag-light-radius) at 30% 32%,
+      color-mix(in srgb, var(--falls-light-2) 90%, transparent) 0,
+      color-mix(in srgb, var(--falls-light-2) 66%, transparent) 30%,
+      color-mix(in srgb, var(--falls-light-2) 32%, transparent) 58%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle var(--flag-light-radius) at 19% 38%,
+      color-mix(in srgb, var(--falls-light-1) 90%, transparent) 0,
+      color-mix(in srgb, var(--falls-light-1) 66%, transparent) 30%,
+      color-mix(in srgb, var(--falls-light-1) 32%, transparent) 58%,
       transparent 100%
     );
   mix-blend-mode: color;
   opacity: 0.9;
   filter: saturate(1.45) brightness(1.08) blur(5px);
-}
-.fallsLights::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(
-      circle var(--flag-light-radius) at 49% 38%,
-      #ff315be6 0,
-      #df2638a8 30%,
-      #df263852 58%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle var(--flag-light-radius) at 35% 32%,
-      #298effe6 0,
-      #176bc2a8 30%,
-      #176bc252 58%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle var(--flag-light-radius) at 20% 37%,
-      #ffe65ce6 0,
-      #ffd323a8 30%,
-      #ffd32352 58%,
-      transparent 100%
-    );
-  opacity: 0;
-  animation: colombiaLights 18s ease-in-out infinite;
-}
-.fallsLights::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(
-      circle var(--festival-light-radius) at 55% 37%,
-      #39e9a1e6 0,
-      #20c988a8 30%,
-      #20c98852 58%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle var(--festival-light-radius) at 44% 35%,
-      #ff4f7ae6 0,
-      #ec315fa8 30%,
-      #ec315f52 58%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle var(--festival-light-radius) at 33% 34%,
-      #a274ffe6 0,
-      #8757eda8 30%,
-      #8757ed52 58%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle var(--festival-light-radius) at 22% 35%,
-      #58bdffe6 0,
-      #32a8ffa8 30%,
-      #32a8ff52 58%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle var(--festival-light-radius) at 11% 37%,
-      #ffc35fe6 0,
-      #ffb02ea8 30%,
-      #ffb02e52 58%,
-      transparent 100%
-    );
-  opacity: 0;
-  animation: latinLights 18s ease-in-out infinite;
+  transition:
+    --falls-light-1 1.4s ease,
+    --falls-light-2 1.4s ease,
+    --falls-light-3 1.4s ease,
+    --falls-light-4 1.4s ease;
 }
 .worldForeground {
   z-index: 2;
@@ -1545,29 +1504,6 @@
     transform: rotate(5deg) translateY(-5px);
   }
 }
-@keyframes colombiaLights {
-  0%,
-  26%,
-  68%,
-  100% {
-    opacity: 0;
-  }
-  35%,
-  59% {
-    opacity: 1;
-  }
-}
-@keyframes latinLights {
-  0%,
-  59%,
-  100% {
-    opacity: 0;
-  }
-  69%,
-  91% {
-    opacity: 1;
-  }
-}
 @media (max-width: 760px) {
   .ribbon {
     padding: 19px 0;
@@ -1611,10 +1547,8 @@
   :global(html:not([data-motion='full'])) .worldImage {
     transform: none;
   }
-  :global(html:not([data-motion='full'])) .fallsLights::before,
-  :global(html:not([data-motion='full'])) .fallsLights::after {
-    animation: none;
-    opacity: 0;
+  :global(html:not([data-motion='full'])) .fallsLights {
+    transition: none;
   }
   :global(html:not([data-motion='full'])) .ribbonTrack {
     width: 100%;
@@ -1652,10 +1586,8 @@
 :global(html[data-motion='reduce']) .worldImage {
   transform: none;
 }
-:global(html[data-motion='reduce']) .fallsLights::before,
-:global(html[data-motion='reduce']) .fallsLights::after {
-  animation: none;
-  opacity: 0;
+:global(html[data-motion='reduce']) .fallsLights {
+  transition: none;
 }
 :global(html[data-motion='reduce']) .ribbonTrack {
   width: 100%;
