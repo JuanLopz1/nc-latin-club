@@ -311,9 +311,9 @@
 }
 .fallsBeam {
   --beam-color: var(--falls-light-1);
-  --beam-origin-x: 9%;
+  --beam-origin-x: 8%;
   --beam-origin-y: 91%;
-  --beam-from: -10deg;
+  --beam-from: -9deg;
   position: absolute;
   inset: -4%;
   -webkit-mask-image: radial-gradient(
@@ -348,33 +348,33 @@
 }
 .fallsBeam:nth-child(2) {
   --beam-color: var(--falls-light-1);
-  --beam-origin-x: 11%;
+  --beam-origin-x: 9.5%;
   --beam-origin-y: 90%;
-  --beam-from: -5deg;
+  --beam-from: -1deg;
 }
 .fallsBeam:nth-child(3) {
   --beam-color: var(--falls-light-2);
-  --beam-origin-x: 13%;
+  --beam-origin-x: 11%;
   --beam-origin-y: 91%;
-  --beam-from: 0deg;
+  --beam-from: 7deg;
 }
 .fallsBeam:nth-child(4) {
   --beam-color: var(--falls-light-3);
-  --beam-origin-x: 15%;
+  --beam-origin-x: 12.5%;
   --beam-origin-y: 90%;
-  --beam-from: 5deg;
+  --beam-from: 15deg;
 }
 .fallsBeam:nth-child(5) {
   --beam-color: var(--falls-light-4);
-  --beam-origin-x: 17%;
+  --beam-origin-x: 14%;
   --beam-origin-y: 91%;
-  --beam-from: 10deg;
+  --beam-from: 23deg;
 }
 .fallsBeam:nth-child(6) {
   --beam-color: var(--falls-light-4);
-  --beam-origin-x: 19%;
+  --beam-origin-x: 15.5%;
   --beam-origin-y: 90%;
-  --beam-from: 15deg;
+  --beam-from: 31deg;
 }
 .fallsMist,
 .fallsMistSecondary {
