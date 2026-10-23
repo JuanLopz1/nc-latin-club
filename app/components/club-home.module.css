@@ -351,119 +351,81 @@
 .fallsBeams {
   mix-blend-mode: screen;
   overflow: hidden;
-  opacity: 0.82;
+  opacity: 0.78;
 }
 .fallsBeam {
   --beam-color: var(--falls-light-1);
-  --beam-left: -2%;
-  --beam-bottom: 8%;
-  --beam-width: 30%;
-  --beam-height: 65%;
-  --beam-angle: 12deg;
+  --beam-origin-x: 10%;
+  --beam-origin-y: 86%;
+  --beam-from: -9deg;
   position: absolute;
-  left: var(--beam-left);
-  bottom: var(--beam-bottom);
-  width: var(--beam-width);
-  height: var(--beam-height);
-  transform: rotate(var(--beam-angle));
-  transform-origin: 50% 100%;
-  clip-path: polygon(46.5% 100%, 53.5% 100%, 100% 0, 0 0);
+  inset: -3%;
   -webkit-mask-image: radial-gradient(
-    ellipse 68% 108% at 50% 47%,
+    ellipse 88% 86% at var(--beam-origin-x) var(--beam-origin-y),
     #000 0,
-    #000 42%,
-    #000b 62%,
-    transparent 100%
+    #000 38%,
+    #000d 55%,
+    #0006 68%,
+    transparent 88%
   );
   mask-image: radial-gradient(
-    ellipse 68% 108% at 50% 47%,
+    ellipse 88% 86% at var(--beam-origin-x) var(--beam-origin-y),
     #000 0,
-    #000 42%,
-    #000b 62%,
-    transparent 100%
+    #000 38%,
+    #000d 55%,
+    #0006 68%,
+    transparent 88%
   );
-  background: linear-gradient(
-    to top,
-    color-mix(in srgb, var(--beam-color) 88%, transparent) 0,
-    color-mix(in srgb, var(--beam-color) 42%, transparent) 25%,
-    color-mix(in srgb, var(--beam-color) 62%, transparent) 66%,
-    transparent 100%
-  );
-  filter: saturate(1.6) brightness(1.2) blur(12px);
-}
-.fallsBeam::before {
-  content: '';
-  position: absolute;
-  left: 42%;
-  right: 42%;
-  bottom: -1%;
-  height: 88%;
-  background: linear-gradient(
-    to top,
-    color-mix(in srgb, var(--beam-color) 92%, white) 0,
-    color-mix(in srgb, var(--beam-color) 58%, transparent) 58%,
-    transparent 100%
-  );
-  filter: blur(7px);
-  opacity: 0.68;
-}
-.fallsBeam::after {
-  content: '';
-  position: absolute;
-  top: -2%;
-  left: 4%;
-  width: 92%;
-  height: 37%;
-  border-radius: 50%;
-  background: radial-gradient(
-    ellipse at center,
-    color-mix(in srgb, var(--beam-color) 76%, white) 0,
-    color-mix(in srgb, var(--beam-color) 62%, transparent) 28%,
-    color-mix(in srgb, var(--beam-color) 24%, transparent) 58%,
-    transparent 78%
-  );
-  filter: blur(13px);
-  opacity: 0.88;
+  background:
+    radial-gradient(
+      circle 18px at var(--beam-origin-x) var(--beam-origin-y),
+      color-mix(in srgb, var(--beam-color) 88%, white) 0,
+      color-mix(in srgb, var(--beam-color) 60%, transparent) 38%,
+      transparent 100%
+    ),
+    conic-gradient(
+      from var(--beam-from) at var(--beam-origin-x) var(--beam-origin-y),
+      transparent 0deg,
+      color-mix(in srgb, var(--beam-color) 8%, transparent) 3deg,
+      color-mix(in srgb, var(--beam-color) 36%, transparent) 8deg,
+      color-mix(in srgb, var(--beam-color) 58%, transparent) 14deg,
+      color-mix(in srgb, var(--beam-color) 58%, transparent) 18deg,
+      color-mix(in srgb, var(--beam-color) 34%, transparent) 24deg,
+      color-mix(in srgb, var(--beam-color) 8%, transparent) 29deg,
+      transparent 33deg,
+      transparent 360deg
+    );
+  filter: saturate(1.5) brightness(1.14) blur(8px);
 }
 .fallsBeam:nth-child(2) {
   --beam-color: var(--falls-light-1);
-  --beam-left: 6%;
-  --beam-bottom: 5%;
-  --beam-width: 31%;
-  --beam-height: 69%;
-  --beam-angle: 17deg;
+  --beam-origin-x: 24%;
+  --beam-origin-y: 89%;
+  --beam-from: -11deg;
 }
 .fallsBeam:nth-child(3) {
   --beam-color: var(--falls-light-2);
-  --beam-left: 23%;
-  --beam-bottom: 8%;
-  --beam-width: 32%;
-  --beam-height: 67%;
-  --beam-angle: 8deg;
+  --beam-origin-x: 40%;
+  --beam-origin-y: 86%;
+  --beam-from: -16deg;
 }
 .fallsBeam:nth-child(4) {
   --beam-color: var(--falls-light-3);
-  --beam-left: 39%;
-  --beam-bottom: 5%;
-  --beam-width: 32%;
-  --beam-height: 70%;
-  --beam-angle: -1deg;
+  --beam-origin-x: 56%;
+  --beam-origin-y: 89%;
+  --beam-from: -24deg;
 }
 .fallsBeam:nth-child(5) {
   --beam-color: var(--falls-light-4);
-  --beam-left: 56%;
-  --beam-bottom: 8%;
-  --beam-width: 31%;
-  --beam-height: 67%;
-  --beam-angle: -10deg;
+  --beam-origin-x: 72%;
+  --beam-origin-y: 86%;
+  --beam-from: -31deg;
 }
 .fallsBeam:nth-child(6) {
   --beam-color: var(--falls-light-4);
-  --beam-left: 72%;
-  --beam-bottom: 5%;
-  --beam-width: 30%;
-  --beam-height: 69%;
-  --beam-angle: -18deg;
+  --beam-origin-x: 88%;
+  --beam-origin-y: 89%;
+  --beam-from: -39deg;
 }
 .fallsMist,
 .fallsMistSecondary {
