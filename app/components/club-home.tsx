@@ -121,6 +121,9 @@ export default function ClubHome() {
                 sizes="(max-width: 760px) 100vw, 55vw"
                 className={styles.worldImage}
               />
+              {clubLinks.heroSrc === '/images/Banner-natural.png' && (
+                <span className={styles.fallsLights} aria-hidden="true" />
+              )}
               <div className={styles.artCaption}>
                 <p className={styles.artSlogan}>
                   {translations.heroTag[0]}

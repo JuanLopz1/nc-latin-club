@@ -10,12 +10,12 @@ export const defaultContent: SiteContent = {
     joinEmail: 'dgonzalezaceved1@ncstudents.niagaracollege.ca',
     instagramUrl: 'https://www.instagram.com/nclat1nclub/',
     logoSrc: '/images/brand/nc-latin-club.png',
-    heroSrc: '/images/Banner.png',
+    heroSrc: '/images/Banner-natural.png',
     familiaPhotoSrc: '',
     familiaPhotoAlt: { en: '', es: '' },
     heroAlt: {
-      en: 'Original illustration of an imagined Latin American street festival at night, with music, murals, colourful lights and glowing hummingbirds',
-      es: 'Ilustración original de un festival callejero latinoamericano imaginado de noche, con música, murales, luces de colores y colibríes luminosos',
+      en: 'Imagined nighttime view of Niagara Falls with animated colourful illumination over the water',
+      es: 'Vista nocturna imaginada de las cataratas del Niágara con iluminación de colores animada sobre el agua',
     },
     spotifyUrl: 'https://open.spotify.com/album/4kS7bSuU0Jm9LYMosFU2x5',
     spotifyTitle: {
