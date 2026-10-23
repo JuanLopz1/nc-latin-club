@@ -10,7 +10,7 @@ export const defaultContent: SiteContent = {
     joinEmail: 'dgonzalezaceved1@ncstudents.niagaracollege.ca',
     instagramUrl: 'https://www.instagram.com/nclat1nclub/',
     logoSrc: '/images/brand/nc-latin-club.png',
-    heroSrc: '/images/Banner-natural.png',
+    heroSrc: '/images/Banner-illuminated-base.png',
     familiaPhotoSrc: '',
     familiaPhotoAlt: { en: '', es: '' },
     heroAlt: {

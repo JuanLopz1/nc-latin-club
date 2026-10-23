@@ -160,7 +160,7 @@ export default function ClubHome() {
                 sizes="(max-width: 760px) 100vw, 55vw"
                 className={styles.worldImage}
               />
-              {clubLinks.heroSrc === '/images/Banner-natural.png' && (
+              {clubLinks.heroSrc === '/images/Banner-illuminated-base.png' && (
                 <>
                   <WaterfallLights />
                   <Image
