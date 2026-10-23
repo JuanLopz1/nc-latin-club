@@ -307,81 +307,74 @@
 .fallsBeams {
   mix-blend-mode: screen;
   overflow: hidden;
-  opacity: 0.78;
+  opacity: 0.86;
 }
 .fallsBeam {
   --beam-color: var(--falls-light-1);
-  --beam-origin-x: 10%;
-  --beam-origin-y: 86%;
-  --beam-from: -9deg;
+  --beam-origin-x: 9%;
+  --beam-origin-y: 91%;
+  --beam-from: -10deg;
   position: absolute;
-  inset: -3%;
+  inset: -4%;
   -webkit-mask-image: radial-gradient(
-    ellipse 88% 86% at var(--beam-origin-x) var(--beam-origin-y),
+    ellipse 120% 112% at var(--beam-origin-x) var(--beam-origin-y),
     #000 0,
-    #000 38%,
-    #000d 55%,
-    #0006 68%,
-    transparent 88%
+    #000 54%,
+    #000e 67%,
+    #0008 82%,
+    transparent 100%
   );
   mask-image: radial-gradient(
-    ellipse 88% 86% at var(--beam-origin-x) var(--beam-origin-y),
+    ellipse 120% 112% at var(--beam-origin-x) var(--beam-origin-y),
     #000 0,
-    #000 38%,
-    #000d 55%,
-    #0006 68%,
-    transparent 88%
+    #000 54%,
+    #000e 67%,
+    #0008 82%,
+    transparent 100%
   );
-  background:
-    radial-gradient(
-      circle 18px at var(--beam-origin-x) var(--beam-origin-y),
-      color-mix(in srgb, var(--beam-color) 88%, white) 0,
-      color-mix(in srgb, var(--beam-color) 60%, transparent) 38%,
-      transparent 100%
-    ),
-    conic-gradient(
-      from var(--beam-from) at var(--beam-origin-x) var(--beam-origin-y),
-      transparent 0deg,
-      color-mix(in srgb, var(--beam-color) 8%, transparent) 3deg,
-      color-mix(in srgb, var(--beam-color) 36%, transparent) 8deg,
-      color-mix(in srgb, var(--beam-color) 58%, transparent) 14deg,
-      color-mix(in srgb, var(--beam-color) 58%, transparent) 18deg,
-      color-mix(in srgb, var(--beam-color) 34%, transparent) 24deg,
-      color-mix(in srgb, var(--beam-color) 8%, transparent) 29deg,
-      transparent 33deg,
-      transparent 360deg
-    );
-  filter: saturate(1.5) brightness(1.14) blur(8px);
+  background: conic-gradient(
+    from var(--beam-from) at var(--beam-origin-x) var(--beam-origin-y),
+    transparent 0deg,
+    color-mix(in srgb, var(--beam-color) 9%, transparent) 3deg,
+    color-mix(in srgb, var(--beam-color) 42%, transparent) 7deg,
+    color-mix(in srgb, var(--beam-color) 66%, transparent) 12deg,
+    color-mix(in srgb, var(--beam-color) 66%, transparent) 16deg,
+    color-mix(in srgb, var(--beam-color) 42%, transparent) 21deg,
+    color-mix(in srgb, var(--beam-color) 9%, transparent) 25deg,
+    transparent 29deg,
+    transparent 360deg
+  );
+  filter: saturate(1.58) brightness(1.2) blur(10px);
 }
 .fallsBeam:nth-child(2) {
   --beam-color: var(--falls-light-1);
-  --beam-origin-x: 24%;
-  --beam-origin-y: 89%;
-  --beam-from: -11deg;
+  --beam-origin-x: 11%;
+  --beam-origin-y: 90%;
+  --beam-from: -5deg;
 }
 .fallsBeam:nth-child(3) {
   --beam-color: var(--falls-light-2);
-  --beam-origin-x: 40%;
-  --beam-origin-y: 86%;
-  --beam-from: -16deg;
+  --beam-origin-x: 13%;
+  --beam-origin-y: 91%;
+  --beam-from: 0deg;
 }
 .fallsBeam:nth-child(4) {
   --beam-color: var(--falls-light-3);
-  --beam-origin-x: 56%;
-  --beam-origin-y: 89%;
-  --beam-from: -24deg;
+  --beam-origin-x: 15%;
+  --beam-origin-y: 90%;
+  --beam-from: 5deg;
 }
 .fallsBeam:nth-child(5) {
   --beam-color: var(--falls-light-4);
-  --beam-origin-x: 72%;
-  --beam-origin-y: 86%;
-  --beam-from: -31deg;
+  --beam-origin-x: 17%;
+  --beam-origin-y: 91%;
+  --beam-from: 10deg;
 }
 .fallsBeam:nth-child(6) {
   --beam-color: var(--falls-light-4);
-  --beam-origin-x: 88%;
-  --beam-origin-y: 89%;
-  --beam-from: -39deg;
+  --beam-origin-x: 19%;
+  --beam-origin-y: 90%;
+  --beam-from: 15deg;
 }
 .fallsMist,
 .fallsMistSecondary {
