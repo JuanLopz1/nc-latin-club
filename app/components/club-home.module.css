@@ -1302,26 +1302,6 @@
   opacity: 1;
   translate: 0 0;
 }
-.home :is(h1, h2)[data-reveal-state] {
-  opacity: 1;
-  translate: none;
-  transition: clip-path 0.75s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay, 0ms);
-}
-.home :is(h1, h2)[data-reveal-state='waiting'] {
-  clip-path: inset(0 100% 0 0);
-  transition: none;
-}
-.home :is(h1, h2)[data-reveal-state='visible'] {
-  clip-path: inset(0 -2% -4% 0);
-}
-@media (prefers-reduced-motion: reduce) {
-  .home :is(h1, h2)[data-reveal-state] {
-    clip-path: none;
-  }
-}
-:global(html[data-motion='reduce']) .home :is(h1, h2)[data-reveal-state] {
-  clip-path: none;
-}
 .home a > svg {
   transition: transform 0.2s ease;
 }
