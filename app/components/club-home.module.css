@@ -268,43 +268,37 @@
   object-position: center 61%;
 }
 .fallsLights {
-  --light-origin-x: 28%;
-  --light-origin-y: 92%;
+  --flag-light-radius: clamp(55px, 6vw, 95px);
+  --festival-light-radius: clamp(42px, 4.8vw, 72px);
   position: absolute;
   inset: -2%;
   z-index: 1;
   pointer-events: none;
   background:
     radial-gradient(
-      circle at var(--light-origin-x) var(--light-origin-y),
-      #fff9 0 1%,
-      #ffe7a640 3%,
-      transparent 8%
+      circle var(--flag-light-radius) at 48% 38%,
+      #ff315be6 0,
+      #dc283fa8 30%,
+      #dc283f52 58%,
+      transparent 100%
     ),
     radial-gradient(
-      ellipse 15% 43% at 47% 36%,
-      #dc283fe6 0 18%,
-      #dc283fa3 42%,
-      #dc283f40 62%,
-      transparent 79%
+      circle var(--flag-light-radius) at 34% 32%,
+      #fffef2e6 0,
+      #f4f0dfa8 30%,
+      #f4f0df52 58%,
+      transparent 100%
     ),
     radial-gradient(
-      ellipse 15% 43% at 31% 34%,
-      #f4f0dfe6 0 18%,
-      #f4f0dfa3 42%,
-      #f4f0df40 62%,
-      transparent 79%
-    ),
-    radial-gradient(
-      ellipse 15% 43% at 15% 36%,
-      #009b52e6 0 18%,
-      #009b52a3 42%,
-      #009b5240 62%,
-      transparent 79%
+      circle var(--flag-light-radius) at 20% 37%,
+      #14d978e6 0,
+      #009b52a8 30%,
+      #009b5252 58%,
+      transparent 100%
     );
   mix-blend-mode: color;
-  opacity: 0.86;
-  filter: saturate(1.3) blur(10px);
+  opacity: 0.9;
+  filter: saturate(1.45) brightness(1.08) blur(5px);
 }
 .fallsLights::before {
   content: '';
@@ -312,31 +306,25 @@
   inset: 0;
   background:
     radial-gradient(
-      circle at var(--light-origin-x) var(--light-origin-y),
-      #fff9 0 1%,
-      #ffe7a640 3%,
-      transparent 8%
+      circle var(--flag-light-radius) at 49% 38%,
+      #ff315be6 0,
+      #df2638a8 30%,
+      #df263852 58%,
+      transparent 100%
     ),
     radial-gradient(
-      ellipse 14% 43% at 49% 37%,
-      #df2638e6 0 18%,
-      #df2638a3 42%,
-      #df263840 62%,
-      transparent 79%
+      circle var(--flag-light-radius) at 35% 32%,
+      #298effe6 0,
+      #176bc2a8 30%,
+      #176bc252 58%,
+      transparent 100%
     ),
     radial-gradient(
-      ellipse 13% 43% at 37% 34%,
-      #176bc2e6 0 18%,
-      #176bc2a3 42%,
-      #176bc240 62%,
-      transparent 79%
-    ),
-    radial-gradient(
-      ellipse 23% 43% at 18% 35%,
-      #ffd323e6 0 18%,
-      #ffd323a3 42%,
-      #ffd32340 62%,
-      transparent 79%
+      circle var(--flag-light-radius) at 20% 37%,
+      #ffe65ce6 0,
+      #ffd323a8 30%,
+      #ffd32352 58%,
+      transparent 100%
     );
   opacity: 0;
   animation: colombiaLights 18s ease-in-out infinite;
@@ -347,45 +335,39 @@
   inset: 0;
   background:
     radial-gradient(
-      circle at var(--light-origin-x) var(--light-origin-y),
-      #fff9 0 1%,
-      #ffe7a640 3%,
-      transparent 8%
+      circle var(--festival-light-radius) at 55% 37%,
+      #39e9a1e6 0,
+      #20c988a8 30%,
+      #20c98852 58%,
+      transparent 100%
     ),
     radial-gradient(
-      ellipse 11% 42% at 55% 37%,
-      #20c988e6 0 16%,
-      #20c9889c 40%,
-      #20c98838 61%,
-      transparent 78%
+      circle var(--festival-light-radius) at 44% 35%,
+      #ff4f7ae6 0,
+      #ec315fa8 30%,
+      #ec315f52 58%,
+      transparent 100%
     ),
     radial-gradient(
-      ellipse 11% 42% at 44% 35%,
-      #ec315fe6 0 16%,
-      #ec315f9c 40%,
-      #ec315f38 61%,
-      transparent 78%
+      circle var(--festival-light-radius) at 33% 34%,
+      #a274ffe6 0,
+      #8757eda8 30%,
+      #8757ed52 58%,
+      transparent 100%
     ),
     radial-gradient(
-      ellipse 11% 42% at 33% 34%,
-      #8757ede6 0 16%,
-      #8757ed9c 40%,
-      #8757ed38 61%,
-      transparent 78%
+      circle var(--festival-light-radius) at 22% 35%,
+      #58bdffe6 0,
+      #32a8ffa8 30%,
+      #32a8ff52 58%,
+      transparent 100%
     ),
     radial-gradient(
-      ellipse 11% 42% at 22% 35%,
-      #32a8ffe6 0 16%,
-      #32a8ff9c 40%,
-      #32a8ff38 61%,
-      transparent 78%
-    ),
-    radial-gradient(
-      ellipse 11% 42% at 11% 37%,
-      #ffb02ee6 0 16%,
-      #ffb02e9c 40%,
-      #ffb02e38 61%,
-      transparent 78%
+      circle var(--festival-light-radius) at 11% 37%,
+      #ffc35fe6 0,
+      #ffb02ea8 30%,
+      #ffb02e52 58%,
+      transparent 100%
     );
   opacity: 0;
   animation: latinLights 18s ease-in-out infinite;
