@@ -273,9 +273,9 @@
   z-index: 1;
   pointer-events: none;
   background:
-    radial-gradient(circle at 42% 92%, #fff8 0 1%, transparent 8%),
+    radial-gradient(circle at 28% 92%, #fff8 0 1%, transparent 8%),
     conic-gradient(
-      from 328deg at 42% 92%,
+      from 344deg at 28% 92%,
       transparent 0 2deg,
       #009b52 4deg 17deg,
       #67ce90 20deg,
@@ -293,9 +293,9 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 42% 92%, #fff8 0 1%, transparent 8%),
+    radial-gradient(circle at 28% 92%, #fff8 0 1%, transparent 8%),
     conic-gradient(
-      from 328deg at 42% 92%,
+      from 344deg at 28% 92%,
       transparent 0 2deg,
       #ffd323 4deg 21deg,
       #e4ca58 24deg,
@@ -312,9 +312,9 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 42% 92%, #fff8 0 1%, transparent 8%),
+    radial-gradient(circle at 28% 92%, #fff8 0 1%, transparent 8%),
     conic-gradient(
-      from 328deg at 42% 92%,
+      from 344deg at 28% 92%,
       transparent 0 2deg,
       #ffb02e 4deg 11deg,
       #32a8ff 14deg 21deg,
