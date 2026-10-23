@@ -269,64 +269,50 @@
 }
 .fallsLights {
   position: absolute;
-  inset: -5%;
+  inset: -2%;
   z-index: 1;
   pointer-events: none;
-  background:
-    radial-gradient(ellipse 24% 72% at 4% 40%, #ff365fe6 0%, transparent 76%),
-    radial-gradient(ellipse 24% 70% at 24% 42%, #8b4dffe6 0%, transparent 76%),
-    radial-gradient(ellipse 25% 72% at 44% 43%, #1a9cffe6 0%, transparent 76%),
-    radial-gradient(ellipse 25% 70% at 64% 44%, #18e7b2e6 0%, transparent 76%),
-    radial-gradient(ellipse 24% 68% at 84% 45%, #ffe052e6 0%, transparent 76%),
-    radial-gradient(ellipse 24% 68% at 104% 45%, #ff6b38e6 0%, transparent 76%);
-  background-size: 165% 100%;
-  background-position: 0% 50%;
-  background-repeat: no-repeat;
+  background: linear-gradient(
+    90deg,
+    #009b52 0 24%,
+    #61d28c 27%,
+    #f4f0df 30% 40%,
+    #f49b9b 43%,
+    #dc283f 46% 100%
+  );
   mix-blend-mode: color;
-  opacity: 0.88;
-  filter: saturate(1.5) blur(10px);
-  animation: fallsLightCycle 16s ease-in-out infinite alternate;
+  opacity: 0.92;
+  filter: saturate(1.45) blur(5px);
 }
 .fallsLights::before {
   content: '';
   position: absolute;
-  inset: 2% 0 10%;
+  inset: 0;
   background: linear-gradient(
-    100deg,
-    transparent 0%,
-    #ff4f7a99 12%,
-    #725cffaa 30%,
-    #21b9ffaa 48%,
-    #22e3a6aa 66%,
-    #ffe06699 84%,
-    transparent 100%
+    90deg,
+    #ffd323 0 31%,
+    #f4da60 34%,
+    #176bc2 37% 44%,
+    #745aa4 47%,
+    #df2638 50% 100%
   );
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    black 16%,
-    black 62%,
-    transparent 88%
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    black 16%,
-    black 62%,
-    transparent 88%
-  );
-  mix-blend-mode: screen;
-  opacity: 0.38;
-  filter: blur(18px);
+  opacity: 0;
+  animation: colombiaLights 18s ease-in-out infinite;
 }
 .fallsLights::after {
   content: '';
   position: absolute;
-  inset: 12% -4% 4%;
-  background: inherit;
-  mix-blend-mode: screen;
-  opacity: 0.2;
-  filter: blur(30px);
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #ffb02e 0 20%,
+    #32a8ff 23% 31%,
+    #8757ed 34% 42%,
+    #ec315f 45% 52%,
+    #20c988 55% 100%
+  );
+  opacity: 0;
+  animation: latinLights 18s ease-in-out infinite;
 }
 .worldForeground {
   z-index: 2;
@@ -1501,18 +1487,27 @@
     transform: rotate(5deg) translateY(-5px);
   }
 }
-@keyframes fallsLightCycle {
-  0% {
-    background-position: 0% 50%;
-    filter: hue-rotate(0deg) saturate(1.5) blur(10px);
-  }
-  45% {
-    background-position: 48% 50%;
-    filter: hue-rotate(22deg) saturate(1.65) blur(10px);
-  }
+@keyframes colombiaLights {
+  0%,
+  26%,
+  68%,
   100% {
-    background-position: 100% 50%;
-    filter: hue-rotate(-24deg) saturate(1.55) blur(10px);
+    opacity: 0;
+  }
+  35%,
+  59% {
+    opacity: 1;
+  }
+}
+@keyframes latinLights {
+  0%,
+  59%,
+  100% {
+    opacity: 0;
+  }
+  69%,
+  91% {
+    opacity: 1;
   }
 }
 @media (max-width: 760px) {
@@ -1558,9 +1553,10 @@
   :global(html:not([data-motion='full'])) .worldImage {
     transform: none;
   }
-  :global(html:not([data-motion='full'])) .fallsLights {
+  :global(html:not([data-motion='full'])) .fallsLights::before,
+  :global(html:not([data-motion='full'])) .fallsLights::after {
     animation: none;
-    background-position: 55% 50%;
+    opacity: 0;
   }
   :global(html:not([data-motion='full'])) .ribbonTrack {
     width: 100%;
@@ -1598,9 +1594,10 @@
 :global(html[data-motion='reduce']) .worldImage {
   transform: none;
 }
-:global(html[data-motion='reduce']) .fallsLights {
+:global(html[data-motion='reduce']) .fallsLights::before,
+:global(html[data-motion='reduce']) .fallsLights::after {
   animation: none;
-  background-position: 55% 50%;
+  opacity: 0;
 }
 :global(html[data-motion='reduce']) .ribbonTrack {
   width: 100%;
