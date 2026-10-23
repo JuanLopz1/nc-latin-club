@@ -287,13 +287,9 @@
   inherits: true;
   initial-value: #ce1126;
 }
-.fallsLights {
+.fallsEffect {
   --flag-light-radius: clamp(70px, 8vw, 125px);
-  position: absolute;
-  inset: -2%;
-  z-index: 1;
-  pointer-events: none;
-  background:
+  --falls-light-field:
     radial-gradient(
       circle var(--flag-light-radius) at 53% 52%,
       color-mix(in srgb, var(--falls-light-4) 90%, transparent) 0,
@@ -336,14 +332,54 @@
       color-mix(in srgb, var(--falls-light-1) 32%, transparent) 58%,
       transparent 100%
     );
-  mix-blend-mode: color;
-  opacity: 0.9;
-  filter: saturate(1.45) brightness(1.08) blur(5px);
+  position: absolute;
+  inset: -2%;
+  z-index: 1;
+  pointer-events: none;
   transition:
     --falls-light-1 1.4s ease,
     --falls-light-2 1.4s ease,
     --falls-light-3 1.4s ease,
     --falls-light-4 1.4s ease;
+}
+.fallsLights,
+.fallsMist,
+.fallsMistSecondary {
+  position: absolute;
+  inset: 0;
+}
+.fallsLights {
+  background: var(--falls-light-field);
+  mix-blend-mode: color;
+  opacity: 0.5;
+  filter: saturate(1.35) brightness(1.06) blur(6px);
+}
+.fallsMist,
+.fallsMistSecondary {
+  background:
+    var(--falls-light-field),
+    linear-gradient(to bottom, #dce9f480, #f4f8fb5c);
+  -webkit-mask-image: url('/images/Niagara-mist-overlay.png');
+  mask-image: url('/images/Niagara-mist-overlay.png');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center 55%;
+  mask-position: center 55%;
+  -webkit-mask-size: 150% 62%;
+  mask-size: 150% 62%;
+  mix-blend-mode: screen;
+  filter: saturate(1.4) brightness(1.18) blur(1px);
+  opacity: 0.72;
+  animation: fallsMistDrift 16s ease-in-out infinite alternate;
+}
+.fallsMistSecondary {
+  -webkit-mask-position: 42% 61%;
+  mask-position: 42% 61%;
+  -webkit-mask-size: 172% 52%;
+  mask-size: 172% 52%;
+  opacity: 0.34;
+  filter: saturate(1.25) brightness(1.12) blur(3px);
+  animation: fallsMistDriftSecondary 21s ease-in-out infinite alternate;
 }
 .worldForeground {
   z-index: 2;
@@ -1518,6 +1554,22 @@
     transform: rotate(5deg) translateY(-5px);
   }
 }
+@keyframes fallsMistDrift {
+  0% {
+    transform: translate3d(-1.5%, 1%, 0) scale(1.02);
+  }
+  100% {
+    transform: translate3d(1.8%, -1.5%, 0) scale(1.07);
+  }
+}
+@keyframes fallsMistDriftSecondary {
+  0% {
+    transform: translate3d(2%, -0.5%, 0) scale(1.08);
+  }
+  100% {
+    transform: translate3d(-2.2%, 1.5%, 0) scale(1.03);
+  }
+}
 @media (max-width: 760px) {
   .ribbon {
     padding: 19px 0;
@@ -1561,8 +1613,12 @@
   :global(html:not([data-motion='full'])) .worldImage {
     transform: none;
   }
-  :global(html:not([data-motion='full'])) .fallsLights {
+  :global(html:not([data-motion='full'])) .fallsEffect {
     transition: none;
+  }
+  :global(html:not([data-motion='full'])) .fallsMist,
+  :global(html:not([data-motion='full'])) .fallsMistSecondary {
+    animation: none;
   }
   :global(html:not([data-motion='full'])) .ribbonTrack {
     width: 100%;
@@ -1600,8 +1656,12 @@
 :global(html[data-motion='reduce']) .worldImage {
   transform: none;
 }
-:global(html[data-motion='reduce']) .fallsLights {
+:global(html[data-motion='reduce']) .fallsEffect {
   transition: none;
+}
+:global(html[data-motion='reduce']) .fallsMist,
+:global(html[data-motion='reduce']) .fallsMistSecondary {
+  animation: none;
 }
 :global(html[data-motion='reduce']) .ribbonTrack {
   width: 100%;

@@ -43,11 +43,15 @@ function WaterfallLights() {
 
   return (
     <span
-      className={styles.fallsLights}
+      className={styles.fallsEffect}
       style={paletteStyle}
       data-light-country={palette.slug}
       aria-hidden="true"
-    />
+    >
+      <span className={styles.fallsLights} />
+      <span className={styles.fallsMist} />
+      <span className={styles.fallsMistSecondary} />
+    </span>
   );
 }
 
