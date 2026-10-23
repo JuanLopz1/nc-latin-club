@@ -48,7 +48,11 @@ function WaterfallLights() {
       data-light-country={palette.slug}
       aria-hidden="true"
     >
-      <span className={styles.fallsLights} />
+      <span className={styles.fallsBeams}>
+        {Array.from({ length: 6 }, (_, index) => (
+          <span className={styles.fallsBeam} key={index} />
+        ))}
+      </span>
       <span className={styles.fallsMist} />
       <span className={styles.fallsMistSecondary} />
     </span>
