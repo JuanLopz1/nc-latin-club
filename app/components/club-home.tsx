@@ -122,7 +122,17 @@ export default function ClubHome() {
                 className={styles.worldImage}
               />
               {clubLinks.heroSrc === '/images/Banner-natural.png' && (
-                <span className={styles.fallsLights} aria-hidden="true" />
+                <>
+                  <span className={styles.fallsLights} aria-hidden="true" />
+                  <Image
+                    src="/images/Banner-foreground.png"
+                    alt=""
+                    fill
+                    sizes="(max-width: 760px) 100vw, 55vw"
+                    className={styles.worldForeground}
+                    aria-hidden="true"
+                  />
+                </>
               )}
               <div className={styles.artCaption}>
                 <p className={styles.artSlogan}>

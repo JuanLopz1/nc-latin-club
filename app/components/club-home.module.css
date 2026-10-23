@@ -244,6 +244,7 @@
   position: absolute;
   inset: 0;
   overflow: hidden;
+  isolation: isolate;
   background: var(--background);
   clip-path: polygon(23.75% 0, 100% 0, 100% 100%, 0 100%);
 }
@@ -251,7 +252,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 3;
   background: linear-gradient(
     to bottom,
     transparent 35%,
@@ -262,44 +263,80 @@
   pointer-events: none;
 }
 .worldImage {
+  z-index: 0;
   object-fit: cover;
   object-position: center 61%;
 }
 .fallsLights {
   position: absolute;
-  inset: -1%;
-  z-index: 0;
+  inset: -5%;
+  z-index: 1;
   pointer-events: none;
-  clip-path: polygon(0 4%, 56% 22%, 57% 58%, 50% 72%, 34% 66%, 17% 58%, 0 49%);
-  background: linear-gradient(
-    105deg,
-    #ff365fcc 0%,
-    #8b4dffdd 17%,
-    #1a9cffdd 34%,
-    #18e7b2dd 51%,
-    #ffe052e6 68%,
-    #ff6b38dd 84%,
-    #ee3ea9d9 100%
-  );
-  background-size: 240% 100%;
+  background:
+    radial-gradient(ellipse 24% 72% at 4% 40%, #ff365fe6 0%, transparent 76%),
+    radial-gradient(ellipse 24% 70% at 24% 42%, #8b4dffe6 0%, transparent 76%),
+    radial-gradient(ellipse 25% 72% at 44% 43%, #1a9cffe6 0%, transparent 76%),
+    radial-gradient(ellipse 25% 70% at 64% 44%, #18e7b2e6 0%, transparent 76%),
+    radial-gradient(ellipse 24% 68% at 84% 45%, #ffe052e6 0%, transparent 76%),
+    radial-gradient(ellipse 24% 68% at 104% 45%, #ff6b38e6 0%, transparent 76%);
+  background-size: 165% 100%;
   background-position: 0% 50%;
+  background-repeat: no-repeat;
   mix-blend-mode: color;
-  opacity: 0.82;
-  filter: saturate(1.35) blur(1px);
-  animation: fallsLightCycle 18s ease-in-out infinite alternate;
+  opacity: 0.88;
+  filter: saturate(1.5) blur(10px);
+  animation: fallsLightCycle 16s ease-in-out infinite alternate;
+}
+.fallsLights::before {
+  content: '';
+  position: absolute;
+  inset: 2% 0 10%;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    #ff4f7a99 12%,
+    #725cffaa 30%,
+    #21b9ffaa 48%,
+    #22e3a6aa 66%,
+    #ffe06699 84%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 16%,
+    black 62%,
+    transparent 88%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 16%,
+    black 62%,
+    transparent 88%
+  );
+  mix-blend-mode: screen;
+  opacity: 0.38;
+  filter: blur(18px);
 }
 .fallsLights::after {
   content: '';
   position: absolute;
-  inset: 8% -4% -8%;
+  inset: 12% -4% 4%;
   background: inherit;
   mix-blend-mode: screen;
-  opacity: 0.28;
-  filter: blur(22px);
+  opacity: 0.2;
+  filter: blur(30px);
+}
+.worldForeground {
+  z-index: 2;
+  pointer-events: none;
+  object-fit: cover;
+  object-position: center 61%;
 }
 .artCaption {
   position: absolute;
-  z-index: 2;
+  z-index: 4;
   bottom: 26px;
   left: 18%;
   right: 26px;
@@ -1467,15 +1504,15 @@
 @keyframes fallsLightCycle {
   0% {
     background-position: 0% 50%;
-    filter: hue-rotate(0deg) saturate(1.35) blur(1px);
+    filter: hue-rotate(0deg) saturate(1.5) blur(10px);
   }
   45% {
-    background-position: 72% 50%;
-    filter: hue-rotate(24deg) saturate(1.5) blur(1px);
+    background-position: 48% 50%;
+    filter: hue-rotate(22deg) saturate(1.65) blur(10px);
   }
   100% {
-    background-position: 145% 50%;
-    filter: hue-rotate(-28deg) saturate(1.4) blur(1px);
+    background-position: 100% 50%;
+    filter: hue-rotate(-24deg) saturate(1.55) blur(10px);
   }
 }
 @media (max-width: 760px) {
