@@ -288,35 +288,49 @@
   initial-value: #ce1126;
 }
 .fallsLights {
-  --flag-light-radius: clamp(55px, 6vw, 95px);
+  --flag-light-radius: clamp(70px, 8vw, 125px);
   position: absolute;
   inset: -2%;
   z-index: 1;
   pointer-events: none;
   background:
     radial-gradient(
-      circle var(--flag-light-radius) at 52% 38%,
+      circle var(--flag-light-radius) at 53% 52%,
       color-mix(in srgb, var(--falls-light-4) 90%, transparent) 0,
       color-mix(in srgb, var(--falls-light-4) 66%, transparent) 30%,
       color-mix(in srgb, var(--falls-light-4) 32%, transparent) 58%,
       transparent 100%
     ),
     radial-gradient(
-      circle var(--flag-light-radius) at 41% 34%,
+      circle var(--flag-light-radius) at 34% 50%,
       color-mix(in srgb, var(--falls-light-3) 90%, transparent) 0,
       color-mix(in srgb, var(--falls-light-3) 66%, transparent) 30%,
       color-mix(in srgb, var(--falls-light-3) 32%, transparent) 58%,
       transparent 100%
     ),
     radial-gradient(
-      circle var(--flag-light-radius) at 30% 32%,
+      circle var(--flag-light-radius) at 15% 52%,
+      color-mix(in srgb, var(--falls-light-1) 90%, transparent) 0,
+      color-mix(in srgb, var(--falls-light-1) 66%, transparent) 30%,
+      color-mix(in srgb, var(--falls-light-1) 32%, transparent) 58%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle var(--flag-light-radius) at 53% 27%,
+      color-mix(in srgb, var(--falls-light-4) 90%, transparent) 0,
+      color-mix(in srgb, var(--falls-light-4) 66%, transparent) 30%,
+      color-mix(in srgb, var(--falls-light-4) 32%, transparent) 58%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle var(--flag-light-radius) at 34% 25%,
       color-mix(in srgb, var(--falls-light-2) 90%, transparent) 0,
       color-mix(in srgb, var(--falls-light-2) 66%, transparent) 30%,
       color-mix(in srgb, var(--falls-light-2) 32%, transparent) 58%,
       transparent 100%
     ),
     radial-gradient(
-      circle var(--flag-light-radius) at 19% 38%,
+      circle var(--flag-light-radius) at 15% 27%,
       color-mix(in srgb, var(--falls-light-1) 90%, transparent) 0,
       color-mix(in srgb, var(--falls-light-1) 66%, transparent) 30%,
       color-mix(in srgb, var(--falls-light-1) 32%, transparent) 58%,
