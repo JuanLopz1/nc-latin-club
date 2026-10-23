@@ -272,14 +272,18 @@
   inset: -2%;
   z-index: 1;
   pointer-events: none;
-  background: linear-gradient(
-    90deg,
-    #009b52 0 24%,
-    #61d28c 27%,
-    #f4f0df 30% 40%,
-    #f49b9b 43%,
-    #dc283f 46% 100%
-  );
+  background:
+    radial-gradient(circle at 42% 92%, #fff8 0 1%, transparent 8%),
+    conic-gradient(
+      from 328deg at 42% 92%,
+      transparent 0 2deg,
+      #009b52 4deg 17deg,
+      #67ce90 20deg,
+      #f4f0df 23deg 32deg,
+      #f29a9a 35deg,
+      #dc283f 38deg 49deg,
+      transparent 53deg 360deg
+    );
   mix-blend-mode: color;
   opacity: 0.92;
   filter: saturate(1.45) blur(5px);
@@ -288,14 +292,18 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    #ffd323 0 31%,
-    #f4da60 34%,
-    #176bc2 37% 44%,
-    #745aa4 47%,
-    #df2638 50% 100%
-  );
+  background:
+    radial-gradient(circle at 42% 92%, #fff8 0 1%, transparent 8%),
+    conic-gradient(
+      from 328deg at 42% 92%,
+      transparent 0 2deg,
+      #ffd323 4deg 21deg,
+      #e4ca58 24deg,
+      #176bc2 27deg 35deg,
+      #79579a 38deg,
+      #df2638 41deg 49deg,
+      transparent 53deg 360deg
+    );
   opacity: 0;
   animation: colombiaLights 18s ease-in-out infinite;
 }
@@ -303,14 +311,18 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    #ffb02e 0 20%,
-    #32a8ff 23% 31%,
-    #8757ed 34% 42%,
-    #ec315f 45% 52%,
-    #20c988 55% 100%
-  );
+  background:
+    radial-gradient(circle at 42% 92%, #fff8 0 1%, transparent 8%),
+    conic-gradient(
+      from 328deg at 42% 92%,
+      transparent 0 2deg,
+      #ffb02e 4deg 11deg,
+      #32a8ff 14deg 21deg,
+      #8757ed 24deg 31deg,
+      #ec315f 34deg 41deg,
+      #20c988 44deg 49deg,
+      transparent 53deg 360deg
+    );
   opacity: 0;
   animation: latinLights 18s ease-in-out infinite;
 }
