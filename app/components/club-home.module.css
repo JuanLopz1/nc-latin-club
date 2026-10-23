@@ -281,43 +281,30 @@
       #ffe7a640 3%,
       transparent 8%
     ),
-    conic-gradient(
-      from 344deg at var(--light-origin-x) var(--light-origin-y),
-      transparent 0 35deg,
-      #dc283f24 37deg,
-      #dc283fd9 41deg 47deg,
-      #dc283f38 51deg,
-      transparent 54deg 360deg
+    radial-gradient(
+      ellipse 15% 43% at 47% 36%,
+      #dc283fe6 0 18%,
+      #dc283fa3 42%,
+      #dc283f40 62%,
+      transparent 79%
     ),
-    conic-gradient(
-      from 344deg at var(--light-origin-x) var(--light-origin-y),
-      transparent 0 19deg,
-      #f4f0df26 21deg,
-      #f4f0dfd9 25deg 31deg,
-      #f4f0df38 35deg,
-      transparent 38deg 360deg
+    radial-gradient(
+      ellipse 15% 43% at 31% 34%,
+      #f4f0dfe6 0 18%,
+      #f4f0dfa3 42%,
+      #f4f0df40 62%,
+      transparent 79%
     ),
-    conic-gradient(
-      from 344deg at var(--light-origin-x) var(--light-origin-y),
-      transparent 0 2deg,
-      #009b522b 4deg,
-      #009b52dc 8deg 14deg,
-      #009b5240 18deg,
-      transparent 21deg 360deg
+    radial-gradient(
+      ellipse 15% 43% at 15% 36%,
+      #009b52e6 0 18%,
+      #009b52a3 42%,
+      #009b5240 62%,
+      transparent 79%
     );
   mix-blend-mode: color;
-  opacity: 0.84;
-  filter: saturate(1.35) blur(8px);
-  -webkit-mask-image: radial-gradient(
-    ellipse 82% 105% at var(--light-origin-x) var(--light-origin-y),
-    #000 0 68%,
-    #000a 100%
-  );
-  mask-image: radial-gradient(
-    ellipse 82% 105% at var(--light-origin-x) var(--light-origin-y),
-    #000 0 68%,
-    #000a 100%
-  );
+  opacity: 0.86;
+  filter: saturate(1.3) blur(10px);
 }
 .fallsLights::before {
   content: '';
@@ -330,29 +317,26 @@
       #ffe7a640 3%,
       transparent 8%
     ),
-    conic-gradient(
-      from 344deg at var(--light-origin-x) var(--light-origin-y),
-      transparent 0 38deg,
-      #df263824 40deg,
-      #df2638d9 43deg 49deg,
-      #df263838 52deg,
-      transparent 55deg 360deg
+    radial-gradient(
+      ellipse 14% 43% at 49% 37%,
+      #df2638e6 0 18%,
+      #df2638a3 42%,
+      #df263840 62%,
+      transparent 79%
     ),
-    conic-gradient(
-      from 344deg at var(--light-origin-x) var(--light-origin-y),
-      transparent 0 24deg,
-      #176bc226 26deg,
-      #176bc2d9 29deg 35deg,
-      #176bc23d 38deg,
-      transparent 41deg 360deg
+    radial-gradient(
+      ellipse 13% 43% at 37% 34%,
+      #176bc2e6 0 18%,
+      #176bc2a3 42%,
+      #176bc240 62%,
+      transparent 79%
     ),
-    conic-gradient(
-      from 344deg at var(--light-origin-x) var(--light-origin-y),
-      transparent 0 2deg,
-      #ffd3232b 4deg,
-      #ffd323dc 8deg 20deg,
-      #ffd32340 23deg,
-      transparent 26deg 360deg
+    radial-gradient(
+      ellipse 23% 43% at 18% 35%,
+      #ffd323e6 0 18%,
+      #ffd323a3 42%,
+      #ffd32340 62%,
+      transparent 79%
     );
   opacity: 0;
   animation: colombiaLights 18s ease-in-out infinite;
@@ -368,45 +352,40 @@
       #ffe7a640 3%,
       transparent 8%
     ),
-    conic-gradient(
-      from 344deg at var(--light-origin-x) var(--light-origin-y),
-      transparent 0 42deg,
-      #20c98824 44deg,
-      #20c988d9 46deg 49deg,
-      #20c98838 52deg,
-      transparent 55deg 360deg
+    radial-gradient(
+      ellipse 11% 42% at 55% 37%,
+      #20c988e6 0 16%,
+      #20c9889c 40%,
+      #20c98838 61%,
+      transparent 78%
     ),
-    conic-gradient(
-      from 344deg at var(--light-origin-x) var(--light-origin-y),
-      transparent 0 32deg,
-      #ec315f24 34deg,
-      #ec315fd9 36deg 40deg,
-      #ec315f38 43deg,
-      transparent 46deg 360deg
+    radial-gradient(
+      ellipse 11% 42% at 44% 35%,
+      #ec315fe6 0 16%,
+      #ec315f9c 40%,
+      #ec315f38 61%,
+      transparent 78%
     ),
-    conic-gradient(
-      from 344deg at var(--light-origin-x) var(--light-origin-y),
-      transparent 0 22deg,
-      #8757ed24 24deg,
-      #8757edd9 26deg 30deg,
-      #8757ed38 33deg,
-      transparent 36deg 360deg
+    radial-gradient(
+      ellipse 11% 42% at 33% 34%,
+      #8757ede6 0 16%,
+      #8757ed9c 40%,
+      #8757ed38 61%,
+      transparent 78%
     ),
-    conic-gradient(
-      from 344deg at var(--light-origin-x) var(--light-origin-y),
-      transparent 0 12deg,
-      #32a8ff24 14deg,
-      #32a8ffd9 16deg 20deg,
-      #32a8ff38 23deg,
-      transparent 26deg 360deg
+    radial-gradient(
+      ellipse 11% 42% at 22% 35%,
+      #32a8ffe6 0 16%,
+      #32a8ff9c 40%,
+      #32a8ff38 61%,
+      transparent 78%
     ),
-    conic-gradient(
-      from 344deg at var(--light-origin-x) var(--light-origin-y),
-      transparent 0 2deg,
-      #ffb02e24 4deg,
-      #ffb02ed9 6deg 10deg,
-      #ffb02e38 13deg,
-      transparent 16deg 360deg
+    radial-gradient(
+      ellipse 11% 42% at 11% 37%,
+      #ffb02ee6 0 16%,
+      #ffb02e9c 40%,
+      #ffb02e38 61%,
+      transparent 78%
     );
   opacity: 0;
   animation: latinLights 18s ease-in-out infinite;
